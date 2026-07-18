@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nash-iw.local/schemas/artifact-manifest.schema.json",
+  "title": "NASH/IW Artifact Manifest",
+  "type": "object",
+  "required": ["manifest_id", "status", "files", "boundaries"],
+  "additionalProperties": true,
+  "properties": {
+    "manifest_id": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "minLength": 1},
+    "files": {"type": "array", "items": {"type": "object", "required": ["path", "sha256", "role"], "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}, "role": {"type": "string", "minLength": 1}}}},
+    "boundaries": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  }
+}
