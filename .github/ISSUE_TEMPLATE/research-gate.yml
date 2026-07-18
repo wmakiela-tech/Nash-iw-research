@@ -1,0 +1,40 @@
+name: Research gate
+description: Register an open proof, source, runtime, provenance or governance gate.
+title: "[GATE] "
+labels: []
+body:
+  - type: dropdown
+    id: gate_type
+    attributes:
+      label: Gate type
+      options: [Proof, Source lock, Runtime, Provenance, Governance, Architecture]
+    validations:
+      required: true
+  - type: textarea
+    id: obligation
+    attributes:
+      label: Exact falsifiable obligation
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Current evidence and source pointers
+    validations:
+      required: true
+  - type: textarea
+    id: stop
+    attributes:
+      label: Stop condition
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Claim boundaries
+      value: |
+        exec_sign: false
+        canon_merge: false
+        claim_upgrade: false
+    validations:
+      required: true
