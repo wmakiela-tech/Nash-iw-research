@@ -1,0 +1,102 @@
+{
+  "manifest_id": "NASH_IW_GITHUB_BOOTSTRAP_001_20260718",
+  "status": "LOCAL_VALIDATED_BOOTSTRAP / NOT_YET_COMMITTED",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/research-gate.yml",
+      "sha256": "cc445fc9c86d222cc02bb817d32affa82370bb0fd3c81abddcadad97246912d0",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "046cabf4cc17057d510cab8afaf74b14a23f48fc076ee525782cf0a1f139f2eb",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "170b510a7d9c181a10304b0a213a80c869a089dfa2afe2c13c08817f7a28218b",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c147af348c1fde39b436918228078b90784c09cf535398807428e7b718284d84",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "BOOTSTRAP_PR_BODY.md",
+      "sha256": "01bda0dcd5d8254563b0f82721374d96244b311792d3e9099960f1430dd9e882",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "84373588f12f4f1ac68a5a122f34fe875b518426beb256c7a66d3c78f060396f",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7fc5cc58ab7eed5a148414bce9f20fd405500726bdfe8a0de640b5ea9d456031",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "6e25c368a40a7b9fbe1a668d2525dd4d2475d92b1b2015094227e19b7e04bc35",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "archive-index/README.md",
+      "sha256": "d3b7a4ff5bd70037004f89b7e8f89fa952abf3b0a81830dec9a8ebd7bc924e10",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "docs/GOVERNANCE.md",
+      "sha256": "de6bce69ab779166a0d54121ae3747fe75c87b54bce743d92c33f8d8841d655e",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "docs/REPOSITORY_MAP.md",
+      "sha256": "13e601947946367b5e7499996fa7d4643a3251cb7d9123cd7d5189bb14c98be2",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "manifests/README.md",
+      "sha256": "edd9c357afc0d6702c59a7a5c069f2a72256c12d9feeff0750813f0cdfd177b3",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "1d2af03800eb4375bd1bc170a71da23c33031acc273c57344b0991c1b538a5ee",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "schemas/artifact-manifest.schema.json",
+      "sha256": "9562796679088ee0cd837e1cc10b5ad088bfb8919aa4cecdfb7272be3f946e3b",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "scripts/validate_manifest.py",
+      "sha256": "735390bb40f1276b0579cbad57862e5944b1f829e073aea787a1400224ee1b66",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "src/nash_iw/__init__.py",
+      "sha256": "2c77de64f7715c04944d88309506efcd47a499fcc6704274ced13446662f9d9b",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "src/nash_iw/manifest.py",
+      "sha256": "d43aa941b6e9f3df55277bfe24683eac5da13a598c0049e4429d854bb5ec4b07",
+      "role": "bootstrap_repository_file"
+    },
+    {
+      "path": "tests/test_manifest.py",
+      "sha256": "ca81c02b3e084bdd36085f03756333d745bda67dc00f41c1f3882ad0e085a242",
+      "role": "bootstrap_repository_file"
+    }
+  ],
+  "boundaries": [
+    "NO_EXEC_SIGN",
+    "NO_CANON_MERGE",
+    "NO_SCIENTIFIC_CLAIM_UPGRADE",
+    "NO_NCDG_RUNTIME"
+  ]
+}
