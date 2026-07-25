@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "unit_tests": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_escape_rejected (test_manifest.ManifestTests.test_escape_rejected) ... ok\ntest_hash_mismatch (test_manifest.ManifestTests.test_hash_mismatch) ... ok\ntest_invalid_json (test_manifest.ManifestTests.test_invalid_json) ... ok\ntest_valid_manifest (test_manifest.ManifestTests.test_valid_manifest) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.004s\n\nOK\n"
+  },
+  "compileall": {
+    "returncode": 0,
+    "stderr": ""
+  },
+  "manifest_validation": {
+    "returncode": 0,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"exec_sign\": false,\n  \"canon_merge\": false\n}\n",
+    "stderr": ""
+  },
+  "boundaries": [
+    "NO_EXEC_SIGN",
+    "NO_CANON_MERGE",
+    "NO_CLAIM_UPGRADE"
+  ]
+}
