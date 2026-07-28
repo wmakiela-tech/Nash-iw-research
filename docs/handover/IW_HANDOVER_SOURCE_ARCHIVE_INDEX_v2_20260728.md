@@ -7,10 +7,14 @@ status: "SOURCE_ARCHIVE_INDEX / NOT_CANON / NO_EXEC_SIGN"
 primary_recipient: "Moderator / nowy ARIS"
 drive_root: "NASH–IW Shared Research Bridge / ARIS_THREAD_HANDOVER_2026-07-28"
 github_pr: "wmakiela-tech/nash-iw-research PR #2"
+exact_byte_rule: >
+  Hashe dotyczą dokładnych plików Markdown/JSON w pakiecie lokalnym i ZIP.
+  Google Docs są warstwą wyszukiwalną i mogą mieć inne bajty po konwersji.
 ```
 
-## Pakiet operacyjny
+## A. Pakiet operacyjny
 
+0. `IW_NEW_ARIS_THREAD_BOOTSTRAP_PROMPT_v1_20260728.md`
 1. `IW_NEW_ARIS_THREAD_READ_FIRST_v2_20260728.md`
 2. `IW_NEW_ARIS_THREAD_OPENING_MASTER_REPORT_v1_20260728.md`
 3. `IW_MODERATOR_VERBATIM_DECISION_AND_VISION_LEDGER_v1_20260728.md`
@@ -18,9 +22,9 @@ github_pr: "wmakiela-tech/nash-iw-research PR #2"
 5. `IW_KNOWLEDGE_OS_ARCHITECTURE_AND_SEED_STATE_v2_20260728.md`
 6. `IW_S0_PARTICIPANT_MISSION_QUEUE_v1_20260728.md`
 7. `IW_THREAD_CLOSURE_AND_SUCCESSION_RECORD_001_20260728.md`
-8. `IW_NEW_THREAD_HANDOVER_MANIFEST_v2_1_20260728.json`
+8. `IW_NEW_THREAD_HANDOVER_MANIFEST_v2_2_20260728.json`
 
-## Architektura i historia decyzji
+## B. Architektura i historia decyzji
 
 - `IW_KNOWLEDGE_BASE_DESIGN_v2_SEED_SPEC_2026-07-26.md`
 - `IW_KB_v2_PATCH_TYPED_EDGES_2026-07-26.md`
@@ -33,7 +37,7 @@ github_pr: "wmakiela-tech/nash-iw-research PR #2"
 - `IW_ARIS_ADJUDICATION_SP_KAMIEN_PILOT_001_20260725.md`
 - `SP_KAMIEN_PILOT_EXECUTED_2026-07-25.md`
 
-## Custody, reguły i przykład kamienia
+## C. Custody, reguły i przykład kamienia
 
 - `SP_HANDOFF_TO_ARIS_MGPT_THREE_DAYS_2026-07-26.md`
 - `IW_RULE_VALIDITY_REGISTER_ROW_ZERO_2026-07-26.md`
@@ -44,14 +48,18 @@ github_pr: "wmakiela-tech/nash-iw-research PR #2"
 - `ARIS_ROOT_ACCEPTANCE_AND_PROJECT_MEMORY_CHECK_20260711.md`
 - `IW_FULL_CONTEXT_UPDATE_KNOWLEDGE_ARCHITECTURE_20260724.md`
 
-## Restricted
+## D. Restricted
 
 `IW_KAMIEN_T1_RETRIEVAL_MODERATOR_KEY_001_20260725.md` pozostaje poza publicznym ZIP i GitHubem, w `99_RESTRICTED_MODERATOR_ONLY`.
 
-## Naprawy
+## E. Naprawy
 
-Pusty snapshot architektury v1 został oznaczony `SUPERSEDED_EMPTY__...` i zastąpiony pełnym v2. Brakującą kolejkę S0 dodano jako osobny dokument. Niedokładny manifest v2 oznaczono superseded; obowiązuje v2.1.
+Pusty snapshot architektury v1 został oznaczony `SUPERSEDED_EMPTY__...` i zastąpiony pełnym v2. Brakującą kolejkę S0 dodano jako osobny dokument. Niedokładne manifesty v2 i v2.1 oznaczono superseded; obowiązuje v2.2.
 
-## GitHub
+## F. GitHub
 
 PR #2 pozostaje draftem. Brak automatycznego merge, `EXEC_SIGN`, canon merge i claim upgrade.
+
+## G. ZIP
+
+Dokładny publiczny ZIP został zweryfikowany lokalnie i nie zawiera klucza restricted. Konektor Drive nie przyjął lokalnej referencji binarnej, więc ZIP jest dostarczany Moderatorowi z odpowiedzi zamykającej, a nie deklarowany jako obecny w Drive.
