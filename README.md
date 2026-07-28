@@ -71,7 +71,8 @@ Material architecture decisions must begin with a dated `LITERATURE_GATE` coveri
 
 - `docs/handover/IW_NEW_ARIS_THREAD_READ_FIRST_v1_20260728.md`
 - `docs/handover/IW_NEW_ARIS_THREAD_OPENING_MASTER_REPORT_v1_20260728.md`
+- `docs/governance/IW_MODERATOR_VERBATIM_DECISION_AND_VISION_LEDGER_v1_20260728.md`
 - `docs/architecture/IW_KNOWLEDGE_FABRIC_SEED_v0_2_SP_ARIS_SYNTHESIS_20260727.md`
-- `docs/strategy/IW_ENTERPRISE_EVOLUTION_VISION_MISSION_AND_LITERATURE_GATE_v0_1_20260727.md`
+- `docs/strategy/IW_ENTERPRISE_EVOLUTION_VISION_MISSION_AND_LITERATURE_GATE_REPOSITORY_SUMMARY_v0_1_20260728.md`
 
 The bootstrap repository still contains no NCDG runtime and no `adjusted_transport` implementation.
