@@ -18,7 +18,7 @@ primary_recipient: "nowy wątek ARIS"
 first_operational_objective: "S0 minimal knowledge seed + blind cold-start"
 ```
 
-## Pierwsza odpowiedź następcy
+## 1. Pierwsza odpowiedź następcy
 
 ```yaml
 RECEIVE: "PASS"
@@ -31,7 +31,7 @@ FIRST_OPERATIONAL_OBJECTIVE: "S0 minimal knowledge seed + blind cold-start"
 
 Nie negocjuj ponownie roli ani wizji, chyba że istnieje konflikt z późniejszą jawną decyzją Moderatora.
 
-## Obowiązkowa kolejność czytania
+## 2. Obowiązkowa kolejność czytania
 
 1. `IW_NEW_ARIS_THREAD_OPENING_MASTER_REPORT_v1_20260728.md`
 2. `IW_MODERATOR_VERBATIM_DECISION_AND_VISION_LEDGER_v1_20260728.md`
@@ -40,14 +40,14 @@ Nie negocjuj ponownie roli ani wizji, chyba że istnieje konflikt z późniejsz�
 5. `IW_S0_PARTICIPANT_MISSION_QUEUE_v1_20260728.md`
 6. `IW_THREAD_CLOSURE_AND_SUCCESSION_RECORD_001_20260728.md`
 7. `IW_HANDOVER_SOURCE_ARCHIVE_INDEX_v2_20260728.md`
-8. `IW_NEW_THREAD_HANDOVER_MANIFEST_v2_1_20260728.json`
+8. `IW_NEW_THREAD_HANDOVER_MANIFEST_v2_2_20260728.json`
 9. Dokumenty źródłowe tylko wtedy, gdy synteza jest niewystarczająca lub trzeba sprawdzić dokładny cytat, hash, lineage albo konflikt.
 
-## Stan
+## 3. Jednozdaniowy stan
 
 > IW przechodzi od eksperymentu współpracy modeli do ewolucyjnego przedsiębiorstwa wiedzy; ARIS prowadzi architekturę całości, SP pilnuje minimalności i custody, a pierwszym produktem jest najmniejsze ziarno matematyczno-fizycznej wiedzy, które w ślepym zimnym starcie ma zapobiegać K5, rozdzielać homonimy, wyznaczać zasięg unieważnienia i odnajdywać mechanizmy pod inną nazwą.
 
-## Zasady
+## 4. Zasady nieprzekraczalne
 
 - Najpierw literatura, standardy i istniejące systemy; dopiero potem projekt własny.
 - `NO DESIGN FROM MEMORY`: materialna decyzja wymaga datowanego `LITERATURE_GATE`.
@@ -58,39 +58,48 @@ Nie negocjuj ponownie roli ani wizji, chyba że istnieje konflikt z późniejsz�
 - Relacja niestandardowa domyślnie nie ma praw inferencyjnych.
 - Status projektu nie jest prawdą o świecie.
 - Wszystkie materialne zwroty niosą `RULE_STAMP`.
-- `UNKNOWN`, brak źródła i brak hasha są legalne i jawne.
+- `UNKNOWN`, brak źródła i brak hasha są legalne i muszą być jawne.
 - Architektura docelowa v3 jest mapą zdolności, nie zakresem S0.
-- Klucz retrieval Moderatora pozostaje restricted.
+- Klucz retrieval Moderatora pozostaje restricted i nie może trafić do uczestnika przed zamrożeniem obu kanałów.
 
-## Pierwsza sekwencja
+## 5. Pierwsza sekwencja pracy
 
 ```text
 S0.0 zamrozić W1–W4 i przypadki
-S0.1 wąski Literature Gate
-S0.2 ARIS+SP: schema, dataset, relation policies
-S0.3 NC: audyt formalny
-S0.4 AInstein: walidator po semantic freeze
-S0.5 token count + snapshot + manifest
+S0.1 wykonać wąski Literature Gate
+S0.2 ARIS+SP: NODE + EDGE + relation policy registry + dataset draft
+S0.3 NC: wąski audyt formalny
+S0.4 AInstein: walidator i fixtures po semantic freeze
+S0.5 policzyć tokeny, zamrozić snapshot i manifest
 S0.6 świeża komórka: blind cold-start
-S0.7 DS attack + MGPT user review
+S0.7 DS: atak; MGPT: odbiór użytkowy
 S0.8 PASS / jeden PATCH / KILL
-S1 dopiero po PASS/PATCHED_PASS
-Fable po danych
+S1 dopiero po PASS/PATCHED_PASS: 10–15 kamieni
+Fable recenzuje całość dopiero na podstawie danych
 ```
 
-## Nie robić
+## 6. Czego nie robić na starcie
 
-Nie wdrażać pełnego Context Compilera, vector DB, polystore, masowej migracji, wielu kartridży ani automatycznego merge PR. Nie przyznawać K3/K3c za samo uporządkowanie wiedzy.
+- nie implementować pełnego Context Compilera;
+- nie tworzyć vector DB ani polystore;
+- nie masowo przepisywać literatury;
+- nie budować wielu kartridży dziedzinowych;
+- nie rozszerzać ontologii bez realnego przypadku;
+- nie zwoływać pełnego komitetu do każdej poprawki;
+- nie traktować Knowledge OS jako gotowego produktu;
+- nie przyznawać K3/K3c za samo uporządkowanie wiedzy;
+- nie mergować draft PR bez jawnego review/disposition.
 
-## Lokalizacja
+## 7. Lokalizacja
 
-- Drive: `NASH–IW Shared Research Bridge / ARIS_THREAD_HANDOVER_2026-07-28`
-- GitHub: `wmakiela-tech/nash-iw-research`, draft PR #2, branch `handover/aris-knowledge-os-20260728`
+- Google Drive: `NASH–IW Shared Research Bridge / ARIS_THREAD_HANDOVER_2026-07-28`
+- GitHub: repozytorium `wmakiela-tech/nash-iw-research`, draft PR #2, branch `handover/aris-knowledge-os-20260728`
+- dokładne lokalne artefakty i hashe: manifest v2.2
 
-## Hierarchia autorytetu
+## 8. Hierarchia autorytetu
 
 1. późniejsza jawna decyzja Moderatora;
-2. dokładny artefakt z hashem;
+2. dokładny zamrożony artefakt z hashem;
 3. aktualny dokument rządzący i `RULE_STAMP`;
 4. raport sukcesyjny;
 5. pamięć modelu.
