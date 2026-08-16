@@ -1,0 +1,70 @@
+name: TabPFN P0-T1 V3 compatibility gate
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/tabpfn/p0_t1_v3_readout_gate.py'
+      - '.github/workflows/tabpfn-p0-t1-v3.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  p0-t1-v3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TABPFN_TOKEN: ${{ secrets.TABPFN_TOKEN }}
+      IW_TABPFN_P0_T1_OUT: ${{ github.workspace }}/IW_TABPFN_P0_T1_V3_OUTPUT
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Require Prior Labs token
+        shell: bash
+        run: |
+          if [ -z "${TABPFN_TOKEN}" ]; then
+            echo '::error::TABPFN_TOKEN repository secret is missing. Accept the Prior Labs model license and add the token as an Actions repository secret named TABPFN_TOKEN.'
+            exit 1
+          fi
+          echo 'TABPFN_TOKEN is present (value not printed).'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install exact TabPFN source pins
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'tabpfn @ git+https://github.com/PriorLabs/TabPFN.git@fa9b33344bc37b8a896f40efaf9ec5f331057615'
+          python -m pip install 'tabpfn-extensions[interpretability] @ git+https://github.com/PriorLabs/tabpfn-extensions.git@572858f20a925b27f26236b000da33b3c9b89d11'
+          python -m pip freeze > tabpfn-p0-t1-freeze.txt
+
+      - name: Record source provenance
+        shell: bash
+        run: |
+          mkdir -p "${IW_TABPFN_P0_T1_OUT}"
+          sha256sum runtime/tabpfn/p0_t1_v3_readout_gate.py | tee "${IW_TABPFN_P0_T1_OUT}/source_sha256.txt"
+          cp tabpfn-p0-t1-freeze.txt "${IW_TABPFN_P0_T1_OUT}/pip_freeze.txt"
+          python --version | tee "${IW_TABPFN_P0_T1_OUT}/python_version.txt"
+
+      - name: Run fail-closed P0-T1 gate
+        shell: bash
+        run: |
+          python runtime/tabpfn/p0_t1_v3_readout_gate.py
+
+      - name: Upload P0-T1 artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: IW_TABPFN_P0_T1_V3_OUTPUT
+          path: IW_TABPFN_P0_T1_V3_OUTPUT/
+          if-no-files-found: warn
+          retention-days: 30
