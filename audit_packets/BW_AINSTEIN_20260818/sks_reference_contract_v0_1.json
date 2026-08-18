@@ -1,0 +1,73 @@
+{
+  "artifact_id": "IW_SKS_REFERENCE_CONTRACT_v0_1_20260818",
+  "status": ["PROTOTYPE", "BACKEND_NEUTRAL", "TEST_REQUIRED", "NO_CANON", "NO_EXEC_SIGN"],
+  "contract_version": "0.1.0",
+  "purpose": "Minimal backend-neutral contract for two-plane Project Knowledge / Scientific Knowledge over a shared Evidence/Provenance Spine.",
+  "non_goals": ["universal ontology", "database selection", "automatic scientific truth qualification", "mandatory workflow gate", "single scalar knowledge quality score"],
+  "planes": ["SPINE", "P", "S", "CROSS"],
+  "identity_ladder": ["scientific_object_id", "artifact_id", "artifact_revision_id", "content_id", "store_locator_id", "source_anchor"],
+  "core_record_kinds": {
+    "SPINE": ["SOURCE", "SOURCE_ANCHOR"],
+    "P": ["PROJECT_OBJECT", "PROJECT_OBLIGATION"],
+    "S": ["SCIENTIFIC_OBJECT", "CLAIM", "SCOPE", "MECHANISM", "RELATION", "NEGATIVE_KNOWLEDGE", "UNKNOWN", "TENSION", "PUZZLE", "DISCRIMINATOR", "FRONTIER", "FIELD_MAP", "ATTEMPT"],
+    "CROSS": ["BRIDGE"]
+  },
+  "event_core_fields": ["event_id", "event_type", "plane", "subject_id", "sequence", "issuer", "recorded_at", "facet", "payload", "provenance_refs"],
+  "state_facets": {
+    "S": ["epistemic_status", "lifecycle_currentness", "prior_art_origin", "claim_boundary", "research_front_state"],
+    "P": ["project_lifecycle", "adoption_state", "authority_state", "access_state", "transport_state", "obligation_state"],
+    "SPINE": ["integrity_state", "custody_state", "reproducibility_state"]
+  },
+  "relation_families": {
+    "EVIDENCE": ["SUPPORTS", "REFUTES", "LIMITS_SCOPE", "REPLICATES", "DEPENDS_ON_METHOD"],
+    "FORMAL_OR_MECHANISM": ["FORMAL_DEPENDENCY", "GENEALOGICAL_DERIVATION", "MECHANISM_SHARED_WITH", "DERIVED_FROM", "MAPS_TO", "TRANSFORMS", "REQUIRES", "FORMAL_BRIDGE_REQUIRED", "TRANSFER_BRIDGE_REQUIRED"],
+    "EPISTEMIC": ["CONFLICTS_WITH", "ALTERNATIVE_TO", "REJECTED_IDENTIFICATION_OF", "FALSE_BRIDGE", "CLOSE_ANALOGUE", "KNOWN_DECOMPOSITION_BEFORE_PUZZLE"],
+    "PRIOR_ART": ["EXACT_PRIOR_ART_ABSORPTION", "KNOWN_PRIOR_ART_EXACT", "PROJECT_SPECIFIC_REPACKAGING_OF", "STRONGER_THEOREM_ABSORBS", "FIELD_DONOR"],
+    "LIFECYCLE": ["SUPERSEDES", "NARROWS", "RETRACTS", "CLOSED_IN_SCOPE", "REOPEN_ONLY_IF"],
+    "FRONTIER": ["OPENS", "DISCRIMINATES", "BLOCKS", "SATISFIES_GATE", "PARTIALLY_ANSWERS"]
+  },
+  "core_event_types": ["ASSERTED", "QUALIFIED", "CONTESTED", "REFUTED", "NARROWED", "SUPERSEDED", "RETRACTED", "PAUSED", "CLOSED_IN_SCOPE", "REOPENED", "PRIOR_ART_CLASSIFIED", "CLAIM_BOUNDARY_SET", "FRONTIER_STATE_SET", "INSUFFICIENT_POWER", "HYPOTHESIS_RETRACTED", "ATTACK_FAILED", "BOUNDARY_LOCATED", "PROJECT_ADOPTION_SET", "PROJECT_AUTHORITY_SET", "PROJECT_OBLIGATION_SET", "ACCESS_STATE_SET", "TRANSPORT_STATE_SET", "CUSTODY_STATE_SET", "REPRODUCIBILITY_STATE_SET"],
+  "derived_views": ["CURRENT_PROJECT_STATE", "CURRENT_FIELD_STATE", "AI_RESEARCH_NEIGHBORHOOD", "HUMAN_AUDIT_VIEW"],
+  "field_map_import_contract": {
+    "role": "candidate input from external field scouting; never automatic truth",
+    "required": ["field", "provenance_refs", "theory_families", "mechanisms", "assumptions", "unknowns_or_tensions"],
+    "optional": ["explicit_open_problems", "contradictions", "unexplained_results", "framework_activity", "cross_community_routes", "vocabulary_bridges", "candidate_frontiers", "false_puzzle_risks", "prior_art_pressure"],
+    "promotion_guard": "FRONTIER_CANDIDATE != NOVEL; field-map ingestion creates candidate records only until source-linked qualification events exist."
+  },
+  "completion_accounting_interface": {
+    "optional_for_bw_core": true,
+    "capture_only_when_material": true,
+    "debt_types": ["SCIENTIFIC", "EVIDENCE", "PRIOR_ART", "EXECUTION", "REPRODUCIBILITY", "HANDOFF", "AUTHORITY", "UNKNOWN"],
+    "closure_relevance": ["TERMINAL_BLOCKER", "CLAIM_STRENGTH_LIMITER", "FOLLOWUP_ONLY"]
+  },
+  "invariants": [
+    "SOURCE != ASSERTION != EVIDENCE != MECHANISM != SYNTHESIS",
+    "AUTHORITY_STATE != EVIDENCE_STATE",
+    "PROJECT_CURRENT != SCIENTIFICALLY_BEST_SUPPORTED",
+    "PROJECT_CLOSED != SCIENTIFICALLY_RESOLVED",
+    "PROJECT_ADOPTION_DOES_NOT_UPGRADE_SCIENCE",
+    "S_EVIDENCE_DOES_NOT_ENACT_PROJECT_POLICY",
+    "MODEL_AGREEMENT_NOT_EVIDENCE",
+    "NO_MATCH_FOUND_NOT_NOVELTY",
+    "NEGATIVE_KNOWLEDGE_IS_FIRST_CLASS_AND_SCOPE_BOUND",
+    "CONFLICT_IS_PRESERVED",
+    "SUPERSESSION_IS_APPEND_ONLY",
+    "AI_EXTRACTION_IS_CANDIDATE_UNTIL_QUALIFIED",
+    "CURRENT_STATE_IS_DERIVED_FROM_EVENTS",
+    "NO_GLOBAL_LAST_WRITE_WINS",
+    "OPEN_WORLD_BY_DEFAULT",
+    "STORAGE != NOTICE != DELIVERY != RECEIPT != ACCEPTANCE != SCIENTIFIC_VALIDATION",
+    "HASH_IDENTITY != SCIENTIFIC_VALIDITY",
+    "CURRENT_PROJECTION != SOURCE_BUNDLE",
+    "SCIENCE_FIRST"
+  ],
+  "extension_rule": "Unknown domain-specific relation/event types may be namespaced rather than forcing a universal ontology change.",
+  "kill_or_simplify_if": [
+    "structured substrate is not materially better than ordinary search/RAG on load-bearing tasks",
+    "curation cost exceeds reconstruction savings",
+    "maintenance causes rapid staleness",
+    "representation suppresses dissent or creates false closure",
+    "knowledge capture becomes a mandatory router or Moderator burden",
+    "schema distorts one scientific phenotype to fit another"
+  ]
+}
