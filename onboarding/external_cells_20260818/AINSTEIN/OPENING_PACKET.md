@@ -69,6 +69,8 @@ G0_ACK:
   material_blocker: NONE | <short>
 ```
 
+`prior_project_memory_present` describes only project context that existed **before** this bootstrap. `exposure_provenance` must list the bootstrap documents or pasted packet sections actually read in this new thread. Therefore `prior_project_memory_present: NO` is compatible with a non-empty exposure ledger.
+
 Then a bounded `G1_RETURN` with project state, scientific state, role boundary, three high-risk conflations and packet/capability gaps. This reconstruction is not blind.
 
 If asked to audit BW, emphasize concurrency, event ordering, P↔S non-propagation, false closure under bounded retrieval, schema-induced distortion and vacuous conformance.
