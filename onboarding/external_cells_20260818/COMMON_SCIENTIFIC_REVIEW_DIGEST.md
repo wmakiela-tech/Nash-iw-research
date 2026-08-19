@@ -1,7 +1,7 @@
 # NASH/IW — current scientific review digest
-### Sanitized bootstrap edition — 2026-08-18
+### Sanitized bootstrap edition — updated 2026-08-19 after SP BW audit
 
-Source basis: `IW_MGPT_20260817_OSTATECZNY_SNAPSHOT_POLA_NAUKOWEGO_NASH_IW_WERSJA_POLSKA_008_POST_M2_BOUNDED_REVIEW` and bounded M2 integration. This digest is a navigation/bootstrapping projection, not a source substitute.
+Source basis: `IW_MGPT_20260817_OSTATECZNY_SNAPSHOT_POLA_NAUKOWEGO_NASH_IW_WERSJA_POLSKA_008_POST_M2_BOUNDED_REVIEW`, bounded M2 integration, and later BW/SKS v0.1.1 correction after independent SP epistemic audit. This digest is a navigation/bootstrapping projection, not a source substitute.
 
 ## 1. Global claim boundary
 
@@ -13,7 +13,7 @@ The strongest durable output is more bounded, often structural or negative:
 2. replacement of vague “non-zero J3” language by a more exact representation/homomorphism-defect framing for one-sided filtered actions;
 3. separation of several mechanisms and numerical artifacts;
 4. explicit claim boundaries for functional calculus, K12 interpretation and selected continuum no-go questions;
-5. the independent `N(rho)/N0/EX` algebraic line, including exact quotient reduction and prior-art absorption for the `dim R=2` KCF core;
+5. the independent `N(rho)/N0/EX` algebraic line, including exact quotient reduction and a **project-level prior-art absorption candidate for the `dim R=2` KCF core that is currently source-verification dependent**;
 6. development of the Scientific Knowledge Substrate / BW to preserve mechanisms, negative knowledge, prior art and real open frontiers.
 
 ## 2. Do not collapse scientific lines
@@ -74,18 +74,23 @@ This is a key test case for distinguishing:
 
 ## 6. N(rho) / N0 / EX current state
 
-Safe current orientation:
+Safe current orientation after the SP/BW source-spine correction:
 
-- `N(R)/N0(R) ≅ ker(delta_R)`.
-- `EX(R)=dim ker(delta_R)`.
-- the load-bearing `dim R=2` KCF kernel classification is **known exact prior art**, associated with Košir 1996;
-- the project's N0 quotient / compact EX packaging may remain project-specific and useful, but does not restore novelty of the absorbed KCF core;
-- generic identifications with ordinary `H^1` or unshifted Kronecker-quiver Hom/Ext are rejected in general;
-- `dim R>=3` outside closed structured families remains mathematically open, but the project lane is paused unless a new material trigger appears.
+- the project synthesis contains the formal statements `N(R)/N0(R) ≅ ker(delta_R)` and `EX(R)=dim ker(delta_R)`;
+- in BW/SKS v0.1.1 these statements must **not** be treated as `SUPPORTED_CURRENT` solely because they occur in a synthesis; until a proof/source anchor is attached, a legal state is `ASSERTED_IN_SYNTHESIS_PROOF_NOT_LOCATED`;
+- the project has a strong prior-art identification associating the `dim R=2` KCF kernel classification with Košir 1996, but the live BW currently records this as **`CLOSED_PENDING_SOURCE_VERIFICATION`**, not unconditional `CLOSED_IN_SCOPE`, because an exact bibliographic/theorem locator is still missing;
+- `EXACT_PRIOR_ART_ABSORPTION` is therefore also source-verification dependent until the exact Košir source/theorem anchor is attached;
+- the project's N0 quotient / compact EX packaging may remain project-specific and useful, but does not restore novelty of an absorbed KCF core if the prior-art match is verified;
+- generic identifications with ordinary `H^1` or unshifted Kronecker-quiver Hom/Ext are rejected in general in current project state;
+- `dim R>=3` outside closed structured families remains mathematically open in current project synthesis, but the project lane is paused unless a new material trigger appears.
 
-This is a canonical anti-rediscovery example:
+This is a canonical anti-rediscovery and source-discipline example:
 
 `PROJECT_DERIVED_X != X_IS_NOVEL_SCIENCE`
+
+and
+
+`SYNTHESIS_STATEMENT != LOCATED_PROOF_OR_EXTERNAL_THEOREM`
 
 ## 7. Prior art and frontier discipline
 
@@ -95,8 +100,10 @@ Current scientific-memory rules include:
 - `NO_MATCH_FOUND != NOVELTY`;
 - correct-but-known is a valid scientific/project outcome;
 - literature absorption is knowledge gain, not failed research;
+- exact prior-art closure that changes lifecycle requires a located external source/theorem anchor;
 - a field map or frontier candidate enters BW as candidate scientific structure, not automatic truth or novelty;
-- scope and cross-community vocabulary bridges matter because apparent open problems may already be solved elsewhere.
+- scope and cross-community vocabulary bridges matter because apparent open problems may already be solved elsewhere;
+- imported frontier candidates should preserve `framework_activity_state` and `last_verified_active` where material, so stale open problems or questions internal to abandoned frameworks do not silently become current frontiers.
 
 ## 8. Negative knowledge and legal uncertainty
 
@@ -109,7 +116,8 @@ Distinguish, where relevant:
 - `SEARCH_NEGATIVE` — a historical search result that may stale;
 - `INSUFFICIENT_POWER` — test could not decide;
 - `NOT_DEMONSTRATED` — absence of proof, not negative evidence;
-- `UNKNOWN` — legal state when support is insufficient.
+- `UNKNOWN` — legal state when support is insufficient;
+- `WARRANT_BOUNDARY` — a temporary boundary on what the project is entitled to claim, with an explicit condition/gate that can lift it.
 
 A failed falsification attack may yield `ATTACK_FAILED / BOUNDARY_LOCATED / VACUOUS_TEST / RESIDUAL_DOUBT`; none is proof of truth.
 
@@ -124,6 +132,12 @@ For load-bearing scientific reconstruction prefer:
 5. curated current-state view;
 6. thread memory and old handoffs as historical aids only.
 
+Where load-bearing, provenance should identify a `SOURCE_ANCHOR` inside the source (section/theorem/result), not merely the document as a whole.
+
 Project custody gaps, literature gaps, empirical-evidence gaps and formal-bridge gaps are not interchangeable.
+
+## 10. Bootstrap freshness rule
+
+A bootstrap digest is a projection of current state, not an authority source. If another delivered bootstrap file or later explicit patch conflicts with this digest, do not silently choose one. Report `BOOTSTRAP_STATE_CONFLICT` and preserve the later/source-linked correction until adjudicated.
 
 `NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_UPGRADE_WITHOUT_EXTERNAL_VERIFICATION`.
