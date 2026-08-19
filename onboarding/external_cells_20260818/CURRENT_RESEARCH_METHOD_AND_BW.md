@@ -1,5 +1,5 @@
 # NASH/IW — current research method and BW interface
-### Sanitized bootstrap edition — 2026-08-18
+### Sanitized bootstrap edition — updated 2026-08-19 after SP BW audit
 
 Status: `INTERIM_REAL_USE / TEST_REQUIRED / NO_CANON / NO_EXEC_SIGN / REVERSIBLE`.
 
@@ -82,6 +82,8 @@ If a blind pass is required, use the separate blind launcher and freeze before e
 
 The live BW currently resides on private project storage. External cells without Drive access participate by returning append-only contribution deltas in-thread or as files.
 
+Current prototype state after independent SP epistemic audit: `BW/SKS v0.1.1 / LIVE_USE_WITH_PATCHES / NO_CANON / NO_EXEC_SIGN`.
+
 Semantic architecture:
 
 ```text
@@ -114,6 +116,19 @@ Load-bearing invariants:
 - current state is derived from events
 - `OPEN_WORLD_BY_DEFAULT`
 - `HASH_IDENTITY != SCIENTIFIC_VALIDITY`
+
+### 5.1 v0.1.1 provenance and retrieval guards
+
+The SP audit found that an early prototype relied too heavily on a single synthesis document and that some conformance tests were vacuous. v0.1.1 therefore adds these guards:
+
+- load-bearing provenance should include a `SOURCE_ANCHOR` locating the relevant section/theorem/result inside a source, not only a pointer to the whole document;
+- for a formal-mathematics claim, `SUPPORTED_CURRENT` requires evidence of class `PROOF`; otherwise a legal state is `ASSERTED_IN_SYNTHESIS_PROOF_NOT_LOCATED`;
+- `WARRANT_BOUNDARY` is distinct from durable `NEGATIVE_KNOWLEDGE`; a warrant boundary should state what gate can lift it;
+- an exact prior-art absorption or source-dependent `CLOSED_IN_SCOPE` must not be treated as unconditional when the external source/theorem location has not been verified;
+- bounded retrieval is asymmetric: it may omit some support before it omits an active boundary. Active `WARRANT_BOUNDARY`, relevant `UNKNOWN`, current claim boundary and terminal completion debt must not disappear merely because a neighborhood is truncated;
+- conformance tests must include adversarial fixtures that actually attempt P→S or S→P status leakage; a correct seed alone is not a discriminating test;
+- event `issuer` identifies the responsible cell/participant; the document belongs in provenance;
+- synthetic conformance fixtures must remain separate from live scientific knowledge.
 
 ## 6. External-cell BW delta
 
@@ -148,4 +163,6 @@ Rules:
 
 Field/frontier maps from scientific scouting may enter as candidate S-plane objects, but:
 
-`FRONTIER_CANDIDATE != NOVEL`.
+`FRONTIER_CANDIDATE != NOVEL`
+
+For imported frontier candidates, preserve at least `framework_activity_state` and `last_verified_active` where those fields are material. A stale open problem or a question open only inside an abandoned framework must not silently become a current field frontier.
