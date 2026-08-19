@@ -125,6 +125,17 @@ Core guard:
 
 Do not reject the whole causal-DAG idea because one field or migration rule is defective if a smaller patch preserves the useful core.
 
+## BW delta plane/type note
+
+If the review produces material reusable knowledge, return a BW delta. For v0.1.1:
+
+- `SPINE`: `SOURCE`, `SOURCE_ANCHOR`, `EVIDENCE`;
+- `P`: `PROJECT_OBJECT`, `PROJECT_OBLIGATION`;
+- `S`: scientific record kinds including `NEGATIVE_KNOWLEDGE`, `WARRANT_BOUNDARY`, `UNKNOWN`, `TENSION`, etc.;
+- `CROSS`: `BRIDGE`.
+
+A limitation of the BW reducer/architecture is a **P-plane instrument/project finding**, not S-plane scientific `NEGATIVE_KNOWLEDGE`. Represent it as `PROJECT_OBJECT` (e.g. subtype `INSTRUMENT_DEFECT` / `DESIGN_QUALIFICATION`) plus `PROJECT_OBLIGATION` where remediation remains open. Preserve source/audit location through SPINE anchors.
+
 No implementation yet.
 
 `NO_CANON / NO_EXEC_SIGN`.
