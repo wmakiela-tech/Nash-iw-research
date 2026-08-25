@@ -30,10 +30,9 @@ Use for:
 - cross-cell research artifacts;
 - current system/governance guidance.
 
-Primary current scientific/project resolver:
+Primary current scientific/project resolver (find by artifact ID/name in the private project Drive/current index):
 
-`IW_KCELL_BW_V0_2_OPERATING_LAYER_001_20260824`  
-Drive ID: `14gy3BzHWgXf27byP2Qv7je7uyj-TekJv_0Y4jqN8lis`
+`IW_KCELL_BW_V0_2_OPERATING_LAYER_001_20260824`
 
 ### File Library / exact frozen bundles
 
@@ -67,7 +66,7 @@ Every current-state summary should expose an `as_of` date or current build/event
 
 ## Public/private safety
 
-This repository is public. Do not copy unpublished scientific conclusions or private cross-cell packets here merely to improve discoverability. Public GitHub should point authorized NASH/IW researchers toward the private current-state resolver and keep executable/public-safe material reproducible.
+This repository is public. Do not copy unpublished scientific conclusions, private cross-cell packets or provider-specific private file IDs here merely to improve discoverability. Public GitHub should point authorized NASH/IW researchers toward the private current-state resolver and keep executable/public-safe material reproducible.
 
 ## Minimal research handoff expectation
 
