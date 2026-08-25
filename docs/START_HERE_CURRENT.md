@@ -6,23 +6,19 @@ This public repository is an infrastructure and reproducibility surface. It is *
 
 ## For an active NASH/IW researcher
 
-Before starting expensive or claim-heavy work, resolve current state from the project-private sources below.
+Before starting expensive or claim-heavy work, resolve current state from the project-private sources below by artifact ID/name in the private Drive/current index.
 
 1. **Project/system rules**  
-   `IW_SYSTEM_CORE_v0_1_20260822`  
-   Drive ID: `17M2dxJDCqYQ9aZjQeYOrGPkVEJsftuaBs5aBmBAJ24A`
+   `IW_SYSTEM_CORE_v0_1_20260822`
 
 2. **Current-applicable document index**  
-   `IW_GOVCELL_20260816_INDEX_IW_CURRENT_APPLICABLE_DOCUMENTS_001`  
-   Drive ID: `1udLeT78NteZUEJBPP621_SULr5QO0CJds6rOqHldcz0`
+   `IW_GOVCELL_20260816_INDEX_IW_CURRENT_APPLICABLE_DOCUMENTS_001`
 
 3. **Shared scientific/project knowledge currentness**  
-   `IW_KCELL_BW_V0_2_OPERATING_LAYER_001_20260824`  
-   Drive ID: `14gy3BzHWgXf27byP2Qv7je7uyj-TekJv_0Y4jqN8lis`
+   `IW_KCELL_BW_V0_2_OPERATING_LAYER_001_20260824`
 
 4. **Scientific Knowledge Substrate research program / rationale**  
-   `IW_SCIENTIFIC_KNOWLEDGE_SUBSTRATE_AND_MECHANISM_GRAPH_PROGRAM_001_20260816`  
-   Drive ID: `1WR9D_exjQjkfDYP4biJpJs7MrwekMI-78L_hBw4dcFo`
+   `IW_SCIENTIFIC_KNOWLEDGE_SUBSTRATE_AND_MECHANISM_GRAPH_PROGRAM_001_20260816`
 
 ## Current research domains
 
@@ -53,7 +49,7 @@ The project is designed as a federated scientific ecology: heterogeneous partici
 
 ## Public/private boundary
 
-Do not commit unpublished scientific results, private review packets, restricted source material or private current-state snapshots to this public repository without the appropriate publication gate.
+Do not commit unpublished scientific results, private review packets, restricted source material, provider-specific private file IDs or private current-state snapshots to this public repository without the appropriate publication gate.
 
 `GITHUB_POINTER != DELIVERY != SCIENTIFIC_VALIDATION`
 
