@@ -7,6 +7,7 @@ from nash_iw.system_contracts import (
     assert_signal_only,
     explicit_current,
     transferred_witness,
+    validate_accession_contract,
     validate_execution_contract,
     validate_regression_metadata,
 )
@@ -34,6 +35,33 @@ class SystemContractTests(unittest.TestCase):
             "status": "PASS",
         }
 
+    def _valid_accession_contract(self):
+        return {
+            "executor_identity": {
+                "model_or_executor": "SYNTHETIC_MODEL",
+                "provider_or_runtime": "SYNTHETIC_RUNTIME",
+                "tool_surface": ["read", "compute"],
+                "persistent_memory_status": "NONE",
+            },
+            "exposure_state": {
+                "state": "FRESH",
+                "independence_claim_allowed": True,
+            },
+            "authority_ceiling": {
+                "no_canon": True,
+                "no_exec_sign": True,
+                "no_automatic_cell_identity_inheritance": True,
+                "no_automatic_project_adoption": True,
+            },
+            "mutation_boundary": {
+                "writes_allowed": False,
+            },
+            "bounded_task_and_failure_outcomes": {
+                "task_ref_or_description": "Synthetic bounded accession task",
+                "legal_failure_outcomes": ["FAIL", "INSUFFICIENT_EVIDENCE", "NOT_ADOPTED"],
+            },
+        }
+
     def test_thin_execution_contract_valid(self):
         self.assertEqual(validate_execution_contract(self._valid_execution_contract()), [])
 
@@ -42,6 +70,22 @@ class SystemContractTests(unittest.TestCase):
         contract.pop("claim_ceiling")
         errors = validate_execution_contract(contract)
         self.assertTrue(any("claim_ceiling" in error for error in errors))
+
+    def test_stage_a_accession_contract_valid(self):
+        self.assertEqual(validate_accession_contract(self._valid_accession_contract()), [])
+
+    def test_accession_cannot_self_mint_authority(self):
+        contract = self._valid_accession_contract()
+        contract["authority_ceiling"]["no_automatic_project_adoption"] = False
+        errors = validate_accession_contract(contract)
+        self.assertTrue(any("no_automatic_project_adoption" in error for error in errors))
+
+    def test_write_capable_accession_requires_containment(self):
+        contract = self._valid_accession_contract()
+        contract["mutation_boundary"] = {"writes_allowed": True}
+        errors = validate_accession_contract(contract)
+        self.assertTrue(any("allowed_surfaces" in error for error in errors))
+        self.assertTrue(any("no_automatic_merge_or_adoption" in error for error in errors))
 
     def test_current_is_explicit_not_newest(self):
         records = [
