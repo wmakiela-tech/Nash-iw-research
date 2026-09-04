@@ -1,0 +1,25 @@
+{
+  "executor_identity": {
+    "model_or_executor": "SYNTHETIC_MODEL",
+    "provider_or_runtime": "SYNTHETIC_RUNTIME",
+    "tool_surface": ["read", "compute"],
+    "persistent_memory_status": "NONE"
+  },
+  "exposure_state": {
+    "state": "FRESH",
+    "independence_claim_allowed": true
+  },
+  "authority_ceiling": {
+    "no_canon": true,
+    "no_exec_sign": true,
+    "no_automatic_cell_identity_inheritance": true,
+    "no_automatic_project_adoption": true
+  },
+  "mutation_boundary": {
+    "writes_allowed": false
+  },
+  "bounded_task_and_failure_outcomes": {
+    "task_ref_or_description": "Synthetic bounded accession task",
+    "legal_failure_outcomes": ["FAIL", "INSUFFICIENT_EVIDENCE", "NOT_ADOPTED"]
+  }
+}
