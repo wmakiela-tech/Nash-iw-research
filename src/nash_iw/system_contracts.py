@@ -31,6 +31,14 @@ EXECUTION_REQUIRED_FIELDS = (
     "status",
 )
 
+ACCESSION_REQUIRED_FIELDS = (
+    "executor_identity",
+    "exposure_state",
+    "authority_ceiling",
+    "mutation_boundary",
+    "bounded_task_and_failure_outcomes",
+)
+
 _SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
 _COMMIT_RE = re.compile(r"^[0-9a-fA-F]{7,40}$")
 
@@ -87,6 +95,77 @@ def validate_execution_contract(contract: Mapping[str, object]) -> list[str]:
     for field in ("input_refs_and_hashes", "actual_output_refs_and_hashes"):
         if field in contract:
             errors.extend(_validate_hash_entries(contract[field], field))
+
+    return errors
+
+
+def validate_accession_contract(contract: Mapping[str, object]) -> list[str]:
+    """Validate the bounded Stage-A accession envelope.
+
+    This is an EXPERIMENTAL_CONTRACT for comparable model/executor evaluation.
+    Passing it grants only legal test entry under the declared ceiling. It does
+    not adopt a model, transfer cell identity, establish scientific authority,
+    or create project-wide status.
+    """
+    errors: list[str] = []
+    for field in ACCESSION_REQUIRED_FIELDS:
+        if field not in contract:
+            errors.append(f"missing required accession field: {field}")
+        elif not _is_nonempty(contract[field]):
+            errors.append(f"required accession field is empty: {field}")
+
+    identity = contract.get("executor_identity")
+    if isinstance(identity, Mapping):
+        for field in ("model_or_executor", "provider_or_runtime", "tool_surface", "persistent_memory_status"):
+            if not _is_nonempty(identity.get(field)):
+                errors.append(f"executor_identity.{field} is required")
+    elif identity is not None:
+        errors.append("executor_identity must be an object")
+
+    exposure = contract.get("exposure_state")
+    if isinstance(exposure, Mapping):
+        if not _is_nonempty(exposure.get("state")):
+            errors.append("exposure_state.state is required")
+        if not isinstance(exposure.get("independence_claim_allowed"), bool):
+            errors.append("exposure_state.independence_claim_allowed must be boolean")
+    elif exposure is not None:
+        errors.append("exposure_state must be an object")
+
+    ceiling = contract.get("authority_ceiling")
+    if isinstance(ceiling, Mapping):
+        required_true = (
+            "no_canon",
+            "no_exec_sign",
+            "no_automatic_cell_identity_inheritance",
+            "no_automatic_project_adoption",
+        )
+        for field in required_true:
+            if ceiling.get(field) is not True:
+                errors.append(f"authority_ceiling.{field} must be true")
+    elif ceiling is not None:
+        errors.append("authority_ceiling must be an object")
+
+    mutation = contract.get("mutation_boundary")
+    if isinstance(mutation, Mapping):
+        writes_allowed = mutation.get("writes_allowed")
+        if not isinstance(writes_allowed, bool):
+            errors.append("mutation_boundary.writes_allowed must be boolean")
+        if writes_allowed:
+            if not _is_nonempty(mutation.get("allowed_surfaces")):
+                errors.append("mutation_boundary.allowed_surfaces is required when writes are allowed")
+            if mutation.get("no_automatic_merge_or_adoption") is not True:
+                errors.append("mutation_boundary.no_automatic_merge_or_adoption must be true when writes are allowed")
+    elif mutation is not None:
+        errors.append("mutation_boundary must be an object")
+
+    task = contract.get("bounded_task_and_failure_outcomes")
+    if isinstance(task, Mapping):
+        if not _is_nonempty(task.get("task_ref_or_description")):
+            errors.append("bounded_task_and_failure_outcomes.task_ref_or_description is required")
+        if not _is_nonempty(task.get("legal_failure_outcomes")):
+            errors.append("bounded_task_and_failure_outcomes.legal_failure_outcomes is required")
+    elif task is not None:
+        errors.append("bounded_task_and_failure_outcomes must be an object")
 
     return errors
 
