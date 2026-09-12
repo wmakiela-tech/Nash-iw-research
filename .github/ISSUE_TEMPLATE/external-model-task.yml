@@ -1,0 +1,60 @@
+name: External model task
+description: Public-safe bounded task for Grok or another external participant.
+title: "[EXT-MODEL] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is public. Do not include private IW artifacts, credentials, restricted source material, unpublished private scientific conclusions, or private storage coordinates.
+  - type: input
+    id: target
+    attributes:
+      label: Target participant
+      placeholder: Grok
+    validations:
+      required: true
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task type
+      options: [Technical audit, Refactor, Implementation critique, Repository architecture, Public prior-art check, Reproducibility check, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: object
+    attributes:
+      label: Object and exact bounded question
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Allowed public sources / repository pointers
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries and claim ceiling
+      value: |
+        public_safe_only: true
+        scientific_adoption: false
+        canon: false
+        exec_sign: false
+    validations:
+      required: true
+  - type: textarea
+    id: stop
+    attributes:
+      label: Stop condition
+    validations:
+      required: true
+  - type: textarea
+    id: return_contract
+    attributes:
+      label: Return contract
+      value: |
+        State what changed/found, evidence or diff, uncertainty/failure, and recommended next action.
+    validations:
+      required: true
