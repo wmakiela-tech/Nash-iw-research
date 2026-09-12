@@ -13,6 +13,7 @@ Active NASH/IW researchers should begin with:
 3. [`docs/RESEARCH_SCOPE.md`](docs/RESEARCH_SCOPE.md) — public-safe map of research domains and high-value research outputs.
 4. [`docs/SOURCE_OF_TRUTH.md`](docs/SOURCE_OF_TRUTH.md) — explains which surface answers which kind of question.
 5. [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md) — repository authority and claim boundaries.
+6. [`docs/NAMING_AND_INDEXING.md`](docs/NAMING_AND_INDEXING.md) — canonical IDs, filenames, metadata and supersession direction.
 
 ## GitHub roles
 
