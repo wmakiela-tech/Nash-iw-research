@@ -25,7 +25,8 @@ docs/START_HERE_CURRENT.md
   ├─> docs/SURFACE_ARCHITECTURE.md
   ├─> docs/RESEARCH_SCOPE.md
   ├─> docs/SOURCE_OF_TRUTH.md
-  └─> docs/GOVERNANCE.md
+  ├─> docs/GOVERNANCE.md
+  └─> docs/NAMING_AND_INDEXING.md
 ```
 
 ## Functional navigation
@@ -43,6 +44,8 @@ Use `runtime/`, `src/`, `tests/`, `schemas/`, `manifests/` and CI.
 Use `archive-index/` and Git version history. Select an explicit archive mode:
 
 `PUBLIC_ARTIFACT / POINTER_ONLY / HASH_ONLY / EXECUTABLE_REPRODUCTION`.
+
+Machine-readable archive entries use `archive-index/archive-entry.schema.json`; canonical filenames and stable IDs follow `docs/NAMING_AND_INDEXING.md`.
 
 ### Need an asynchronous channel to Grok or another external participant?
 
