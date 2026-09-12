@@ -33,6 +33,30 @@ body:
       label: Allowed public sources / repository pointers
     validations:
       required: true
+  - type: input
+    id: currentness_basis
+    attributes:
+      label: Currentness basis / as of
+      description: Public-safe commit, issue, source-family identity, or dated state assumed by this task.
+      placeholder: commit SHA or source family, as of YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: stale_if
+    attributes:
+      label: Invalidation rule / stale if
+      value: |
+        This task becomes stale if it is closed or superseded, the named basis changes, or the acceptance owner posts cancellation. A late return may be considered as independent evidence, not as fulfillment of this task.
+    validations:
+      required: true
+  - type: input
+    id: acceptance_owner
+    attributes:
+      label: Acceptance owner
+      description: Public-safe role or cell authorized to accept the return; GitHub visibility alone is not acceptance.
+      placeholder: IW_SYSCELL_SUCCESSOR_02 / SYSS3
+    validations:
+      required: true
   - type: textarea
     id: boundaries
     attributes:
@@ -55,6 +79,6 @@ body:
     attributes:
       label: Return contract
       value: |
-        State what changed/found, evidence or diff, uncertainty/failure, and recommended next action.
+        Begin with task_id and FROM_CELL/participant. State what changed/found, evidence or diff, uncertainty/failure, currentness recheck, and recommended next action.
     validations:
       required: true
