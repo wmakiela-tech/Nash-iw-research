@@ -74,7 +74,30 @@ Use for:
 
 These may be useful for structured mailbox/queue functions when selective retrieval, concurrency or multi-session coordination creates real pressure. They are not default truth stores and should not be adopted merely because they support richer schemas.
 
-## 2. GitHub archive modes
+## 2. Communication routes and fallback
+
+Every material task has one stable `task_id` across transports. Moving from Slack to GitHub or Drive is a relay of the same task, not a new task. Record the attempted route and delivery state; never infer receipt from a successful write.
+
+| Communication need | Primary route | Safe fallback | Durable terminal record |
+|---|---|---|---|
+| rapid internal dispatch/correction | Slack thread | private Drive task packet or Moderator relay | qualified BW/Drive artifact when material |
+| public-safe asynchronous external task | GitHub Issue | GitHub PR/discussion on the same `task_id` | issue disposition + linked commit/artifact |
+| private cross-cell packet | private Drive/BW | File Library/frozen bundle + legal relay | private qualified source chain |
+| code/reproduction review | GitHub Issue/PR | public-safe archive entry | merged/disposed PR + manifest/tests |
+| connector outage | alternate route permitted by exposure class | local integrity witness pending custody | replay/import with deduplication and readback |
+
+Fallback sequence:
+
+```text
+CLASSIFY_EXPOSURE -> BIND_TASK_ID -> TRY_PRIMARY_ROUTE
+-> RECORD_DELIVERY_STATE -> USE_SAFE_FALLBACK_IF_NEEDED
+-> REVALIDATE_CURRENTNESS -> ACCEPT_OR_RETYPE_RETURN
+-> PERSIST_TERMINAL_STATE_IF_MATERIAL
+```
+
+Required delivery states are `DRAFT`, `POSTED`, `RECEIVED`, `ACCEPTED`, `REJECTED`, `SUPERSEDED`, `CANCELLED`, `DELIVERY_BLOCKED`, and `CUSTODY_PENDING`. Only the authorized acceptance owner may set acceptance.
+
+## 3. GitHub archive modes
 
 Public GitHub archival should use one of four explicit modes.
 
@@ -102,7 +125,23 @@ GitHub stores code + public-safe fixture/parameters + manifest/tests sufficient 
 
 This is stronger than a pointer but still does not confer scientific adoption.
 
-## 3. Currentness under connector failure
+## 4. Databases and registries
+
+IW may use several structured stores because they answer different questions:
+
+| Store | Function | Controlling for |
+|---|---|---|
+| BW/private registry | event/currentness ledger and private custody references | effective private project/scientific state, subject to resolver semantics |
+| Living Theory | authored explanatory synthesis | current theory narrative, not raw evidence custody |
+| GitHub archive index | public-safe artifact/task/reproduction catalogue | public discoverability and repository lineage only |
+| GitHub Issues/Projects | public-safe task/return queue | workflow state only |
+| Airtable/Coda-class database | optional searchable mailbox/projection | no authority unless explicitly adopted for a bounded function |
+
+All database rows must use stable object/task/artifact IDs, expose `as_of` or source revision when representing currentness, and retain a pointer to the controlling source. Synchronization is projection/import, not silent last-write-wins. Conflicts resolve to `CURRENTNESS_UNRESOLVED/HOLD` until the owner or controlling source resolves them.
+
+Minimal cross-store keys are `object_id`, `record_type`, `source_revision`, `as_of`, `status`, `owner`, `exposure`, `provenance`, and optional `supersedes` (`old -> new`). This is a boundary contract, not a requirement that every exploratory note become a database row.
+
+## 5. Currentness under connector failure
 
 A storage failure must not collapse scientific currentness into custody.
 
@@ -125,7 +164,7 @@ HASH != ARTIFACT_DELIVERY
 PUBLIC_FALLBACK != PRIVATE_DATA_BYPASS
 ```
 
-## 4. Model-to-model communication
+## 6. Model-to-model communication
 
 The current low-cost candidate pattern is transport-agnostic:
 
@@ -140,7 +179,7 @@ The transient session should carry deltas rather than repeatedly restating full 
 
 Preserve the correction capacity, not a particular chat mechanism.
 
-## 5. Selection rule
+## 7. Selection rule
 
 Choose a surface by the function needed, not by institutional habit.
 
@@ -156,7 +195,11 @@ Choose a surface by the function needed, not by institutional habit.
 
 A surface may perform more than one role, but role boundaries must remain explicit.
 
-## 6. Architecture principle
+## 8. Naming and retrieval
+
+Use one canonical artifact filename and stable ID across GitHub, Drive/BW, Slack references and database projections. Do not prepend upload-order numbers or rename an artifact merely because it crossed a transport boundary. Full rules: [`NAMING_AND_INDEXING.md`](NAMING_AND_INDEXING.md).
+
+## 9. Architecture principle
 
 ```text
 PRESERVE_FUNCTION > PRESERVE_MECHANISM
