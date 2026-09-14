@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/research-reproduction-manifest.schema.json",
+  "manifest_id": "IW_CELL_OBJECT_REPRO_MANIFEST_001_20260914",
+  "artifact_id": "IW_CELL_OBJECT_REPORT_001_20260914",
+  "title": "Replace with a human-readable title",
+  "origin_cell": "IW_CELL",
+  "created_at": "2026-09-14T00:00:00Z",
+  "as_of": "exact currentness/source basis",
+  "task_id": "stable cross-surface task ID",
+  "exposure": "PUBLIC",
+  "status": "DRAFT",
+  "claim": {
+    "question": "Exact research question",
+    "object": "Exact source-native object or dataset",
+    "statement": "Bounded result statement",
+    "claim_ceiling": "What is not established"
+  },
+  "code": {
+    "repository": "https://github.com/owner/repository",
+    "commit": "40-hex commit SHA or immutable release ID",
+    "entrypoint": "path/to/entrypoint",
+    "license": "SPDX identifier or NOT_APPLICABLE"
+  },
+  "environment": {
+    "os": "name/version",
+    "architecture": "x86_64",
+    "runtime": "language and exact version",
+    "dependency_lock": "path or immutable hash",
+    "hardware": "material hardware detail or NOT_MATERIAL"
+  },
+  "execution": {
+    "clean_start": "exact starting state",
+    "commands": ["exact command 1"],
+    "parameters": {},
+    "seeds": [],
+    "tolerances": {},
+    "stop_rule": "exact stop rule",
+    "expected_runtime": "order-of-magnitude or UNKNOWN"
+  },
+  "inputs": [
+    {
+      "path": "path/to/input",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source": "exact provenance",
+      "schema": "path, URI, or inline description",
+      "units_or_conventions": "exact conventions",
+      "exposure": "PUBLIC"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "path/to/output",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "role": "RAW",
+      "derived_from": ["path/to/input"],
+      "expected": "key values and tolerances"
+    }
+  ],
+  "verification": {
+    "tests": ["exact test command"],
+    "controls": ["negative or sensitivity control"],
+    "warnings": [],
+    "known_failures": [],
+    "reproduction_status": "NOT_RUN",
+    "independent_reproducer": "NOT_APPLICABLE",
+    "platform_deviations": []
+  },
+  "provenance": {
+    "primary_location": "durable pointer",
+    "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "narrative_artifact": "IW_CELL_OBJECT_REPORT_001_20260914",
+    "derived_from": [],
+    "supersedes": [],
+    "stale_if": "exact invalidation condition",
+    "readback_state": "NOT_VERIFIED",
+    "delivery_state": "NOT_ROUTED"
+  }
+}

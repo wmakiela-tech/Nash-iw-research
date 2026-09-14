@@ -1,6 +1,6 @@
 # Repository Map
 
-**As of:** 2026-09-12
+**As of:** 2026-09-14
 
 ```text
 .github/                 workflows, review templates and public-safe task/gate templates
@@ -12,6 +12,7 @@ runtime/                  bounded executable research/runtime surfaces
 schemas/                  machine-readable schemas
 scripts/                  command-line utilities
 src/nash_iw/              reusable Python package
+templates/                controlled work-return, literature and reproduction templates
 tests/                    unit/regression tests
 ```
 
@@ -22,6 +23,7 @@ README.md
   ↓
 docs/START_HERE_CURRENT.md
   ├─> private current project/scientific resolvers (Drive/BW)
+  ├─> docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md
   ├─> docs/SURFACE_ARCHITECTURE.md
   ├─> docs/RESEARCH_SCOPE.md
   ├─> docs/SOURCE_OF_TRUTH.md
@@ -34,6 +36,10 @@ docs/START_HERE_CURRENT.md
 ### Need current unpublished scientific/project state?
 
 Use the private BW/source chain. GitHub may point to the resolver but does not replicate private currentness by default.
+
+### Need a current cell rotation, material return or reproduction format?
+
+Use `docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md` and its controlled `templates/`. The protocol is the controlling text; templates and schema are instruments.
 
 ### Need code, tests or a reproducible public fixture?
 

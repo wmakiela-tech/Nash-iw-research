@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wmakiela-tech/Nash-iw-research/blob/main/schemas/research-reproduction-manifest.schema.json",
+  "title": "NASH/IW Research Reproduction Manifest",
+  "description": "Public-safe machine-readable boundary for regenerating or diagnosing a load-bearing computational or empirical result.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_id",
+    "artifact_id",
+    "title",
+    "origin_cell",
+    "created_at",
+    "as_of",
+    "task_id",
+    "exposure",
+    "status",
+    "claim",
+    "code",
+    "environment",
+    "execution",
+    "inputs",
+    "outputs",
+    "verification",
+    "provenance"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "manifest_id": { "$ref": "#/$defs/artifactId" },
+    "artifact_id": { "$ref": "#/$defs/artifactId" },
+    "title": { "type": "string", "minLength": 1 },
+    "origin_cell": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "as_of": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "exposure": { "enum": ["PUBLIC", "PRIVATE", "RESTRICTED"] },
+    "status": { "enum": ["DRAFT", "CURRENT", "FROZEN", "HOLD", "SUPERSEDED", "RETRACTED"] },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question", "object", "statement", "claim_ceiling"],
+      "properties": {
+        "question": { "type": "string", "minLength": 1 },
+        "object": { "type": "string", "minLength": 1 },
+        "statement": { "type": "string", "minLength": 1 },
+        "claim_ceiling": { "type": "string", "minLength": 1 }
+      }
+    },
+    "code": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "commit", "entrypoint", "license"],
+      "properties": {
+        "repository": { "type": "string", "minLength": 1 },
+        "commit": { "type": "string", "minLength": 1 },
+        "entrypoint": { "type": "string", "minLength": 1 },
+        "license": { "type": "string", "minLength": 1 }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["os", "architecture", "runtime", "dependency_lock", "hardware"],
+      "properties": {
+        "os": { "type": "string", "minLength": 1 },
+        "architecture": { "type": "string", "minLength": 1 },
+        "runtime": { "type": "string", "minLength": 1 },
+        "dependency_lock": { "type": "string", "minLength": 1 },
+        "hardware": { "type": "string", "minLength": 1 }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["clean_start", "commands", "parameters", "seeds", "tolerances", "stop_rule", "expected_runtime"],
+      "properties": {
+        "clean_start": { "type": "string", "minLength": 1 },
+        "commands": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "parameters": { "type": "object" },
+        "seeds": { "type": "array", "items": { "type": ["integer", "string"] } },
+        "tolerances": { "type": "object" },
+        "stop_rule": { "type": "string", "minLength": 1 },
+        "expected_runtime": { "type": "string", "minLength": 1 }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/inputFile" }
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/outputFile" }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tests", "controls", "warnings", "known_failures", "reproduction_status", "independent_reproducer", "platform_deviations"],
+      "properties": {
+        "tests": { "type": "array", "items": { "type": "string" } },
+        "controls": { "type": "array", "items": { "type": "string" } },
+        "warnings": { "type": "array", "items": { "type": "string" } },
+        "known_failures": { "type": "array", "items": { "type": "string" } },
+        "reproduction_status": {
+          "enum": ["NOT_RUN", "AUTHOR_REPRODUCED", "INDEPENDENTLY_REPRODUCED", "PARTIAL", "FAILED_WITH_DIAGNOSTIC"]
+        },
+        "independent_reproducer": { "type": "string", "minLength": 1 },
+        "platform_deviations": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_location", "content_sha256", "narrative_artifact", "derived_from", "supersedes", "stale_if", "readback_state", "delivery_state"],
+      "properties": {
+        "primary_location": { "type": "string", "minLength": 1 },
+        "content_sha256": { "$ref": "#/$defs/hashOrReason" },
+        "narrative_artifact": { "$ref": "#/$defs/artifactId" },
+        "derived_from": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "supersedes": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "stale_if": { "type": "string", "minLength": 1 },
+        "readback_state": { "enum": ["NOT_VERIFIED", "VERIFIED", "FAILED", "NOT_POSSIBLE_WITH_REASON"] },
+        "delivery_state": { "enum": ["NOT_ROUTED", "DELIVERY_BLOCKED", "DELIVERED", "RECEIVED", "ACCEPTED"] }
+      }
+    }
+  },
+  "$defs": {
+    "artifactId": {
+      "type": "string",
+      "pattern": "^IW_[A-Z0-9_]+_[0-9]{3}_[0-9]{8}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "hashOrReason": {
+      "oneOf": [
+        { "$ref": "#/$defs/sha256" },
+        { "type": "string", "pattern": "^NOT_AVAILABLE_WITH_REASON:.+" }
+      ]
+    },
+    "inputFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "source", "schema", "units_or_conventions", "exposure"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "source": { "type": "string", "minLength": 1 },
+        "schema": { "type": "string", "minLength": 1 },
+        "units_or_conventions": { "type": "string", "minLength": 1 },
+        "exposure": { "enum": ["PUBLIC", "PRIVATE", "RESTRICTED"] }
+      }
+    },
+    "outputFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "role", "derived_from", "expected"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "role": { "enum": ["RAW", "DERIVED", "FIGURE", "TABLE", "LOG", "CHECKPOINT", "OTHER"] },
+        "derived_from": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "expected": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
+

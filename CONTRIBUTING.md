@@ -1,6 +1,6 @@
 # Contributing
 
-Before research-related or claim-heavy work, read [`docs/START_HERE_CURRENT.md`](docs/START_HERE_CURRENT.md) and resolve the current private BW/source state. GitHub code or an old report is not sufficient evidence of scientific currentness.
+Before research-related or claim-heavy work, read [`docs/START_HERE_CURRENT.md`](docs/START_HERE_CURRENT.md), follow [`docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md), and resolve the current private BW/source state. GitHub code or an old report is not sufficient evidence of scientific currentness.
 
 1. Work on a focused branch.
 2. Make the smallest coherent change.
@@ -18,6 +18,12 @@ For scientific/research-related changes also state:
 - relation to current BW/private state;
 - whether the change is runtime, evidence, candidate claim, review or publication-ready material;
 - any negative knowledge or prior-art relation that prevents rediscovery.
+
+## Reproducibility minimum
+
+A load-bearing computational or empirical result must include a validated `schemas/research-reproduction-manifest.schema.json` instance, exact code/environment/commands/inputs/outputs/checksums, controls, tolerances and an honest reproduction state. A load-bearing literature result must preserve exact queries, databases/tools, filters, screening logic, exact source locators, retrieval depth/limits and a checksummed bibliography export using the current literature template.
+
+A narrative claim without its load-bearing bundle is `EVIDENCE_INCOMPLETE_FOR_REPRODUCTION`; this is not automatically a scientific-failure verdict.
 
 ## Public repository boundary
 

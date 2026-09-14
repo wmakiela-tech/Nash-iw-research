@@ -1,7 +1,9 @@
 # NASH/IW — Naming and Indexing Contract
 
-**As of:** 2026-09-12  
+**As of:** 2026-09-14  
 **Classification:** public-safe operator guidance; no scientific authority.
+
+This is the current forward-only naming boundary used by [`WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](WORK_AND_REPRODUCIBILITY_PROTOCOL.md). It supersedes the older preferred token order in private System Core section 6 for new material artifacts only. Historical artifacts are not renamed, and System Core protected boundaries remain unchanged.
 
 ## Canonical identifier
 
@@ -23,7 +25,7 @@ The filename is the identifier plus a lowercase extension. Keep the identifier u
 
 - `CELL-OR-LINEAGE`: active role/cell short name; historical parent remains in provenance.
 - `OBJECT`: compact subject, using `_` between words.
-- `DOCUMENT-TYPE`: one controlled type such as `TASK`, `PACKET`, `RETURN`, `REVIEW`, `DECISION`, `MANIFEST`, `REPORT`, `DATA`, `SCHEMA`, or `INDEX`.
+- `DOCUMENT-TYPE`: one controlled type such as `PROTOCOL`, `TASK`, `PACKET`, `RETURN`, `REVIEW`, `CHECKPOINT`, `FREEZE`, `DECISION`, `REPORT`, `MANIFEST`, `REPRO_MANIFEST`, `LITERATURE_RECORD`, `DATA`, `RUNTIME`, `SCHEMA`, `INDEX`, `POINTER`, or `SUCCESSION`.
 - `NNN`: zero-padded sequence within the named object/type family.
 - `YYYYMMDD`: creation date of the logical artifact, not a later upload date.
 
