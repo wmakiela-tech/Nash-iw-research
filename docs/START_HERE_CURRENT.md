@@ -1,6 +1,6 @@
 # NASH/IW — Current Research Resolver
 
-**As of:** 2026-09-12
+**As of:** 2026-09-14
 
 This public repository is an infrastructure, archive, reproducibility and external-bridge surface. It is **not** the sole or primary store for unpublished NASH/IW scientific currentness.
 
@@ -22,6 +22,9 @@ Before starting expensive or claim-heavy work, resolve current state from the pr
 
 5. **Scientific Knowledge Substrate / research-memory program**  
    `IW_SCIENTIFIC_KNOWLEDGE_SUBSTRATE_AND_MECHANISM_GRAPH_PROGRAM_001_20260816`
+
+6. **Current cell-work, artifact and reproducibility profile**  
+   [`WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](WORK_AND_REPRODUCIBILITY_PROTOCOL.md)
 
 Then read [`SURFACE_ARCHITECTURE.md`](SURFACE_ARCHITECTURE.md) before choosing where to put a new artifact, task or dialogue.
 
@@ -67,6 +70,15 @@ NASH/IW is not optimized for producing more summaries. The highest-value reusabl
 `RESULT_REMEMBERED != RESULT_REGENERABLE`.
 
 The project is designed as a federated scientific ecology: heterogeneous participants should be able to reuse and challenge each other's results without collapsing scientific diversity or making the human Moderator routine transport middleware.
+
+## Material rotations and reproducibility
+
+Every material rotation must preserve function-derived work, artifact/readback state, channel fallback disposition, stable naming, and a reproduction or audit path under [`WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](WORK_AND_REPRODUCIBILITY_PROTOCOL.md). Computational results use the reproduction manifest; load-bearing literature results preserve exact queries, filters, source locators, retrieval limits, and a bibliography export.
+
+```text
+NO_INBOUND != NO_FUNCTIONAL_WORK
+RESULT_REPORTED != RESULT_REGENERABLE
+```
 
 ## Connector-degraded operation
 

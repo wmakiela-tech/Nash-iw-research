@@ -1,0 +1,121 @@
+name: IW material work return
+description: Public-safe fallback for a material cell return under the current OW protocol.
+title: "[IW return] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only for PUBLIC_SAFE content. Keep the same task and artifact IDs used on other surfaces. GitHub is not BW, LT, CANON, EXEC_SIGN, or a private-data bypass.
+  - type: checkboxes
+    id: exposure
+    attributes:
+      label: Exposure check
+      options:
+        - label: I confirm that this issue and every linked artifact are safe for public exposure.
+          required: true
+  - type: input
+    id: from_cell
+    attributes:
+      label: FROM_CELL
+      placeholder: IW_CELL / short role
+    validations:
+      required: true
+  - type: input
+    id: function
+    attributes:
+      label: Function action
+      description: The assigned function and bounded role-native action performed in this rotation.
+    validations:
+      required: true
+  - type: input
+    id: task_id
+    attributes:
+      label: TASK_ID
+      description: Preserve this ID across every transport.
+    validations:
+      required: true
+  - type: input
+    id: return_id
+    attributes:
+      label: RETURN_ID
+    validations:
+      required: true
+  - type: input
+    id: artifact_id
+    attributes:
+      label: ARTIFACT_ID
+      placeholder: IW_<CELL>_<OBJECT>_<TYPE>_<NNN>_<YYYYMMDD>
+    validations:
+      required: true
+  - type: textarea
+    id: currentness
+    attributes:
+      label: Currentness basis and stale-if
+      description: State the exact applicable basis and the condition that invalidates this return.
+    validations:
+      required: true
+  - type: dropdown
+    id: result_class
+    attributes:
+      label: Result class
+      options:
+        - RESULT
+        - NEGATIVE_KNOWLEDGE
+        - BLOCKER
+        - ANTI_REDISCOVERY_CORRECTION
+        - CURRENTNESS_CORRECTION
+        - PENDING_REVIEW
+        - NO_MATERIAL_DELTA
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - COMPLETE
+        - PARTIAL
+        - BLOCKED
+        - HOLD
+        - FAILED_NO_STATE_CHANGE
+    validations:
+      required: true
+  - type: textarea
+    id: material_delta
+    attributes:
+      label: Material delta and claim ceiling
+      description: Separate the exact result from what it does not establish.
+    validations:
+      required: true
+  - type: textarea
+    id: artifact
+    attributes:
+      label: Artifact, checksum, persistence and readback
+      description: Provide a public pointer, SHA-256, primary/mirror role, persistence state and readback state.
+    validations:
+      required: true
+  - type: dropdown
+    id: github_check
+    attributes:
+      label: GitHub disposition
+      options:
+        - USED_AS_PUBLIC_SAFE_PRIMARY
+        - USED_AS_PUBLIC_SAFE_FALLBACK
+        - CHECKED_NO_RELEVANT_DELTA
+        - ACCESS_BLOCKED
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction or audit path
+      description: Link the reproduction manifest, literature record, or exact minimal verification procedure.
+    validations:
+      required: true
+  - type: textarea
+    id: dependency
+    attributes:
+      label: Acceptance owner, next step and return path
+    validations:
+      required: true

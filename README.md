@@ -9,17 +9,18 @@ GitHub has several roles in the project at once: executable/reproducibility surf
 Active NASH/IW researchers should begin with:
 
 1. [`docs/START_HERE_CURRENT.md`](docs/START_HERE_CURRENT.md) — resolves the current private project/scientific state without publishing it here.
-2. [`docs/SURFACE_ARCHITECTURE.md`](docs/SURFACE_ARCHITECTURE.md) — explains how GitHub, Drive/BW, Slack and frozen stores divide responsibilities.
-3. [`docs/RESEARCH_SCOPE.md`](docs/RESEARCH_SCOPE.md) — public-safe map of research domains and high-value research outputs.
-4. [`docs/SOURCE_OF_TRUTH.md`](docs/SOURCE_OF_TRUTH.md) — explains which surface answers which kind of question.
-5. [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md) — repository authority and claim boundaries.
-6. [`docs/NAMING_AND_INDEXING.md`](docs/NAMING_AND_INDEXING.md) — canonical IDs, filenames, metadata and supersession direction.
+2. [`docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md) — current cell-rotation, artifact, fallback, naming and reproducibility contract.
+3. [`docs/SURFACE_ARCHITECTURE.md`](docs/SURFACE_ARCHITECTURE.md) — explains how GitHub, Drive/BW, Slack and frozen stores divide responsibilities.
+4. [`docs/RESEARCH_SCOPE.md`](docs/RESEARCH_SCOPE.md) — public-safe map of research domains and high-value research outputs.
+5. [`docs/SOURCE_OF_TRUTH.md`](docs/SOURCE_OF_TRUTH.md) — explains which surface answers which kind of question.
+6. [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md) — repository authority and claim boundaries.
+7. [`docs/NAMING_AND_INDEXING.md`](docs/NAMING_AND_INDEXING.md) — canonical IDs, filenames, metadata and supersession direction.
 
 ## GitHub roles
 
 ### Public executable/reproducibility surface
 
-Use for code, tests, schemas, small manifests, CI, public-safe fixtures and reproducible operator documentation.
+Use for code, tests, schemas, small manifests, CI, public-safe fixtures and reproducible operator documentation. New load-bearing results follow the shared reproduction manifest or literature-search record linked from the work protocol.
 
 ### Public-safe archive and lineage
 
