@@ -14,6 +14,9 @@ scientific_interface: SW
 shared_publication_interface: SCOPE
 exposure: PUBLIC
 status: CURRENT
+primary_location: GitHub main / docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md
+revision: resolve the current Git commit for the primary path
+mirror_policy: byte-identical mirrors retain this artifact_id and are labeled MIRROR
 stale_if:
   - a later explicitly applicable protocol supersedes this artifact_id
   - SYSTEM CORE changes any protected boundary used here
