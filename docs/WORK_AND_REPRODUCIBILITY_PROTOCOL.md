@@ -4,11 +4,11 @@
 artifact_id: IW_OW_CELL_WORK_ARTIFACT_AND_REPRODUCIBILITY_PROTOCOL_001_20260914
 title: NASH/IW Cell Work, Artifact and Reproducibility Protocol
 created_at: 2026-09-14
-as_of: 2026-09-14
+as_of: 2026-09-20
 origin_cell: IW_ORGANISATION_WORK_01 / OW
 document_type: PROTOCOL
 applicability: PROJECT_GUIDANCE_ACTIVE / FORWARD_ONLY_PROJECT_DEFAULT
-authority_basis: Human Moderator direct instruction, 2026-09-14
+authority_basis: Human Moderator direct instructions, 2026-09-14 and scientific-method/succession update 2026-09-20
 operational_owner: OW
 scientific_interface: SW
 shared_publication_interface: SCOPE
@@ -30,7 +30,7 @@ does_not_supersede:
 guards: [NO_CANON, NO_EXEC_SIGN, NO_SCIENTIFIC_ADJUDICATION, SCIENCE_FIRST]
 ```
 
-This is the single current operational profile for normal cell rotations, material work returns, artifact persistence, public-safe GitHub fallback, naming, and reproducibility. The templates and schema linked at the end are instruments of this protocol, not competing procedures.
+This is the single current operational profile for normal cell rotations, scientific-work method, material work returns, artifact persistence, public-safe GitHub fallback, naming, reproducibility, and load-bearing work-rule inheritance across succession. The templates and schema linked at the end are instruments of this protocol, not competing procedures.
 
 ## 1. Controlling distinctions
 
@@ -43,6 +43,12 @@ CHANNEL_CHANGE != NEW_TASK
 GITHUB_FALLBACK != PRIVATE_DATA_BYPASS
 RESULT_REPORTED != RESULT_REGENERABLE
 SEARCH_NO_MATCH != NOVELTY
+FUNCTION_DECLARATION != FUNCTION_EXECUTION
+CORRECT_LOCAL_OUTPUT != HEALTHY_ROLE_EXECUTION
+SUPPORT_WORK != PRIMARY_FUNCTION
+FOUNDATION_STATE != SPECIFIC_CELL_ARTIFACT
+SUCCESSION_CONTINUITY != PHENOTYPE_CONTINUITY
+SUCCESSOR_PACKET != POINTER_ONLY_BOOTSTRAP
 ```
 
 This protocol standardizes the shared boundary. Cells may retain different internal workflows if their returns translate back to this boundary and preserve protected exposure, currentness, provenance, and authority distinctions.
@@ -78,6 +84,58 @@ The cell uses its current role/founding/succession profile as the source of func
 | OW / system organization | remove one routing, artifact, naming, reproducibility, tooling, dependency, or multi-surface integrity blocker |
 | GOV / EAI / EV / IDEA | perform one role-native governance, interface, evolutionary, or ideation pressure action without taking scientific authority |
 | SCOPE | integrate publication structure, audience language, field boundaries, and accepted scientific modules without replacing source ownership |
+
+## 3.1 Scientific-work method: foundation first, questions coevolve
+
+For nonblind scientific generation, integration, Living Theory ownership, and research-front selection, the default is:
+
+```text
+FOUNDATION_FIRST + ITERATIVE_QUESTION_COEVOLUTION
+```
+
+This is not `MONOGRAPH_FIRST`, not a source-count quota, and not a mandatory serial pipeline. Its purpose is to prevent a cell from attacking a locally convenient calculation before it understands the mature field, the strongest existing mechanisms, and the actual unresolved tension.
+
+When opening a materially new or weakly understood front, use the cheapest sufficient version of this cycle:
+
+1. **Foundation state.** Build or resolve a dependency-ordered field map from suitable graduate texts/monographs/major reviews plus seminal primary sources and a current frontier cluster. Record theorem/mechanism families, exact hypotheses/domains, canonical examples/counterexamples, competing formulations, mature limitations, terminology crosswalks, and do-not-conflate boundaries.
+2. **Question coevolution.** Allow the research question to change as foundations are assimilated. Do not preserve an initial question merely because it arrived first.
+3. **Prior-art subtraction.** Determine what is mature, absorbed, known impossible, already named differently, or only analogous. `SEARCH_NO_MATCH != NOVELTY`; a no-match may create a search residual, never a discovery claim by itself.
+4. **Tension selection.** Prefer a literature-supported unresolved problem, a theorem-transfer gap, a mechanism conflict, a counterexample opportunity, an observation/identifiability gap, or a sharply scoped residual after prior-art subtraction.
+5. **Construct a falsifiable move.** Choose one of: theorem, counterexample/no-go, typed benchmark, discriminator, invariant/classifier candidate, or explicit bridge/obstruction test. State what would kill or narrow it before expensive execution.
+6. **Cheapest discriminating test.** Prefer the smallest exact model, source-native proof obligation, bounded computation, or decisive control that separates live explanations. Technical readiness alone does not create theory priority.
+7. **Integrate or stop.** Route owner disposition; update Living Theory/negative knowledge/currentness only through the legal owner/custody path. Close absorbed/easy-class work, preserve HOLD/UNKNOWN, and record a concrete `REOPEN_IF` when useful.
+
+Existing foundation state may be reused when it is current and sufficient; do not rebuild a corpus because one named cell or artifact is unavailable. `FOUNDATION_STATE != SPECIFIC_CELL_ARTIFACT` and `FUNCTIONAL_DEPENDENCY != EXECUTOR_IDENTITY`. Equivalent legally produced content may satisfy the dependency.
+
+Role partition remains plural. Deep field education/prior-art, fast currentness search, theorem construction, divergent blind search, integration, adversarial review, ownership, and custody need not be performed by one cell. Productivity of one phenotype is not a reason to make it a universal hub.
+
+Protected or blind-first cells are an explicit exception to pre-freeze foundation exposure. Their legal independent first pass takes precedence; foundation reconciliation occurs only when the exposure contract permits it. `KNOWLEDGE_REPRESENTATION != MANDATORY_PREEXPOSURE`.
+
+## 3.2 Functional-drift detection and recovery
+
+A cell can produce locally correct work while ceasing to perform the function for which it exists. The following are material drift signals:
+
+- direct Moderator phenotype correction or an explicit cell self-report of role collapse;
+- a generative/integrative cell repeatedly substituting gates, audits, preflight, custody, routing, formatting, or other support work for its primary function despite an available role-native residual;
+- a successor that preserves state and terminology but no longer performs the inherited core function;
+- repeated `no inbound` idling where a legal high-value function-derived action exists;
+- a workflow waiting on a named executor or artifact although the required functional content already exists through a legal equivalent path.
+
+On such a signal, perform one bounded event-triggered repair:
+
+1. owner/cell identifies the missing primary function and one concrete role-native action;
+2. GOV checks role/authority/semantic-privilege drift;
+3. SYSS checks the systemic mechanism/interface that allowed the drift;
+4. KN may supply currentness/provenance evidence but does not judge role quality;
+5. stop after the concrete defect/repair unless new evidence reopens it.
+
+Do not create a periodic role audit, utilization score, activity quota, global scoreboard, or audit-of-audit loop. `ROLE_RECOVERY != NEW_ADMIN_LAYER`.
+
+Support work is legal and often necessary, but for scientific generators/integrators it must remain subordinate to science. `SUPPORT_WORK != PRIMARY_FUNCTION` and `TECHNICAL_READINESS != THEORY_PRIORITY`.
+
+## 3.3 Research routing after succession
+
+Before the first material dispatch after a succession, refresh the current executor binding for every load-bearing recipient. A historical recipient tag may remain an alias only when intentionally supported; otherwise rebind prospectively. `BROADCAST != CORRECT_RECIPIENT_BINDING`.
 
 ## 4. Materiality and persistence states
 
@@ -254,6 +312,11 @@ Acceptance outcomes are `ACCEPT`, `ACCEPT_WITH_LIMITS`, `PARTIAL`, `HOLD`, `REJE
 - Existing active artifacts are upgraded only when they become load-bearing for a new publication, reproduction, review, currentness change, or cross-cell handoff.
 - A local deviation is legal when it preserves the shared boundary and is declared where collaboration is affected.
 - Repeated purely reactive turns, repeated unverified writes, missing reproducibility bundles, or skipped legal fallback are material conformance issues; one harmless omission is repaired proportionally.
+- Every planned succession or state-based rehydration packet must carry the current protocol pointer/revision **and** an inline compact `LOAD_BEARING_WORK_RULES` block. A pointer alone is not sufficient bootstrap for rules whose loss would predictably change behavior.
+- The inline successor block must preserve at least: `NO_DIRECT_REQUEST != NO_WORK`; role-core function over support work; `FOUNDATION_FIRST + ITERATIVE_QUESTION_COEVOLUTION` for applicable nonblind scientific work; `FUNCTION_DECLARATION != FUNCTION_EXECUTION`; currentness-before-commit; protected-first-pass exceptions; `STORAGE != DELIVERY != RECEIPT != ACCEPTANCE`; `METHOD_MUST_BE_ALLOWED_TO_FAIL`; and the event-triggered drift-recovery rule.
+- The successor must apply these rules from its first legal rotation. Rehydration ACK should confirm the block was read. This is bootstrap inheritance, not a permanent freeze: later applicable protocol/currentness updates supersede packet-local wording prospectively.
+- Cold/protected successors receive the procedural subset that is legal before freeze; the packet must not tunnel withheld scientific answers. `SUCCESSION_PACKET != SCIENCE_ANSWER_KEY`.
+- Budding packets should inherit functions/guards/tests/negative knowledge, not clone parent workflow or architecture. `PRESERVE_FUNCTION > PRESERVE_MECHANISM` and `HEREDITY != CLONING`.
 - No per-turn quota, utilization score, acknowledgment ritual, universal duplicate storage, new global scheduler, or pre-work approval gate is created.
 
 ## 12. Current source chain
@@ -276,6 +339,7 @@ The private current-applicable index remains the resolver for private project ap
 - Literature record: `templates/IW_LITERATURE_SEARCH_RECORD_TEMPLATE.md`
 - Machine-readable validation: `schemas/research-reproduction-manifest.schema.json`
 - Public-safe fallback form: GitHub Issue template `IW material work return`
+- Successor bootstrap block: `templates/IW_SUCCESSION_LOAD_BEARING_WORK_RULES.md`
 
 ```text
 PROTOCOL_CONFORMANCE != SCIENTIFIC_CORRECTNESS
