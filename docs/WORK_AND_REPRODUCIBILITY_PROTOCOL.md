@@ -4,11 +4,11 @@
 artifact_id: IW_OW_CELL_WORK_ARTIFACT_AND_REPRODUCIBILITY_PROTOCOL_001_20260914
 title: NASH/IW Cell Work, Artifact and Reproducibility Protocol
 created_at: 2026-09-14
-as_of: 2026-09-20
+as_of: 2026-09-23
 origin_cell: IW_ORGANISATION_WORK_01 / OW
 document_type: PROTOCOL
 applicability: PROJECT_GUIDANCE_ACTIVE / FORWARD_ONLY_PROJECT_DEFAULT
-authority_basis: Human Moderator direct instructions, 2026-09-14 and scientific-method/succession update 2026-09-20
+authority_basis: Human Moderator direct instructions, 2026-09-14 and scientific-method/succession update 2026-09-20; SYSS3 system refinement from EAI-S2 exposure-architecture return, 2026-09-22
 operational_owner: OW
 scientific_interface: SW
 shared_publication_interface: SCOPE
@@ -106,6 +106,25 @@ When opening a materially new or weakly understood front, use the cheapest suffi
 7. **Integrate or stop.** Route owner disposition; update Living Theory/negative knowledge/currentness only through the legal owner/custody path. Close absorbed/easy-class work, preserve HOLD/UNKNOWN, and record a concrete `REOPEN_IF` when useful.
 
 Existing foundation state may be reused when it is current and sufficient; do not rebuild a corpus because one named cell or artifact is unavailable. `FOUNDATION_STATE != SPECIFIC_CELL_ARTIFACT` and `FUNCTIONAL_DEPENDENCY != EXECUTOR_IDENTITY`. Equivalent legally produced content may satisfy the dependency.
+
+Foundation sufficiency is **target-typed**, not a single global binary. Prefer `FOUNDATION_SUFFICIENT_FOR(<decision class>)` over an untyped `FOUNDATION_COMPLETE`. The same durable foundation substrate may be sufficient for a currentness overlay, theorem search, source-native bridge, learner materialization, or post-freeze comparison while remaining insufficient for another purpose.
+
+One durable foundation substrate may legally support different exposure views:
+
+- **nonblind theory/synthesis view** — enough field structure for theorem-family reconstruction, prior-art subtraction and owner synthesis;
+- **protected/blind-first view** — procedural/safety constraints only before freeze when hidden scientific content would contaminate independence;
+- **succession/bootstrap view** — role-core rules, load-bearing negative knowledge/guards, pointers, and only the scientific foundation needed for legal nonblind continuity;
+- **bounded-task view** — the smallest foundation slice sufficient for the declared decision class, with a legal escape path to deeper sources;
+- **teaching/materialization view** — scaffolded/reordered content is allowed, but curriculum order is not source order or theory authority.
+
+`FOUNDATION_REUSE != UNIFORM_PREEXPOSURE`. `SUCCESSION_PACKET != FULL_FIELD_DUMP`. `GOOD_MATERIALIZATION = SUFFICIENT_FOR_DECLARED_DECISION_CLASS + LEGAL_SOURCE_ESCAPE_WHEN_EXCEEDED`.
+
+Cheap failure signals:
+- a protected cell must ingest hidden foundation substance before its legal freeze;
+- a nonblind cell repeats broad field education despite an already sufficient current foundation for its decision class;
+- one executor/artifact identity becomes the only release condition despite equivalent legal foundation content;
+- role-diverse cells converge onto the same taxonomy/framework merely because they share a substrate;
+- a bounded task fails because its foundation slice omitted needed context and provided no legal escape to deeper sources.
 
 Role partition remains plural. Deep field education/prior-art, fast currentness search, theorem construction, divergent blind search, integration, adversarial review, ownership, and custody need not be performed by one cell. Productivity of one phenotype is not a reason to make it a universal hub.
 
