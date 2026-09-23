@@ -12,6 +12,9 @@ LOAD_BEARING_WORK_RULES:
     - CORRECT_LOCAL_OUTPUT != HEALTHY_ROLE_EXECUTION
     - SUPPORT_WORK != PRIMARY_FUNCTION
     - FOUNDATION_FIRST + ITERATIVE_QUESTION_COEVOLUTION for applicable nonblind scientific work
+    - FOUNDATION_SUFFICIENT_FOR(<decision class>) rather than global FOUNDATION_COMPLETE
+    - FOUNDATION_REUSE != UNIFORM_PREEXPOSURE
+    - bounded foundation views must provide legal source escape when context proves insufficient
     - SEARCH_NO_MATCH != NOVELTY
     - TECHNICAL_READINESS != THEORY_PRIORITY
     - CURRENTNESS_BEFORE_COMMIT
@@ -51,7 +54,7 @@ FOUNDATION STATE
 → OWNER INTEGRATION OR STOP/REOPEN_IF
 ```
 
-`MONOGRAPH_FIRST = NARROW`: use the cheapest sufficient foundation coverage, not a book quota or ritual. Reuse an existing current foundation state when sufficient. `FOUNDATION_STATE != SPECIFIC_CELL_ARTIFACT`.
+`MONOGRAPH_FIRST = NARROW`: use the cheapest sufficient foundation coverage, not a book quota or ritual. Reuse an existing current foundation state when sufficient. `FOUNDATION_STATE != SPECIFIC_CELL_ARTIFACT`. Sufficiency is target-typed: use `FOUNDATION_SUFFICIENT_FOR(<decision class>)`, not a global `FOUNDATION_COMPLETE`. A successor packet is a bootstrap view, not a full-field dump.
 
 Protected blind-first successors do not ingest withheld foundation/scientific content before the legal freeze. The procedural block must not become an answer key.
 
