@@ -90,3 +90,8 @@ Later applicable protocol updates supersede packet-local wording prospectively. 
 ## Event-triggered lint
 
 On `SUCCESSOR_PACKET_READY`, validate only the current protocol revision, current successor-template revision, inline load-bearing rules, and protected-exposure legality. Patch a pre-activation failure in place; for an already activated successor, preserve the historical packet and deliver one bounded post-activation ruleset delta. `SUCCESSION_BOOTSTRAP_LINT != SCIENTIFIC_REVIEW` and `EVENT_TRIGGERED_LINT != PERIODIC_AUDIT`.
+
+
+## Transport binding
+
+Until `SUCCESSION_BOOTSTRAP_LINT` is resolved, the `SUCCESSOR_PACKET_READY` message must include `IWTO_SYSS3`. `IWTO_GOVI_S2` may be added as an optional second boundary observer. This is delivery to the lint function, not an approval gate: `EVENT_TRIGGER_DEFINED != EVENT_TRIGGER_DELIVERED` and `ROUTE_TO_LINT != LINT_APPROVAL_AUTHORITY`.
