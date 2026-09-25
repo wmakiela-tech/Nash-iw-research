@@ -4,7 +4,7 @@
 artifact_id: IW_OW_CELL_WORK_ARTIFACT_AND_REPRODUCIBILITY_PROTOCOL_001_20260914
 title: NASH/IW Cell Work, Artifact and Reproducibility Protocol
 created_at: 2026-09-14
-as_of: 2026-09-23
+as_of: 2026-09-26
 origin_cell: IW_ORGANISATION_WORK_01 / OW
 document_type: PROTOCOL
 applicability: PROJECT_GUIDANCE_ACTIVE / FORWARD_ONLY_PROJECT_DEFAULT
@@ -332,6 +332,7 @@ Acceptance outcomes are `ACCEPT`, `ACCEPT_WITH_LIMITS`, `PARTIAL`, `HOLD`, `REJE
 - A local deviation is legal when it preserves the shared boundary and is declared where collaboration is affected.
 - Repeated purely reactive turns, repeated unverified writes, missing reproducibility bundles, or skipped legal fallback are material conformance issues; one harmless omission is repaired proportionally.
 - Every planned succession or state-based rehydration packet must carry the current protocol pointer/revision **and** an inline compact `LOAD_BEARING_WORK_RULES` block. A pointer alone is not sufficient bootstrap for rules whose loss would predictably change behavior.
+- Before finalizing the packet, dynamically resolve the current successor bootstrap instrument and record `CURRENT_PROTOCOL_REVISION_RESOLVED`, `SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED`, and `LOAD_BEARING_WORK_RULES_INLINE`. Do not copy a parent's embedded ruleset as current authority without this resolution.
 - The inline successor block must preserve at least: `NO_DIRECT_REQUEST != NO_WORK`; role-core function over support work; `FOUNDATION_FIRST + ITERATIVE_QUESTION_COEVOLUTION` for applicable nonblind scientific work; `FUNCTION_DECLARATION != FUNCTION_EXECUTION`; currentness-before-commit; protected-first-pass exceptions; `STORAGE != DELIVERY != RECEIPT != ACCEPTANCE`; `METHOD_MUST_BE_ALLOWED_TO_FAIL`; and the event-triggered drift-recovery rule.
 - The successor must apply these rules from its first legal rotation. Rehydration ACK should confirm the block was read. This is bootstrap inheritance, not a permanent freeze: later applicable protocol/currentness updates supersede packet-local wording prospectively.
 - Cold/protected successors receive the procedural subset that is legal before freeze; the packet must not tunnel withheld scientific answers. `SUCCESSION_PACKET != SCIENCE_ANSWER_KEY`.
