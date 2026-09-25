@@ -2,6 +2,21 @@
 
 Use this block inside every planned succession/state-based rehydration packet and adapt only where a protected/cold phase legally requires less exposure.
 
+## Packet-creator pre-finalization check
+
+Resolve this instrument dynamically at packet creation. Do not treat a parent's embedded rule block as the current template.
+
+Record in the packet:
+
+```text
+CURRENT_PROTOCOL_REVISION_RESOLVED = <current primary commit or ACCESS_BLOCKED>
+SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED = <current template commit or ACCESS_BLOCKED>
+LOAD_BEARING_WORK_RULES_INLINE = YES | PARTIAL_LEGAL_PROJECTION | BLOCKED
+```
+
+`CURRENT_APPLICABLE_POINTER_PRESENT != CURRENT_TEMPLATE_RESOLVED`.
+`PACKET_CREATED_AFTER_RULE_UPDATE != RULE_UPDATE_INHERITED`.
+
 ```yaml
 LOAD_BEARING_WORK_RULES:
   protocol_primary: GitHub main / docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md
