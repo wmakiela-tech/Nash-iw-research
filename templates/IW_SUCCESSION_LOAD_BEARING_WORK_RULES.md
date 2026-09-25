@@ -12,6 +12,7 @@ Record in the packet:
 CURRENT_PROTOCOL_REVISION_RESOLVED = <current primary commit or ACCESS_BLOCKED>
 SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED = <current template commit or ACCESS_BLOCKED>
 LOAD_BEARING_WORK_RULES_INLINE = YES | PARTIAL_LEGAL_PROJECTION | BLOCKED
+SUCCESSION_BOOTSTRAP_LINT = PASS | FAIL_PRE_ACTIVATION | FAIL_POST_ACTIVATION_REPAIRED | NOT_APPLICABLE_PROTECTED
 ```
 
 `CURRENT_APPLICABLE_POINTER_PRESENT != CURRENT_TEMPLATE_RESOLVED`.
@@ -85,3 +86,7 @@ PROTECTED_FIRST_PASS_EXCEPTION = YES/NO + scope
 ```
 
 Later applicable protocol updates supersede packet-local wording prospectively. This template is an instrument of the current work protocol, not a second protocol.
+
+## Event-triggered lint
+
+On `SUCCESSOR_PACKET_READY`, validate only the current protocol revision, current successor-template revision, inline load-bearing rules, and protected-exposure legality. Patch a pre-activation failure in place; for an already activated successor, preserve the historical packet and deliver one bounded post-activation ruleset delta. `SUCCESSION_BOOTSTRAP_LINT != SCIENTIFIC_REVIEW` and `EVENT_TRIGGERED_LINT != PERIODIC_AUDIT`.
