@@ -95,3 +95,8 @@ On `SUCCESSOR_PACKET_READY`, validate only the current protocol revision, curren
 ## Transport binding
 
 Until `SUCCESSION_BOOTSTRAP_LINT` is resolved, the `SUCCESSOR_PACKET_READY` message must include `IWTO_SYSS3`. `IWTO_GOVI_S2` may be added as an optional second boundary observer. This is delivery to the lint function, not an approval gate: `EVENT_TRIGGER_DEFINED != EVENT_TRIGGER_DELIVERED` and `ROUTE_TO_LINT != LINT_APPROVAL_AUTHORITY`.
+
+
+## Final-readback PASS rule
+
+`SUCCESSION_BOOTSTRAP_LINT = PASS` is valid only after `WRITE_PACKET -> READBACK_PACKET -> RESOLVE_CURRENT_PROTOCOL_AND_TEMPLATE -> COMPARE -> PASS_OR_REPAIR -> EMIT_SUCCESSOR_PACKET_READY`. If a revision advanced during authoring, patch only the bootstrap/currentness portion unless the changed rule materially alters exposure or behavior, then read back once. The lint is semantic rather than literal-field-name matching: `LINT_SEMANTICS > FIELD_SPELLING`; harmless label variation is legal when all required current values and rules are unambiguous.
