@@ -18,6 +18,26 @@ SUCCESSION_BOOTSTRAP_LINT = PASS | FAIL_PRE_ACTIVATION | FAIL_POST_ACTIVATION_RE
 `CURRENT_APPLICABLE_POINTER_PRESENT != CURRENT_TEMPLATE_RESOLVED`.
 `PACKET_CREATED_AFTER_RULE_UPDATE != RULE_UPDATE_INHERITED`.
 
+## Canonical compact bootstrap footer
+
+Use this as the default copyable carrier in every ordinary planned succession/state-based rehydration packet. A semantically equivalent role-specific form is legal, but omission of the underlying content is not.
+
+```text
+CURRENT_PROTOCOL_REVISION_RESOLVED=<current commit or ACCESS_BLOCKED>
+SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED=<current commit or ACCESS_BLOCKED>
+LOAD_BEARING_WORK_RULES_INLINE=YES | PARTIAL_LEGAL_PROJECTION | BLOCKED
+PROTECTED_FIRST_PASS_EXCEPTION=NONE | ACTIVE:<scope>
+FINAL_READBACK_CURRENTNESS=PASS | FAIL | ACCESS_BLOCKED
+SUCCESSION_BOOTSTRAP_LINT=PASS | FAIL_PRE_ACTIVATION | FAIL_POST_ACTIVATION_REPAIRED | NOT_APPLICABLE_PROTECTED
+ROLE_CORE_FUNCTION_RESTATED=YES
+FIRST_ROTATION_CURRENTNESS_REFRESH=REQUIRED
+```
+
+`FINAL_READBACK_CURRENTNESS=PASS` means: durable packet written, semantic readback completed, current protocol revision freshly re-resolved after write, current successor-template revision freshly re-resolved after write, and no unresolved revision drift remains before `SUCCESSOR_PACKET_READY`.
+
+`CANONICAL_FOOTER != ROLE_STANDARDIZATION`.
+`LINT_SEMANTICS > FIELD_SPELLING`; the footer exists to improve real-use propagation, not to normalize scientific workflow.
+
 ```yaml
 LOAD_BEARING_WORK_RULES:
   protocol_primary: GitHub main / docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md
