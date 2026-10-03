@@ -1,39 +1,39 @@
 # IW — Successor Load-Bearing Work Rules
 
-Use this block inside every planned succession/state-based rehydration packet and adapt only where a protected/cold phase legally requires less exposure.
+Recommended default instrument for planned succession/state-based rehydration. An equivalent reliable self-contained carrier is legal. Preserve the semantic outcomes in protocol section 11; exact template identity, field spelling, and a separate ACK are not prerequisites for succession. Project authority and protected-exposure boundaries still apply.
 
 ## Packet-creator pre-finalization check
 
-Resolve this instrument dynamically at packet creation. Do not treat a parent's embedded rule block as the current template.
+Resolve current applicable rules from legal sources. When using this instrument, resolve its revision and preserve it as provenance. Do not treat a parent's embedded rules as automatically current. A successor using an equivalent carrier need not consult this template solely to qualify for work.
 
-Record in the packet:
+This instrument can record:
 
 ```text
 CURRENT_PROTOCOL_REVISION_RESOLVED = <current primary commit or ACCESS_BLOCKED>
-SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED = <current template commit or ACCESS_BLOCKED>
+SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED = <revision if used, NOT_USED_EQUIVALENT_CARRIER, or ACCESS_BLOCKED>
 LOAD_BEARING_WORK_RULES_INLINE = YES | PARTIAL_LEGAL_PROJECTION | BLOCKED
-SUCCESSION_BOOTSTRAP_LINT = PASS | FAIL_PRE_ACTIVATION | FAIL_POST_ACTIVATION_REPAIRED | NOT_APPLICABLE_PROTECTED
+SUCCESSION_BOOTSTRAP_LINT = PASS | REPAIR_NEEDED | NOT_APPLICABLE_PROTECTED | UNKNOWN
 ```
 
-`CURRENT_APPLICABLE_POINTER_PRESENT != CURRENT_TEMPLATE_RESOLVED`.
+`CURRENT_APPLICABLE_POINTER_PRESENT != CURRENT_RULES_UNDERSTOOD`.
 `PACKET_CREATED_AFTER_RULE_UPDATE != RULE_UPDATE_INHERITED`.
 
 ## Canonical compact bootstrap footer
 
-Use this as the default copyable carrier in every ordinary planned succession/state-based rehydration packet. A semantically equivalent role-specific form is legal, but omission of the underlying content is not.
+Use this as a copyable default when useful. Another form may carry the same evidence; a field omitted because its mechanism was not used is not missing semantic continuity. Preserve the role, applicable rules, negative knowledge, exposure limits, currentness resolution, and legal first action.
 
 ```text
 CURRENT_PROTOCOL_REVISION_RESOLVED=<current commit or ACCESS_BLOCKED>
-SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED=<current commit or ACCESS_BLOCKED>
+SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED=<revision if used, NOT_USED_EQUIVALENT_CARRIER, or ACCESS_BLOCKED>
 LOAD_BEARING_WORK_RULES_INLINE=YES | PARTIAL_LEGAL_PROJECTION | BLOCKED
 PROTECTED_FIRST_PASS_EXCEPTION=NONE | ACTIVE:<scope>
-FINAL_READBACK_CURRENTNESS=PASS | FAIL | ACCESS_BLOCKED
-SUCCESSION_BOOTSTRAP_LINT=PASS | FAIL_PRE_ACTIVATION | FAIL_POST_ACTIVATION_REPAIRED | NOT_APPLICABLE_PROTECTED
+FINAL_READBACK_CURRENTNESS=VERIFIED | REPAIR_NEEDED | PENDING | ACCESS_BLOCKED
+SUCCESSION_BOOTSTRAP_LINT=PASS | REPAIR_NEEDED | NOT_APPLICABLE_PROTECTED | UNKNOWN
 ROLE_CORE_FUNCTION_RESTATED=YES
 FIRST_ROTATION_CURRENTNESS_REFRESH=REQUIRED
 ```
 
-`FINAL_READBACK_CURRENTNESS=PASS` means: durable packet written, semantic readback completed, current protocol revision freshly re-resolved after write, current successor-template revision freshly re-resolved after write, and no unresolved revision drift remains before `SUCCESSOR_PACKET_READY`.
+`FINAL_READBACK_CURRENTNESS=VERIFIED` means the packet was durably written and semantically read back, with applicable-rule changes assessed at finalization (including this instrument if used) and no unresolved material delta in the verified scope. This is packet-integrity evidence, separate from successor authority and diagnostic lint. Pending readback must remain explicit; it does not by itself bar work when lawful continuity is otherwise established. Historical `PASS` readback labels retain their recorded meaning.
 
 `CANONICAL_FOOTER != ROLE_STANDARDIZATION`.
 `LINT_SEMANTICS > FIELD_SPELLING`; the footer exists to improve real-use propagation, not to normalize scientific workflow.
@@ -94,9 +94,9 @@ FOUNDATION STATE
 
 Protected blind-first successors do not ingest withheld foundation/scientific content before the legal freeze. The procedural block must not become an answer key.
 
-## Required ACK
+## Continuity evidence in the first material return
 
-A successor ACK should state, at minimum:
+A separate ACK is not required. The first material return may demonstrate knowledge of applicable rules, the core function, currentness resolution, protected-exposure scope, and a legal action or HOLD. For example, alongside the substantive work:
 
 ```text
 LOAD_BEARING_WORK_RULES_READ = YES
@@ -109,14 +109,34 @@ Later applicable protocol updates supersede packet-local wording prospectively. 
 
 ## Event-triggered lint
 
-On `SUCCESSOR_PACKET_READY`, validate only the current protocol revision, current successor-template revision, inline load-bearing rules, and protected-exposure legality. Patch a pre-activation failure in place; for an already activated successor, preserve the historical packet and deliver one bounded post-activation ruleset delta. `SUCCESSION_BOOTSTRAP_LINT != SCIENTIFIC_REVIEW` and `EVENT_TRIGGERED_LINT != PERIODIC_AUDIT`.
+Check semantic outcomes: role-core preservation; currentness/authority/executor resolution; load-bearing negative knowledge and STOP/REOPEN conditions; applicable foundation/work rules; protected-exposure legality; storage/delivery/acceptance distinctions; and a legal first action or justified HOLD. PASS requires evidence of these outcomes, not the exact template or footer. A bare unread pointer remains insufficient.
+
+`REPAIR_NEEDED` records a known gap; `UNKNOWN` records insufficient evidence. Assess the affected action: unresolved exposure, authority, or currentness that could change its legality requires a scoped HOLD. Formatting or transport gaps do not create a universal pre-work gate. `NOT_APPLICABLE_PROTECTED` covers only the withheld scope, never an exemption from exposure safeguards.
+
+Repair a material gap once. For an already activated successor, preserve the historical packet and send a scoped ruleset delta only when needed; its first material return may establish continuity without separate ceremony. Do not restart an otherwise legal succession. `SUCCESSION_BOOTSTRAP_LINT != SCIENTIFIC_REVIEW` and `EVENT_TRIGGERED_LINT != PERIODIC_AUDIT`.
 
 
 ## Transport binding
 
-Until `SUCCESSION_BOOTSTRAP_LINT` is resolved, the `SUCCESSOR_PACKET_READY` message must include `IWTO_SYSS3`. `IWTO_GOVI_S2` may be added as an optional second boundary observer. This is delivery to the lint function, not an approval gate: `EVENT_TRIGGER_DEFINED != EVENT_TRIGGER_DELIVERED` and `ROUTE_TO_LINT != LINT_APPROVAL_AUTHORITY`.
+Ordinary `SUCCESSOR_PACKET_READY` messages have no mandatory SYSS recipient. Route material `REPAIR_NEEDED` or `UNKNOWN` to the current system steward (present route: `IWTO_SYSS3`) when a shared-system resolution is needed, and to GOV when authority/semantic privilege is at issue. Resolve the current recipient at dispatch. Local repairs need no extra broadcast, and lawful work does not wait for a SYSS ACK.
 
 
-## Final-readback PASS rule
+## Packet integrity and bounded examples
 
-`SUCCESSION_BOOTSTRAP_LINT = PASS` is valid only after `WRITE_PACKET -> READBACK_PACKET -> RESOLVE_CURRENT_PROTOCOL_AND_TEMPLATE -> COMPARE -> PASS_OR_REPAIR -> EMIT_SUCCESSOR_PACKET_READY`. If a revision advanced during authoring, patch only the bootstrap/currentness portion unless the changed rule materially alters exposure or behavior, then read back once. The lint is semantic rather than literal-field-name matching: `LINT_SEMANTICS > FIELD_SPELLING`; harmless label variation is legal when all required current values and rules are unambiguous.
+For a written packet: write, read back, resolve applicable-rule changes at finalization, and repair only a material delta. A newer hash alone is not a failed succession. Do not claim stored/verified content without the supporting write/readback. Protocol sections 4 and 10 still govern artifact verification.
+
+| Situation | Disposition |
+| --- | --- |
+| Equivalent carrier and first material return demonstrate the required continuity; no template metadata | PASS may be supported; no template lookup or separate ACK required. |
+| Packet readback is pending, but sufficient continuity and authority for the intended action are established | Keep readback PENDING; perform the legal action. Do not call the packet verified. |
+| Protected scope or applicable authority/currentness for the intended action is unresolved | UNKNOWN or REPAIR_NEEDED; HOLD the affected action and resolve the material gap. |
+| Only an unread pointer is supplied and load-bearing constraints are missing | REPAIR_NEEDED; obtain the legal semantic minimum before any action that depends on it. |
+| Template changes only labels while the rules and exposure constraints remain equivalent | Preserve provenance; no invalidation or repeated activation. |
+
+Forward clarification from 2026-10-03 supersedes this instrument's former exact-template, mandatory-routing, and pre-activation lint gate wording. Historical packets and labels remain evidence. No retrospective migration or audit is required.
+
+`BOOTSTRAP_SEMANTICS > TEMPLATE_IDENTITY`.
+`DIAGNOSTIC_LINT != PREWORK_GATE`.
+`PACKET_INTEGRITY != SUCCESSOR_AUTHORITY`.
+`SYSS_VISIBILITY != MANDATORY_ROUTING`.
+`FIRST_MATERIAL_RETURN_MAY_PROVE_CONTINUITY`.
