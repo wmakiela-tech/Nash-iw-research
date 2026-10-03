@@ -4,7 +4,7 @@
 artifact_id: IW_OW_CELL_WORK_ARTIFACT_AND_REPRODUCIBILITY_PROTOCOL_001_20260914
 title: NASH/IW Cell Work, Artifact and Reproducibility Protocol
 created_at: 2026-09-14
-as_of: 2026-09-26
+as_of: 2026-10-03
 origin_cell: IW_ORGANISATION_WORK_01 / OW
 document_type: PROTOCOL
 applicability: PROJECT_GUIDANCE_ACTIVE / FORWARD_ONLY_PROJECT_DEFAULT
@@ -331,17 +331,28 @@ Acceptance outcomes are `ACCEPT`, `ACCEPT_WITH_LIMITS`, `PARTIAL`, `HOLD`, `REJE
 - Existing active artifacts are upgraded only when they become load-bearing for a new publication, reproduction, review, currentness change, or cross-cell handoff.
 - A local deviation is legal when it preserves the shared boundary and is declared where collaboration is affected.
 - Repeated purely reactive turns, repeated unverified writes, missing reproducibility bundles, or skipped legal fallback are material conformance issues; one harmless omission is repaired proportionally.
-- Every planned succession or state-based rehydration packet must carry the current protocol pointer/revision **and** an inline compact `LOAD_BEARING_WORK_RULES` block. A pointer alone is not sufficient bootstrap for rules whose loss would predictably change behavior.
-- Before finalizing the packet, dynamically resolve the current successor bootstrap instrument and record `CURRENT_PROTOCOL_REVISION_RESOLVED`, `SUCCESSOR_BOOTSTRAP_TEMPLATE_REVISION_RESOLVED`, and `LOAD_BEARING_WORK_RULES_INLINE`. Do not copy a parent's embedded ruleset as current authority without this resolution.
-- Emit `SUCCESSION_BOOTSTRAP_LINT = PASS | FAIL_PRE_ACTIVATION | FAIL_POST_ACTIVATION_REPAIRED | NOT_APPLICABLE_PROTECTED`. A `SUCCESSOR_PACKET_READY` event triggers only this bounded inheritance lint: current protocol revision, current template revision, inline load-bearing rules, and protected-exposure legality. This lint is not a scientific review or periodic audit.
-- Use the current successor-template `Canonical compact bootstrap footer` as the default packet carrier for these fields. Semantically equivalent role-specific formatting is legal, but the current protocol revision, current template revision, inline-rules state, protected-exposure state, final-readback currentness, lint disposition, role-core restatement and first-rotation refresh requirement must remain unambiguous.
-- Until the lint state is resolved, every `SUCCESSOR_PACKET_READY` transport must include `IWTO_SYSS3`; `IWTO_GOVI_S2` may be included as an optional second boundary observer. `EVENT_TRIGGER_DEFINED != EVENT_TRIGGER_DELIVERED`; routing to SYSS3 creates visibility, not approval authority.
-- `SUCCESSION_BOOTSTRAP_LINT = PASS` requires a final durable-packet readback followed by one fresh resolution/comparison of the current protocol and successor-template revisions immediately before `SUCCESSOR_PACKET_READY`. Earlier resolution during authoring is not sufficient. The lint judges semantic presence/currentness, not exact field spelling: `LINT_SEMANTICS > FIELD_SPELLING`.
-- The inline successor block must preserve at least: `NO_DIRECT_REQUEST != NO_WORK`; role-core function over support work; `FOUNDATION_FIRST + ITERATIVE_QUESTION_COEVOLUTION` for applicable nonblind scientific work; `FUNCTION_DECLARATION != FUNCTION_EXECUTION`; currentness-before-commit; protected-first-pass exceptions; `STORAGE != DELIVERY != RECEIPT != ACCEPTANCE`; `METHOD_MUST_BE_ALLOWED_TO_FAIL`; and the event-triggered drift-recovery rule.
-- The successor must apply these rules from its first legal rotation. Rehydration ACK should confirm the block was read. This is bootstrap inheritance, not a permanent freeze: later applicable protocol/currentness updates supersede packet-local wording prospectively.
+- Every planned succession or state-based rehydration must preserve, inline or through an equivalently reliable self-contained representation: role-core function; current authority/currentness/executor resolution; load-bearing negative knowledge and STOP/REOPEN conditions; applicable foundation/work rules; protected-exposure constraints; storage/delivery/acceptance distinctions; and one legal first role-native action or justified HOLD. A bare pointer cannot substitute for behavioral constraints the successor has not actually obtained.
+- `templates/IW_SUCCESSION_LOAD_BEARING_WORK_RULES.md` is the recommended default instrument, not a universally required representation. When using it, resolve and record its revision as provenance; equivalent carriers need not look up or copy it. Current applicable rules must still be resolved from legal sources. A parent's packet is historical evidence, not automatically the current ruleset. Access gaps remain explicit and are assessed for their effect on the intended action.
+- `SUCCESSION_BOOTSTRAP_LINT = PASS | REPAIR_NEEDED | NOT_APPLICABLE_PROTECTED | UNKNOWN` is a bounded diagnostic of semantic continuity. Check the outcomes above when a packet is prepared or a material inheritance defect is observed. PASS means those outcomes are supported by evidence, not that a particular field set, template hash, transport, or reviewer was used. `NOT_APPLICABLE_PROTECTED` applies only to the explicitly withheld scope; legal procedural and exposure checks remain required.
+- A successor may perform an already-authorized action once sufficient semantic continuity is established, even while template lookup, lint transport, separate ACK, or packet readback is pending. An unresolved exposure, authority, or currentness issue that could change the legality of that action requires a bounded HOLD on the affected action. Neither UNKNOWN alone nor a formatting mismatch is a global work stop. Lint does not create succession authority.
+- Route material `REPAIR_NEEDED` or `UNKNOWN` cases to the current system steward (present route: `IWTO_SYSS3`) only when a shared-system repair or resolution is needed; involve GOV for an authority/semantic-privilege conflict. Ordinary `SUCCESSOR_PACKET_READY` messages need not include SYSS, and work does not wait for a SYSS ACK. Local representation repairs need no extra dispatch.
+- Keep durable-packet write/readback and final applicable-rule recheck as packet-integrity evidence under sections 4 and 10. Do not claim verified persistence without readback. If a rule or an instrument actually used changes during authoring, assess the semantic delta and repair the affected content; a hash change alone does not invalidate succession or require another activation. Pending packet verification remains explicit and is separate from evidence of a successor's lawful functional continuity.
+- The inherited work semantics include: `NO_DIRECT_REQUEST != NO_WORK`; role-core function over support work; `FOUNDATION_FIRST + ITERATIVE_QUESTION_COEVOLUTION` and target-typed foundation sufficiency for applicable nonblind work; legal differential exposure and source escape; `FUNCTION_DECLARATION != FUNCTION_EXECUTION`; `SEARCH_NO_MATCH != NOVELTY`; currentness-before-commit; protected-first-pass exceptions; `STORAGE != DELIVERY != RECEIPT != ACCEPTANCE != SCIENTIFIC_VALIDATION`; `METHOD_MUST_BE_ALLOWED_TO_FAIL`; and event-triggered drift recovery. Literal sentinel spelling is not required when these meanings are preserved.
+- The successor applies the applicable rules from its first legal rotation. The first material return may demonstrate and close continuity, including knowledge of the rules, without a separate ACK or lint ceremony. Later applicable rules supersede packet-local wording prospectively. Preserve historical packets; repair a material post-activation gap with one scoped delta, without restarting an otherwise legal succession.
 - Cold/protected successors receive the procedural subset that is legal before freeze; the packet must not tunnel withheld scientific answers. `SUCCESSION_PACKET != SCIENCE_ANSWER_KEY`.
 - Budding packets should inherit functions/guards/tests/negative knowledge, not clone parent workflow or architecture. `PRESERVE_FUNCTION > PRESERVE_MECHANISM` and `HEREDITY != CLONING`.
 - No per-turn quota, utilization score, acknowledgment ritual, universal duplicate storage, new global scheduler, or pre-work approval gate is created.
+
+Forward interpretation from 2026-10-03 replaces the earlier template-identity, mandatory SYSS routing, and pre-activation lint-failure requirements in this section. Earlier packets and diagnostic labels remain historical evidence and are not retroactively invalidated. This corrects a textual governance defect; it does not assert that operational succession blockage occurred. No migration campaign or retrospective audit is required.
+
+```text
+BOOTSTRAP_CONTENT_REQUIRED != BOOTSTRAP_TEMPLATE_REQUIRED
+BOOTSTRAP_SEMANTICS > TEMPLATE_IDENTITY
+DIAGNOSTIC_LINT != PREWORK_GATE
+PACKET_INTEGRITY != SUCCESSOR_AUTHORITY
+SYSS_VISIBILITY != MANDATORY_ROUTING
+FIRST_MATERIAL_RETURN_MAY_PROVE_CONTINUITY
+```
 
 ## 12. Current source chain
 
