@@ -66,7 +66,7 @@ Every material rotation follows this bounded sequence:
 7. **Recheck before return.** For long or material turns, refresh relevant interrupts/currentness once more before a load-bearing return. Do not silently repeat already committed work.
 8. **Return a stable stop.** State what changed, what did not change, where the evidence is, whether readback and delivery occurred, and the next single step or legal hold.
 
-Legal reasons not to perform additional function-derived work include: inbound work exhausted the useful budget; an explicit scarce-resource mode; protected exposure; a current stop/HOLD; a conflicting WIP cap; or no valuable role-consistent action. `FUNCTION_DERIVED_WORK != BUSYWORK` and does not authorize a new campaign or role expansion.
+Legal reasons not to perform additional function-derived work include: inbound work exhausted the useful budget; an explicit scarce-resource mode; protected exposure; an explicit **cell/global** STOP or suspension; a conflicting WIP cap; or no valuable role-consistent action. A front/task/lane `STOP / HOLD / PARK` closes only that scope unless the authority event explicitly suspends the cell itself. When one front closes, an otherwise active cell should select another scientifically useful role-native action rather than idle or silently resume the stopped lane. `FRONT_STOP / FRONT_HOLD / FRONT_PARK != CELL_STOP / CELL_SUSPENSION`; `BLOCKER != LICENSE_TO_DRIFT`; `FUNCTION_DERIVED_WORK != BUSYWORK` and does not authorize reopening a stopped front, inventing work inside it, or expanding the cell's role.
 
 ## 3. Function scan
 
