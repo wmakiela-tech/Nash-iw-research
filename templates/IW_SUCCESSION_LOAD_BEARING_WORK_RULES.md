@@ -62,6 +62,7 @@ LOAD_BEARING_WORK_RULES:
     - reconcile open obligations
     - identify one role-core function-derived action if no executable inbound remains
     - preserve protected/blind-first exposure boundaries
+    - preserve scoped STOP/HOLD/PARK semantics: a stopped front is not a cell suspension unless the authority event explicitly says so; do not reopen the stopped lane as substitute work
   drift_trigger:
     - Moderator phenotype correction
     - explicit self-report of role collapse
