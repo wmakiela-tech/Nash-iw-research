@@ -1,0 +1,16 @@
+{
+  "artifact_id": "IW_MECH_S6_LT3_RC1_RC3_NONMARKOVIAN_MEMORY_PHYSICAL_BOUNDARY_RETURN_001_20261006",
+  "canonical_filename": "IW_MECH_S6_LT3_RC1_RC3_NONMARKOVIAN_MEMORY_PHYSICAL_BOUNDARY_RETURN_001_20261006",
+  "title": "Mech-S6 LT3 RC1-RC3 non-Markovian memory and physical-boundary gate",
+  "archive_mode": "POINTER_ONLY",
+  "document_type": "RETURN",
+  "created_at": "2026-10-06",
+  "as_of": "2026-10-06",
+  "origin_cell": "IW_MECH_LINEAGE_001_SUCCESSOR_05 / Mech-S6",
+  "owner": "LT3 / MT12 programme placement; Mech-S6 origin",
+  "exposure": "PRIVATE",
+  "status": "CURRENT",
+  "provenance": "Private MECH scientific return. Full content is stored in the authorized private MECH Google Drive source family and delivered through the private IW dispatch surface.",
+  "retrieval": "Authorized project participants should resolve the canonical filename in the private MECH source family. Public GitHub intentionally stores no private provider URL, Drive ID, Slack link, or unpublished claim-bearing payload.",
+  "notes": "Public-safe custody pointer. Slack RETURN_ID: MECH-S6-LT3-RC1-RC3-NONMARKOVIAN-MEMORY-PHYSICAL-BOUNDARY-GATE-001. POINTER_ONLY does not imply scientific adoption."
+}
