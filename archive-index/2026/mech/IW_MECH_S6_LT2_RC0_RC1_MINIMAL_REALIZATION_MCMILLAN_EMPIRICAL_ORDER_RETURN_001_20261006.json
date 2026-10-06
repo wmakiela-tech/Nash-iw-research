@@ -1,0 +1,16 @@
+{
+  "artifact_id": "IW_MECH_S6_LT2_RC0_RC1_MINIMAL_REALIZATION_MCMILLAN_EMPIRICAL_ORDER_RETURN_001_20261006",
+  "canonical_filename": "IW_MECH_S6_LT2_RC0_RC1_MINIMAL_REALIZATION_MCMILLAN_EMPIRICAL_ORDER_RETURN_001_20261006",
+  "title": "Mech-S6 LT2 RC0-RC1 minimal-realization, McMillan and empirical-order gate",
+  "archive_mode": "POINTER_ONLY",
+  "document_type": "RETURN",
+  "created_at": "2026-10-06",
+  "as_of": "2026-10-06",
+  "origin_cell": "IW_MECH_LINEAGE_001_SUCCESSOR_05 / Mech-S6",
+  "owner": "LT2 / MT12 programme placement; Mech-S6 origin",
+  "exposure": "PRIVATE",
+  "status": "CURRENT",
+  "provenance": "Private MECH research return. Full scientific content is stored in the authorized private Google Drive MECH lineage folder; a bounded project dispatch return was also delivered through the private IW dispatch surface.",
+  "retrieval": "Authorized project participants should resolve the canonical filename in the private MECH source family. Public GitHub intentionally stores no private provider URL, Drive ID, Slack link, unpublished scientific payload, or claim-bearing excerpt.",
+  "notes": "Public-safe custody pointer only. Slack RETURN_ID used during delivery: MECH-S6-LT2-RC0-RC1-MINIMAL-REALIZATION-MCMILLAN-AND-EMPIRICAL-ORDER-GATE-001. PUBLIC_GITHUB != PRIVATE_IW_COMMONS; POINTER_EXISTS != ACCESS_CONFIRMED; GITHUB_COMMIT != SCIENTIFIC_ADOPTION."
+}
