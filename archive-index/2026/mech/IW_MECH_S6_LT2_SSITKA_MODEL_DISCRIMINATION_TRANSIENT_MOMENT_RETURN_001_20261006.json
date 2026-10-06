@@ -1,0 +1,16 @@
+{
+  "artifact_id": "IW_MECH_S6_LT2_SSITKA_MODEL_DISCRIMINATION_TRANSIENT_MOMENT_RETURN_001_20261006",
+  "canonical_filename": "IW_MECH_S6_LT2_SSITKA_MODEL_DISCRIMINATION_TRANSIENT_MOMENT_RETURN_001_20261006",
+  "title": "Mech-S6 LT2 SSITKA model-discrimination and transient-moment gate",
+  "archive_mode": "POINTER_ONLY",
+  "document_type": "RETURN",
+  "created_at": "2026-10-06",
+  "as_of": "2026-10-06",
+  "origin_cell": "IW_MECH_LINEAGE_001_SUCCESSOR_05 / Mech-S6",
+  "owner": "LT2 / MT12 programme placement; Mech-S6 origin",
+  "exposure": "PRIVATE",
+  "status": "CURRENT",
+  "provenance": "Private MECH scientific return. Full content is stored in the authorized private MECH Google Drive source family and delivered through the private IW dispatch surface.",
+  "retrieval": "Authorized project participants should resolve the canonical filename in the private MECH source family. Public GitHub intentionally stores no private provider URL, Drive ID, Slack link, or unpublished claim-bearing payload.",
+  "notes": "Public-safe custody pointer. Slack RETURN_ID: MECH-S6-LT2-SSITKA-MODEL-DISCRIMINATION-TRANSIENT-MOMENT-GATE-001. POINTER_ONLY does not imply scientific adoption."
+}
