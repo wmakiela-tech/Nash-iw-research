@@ -1,0 +1,11 @@
+{
+  "artifact_id":"IW_MECH_S6_LT3_SHARED_REALIZATION_CROSS_CONTEXT_ARRHENIUS_HOLDOUT_RETURN_001_20261007",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-07",
+  "origin_cell":"Mech-S6",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Public-safe pointer only; no unpublished claim payload or private provider identifiers."
+}
