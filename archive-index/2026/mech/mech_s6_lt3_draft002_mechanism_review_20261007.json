@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_LT3_AUTHORED_WORKING_DRAFT_002_MECHANISM_REVIEW_RETURN_001_20261007",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"REVIEW_RETURN",
+  "created_at":"2026-10-07",
+  "origin_cell":"Mech-S6",
+  "verdict":"PASS_WITH_REPAIR",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Public-safe pointer only; no private provider identifiers or unpublished claim payload."
+}
