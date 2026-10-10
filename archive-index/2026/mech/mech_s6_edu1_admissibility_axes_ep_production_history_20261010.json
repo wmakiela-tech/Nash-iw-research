@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_EDU1_ADMISSIBILITY_AXES_EQUIVALENCE_PRINCIPLE_AND_PRODUCTION_HISTORY_REPAIR_001_20261010",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-10",
+  "origin_cell":"Mech-S6",
+  "verdict":"ADMISSIBILITY_BEFORE_IDENTIFIABILITY_ACCEPTED_WITH_AXIS_REPAIR",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Learner-facing bounded consultation; no ontology promotion, canon, EXEC or novelty claim."
+}
