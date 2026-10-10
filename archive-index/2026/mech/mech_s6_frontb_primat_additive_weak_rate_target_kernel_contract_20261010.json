@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_FRONTB_PRIMAT_ADDITIVE_WEAK_RATE_TARGET_KERNEL_CONSTRUCTION_CONTRACT_001_20261010",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-10",
+  "origin_cell":"Mech-S6",
+  "verdict":"PASS_DESIGN / KERNEL_NOT_EXECUTED",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Public-safe pointer only; no BBN endpoint, likelihood or PBH bound released."
+}
