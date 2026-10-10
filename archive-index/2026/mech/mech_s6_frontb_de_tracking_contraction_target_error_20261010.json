@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_FRONTB_DYNAMICAL_EQUILIBRIUM_TRACKING_CONTRACTION_AND_TARGET_ERROR_GATE_001_20261010",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-10",
+  "origin_cell":"Mech-S6",
+  "verdict":"PASS_EXACT_GENERIC / PBH_TRANSFER_UNRESOLVED",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Public-safe pointer only; no BBN endpoint, likelihood or PBH bound released."
+}
