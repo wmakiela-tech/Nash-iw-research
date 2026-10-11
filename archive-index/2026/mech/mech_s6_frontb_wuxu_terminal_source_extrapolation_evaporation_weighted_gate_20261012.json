@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_FRONTB_WU_XU_TERMINAL_SOURCE_EXTRAPOLATION_EVAPORATION_WEIGHTED_YIELD_AND_DISCREPANCY_GATE_001_20261012",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-12",
+  "origin_cell":"Mech-S6",
+  "verdict":"PASS_EXACT_EXECUTOR_MASS_WEIGHTING / PHYSICAL_SOURCE_VALIDATION_OPEN",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Public-safe pointer only; no PBH endpoint, likelihood, abundance bound, canon or EXEC claim."
+}
