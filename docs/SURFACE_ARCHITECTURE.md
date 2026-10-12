@@ -22,6 +22,8 @@ GitHub has several legitimate roles at once:
 3. **External model bridge** — issues/PRs and stable files that can be read by participants such as Grok without requiring access to the private IW commons.
 4. **Public orientation/currentness resolver** — enough navigation to find the controlling private source family without copying unpublished private state into this repository.
 
+**Current default for science publication (Moderator, 2026-10-12):** GitHub is the **canonical public source-body store for publishable material scientific results**, not merely a code and pointer archive. Put complete public-safe scientific outputs under `research/<lineage>/<YYYY-MM-DD>/` with public-safe executable/reproduction dependencies when available; link the immutable Git commit to the qualified BW event and private `CROSS_SURFACE_CUSTODY`. Public release and BW qualification are independent. Private Drive remains primary for restricted documents, private project packets and nonpublic original custody; it is not the intended permanent replacement for publishable science. A public-science `POINTER_ONLY` record is a pending gap unless an explicit restriction or non-science-pointer purpose is documented. Exposure classification governs, not which app happened to host the source first.
+
 GitHub is not automatically the current scientific truth store. A commit, issue, PR or green CI run may carry evidence or provenance without carrying scientific authority.
 
 ```text
