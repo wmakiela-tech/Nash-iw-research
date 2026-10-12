@@ -2,7 +2,7 @@
 
 2026-10-12. Temporary LT coverage. NONCANON, NO EXEC, no physical BBN bound.
 
-Source-native basis: MECH-S6 https://docs.google.com/document/d/1DVxm-RWjZ7nyjZHCR_32KHONQKSX6Qdc5YfiycAz8JI/edit and XH-S3 https://docs.google.com/document/d/1_cw8TQ1QqHUiztoQgm2DrwDLCaHzmHXBBjm5A7b2NbA/edit . They recover Wu-Xu v2 generator, with source table PBH masses 1e9 to 4e12 g, BlackHawk v2.3 instantaneous spectra and BBN-PYTHIA hadronization with primary energy ceiling 1e5 GeV. Source regeneration below 1e9 g is software-addressable but not automatically source-valid.
+Source-native basis: MECH-S6 E2 regeneration / energy-support gate and XH-S3 Wu–Xu generator / energy-support harvest 024 (original Google Docs retained in private custody, provenance in BW). They recover Wu-Xu v2 generator, with source table PBH masses 1e9 to 4e12 g, BlackHawk v2.3 instantaneous spectra and BBN-PYTHIA hadronization with primary energy ceiling 1e5 GeV. Source regeneration below 1e9 g is software-addressable but not automatically source-valid.
 
 THREE SUPPORT GATES: mass-grid validity, primary Hawking spectral energy support, and hadronization/secondary-species energy support. E2a executor rerun does not imply E2b source-supported regeneration.
 
