@@ -325,11 +325,11 @@
       "bw_qualification_state": "OWNER_SOURCE_SUPPORT_GATE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/rotation21_source_support_coverage_gate_20261012.md",
-      "github_commit": "b7a26cfd42a6aab924dbec4c5b6b0cf376aa9b66",
+      "github_commit": "7c332a43e126ad8276db0c824ab346447405e8e1",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
-      "checked_at": "2026-10-12T18:04:00+02:00",
-      "notes": "existing mapping"
+      "checked_at": "2026-10-12",
+      "notes": "Privacy-repaired 2026-10-12: references to verified non-shared Google Drive sources replaced with source-native citation titles; original science unchanged. BW cross-surface custody readback now records 7c332a43e126ad8276db0c824ab346447405e8e1. No Git history erasure."
     },
     {
       "record_id": "XSC-0023",
@@ -367,11 +367,11 @@
       "bw_qualification_state": "GITHUB_ROLE_SOURCE_EVIDENCE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/prf11/2026-10-12/rotation-005-global-theory-recheck.md",
-      "github_commit": "d3d0763547316826110c324c0c6752d9627aa2df",
+      "github_commit": "1cba7e2209ed2705f29cdd5c2c9106940c5d3b43",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
-      "checked_at": "2026-10-12T18:04:00+02:00",
-      "notes": "existing mapping"
+      "checked_at": "2026-10-12",
+      "notes": "Privacy-repaired 2026-10-12: references to verified non-shared Google Drive sources replaced with source-native citation titles; original science unchanged. BW cross-surface custody readback now records 1cba7e2209ed2705f29cdd5c2c9106940c5d3b43. No Git history erasure."
     },
     {
       "record_id": "XSC-0026",
