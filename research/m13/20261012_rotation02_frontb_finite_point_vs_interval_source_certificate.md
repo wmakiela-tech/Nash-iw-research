@@ -35,8 +35,8 @@ DISPOSITION: KEEP_AS_SOURCE_CONTRACT_COMPILER_GUARD; ABSORB_MATH_IN_CLASSICAL_LI
 
 
 SOURCES:
-XH-S3 harvest 023: https://docs.google.com/document/d/1m0gc3Tfr4FvAD1uRFQEqJ-G8KqrovrAyAVxq_kFRPFQ/edit
-Mech-S6 gate: https://docs.google.com/document/d/13_245qwn4-m-fjScqWw6Xy0Nyk_KG1kBGvq0bejQylM/edit
+XH-S3 harvest 023: (private Drive source; original locator retained in BW)
+Mech-S6 gate: (private Drive source; original locator retained in BW)
 MT13 ROT19: https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mt13/rotation19_lt_currentness_h8r_frontb_source_weight_20261012.md
 
 
