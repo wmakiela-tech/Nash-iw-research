@@ -4,6 +4,8 @@ Public, versioned infrastructure, archive and reproducibility surface for NASH/I
 
 GitHub has several roles in the project at once: executable/reproducibility surface, public-safe archive/index, durable asynchronous bridge to external participants such as Grok, and a public orientation layer pointing authorized researchers toward the private current-state resolvers. It is not the sole source of scientific truth.
 
+**Current publication default (Moderator, 2026-10-12):** complete public-safe scientific results belong in `research/<lineage>/<YYYY-MM-DD>/` on GitHub, with explicit BW ingestion/custody links. Google Drive is the private/restricted project-document home; a pointer-only GitHub file is not completed publication of a releasable scientific result. GitHub publication is not scientific acceptance. See [`docs/STORAGE_AND_SYNC_POLICY.md`](docs/STORAGE_AND_SYNC_POLICY.md).
+
 ## Start here
 
 Active NASH/IW researchers should begin with:
