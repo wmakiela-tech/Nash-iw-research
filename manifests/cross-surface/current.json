@@ -6,7 +6,8 @@
   "precedence": "BW REGISTRY + live owner/currentness > this projection",
   "coverage": {
     "REGISTRY_1225_1378_CURRENT_REPRESENTED": "151/151",
-    "REGISTRY_1379_1390_CURRENT_REPRESENTED": "10/12; 2 private custody sources not publicly mirrored"
+    "REGISTRY_1379_1390_CURRENT_REPRESENTED": "10/12; 2 private custody sources not publicly mirrored",
+    "NOTE_SW_ING0063_FULL_PUBLIC_BODY": "XSC-0163 is now PUBLIC_ARTIFACT, not a pointer; source frontier and record count unchanged"
   },
   "frontier": {
     "latest_bw_ingestion": "ING-20261012-0063",
@@ -2293,13 +2294,13 @@
       "bw_registry_row": "1390",
       "bw_qualification_state": "SOURCE_ENERGY_SUPPORT_SLOPE_CONFOUNDING_NARROW",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
-      "github_path": "archive-index/2026/sw/sw_frontb_wuxu_energy_support_slope_confounding_001.md",
-      "github_commit": "1b1847a3b02a8482fee55dcb6876380108919b4",
-      "github_mode": "POINTER_ONLY",
+      "github_path": "research/sw/2026-10-12/sw_frontb_wuxu_energy_support_and_slope_confounding_001.md",
+      "github_commit": "75b4e560bb427505cbd329e0de53532ac20d469f",
+      "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
-      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
-      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+      "source_revision": "SOURCE_VERIFIED_FULL_PUBLIC_RESEARCH_BODY",
+      "notes": "Full public-safe SW science source body has been reproduced verbatim from verified BW Drive source, with claim ceiling intact; source Drive locator remains private in BW REGISTRY1390. Legacy archive-index pointer superseded. No new BW science event or authority upgrade."
     }
   ],
   "pending_cross_surface_public_mapping_count": 2,
