@@ -387,6 +387,14 @@ METHOD_MUST_BE_ALLOWED_TO_FAIL
 
 ## 14. BW ↔ GitHub cross-surface custody handshake
 
+### Moderator direct forward-routing update (2026-10-12): public science GitHub-first
+
+For material scientific results classified **PUBLIC**, write the **complete science-bearing source body** (including theorem/negative finding, assumptions, caveats, claim ceiling, supporting reproducibility pointers) to `research/<lineage>/<YYYY-MM-DD>/` on GitHub. GitHub is the primary public scientific archive, not merely a fallback, pointer or code host. Preserve the stable `artifact_id`, `exposure: PUBLIC`, source identity, and BW ingestion event if known. If BW is not yet committed, mark `GITHUB_PENDING_BW_INGEST` rather than inventing an event. Request normal authorized BW ingestion/custody linking with verified commit and read back GitHub full body + REGISTRY event + CROSS_SURFACE_CUSTODY. Only then `PUBLIC_ARTIFACT / SYNCED`.
+
+Google Drive remains the project-private document and restricted-source home. A result written there for convenience is not automatically private **by scientific-content class**; when legal, the public-safe scientific part belongs on GitHub with restricted raw source coordinates and private context kept in Drive/BW. If restricted or publication-blocked, retain private custody and explicit `PRIVATE_ONLY` / `POINTER_ONLY` restriction. A bare GitHub pointer for an otherwise publishable public science result is `BW_PENDING_GITHUB_PUBLICATION`, **not** a completed public-science body. No forced dual-body mirror, no history mass migration and no scientific status promotion from a commit. See `STORAGE_AND_SYNC_POLICY.md`.
+
+
+
 Material knowledge artifacts must remain traceable between immutable GitHub custody and BW epistemic/currentness status without collapsing the two surfaces.
 
 For public-safe material:
