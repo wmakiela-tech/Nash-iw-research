@@ -2255,7 +2255,7 @@
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
       "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
-      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+      "notes": "Pointer identity remains mapped; original science body has internal restricted provider references requiring exposure review/split. PUBLIC_RELEASE_CLASSIFICATION_HOLD; SYNCED means pointer/custody identity only, NOT full public science publication. No content coordinates published and no BW scientific claim/status change."
     },
     {
       "record_id": "XSC-0161",
