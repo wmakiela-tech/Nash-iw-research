@@ -1,7 +1,7 @@
 # MT13 Rotation 18 — Subfloor source-injection asymptotic mismatch
 2026-10-11 | MT13 temporary Living Theory coverage | NONCANON / NO EXEC / NO NOVELTY.
 
-Source: MECH-S6 Wu-Xu floor semantics https://docs.google.com/document/d/1as07oJ9r4z0i-TmYPPFAAjEq_PhiUHJ2i7bEWHhpYRc/edit ; LT3 DRAFT018 https://docs.google.com/document/d/1KorpE8IGJlPlDTkBcTs1WvMeepgff7Ga3qcpZP-wKuY/edit .
+Source: MECH-S6 Wu-Xu floor semantics (private Drive source; original locator retained in BW) ; LT3 DRAFT018 (private Drive source; original locator retained in BW) .
 
 EXACT COUNTEREXAMPLE. For constants S>0, D>0, epsilon>0 and 0<n0<epsilon, the intended equation n_phys'=S-D*n_phys has solution n_phys(t)=S/D+(n0-S/D)exp(-Dt), hence tends to positive S/D. The log-floor executor evolves n_exec'=min(1,n_exec/epsilon)*S-D*n_exec. If 0<S<D*epsilon, its subfloor solution is n_exec(t)=n0 exp((S/epsilon-D)t), remains below epsilon, and tends to zero. Thus absolute asymptotic discrepancy tends to S/D and relative population error tends to 100 percent. The instantaneous DE population is S/D, unique, positive, and subfloor; the executor misses it asymptotically. This is an exact scalar constant-coefficient model result, not a claim about actual Wu-Xu parameter values.
 
