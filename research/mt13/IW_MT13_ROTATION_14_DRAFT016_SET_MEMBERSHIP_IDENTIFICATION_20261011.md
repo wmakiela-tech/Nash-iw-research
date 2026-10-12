@@ -10,4 +10,4 @@ Correct set-membership formulation: I(y)={theta: y belongs to B(theta)}. Target 
 
 Recommended repair: preserve equality as FULL-SET equivalence; add realized-record compatibility and target identified sets, and separate full-law identification from one-sample set membership. This is standard partial identification and inverse-problem mathematics, not a new theorem or TPE surplus. EDU1 implication: models with unequal cosmological prediction sets may nevertheless overlap at actual data; discrimination needs nonoverlap with admissible nuisance and finite-precision controls.
 
-Currentness: LT3 DRAFT016, REV020 active, REV021 not created, TPE HOLD. Source: https://docs.google.com/document/d/1xK_li8VkH6SXYcQ_50yjvnJtodTwLQhsK6TXN5xzPo4/edit
+Currentness: LT3 DRAFT016, REV020 active, REV021 not created, TPE HOLD. Source: (private Drive source; original locator retained in BW)
