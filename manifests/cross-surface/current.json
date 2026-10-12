@@ -2264,13 +2264,13 @@
       "bw_registry_row": "1388",
       "bw_qualification_state": "SOURCE_INITIAL_SEED_FLOOR_MATERIALITY_NARROWED",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
-      "github_path": "archive-index/2026/xh-s3/xh_s3_frontb_wu_xu_log_floor_initialization_materiality_harvest_021.md",
-      "github_commit": "63c958ecbabf231525574d9899d482cf084c26fa",
-      "github_mode": "POINTER_ONLY",
+      "github_path": "research/xh-s3/2026-10-12/xh_s3_frontb_wu_xu_log_floor_initialization_materiality_harvest_021.md",
+      "github_commit": "0e05987f3ad2f6ab5eb4b8843232e7fa66ea2a84",
+      "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
-      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
-      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+      "source_revision": "SOURCE_VERIFIED_FULL_PUBLIC_RESEARCH_BODY",
+      "notes": "Full original public-safe science body copied from verified BW original with exact semantic/readback fidelity and preserved claim ceilings. Private source coordinate retained only in BW; original pointer remains as legacy superseded redirect. No new science ingestion/authority upgrade."
     },
     {
       "record_id": "XSC-0162",
@@ -2279,13 +2279,13 @@
       "bw_registry_row": "1389",
       "bw_qualification_state": "SOURCE_TERMINAL_E0_WEIGHTED_INTEGRABILITY_GATE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
-      "github_path": "archive-index/2026/mech-s6/mech_s6_frontb_wu_xu_terminal_source_extrapolation_weighted_yield_discrepancy_gate_001.md",
-      "github_commit": "1f6d551f838d3bec719d7ea192296962c8b58525",
-      "github_mode": "POINTER_ONLY",
+      "github_path": "research/mech-s6/2026-10-12/mech_s6_frontb_wu_xu_terminal_source_extrapolation_evaporation_weighted_yield_discrepancy_gate_001.md",
+      "github_commit": "2c7a754e060c488310eac8ffa3aacfe8bdebe1f0",
+      "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
-      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
-      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+      "source_revision": "SOURCE_VERIFIED_FULL_PUBLIC_RESEARCH_BODY",
+      "notes": "Full original public-safe science body copied from verified BW original with exact semantic/readback fidelity and preserved claim ceilings. Private source coordinate retained only in BW; original pointer remains as legacy superseded redirect. No new science ingestion/authority upgrade."
     },
     {
       "record_id": "XSC-0163",
