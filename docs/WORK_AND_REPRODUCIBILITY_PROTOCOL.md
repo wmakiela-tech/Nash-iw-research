@@ -4,7 +4,7 @@
 artifact_id: IW_OW_CELL_WORK_ARTIFACT_AND_REPRODUCIBILITY_PROTOCOL_001_20260914
 title: NASH/IW Cell Work, Artifact and Reproducibility Protocol
 created_at: 2026-09-14
-as_of: 2026-10-03
+as_of: 2026-10-12
 origin_cell: IW_ORGANISATION_WORK_01 / OW
 document_type: PROTOCOL
 applicability: PROJECT_GUIDANCE_ACTIVE / FORWARD_ONLY_PROJECT_DEFAULT
@@ -363,7 +363,9 @@ This profile operationalizes, without replacing protected boundaries in:
 - private `IW_GOVCELL_20260816_INDEX_IW_CURRENT_APPLICABLE_DOCUMENTS_001`;
 - public `docs/SURFACE_ARCHITECTURE.md`;
 - public `docs/NAMING_AND_INDEXING.md`;
-- public `docs/SOURCE_OF_TRUTH.md`.
+- public `docs/SOURCE_OF_TRUTH.md`;
+- public `docs/REPOSITORY_STRUCTURE.md`;
+- public `docs/STORAGE_AND_SYNC_POLICY.md`.
 
 The private current-applicable index remains the resolver for private project applicability and must receive an append-only pointer to this artifact. GitHub remains the primary public-safe copy and revision history for this protocol. Neither surface creates scientific truth.
 
@@ -381,3 +383,52 @@ PROTOCOL_CONFORMANCE != SCIENTIFIC_CORRECTNESS
 REPRODUCTION_FAILURE_MUST_REMAIN_REPORTABLE
 METHOD_MUST_BE_ALLOWED_TO_FAIL
 ```
+
+
+## 14. BW ↔ GitHub cross-surface custody handshake
+
+Material knowledge artifacts must remain traceable between immutable GitHub custody and BW epistemic/currentness status without collapsing the two surfaces.
+
+For public-safe material:
+
+```text
+GITHUB_BODY_COMMIT
+-> BW_INGESTION_OR_EXPLICIT_NOT_INGESTED
+-> CROSS_SURFACE_CUSTODY
+-> READBACK
+```
+
+For private/restricted material, persist the body only on legal private custody. GitHub may carry a sanitized `POINTER_ONLY` or `HASH_ONLY` record when useful, but must not expose private Drive/Slack locators or provider-specific private revision identifiers.
+
+Required states:
+
+```text
+SYNCED
+GITHUB_PENDING_BW_INGEST
+BW_PENDING_GITHUB_PUBLICATION
+DRIVE_PRIVATE_POINTER_ONLY
+GITHUB_ARCHIVE_ONLY_NOT_INGESTED
+CONFLICT_HOLD
+SUPERSEDED
+```
+
+Rules:
+
+- A GitHub scientific artifact with no BW ingestion/status is evidence/archive only and must remain `GITHUB_PENDING_BW_INGEST` until KN/BW performs the legal ingestion/qualification.
+- A BW-qualified public-safe artifact whose body exists only on Drive is `BW_PENDING_GITHUB_PUBLICATION` until an immutable GitHub body exists or publication is explicitly not applicable.
+- The BW `CROSS_SURFACE_CUSTODY` sheet is a derived/reconstructible location/version projection; it never overrides `REGISTRY`, owner currentness, qualification, or scientific authority.
+- Match/reconcile by stable artifact/contribution ID before filenames. No silent last-write-wins.
+- One logical artifact has one canonical GitHub body. Redundant full copies are converted prospectively to pointers/redirects while immutable Git history preserves earlier content.
+- Historical GitHub paths already cited by BW remain valid provenance. Canonical structure is forward-only; do not mass-rename history for aesthetics.
+- Public cross-surface manifests may expose artifact IDs, BW ingestion event IDs, GitHub paths/commits, modes and sync states, but never private provider locators.
+- GitHub-first connector fallback is legal only for content already classified public-safe. Private Drive failure never authorizes publication.
+
+```text
+GITHUB_COMMIT != BW_EVENT
+BW_INGESTION != SCIENTIFIC_ACCEPTANCE
+SYNCED != SCIENTIFIC_VALIDATION
+COPY != NEW_ARTIFACT
+PUBLIC_GITHUB != PRIVATE_IW_COMMONS
+```
+
+Repository placement is controlled prospectively by `docs/REPOSITORY_STRUCTURE.md`; cross-surface behavior by `docs/STORAGE_AND_SYNC_POLICY.md`.
