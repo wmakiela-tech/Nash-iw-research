@@ -5,7 +5,7 @@ DATE: 2026-10-12
 STATUS: PASS_EXACT_FINITE-DIMENSIONAL / N_EQUALS_ZERO_NOT_SUFFICIENT_FOR_NECESSITY / NO_TENSOR_CLOSURE_CLAIM / NO CANON / NO EXEC_SIGN
 
 Durable native Google Doc:
-https://docs.google.com/document/d/14mXwQLrorRugBFhbW1i3cBn1g2ktxo16WlRlzkjBVGY/edit
+(private Drive source; original locator retained in BW)
 
 ## General theorem
 
