@@ -1,6 +1,6 @@
 # NASH/IW — Multi-Surface Architecture
 
-**As of:** 2026-09-12  
+**As of:** 2026-10-12  
 **Classification:** public-safe system/operator guidance.  
 **Authority:** descriptive routing contract only; no `CANON`, no `EXEC_SIGN`, no scientific claim upgrade.
 
@@ -140,6 +140,22 @@ IW may use several structured stores because they answer different questions:
 All database rows must use stable object/task/artifact IDs, expose `as_of` or source revision when representing currentness, and retain a pointer to the controlling source. Synchronization is projection/import, not silent last-write-wins. Conflicts resolve to `CURRENTNESS_UNRESOLVED/HOLD` until the owner or controlling source resolves them.
 
 Minimal cross-store keys are `object_id`, `record_type`, `source_revision`, `as_of`, `status`, `owner`, `exposure`, `provenance`, and optional `supersedes` (`old -> new`). This is a boundary contract, not a requirement that every exploratory note become a database row.
+
+## 4.1 Cross-surface custody projection
+
+GitHub and BW are required to be mutually traceable for material public artifacts without becoming duplicate truth stores.
+
+```text
+GITHUB_COMMIT -> BW_INGESTION/STATUS
+BW_PUBLIC_RECORD -> IMMUTABLE_GITHUB_PATH/COMMIT OR EXPLICIT PUBLICATION_PENDING
+BW_PRIVATE_RECORD -> PRIVATE_CUSTODY + OPTIONAL POINTER/HASH
+```
+
+The private BW ledger may store both Drive/private locators and GitHub commit/path. Public GitHub manifests expose only public-safe identity, BW ingestion event, GitHub path/commit, archive mode and sync state; private provider coordinates remain private.
+
+Cross-surface mismatch is a custody/currentness defect, not by itself a scientific downgrade. Resolve by stable artifact identity and explicit provenance; never by silent last-write-wins.
+
+See [`STORAGE_AND_SYNC_POLICY.md`](STORAGE_AND_SYNC_POLICY.md).
 
 ## 5. Currentness under connector failure
 
