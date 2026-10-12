@@ -1,6 +1,6 @@
 # NASH/IW — Source of Truth, Currentness and Custody
 
-**As of:** 2026-09-12
+**As of:** 2026-10-12
 
 NASH/IW deliberately uses different surfaces for different information functions. No single repository, chat, spreadsheet or archive is the source of truth for everything.
 
@@ -64,6 +64,22 @@ Coda/Airtable-class surfaces may be used experimentally for mailbox/queue functi
 | Is a GitHub implementation reproducible? | repository commit + CI/tests + manifest/runtime evidence |
 | What can an external participant such as Grok inspect without private access? | public GitHub issue/PR/file/task capsule |
 | Is something scientifically true? | not decided by storage location, CI, consensus, GitHub merge or message visibility |
+
+## GitHub ↔ BW provenance handshake
+
+For material public artifacts, source inspection must be possible in both directions:
+
+- from GitHub: recover stable artifact ID and BW ingestion/status;
+- from BW: recover the immutable GitHub commit/path when a public body exists;
+- for private artifacts: BW retains private custody; GitHub may expose only a safe pointer/hash or nothing.
+
+```text
+GITHUB_COMMIT != BW_EVENT
+BW_EVENT != GITHUB_PUBLICATION
+SYNCED = IDENTITY/CUSTODY AGREEMENT, NOT CLAIM VALIDATION
+```
+
+A public GitHub artifact with no BW event is archive/evidence only until qualified or explicitly typed otherwise. A BW row whose publication-safe body exists only on Drive is `BW_PENDING_GITHUB_PUBLICATION` until mirrored or explicitly exempted.
 
 ## Currentness and custody may diverge temporarily
 
