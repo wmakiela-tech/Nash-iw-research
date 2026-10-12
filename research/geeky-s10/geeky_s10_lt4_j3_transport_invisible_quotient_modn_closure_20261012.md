@@ -5,7 +5,7 @@ DATE: 2026-10-12
 STATUS: PASS_EXACT_ALGEBRAIC_WITH_COMMON-DOMAIN_GUARD / NO_TENSOR_CLOSURE_CLAIM / NO_CANON / NO EXEC_SIGN
 
 Durable native Google Doc:
-https://docs.google.com/document/d/1VxFqvAUkDlID7qeF9WaLiqLK3iWiHMQ0E960hdwfW4I/edit
+(private Drive source; original locator retained in BW)
 
 ## Setup
 
