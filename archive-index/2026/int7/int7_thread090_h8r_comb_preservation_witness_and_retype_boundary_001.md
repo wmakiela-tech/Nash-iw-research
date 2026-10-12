@@ -1,13 +1,10 @@
-# Cross-surface custody pointer — INT7-THREAD090-H8R-COMB-PRESERVATION-WITNESS-AND-RETYPE-BOUNDARY-001
+# Legacy scientific custody pointer — INT7-THREAD090-H8R-COMB-PRESERVATION-WITNESS-AND-RETYPE-BOUNDARY-001
 
-- BW contribution identity: `INT7-THREAD090-H8R-COMB-PRESERVATION-WITNESS-AND-RETYPE-BOUNDARY-001`
-- BW ingestion: `ING-20261012-0057`
-- BW REGISTRY row at audit: 1384
-- Publication mode: `POINTER_ONLY`
-- Canonical source body: retained in project private/restricted source custody; provider locator deliberately omitted from public GitHub.
-- Purpose: public-safe trace and deduplicated cross-surface correspondence only.
-- Current scientific and lifecycle status: resolve from live BW and authorized owner records. This pointer does not freeze or promote either.
+BW original scientific source event: `ING-20261012-0057`; original private source custody remains in BW REGISTRY1384.
+Former `POINTER_ONLY` placeholder; now `SUPERSEDED_BY_FULL_PUBLIC_SCIENCE`.
 
-`GITHUB_POINTER != SOURCE_BODY`  
-`SYNCED != SCIENTIFIC_VALIDATION`  
-`NO_CANON / NO_EXEC_SIGN / NO_AUTHORITY_UPGRADE`
+Canonical full public scientific body:
+[INT7 Thread090 H8R comb witness / retype gate](../../../research/int7/2026-10-11/int7_thread090_h8r_comb_preservation_witness_and_retype_boundary_001.md).
+
+Claim ceiling unchanged: no authority upgrade, no novelty, no CANON, no EXEC_SIGN.
+`POINTER != SECOND_CANONICAL_BODY`
