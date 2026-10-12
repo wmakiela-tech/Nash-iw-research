@@ -10,6 +10,6 @@ ROT19 EXACT POSITIVE-WEIGHT STRESS CERTIFICATE (mature integral inequalities): L
 
 For W=1, x_min->0, delta and p+3 positive, C(delta)/C(0)=(p+3)/(p+delta+3), as in MECH-S6. For W(x)=x^k with p+k+3>0, ratio=(p+k+3)/(p+k+delta+3); positive k suppresses deep terminal contribution, negative k enhances it. Thus unweighted count stress cannot be substituted for a BBN response without source-matched target weight. Negative or signed sensitivities require absolute error budgets rather than relative ratios.
 
-Sources: XH022 https://docs.google.com/document/d/1i8FlFM74c2vgqDdyA_8mkR2YTnh9HS5ISn2vSA50nEo/edit ; MECH terminal https://docs.google.com/document/d/116K6HLD7JGeD6_g65vraGSKC70YMdLRx0apiT5Ru6FU/edit ; MECH edge stress https://docs.google.com/document/d/13_245qwn4-m-fjScqWw6Xy0Nyk_KG1kBGvq0bejQylM/edit ; LT DRAFT018 https://docs.google.com/document/d/1KorpE8IGJlPlDTkBcTs1WvMeepgff7Ga3qcpZP-wKuY/edit .
+Sources: XH022 (private Drive source; original locator retained in BW) ; MECH terminal (private Drive source; original locator retained in BW) ; MECH edge stress (private Drive source; original locator retained in BW) ; LT DRAFT018 (private Drive source; original locator retained in BW) .
 
 PLACEMENT: P2 REV020_PLUS_COMPILER maintained, P3 HOST_ATLAS_ONLY strong fallback, TPE HOLD. Front B source extrapolation E0 is executor-defined, physical source validation E2 open; target-weighted DE-vs-full validation open. H8R-C source-interface-unresolved is controlling correction, not H8R-D.
