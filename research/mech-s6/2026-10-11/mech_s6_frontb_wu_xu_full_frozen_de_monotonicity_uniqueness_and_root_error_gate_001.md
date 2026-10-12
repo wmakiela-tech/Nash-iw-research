@@ -5,7 +5,7 @@ bw_qualification_state: FRONTB_FROZEN_DE_UNIQUENESS
 bw_lifecycle_state: CURRENT_REPRESENTED
 bw_authority_state: NO_AUTHORITY_UPGRADE
 archive_mode: PUBLIC_ARTIFACT
-sync_state: GITHUB_PENDING_BW_LINK_UPDATE
+sync_state: SYNCED
 source_surface: GOOGLE_DRIVE
 source_revision: AHj4eMROcB8b-Kbi3mXGjeekDCYzdyZlS5eNLkuxh4xAvsDo6-8O32Y373PQppgfDZDV6Mr71eys6hkR_1IRcRBftnjT5gjv8sv6Cm4OC6U
 mirror_note: PUBLIC_SAFE_SANITIZED_MIRROR_PRIVATE_PROVIDER_LOCATORS_REDACTED
