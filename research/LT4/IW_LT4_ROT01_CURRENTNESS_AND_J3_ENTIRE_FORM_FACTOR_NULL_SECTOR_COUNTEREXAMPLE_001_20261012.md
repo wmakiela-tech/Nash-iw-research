@@ -118,11 +118,11 @@ Possible next theorem (NOT CLAIMED): characterize closure modulo the common tran
 
 ## 7. Direct source links
 
-* LT3 -> LT4 packet 003: https://docs.google.com/document/d/1USB9w7_RlUZYv0KXiXvPfDfcAWjnQXdc_PxmhLMCM6Q/edit
-* DRAFT018: https://docs.google.com/document/d/1KorpE8IGJlPlDTkBcTs1WvMeepgff7Ga3qcpZP-wKuY/edit
-* NC 002: https://drive.google.com/file/d/137AAdDPepQ21UYKTejO9Xuspc3Ja0vAj/view
-* NC consolidation 005: https://drive.google.com/file/d/10qiBj80I7MRRcGlE4k12WljxOvFMwPed/view
-* NC H8R correction: https://drive.google.com/file/d/1zxWJdVe8OvI5p5W1g6pyW7vLllcHx8Kb/view
-* INT7 Thread092: https://docs.google.com/document/d/1i6FnB7SAfPigmAr9zfGrXiSv6Ij2ctXFgZGKqQ8HJMA/edit
+* LT3 -> LT4 packet 003: (private Drive source; original locator retained in BW)
+* DRAFT018: (private Drive source; original locator retained in BW)
+* NC 002: (private Drive source; original locator retained in BW)
+* NC consolidation 005: (private Drive source; original locator retained in BW)
+* NC H8R correction: (private Drive source; original locator retained in BW)
+* INT7 Thread092: (private Drive source; original locator retained in BW)
 
 END RETURN.
