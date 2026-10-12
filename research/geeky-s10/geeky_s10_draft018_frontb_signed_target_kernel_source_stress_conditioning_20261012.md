@@ -5,7 +5,7 @@ DATE: 2026-10-12
 STATUS: PASS_EXACT_WITH_FIXED-KERNEL_GUARD / NO PBH BOUND / NO CANON / NO EXEC_SIGN
 
 Durable native Google Doc:
-https://docs.google.com/document/d/1NUlMaJpMnzSmR1Of1VuQm9ejTHs0JuJKUiDwFIup-5Y/edit
+(private Drive source; original locator retained in BW)
 
 ## Currentness
 
