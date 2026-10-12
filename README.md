@@ -15,6 +15,8 @@ Active NASH/IW researchers should begin with:
 5. [`docs/SOURCE_OF_TRUTH.md`](docs/SOURCE_OF_TRUTH.md) — explains which surface answers which kind of question.
 6. [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md) — repository authority and claim boundaries.
 7. [`docs/NAMING_AND_INDEXING.md`](docs/NAMING_AND_INDEXING.md) — canonical IDs, filenames, metadata and supersession direction.
+8. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — canonical repository layout and legacy-path policy.
+9. [`docs/STORAGE_AND_SYNC_POLICY.md`](docs/STORAGE_AND_SYNC_POLICY.md) — BW↔GitHub↔Drive custody and synchronization contract.
 
 ## GitHub roles
 
@@ -22,9 +24,9 @@ Active NASH/IW researchers should begin with:
 
 Use for code, tests, schemas, small manifests, CI, public-safe fixtures and reproducible operator documentation. New load-bearing results follow the shared reproduction manifest or literature-search record linked from the work protocol.
 
-### Public-safe archive and lineage
+### Public-safe research, archive and lineage
 
-Use `archive-index/` and version history to preserve public artifacts, pointers, hashes, supersession and retrieval instructions without forcing large/private payloads into the repository.
+Use `research/<lineage>/<YYYY-MM-DD>/` for new full public-safe scientific bodies. Use `archive-index/` for pointer/hash/legacy records and compact historical entries. Existing historical paths remain valid provenance and are not mass-renamed.
 
 ### External model bridge
 
@@ -53,6 +55,17 @@ Public GitHub archival should be explicitly one of:
 - `EXECUTABLE_REPRODUCTION` — code + public-safe fixture/parameters/tests reproduce a declared result class.
 
 See [`docs/SURFACE_ARCHITECTURE.md`](docs/SURFACE_ARCHITECTURE.md).
+
+## BW ↔ GitHub integrity
+
+Material public artifacts are expected to be mutually traceable with BW:
+
+```text
+GITHUB_ARTIFACT -> BW_INGESTION_OR_EXPLICIT_NOT_INGESTED
+BW_PUBLIC_ARTIFACT -> GITHUB_COMMIT_OR_EXPLICIT_PUBLICATION_STATE
+```
+
+GitHub provides immutable public-safe custody and reproducibility; BW remains the private event/currentness ledger. Cross-surface projections live under `manifests/cross-surface/`.
 
 ## Claim boundary
 
