@@ -1,6 +1,6 @@
 # NASH/IW — Naming and Indexing Contract
 
-**As of:** 2026-09-14  
+**As of:** 2026-10-12  
 **Classification:** public-safe operator guidance; no scientific authority.
 
 This is the current forward-only naming boundary used by [`WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](WORK_AND_REPRODUCIBILITY_PROTOCOL.md). It supersedes the older preferred token order in private System Core section 6 for new material artifacts only. Historical artifacts are not renamed, and System Core protected boundaries remain unchanged.
@@ -58,11 +58,18 @@ supersedes: []  # old artifact IDs; direction is old -> this artifact
 
 ## Repository placement
 
+Forward canonical placement:
+
 - `docs/`: current public operator and architecture documents.
-- `archive-index/YYYY/<source-family>/`: public-safe historical entries when volume requires grouping.
-- `manifests/`: custody/reproduction manifests.
+- `research/<lineage>/<YYYY-MM-DD>/`: new full public-safe scientific bodies.
+- `archive-index/YYYY/<source-family>/`: pointer/hash/legacy archive entries and compact historical records.
+- `succession/YYYY/<lineage>/`: public-safe succession pointers/manifests; private packet bodies remain private.
+- `manifests/cross-surface/`: BW↔GitHub custody projections.
+- `manifests/reproduction/`: reproducibility manifests.
 - `schemas/`: machine-readable contracts.
 - `runtime/`, `src/`, `tests/`, `fixtures/`: executable reproduction sets.
+
+Historical repository paths are not mass-renamed. New writes follow the canonical layout. See `REPOSITORY_STRUCTURE.md`.
 
 Search by stable ID first, then object/type, then date. Git history is the revision log; filenames are not changelogs.
 
@@ -70,4 +77,15 @@ Search by stable ID first, then object/type, then date. Git history is the revis
 FILENAME != CURRENTNESS
 COPY != NEW_ARTIFACT
 NEWER_TIMESTAMP != SUPERSESSION
+```
+
+
+## Cross-surface identity fields
+
+For material GitHub artifacts, preserve `bw_ingestion_event_id` when known and immutable GitHub commit/path after publication. Private BW may additionally preserve the Drive/private locator. Public manifests must not expose private provider coordinates.
+
+```text
+ARTIFACT_ID > TRANSPORT_FILENAME
+MIRROR != NEW_ARTIFACT
+BW_EVENT_ID + GIT_COMMIT = CROSS_SURFACE_PROVENANCE, NOT SCIENTIFIC_AUTHORITY
 ```
