@@ -381,11 +381,11 @@
       "bw_qualification_state": "GITHUB_ROLE_SOURCE_EVIDENCE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/prf11/2026-10-12/rotation-006-front-b-bbn-prior-art.md",
-      "github_commit": "5a10a37c7f215cff2bc22f5283b855ffeb06e3c6",
+      "github_commit": "920599b3e9f65fad547467326313f86ae34e2ecb",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
-      "checked_at": "2026-10-12T18:04:00+02:00",
-      "notes": "existing mapping"
+      "checked_at": "2026-10-12",
+      "notes": "Public PRF11 research source privacy-redacted on 2026-10-12 to remove two non-shared Drive IDs; scientific prose unchanged. Existing BW XSC-0026 readback matches commit. Older Git history may retain coordinates."
     },
     {
       "record_id": "XSC-0027",
