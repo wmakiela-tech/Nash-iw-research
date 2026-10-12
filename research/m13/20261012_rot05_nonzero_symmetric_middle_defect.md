@@ -106,9 +106,9 @@ ROUTE_TAGS: IWTO_LT4 IWTO_GEEKY_S10 IWTO_MT13 IWTO_REC9 IWTO_INT7 IWTO_PRF11 IWT
 
 
 SOURCES:
-- Geeky-S10 newest: https://docs.google.com/document/d/19tLSeBawl3eMbXsYwGVlS3T74-Fc5sXLA40RYIO6z3o/edit
-- Geeky-S10 earlier: https://docs.google.com/document/d/1VxFqvAUkDlID7qeF9WaLiqLK3iWiHMQ0E960hdwfW4I/edit
-- Geeky-S10 generator collapse: https://docs.google.com/document/d/14mXwQLrorRugBFhbW1i3cBn1g2ktxo16WlRlzkjBVGY/edit
+- Geeky-S10 newest: (private Drive source; original locator retained in BW)
+- Geeky-S10 earlier: (private Drive source; original locator retained in BW)
+- Geeky-S10 generator collapse: (private Drive source; original locator retained in BW)
 - MT13 programme and ownership: https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mt13/20261012_research_programme_state_and_architecture_report.md
 
 
