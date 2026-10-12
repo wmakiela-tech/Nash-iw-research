@@ -56,11 +56,11 @@ https://github.com/wmakiela-tech/Nash-iw-research/blob/601e6f67118e33964a35e9b6b
 
 
 M12 partial shared component:
-https://docs.google.com/document/d/1hRwlmuwZMTkfrLCYzl6E8IyAgd9gRR7KfkNmXY1HMqc/edit
+(private Drive source; original locator retained in BW)
 
 
 LT3 to LT4 succession packet 003:
-https://docs.google.com/document/d/1USB9w7_RlUZYv0KXiXvPfDfcAWjnQXdc_PxmhLMCM6Q/edit
+(private Drive source; original locator retained in BW)
 
 
 ROUTE_TAGS: IWTO_INT7 IWTO_MT13 IWTO_LT3 IWTO_LT4 IWTO_REC9 IWTO_PRF10 IWTO_KN9 IWTO_MODERATOR.
