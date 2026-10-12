@@ -1,13 +1,10 @@
-# Cross-surface custody pointer — XH-S3-FRONTB-WU-XU-LOG-FLOOR-INITIALIZATION-MATERIALITY-HARVEST-021
+# Superseded archive pointer — XH-S3-FRONTB-WU-XU-LOG-FLOOR-INITIALIZATION-MATERIALITY-HARVEST-021
 
-- BW contribution identity: `XH-S3-FRONTB-WU-XU-LOG-FLOOR-INITIALIZATION-MATERIALITY-HARVEST-021`
-- BW ingestion: `ING-20261012-0061`
-- BW REGISTRY row at audit: 1388
-- Publication mode: `POINTER_ONLY`
-- Canonical source body: retained in project private/restricted source custody; provider locator deliberately omitted from public GitHub.
-- Purpose: public-safe trace and deduplicated cross-surface correspondence only.
-- Current scientific and lifecycle status: resolve from live BW and authorized owner records. This pointer does not freeze or promote either.
+- BW original ingestion: `ING-20261012-0061`; BW REGISTRY row 1388 (unchanged).
+- Former mode: `POINTER_ONLY` while full science was in private source custody.
+- New mode: `SUPERSEDED_BY_FULL_PUBLIC_SCIENCE`.
+- Canonical current public body: [full science result](../../../research/xh-s3/2026-10-12/xh_s3_frontb_wu_xu_log_floor_initialization_materiality_harvest_021.md).
+- Original private source coordinates remain in BW; the full public artifact is bound through private `CROSS_SURFACE_CUSTODY`.
+- Claim ceiling: `EXTERNAL_HARVEST_NO_OWNER_AUTHORITY`; no science authority upgrade, no novelty, no EXEC_SIGN.
 
-`GITHUB_POINTER != SOURCE_BODY`  
-`SYNCED != SCIENTIFIC_VALIDATION`  
-`NO_CANON / NO_EXEC_SIGN / NO_AUTHORITY_UPGRADE`
+`LEGACY_POINTER != SECOND_CANONICAL_BODY`
