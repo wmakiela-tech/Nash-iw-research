@@ -5,7 +5,7 @@ bw_qualification_state: PARTIAL_SHARED_COMPONENT_GATE
 bw_lifecycle_state: CURRENT_REPRESENTED
 bw_authority_state: NO_AUTHORITY_UPGRADE
 archive_mode: PUBLIC_ARTIFACT
-sync_state: GITHUB_PENDING_BW_LINK_UPDATE
+sync_state: SYNCED
 source_surface: GOOGLE_DRIVE
 source_revision: AHj4eMQi-It88W-P1w87ZCG7pp-V-Oy6Q3hlUJZdoauotdnVZT_LWDzPKXirpmgpffwUYj1s4o2-RSp0mI1TmnXSxtMogbg8bi2nrI2JngM
 mirror_note: PUBLIC_SAFE_SANITIZED_MIRROR_PRIVATE_PROVIDER_LOCATORS_REDACTED
