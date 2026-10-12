@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_FRONTB_WU_XU_EDGE_SLOPE_STRESS_AMPLIFICATION_AND_REGENERATION_ACCEPTANCE_GATE_001_20261012",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-12",
+  "origin_cell":"Mech-S6",
+  "verdict":"PASS_EXACT_DECLARED_POWER_STRESS / E2_NOT_RUN",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Stress geometry only; not a physical error bar and not a PBH endpoint or abundance claim."
+}
