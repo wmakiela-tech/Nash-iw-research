@@ -5,7 +5,7 @@ DATE: 2026-10-12
 STATUS: PASS_EXACT_ALGEBRAIC / NO TENSOR-GRAVITY CLAIM / NO CANON / NO EXEC_SIGN
 
 Durable native Google Doc:
-https://docs.google.com/document/d/19tLSeBawl3eMbXsYwGVlS3T74-Fc5sXLA40RYIO6z3o/edit
+(private Drive source; original locator retained in BW)
 
 ## Exact middle-defect identity
 
