@@ -4,6 +4,8 @@
 
 This public repository is an infrastructure, archive, reproducibility and external-bridge surface. It is **not** the sole or primary store for unpublished NASH/IW scientific currentness.
 
+**Forward storage split (Moderator, 2026-10-12):** publish the complete body of scientific returns approved for public exposure in GitHub `research/` and connect their immutable commit to BW ingestion and private custody. Reserve Drive for private project documents and restricted source material; do not mislabel a public-safe scientific return's private Drive origin as a permanent reason for a GitHub pointer-only stub. The BW owner remains authoritative for qualification/currentness. See [`STORAGE_AND_SYNC_POLICY.md`](STORAGE_AND_SYNC_POLICY.md).
+
 ## For an active NASH/IW researcher
 
 Before starting expensive or claim-heavy work, resolve current state from the project-private sources below by artifact ID/name in the private Drive/current index.
