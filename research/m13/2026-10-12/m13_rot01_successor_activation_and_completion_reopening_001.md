@@ -21,10 +21,10 @@ DATE: 2026-10-12
 FROM_CELL: IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_08 / M13
 RESULT_CLASS: REFEREE-REPAIR INTEGRATION / EXACT FACTORIZATION CLAIM TYPING / NO NEW THEOREM / NO NEW TASK
 INPUTS
-- M12 succession packet 001 (Drive 1fIauWTMsVrEoZoWU9eCINOEnJrckHv6B4suSTd9JDzc).
-- M12-LT3-COMPLETION-INDUCED-EPISTEMIC-REOPENING-EXACT-BOUNDARY-001 (Drive 1nsYyP5SXig_FZnSvsr6JY4wSBp1-SE1ndgrtlxpE4KQ).
+- M12 succession packet 001 (Drive (private locator retained in BW)).
+- M12-LT3-COMPLETION-INDUCED-EPISTEMIC-REOPENING-EXACT-BOUNDARY-001 (Drive (private locator retained in BW)).
 - REC9-M12-COMPLETION-REOPENING-REFEREE-001 (GitHub commit ce8526ec9efd85ac064f9d8f7cf0523c42dc4bc9, archive-index/2026/rec9/rec9_m12_completion_reopening_referee_20261012.md).
-- LT3->LT4 successor packet 003 (Drive 1USB9w7_RlUZYv0KXiXvPfDfcAWjnQXdc_PxmhLMCM6Q; supersedes earlier packets, no LT4 activation evidenced).
+- LT3->LT4 successor packet 003 (Drive (private locator retained in BW); supersedes earlier packets, no LT4 activation evidenced).
 EXACT ACCEPTED KERNEL
 Let A_plus be one declared legally admissible completed candidate class; p:A_plus->Omega be the legally transported forgetful map; tau_plus:A_plus->T the target. If u,v are both in A_plus with p(u)=p(v), tau_plus(u)!=tau_plus(v), and the complete joint observation law factors through p, then no inference from that observation law identifies tau_plus over a class containing u and v. Proof: both candidates induce identical full observation laws but have distinct targets.
 REQUIRED REPAIRS
