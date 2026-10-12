@@ -24,3 +24,8 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: python scripts/check_public_locators.py --base "$BASE_SHA" --head "$HEAD_SHA"
+      - name: Check new public scientific body and BW writeback identity
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python scripts/check_public_science_writeback.py --base "$BASE_SHA" --head "$HEAD_SHA"
