@@ -2234,13 +2234,13 @@
       "bw_registry_row": "1384",
       "bw_qualification_state": "H8R_SAME_TYPE_COMB_COUNTERWITNESS_AND_RETYPE_LIMIT",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
-      "github_path": "archive-index/2026/int7/int7_thread090_h8r_comb_preservation_witness_and_retype_boundary_001.md",
-      "github_commit": "5b027b12b5ceb5e068230ab47df292fc718d2106",
-      "github_mode": "POINTER_ONLY",
+      "github_path": "research/int7/2026-10-11/int7_thread090_h8r_comb_preservation_witness_and_retype_boundary_001.md",
+      "github_commit": "0ae8a3d306cc59ca41d7338c3a2ea6c0c5df3ae4",
+      "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
-      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
-      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+      "source_revision": "SOURCE_VERIFIED_FULL_PUBLIC_RESEARCH_BODY",
+      "notes": "Full public-safe original INT7 Thread090 source verified and published with unchanged H8R science claim ceiling; private source identity remains in BW REGISTRY1384 and XSC-0159; legacy pointer superseded, no second BW science event."
     },
     {
       "record_id": "XSC-0160",
