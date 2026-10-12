@@ -75,14 +75,14 @@ P5: For NLGM require nonlocal inverse prescription, admissible homogeneous secto
 Do not start task cascades automatically. Resource focus follows the cheapest decision-changing observation/falsifier; parked old lanes remain parked absent material reopen condition.
 
 ## Key sources consulted
-- MT theory-building v1.1: https://docs.google.com/document/d/19m8xn1Ypb4kbPJ1ySK70LWemnluTnnXmPpw3RkywBb0/edit
-- LT3 draft018: https://docs.google.com/document/d/1KorpE8IGJlPlDTkBcTs1WvMeepgff7Ga3qcpZP-wKuY/edit
-- LT4 packet003: https://docs.google.com/document/d/1USB9w7_RlUZYv0KXiXvPfDfcAWjnQXdc_PxmhLMCM6Q/edit
-- KN10 BW packet002: https://docs.google.com/document/d/1U041Z7VtXMnmliKkLbPhYNHg6AN4KVZlMyn2SLPeyWo/edit
+- MT theory-building v1.1: (private Drive source; original locator retained in BW)
+- LT3 draft018: (private Drive source; original locator retained in BW)
+- LT4 packet003: (private Drive source; original locator retained in BW)
+- KN10 BW packet002: (private Drive source; original locator retained in BW)
 - LT4 Fourier/tensor-density ROT03: https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/LT4/IW_LT4_ROT03_TENSOR_DENSITY_WEIGHT_CLASSIFICATION_AND_DE_RHAM_EXCEPTION_001_20261012.md
-- INT7 H8R map test: https://docs.google.com/document/d/1i6FnB7SAfPigmAr9zfGrXiSv6Ij2ctXFgZGKqQ8HJMA/edit
-- Mech Front B generator: https://docs.google.com/document/d/1DVxm-RWjZ7nyjZHCR_32KHONQKSX6Qdc5YfiycAz8JI/edit
-- XH-S3 high-energy donor harvest025: https://docs.google.com/document/d/1I6O0begeldpHs6DLNBydcwC5nhR3i_lWooZpmmjp-OA/edit
-- Mech NLGM autonomy: https://docs.google.com/document/d/10snG8Lo7-qxqv7uMLleK-_7RNE2T3VFjpQOrpNGaixE/edit
+- INT7 H8R map test: (private Drive source; original locator retained in BW)
+- Mech Front B generator: (private Drive source; original locator retained in BW)
+- XH-S3 high-energy donor harvest025: (private Drive source; original locator retained in BW)
+- Mech NLGM autonomy: (private Drive source; original locator retained in BW)
 
 END: MT13 synthesis; report documents state rather than conferring status.
