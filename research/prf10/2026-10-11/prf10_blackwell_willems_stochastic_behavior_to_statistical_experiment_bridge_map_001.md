@@ -7,7 +7,7 @@ bw_authority_state: NO_AUTHORITY_UPGRADE
 archive_mode: PUBLIC_ARTIFACT
 sync_state: SYNCED
 source_surface: GOOGLE_DRIVE
-source_revision: AHj4eMQLbEcjb6p-cFWNsXz0epl-ivKOT3a6z5ejlpjw6P-W3bCsJzJ5ujnoqLL_T_8VZ2aw5EMLk3fFTyJDyoZ0W4RlJfzg2nCQOb3vxMU
+source_revision: PRIVATE_SOURCE_REVISION_RECORDED_IN_BW
 mirror_note: PUBLIC_SAFE_SANITIZED_MIRROR_PRIVATE_PROVIDER_LOCATORS_REDACTED
 ---
 
