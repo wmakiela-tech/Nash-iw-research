@@ -4,6 +4,41 @@
 **Status:** CURRENT / forward-only custody policy  
 **Scope:** GitHub ↔ BW ↔ Google Drive / frozen stores.
 
+## Moderator routing clarification — public science first (2026-10-12)
+
+**Controlling operational default, directly clarified by the Moderator:** scientific results that have been checked for public release belong as **full source-bearing research artifacts in public GitHub**, with BW ingestion and cross-surface custody pointing to the exact Git commit. Google Drive is the **private project document and restricted source store**, not the default final home for publishable scientific results. BW remains the private currentness/qualification/provenance ledger and does not become a duplicate public science-body repository.
+
+This modifies **default placement and write completion criteria**, not scientific acceptance or permission for uncontrolled exposure. A scientific artifact can be a candidate, conditional theorem, falsifier, counterexample, negative result, prior-art subtraction or open-problem map; `NO_CANON` / `NO_EXEC_SIGN` is retained. Publication on GitHub does not imply novelty, external peer review, authority or correctness.
+
+### Forward routing by source exposure
+
+| Material | Primary durable body | Controlling link/status |
+| --- | --- | --- |
+| Explicitly classified public-safe scientific return and its public-safe code/data/test inputs | Full text under `research/<lineage>/<YYYY-MM-DD>/` and reproducibility folders on GitHub | BW `REGISTRY` event + private `CROSS_SURFACE_CUSTODY` GitHub path/commit/mode |
+| Private/restricted research, unreleasable manuscript, private review, succession/cell state, private coordination and provider locators | Restricted Drive/frozen authorized store | BW private locator and restriction reason; no automatic public mirror |
+| Mixed public scientific result + restricted provenance/appendices | Split: standalone public-safe scientific body to GitHub; restricted originals and appendices to private Drive | One stable logical artifact/relation with source identity and exposure/derived-from distinctions in BW |
+| Slack thread/response | Transport only, except explicit documented source-only hold | Immutable original source identity in BW; legal durable body still required |
+
+**Do not use "the document is on a private Drive" as proof its scientific *content* is permanently private.** Content exposure classification and actual release eligibility govern routing, not the storage container. Conversely, identifying a science topic does not automatically authorize publishing restricted raw documents. Validate source licenses, private locations, personal data, prohibited sharing and source completeness before publication.
+
+### Publication-complete handshake for new scientific work
+
+1. Preserve the complete load-bearing science body: object/theorem/counterexample, exact hypotheses, domain, method/source, boundary/caveats, negative knowledge and unresolved tests; don't replace it with a short pointer or promotional abstract.
+2. For **PUBLIC** content, write to canonical GitHub `research/`, retaining stable artifact/return ID, `exposure: PUBLIC`, original claim ceiling and a BW event if known. Record the exact verified Git commit. Code and data required to reproduce the claim should be published if safe; otherwise state exactly which dependencies remain restricted/missing.
+3. BW ingests the **same** source identity through normal owner/KN workflow and records qualification/lifecycle (not as an assistant-invented substitute), with a private cross-surface row binding Git path, immutable commit, publication mode and any private original provenance.
+4. Read back GitHub science body + BW source row + custody record. Only then mark `PUBLIC_ARTIFACT / SYNCED` for a completed public scientific body. If GitHub text was saved but BW not yet ingested: `GITHUB_PENDING_BW_INGEST`; if BW exists but GitHub publication is legally pending: `BW_PENDING_GITHUB_PUBLICATION`; if truly restricted: `PRIVATE_ONLY` or allowed `POINTER_ONLY` with explicit restriction.
+5. **A `POINTER_ONLY` file is not a public scientific-body delivery.** For a public-safe science result it is a *temporary migration/publication gap*, not completed publication. A permanent pointer is justified only by a verified restriction, an explicitly non-scientific metadata-only record, or a genuinely missing source body recorded as such.
+6. On later source revision or public-science promotion from a private source, update the **same source identity** and custody mapping without generating a second BW scientific-ingestion event. Keep original private provenance; mark the old pointer as superseded rather than leaving two canonical bodies.
+7. Do not force all project messages into GitHub or mandate byte-identical GitHub/Drive mirroring. Only **material, legally publishable scientific results** require the public source body. No bulk historical migration without a bounded eligibility/content review.
+
+```text
+PUBLIC_SCIENCE_BODY != POINTER_ONLY
+PUBLICATION_COMPLETE = PUBLIC_BODY_READBACK + BW_INGESTION + CROSS_SURFACE_READBACK
+PUBLICATION != SCIENTIFIC_ACCEPTANCE
+PRIVATE_SOURCE_CARRIER != PRIVATE_SCIENCE_CONTENT_BY_DEFINITION
+DRIVE_PRIVATE != GITHUB_UNSAFE_FALLBACK
+```
+
 ## Core invariant
 
 GitHub and BW must be mutually traceable without becoming competing truth stores.
