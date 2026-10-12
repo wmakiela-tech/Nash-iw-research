@@ -1,4 +1,4 @@
 # PRF11 rotation 005 — Global theory recheck
 Status: theoretical return; NO_CANON / NO_EXEC_SIGN / NO_NOVELTY.
-Verified Google Doc (authoritative copy): https://docs.google.com/document/d/1zWfV0E0nrlRcXOlTEgx0VlWRRKFsrf6JoGzevaJxf9E/edit
+Verified authoritative Google Doc: PRF11-GLOBAL-THEORY-RECHECK-001-BEHAVIOR-LAW-DECISION-TYPING-20261012 (private source custody; not a public source locator).
 Three distinct objects: set-valued admissible behaviors, parameter-indexed statistical laws, target/decision-relative identification. Equal supports do not imply equal laws (Bernoulli 0.2 versus 0.8). If outputs already are complete laws, this example does not prove an error in LT Draft018. Separately feasible contextual fits do not necessarily have a shared legal realization. Blackwell garbling and stochastic-process-as-experiment are mature prior art. Project-specific residue: legal common carrier, nuisance constraints, observation law and target/loss.
