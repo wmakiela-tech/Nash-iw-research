@@ -1,0 +1,15 @@
+# MT13 Rotation 19 / temporary Living Theory currentness — 2026-10-12
+
+STATUS: NONCANON / NO EXEC / NO NOVELTY / NO PBH BBN numerical endpoint.
+
+CURRENTNESS: LT3 DRAFT018 is active working document but is stale in H8R status. On 2026-10-12 NC accepted Rec9 referee correction, withdrew its primary H8R-D verdict and accepted H8R-C PRIMARY (SOURCE_INTERFACE_UNRESOLVED). This is a post-DRAFT018 status overlay, not an independent novelty or EXEC claim. See #iw-dispatch messages from NC and Rec9 on 2026-10-12. No automatic revision to REV020 or promotion to REV021.
+
+FRONT B: XH-S3 harvest 022 finds public Wu-Xu source table starts at M_e about 1e9 g and the executor extrapolates log-log below it, sometimes by 8-9 mass decades. MECH-S6 finds current executor q(M)=q_e (M/M_e)^p with p near -1.2 and dt/dM proportional to M^2 in the high-temperature constant-N_BH regime. Hence unweighted subedge yield proportional to integral_0^1 x^(p+2)dx=1/(p+3) (p>-3). Pointwise divergence of q at x->0 does not imply terminal dominance in unweighted count. No physical validation of extrapolated source or target-weighted BBN error follows.
+
+ROT19 EXACT POSITIVE-WEIGHT STRESS CERTIFICATE (mature integral inequalities): Let x=M/M_e in [x_min,1], baseline q0(x)=q_e x^p, stress q_delta(x)=q0(x)x^delta, and W(x)>=0 any fixed measurable target weight with positive finite baseline integral. Then C_W(delta)/C_W(0)=E_mu[x^delta] where dmu proportional to W(x)x^(p+2)dx on [x_min,1]. Therefore min(1,x_min^delta) <= C_W(delta)/C_W(0) <= max(1,x_min^delta). A sharper bound using effective support x>=x_star replaces x_min with x_star. If W changes sign, the ratio need not obey these bounds, especially when cancellation makes C_W(0) small. If W depends on delta or the source alters the background/trajectory, this fixed-kernel comparison is not valid. This inequality is a stress-family envelope, NOT a physical uncertainty interval.
+
+For W=1, x_min->0, delta and p+3 positive, C(delta)/C(0)=(p+3)/(p+delta+3), as in MECH-S6. For W(x)=x^k with p+k+3>0, ratio=(p+k+3)/(p+k+delta+3); positive k suppresses deep terminal contribution, negative k enhances it. Thus unweighted count stress cannot be substituted for a BBN response without source-matched target weight. Negative or signed sensitivities require absolute error budgets rather than relative ratios.
+
+Sources: XH022 https://docs.google.com/document/d/1i8FlFM74c2vgqDdyA_8mkR2YTnh9HS5ISn2vSA50nEo/edit ; MECH terminal https://docs.google.com/document/d/116K6HLD7JGeD6_g65vraGSKC70YMdLRx0apiT5Ru6FU/edit ; MECH edge stress https://docs.google.com/document/d/13_245qwn4-m-fjScqWw6Xy0Nyk_KG1kBGvq0bejQylM/edit ; LT DRAFT018 https://docs.google.com/document/d/1KorpE8IGJlPlDTkBcTs1WvMeepgff7Ga3qcpZP-wKuY/edit .
+
+PLACEMENT: P2 REV020_PLUS_COMPILER maintained, P3 HOST_ATLAS_ONLY strong fallback, TPE HOLD. Front B source extrapolation E0 is executor-defined, physical source validation E2 open; target-weighted DE-vs-full validation open. H8R-C source-interface-unresolved is controlling correction, not H8R-D.
