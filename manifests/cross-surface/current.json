@@ -8,7 +8,11 @@
     "REGISTRY_1225_1249_CURRENT_REPRESENTED": "25/25",
     "REGISTRY_1250_1274_CURRENT_REPRESENTED": "23/23",
     "REGISTRY_1275_1299": "NEXT_BACKFILL_SEGMENT_NOT_CLAIMED",
-    "REGISTRY_1300_1374_CURRENT_REPRESENTED": "75/75"
+    "REGISTRY_1300_1378_CURRENT_REPRESENTED": "79/79"
+  },
+  "frontier": {
+    "latest_bw_ingestion": "ING-20261012-0051",
+    "latest_bw_registry_row": 1378
   },
   "guards": [
     "GITHUB_COMMIT != BW_EVENT",
@@ -17,7 +21,7 @@
     "PRIVATE_PROVIDER_LOCATORS_FORBIDDEN",
     "ONE_LOGICAL_ARTIFACT -> ONE_CANONICAL_GITHUB_BODY"
   ],
-  "record_count": 126,
+  "record_count": 128,
   "pending_bw_ingest_count": 0,
   "records": [
     {
@@ -1783,6 +1787,34 @@
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
       "notes": "foundation-first role recovery pass2; authority=NO_AUTHORITY_UPGRADE"
+    },
+    {
+      "record_id": "XSC-0128",
+      "artifact_id": "EAI-S3-VERIFICATION-BANDWIDTH-EPISTEMIC-CONCENTRATION-ANTI-SELF-SEALING-001",
+      "bw_ingestion_event_id": "ING-20261012-0050",
+      "bw_registry_row": "1377",
+      "bw_qualification_state": "VERIFICATION_BANDWIDTH_AND_PRODUCER_CONCENTRATION_ARCHITECTURE",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "research/eai-s3/2026-10-12/eai_s3_verification_bandwidth_epistemic_concentration_anti_self_sealing_001.md",
+      "github_commit": "dcf18c669d8a39326ca301ec6fb40eeb614a3f2f",
+      "github_mode": "PUBLIC_ARTIFACT",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "notes": "latest active-tail sync; authority=ROLE_NATIVE_METHOD_SYNTHESIS_NO_AUTHORITY_UPGRADE"
+    },
+    {
+      "record_id": "XSC-0129",
+      "artifact_id": "IDA-S2-AI-PARTICIPANT-PROTECTION-WITHOUT-SENTIENCE-PREJUDGMENT-001",
+      "bw_ingestion_event_id": "ING-20261012-0051",
+      "bw_registry_row": "1378",
+      "bw_qualification_state": "ROLE_PROTECTION_AND_MORAL_STATUS_FIREWALL",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "research/ida-s2/2026-10-12/ida_s2_ai_participant_protection_without_sentience_prejudgment_001.md",
+      "github_commit": "f71b6829c2c05549a80e351362009941a5d5d094",
+      "github_mode": "PUBLIC_ARTIFACT",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "notes": "latest active-tail sync; authority=ROLE_NATIVE_PHILOSOPHICAL_NO_AUTHORITY_UPGRADE"
     }
   ]
 }
