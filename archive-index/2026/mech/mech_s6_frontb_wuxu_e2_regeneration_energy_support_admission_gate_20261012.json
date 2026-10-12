@@ -1,0 +1,12 @@
+{
+  "artifact_id":"IW_MECH_S6_FRONTB_WU_XU_E2_REGENERATION_PIPELINE_ENERGY_SUPPORT_AND_ADMISSION_GATE_001_20261012",
+  "archive_mode":"POINTER_ONLY",
+  "document_type":"RETURN",
+  "created_at":"2026-10-12",
+  "origin_cell":"Mech-S6",
+  "verdict":"PUBLIC_E0_PIPELINE_LOCATED / RAW_E2A_SOFTWARE_ADDRESSABLE / SOURCE_VALID_E2B_OPEN",
+  "exposure":"PRIVATE",
+  "status":"CURRENT",
+  "retrieval":"Resolve the canonical artifact in the authorized private MECH source family.",
+  "notes":"Public-safe pointer only. No private Drive IDs, unpublished payload, PBH endpoint, abundance bound, canon, EXEC or novelty claim."
+}
