@@ -2,24 +2,25 @@
   "schema": "nash-iw-cross-surface-custody-v1",
   "as_of": "2026-10-12",
   "source": "BW:CROSS_SURFACE_CUSTODY",
-  "scope": "continuous reconciled BW range plus latest active frontier",
+  "scope": "Continuous BW 1225–1378 plus bounded live 1379–1390, with public-only exceptions disclosed",
   "precedence": "BW REGISTRY + live owner/currentness > this projection",
   "coverage": {
     "REGISTRY_1225_1378_CURRENT_REPRESENTED": "151/151",
-    "REGISTRY_GT_1378_CURRENT_REPRESENTED": "NONE_OBSERVED_AT_READBACK"
+    "REGISTRY_1379_1390_CURRENT_REPRESENTED": "10/12; 2 private custody sources not publicly mirrored"
   },
   "frontier": {
-    "latest_bw_ingestion": "ING-20261012-0051",
-    "latest_bw_registry_row": 1378
+    "latest_bw_ingestion": "ING-20261012-0063",
+    "latest_bw_registry_row": 1390
   },
   "guards": [
     "GITHUB_COMMIT != BW_EVENT",
     "SYNCED != SCIENTIFIC_VALIDATION",
     "PUBLIC_MANIFEST != CURRENTNESS_AUTHORITY",
     "PRIVATE_PROVIDER_LOCATORS_FORBIDDEN",
-    "ONE_LOGICAL_ARTIFACT -> ONE_CANONICAL_GITHUB_BODY"
+    "ONE_LOGICAL_ARTIFACT -> ONE_CANONICAL_GITHUB_BODY",
+    "PUBLICATION_BLOCKED != SOURCE_LOSS"
   ],
-  "record_count": 152,
+  "record_count": 162,
   "pending_bw_ingest_count": 0,
   "records": [
     {
@@ -2149,6 +2150,158 @@
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
       "notes": "external evidence harvest"
+    },
+    {
+      "record_id": "XSC-0154",
+      "artifact_id": "MECH-S6-FRONTB-WU-XU-LOG-POPULATION-FLOOR-SOURCE-INJECTION-RESIDUAL-GATE-001",
+      "bw_ingestion_event_id": "ING-20261012-0052",
+      "bw_registry_row": "1379",
+      "bw_qualification_state": "EXECUTOR_FLOOR_SOURCE_INJECTION_EXACT_RESIDUAL",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/mech-s6/mech_s6_frontb_wu_xu_log_population_floor_source_injection_residual_gate_001.md",
+      "github_commit": "a15ca3d728f69103cca37aa9cd54c379d63b8f45",
+      "github_mode": "POINTER_ONLY",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0155",
+      "artifact_id": "M12-FRONTB-FLOOR-RESIDUAL-POPULATION-DIRECTIONAL-RATE-GATE-001",
+      "bw_ingestion_event_id": "ING-20261012-0053",
+      "bw_registry_row": "1380",
+      "bw_qualification_state": "FRONTB_FLOOR_POPULATION_DIRECTIONAL_ERROR_EXACT",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "research/m12/20261011_frontb_floor_residual_population_directional_rate_gate.md",
+      "github_commit": "6af1002f2b4d2bb505adca552739a1713ec5e192",
+      "github_mode": "PUBLIC_ARTIFACT",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "GITHUB_FILE_VERIFIED",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0156",
+      "artifact_id": "M12-FRONTB-FLOOR-RESIDUAL-ADDITIVE-BUDGET-KERNEL-001",
+      "bw_ingestion_event_id": "ING-20261012-0054",
+      "bw_registry_row": "1381",
+      "bw_qualification_state": "FRONTB_FLOOR_TARGET_WEIGHTED_ADDITIVE_BUDGET",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "research/m12/20261011_frontb_floor_residual_additive_budget_kernel.md",
+      "github_commit": "6af1002f2b4d2bb505adca552739a1713ec5e192",
+      "github_mode": "PUBLIC_ARTIFACT",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "GITHUB_FILE_VERIFIED",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0157",
+      "artifact_id": "M12-FRONTB-COUPLED-PATH-FLOOR-RESIDUAL-SMALL-GAIN-GATE-001",
+      "bw_ingestion_event_id": "ING-20261012-0055",
+      "bw_registry_row": "1382",
+      "bw_qualification_state": "FRONTB_COUPLED_SMALL_GAIN_CONDITIONAL_GATE",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "research/m12/20261011_frontb_coupled_path_floor_residual_small_gain_gate.md",
+      "github_commit": "6af1002f2b4d2bb505adca552739a1713ec5e192",
+      "github_mode": "PUBLIC_ARTIFACT",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "GITHUB_FILE_VERIFIED",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0158",
+      "artifact_id": "REC9-M12-FRONTB-COUPLED-PATH-SMALL-GAIN-REFEREE-001",
+      "bw_ingestion_event_id": "ING-20261012-0056",
+      "bw_registry_row": "1383",
+      "bw_qualification_state": "REFEREE_COUPLED_SMALL_GAIN_BOOTSTRAP_NORM_REPAIR",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/rec9/rec9_m12_frontb_coupled_path_small_gain_referee_20261011.md",
+      "github_commit": "13f716cf0623201b80f129af16e78108946265d6",
+      "github_mode": "PUBLIC_ARTIFACT",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "GITHUB_FILE_VERIFIED",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0159",
+      "artifact_id": "INT7-THREAD090-H8R-COMB-PRESERVATION-WITNESS-AND-RETYPE-BOUNDARY-001",
+      "bw_ingestion_event_id": "ING-20261012-0057",
+      "bw_registry_row": "1384",
+      "bw_qualification_state": "H8R_SAME_TYPE_COMB_COUNTERWITNESS_AND_RETYPE_LIMIT",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/int7/int7_thread090_h8r_comb_preservation_witness_and_retype_boundary_001.md",
+      "github_commit": "5b027b12b5ceb5e068230ab47df292fc718d2106",
+      "github_mode": "POINTER_ONLY",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0160",
+      "artifact_id": "SW-FRONTB-WUXU-COMPUTABLE-COUPLED-RESIDUAL-TUBE-001",
+      "bw_ingestion_event_id": "ING-20261012-0060",
+      "bw_registry_row": "1387",
+      "bw_qualification_state": "WU_XU_COMPUTABLE_COUPLED_RESIDUAL_TUBE_CONDITIONAL",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/sw/sw_frontb_wuxu_computable_coupled_residual_tube_001.md",
+      "github_commit": "f7c6f9526c09166302c4256c08feda32aacc164e",
+      "github_mode": "POINTER_ONLY",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0161",
+      "artifact_id": "XH-S3-FRONTB-WU-XU-LOG-FLOOR-INITIALIZATION-MATERIALITY-HARVEST-021",
+      "bw_ingestion_event_id": "ING-20261012-0061",
+      "bw_registry_row": "1388",
+      "bw_qualification_state": "SOURCE_INITIAL_SEED_FLOOR_MATERIALITY_NARROWED",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/xh-s3/xh_s3_frontb_wu_xu_log_floor_initialization_materiality_harvest_021.md",
+      "github_commit": "63c958ecbabf231525574d9899d482cf084c26fa",
+      "github_mode": "POINTER_ONLY",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0162",
+      "artifact_id": "MECH-S6-FRONTB-WU-XU-TERMINAL-SOURCE-EXTRAPOLATION-EVAPORATION-WEIGHTED-YIELD-AND-DISCREPANCY-GATE-001",
+      "bw_ingestion_event_id": "ING-20261012-0062",
+      "bw_registry_row": "1389",
+      "bw_qualification_state": "SOURCE_TERMINAL_E0_WEIGHTED_INTEGRABILITY_GATE",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/mech-s6/mech_s6_frontb_wu_xu_terminal_source_extrapolation_weighted_yield_discrepancy_gate_001.md",
+      "github_commit": "1f6d551f838d3bec719d7ea192296962c8b58525",
+      "github_mode": "POINTER_ONLY",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
+    },
+    {
+      "record_id": "XSC-0163",
+      "artifact_id": "SW-FRONTB-WUXU-ENERGY-SUPPORT-AND-SLOPE-CONFOUNDING-001",
+      "bw_ingestion_event_id": "ING-20261012-0063",
+      "bw_registry_row": "1390",
+      "bw_qualification_state": "SOURCE_ENERGY_SUPPORT_SLOPE_CONFOUNDING_NARROW",
+      "bw_lifecycle_state": "CURRENT_REPRESENTED",
+      "github_path": "archive-index/2026/sw/sw_frontb_wuxu_energy_support_slope_confounding_001.md",
+      "github_commit": "1b1847a3b02a8482fee55dcb6876380108919b4",
+      "github_mode": "POINTER_ONLY",
+      "sync_state": "SYNCED",
+      "checked_at": "2026-10-12",
+      "source_revision": "SOURCE_VERIFIED_GITHUB_POINTER",
+      "notes": "Private source locator retained exclusively in BW; provenance-only correspondence; no scientific upgrade."
     }
-  ]
+  ],
+  "pending_cross_surface_public_mapping_count": 2,
+  "publication_exceptions_count": 2
 }
