@@ -76,6 +76,29 @@ SUPERSEDED
 ### Connector failure
 If Drive write fails and the content is public-safe, GitHub may become the temporary durable primary. Mark `GITHUB_PENDING_BW_INGEST` until BW is updated. If content is private, do not bypass exposure controls; use `CUSTODY_PENDING`/frozen private fallback.
 
+## Slack-native scientific source recovery (risk-triggered)
+
+Slack messages and **thread replies** can themselves contain the only complete scientific return when Drive/Docs or GitHub writes fail. Treat this as a source-loss risk, not as evidence of scientific failure. A delivered Slack message is a recoverable original carrier, but is not proof that its full body exists on another surface.
+
+When there is a **concrete** loss signal (declared write failure, empty/placeholder Drive body, unavailable linked artifact, source-only thread reply, or material currentness discrepancy):
+
+1. Resolve the original message's stable return/artifact ID, Slack message timestamp, channel/thread context, corrections and supersession. A plain channel-history read can omit thread replies; use bounded thread-aware retrieval for this source audit.
+2. Search BW and existing Drive/GitHub custody **before** copying. Verify body presence and completeness, not just document existence, a pointer, or a `SYNCED` label.
+3. If the original body lacks independent durable custody, copy its complete substantive text into a legally permitted **private** source artifact with source message ID/time, original locator, capture date, author/lineage if verified, and the unchanged original claim ceilings. Verify the new body by semantic readback against Slack. Record transport-normalization differences where relevant.
+4. Link the recovered body in **private** BW custody, preserving the original Slack source as provenance. BW scientific qualification/owner currentness are unchanged. Public GitHub publication is optional and restricted to independently classified public-safe content; a sanitized pointer is not the body.
+5. If writes are denied, retain an explicit unresolved risk and the original Slack reference. Do not call an empty object saved, and do not route around provider protection. Distinguish storage, delivery, receipt, ingestion and scientific acceptance.
+
+This is an **event-triggered rescue**, not a universal Slack crawl, per-cell thread-reading ritual, mandatory duplication of every message, or synchronous GitHub mirror gate. Historical backfill is value-driven. A single complete, independently recoverable private body plus stable source/custody identity can be sufficient.
+
+```text
+CHANNEL_HISTORY != THREAD_SEARCH
+DOCUMENT_EXISTS != NONEMPTY_SOURCE_BODY
+SLACK_DELIVERY != EXTERNAL_BODY_PERSISTENCE
+RECOVERABILITY_REQUIRED != EVERY_BODY_EVERYWHERE
+TRACEABILITY_REQUIRED != SYNCHRONOUS_MIRRORING_REQUIRED
+SOURCE_RECOVERY != SCIENTIFIC_PROMOTION
+```
+
 ## Reconciliation rule
 
 At bounded currentness/repository maintenance time compare by stable artifact identity, not filename similarity alone.
