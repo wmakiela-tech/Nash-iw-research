@@ -1,6 +1,6 @@
 # NASH/IW — Current Research Resolver
 
-**As of:** 2026-09-14
+**As of:** 2026-10-12
 
 This public repository is an infrastructure, archive, reproducibility and external-bridge surface. It is **not** the sole or primary store for unpublished NASH/IW scientific currentness.
 
@@ -26,7 +26,7 @@ Before starting expensive or claim-heavy work, resolve current state from the pr
 6. **Current cell-work, artifact and reproducibility profile**  
    [`WORK_AND_REPRODUCIBILITY_PROTOCOL.md`](WORK_AND_REPRODUCIBILITY_PROTOCOL.md)
 
-Then read [`SURFACE_ARCHITECTURE.md`](SURFACE_ARCHITECTURE.md) before choosing where to put a new artifact, task or dialogue.
+Then read [`SURFACE_ARCHITECTURE.md`](SURFACE_ARCHITECTURE.md), [`REPOSITORY_STRUCTURE.md`](REPOSITORY_STRUCTURE.md), and [`STORAGE_AND_SYNC_POLICY.md`](STORAGE_AND_SYNC_POLICY.md) before choosing where to put a new artifact, task or dialogue.
 
 ## Current public-safe research families
 
@@ -47,11 +47,24 @@ These labels are navigation only. **Do not infer the current result, closure sta
 Use GitHub for several distinct functions:
 
 - `docs/` — public-safe operator/currentness guidance;
-- `archive-index/` — public archive/index, pointers and integrity witnesses;
+- `research/<lineage>/<YYYY-MM-DD>/` — canonical forward location for new full public-safe research bodies;
+- `archive-index/` — pointer/hash/legacy archive entries and compact historical records;
 - `runtime/`, `src/`, `tests/`, `schemas/`, `manifests/` — reproducible executable/infrastructure surfaces;
 - Issues/PRs — durable public-safe engineering/research gates and asynchronous external-model work, including tasks intended for Grok when private IW access is neither available nor needed.
 
 For exact role boundaries see [`SURFACE_ARCHITECTURE.md`](SURFACE_ARCHITECTURE.md).
+
+## Cross-surface source check
+
+When a GitHub artifact is used as a knowledge source, resolve its BW ingestion/status when available. When a BW row points to a public-safe artifact, prefer an immutable GitHub commit/path as the durable public body once mirrored.
+
+```text
+GITHUB_FILE_WITHOUT_BW_STATUS = ARCHIVE/EVIDENCE_ONLY
+BW_ROW_WITHOUT_PUBLIC_MIRROR = PRIVATE_OR_PUBLICATION_PENDING
+SYNCED != SCIENTIFICALLY_ACCEPTED
+```
+
+Public cross-surface manifests are projections only; BW remains controlling for lifecycle/currentness.
 
 ## What NASH/IW needs most from research
 
