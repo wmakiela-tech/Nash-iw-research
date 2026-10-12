@@ -1,7 +1,7 @@
 # MT13 / temporary Living Theory — Rotation 17
 2026-10-11. Noncanon, no EXEC, no PBH/BBN bound, no novelty.
 
-CURRENTNESS: LT3 DRAFT018 remains active. Mech-S6 floor semantics report: https://docs.google.com/document/d/1as07oJ9r4z0i-TmYPPFAAjEq_PhiUHJ2i7bEWHhpYRc/edit ; XH-S3 Wu-Xu monotonicity: https://docs.google.com/document/d/1ByIrrMGaZvTiappjXMMUcp4NKTplQaCAsdsNh-qKM84/edit .
+CURRENTNESS: LT3 DRAFT018 remains active. Mech-S6 floor semantics report: (private Drive source; original locator retained in BW) ; XH-S3 Wu-Xu monotonicity: (private Drive source; original locator retained in BW) .
 
 THREE DISTINCT OBJECTS:
 (1) intended source-sink physical population n_phys'=S-D n_phys;
