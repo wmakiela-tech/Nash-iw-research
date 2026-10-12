@@ -22,4 +22,4 @@ Exact solution: n(t)=n(a)exp(-integral_a^t R)+integral_a^t S(s)exp(-integral_s^t
 
 No physical PBH/BBN inference: in state-dependent multi-species channels, q is not prescribed; the effective BBN target may be nonlinear and its response weight is not yet validated. This is mature linear ODE and integration-by-parts mathematics, not new theory.
 
-Source: LT3 DRAFT017 https://docs.google.com/document/d/13j--r76yvVKcwvR2_TvQHGbRLiE2zjuosZ5HJBgqXOc/edit
+Source: LT3 DRAFT017 (private Drive source; original locator retained in BW)
