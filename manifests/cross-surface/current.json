@@ -423,11 +423,11 @@
       "bw_qualification_state": "GITHUB_ROLE_SOURCE_EVIDENCE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/geeky-s10/geeky_s10_lt4_j3_middle_defect_conjugacy_nzero_kzero_20261012.md",
-      "github_commit": "a5779ad2ad7fb416eb4cb7e3ca715d6ba055ac17",
+      "github_commit": "dfb74bfff2c960b95006057fee6c74db975d8de7",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
-      "checked_at": "2026-10-12T18:04:00+02:00",
-      "notes": "existing mapping"
+      "checked_at": "2026-10-12",
+      "notes": "existing mapping | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0030",
@@ -451,11 +451,11 @@
       "bw_qualification_state": "OWNER_PROGRAMME_STATUS_AND_LT4_HANDBACK",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/20261012_research_programme_state_and_architecture_report.md",
-      "github_commit": "7463c1b376eb997b4132812f2885031bc8a94ab2",
+      "github_commit": "9dec213ab2fc0817d778475a9db4c8d28a09f7ee",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
-      "checked_at": "2026-10-12T18:04:00+02:00",
-      "notes": "existing mapping"
+      "checked_at": "2026-10-12",
+      "notes": "existing mapping | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0032",
@@ -493,11 +493,11 @@
       "bw_qualification_state": "EXACT_ABSTRACT_3X3_SYMMETRIC_MIDDLE_DEFECT_COUNTEREXAMPLE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/m13/20261012_rot05_nonzero_symmetric_middle_defect.md",
-      "github_commit": "fec67444225ea0f8746669f1ff6a4dc8305f9662",
+      "github_commit": "a12f36a0c619eaba6603b6fc3405e6bba77d4315",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
-      "notes": "ING-20261012-0049 REGISTRY row 1376; abstract J3 witness, no physical claim"
+      "notes": "ING-20261012-0049 REGISTRY row 1376; abstract J3 witness, no physical claim | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0035",
@@ -535,11 +535,11 @@
       "bw_qualification_state": "MT13_ROTATION14_SET_MEMBERSHIP_REPAIR",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/IW_MT13_ROTATION_14_DRAFT016_SET_MEMBERSHIP_IDENTIFICATION_20261011.md",
-      "github_commit": "13514b515bcac47a62f9491bfdb9d51f39cbceac",
+      "github_commit": "9a946705082df256f308287e0b16011794604160",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC_PROGRAM_METHODOLOGY"
+      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC_PROGRAM_METHODOLOGY | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0039",
@@ -675,11 +675,11 @@
       "bw_qualification_state": "OWNER_SCIENCE_RESULT",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/rotation16_frontb_weighted_error_bound_20261011.md",
-      "github_commit": "114806b7229e357c0c888a143b51d8849218d484",
+      "github_commit": "7a037d9be627a7ebe115eac44cbbc82b72e59da4",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC"
+      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0049",
@@ -745,11 +745,11 @@
       "bw_qualification_state": "OWNER_SCIENCE_FLOOR_DISCREPANCY",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/rotation17_frontb_executor_floor_model_discrepancy_20261011.md",
-      "github_commit": "514dcee661f0da741e2034632e603fa88ea132a5",
+      "github_commit": "7ed13e948cd119d66e74353b9e5304b1218cd7a6",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC"
+      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0054",
@@ -787,11 +787,11 @@
       "bw_qualification_state": "OWNER_SCIENCE_SUBFLOOR_COUNTEREXAMPLE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/rotation18_subfloor_asymptotic_mismatch_20261011.md",
-      "github_commit": "5f1117b6d8e60cff93b5c334bf86d8b80f14e866",
+      "github_commit": "2fde8934ba42b367a9b7bbc5c452316611e7f871",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC"
+      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0057",
@@ -913,11 +913,11 @@
       "bw_qualification_state": "OWNER_CURRENTNESS_SOURCE_STRESS",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/mt13/rotation19_lt_currentness_h8r_frontb_source_weight_20261012.md",
-      "github_commit": "93d6f001ab2f4e858c0e4ba0a037b0addaec73a6",
+      "github_commit": "ea8dc7f21f24d312e88c635bd4dc01a0e1b33c54",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC_ONLY"
+      "notes": "active-tail reconciliation; authority=OWNER_SCIENTIFIC_ONLY | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0066",
@@ -955,11 +955,11 @@
       "bw_qualification_state": "DIRECT_SUCCESSOR_ACTIVATION",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/m13/2026-10-12/m13_rot01_successor_activation_and_completion_reopening_001.md",
-      "github_commit": "542128b4d0b4b3b315b3f72fbea9e6a900eb4492",
+      "github_commit": "4ec4e718c7940a7383f786467576f4f1e3e83a22",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=EXECUTOR_CURRENTNESS_ONLY"
+      "notes": "active-tail reconciliation; authority=EXECUTOR_CURRENTNESS_ONLY | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0069",
@@ -983,11 +983,11 @@
       "bw_qualification_state": "MATHEMATICAL_COUNTERCONTROL",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/m13/20261012_rotation02_frontb_finite_point_vs_interval_source_certificate.md",
-      "github_commit": "e419d131fcd9d2dbb1a31689ed6ba0387fc543b1",
+      "github_commit": "4d32487e7c867d25a88532a1042741bb171127aa",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE"
+      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0071",
@@ -1011,11 +1011,11 @@
       "bw_qualification_state": "SIGNED_KERNEL_CONDITIONAL_THEOREM",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/geeky-s10/geeky_s10_draft018_frontb_signed_target_kernel_source_stress_conditioning_20261012.md",
-      "github_commit": "c61ce99173ba2d10af9480daebf83b83b2ca4b1f",
+      "github_commit": "156c753b8265aabc9ce75350ac2a7d304e584f07",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE"
+      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0073",
@@ -1039,11 +1039,11 @@
       "bw_qualification_state": "GITHUB_RESEARCH_EVIDENCE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/LT4/IW_LT4_ROT01_CURRENTNESS_AND_J3_ENTIRE_FORM_FACTOR_NULL_SECTOR_COUNTEREXAMPLE_001_20261012.md",
-      "github_commit": "d8ed63ed60014a828810042e84cb1647cc9c9323",
+      "github_commit": "bdfaef2480b6357b032b4b43e54a623a523af526",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=NO_FORMAL_ACTIVATION_INFERRED"
+      "notes": "active-tail reconciliation; authority=NO_FORMAL_ACTIVATION_INFERRED | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0075",
@@ -1053,11 +1053,11 @@
       "bw_qualification_state": "EXACT_REPRESENTATION_THEOREM",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/geeky-s10/geeky_s10_lt4_j3_transport_invisible_quotient_modn_closure_20261012.md",
-      "github_commit": "8ffd6da5400f66f22af4edb3612d822ad7de96a7",
+      "github_commit": "662dd284dd023be5d7a63c1678cca596f94ace38",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE"
+      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0076",
@@ -1081,11 +1081,11 @@
       "bw_qualification_state": "CLAIM_RELATIVE_JOIN_REPAIR",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/m13/20261012_rot03_shared_component_join_level.md",
-      "github_commit": "14bc466eea1fc60b463c66559c023df8200b7adc",
+      "github_commit": "fec926b858a77d68cbc0fb0c4fbea818938e821c",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE"
+      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0078",
@@ -1095,11 +1095,11 @@
       "bw_qualification_state": "EXACT_NONABELIAN_COUNTEREXAMPLE",
       "bw_lifecycle_state": "CURRENT_REPRESENTED",
       "github_path": "research/geeky-s10/geeky_s10_lt4_j3_generator_collapse_nzero_counterexample_20261012.md",
-      "github_commit": "a02b566febba7ba4a5733a05dcf4dbdadac7139a",
+      "github_commit": "a5a1dc9667b11d51fb83d2dcf6f50d8d4d1a6f01",
       "github_mode": "PUBLIC_ARTIFACT",
       "sync_state": "SYNCED_EXISTING",
       "checked_at": "2026-10-12",
-      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE"
+      "notes": "active-tail reconciliation; authority=NO_AUTHORITY_UPGRADE | SYSS4 ROT06 2026-10-12: source Google Drive locator classified not shared; public body source coordinates redacted; source label and scientific content preserved; latest GitHub commit verified and matched private BW XSC. Historic Git commits may retain prior coordinates."
     },
     {
       "record_id": "XSC-0079",
