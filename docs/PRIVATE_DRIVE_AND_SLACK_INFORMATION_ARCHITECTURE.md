@@ -82,3 +82,60 @@ For a public-safe work result, create one complete canonical science body in Git
 At a relevant new upload, Slack-only scientific body, failed write, source mismatch, or search failure, classify only the affected source and file it correctly. Future folder audits may sample accumulated unclassified source documents, using stable IDs and restrictions; they are not a mandatory prerequisite for scientific work.
 
 **Non-collapse:** `FILE_MOVED != SCIENCE_RECLASSIFIED`; `MESSAGE_POSTED != BODY_SAVED`; `FULL_BODY_RECOVERED != ACCEPTED`; `INDEX_EXISTS != ALL_PROJECT_HISTORY_AUDITED`.
+
+
+## Second bounded structural rotation — 2026-10-13
+
+The Moderator's continuation signal authorized a larger **additional** live filing pass under the same original private Drive tree, without altering the project BW/governance archives or Slack source messages.
+
+### Depth added only where file density justified it
+
+Within `02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW/`:
+
+| New child folder | Classification |
+| --- | --- |
+| `01_FRONT_B_PBH_BBN` | PBH/BBN, Wu–Xu, Front B source and coupled-error scientific materials |
+| `02_H8R_TPE_QRF_AND_COMBS` | typed passage, QRF/comb, H8R and closely coupled LT3 formal work |
+| `03_EDU1_AI_AND_EMPIRICAL` | dark-sector EDU1 and empirical/AI-related scientific source work |
+| `04_OTHER_FORMAL_THEORY_AND_MECHANISMS` | other mathematical and mechanism returns not uniquely within a narrower front |
+| `05_REFEREE_PRIOR_ART_AND_REVIEWS` | source-native reviews, referee attacks, literature/role recovery checks |
+
+Within `03_MONOGRAPHS_AND_LIVING_BOOKS/`:
+
+- `01_LIVING_THEORY_DRAFTS` — earlier authored LT draft revisions, not currentness guarantees.
+- `03_LIVING_BOOK_AND_EDUCATION` — learner-facing and educational Living Book working copies.
+- Technical monographs, composition plans and book-source maps remain directly under `03_MONOGRAPHS_AND_LIVING_BOOKS/`; the attempted separate child folder create was **provider-blocked** and not retried. Do not mistake an absent child for lost monograph bodies.
+
+These are **filesystem discovery labels**, not science classifications, proof of public-release eligibility, owner acceptance or effective BW/currentness status. No automatic cross-lineage copying or one-folder-per-rotation rule.
+
+### Measured moves and current settled count
+
+- Original first bounded pass: **56** owner-only root files moved into the new private Drive tree with original IDs.
+- Second bounded pass: **99** additional verified moves: **77** more originally root-resident project documents plus **22** re-filings within that existing new subtree into more specific research/book categories. Do not double-count the 22 internal moves as new files.
+- **Current total: 133 distinct private documents**, all counted by a fresh readback of the designated folder hierarchy, not 155 unique files.
+- Science family `02`: **80** documents (1 held at its parent + 15 Front B + 23 H8R/TPE + 8 EDU1 + 25 other formal + 8 reviews).
+- Book family `03`: **19** (5 directly in parent + 11 LT drafts + 3 education/Living Book).
+- Succession: **14**; private reproduction packages: **8**; Slack recoveries: **9**; systems: **2**; blocked empty shell: **1**; triage: **0**.
+- Cumulative project-root cleanup: **133 distinct** private files relocated into the project subtree across both passes. The many other private files and older existing historic NASH folders have **not** been exhaustively audited.
+
+### Explicit non-retry exceptions
+
+Five individual candidate document moves encountered provider safeguards. The source IDs were not discarded, the affected files were **not** represented as successfully moved, and blocked calls were not retried under alternate parameters. Their source titles fall into: an INT7 GTime result already under the new science parent; an LT3 working draft; an MT13 system connectivity document; an MT13 Front B currentness/audit document; and an M12 LT3 synergy/identifiability result. A monographs child-folder creation was likewise provider-blocked; technical-monograph contents remain in the existing parent category. The prior INT7 Thread076 **empty** recovery shell remains in `99_BLOCKED_HOLD_AND_EXCEPTION`, not a verified independent copy.
+
+### Invariant verification
+
+Four sampled live readbacks after migration confirmed unchanged file IDs and owner-only `shared: false` state for:
+- SW original source for BW `ING-20261012-0063`, now in private Front B;
+- INT7 original source for BW `ING-20261012-0057`, now in private H8R/TPE;
+- M12 and KN succession packets, both now in private succession.
+
+The original private BW workbook itself remained in its pre-existing `BW_V0_2_OPERATING_LAYER_20260824` location with the same ID and owner-only permissions. This sample is *not* a new scientific consistency audit of every moved document; the complete move-level checks verified each moved file's ID and new parent.
+
+**Remaining work is targeted historical classification**, not expanding the folder ontology, moving unrelated personal documents, reopening paused scientific fronts, making duplicate public mirrors, or editing science status.
+
+```text
+133_DISTINCT_PRIVATE_FILES != 155_UNIQUE_FILES
+99_VERIFIED_MOVES = 77_NEW_ROOT_FILES + 22_INTERNAL_REFILINGS
+FOLDER_CLASS != SCIENTIFIC_STATUS
+PRIVATE_DRIVE_LOCATION != GITHUB_PUBLICATION_LICENSE
+```
