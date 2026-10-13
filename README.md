@@ -19,6 +19,8 @@ Active NASH/IW researchers should begin with:
 7. [`docs/NAMING_AND_INDEXING.md`](docs/NAMING_AND_INDEXING.md) — canonical IDs, filenames, metadata and supersession direction.
 8. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — canonical repository layout and legacy-path policy.
 9. [`docs/STORAGE_AND_SYNC_POLICY.md`](docs/STORAGE_AND_SYNC_POLICY.md) — BW↔GitHub↔Drive custody and synchronization contract.
+10. [`docs/PRIVATE_DRIVE_AND_SLACK_INFORMATION_ARCHITECTURE.md`](docs/PRIVATE_DRIVE_AND_SLACK_INFORMATION_ARCHITECTURE.md) — project-private Drive folder taxonomy and Slack channel/navigation contract (identifiers remain private).
+
 
 ## GitHub roles
 
