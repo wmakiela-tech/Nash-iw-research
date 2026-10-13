@@ -1,0 +1,23 @@
+{
+  "artifact_id": "IW_SW_TARGET_FACTORIZATION_AND_CONDITIONAL_STABILITY_MANIFEST_001_20261013",
+  "document_type": "MANIFEST",
+  "origin_cell": "SW",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "archive_mode": "PUBLIC_ARTIFACT",
+  "task_id": "SW-LT4-CHAPTER2-TARGET-FACTOR-CONTINUITY-REVIEW-001",
+  "method": "ANALYTIC_PROOFS; no numerical results or executable code are required",
+  "claim_ceiling": "Explicit standard mathematical results; no novelty or physical-theory promotion",
+  "artifacts": [
+    {
+      "path": "research/sw/2026-10-13/IW_SW_TARGET_FACTORIZATION_AND_CONDITIONAL_STABILITY_REPORT_001_20261013.md",
+      "bytes": 15443,
+      "sha256": "fbe5a7f08a32067fb3594744679d3c2b31e573aeaabb06352b7847f2d31a0b42"
+    },
+    {
+      "path": "research/sw/2026-10-13/IW_SW_TARGET_FACTORIZATION_AND_CONDITIONAL_STABILITY_BIBLIOGRAPHY_001_20261013.bib",
+      "bytes": 1809,
+      "sha256": "cb978d55aaadeee36cdef7e08c1dc81ea766080c7373e18ee25ec6bc66c8f3e7"
+    }
+  ]
+}
