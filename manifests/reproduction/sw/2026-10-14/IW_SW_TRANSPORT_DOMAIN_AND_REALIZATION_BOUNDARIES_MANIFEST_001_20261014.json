@@ -1,0 +1,45 @@
+{
+  "artifact_id": "IW_SW_TRANSPORT_DOMAIN_AND_REALIZATION_BOUNDARIES_MANIFEST_001_20261014",
+  "document_type": "MANIFEST",
+  "origin_cell": "SW",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "archive_mode": "PUBLIC_ARTIFACT",
+  "task_id": "SW-LT4-CHAPTER3-TRANSPORT-DOMAIN-AUDIT-001",
+  "method": "ANALYTIC_PROOFS; no numerical results or executable code required",
+  "claim_ceiling": "Standard mathematical mechanisms and explicit counterexamples; no novelty or physical-theory promotion",
+  "artifacts": [
+    {
+      "path": "research/sw/2026-10-14/IW_SW_TRANSPORT_DOMAIN_AND_REALIZATION_BOUNDARIES_REPORT_001_20261014.md",
+      "bytes": 16707,
+      "sha256": "65092f2acb38724714e334202681903d4e4a14460ca9aad14388cbfb88449da2"
+    },
+    {
+      "path": "research/sw/2026-10-14/IW_SW_TRANSPORT_DOMAIN_AND_REALIZATION_BOUNDARIES_BIBLIOGRAPHY_001_20261014.bib",
+      "bytes": 1413,
+      "sha256": "41033075514aa5895b540f5c8603bb470d38859106ffd26536286a50a5fee722"
+    }
+  ],
+  "proof_checks": [
+    "Translation sign, H1 domain, support shift and positive-axis point spectrum checked",
+    "Approximate reachability and observability proved by l1 moment uniqueness",
+    "Uniqueness of the diagonal intertwiner and unbounded inverse checked",
+    "Bell marginals and CNOT outputs checked analytically",
+    "Group inverse and formal d_c squared boundary checked"
+  ],
+  "source_checks": [
+    {
+      "doi": "10.1007/b97696",
+      "locator": "II.2.1; II.2.4; II.2.10"
+    },
+    {
+      "doi": "10.7900/jot.2017sep28.2175",
+      "locator": "Theorem 1.5, p. 231; discrete-time scope retained"
+    },
+    {
+      "url": "https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf",
+      "locator": "Chapter 2; finite-dimensional channels"
+    }
+  ],
+  "search_scope": "Targeted applicability and primary-source checks, 2026-10-13/14; not systematic or novelty review"
+}
