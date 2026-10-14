@@ -1,0 +1,25 @@
+{
+  "artifact_id": "IW_SW_HILBERT_COMPLEX_HOMOTOPY_DOMAIN_REPAIR_MANIFEST_001_20261014",
+  "exposure": "PUBLIC",
+  "task_id": "SW-LT4-CHAPTER4-HILBERT-COMPLEX-AUDIT-001",
+  "result_class": "ANALYTIC_PROOFS_AND_DOMAIN_COUNTEREXAMPLES",
+  "claim_ceiling": "NO_NOVELTY_NO_PHYSICAL_UPGRADE_NO_EXEC_NO_REV021",
+  "archive_mode": "PUBLIC_ARTIFACT",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "bw_ingestion_event_id": "NOT_YET_INGESTED",
+  "self_hash": "EXTERNAL_RECEIPT_TO_AVOID_SELF_REFERENCE",
+  "files": [
+    {
+      "path": "research/sw/2026-10-14/IW_SW_HILBERT_COMPLEX_HOMOTOPY_DOMAIN_REPAIR_REPORT_001_20261014.md",
+      "bytes": 15571,
+      "sha256": "a83d5448215df9343e17ef45c81c7fb5bdeb6549265fb00f998c5fc81e54ee52",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "research/sw/2026-10-14/IW_SW_HILBERT_COMPLEX_HOMOTOPY_DOMAIN_REPAIR_BIBLIOGRAPHY_001_20261014.bib",
+      "bytes": 745,
+      "sha256": "bbea17916210cc95af86a5a13b239aa3560e04a8890af794a16b5b1009819868",
+      "encoding": "UTF-8"
+    }
+  ]
+}
