@@ -5,7 +5,7 @@ created_at: 2026-10-18
 as_of: 2026-10-18
 origin_cell: IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_10 / PRF11
 function: global foundation reconstruction and question coevolution before another local theorem
-document_type: LITERATURE_RECORD
+document_type: REPORT
 task_id: NOT_APPLICABLE
 exposure: PUBLIC
 status: DRAFT
