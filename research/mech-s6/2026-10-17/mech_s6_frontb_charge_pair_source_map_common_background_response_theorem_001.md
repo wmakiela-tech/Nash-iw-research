@@ -668,3 +668,47 @@ Project-level controlling repairs used only for placement:
 `SOURCE_MATCHED_K_PBH = UNDEFINED`
 
 `NO PBH BOUND / NO ENDPOINT / NO CANON / NO EXEC_SIGN / NO NOVELTY CLAIM`
+
+
+## 18. Exact supported-domain source-table audit
+
+The public Wu–Xu executor evaluates the hadron source table with log-linear interpolation in both PBH mass and source rate:
+
+[
+log q_h(M)
+]
+
+is linearly interpolated as a function of
+
+[
+log M.
+]
+
+Using that exact interpolation contract, the aggregate source rates and the charge-symmetric single-species rates are:
+
+| (M_{m PBH}) [g] | source column | current downstream single-species source | charge-symmetric repaired single-species source |
+|---:|---|---:|---:|
+| (1.0	imes10^9) | (Q_{pi^pm}) | (4.891055	imes10^5) into each of (pi^-), (pi^+) | (2.445528	imes10^5) into each |
+| (1.0	imes10^9) | (Q_{K^pm}) | (5.910594	imes10^4) into (K^-) | (2.955297	imes10^4) |
+| (1.0	imes10^9) | (Q_{p+ar p}) | (3.484908	imes10^4) into (ar p) | (1.742454	imes10^4) |
+| (1.0	imes10^9) | (Q_{n+ar n}) | (3.465618	imes10^4) into (ar n) | (1.732809	imes10^4) |
+| (2.0	imes10^9) | (Q_{pi^pm}) | (2.024939	imes10^5) into each of (pi^-), (pi^+) | (1.012470	imes10^5) into each |
+| (2.0	imes10^9) | (Q_{K^pm}) | (2.455090	imes10^4) into (K^-) | (1.227545	imes10^4) |
+| (2.0	imes10^9) | (Q_{p+ar p}) | (1.438015	imes10^4) into (ar p) | (7.190076	imes10^3) |
+| (2.0	imes10^9) | (Q_{n+ar n}) | (1.429513	imes10^4) into (ar n) | (7.147567	imes10^3) |
+| (6.0	imes10^9) | (Q_{pi^pm}) | (4.822826	imes10^4) into each of (pi^-), (pi^+) | (2.411413	imes10^4) into each |
+| (6.0	imes10^9) | (Q_{K^pm}) | (5.889788	imes10^3) into (K^-) | (2.944894	imes10^3) |
+| (6.0	imes10^9) | (Q_{p+ar p}) | (3.400408	imes10^3) into (ar p) | (1.700204	imes10^3) |
+| (6.0	imes10^9) | (Q_{n+ar n}) | (3.376389	imes10^3) into (ar n) | (1.688194	imes10^3) |
+
+The (K_L^0) aggregate is unchanged:
+
+- (2.908677	imes10^4) at (10^9) g,
+- (1.207953	imes10^4) at (2	imes10^9) g,
+- (2.896186	imes10^3) at (6	imes10^9) g.
+
+These are source-interface numbers only.
+
+They do **not** imply a factor-two change in (A), (B), (F_{m had}), (X_n), (Y_p), D/H, or any PBH abundance bound.
+
+The table establishes only that the source correction is numerically material at the injection interface and is not a machine-precision or tiny-tail effect.
