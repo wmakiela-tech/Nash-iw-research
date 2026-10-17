@@ -20,5 +20,4 @@ specs = [
 ]
 
 Pkg.add(specs)
-Pkg.precompile()
 Pkg.status()
