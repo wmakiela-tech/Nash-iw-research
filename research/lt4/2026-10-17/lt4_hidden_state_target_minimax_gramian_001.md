@@ -43,3 +43,63 @@ Jeżeli wszystkie \(M_k=0\), wtedy \(M_T=0\) dla każdego \(T\). Gdy \(\dim H=n<
 **Dowód.** Szereg \(e^{T\mathcal L}=\sum_{k\ge0}T^k\mathcal L^k/k!\) zbiega w normie operatorowej. Po przemnożeniu przez \(GP,J_Y\) daje rozwinięcie i resztę w (3). Ciągłość normy operatorowej daje asymptotykę błędu minimaksowego z (2). W skończonym wymiarze twierdzenie Cayleya–Hamiltona wyraża wyższe potęgi przez pierwsze \(n\), co dowodzi ostatniej tezy. \(\square\)
 
 **Granica:** kryterium momentowe nie przechodzi automatycznie na dowolny nieograniczony generator \(C_0\). Dla niego nie musi zachodzić analityczność w normie. To odrębna kwestia od twierdzenia o pojedynczym mnożniku spektralnym w rozdziale VII.
+
+## Twierdzenie 3 — pełna historia i gramian obserwowalności celu
+
+Jeśli \(Z\) jest Hilbertem, oznaczmy przez
+\[
+\mathscr M_T:Y\to L^2(0,T;Z),\qquad
+(\mathscr M_T y)(t)=M_ty
+\]
+operator wpływu ukrytego stanu na całą historię obserwabli. Niech
+\(\mathcal W_T=\int_0^T M_t^*M_t\,dt\); całka jest w normie operatorowej, a \(\mathcal W_T\ge0\).
+Wówczas
+\[
+E_{\mathrm{hist}}(T)=R\|\mathscr M_T\|
+=R\sqrt{\|\mathcal W_T\|}. \tag{4}
+\]
+Jeśli pierwszy niezerowy \(M_m\) występuje w rzędzie \(m\), to
+\[
+\lim_{T\downarrow0}\frac{E_{\mathrm{hist}}(T)}{T^{m+1/2}}
+=\frac{R\|M_m\|}{m!\sqrt{2m+1}}. \tag{5}
+\]
+
+**Dowód.** Symetryczny argument z twierdzenia 1 działa również dla normy \(L^2\). Wykorzystując iloczyn skalarny Hilberta, mamy
+\[
+\|\mathscr M_T y\|_{L^2}^2=\int_0^T\langle M_t y,M_t y\rangle\,dt
+=\langle y,\mathcal W_T y\rangle.
+\]
+Zatem \(\|\mathscr M_T\|^2=\|\mathcal W_T\|\). Rozwinięcie \(M_t=t^mM_m/m!+O(t^{m+1})\), równomierne na \([0,T]\), daje w normie operatorowej
+\[
+\mathcal W_T=
+\frac{T^{2m+1}}{(m!)^2(2m+1)}M_m^*M_m+O(T^{2m+2}).
+\]
+Po wzięciu normy i pierwiastka otrzymujemy (5). \(\square\)
+
+Dla każdej chwili \(T\) niewidoczność tylko w końcowym wyjściu oznacza \(M_T=0\). Całkowita niewidoczność na przedziale \([0,T]\) oznacza \(\mathcal W_T=0\), czyli \(M_t=0\) dla wszystkich \(t\in[0,T]\) (dzięki ciągłości). Nie są to równoważne kryteria.
+
+## Twierdzenie 4 — odporność wniosku na perturbację generatora
+
+Niech \(\mathcal L,\widetilde{\mathcal L}\in\mathcal B(H)\), a \(a=\max(\|\mathcal L\|,\|\widetilde{\mathcal L}\|)\). Przy stałych mapach \(P,G,J_Y\):
+\[
+\Big|\|GP e^{T\mathcal L}J_Y\|-\|GP e^{T\widetilde{\mathcal L}}J_Y\|\Big|
+\le\|GP\|\,\|J_Y\|\,T e^{Ta}\|\mathcal L-\widetilde{\mathcal L}\|. \tag{6}
+\]
+Pomnożenie przez \(R\) ogranicza zmianę dokładnego błędu minimaksowego.
+
+**Dowód.** Stosujemy tożsamość Duhamela
+\[
+e^{T\mathcal L}-e^{T\widetilde{\mathcal L}}
+=\int_0^T e^{(T-s)\mathcal L}(\mathcal L-\widetilde{\mathcal L})e^{s\widetilde{\mathcal L}}ds,
+\]
+oszacowanie \(\|e^{t\mathcal L}\|\le e^{t\|\mathcal L\|}\) oraz nierówność odwrotną dla norm operatorowych
+\(|\|S\|-\|T\||\le\|S-T\|\). \(\square\)
+
+## Ścisły most z równaniem sprzężonym
+
+Adjungowany operator
+\[
+M_T^*=J_Y^*e^{T\mathcal L^*}P^*G^*
+\tag{7}
+\]
+przenosi dualny wektor celu do kierunku ukrytego przygotowania. To bezpośrednia, poprawnie typowana realizacja rachunku wrażliwości z rozdziału VI: „najgroźniejszy” ukryty stan leży w kierunku maksymalizującym normę \(M_T\), a dla jednowymiarowego \(Z\) w kierunku \(M_T^*1\) (o ile ten wektor jest niezerowy). W nieskończonym wymiarze normowy maksymalizator może nie istnieć; supremum z twierdzenia 1 nie zakłada jego osiągania.
