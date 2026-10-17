@@ -18,8 +18,8 @@ stale_if: Source-specific legal observation semantics or current LT/BW definitio
 acceptance_owner: PRF lineage; scientific integration only through appropriate owners
 return_path: GitHub issue IW_PRF11_ARTIFACT_RECOVERY_AND_RESULTS_ROUTING_001_20261018
 claim_ceiling: FOUNDATION / HOST_SUBTRACTION / NO_CANON / NO_EXEC / NO_NOVELTY_CLAIM
-bw_ingestion: NOT_CONFIRMED
-cross_surface_sync: GITHUB_PENDING_BW_INGEST
+bw_ingestion: ING-20261018-0001 / REGISTRY_ROW_1402 / SOURCE_ONLY
+cross_surface_sync: XSC-0176 / BW_POINTER_VERIFIED / GITHUB_METADATA_UPDATED
 ---
 
 # PRF11 — Consolidated foundation return (rotations 4–7)
