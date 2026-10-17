@@ -152,3 +152,18 @@ Dla skalarnej obserwabli \(G\) i ukrytego przygotowania \(\|y_0\|\le R\), ryzyko
 Stąd (H) przez oszacowanie kwadratowej całki, a (I) przez dokładny wzór (B). Ostatni wniosek wynika ze skalarnej równości (E) i \(\|M(T)\|\le\varepsilon\). \(\square\)
 
 **Zakres.** Twierdzenie C NIE mówi, że skończone testy dokładnie zerowych wartości bez znajomości generatora potwierdzają zerowanie całego \(M(t)\). Daje certyfikat **przy znanej normowej stałej szybkości** i kontroli pełnych operatorów \(M(t_j)\), a nie jednego wyniku pomiarowego na nieznanym \(y_0\). Dla ogólnych generatorów \(C_0\) operatorowa pochodna może nie istnieć; wtedy należy osobno wykazać odpowiedni moduł ciągłości na klasie badanych danych. W szczególności nie narusza to kontrprzykładu translacyjnego z rozdziału I, gdzie wszystkie pochodne w zerze mogą znikać mimo późniejszej niezerowej pamięci.
+
+## 7. Porównanie z teoriami gospodarzami; status w monografii
+
+W [Wang–Benner–Heiland, *Partial Observation of Linear Systems With the Mori–Zwanzig Formalism*, Proceedings in Applied Mathematics and Mechanics **26** (2026), e70222, DOI 10.1002/pamm.70222](https://doi.org/10.1002/pamm.70222) jawnie odróżnia się warunek początkowy ukrytego sektora od pamięci i odtwarza liniowe wzory redukcji przez variation of constants. Klasyczna teoria Mori–Zwanziga, Duhamel i generatory półgrup są dojrzałymi gospodarzami zarówno tożsamości (A), jak i granic twierdzeń. Nie przedstawiamy ich jako nowej zasady fizycznej ani nowej metody eliminacji.
+
+Naukowy sens ścisłego porównania w tej monografii jest następujący:
+1. Tożsamość (A) **typowo legalnie** łączy rozdziały o pamięci, nieznanym przygotowaniu i błędzie konkretnej obserwabli. Nie wolno mylić \(M(t):Y\to Z\) z \(K(t):X\to X\).
+2. Dokładny minimaksowy promień \(\sup_{\|y_0\|\le R}\) z poprzedniej analizy daje dla **skalarnego** celu separację (E) dwóch kanałów błędu. Nie ma odpowiednika tej prostej sumy dla dowolnego \(Z\).
+3. Kontrprzykład oscylatora dowodzi, że **zero błędu przygotowania w jednej chwili** nie certyfikuje zaniku efektu pamięci nawet w tej samej chwili.
+4. Dla znanej normy **ograniczonego** generatora skończone węzły czasowe dają jawny, ilościowy certyfikat historii, ale nie bezwarunkową unikalność z próbek.
+5. **Warunek analityczności nie jest potrzebny do (A)–(E)**. Jest potrzebny do momentowych argumentów i sztywności zer z punktem skupienia; kontrprzykład C0 z rozdziału I pozostaje w mocy.
+
+Literatura bazowa: R. Zwanzig, *Nonequilibrium Statistical Mechanics* (2001); K.-J. Engel i R. Nagel, *One-Parameter Semigroups for Linear Evolution Equations* (2000); F. Wang, P. Benner i J. Heiland (2026, DOI powyżej). Wcześniejsze osiągnięcia i metody z teorią obserwowalności: R. E. Kalman (1963); M. Heinkenschloss, T. Reis i A. C. Antoulas (2011); B. Liljegren-Sailer (2024).
+
+**Werdykt autorski:** twierdzenia A–C są poprawnymi dedukcjami ze standardowego wzoru Duhamela, symetrii kuli oraz normowej różniczkowalności semigrupy z ograniczonym generatorem. Oryginalność matematyczna NIEZIDENTYFIKOWANA. Jako uporządkowanie mechanizmu dla opisu efektywnego mogą stanowić część monografii. Nie rozszerzać na kwantowe procesy z interwencjami, nieograniczone bloki sprzęgające ani źródłowo niezweryfikowaną dynamikę PBH–BBN. Niezależna kontrola SW/INT nie została jeszcze zakończona.
