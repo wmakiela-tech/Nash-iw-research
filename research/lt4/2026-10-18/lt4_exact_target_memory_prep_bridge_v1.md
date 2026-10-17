@@ -46,3 +46,49 @@ S(t)-S_0(t)
 Dla przygotowania \(J_Xx_0\) mamy \(S_0(s)J_Xx_0=J_X S_A(s)x_0\), ponieważ ukryty blok nie jest wzbudzany, gdy \(C=0\) i \(y_0=0\). Po przemnożeniu przez \(GP\) otrzymujemy (B). Dodając niezależny składnik \(GP S(t)J_Yy_0=M(t)y_0\), dostajemy (A). \(\square\)
 
 Twierdzenie jest prawdziwe również dla **nieograniczonych** \(A,D\), o ile generują półgrupy \(C_0\) i sprzężenia \(B,C\) są ograniczone. Nie zakłada analityczności operatorowo-wartościowej funkcji \(M(t)\), a więc nie stosuje momentowego argumentu wyłącznie dla ograniczonych generatorów.
+
+## 3. Konsekwencje dla wierności celu
+
+**Wniosek A.1 (wierność wszystkich czasów).** Jeżeli \(M(t)=0\) dla wszystkich \(t\ge0\), wtedy dla każdego \(x_0\) i dowolnego \(y_0\)
+\[
+G P S(t)(J_Xx_0+J_Yy_0)=G S_A(t)x_0.
+\]
+Zatem nieznany stan ukryty jest niewidoczny dla celu, a całe sprzężenie zwrotne pamięci jest dla tego celu równie niewidoczne. NIE oznacza to, że jądro \(K(t)=B S_D(t)C\) jest zerowe jako operator na \(X\).
+
+**Wniosek A.2 (jedna chwila nie wystarczy).** Z samego \(M(T)=0\) dla wybranego \(T\) nie wynika \(q(T,x_0)=0\). We wzorze (B) występują wszystkie wcześniejsze \(M(T-s)\), nie tylko \(M(T)\). Analogicznie \(q(T,x_0)=0\) nie oznacza \(M(T)=0\). Dwa kryteria wierności odpowiadają odrębnym kanałom informacji.
+
+**Wniosek A.3 (ilościowy błąd pamięci).** Dla każdego \(t,x_0\)
+\[
+\|q(t,x_0)\|
+\le \int_0^t\|M(t-s)\|\,\|C S_A(s)x_0\|\,ds.
+\tag{C}
+\]
+Jeśli \(\|M(u)\|\le\delta\) na \([0,t]\), to
+\[
+\|q(t,x_0)\|
+\le\delta\,\|C\|\int_0^t\|S_A(s)x_0\|\,ds.
+\tag{D}
+\]
+Oznacza to, że **jedno oszacowanie operatora odpowiedzi na nieznany stan ukryty**, pochodzące z poprzedniej analizy minimaksowej, kontroluje także błąd pamięci w wybranym celu. Bez kontroli całej historii \(M(u)\) takiego wniosku nie ma.
+
+## 4. Dokładna suma dwóch źródeł błędu dla celu skalarnego
+
+Niech \(Z=\mathbb R\) lub \(\mathbb C\), \(Y\) przestrzenią Hilberta, a nieznane przygotowanie spełnia \(\|y_0\|\le R\). Model bez pamięci i bez ukrytego przygotowania przewiduje \(a_{\rm bare}(t)=G S_A(t)x_0\).
+
+**Twierdzenie B (skalarna separacja błędu deterministycznego i niepewności).**
+\[
+\sup_{\|y_0\|\le R}|z(t)-a_{\rm bare}(t)|
+=|q(t,x_0)|+R\|M(t)\|.
+\tag{E}
+\]
+Jeżeli natomiast dopuszczamy dokładną poprawkę deterministyczną \(q\) w przewidywaniu, najlepszy możliwy błąd minimaksowy w klasie estymatorów zależnych jedynie od \(x_0\) jest równy \(R\|M(t)\|\).
+
+*Dowód.* Na mocy (A) błąd to \(q+M(t)y_0\). Obraz kuli \(\|y_0\|\le R\) pod skalarnym funkcjonałem liniowym \(M(t)\) jest dyskiem/promieniem o promieniu \(R\|M(t)\|\) w sensie supremum. Kierunek fazy można wybrać tak, aby wektor \(M(t)y_0\) miał ten sam argument co \(q\), co daje równość w (E). Druga teza to minimaks na symetrycznej kuli: centralny estymator \(a_{\rm bare}+q\) jest optymalny, ponieważ każda inna wartość jest co najmniej o tyle samo odległa od jednej z pary przeciwnych realizacji. \(\square\)
+
+W ogólnym Hilbertowskim \(Z\) tożsamość sumy modułów nie jest prawdziwa bez dalszych warunków o geometrycznej zgodności kierunków. Zawsze zachodzą oszacowania
+\[
+\max\{\|q\|,R\|M(t)\|\}
+\le \sup_{\|y_0\|\le R}\|q+M(t)y_0\|
+\le\|q\|+R\|M(t)\|.
+\]
+Dolna granica wynika z symetrii kuli i nierówności dla pary \(\pm y_0\).
