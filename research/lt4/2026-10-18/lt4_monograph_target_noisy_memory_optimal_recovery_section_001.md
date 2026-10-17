@@ -44,6 +44,8 @@ na zwartej wypukłej kuli \(\|v\|\le R\) i wypukłej \(\mathbb R^p\). Dla ustalo
 \]
 Wewnętrzne \(\inf_w[\delta\|w\|-(Cv)^\top w]\) wynosi \(0\), gdy \(\|Cv\|\le\delta\), i \(-\infty\) w pozostałym przypadku. Po prawej \(\sup_{\|v\|\le R}F=R\|m_T-C^\top w\|+\delta\|w\|\). Wykorzystujemy symetrię zbioru dopuszczalnych \(v\), aby zastąpić funkcjonał liniowy jego wartością bezwzględną. Minimum po \(w\) jest osiągane: gdy \(\delta>0\), funkcja jest koercywna, a przy \(\delta=0\) jest to problem rzutowania \(m_T\) na domknięty obraz \(C^\top\). \(\square\)
 
+**Uwaga o klasie decyzji.** W równaniu (7.9) składnik \(q_T(x_0)\) jest znaną poprawką deterministyczną. Gdy estymator może ją odjąć lub dodać, nie zmienia ona minimaksowej niepewności po pomiarze. Natomiast przy zamrożonym, niekorygowanym predyktorze \(a_T\) błąd skalarnego celu wynosi \(|q_T|+R\|M(T)\|\), zgodnie z twierdzeniem 7.7. Surowy błąd prognozy i błąd estymatora optymalnego są różnymi zadaniami decyzyjnymi; reguł projektowania pomiaru nie można przenosić między nimi bez zmiany funkcji straty.
+
 ## 7.5b.2. Informacja wystarczająca, koszt dokładności i legalność aparatury
 
 **Wniosek 7.2 (dokładne odtwarzanie, brak szumu).** Przy \(\delta=0\)
