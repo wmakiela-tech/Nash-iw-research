@@ -1,0 +1,294 @@
+{
+  "queries": [
+    {
+      "engine": "web/system1",
+      "queries": [
+        "\"Dorau\" \"Much\" \"Relative Entropy\" \"091602\"",
+        "\"2606.27915\""
+      ],
+      "screening": "First query mostly irrelevant; not evidence. Only primary arXiv full texts used."
+    },
+    {
+      "engine": "web/open",
+      "urls": [
+        "https://arxiv.org/abs/2510.24491",
+        "https://arxiv.org/abs/2603.13029",
+        "https://arxiv.org/abs/2606.27915",
+        "https://arxiv.org/html/2510.24491v3",
+        "https://arxiv.org/html/2603.13029v2",
+        "https://arxiv.org/html/2606.27915v1"
+      ]
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "site.arxiv.org Hollands relative entropy coherent states chiral CFT 2019",
+        "site.arxiv.org Banados geometries entanglement entropy conformal transformations interval descendants",
+        "site.arxiv.org canonical energy quantum Fisher information Lashkari Van Raamsdonk relative entropy",
+        "site.arxiv.org Jacobson thermodynamics spacetime Einstein equation state 1995"
+      ]
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "site.arxiv.org \"Roberts\" \"Time evolution of entanglement entropy from a pulse\"",
+        "site.arxiv.org \"Relative entropy and the Bekenstein bound\"",
+        "site.arxiv.org \"Relative entropy equals bulk relative entropy\"",
+        "site.arxiv.org \"Entanglement equilibrium and the Einstein equation\""
+      ]
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "site.arxiv.org \"Araki formula\" \"coherent states\" Casini Grillo Pontello",
+        "site.arxiv.org \"Temperature and entropy-area\" Kurpicz Pinamonti Verch",
+        "\"Araki\" \"Relative entropy of states of von Neumann algebras\" 1976",
+        "site.arxiv.org \"Gravitation from Entanglement in Holographic CFTs\""
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "id": "DM",
+      "author": "Dorau, Philipp and Much, Albert",
+      "title": "From Quantum Relative Entropy to the Semiclassical Einstein Equations",
+      "year": "2026",
+      "eprint": "2510.24491v3",
+      "doi": "10.1103/lmq8-nsty",
+      "url": "https://arxiv.org/html/2510.24491v3",
+      "depth": "MAIN_TEXT",
+      "locator": "Equations 10-28 and conclusions"
+    },
+    {
+      "id": "DMV",
+      "author": "Dorau, Philipp and Much, Albert and Verch, Rainer",
+      "title": "Noncommutative QFT and Relative Entropy on Axisymmetric Bifurcate Killing Horizons",
+      "year": "2026",
+      "eprint": "2603.13029v2",
+      "doi": "",
+      "url": "https://arxiv.org/html/2603.13029v2",
+      "depth": "CITED_SECTIONS",
+      "locator": "Sections 3-5; Corollaries 3.7, 5.2; Theorem 3.10; Definitions 4.1-4.5"
+    },
+    {
+      "id": "MDSV",
+      "author": "Much, Albert and Dorau, Philipp and Sangaletti, Leonardo and Verch, Rainer",
+      "title": "A UV-Finite Ryu-Takayanagi Relation from Relative Entropy in AdS3/CFT2",
+      "year": "2026",
+      "eprint": "2606.27915v1",
+      "doi": "",
+      "url": "https://arxiv.org/html/2606.27915v1",
+      "depth": "MAIN_TEXT",
+      "locator": "Equations 7-38"
+    },
+    {
+      "id": "A",
+      "author": "Araki, Huzihiro",
+      "title": "Relative Entropy of States of von Neumann Algebras",
+      "year": "1976",
+      "eprint": "",
+      "doi": "",
+      "url": "https://ems.press/journals/prims/articles/2800",
+      "depth": "PRIMARY_PUBLISHER_SEARCH_EXCERPT",
+      "locator": "General definition; no independent proof reconstruction"
+    },
+    {
+      "id": "U",
+      "author": "Uhlmann, Armin",
+      "title": "Relative entropy and the Wigner-Yanase-Dyson-Lieb concavity in an interpolation theory",
+      "year": "1977",
+      "eprint": "",
+      "doi": "10.1007/BF01609834",
+      "url": "https://doi.org/10.1007/BF01609834",
+      "depth": "PUBLISHER_METADATA",
+      "locator": "Genealogy only"
+    },
+    {
+      "id": "BW",
+      "author": "Bisognano, Joseph J. and Wichmann, Eyvind H.",
+      "title": "On the duality condition for a Hermitian scalar field",
+      "year": "1975",
+      "eprint": "",
+      "doi": "",
+      "url": "",
+      "depth": "PRIMARY_INACCESSIBLE",
+      "locator": "Primary bibliographic pointer DM ref37; theorem corroboration C,H"
+    },
+    {
+      "id": "J95",
+      "author": "Jacobson, Ted",
+      "title": "Thermodynamics of Spacetime: The Einstein Equation of State",
+      "year": "1995",
+      "eprint": "gr-qc/9504004v2",
+      "doi": "10.1103/PhysRevLett.75.1260",
+      "url": "https://arxiv.org/html/gr-qc/9504004v2",
+      "depth": "CITED_SECTIONS",
+      "locator": "Local horizon and entropy-area contracts"
+    },
+    {
+      "id": "J16",
+      "author": "Jacobson, Ted",
+      "title": "Entanglement Equilibrium and the Einstein Equation",
+      "year": "2016",
+      "eprint": "1505.04753",
+      "doi": "10.1103/PhysRevLett.116.201101",
+      "url": "https://arxiv.org/abs/1505.04753",
+      "depth": "ABSTRACT",
+      "locator": "Distinct small-ball equilibrium route"
+    },
+    {
+      "id": "C",
+      "author": "Casini, Horacio",
+      "title": "Relative entropy and the Bekenstein bound",
+      "year": "2008",
+      "eprint": "0804.2182v3",
+      "doi": "",
+      "url": "https://arxiv.org/html/0804.2182v3",
+      "depth": "CITED_SECTIONS",
+      "locator": "Section 3; modular energy and state restriction"
+    },
+    {
+      "id": "L",
+      "author": "Longo, Roberto",
+      "title": "Entropy of Coherent Excitations",
+      "year": "2019",
+      "eprint": "1901.02366",
+      "doi": "",
+      "url": "https://arxiv.org/abs/1901.02366",
+      "depth": "ABSTRACT",
+      "locator": "Coherent-state genealogy only"
+    },
+    {
+      "id": "CGP",
+      "author": "Casini, Horacio and Grillo, Sergio and Pontello, Diego",
+      "title": "Relative entropy for coherent states from Araki formula",
+      "year": "2019",
+      "eprint": "1903.00109",
+      "doi": "10.1103/PhysRevD.99.125020",
+      "url": "https://arxiv.org/abs/1903.00109",
+      "depth": "ABSTRACT",
+      "locator": "AQFT coherent-state host"
+    },
+    {
+      "id": "H",
+      "author": "Hollands, Stefan",
+      "title": "Relative entropy for coherent states in chiral CFT",
+      "year": "2020",
+      "eprint": "1903.07508v2",
+      "doi": "10.1007/s11005-019-01238-z",
+      "url": "https://arxiv.org/pdf/1903.07508v2",
+      "depth": "CITED_SECTIONS",
+      "locator": "PDF pages 5-8; equations 3.22-4.32"
+    },
+    {
+      "id": "P",
+      "author": "Panebianco, Lorenzo",
+      "title": "A formula for the relative entropy in chiral CFT",
+      "year": "2020",
+      "eprint": "1911.10136v3",
+      "doi": "10.1007/s11005-020-01296-8",
+      "url": "https://arxiv.org/html/1911.10136v3",
+      "depth": "CITED_SECTIONS",
+      "locator": "Lemma 3; Section 5, equations 29-31"
+    },
+    {
+      "id": "KPV",
+      "author": "Kurpicz, Fiona and Pinamonti, Nicola and Verch, Rainer",
+      "title": "Temperature and entropy-area relation of quantum matter near spherically symmetric outer trapping horizons",
+      "year": "2021",
+      "eprint": "2102.11547v2",
+      "doi": "10.1007/s11005-021-01445-7",
+      "url": "https://arxiv.org/abs/2102.11547v2",
+      "depth": "ABSTRACT",
+      "locator": "Scaling-limit and area genealogy"
+    },
+    {
+      "id": "RT",
+      "author": "Ryu, Shinsei and Takayanagi, Tadashi",
+      "title": "Holographic Derivation of Entanglement Entropy from the anti-de Sitter Space/Conformal Field Theory Correspondence",
+      "year": "2006",
+      "eprint": "",
+      "doi": "10.1103/PhysRevLett.96.181602",
+      "url": "https://doi.org/10.1103/PhysRevLett.96.181602",
+      "depth": "PUBLISHER_METADATA",
+      "locator": "RT origin"
+    },
+    {
+      "id": "R",
+      "author": "Roberts, Matthew M.",
+      "title": "Time evolution of entanglement entropy from a pulse",
+      "year": "2012",
+      "eprint": "1204.1982v1",
+      "doi": "10.1007/JHEP12(2012)027",
+      "url": "https://arxiv.org/html/1204.1982v1",
+      "depth": "CITED_SECTIONS",
+      "locator": "Equations 13-16; endpoint and regulator transformation"
+    },
+    {
+      "id": "FGHMR",
+      "author": "Faulkner, Thomas and Guica, Monica and Hartman, Thomas and Myers, Robert C. and Van Raamsdonk, Mark",
+      "title": "Gravitation from Entanglement in Holographic CFTs",
+      "year": "2014",
+      "eprint": "1312.7856",
+      "doi": "10.1007/JHEP03(2014)051",
+      "url": "https://arxiv.org/abs/1312.7856",
+      "depth": "ABSTRACT",
+      "locator": "Holographic first-law constraints"
+    },
+    {
+      "id": "FLM",
+      "author": "Faulkner, Thomas and Lewkowycz, Aitor and Maldacena, Juan",
+      "title": "Quantum corrections to holographic entanglement entropy",
+      "year": "2013",
+      "eprint": "1307.2892",
+      "doi": "",
+      "url": "https://arxiv.org/abs/1307.2892",
+      "depth": "ABSTRACT",
+      "locator": "Quantum entropy corrections"
+    },
+    {
+      "id": "JLMS",
+      "author": "Jafferis, Daniel L. and Lewkowycz, Aitor and Maldacena, Juan and Suh, S. Josephine",
+      "title": "Relative entropy equals bulk relative entropy",
+      "year": "2016",
+      "eprint": "1512.06431",
+      "doi": "",
+      "url": "https://arxiv.org/abs/1512.06431",
+      "depth": "CITED_SECTIONS",
+      "locator": "Sections 1-2 returned as full text; html/v2 failed"
+    },
+    {
+      "id": "LV",
+      "author": "Lashkari, Nima and Van Raamsdonk, Mark",
+      "title": "Canonical Energy is Quantum Fisher Information",
+      "year": "2016",
+      "eprint": "1508.00897v2",
+      "doi": "10.1007/JHEP04(2016)153",
+      "url": "https://arxiv.org/html/1508.00897v2",
+      "depth": "CITED_SECTIONS",
+      "locator": "Sections 1-2, quadratic perturbation order and canonical energy"
+    },
+    {
+      "id": "FHSW",
+      "author": "Faulkner, Thomas and Hollands, Stefan and Swingle, Brian and Wang, Yixu",
+      "title": "Approximate recovery and relative entropy I. general von Neumann subalgebras",
+      "year": "2020",
+      "eprint": "2006.08002v1",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2006.08002v1",
+      "depth": "ABSTRACT",
+      "locator": "No quantitative bound transferred without full theorem audit"
+    }
+  ],
+  "accessed": "2026-10-17",
+  "limit": "Per-query result counts not exposed; no exhaustiveness/novelty inference. Search return batches retained transiently, not redistributed.",
+  "blindness": "No NC return read.",
+  "side_harvest": [
+    {
+      "pointer": "https://arxiv.org/abs/2607.07810",
+      "state": "UNVERIFIED_CANDIDATE",
+      "access": "DisabledError",
+      "scientific_use": "NONE"
+    }
+  ]
+}

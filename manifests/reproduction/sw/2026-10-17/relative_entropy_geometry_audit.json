@@ -1,0 +1,151 @@
+{
+  "manifest_id": "IW_SW_RELATIVE_ENTROPY_REPRODUCTION_001_20261017",
+  "artifact_id": "IW_SW_RELATIVE_ENTROPY_GEOMETRY_AUDIT_001_20261017",
+  "title": "Relative entropy / geometry: exact scope and perturbation-order witnesses",
+  "origin_cell": "IW_SCIENCE_WORK_01 / SW",
+  "created_at": "2026-10-17T20:21:45.284786+00:00",
+  "as_of": "2026-10-17",
+  "task_id": "SW_RELATIVE_ENTROPY_FLUX_GEOMETRY_BOUNDED_AUDIT_20261017",
+  "exposure": "PUBLIC",
+  "status": "FROZEN",
+  "claim": {
+    "question": "Does a first metric variation identify an actual RT-length difference at the first nonzero coherent-state order?",
+    "object": "Smooth compact interior Virasoro flow; vacuum Banados orbit with fixed interval/regulator; exact rational integration controls.",
+    "statement": "The conditional analytic witness has D>0 at epsilon squared and exact Delta L=0. Twelve rational algebra controls pass.",
+    "claim_ceiling": "AUTHOR_REPRODUCED algebra plus source-conditional analytic proof; independent review pending. No novelty, physical stability, empirical or universal gravity claim."
+  },
+  "code": {
+    "repository": "https://github.com/wmakiela-tech/Nash-iw-research",
+    "commit": "SELF_CONTAINING_COMMIT: resolve this manifest at its immutable GitHub commit; source bytes pinned by SHA256 below",
+    "entrypoint": "runtime/sw/2026-10-17/relative_entropy_exact_checks.py",
+    "license": "No repository-wide license file observed at parent 4dca1176815c19f1ca34a4e737829e0e2275aa42; no additional license declaration."
+  },
+  "environment": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "runtime": "Python 3.12.14",
+    "dependency_lock": "Python standard library only; fractions, json; no third-party dependencies",
+    "hardware": "CPU only; small exact rational polynomials; no accelerator needed"
+  },
+  "execution": {
+    "clean_start": "Checkout immutable containing commit; use Python 3.12; no external data or credentials.",
+    "commands": [
+      "python3 runtime/sw/2026-10-17/relative_entropy_exact_checks.py > /tmp/iw_relative_entropy_exact_results.json",
+      "cmp /tmp/iw_relative_entropy_exact_results.json research/sw/2026-10-17/relative_entropy_exact_results.json"
+    ],
+    "parameters": {
+      "interval": [
+        -1,
+        1
+      ],
+      "bump_support": [
+        -0.5,
+        0.5
+      ],
+      "polynomial": "(1-4u^2)^4 inside [-1/2,1/2], zero elsewhere; C3 control only",
+      "smooth_witness": "exp(-1/(1-4u^2)) inside |u|<1/2, zero elsewhere; analytical proof"
+    },
+    "seeds": [],
+    "tolerances": {
+      "arithmetic": "exact rational equality",
+      "analytical_order": "sufficiently small epsilon, fixed smooth profile; no empirical tolerance"
+    },
+    "stop_rule": "Stop after 12 asserted exact controls; any failed assertion exits nonzero.",
+    "expected_runtime": "under one second on an ordinary CPU"
+  },
+  "inputs": [
+    {
+      "path": "runtime/sw/2026-10-17/relative_entropy_exact_checks.py",
+      "sha256": "51951baca538171ab8dd21f5c7be58c535a31cb9cef1d0d3c6ab475309feb39b",
+      "source": "Original SW audit / primary-source bibliography",
+      "schema": "UTF-8 text",
+      "units_or_conventions": "dimensionless interval; natural logs; geometry conditional on common regulator",
+      "exposure": "PUBLIC"
+    },
+    {
+      "path": "research/sw/2026-10-17/relative_entropy_sources.bib",
+      "sha256": "650f22d36837975db1e4f7c101f950fd38103b9dd81b24a58e34a69fa4fd4de7",
+      "source": "Original SW audit / primary-source bibliography",
+      "schema": "UTF-8 text",
+      "units_or_conventions": "dimensionless interval; natural logs; geometry conditional on common regulator",
+      "exposure": "PUBLIC"
+    },
+    {
+      "path": "research/sw/2026-10-17/relative_entropy_search_record.json",
+      "sha256": "721e9622c40ae574c31c8554b4bf8f4d7b2e1aa0bc3db237a93e0c7464c41c0b",
+      "source": "Original SW audit / primary-source bibliography",
+      "schema": "UTF-8 text",
+      "units_or_conventions": "dimensionless interval; natural logs; geometry conditional on common regulator",
+      "exposure": "PUBLIC"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/sw/2026-10-17/IW_SW_RELATIVE_ENTROPY_GEOMETRY_AUDIT_001_20261017.md",
+      "sha256": "3578f243370002245b05adf537f4f4942c1d6ce2c94ddc8bcc0b8d2fcaf90e59",
+      "role": "OTHER",
+      "derived_from": [
+        "Primary literature plus original analytic derivation"
+      ],
+      "expected": "Complete bounded audit with explicit ceilings"
+    },
+    {
+      "path": "research/sw/2026-10-17/relative_entropy_exact_results.json",
+      "sha256": "7db2c5b2bb16ad0d19eb742f80f731bb9e8e58bb492ef23022fd64ef0658a00d",
+      "role": "DERIVED",
+      "derived_from": [
+        "runtime/sw/2026-10-17/relative_entropy_exact_checks.py"
+      ],
+      "expected": "12 PASS controls"
+    },
+    {
+      "path": "research/sw/2026-10-17/IW_SW_RELATIVE_ENTROPY_LITERATURE_RECORD_001_20261017.md",
+      "sha256": "374a390190e59a409d943039a0f455198e650d1ad935d5ec5fda716a1d6ca3ef",
+      "role": "OTHER",
+      "derived_from": [
+        "Primary literature plus original analytic derivation"
+      ],
+      "expected": "Complete bounded audit with explicit ceilings"
+    }
+  ],
+  "verification": {
+    "tests": [
+      "12 exact rational witnesses; generated output byte-compared with repeated run"
+    ],
+    "controls": [
+      "Endpoint-changing negative control has ratio 9/4 rather than 1.",
+      "C3 polynomial clearly distinguished from admissible C-infinity flow.",
+      "One null contraction and one weighted integral counterexamples."
+    ],
+    "warnings": [
+      "Code is not a continuum-QFT/geodesic solver.",
+      "Not an independent-model or external referee check.",
+      "The research theorem is conditional on the stated holographic/interval host."
+    ],
+    "known_failures": [
+      "Exact/leading-nonzero area or RT-length promotion fails the compact-flow test; first-variation identity not rejected."
+    ],
+    "reproduction_status": "AUTHOR_REPRODUCED",
+    "independent_reproducer": "NONE; NC not read before SW freeze",
+    "platform_deviations": [
+      "No third-party JSON Schema validator installed; the existing fail-closed validator covers every assertion keyword in the pinned repository schema."
+    ]
+  },
+  "provenance": {
+    "primary_location": "research/sw/2026-10-17/IW_SW_RELATIVE_ENTROPY_GEOMETRY_AUDIT_001_20261017.md",
+    "content_sha256": "3578f243370002245b05adf537f4f4942c1d6ce2c94ddc8bcc0b8d2fcaf90e59",
+    "narrative_artifact": "IW_SW_RELATIVE_ENTROPY_GEOMETRY_AUDIT_001_20261017",
+    "derived_from": [
+      "arXiv:2510.24491v3",
+      "arXiv:2603.13029v2",
+      "arXiv:2606.27915v1",
+      "arXiv:1911.10136v3",
+      "arXiv:1204.1982v1",
+      "arXiv:1508.00897v2"
+    ],
+    "supersedes": [],
+    "stale_if": "Source versions, endpoint/regulator contract, state ordering, orbit or claimed perturbative order changes.",
+    "readback_state": "NOT_VERIFIED",
+    "delivery_state": "NOT_ROUTED"
+  }
+}

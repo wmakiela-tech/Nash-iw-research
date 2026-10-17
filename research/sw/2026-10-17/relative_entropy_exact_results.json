@@ -1,0 +1,74 @@
+{
+  "artifact_id": "IW_SW_RELATIVE_ENTROPY_GEOMETRY_AUDIT_001_20261017",
+  "arithmetic": "fractions.Fraction; exact rational arithmetic; no random sampling",
+  "status": "AUTHOR_REPRODUCED",
+  "check_count": 12,
+  "checks": [
+    {
+      "name": "polynomial_zero_boundary_jets_0_to_3",
+      "status": "PASS",
+      "detail": "C3 zero-extension; used only for rational integration controls"
+    },
+    {
+      "name": "positive_quadratic_form",
+      "status": "PASS",
+      "detail": "65536/455"
+    },
+    {
+      "name": "zero_first_order_Schwarzian_moment",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "name": "second_order_moment_equals_minus_Q_over_2",
+      "status": "PASS",
+      "detail": "-32768/455"
+    },
+    {
+      "name": "flow_acceleration_has_zero_weighted_moment",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "name": "relative_entropy_epsilon2_coefficient_over_c",
+      "status": "PASS",
+      "detail": "8192/1365"
+    },
+    {
+      "name": "exact_geodesic_endpoint_ratio",
+      "status": "PASS",
+      "detail": "1"
+    },
+    {
+      "name": "smooth_bump_Poincare_strict_lower_bound",
+      "status": "PASS",
+      "detail": "19/8"
+    },
+    {
+      "name": "one_null_contraction_does_not_fix_tensor",
+      "status": "PASS",
+      "detail": "diag(0,0,1,0), k=(1,1,0,0), Minkowski signature (-+++)"
+    },
+    {
+      "name": "one_weighted_flux_not_pointwise_identification",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "name": "unitary_qubit_entropy_unchanged_but_relative_entropy_positive",
+      "status": "PASS",
+      "detail": "D=(1/2)*log(3), delta_von_Neumann_entropy=0"
+    },
+    {
+      "name": "endpoint_change_negative_control",
+      "status": "PASS",
+      "detail": "9/4"
+    }
+  ],
+  "limitations": [
+    "No CFT or Einstein solver; no independent-model validation.",
+    "C-infinity compact bump and geodesic conclusions require the analytic proof in the report.",
+    "The polynomial witness is C3 after zero extension, not C-infinity.",
+    "No novelty, experimental, or gravitational-stability claim."
+  ]
+}
