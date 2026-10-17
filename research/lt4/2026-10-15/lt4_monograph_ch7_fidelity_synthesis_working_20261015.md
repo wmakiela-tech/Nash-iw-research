@@ -120,11 +120,53 @@ W teorii Mori–Zwanziga/Schura eliminuje się zmienne z ewolucji liniowej lub w
 
 Nie istnieje na podstawie samych tych analogii twierdzenie, które przenosiłoby defekt kompresji Schura w klasę kohomologii, kwantową miarę pamięci procesu lub fizyczny błąd obfitości jądrowych. Każda taka identyfikacja wymagałaby wspólnego nośnika i jawnego, zachowującego właściwą strukturę odwzorowania. Dojrzałe wyniki tych teorii są więc **gospodarzami** dla odpowiednich fragmentów monografii, a nie szczególnymi przypadkami bez uprzednio dowiedzionego nowego prawa.
 
+### 7.8.1. Transport spektralny, transport łańcuchowy i rozdzielanie widma
+
+Projektowalność \(rU_t=V_tr\) nie określa jeszcze operatora samosprzężonego ani jego miary spektralnej. Aby porównywać rachunki funkcyjne dwóch nośników Hilberta, potrzebujemy ograniczonego operatora splatającego \(J:H_1\to H_2\). Dla nieujemnych samosprzężonych \(A\) na \(H_1\) i \(B\) na \(H_2\) istnieje jednak zaskakująco silne kryterium, w którym **jedna odpowiednio rozdzielająca funkcja** wystarcza.
+
+**Twierdzenie 7.4 (pojedynczy rozdzielający mnożnik spektralny).** Niech \(A,B\ge0\) będą samosprzężone, \(J\in\mathcal B(H_1,H_2)\) oraz \(t_*>0\). Jeżeli
+\[
+J e^{-t_*A}=e^{-t_*B}J, \tag{7.2}
+\]
+to dla każdej ograniczonej funkcji borelowskiej \(m:[0,\infty)\to\mathbb C\) mamy
+\[
+Jm(A)=m(B)J. \tag{7.3}
+\]
+
+*Dowód.* Połóżmy \(T=e^{-t_*A}\), \(S=e^{-t_*B}\). Są to ograniczone samosprzężone kontrakcje o nieujemnym widmie i zerowym jądrze. Z \(JT=SJ\), przy pomocy wielomianów i aproksymacji ciągłej, otrzymujemy \(Jg(T)=g(S)J\) dla ciągłych \(g:[0,1]\to\mathbb C\). Twierdzenie spektralne i przejście przez funkcje proste/borelowskie (np. metodą monotoniczną dla projekcji spektralnych) rozszerzają to na ograniczone \(g\) borelowskie. Dla danego \(m\) kładziemy \(g(u)=m(-\log u/t_*)\) na \((0,1]\), a \(g(0)\) definiujemy dowolnie. Jądra \(T,S\) są zerowe, więc ich projekcje spektralne na \(\{0\}\) znikają. Z rachunku funkcyjnego wynika \(g(T)=m(A)\), \(g(S)=m(B)\), co dowodzi (7.3). \(\square\)
+
+W szczególności pojedynczy dodatni czas \(t_*\) wystarcza dla całej półgrupy cieplnej, ponieważ \(e^{-t_*\lambda}\) rozdziela punkty \([0,\infty)\). Istotny jest warunek różnowartościowości na **wspólnym zbiorze zawierającym oba widma** oraz dostępność wspólnego odwrotnego mnożnika borelowskiego. Różnowartościowość osobno na każdym widmie nie wyklucza kolizji między widmami.
+
+*Kontrprzykład 7.2 (mnożnik nierozdzielający).* Na \(\mathbb C^2\) wybierzmy \(A=\operatorname{diag}(0,1)\), \(B=\operatorname{diag}(0,3)\), \(J=I\) oraz \(h(\lambda)=\cos(\pi\lambda)\). Mamy \(Jh(A)=h(B)J=\operatorname{diag}(1,-1)\), ale \(A\ne B\), a ich widma są odmienne. Zatem równość dla **dowolnego jednego** mnożnika nie wystarcza; twierdzenie 7.4 nie przeczy temu przykładowi, bo \(h\) nie rozdziela wspólnego widma.
+
+Transport widmowy nie przenosi automatycznie *dokładnych brzegów* kompleksu Hilberta. W tym celu trzeba dodatkowo transportować różniczkowanie.
+
+**Twierdzenie 7.5 (transport filtrowanych dokładnych obrazów).** Niech \((H_i^\bullet,d_i)\), \(i=1,2\), będą kompleksami Hilberta o laplasjanach \(\Delta_i^k\). Załóżmy, że dla każdego \(k\) operator \(J_k:H_1^k\to H_2^k\) jest ograniczoną bijekcją, przenosi dokładnie dziedziny
+\[
+J_k D(d_1^k)=D(d_2^k),
+\]
+spełnia zgodność łańcuchową \(d_2^kJ_k=J_{k+1}d_1^k\) na tej dziedzinie oraz dla ograniczonego borelowskiego \(f\) ma własność
+\[
+J_k f(\Delta_1^k)=f(\Delta_2^k)J_k.
+\]
+Dla \(B_i^k=\operatorname{ran}d_i^{k-1}\) zachodzi wtedy
+\[
+J_k(B_1^k)=B_2^k,\qquad
+J_k\!\left(f(\Delta_1^k)B_1^k\right)
+=f(\Delta_2^k)B_2^k. \tag{7.4}
+\]
+
+*Dowód.* Z przeniesienia dziedzin, bijektywności \(J_{k-1}\) i splatania różniczek dostajemy \(J_k\operatorname{ran}d_1^{k-1}=\operatorname{ran}d_2^{k-1}\). Następnie przenosimy \(J_k\) przez \(f(\Delta_1^k)\) i stosujemy pierwszą równość. \(\square\)
+
+Bez surjektywności odpowiedniej mapy na przestrzeni brzegów otrzymujemy na ogół jedynie inkluzję. Transport samych domknięć \(\overline B_i^k\) nie identyfikuje dokładnych obrazów \(B_i^k\). Również to samo *wyrażenie różniczkowe* przy innych warunkach brzegowych może określać inne domknięte operatory.
+
+Twierdzenia 7.4 i 7.5 rozdzielają dwa wymagania: **splatanie rachunku funkcyjnego** oraz **splatanie różniczek i ich dziedzin**. Pierwsze nie daje drugiego. Oba łącznie nie określają praw wieloczasowych interwencji kwantowych ani mikroskopowej identyczności dwóch fizycznych realizacji.
+
 ## 7.9. Ściśle postawione problemy otwarte
 
 **Problem A (wspólna realizacja).** Dla dwóch konkretnych teorii z różnymi typami przygotowań i interwencji ustalić minimalne warunki istnienia jednej realizacji i map zachowujących całą zadaną rodzinę obserwabli oraz odpowiednie prawa złożenia. Równość wybranych obserwabli nie wystarcza.
 
-**Problem B (transport geometryczny).** Dla dwóch określonych kompleksów Hilberta na odmiennych metrykach lub warunkach brzegowych wykazać, kiedy transport mnożników spektralnych zachowuje dokładny obraz, a kiedy wyłącznie jego domknięcie. Potrzebne są twierdzenia o dziedzinach i jednostajnych oszacowaniach odwrotności.
+**Problem B (transport spektralny i łańcuchowy).** Dla dwóch określonych kompleksów Hilberta na różnych metrykach lub warunkach brzegowych skonstruować jawne operatory J_k. Nie wystarcza zastosowanie tej samej funkcji f w f(Δ₁) i f(Δ₂). Należy osobno wykazać: (i) transport dziedzin i zgodność łańcuchową d₂J=Jd₁; (ii) splatanie odpowiednich operatorów samosprzężonych, np. przez rozdzielający mnożnik lub zgodność resolwent; (iii) surjektywność na rzeczywistych przestrzeniach brzegów, jeżeli zachować mamy dokładne obrazy, a nie tylko ich domknięcia. Gdy któregokolwiek warunku brak, należy określić najmocniejszą pozostającą relację oraz wskazać kontrprzykład.
 
 **Problem C (świadectwo celu fizycznego).** Dla konkretnego modelu hadronowego źródła kosmologicznego z zależnością zaniku od aktualnego składu plazmy zbudować certyfikat błędu końcowej obserwabli na podstawie legalnego błędu obu skierowanych szybkości. Tożsamość sieczna i oszacowania (7.1) są narzędziami, ale bez danych o źródle i stabilności sieci nie stanowią jeszcze takiego certyfikatu.
 
@@ -146,4 +188,4 @@ Chiribella, D’Ariano i Perinotti, *Theoretical framework for quantum networks*
 
 Blackwell, *Equivalent Comparisons of Experiments*, *Ann. Math. Stat.* 24, 265–272 (1953) — porządek informacji w eksperymentach.
 
-*Uwaga redakcyjna:* wszystkie powyższe twierdzenia są formułowane jako dedukcje w określonych klasach standardowej matematyki. Ich wspólna prezentacja nie stanowi roszczenia nowości ani dowodu nowego prawa fizycznego.
+Opisane twierdzenia wymagają swoich zadeklarowanych przestrzeni, dziedzin i klas dopuszczalnych map. Sama wspólna postać diagramu nie ustanawia wspólnego mechanizmu fizycznego.
