@@ -121,3 +121,15 @@ E_{\rm hist}(\pi)=R\sqrt{\int_0^\pi\sin^2t\,dt}
 =R\sqrt{\pi/2}>0.
 \]
 Identyfikowalność końcowej obserwabli nie implikuje identyfikowalności trajektorii. Nie jest to kontrprzykład dla Kalmana, którego warunek obserwowalności dotyczy pełnej historii odczytów.
+
+## Granica: przygotowany stan ukryty a pamięć wygenerowana w czasie
+
+Dla blokowego generatora \(\mathcal L=\begin{pmatrix}A&B\\C&D\end{pmatrix}\) dokładnie znane \(y_0=0\) usuwa niepewność w twierdzeniach minimaksowych. Nie wymusza jednak \(Be^{tD}C=0\): sprzężenie \(Cx(t)\) może dopiero w toku ewolucji wzbudzić ukryty sektor, a następnie sprzężenie \(B\) może przenieść jego wpływ na zachowany \(x(t)\). Zanik niepewności początkowej nie jest zanikiem pamięci.
+
+**Most z istniejącą monografią:**
+- Rozdział 1: należy odróżnić źródło \(y_0\) od wymuszonych w czasie zmiennych ukrytych i jądra Mori–Zwanziga/Schura.
+- Rozdział 2: włókno redukcji \((x_0,y_0)\mapsto x_0\) ma promień celu \(R\|M_T\|\) i średnicę \(2R\|M_T\|\).
+- Rozdział 6: równanie sprzężone w postaci \(M_T^*=J_Y^*e^{T\mathcal L^*}P^*G^*\) lokalizuje ukryte przygotowania najsilniej wpływające na określoną obserwablę.
+- Rozdział 7: odczyt w jednej chwili i odczyt całej historii należą do odmiennych klas wierności.
+
+Nie ma automatycznego przeniesienia tych twierdzeń na kwantowy process tensor z interwencjami, nieliniowe sieci BBN ani na kompleksy Hodge’a z różnymi dziedzinami. W szczególności w \(L^2\)-historii zakładamy klasyczne odczyty wyjścia, nie nieinwazyjność dowolnych pomiarów kwantowych.
