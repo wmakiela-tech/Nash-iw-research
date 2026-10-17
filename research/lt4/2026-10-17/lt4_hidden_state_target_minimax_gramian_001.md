@@ -133,3 +133,14 @@ Dla blokowego generatora \(\mathcal L=\begin{pmatrix}A&B\\C&D\end{pmatrix}\) dok
 - Rozdział 7: odczyt w jednej chwili i odczyt całej historii należą do odmiennych klas wierności.
 
 Nie ma automatycznego przeniesienia tych twierdzeń na kwantowy process tensor z interwencjami, nieliniowe sieci BBN ani na kompleksy Hodge’a z różnymi dziedzinami. W szczególności w \(L^2\)-historii zakładamy klasyczne odczyty wyjścia, nie nieinwazyjność dowolnych pomiarów kwantowych.
+
+## Poprzednia literatura — subtraction
+
+1. R. E. Kalman, *Mathematical Description of Linear Dynamical Systems*, SIAM Journal on Control 1 (1963), 152–192, DOI 10.1137/0301010. Podstawowy test widzialności kierunków ukrytych i minimalności realizacji.
+2. M. Heinkenschloss, T. Reis, A. C. Antoulas, *Balanced truncation model reduction for systems with inhomogeneous initial conditions*, Automatica 47 (2011), 559–564, DOI 10.1016/j.automatica.2010.12.002. Znaczenie niezerowych warunków początkowych dla błędu redukcji.
+3. B. Liljegren-Sailer, *Effective error estimation for model reduction with inhomogeneous initial conditions*, Systems & Control Letters 190 (2024), 105840, DOI 10.1016/j.sysconle.2024.105840. Ostre oszacowania początkowego błędu przez gramian obserwowalności.
+4. K.-J. Engel, R. Nagel, *One-Parameter Semigroups for Linear Evolution Equations*, Springer (2000). Struktura półgrup i ograniczenia momentowych twierdzeń dla generatorów nieograniczonych.
+
+**Ocena naukowa:** dokładne minimaksowe błędy, gramian i test momentowy posiadają dojrzałe podstawy w teorii obserwowalności. Zapis nie przedstawia ich jako nowych twierdzeń matematyki ani nowego prawa fizycznego. Wkładem potencjalnym dla monografii jest rygorystyczna, porównawcza konstrukcja trzech różnych zakresów wierności: pojedynczego celu, całej klasycznej historii i globalnej autonomii dynamiki, wraz z fizycznym przykładem wymagającym dwóch pośrednich sprzężeń. Dowód oryginalności silniejszego twierdzenia wymaga dalszego prior-art subtraction i niezależnej recenzji.
+
+**Status:** proof-bearing synthesis, author checked, independent mathematical review pending; zalecana integracja przez pogłębienie §7.3–7.7, nie przez automatyczne tworzenie kolejnego rozdziału.
