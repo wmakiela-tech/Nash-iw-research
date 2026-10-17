@@ -92,3 +92,27 @@ W ogólnym Hilbertowskim \(Z\) tożsamość sumy modułów nie jest prawdziwa be
 \le\|q\|+R\|M(t)\|.
 \]
 Dolna granica wynika z symetrii kuli i nierówności dla pary \(\pm y_0\).
+
+## 5. Rozstrzygające kontrprzykłady
+
+**Przykład 1 (jedna chwila dokładna dla przygotowania, pamięć nadal widoczna).**
+Dla \(X=Y=\mathbb R\), \(A=D=0\), \(B=1\), \(C=-1\), \(G=1\) mamy generator oscylatora
+\[
+\mathcal L=\begin{pmatrix}0&1\\-1&0\end{pmatrix}.
+\]
+Stąd \(M(t)=\sin t\), a dla \(x_0=1,y_0=0\) rzeczywisty cel to \(z(t)=\cos t\), model bez pamięci zaś przewiduje \(1\). Wzór (B) daje dokładnie
+\[
+q(t,1)=-\int_0^t\sin(t-s)\,ds=\cos t-1.
+\]
+W chwili \(t=\pi\) mamy \(M(\pi)=0\), ale \(q(\pi,1)=-2\). Oznacza to zerowy błąd z nieznajomości **początkowego** \(y_0\), a jednocześnie maksymalny błąd pominięcia **pamięci** w określonej chwili. Dla skalarnych ukrytych danych o promieniu \(R\) błąd surowego modelu jest wtedy dokładnie \(2\).
+
+**Przykład 2 (jądro pamięci niezerowe, lecz niewidoczne dla celu).**
+Weźmy \(X=\mathbb R^2\), \(Y=\mathbb R\), \(A=0\), \(D=0\), \(B y=(0,y)\), \(C(x_1,x_2)=x_2\), \(G(x_1,x_2)=x_1\). Wtedy
+\[
+K(t)=BC=
+\begin{pmatrix}0&0\\0&1\end{pmatrix}\ne0,
+\]
+lecz \(M(t)=0\) dla każdego \(t\), ponieważ sektor \(x_1\) nie jest sprzężony z sektorem ukrytym. Mimo niezerowej pamięci w dynamice \(x_2\), obserwabla \(x_1\) jest dokładnie opisana równaniem bez pamięci. Nie ma sprzeczności: cel nie rozdziela wszystkich stanów \(X\).
+
+**Przykład 3 (brak pamięci przy silnej zależności od przygotowania).**
+Dla \(X=Y=\mathbb R\), \(A=D=C=0\), \(B=1\) mamy \(K(t)=0\), lecz \(M(t)=t\), więc \(z(t)=x_0+t y_0\). Przy \(y_0=0\) model bez pamięci jest dokładny dla wszystkich chwil; przy nieznanym \(y_0\) nie jest. Wniosek odwrotny do A.1 jest zatem fałszywy.
