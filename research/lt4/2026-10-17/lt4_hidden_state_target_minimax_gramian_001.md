@@ -103,3 +103,21 @@ M_T^*=J_Y^*e^{T\mathcal L^*}P^*G^*
 \tag{7}
 \]
 przenosi dualny wektor celu do kierunku ukrytego przygotowania. To bezpośrednia, poprawnie typowana realizacja rachunku wrażliwości z rozdziału VI: „najgroźniejszy” ukryty stan leży w kierunku maksymalizującym normę \(M_T\), a dla jednowymiarowego \(Z\) w kierunku \(M_T^*1\) (o ile ten wektor jest niezerowy). W nieskończonym wymiarze normowy maksymalizator może nie istnieć; supremum z twierdzenia 1 nie zakłada jego osiągania.
+
+## Przykład A. Opóźniona widzialność sektora ukrytego
+
+Weźmy \(\dot u=v,\ \dot v=h,\ \dot h=0\), z zachowanym stanem \(x=(u,v)\), ukrytym \(y=h\) oraz celem \(u(T)\). Generator ma \(\mathcal L^3=0\), a \(M_0=M_1=0\), \(M_2=1\). Dlatego
+\[
+u(T)=u_0+Tv_0+\frac{T^2}{2}h_0.
+\]
+Dla \(|h_0|\le R\) dokładny błąd końcowej prognozy to \(RT^2/2\), a błąd całej historii w \(L^2(0,T)\) to \(RT^{5/2}/\sqrt{20}\). Przy \(R=1,T=0.4\): odpowiednio \(0.08\) oraz \(0.0226274169979695\). Ukryty sektor nie ma wpływu na wartość ani na pierwszą pochodną celu w chwili początkowej, lecz pojawia się w drugiej pochodnej.
+
+## Przykład B. Pełna dokładność punktowa i błąd całej historii
+
+Dla oscylatora \(\dot x=y,\ \dot y=-x\), znanego \(x_0\), nieznanego \(|y_0|\le R\) i wyjścia \(x(t)\) otrzymujemy \(M_t=\sin t\). Przy \(T=\pi\):
+\[
+E_{\rm end}(\pi)=0,\qquad
+E_{\rm hist}(\pi)=R\sqrt{\int_0^\pi\sin^2t\,dt}
+=R\sqrt{\pi/2}>0.
+\]
+Identyfikowalność końcowej obserwabli nie implikuje identyfikowalności trajektorii. Nie jest to kontrprzykład dla Kalmana, którego warunek obserwowalności dotyczy pełnej historii odczytów.
