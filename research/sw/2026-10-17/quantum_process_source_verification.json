@@ -1,0 +1,106 @@
+{
+  "artifact_id": "IW_SW_QUANTUM_PROCESS_SOURCE_VERIFICATION_001_20261017",
+  "exposure": "PUBLIC",
+  "status": "FROZEN",
+  "as_of": "2026-10-17",
+  "purpose": "Bounded verification of already identified primary references, not a novelty or exhaustive literature search",
+  "question": "Do the stated finite-dimensional Choi and fixed-order comb conventions have the cited standard hosts?",
+  "method": "Direct full-text access; source anchors checked through web open/find. No date, language, citation-count or subject filter.",
+  "direct_verification_actions": [
+    {
+      "action": "open",
+      "url": "https://arxiv.org/pdf/0904.4483"
+    },
+    {
+      "action": "open",
+      "url": "https://arxiv.org/pdf/1801.09811"
+    },
+    {
+      "action": "open",
+      "url": "https://cs.uwaterloo.ca/~watrous/TQI/"
+    },
+    {
+      "action": "open",
+      "url": "https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf"
+    },
+    {
+      "action": "find",
+      "url": "https://arxiv.org/pdf/0904.4483",
+      "pattern": "Theorem 5"
+    },
+    {
+      "action": "find",
+      "url": "https://arxiv.org/pdf/1801.09811",
+      "pattern": "causal"
+    },
+    {
+      "action": "find",
+      "url": "https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf",
+      "pattern": "Theorem 2.22"
+    },
+    {
+      "action": "find",
+      "url": "https://arxiv.org/pdf/0904.4483",
+      "pattern": "Theorem 6"
+    },
+    {
+      "action": "open",
+      "url": "https://arxiv.org/pdf/0904.4483",
+      "lineno": 1343
+    },
+    {
+      "action": "open",
+      "url": "https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf",
+      "lineno": 1110
+    },
+    {
+      "action": "open",
+      "url": "https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf",
+      "lineno": 1480
+    }
+  ],
+  "sequence_note": "The direct verification sequence is recorded; exploratory search-assisted discovery and repeated navigation were not retained as an exhaustive search log and are not evidence of absence or novelty.",
+  "screening": "Retain cited primary texts and author-hosted book; exclude search snippets, secondary summaries and unrelated search results from the theorem assessment.",
+  "sources": [
+    {
+      "id": "Watrous2018TQI",
+      "retrieval": "Author-hosted complete Chapter 2 available; targeted statements and proofs read",
+      "anchors": [
+        "Theorem 2.22",
+        "Theorem 2.26"
+      ],
+      "application": "Finite-dimensional Choi CP and TP equivalences",
+      "transfer_limit": "No infinite-dimensional claim"
+    },
+    {
+      "id": "Chiribella2009Networks",
+      "retrieval": "Complete arXiv PDF available; relevant definitions and theorems read",
+      "anchors": [
+        "Eq. (2)-(3)",
+        "Theorem 5, Eq. (40)",
+        "Theorem 6"
+      ],
+      "application": "Unnormalized Choi convention and deterministic fixed-order comb recursion",
+      "transfer_limit": "Not arbitrary indefinite-order process matrices"
+    },
+    {
+      "id": "Pollock2018Markov",
+      "retrieval": "Complete arXiv PDF available; causal-break discussion and swap illustration read",
+      "anchors": [
+        "Main-text operational Markov criterion",
+        "Appendix B"
+      ],
+      "application": "Operational interventions and history dependence",
+      "transfer_limit": "Does not certify specifically quantum memory in these classical-bit examples"
+    }
+  ],
+  "stop_rule": "Stop once the exact hypotheses and conventions of the assigned finite-dimensional checks have a verified mature host.",
+  "side_harvest": [],
+  "side_harvest_reason": "No material new research topic arose during this bounded reference check.",
+  "limits": [
+    "No literature-wide novelty assessment",
+    "No independent full re-proof of the general quantum-network realization theorem",
+    "No claim that every bibliographic item of the manuscript was audited"
+  ],
+  "bibliography": "research/sw/2026-10-17/quantum_process_references.bib"
+}

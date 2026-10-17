@@ -1,0 +1,183 @@
+{
+  "artifact_id": "IW_SW_QUANTUM_PROCESS_EXACT_WITNESSES_001_20261017",
+  "status": "PASS",
+  "arithmetic": "Gaussian rational numbers Q(i); no floating point",
+  "python_version": "3.12.14",
+  "checks_passed": 28,
+  "conventions": {
+    "joint_order": [
+      "S",
+      "E"
+    ],
+    "choi_order": [
+      "output",
+      "input"
+    ],
+    "comb_order": [
+      "output1",
+      "input1",
+      "output0",
+      "input0"
+    ],
+    "choi_normalization": "unnormalized"
+  },
+  "values": {
+    "retained_history": [
+      [
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2"
+      ]
+    ],
+    "refreshed_history": [
+      [
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ]
+    ],
+    "wrong_order_history": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "pauli_coordinate_determinant": "-2",
+    "transpose_choi_negative_eigenvalue": "-1",
+    "bell_partial_transpose_negative_eigenvalue": "-1/2",
+    "comb_trace_retained_and_refreshed": "4",
+    "intervention_total_variation": "1"
+  },
+  "checks": [
+    {
+      "id": "controlled_gates_and_swap_unitary",
+      "status": "PASS"
+    },
+    {
+      "id": "autonomous_group_projector_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "autonomous_group_endpoint_phase_minus_one",
+      "status": "PASS"
+    },
+    {
+      "id": "one_step_channel_on_all_matrix_units",
+      "status": "PASS"
+    },
+    {
+      "id": "two_retained_steps_are_identity_on_all_matrix_units",
+      "status": "PASS"
+    },
+    {
+      "id": "refreshed_channel_is_idempotent_on_all_matrix_units",
+      "status": "PASS"
+    },
+    {
+      "id": "semigroup_failure_witness",
+      "status": "PASS"
+    },
+    {
+      "id": "history_retained",
+      "status": "PASS"
+    },
+    {
+      "id": "history_refreshed",
+      "status": "PASS"
+    },
+    {
+      "id": "history_normalization",
+      "status": "PASS"
+    },
+    {
+      "id": "negative_control_instrument_order_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "choi_reconstruction_including_imaginary_coherence",
+      "status": "PASS"
+    },
+    {
+      "id": "negative_control_missing_transpose_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "choi_trace_preserving",
+      "status": "PASS"
+    },
+    {
+      "id": "transpose_choi_is_swap",
+      "status": "PASS"
+    },
+    {
+      "id": "transpose_exact_negative_eigenvector",
+      "status": "PASS"
+    },
+    {
+      "id": "bell_partial_transpose_negative_half",
+      "status": "PASS"
+    },
+    {
+      "id": "four_density_operators_span",
+      "status": "PASS"
+    },
+    {
+      "id": "linear_relation_failure_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "comb_first_causality",
+      "status": "PASS"
+    },
+    {
+      "id": "comb_second_causality",
+      "status": "PASS"
+    },
+    {
+      "id": "comb_unnormalized_trace",
+      "status": "PASS"
+    },
+    {
+      "id": "comb_spectral_polynomials",
+      "status": "PASS"
+    },
+    {
+      "id": "negative_control_trace_one_comb_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "swap_transfers_arbitrary_input_on_all_matrix_units",
+      "status": "PASS"
+    },
+    {
+      "id": "identical_endpoint_channels_on_all_matrix_units",
+      "status": "PASS"
+    },
+    {
+      "id": "intervention_output_formula_on_all_matrix_units",
+      "status": "PASS"
+    },
+    {
+      "id": "perfect_intervention_distinguishability",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Concrete finite-dimensional witnesses and exact linear identities; general proofs remain analytic.",
+  "limits": [
+    "No general supermap-realization proof by finite tests.",
+    "No claim of specifically quantum environmental memory.",
+    "No equality at all continuous times for the two-endpoint example.",
+    "Continuous group exponential identity is proved analytically from the projector, not numerically sampled.",
+    "No novelty, physical-stability or gravity claim."
+  ]
+}
