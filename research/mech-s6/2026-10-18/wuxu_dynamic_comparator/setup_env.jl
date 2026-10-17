@@ -1,5 +1,6 @@
 using Pkg
 
+ENV["JULIA_PKG_PRECOMPILE_AUTO"] = "0"
 envdir = abspath(ARGS[1])
 Pkg.activate(envdir)
 
@@ -12,16 +13,12 @@ specs = [
     PackageSpec(name="IrrationalConstants", version="0.2.6"),
     PackageSpec(name="JLD2", version="0.6.3"),
     PackageSpec(name="SpecialFunctions", version="2.6.1"),
+    PackageSpec(
+        url="https://github.com/Fenyutanchan/NaturalUnits.jl.git",
+        rev="4a9f007ff1df416c9fef28c4d83d8fe8846099cf",
+    ),
 ]
 
-for spec in specs
-    Pkg.add(spec)
-end
-
-Pkg.add(PackageSpec(
-    url="https://github.com/Fenyutanchan/NaturalUnits.jl.git",
-    rev="4a9f007ff1df416c9fef28c4d83d8fe8846099cf",
-))
-
+Pkg.add(specs)
 Pkg.precompile()
 Pkg.status()
