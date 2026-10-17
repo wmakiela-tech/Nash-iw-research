@@ -116,3 +116,39 @@ lecz \(M(t)=0\) dla każdego \(t\), ponieważ sektor \(x_1\) nie jest sprzężon
 
 **Przykład 3 (brak pamięci przy silnej zależności od przygotowania).**
 Dla \(X=Y=\mathbb R\), \(A=D=C=0\), \(B=1\) mamy \(K(t)=0\), lecz \(M(t)=t\), więc \(z(t)=x_0+t y_0\). Przy \(y_0=0\) model bez pamięci jest dokładny dla wszystkich chwil; przy nieznanym \(y_0\) nie jest. Wniosek odwrotny do A.1 jest zatem fałszywy.
+
+## 6. Z próbek czasowych do ilościowego certyfikatu, z normą generatora
+
+Załóżmy dodatkowo, że **pełny** generator \(\mathcal L\) jest ograniczony. Niech \(T>0\), \(\ell=\|\mathcal L\|\), \(K_G=\|GP\|\,\|J_Y\|\). Wówczas \(M(t)\) jest różniczkowalne w normie operatorowej i
+\[
+\sup_{0\le t\le T}\|M'(t)\|
+\le K_G\ell e^{T\ell}=:L_*.
+\tag{F}
+\]
+
+**Twierdzenie C (skończony certyfikat trajektorii przy kontrolowanej szybkości).**
+Niech węzły \(0=t_0<t_1<\dots<t_N=T\) mają maksymalny odstęp \(h\). Jeśli uzyskano wiarygodne oszacowania **norm operatorów**
+\(\|M(t_j)\|\le \varepsilon\) dla wszystkich \(j\), to
+\[
+\sup_{0\le t\le T}\|M(t)\|
+\le \varepsilon+\tfrac12 h L_*=:\delta_{\rm grid},
+\tag{G}
+\]
+\[
+\left\|\int_0^T M(t)^*M(t)\,dt\right\|^{1/2}
+\le \sqrt{T}\,\delta_{\rm grid},
+\tag{H}
+\]
+oraz dla przygotowanego \(y_0=0\)
+\[
+\|G P S(T)J_Xx_0-G e^{TA}x_0\|
+\le \delta_{\rm grid}\,\|C\|\int_0^T\|e^{sA}x_0\|\,ds.
+\tag{I}
+\]
+Dla skalarnej obserwabli \(G\) i ukrytego przygotowania \(\|y_0\|\le R\), ryzyko surowego modelu bez pamięci jest dodatkowo ograniczone przez prawą stronę (I) powiększoną o \(R\varepsilon\), ponieważ \(T\) jest próbkowanym węzłem.
+
+*Dowód.* Wzór \(M'(t)=GP\mathcal L e^{t\mathcal L}J_Y\) i \(\|e^{t\mathcal L}\|\le e^{t\ell}\) dają (F). Każdy \(t\in[0,T]\) jest odległy od pewnego węzła \(t_j\) o co najwyżej \(h/2\). Twierdzenie o wartości średniej w normie operatorowej daje
+\(\|M(t)\|\le\|M(t_j)\|+L_*|t-t_j|\le\delta_{\rm grid}\).
+Stąd (H) przez oszacowanie kwadratowej całki, a (I) przez dokładny wzór (B). Ostatni wniosek wynika ze skalarnej równości (E) i \(\|M(T)\|\le\varepsilon\). \(\square\)
+
+**Zakres.** Twierdzenie C NIE mówi, że skończone testy dokładnie zerowych wartości bez znajomości generatora potwierdzają zerowanie całego \(M(t)\). Daje certyfikat **przy znanej normowej stałej szybkości** i kontroli pełnych operatorów \(M(t_j)\), a nie jednego wyniku pomiarowego na nieznanym \(y_0\). Dla ogólnych generatorów \(C_0\) operatorowa pochodna może nie istnieć; wtedy należy osobno wykazać odpowiedni moduł ciągłości na klasie badanych danych. W szczególności nie narusza to kontrprzykładu translacyjnego z rozdziału I, gdzie wszystkie pochodne w zerze mogą znikać mimo późniejszej niezerowej pamięci.
