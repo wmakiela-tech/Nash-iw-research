@@ -652,3 +652,58 @@ These are source-interface numbers only.
 They do **not** imply a factor-two change in \(A\), \(B\), \(F_{\rm had}\), \(X_n\), \(Y_p\), D/H, or any PBH abundance bound.
 
 The audit establishes only that the source correction is numerically material at the injection interface and is not a machine-precision or tiny-tail effect.
+
+
+## 19. Mass-independent relative source-map error
+
+For every affected tracked single-species source under the declared symmetric split,
+
+$$
+S_{\rm current}=Q_{\rm pair},
+\qquad
+S_{\rm sym}=\frac12Q_{\rm pair}.
+$$
+
+Therefore, wherever the aggregate source is nonzero,
+
+$$
+\frac{S_{\rm current}}{S_{\rm sym}}=2,
+$$
+
+and the relative source-interface overcount with the symmetric object as reference is exactly
+
+$$
+\frac{S_{\rm current}-S_{\rm sym}}{S_{\rm sym}}=1.
+$$
+
+Equivalently, the repair removes one half of the source currently injected into each affected tracked population:
+
+$$
+\frac{S_{\rm current}-S_{\rm sym}}{S_{\rm current}}=\frac12.
+$$
+
+This statement is mass independent because it is a source-object mapping result, not a statement about the mass dependence of the aggregate BlackHawk columns.
+
+It applies separately to:
+
+- \(\pi^-\),
+- \(\pi^+\),
+- \(K^-\),
+- \(\bar p\),
+- \(\bar n\).
+
+It does not apply to \(K_L^0\), whose source column is unchanged.
+
+Therefore the source-map mismatch is **order unity at the affected injection interface inside the already supported mass domain**.
+
+This creates a priority ordering:
+
+1. resolve the known charge-pair source-map mismatch on supported masses;
+2. measure its effect through the current executor, including floor-active intervals;
+3. only then use terminal high-energy E2b/E2c work to refine the lower-mass source extension.
+
+This is a workflow priority, not a claim that the final BBN error is order unity.
+
+Firewall:
+
+**ORDER-UNITY SOURCE-MAP ERROR ≠ ORDER-UNITY BBN TARGET ERROR.**
