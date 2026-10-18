@@ -11,7 +11,9 @@ nie mogę wystawić go sobie sam.
 Autorstwo monografii i wszelkie decyzje redakcyjne należą do LT4. Zwroty 004–007 audytują jej tekst;
 008–011 nie są audytem, tylko próbą rozwiązania problemu, który monografia stawia jako otwarty
 (§7.5b.5 — czujnik oddziałujący zwrotnie na układ). 010 atakuje 009 i zwęża jego zakres,
-011 atakuje 010 i uogólnia go na dowolny generator.
+011 atakuje 010 i uogólnia go na dowolny generator. 012 wraca do audytu: domyka dziurę
+§2.8 z 007, koryguje 011 i zgłasza **gravity well** — pięć kolejnych zwrotów na jednym
+wątku, wszystkie nieaudytowane. Decyzja o fokusie należy do Moderatora.
 
 Prerejestracje (`PREREG_*.md`) są zapisywane i haszowane **przed** uruchomieniem kodu,
 który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są wymienione niżej.
@@ -28,6 +30,7 @@ który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są 
 | `IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018.md` | domkniecie dwunastki: 6 swiadkow, 3 odsylacze wewnatrz manuskryptu, 1 przeredagowanie, 1 cytowanie, 2 otwarte | `05e35659aae944a9ecdeab5f747a1db2940edffe173f6ff32162a32148adbcbb` |
 | `IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018.md` | uogolnienie na dowolny generator: sufit zachodzi wtedy i tylko wtedy, gdy mu_2(G) <= 0 (norma logarytmiczna). Oscylator nie byl szczegolny jako oscylator. Kontrprzykad M13 lezy dokladnie na granicy i lamie sufit tak samo jak zlamal twierdzenie o normie logarytmicznej | `d4fad87f32c7d55f5c1a1e6e3a8ae84735fb3f7b5696b823e58a8d4c4391dd0c` |
 | `IW_NC_SACRIFICIAL_MEASUREMENT_AND_PROTOCOL_CEILING_009_20261018.md` | sufit niezalezny od protokolu M < 1/gamma (dowod elementarny) oraz pomiar OFIARNY: zysk 1.9x przy ograniczonych czasach pomiaru | `577617b58c05bed8a0aa34323a9e0378bdd30b8f312bf83368bea309f597630e` |
+| `IW_NC_SECTOR_ELIMINATION_WITNESS_AND_CEILING_TABLE_CLOSURE_012_20261018.md` | domkniecie dziury par.2.8 z 007: jawny wymierny swiadek rozdzielajacy garbling od eliminacji sektora PO POSTSELEKCJI, wiec nie przez slad; plus korekta 011 par.6.4 i domknieta tabela 2x2 (sufit wymaga wspolosiowosci ORAZ mu_2 <= 0); plus zgloszenie gravity well | `cf6e835461ea191912cb0abdd0e20dc0ab8d0494dac366e0545af8523719d50a` |
 
 ## Kod
 
@@ -45,7 +48,12 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/bridge.py` | `34848e5a1ec64fdd73ac99dc224fe0d4221d9e06b79733a7a0df66211e26ced5` |
 | `code/cont.py` | `f7bac31c63b846a869bb4c8ad38047732ad96a6a8d186ea4d08ba8429a4af54d` |
 | `code/cont2.py` | `b5e6677f8c737d98d26541a437fa018d8c2ce53d0784a5203bd1d1b4902d2dd2` |
+| `code/cross.py` | `83a18bbdd64797ae12e7fdd0bf28a3d5cde31db45c93041ece87893fd576a961` |
+| `code/cross3.py` | `ebdad567d8ceedd71b329efc7edc18e1e3dd455ec9f1f00efc81b71ffe129aa6` |
 | `code/delay.py` | `cccbc2a79d96dc2b2ec24f36c9403129ac076da2eae1d6ff18c39124e82c1fbf` |
+| `code/garble.py` | `5924cdbcd6d077f699d1841b5274b43f4870081cedf194b612a1337c20b9e2c5` |
+| `code/garble2.py` | `fefb47e8236358ef173624805697bebb646528430d5687cfa240e2a65ca5a154` |
+| `code/garble3.py` | `35da3d0918e0cb76b703c293b71b6d016201cc08c96848479b5dcb2fa945a47c` |
 | `code/gen.py` | `f4980fed2d8f0014a4137613891c2e37ce915f595f588adefd197d3eaaef3977` |
 | `code/gen2.py` | `c5848d11ed3ccc5b491ea9a65a0c00009d1e381c5b2ca0b939891316a3fd585c` |
 | `code/gen3.py` | `e005ad71922e00e9b356307f17c8c006f03276eaa71c6a24f89c8e52d4ec9f36` |
