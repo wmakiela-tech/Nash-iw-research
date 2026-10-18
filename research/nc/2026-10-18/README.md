@@ -9,8 +9,9 @@ proweniencji i zatwierdzenia Moderatora. **Audyt zewnętrzny obowiązkowy** per 
 nie mogę wystawić go sobie sam.
 
 Autorstwo monografii i wszelkie decyzje redakcyjne należą do LT4. Zwroty 004–007 audytują jej tekst;
-008–010 nie są audytem, tylko próbą rozwiązania problemu, który monografia stawia jako otwarty
-(§7.5b.5 — czujnik oddziałujący zwrotnie na układ). 010 atakuje 009 i zwęża jego zakres.
+008–011 nie są audytem, tylko próbą rozwiązania problemu, który monografia stawia jako otwarty
+(§7.5b.5 — czujnik oddziałujący zwrotnie na układ). 010 atakuje 009 i zwęża jego zakres,
+011 atakuje 010 i uogólnia go na dowolny generator.
 
 Prerejestracje (`PREREG_*.md`) są zapisywane i haszowane **przed** uruchomieniem kodu,
 który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są wymienione niżej.
@@ -25,6 +26,7 @@ który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są 
 | `IW_NC_LT4_NONMAP_LAYER_AUDIT_005_20261018.md` | audyt warstwy non-mapow jako klasy: 96 zdan negatywnych, 44 ze swiadkiem, probka 10 swiadkow zweryfikowana 10/10, 12 dziur ze wzorcem na granicach rezimu | `8eeb5bc1da55b18f667f9a17eecfe389ebc2ed2441517b0dad2a65594f84427b` |
 | `IW_NC_LT4_PRIOR_ART_SUBTRACTION_FULL_MANUSCRIPT_004_20261018.md` | prior-art subtraction calej monografii: 68 obiektow numerowanych; po odjeciu gospodarzy i dwoch demotacjach zostaje 5 kandydatow do hierarchii B; 7 niecytowanych gospodarzy | `2d5303803b88c20511c8dc6a8ff425db2a56804623bfc5877db43764600c215a` |
 | `IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018.md` | domkniecie dwunastki: 6 swiadkow, 3 odsylacze wewnatrz manuskryptu, 1 przeredagowanie, 1 cytowanie, 2 otwarte | `05e35659aae944a9ecdeab5f747a1db2940edffe173f6ff32162a32148adbcbb` |
+| `IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018.md` | uogolnienie na dowolny generator: sufit zachodzi wtedy i tylko wtedy, gdy mu_2(G) <= 0 (norma logarytmiczna). Oscylator nie byl szczegolny jako oscylator. Kontrprzykad M13 lezy dokladnie na granicy i lamie sufit tak samo jak zlamal twierdzenie o normie logarytmicznej | `d4fad87f32c7d55f5c1a1e6e3a8ae84735fb3f7b5696b823e58a8d4c4391dd0c` |
 | `IW_NC_SACRIFICIAL_MEASUREMENT_AND_PROTOCOL_CEILING_009_20261018.md` | sufit niezalezny od protokolu M < 1/gamma (dowod elementarny) oraz pomiar OFIARNY: zysk 1.9x przy ograniczonych czasach pomiaru | `577617b58c05bed8a0aa34323a9e0378bdd30b8f312bf83368bea309f597630e` |
 
 ## Kod
@@ -37,12 +39,17 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 |---|---|
 | `code/PREREG_ALIGN.md` | `1c075b7afe970e4b3e246b63f655608c4a522348761359b72ad4cc3a755491ad` |
 | `code/PREREG_DELAY.md` | `3fc3386a23f25ab70269950beaf7bce232f9d3ae31afcc20af9de5658d54cb18` |
+| `code/PREREG_GEN.md` | `9241090d1d5e1267b1c544f6fef697bc9374661f2da790cd1d20c8ff197b96a5` |
 | `code/PREREG_L2.md` | `5399acbcf0c908009dbb6cfadca2df82ce42902fca2ce4f843f622ae619fb591` |
 | `code/backaction.py` | `3a9c197274d4b99ba72db335ab52ec8e43d0f5c1b392372aa0290c4e171f9775` |
 | `code/bridge.py` | `34848e5a1ec64fdd73ac99dc224fe0d4221d9e06b79733a7a0df66211e26ced5` |
 | `code/cont.py` | `f7bac31c63b846a869bb4c8ad38047732ad96a6a8d186ea4d08ba8429a4af54d` |
 | `code/cont2.py` | `b5e6677f8c737d98d26541a437fa018d8c2ce53d0784a5203bd1d1b4902d2dd2` |
 | `code/delay.py` | `cccbc2a79d96dc2b2ec24f36c9403129ac076da2eae1d6ff18c39124e82c1fbf` |
+| `code/gen.py` | `f4980fed2d8f0014a4137613891c2e37ce915f595f588adefd197d3eaaef3977` |
+| `code/gen2.py` | `c5848d11ed3ccc5b491ea9a65a0c00009d1e381c5b2ca0b939891316a3fd585c` |
+| `code/gen3.py` | `e005ad71922e00e9b356307f17c8c006f03276eaa71c6a24f89c8e52d4ec9f36` |
+| `code/gen4.py` | `1642682fc21ca3b37252c66255c0c633782e4ed5e191d1481e181e39d1d2cd10` |
 | `code/holes.py` | `a20b843fa9fa812f426e2ac819da4e14f09ed0fbf55919fab58992f4cc760d76` |
 | `code/l2.py` | `205d51c30e47ae036f30290b374202f62fb94443e9f8b21b7309b7585a051464` |
 | `code/l2b.py` | `74e27c701491dc8bd76f44c51db7960cca5760553b92c4729b7add3b8619ced3` |
@@ -77,7 +84,19 @@ Zapisane celowo. Są materiałem (error-as-data), a bez bazowej stopy błędu au
 - prerejestrowana predykcja A3, że niewspółosiowość **podnosi** sufit do `1/|cos φ|` —
   **FAŁSZYWA w rodzaju, nie w wartości**: podniesionego sufitu nie ma, nie ma żadnego;
 - `π/2` użyte jako antywęzeł prędkości, gdy jest **węzłem** — tę samą chwilę nazwałem
-  „czasem ślepym" w 009; wykryte przez tożsamościowo zerowe wyjście, nie przez przegląd.
+  „czasem ślepym" w 009; wykryte przez tożsamościowo zerowe wyjście, nie przez przegląd;
+- cztery z sześciu predykcji prerejestrowanych w `PREREG_GEN.md` — **FAŁSZYWE** (011 §5),
+  w tym warunek wyrównania z metryką, który okazał się pozorny: przy `P = I` spełnia go
+  każdy kierunek odczytu;
+- zamiatanie kierunku po **ćwiartce** wziętej za wszystkie kierunki — dwie tabele
+  orzekły wtedy przeciwnie na tej samej macierzy;
+- wynik zerowy z niedomiarowej próby odczytany jako potwierdzenie hipotezy, którą
+  jej własny poprzednik już obalił.
+
+Cztery z tych błędów to jedna awaria: **skan pokrywający obszar, który wygląda na pełny
+i nie jest, czytany jako rozstrzygnięcie.** Reguła zaproponowana w 011 §5 (kontrola
+pokrycia + kontrola czułości) jest odpowiedzią i została zastosowana do samej siebie
+w tym samym przebiegu.
 
 Dwie reguły proceduralne zaproponowane po tych błędach, do decyzji Moderatora:
 
