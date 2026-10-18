@@ -141,3 +141,9 @@ Forward clarification from 2026-10-03 supersedes this instrument's former exact-
 `PACKET_INTEGRITY != SUCCESSOR_AUTHORITY`.
 `SYSS_VISIBILITY != MANDATORY_ROUTING`.
 `FIRST_MATERIAL_RETURN_MAY_PROVE_CONTINUITY`.
+
+## First action — mandatory current-rule orientation (2026-10-18)
+
+Before unrestricted source exploration or substantive work, resolve and **read applicable current versions** of SYSTEM_CORE, CURRENT_APPLICABLE index, `docs/START_HERE_CURRENT.md`, OW `docs/WORK_AND_REPRODUCIBILITY_PROTOCOL.md`, `docs/STORAGE_AND_SYNC_POLICY.md`, `docs/REPOSITORY_STRUCTURE.md`, `docs/SURFACE_ARCHITECTURE.md`, current system communication playbook, succession orientation default, and role/founding and active-executor/exposure instructions. A parent-provided pointer or obsolete copied passage is not evidence of reading the current rules. The first material successor return should briefly state resolved versions, protected exceptions and real ACCESS_BLOCKED/UNKNOWN items; no separate ACK or mandatory lint ceremony.
+
+For cold/blind/protected G1, establish allow/deny firewall first and read only legally permitted operational sources; do not expose parent scientific answers. Then perform mode-specific G1/state rehydration, reconcile inherited real obligations, and resume autonomous role work. An unresolved safety/authority question stops only its dependent action. SUCCESSION != ACTIVATION; BOOTSTRAP_SEMANTICS > TEMPLATE_IDENTITY; SCIENCE_FIRST.
