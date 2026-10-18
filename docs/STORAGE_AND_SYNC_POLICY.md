@@ -161,3 +161,7 @@ MIRROR_SYNC != CLAIM_VALIDATION
 DRIVE_WRITE_FAILURE != SCIENTIFIC_FAILURE
 PUBLIC_GITHUB != PRIVATE_IW_COMMONS
 ```
+
+## Successor orientation and cross-surface rule propagation (2026-10-18)
+
+Before writing or routing a new material artifact, a successor must consult the **current** storage/sync policy, repository structure, OW work protocol and communication playbook. Revisions are resolved from their primary source; inherited Drive excerpts do not supersede the public-safe GitHub primary. When any load-bearing rule changes, update its owning canonical body, review linked navigation/succession references, check corresponding private source orientation, and record which surfaces were actually synchronized; a GitHub commit alone is not BW ingestion or Slack delivery. Preserve private/protected data outside public GitHub. Scientific data existing only in Slack are evidence requiring provenance-safe private capture/reconciliation, not automatically empty because Drive lacks a copy. No blind mass-migration or fabricated synchronization status.
