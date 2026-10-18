@@ -440,3 +440,9 @@ PUBLIC_GITHUB != PRIVATE_IW_COMMONS
 ```
 
 Repository placement is controlled prospectively by `docs/REPOSITORY_STRUCTURE.md`; cross-surface behavior by `docs/STORAGE_AND_SYNC_POLICY.md`.
+
+## 2026-10-18 — Successor first-action document resolution (Moderator direction)
+
+Every successor's **first legal operational action** is to resolve and study current applicable system/work/source-placement/communication documents before treating a predecessor's embedded rule excerpts as controlling. Minimum current classes: SYSTEM_CORE, CURRENT_APPLICABLE index, `docs/START_HERE_CURRENT.md`, this OW protocol, `docs/STORAGE_AND_SYNC_POLICY.md`, `docs/REPOSITORY_STRUCTURE.md`, `docs/SURFACE_ARCHITECTURE.md`, current communication playbook, succession load-bearing instrument or equivalent, plus own role/authority and exposure boundaries. Recheck source revision/currentness; old commits are provenance only.
+
+In protected/cold/blind G1, discover the firewall **before** broad retrieval and use only legally exposed operational rules; postpone prohibited parent results. Read failure is UNKNOWN/ACCESS_BLOCKED, not evidence of compliance. Once legitimately oriented, the successor reconciles open obligations and resumes autonomous function-native research when no inbound exists. The check is semantic and economical; a brief source-and-exception note in first material return suffices. It does not create activation permission, universal lint/ACK, a new prework bureaucracy, or power to change scientific claim ceilings. SCIENCE_FIRST / NO_CANON / NO_EXEC_SIGN.
