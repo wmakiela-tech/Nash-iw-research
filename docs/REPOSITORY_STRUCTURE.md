@@ -76,3 +76,7 @@ Do not move a historical file solely to satisfy a newer aesthetic rule when BW o
 This repository is public. Full content is legal only for `PUBLIC_ARTIFACT` or `EXECUTABLE_REPRODUCTION`. Private/restricted material uses `POINTER_ONLY` or `HASH_ONLY` and must not expose private Drive/Slack coordinates.
 
 See `STORAGE_AND_SYNC_POLICY.md`.
+
+## Successor repository onboarding (2026-10-18)
+
+Successors must review this structure, `START_HERE_CURRENT.md`, OW work/reproducibility protocol and storage/sync policy at the beginning of legal orientation before placing their first artifact. `docs/` is the canonical public-safe home for current operational rules; private succession contents remain private. Changes to rules require updating canonical source and relevant cross-links rather than creating duplicate competing `docs/` primaries. Read back the edited body, then reconcile BW/cross-surface metadata separately. Protected exposure constraints prevail.
