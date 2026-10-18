@@ -115,3 +115,9 @@ PUBLIC_GITHUB != PRIVATE_IW_COMMONS
 GITHUB_POINTER != DELIVERY != SCIENTIFIC_VALIDATION
 GITHUB_DOCUMENTATION != CURRENT_SCIENTIFIC_TRUTH != CANON != EXEC_SIGN
 ```
+
+## Mandatory successor entry orientation (2026-10-18)
+
+At the beginning of succession rehydration, before material work or unrestricted retrieval, resolve and **read the current applicable system and work documents**: SYSTEM_CORE and the current-applicable index; this START_HERE; `WORK_AND_REPRODUCIBILITY_PROTOCOL.md` (OW); `STORAGE_AND_SYNC_POLICY.md`; `REPOSITORY_STRUCTURE.md`; `SURFACE_ARCHITECTURE.md`; current communication playbook; the succession load-bearing rules (or equivalent); and the cell's actual founding/role and protected-exposure instructions. Use current source revisions, not merely file names or parent packet quotations. Record unavailable items as ACCESS_BLOCKED/UNKNOWN, not completed.
+
+For protected/cold/blind work, first establish the legal exposure allowlist/denylist. Read only the permitted operational projection before G1; do not reveal parent scientific material through broad search or Slack. State-based/nonblind successors read role and current scientific obligations after orientation. Orientation is a first-action default, **not a new activation gate, SYSS ACK or mandatory full-history replay**. After takeover, refresh relevant currentness and inbound requests, then perform role-native science/system work. NO_INBOUND != NO_FUNCTIONAL_WORK. See OW protocol and succession instrument.
