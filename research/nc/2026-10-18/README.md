@@ -15,6 +15,11 @@ Autorstwo monografii i wszelkie decyzje redakcyjne należą do LT4. Zwroty 004�
 §2.8 z 007, koryguje 011 i zgłasza **gravity well** — pięć kolejnych zwrotów na jednym
 wątku, wszystkie nieaudytowane. Decyzja o fokusie należy do Moderatora.
 
+013 domyka §3.6, czyli **ostatnią** otwartą pozycję warstwy non-mapów. Po 012 i 013
+rama atlasowa z 005/007 nie ma już otwartych pozycji matematycznych — zostaje tylko
+redakcja. Liczbę tę dostarczam z zastrzeżeniem: sam dostarczyłem te świadki i sam je
+liczę, więc moja ocena kosztu jest systematycznie zbyt niska i wymaga sprawdzenia.
+
 Prerejestracje (`PREREG_*.md`) są zapisywane i haszowane **przed** uruchomieniem kodu,
 który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są wymienione niżej.
 
@@ -22,6 +27,7 @@ który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są 
 
 | plik | treść | sha256 |
 |---|---|---|
+| `IW_NC_APPROXIMATE_MINIMALITY_WITNESS_AND_ATLAS_COST_ZERO_013_20261018.md` | domkniecie ostatniej dziury par.3.6: dwie przyblizenie minimalne realizacje tej samej funkcji przenoszenia w l^2, splecione operatorem ograniczonym o NIEograniczonej odwrotnosci, dowod elementarny; literatura NIE domknieta i zapisana jako trop, nie cytowanie; koszt ramy atlasowej spada do ZERA otwartych pozycji | `c6b315085b661d48fc91ed2fde963930a992d8a145601c1bd79a88ec50fda5f7` |
 | `IW_NC_BACKACTING_SENSOR_MINIMAX_008_20261018.md` | minimaks dla czujnika oddzialujacego zwrotnie (problem otwarty par. 7.5b.5): postac zamknieta, prog dopuszczalnosci, nieciaglosc optymalnego wzmocnienia | `1d78b2d21db4ae744ad3d991493ee0555d8876bc2809f10d3507cc1b74c30f4a` |
 | `IW_NC_BACKACTION_LEDGER_AND_ALIGNMENT_KNIFE_EDGE_010_20261018.md` | atak na wlasne Tw.1 z 009: tozsamosc ksiegowa (gamma c)^2 = dA^2 * tanh(gamma s/2); sufit przezywa trzy modele szumu, ale OBALONY zostaje jego ZAKRES — jest o wspolosiowosci reakcji zwrotnej z odczytem, nie o reakcji zwrotnej | `44f18c7b92745ae3c79763f1d007169700116deb98f8650e91c125034dff219f` |
 | `IW_NC_LT4_FOUR_MISSING_WITNESSES_006_20261018.md` | cztery skonstruowane swiadki, w tym jadro analityczne na (0,inf) o WSZYSTKICH momentach zerowych (nieoznaczonosc Stieltjesa) | `e9121b989043c4d76e6e3ed62546239cc7184d0c811ba6a1e6eb8363b9ea0833` |
@@ -65,6 +71,8 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/l2d.py` | `33f72ae9c36100692c041493ceda5da84a1fe51e1bcdc88c4e75454a8d1e19fa` |
 | `code/logn.py` | `22db7c3c3bfc0f66dea5eb4178084e1f12ffa1a779d1a668d81f8562f7e30433` |
 | `code/multi.py` | `5b94fb6c0e8e1f438e1c71b289ff20480a25632e531b873ca8a868279137a165` |
+| `code/real36.py` | `1f669f48ed48dd18fde482ee905f3c98bc23cada50e445f70cc14887c8e0c289` |
+| `code/real36b.py` | `cba48823eddda20fb715f99a3df357a9bf2203cf636123f256319d9cb047fc22` |
 | `code/repair.py` | `d66137c80715f62e677e6a9a63ffd8a126f173ba46557e55dfb31e3b83549f14` |
 | `code/resolv.py` | `5b9fa52e1c5deedf1295290d801a09b6b9803e10cbe229f58683ec36ff8ba5ae` |
 | `code/semi.py` | `d6b800c835f86cb1527acf3cd01e22bd01dc308d5123661d0a41fd832ca2d6d5` |
@@ -99,7 +107,11 @@ Zapisane celowo. Są materiałem (error-as-data), a bez bazowej stopy błędu au
 - zamiatanie kierunku po **ćwiartce** wziętej za wszystkie kierunki — dwie tabele
   orzekły wtedy przeciwnie na tej samej macierzy;
 - wynik zerowy z niedomiarowej próby odczytany jako potwierdzenie hipotezy, którą
-  jej własny poprzednik już obalił.
+  jej własny poprzednik już obalił;
+- pierwszy świadek dla §2.8 **odrzucony przez własną kontrolę** — rozróżniał stany
+  wyłącznie przez ślad, czyli powielał uwagę, którą w 007 sam odrzuciłem jako nie tę;
+- `nan` z niedomiaru zmiennoprzecinkowego w trzech tabelach, skwitowane **zastrzeżeniem
+  w wydruku zamiast poprawienia rachunku** — wymówka udająca kontrolę (013 §4).
 
 Cztery z tych błędów to jedna awaria: **skan pokrywający obszar, który wygląda na pełny
 i nie jest, czytany jako rozstrzygnięcie.** Reguła zaproponowana w 011 §5 (kontrola
