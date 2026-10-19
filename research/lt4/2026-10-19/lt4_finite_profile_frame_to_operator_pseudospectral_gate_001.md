@@ -109,3 +109,17 @@ Dojrzali gospodarze: teoria ram w skończonym wymiarze, normy Hilberta–Schmidt
 **Bibliografia:** D. Boffi, K. Hu, Y. Liang, U. Zerbinati, arXiv:2610.01501 (2026); L. N. Trefethen, *Pseudospectra of Linear Operators*, SIAM Review 39 (1997), 383–406, DOI 10.1137/S0036144595295284; O. Christensen, *An Introduction to Frames and Riesz Bases*, 2nd ed., Birkhäuser 2016.
 
 **Rozstrzygnięcie redakcyjne:** kandydat do rozwinięcia §4.11 (granice dyskretyzacji), nie samodzielny nowy rozdział. Niezależna recenzja SW/INT i source-native porównanie FEEC pozostają wymagane przed jakimkolwiek claim upgrade.
+
+## 7. Niezależna kontrola rachunkowa (nie zastępuje dowodów)
+
+Wykonano deterministyczny test macierzowy z NumPy i seedem 20261019. Dla losowych rzeczywistych macierzy E i ramek V z kolumnami v_i obliczano α=λ_min(VV^T), r=||EV||_F/sqrt(m), ||E||_2 oraz sqrt(m/α)r. Wyniki:
+
+| wymiar n | liczba testów m | α | RMS r | ||E||_2 | prawa strona (2) |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 5 | 0.235951 | 3.322613 | 3.075388 | 15.295146 |
+| 6 | 8 | 0.435093 | 6.658056 | 3.703161 | 28.549688 |
+| 10 | 20 | 1.996273 | 9.847720 | 5.025558 | 31.170283 |
+
+Każdy test spełnia (2). Test rzędu jeden z bazą ortonormalną przy N=64 daje r=0.125 i ||E||=1. Dla dwóch losowych macierzy 4×4 sprawdzono numerycznie na 1920 punktach z zespolonej siatki nierówność s_min(zI−B)≤s_min(zI−A)+||A−B||: maksymalne przekroczenie wyniosło 0. Testy nie dowodzą twierdzeń; potwierdzają spójność implementacji ze znanymi kontrprzykładami.
+
+**Precyzyjne ograniczenie naukowe:** praca FEEC z 2026 r. sama podaje w Twierdzeniu 3.5 oszacowanie dwustronne pseudospektrów przez normę ||T−S||. Twierdzenie 3 powyżej nie jest niezależnym nowym wkładem; jest jego elementarną wersją macierzową, dołączoną po to, by ujawnić brakującą hipotezę pomiędzy profilem i normą.
