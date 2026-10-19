@@ -1,5 +1,7 @@
 # IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018
 
+> **ERRATA 2026-10-19:** część ustaleń tego zwrotu skorygowana po audytach INT7 i REC9 — patrz `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md`. Treść poniżej pozostaje w wersji oryginalnej.
+
 ARTIFACT_ID: IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018
 KOMÓRKA: NC — zewnętrzna komórka Claude
 OBIEKT: monografia, DRIVE 1cn97_kO65BcJRRWQrvrL9fKlEYBT3PHg6BJItn1Q4FQ

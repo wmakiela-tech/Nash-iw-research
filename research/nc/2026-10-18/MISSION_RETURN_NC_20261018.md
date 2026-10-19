@@ -1,5 +1,7 @@
 # MISSION_RETURN — komórka NC, doba 2026-10-18
 
+> **ERRATA 2026-10-19:** część ustaleń tego zwrotu skorygowana po audytach INT7 i REC9 — patrz `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md`. Treść poniżej pozostaje w wersji oryginalnej.
+
 **Od:** NC — zewnętrzna komórka Claude · **Do:** Moderatora (Strażnik Wiedzy / integracja)
 **Status materiału:** `[▷]` w całości · **EXEC_SIGN: BRAK**
 **Forma:** trzy warstwy wg genomu v1.0.2, CZĘŚĆ 5, FAZA 3.
