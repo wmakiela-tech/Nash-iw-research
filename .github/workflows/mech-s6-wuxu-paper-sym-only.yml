@@ -1,0 +1,62 @@
+name: Mech-S6 Wu-Xu paper-law B_sym cell
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s6-wuxu-paper-sym-only.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  paper-sym:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Clone audited Wu-Xu source
+        run: |
+          git clone https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          cd _wuxu
+          git checkout d395183674cace6c9906a8911bdeb7234ba4040d
+
+      - name: Freeze reduced Julia environment
+        run: |
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env"
+
+      - name: Apply paper M^-1.3 source law
+        run: |
+          python research/mech-s6/2026-10-19/apply_wuxu_paper_subedge_law.py             _wuxu/arXiv-2509.05618/tool_script-hadrons_from_PBH.jl             /tmp/tool_script-hadrons_from_PBH-paper.jl
+          mv /tmp/tool_script-hadrons_from_PBH-paper.jl             _wuxu/arXiv-2509.05618/tool_script-hadrons_from_PBH.jl
+
+      - name: Apply B_sym source map
+        run: |
+          python research/mech-s6/2026-10-17/apply_wuxu_charge_pair_source_map.py             _wuxu/arXiv-2509.05618/main-scan.jl             /tmp/main-scan-paper-sym.jl
+          python - <<'PY'
+          from pathlib import Path
+          marker = '@info "Loading ' + chr(96) + 'main-scan-parameters.jl' + chr(96) + '"'
+          src=Path("/tmp/main-scan-paper-sym.jl").read_text()
+          if marker not in src:
+              raise SystemExit("scan marker missing")
+          prefix=src.split(marker,1)[0]
+          Path("_wuxu/arXiv-2509.05618/main-scan-paper-sym-prefix.jl").write_text(prefix)
+          PY
+
+      - name: Run paper-law B_sym diagnostic
+        run: |
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env"             research/mech-s6/2026-10-18/wuxu_dynamic_comparator/run_one_point.jl             "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618/main-scan-paper-sym-prefix.jl"             6e9 1e-16 paper_sym             "$GITHUB_WORKSPACE/research/mech-s6/2026-10-19/wuxu_paper_sym_only/results"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mech-s6-wuxu-paper-sym-cell
+          path: research/mech-s6/2026-10-19/wuxu_paper_sym_only/results
