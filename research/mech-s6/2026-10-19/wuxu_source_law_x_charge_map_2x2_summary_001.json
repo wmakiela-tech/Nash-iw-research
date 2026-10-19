@@ -1,0 +1,101 @@
+{
+  "return_id": "MECH-S6-FRONTB-WUXU-SOURCE-LAW-X-CHARGE-MAP-2X2-DYNAMIC-COMPARATOR-001",
+  "date": "2026-10-19",
+  "class": "two-factor dynamic executor comparator / no physical endpoint",
+  "upstream": {
+    "wuxu_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+    "naturalunits_commit": "4a9f007ff1df416c9fef28c4d83d8fe8846099cf",
+    "julia": "1.12.3",
+    "BITS": 100
+  },
+  "diagnostic": {
+    "initial_mass_g": 6000000000.0,
+    "beta": 1e-16,
+    "paper_subedge_edge_g": 1000000000.0,
+    "paper_subedge_exponent": -1.3
+  },
+  "cells": {
+    "public_exec": {
+      "Yp_reduced_proxy": 1.3230817938392783,
+      "Xn_at_Tnuc_inferred": 0.3981490303043891
+    },
+    "public_sym": {
+      "Yp_reduced_proxy": 1.3177406564166434,
+      "Xn_at_Tnuc_inferred": 0.3971801273460239
+    },
+    "paper_exec": {
+      "Yp_reduced_proxy": 1.322976952986187,
+      "Xn_at_Tnuc_inferred": 0.39813004173781474
+    },
+    "paper_sym": {
+      "Yp_reduced_proxy": 1.3178103739910758,
+      "Xn_at_Tnuc_inferred": 0.39719279447723504
+    }
+  },
+  "endpoint_contrasts": {
+    "Yp_reduced_proxy": {
+      "charge_effect_public_law": -0.005341137422634867,
+      "charge_effect_paper_law": -0.005166578995111193,
+      "source_law_effect_Bexec": -0.00010484085309125923,
+      "source_law_effect_Bsym": 0.00006971757443241522,
+      "interaction": 0.00017455842752367445,
+      "factorial_average_charge_main": -0.00525385820887303,
+      "factorial_average_source_main": -0.000017561639329422007
+    },
+    "Xn_at_Tnuc_inferred": {
+      "charge_effect_public_law": -0.0009689029583651587,
+      "charge_effect_paper_law": -0.0009372472605796989,
+      "source_law_effect_Bexec": -0.00001898856657434056,
+      "source_law_effect_Bsym": 0.000012667131211119287,
+      "interaction": 0.000031655697785459846
+    }
+  },
+  "supported_domain_dynamic": {
+    "charge_map_max_abs_delta_Xn": 0.0728514990160335,
+    "charge_map_max_abs_delta_Xn_T_MeV": 0.3938745653604,
+    "charge_map_max_abs_delta_Xn_mass_g": 5796010700.727809,
+    "charge_map_max_abs_delta_Fhad_GeV": 1.0728507210500483e-25,
+    "charge_map_max_abs_delta_Fhad_T_MeV": 3.077303063841,
+    "charge_map_max_abs_delta_Fhad_mass_g": 5996958128.66331,
+    "charge_effect_identical_between_source_laws_on_all_saved_supported_source_active_points": true,
+    "source_law_effect_on_Xn_on_saved_supported_source_active_points": 0.0,
+    "interaction_on_Xn_on_saved_supported_source_active_points": 0.0
+  },
+  "post_terminal_saved_Xn": {
+    "max_abs_source_law_effect_Bexec": 0.0002372756110960994,
+    "max_abs_source_law_effect_Bsym": 0.000030262610851317095,
+    "max_abs_interaction": 0.00022826563583350223,
+    "first_saved_nonzero_source_law_effect_index": 1470,
+    "first_saved_nonzero_source_law_effect_public_T_MeV": 0.1424339130131,
+    "first_saved_nonzero_source_law_effect_public_mass_g": 8.445937809488258,
+    "guard": "saved-point post-evaporation contrast does not resolve internal terminal A/B/F history"
+  },
+  "floor": {
+    "all_four_runs_saved_source_active_floor_flags_zero": true,
+    "internal_step_floor_audit": "NOT_RUN"
+  },
+  "reproducibility": {
+    "public_dynamic_run_id": 39074426824,
+    "public_artifact_id": 12116193467,
+    "public_artifact_zip_sha256": "75766c5bcc38fe72b3405e32f5c8ef81a50237d6930f318780d49524ff6bafd5",
+    "paper_dynamic_run_id": 39262167153,
+    "paper_artifact_id": 12192535869,
+    "paper_artifact_zip_sha256": "3b24f50ce2f50272874593db3ad26e5e73e871f986ebae91ae6a4fdf8ab15a4e",
+    "paper_exec_trajectory_sha256": "a30245ad7522da8849fc7c63464792e32e4407ff8e4c491ae6270b8755ce48b3",
+    "paper_sym_trajectory_sha256": "ead81fc946ba5067447a93b9b6dea6174d8bb2eaea51fae577b0139fcf8e2769",
+    "paper_sym_independent_replication_run_id": 39262588261,
+    "paper_sym_independent_artifact_id": 12192726250,
+    "paper_sym_independent_trajectory_sha256": "ead81fc946ba5067447a93b9b6dea6174d8bb2eaea51fae577b0139fcf8e2769",
+    "paper_sym_bit_identical_replication": true
+  },
+  "claim_ceiling": {
+    "published_paper_bound_correction": "NOT_ESTABLISHED",
+    "modern_Yp_DH_endpoint": "NOT_RUN",
+    "published_numerical_run_genealogy": "UNRESOLVED",
+    "source_valid_E2b": "OPEN",
+    "PBH_bound": "NO_CLAIM",
+    "canon": "NO",
+    "exec_sign": "NO",
+    "novelty": "NO_CLAIM"
+  }
+}
