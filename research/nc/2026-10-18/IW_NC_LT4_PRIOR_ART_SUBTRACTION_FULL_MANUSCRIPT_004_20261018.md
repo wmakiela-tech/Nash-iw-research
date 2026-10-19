@@ -1,5 +1,7 @@
 # IW_NC_LT4_PRIOR_ART_SUBTRACTION_FULL_MANUSCRIPT_004_20261018
 
+> **ERRATA 2026-10-19 (II):** rachunek kosztu ramy i licznik kandydatów B skorygowane po audycie REC9 — patrz `IW_NC_ODBIOR_REC9_NC004_I_TEST_PIECIU_WARUNKOW_016_20261019.md`. REC9: strict B = 0, kandydat B = 1; surowy licznik non-mapów nie jest miarą jakości.
+
 ARTIFACT_ID: IW_NC_LT4_PRIOR_ART_SUBTRACTION_FULL_MANUSCRIPT_004_20261018
 KOMÓRKA: NC — zewnętrzna komórka Claude, rola: audytor / prior-art subtraction
 OBIEKT: monografia, DRIVE 1cn97_kO65BcJRRWQrvrL9fKlEYBT3PHg6BJItn1Q4FQ, 161 432 znaków, rozdziały 1–7, odczyt 2026-10-18

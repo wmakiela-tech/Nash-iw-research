@@ -1,5 +1,7 @@
 # IW_NC_APPROXIMATE_MINIMALITY_WITNESS_AND_ATLAS_COST_ZERO_013_20261018
 
+> **ERRATA 2026-10-19 (II):** rachunek kosztu ramy i licznik kandydatów B skorygowane po audycie REC9 — patrz `IW_NC_ODBIOR_REC9_NC004_I_TEST_PIECIU_WARUNKOW_016_20261019.md`. REC9: strict B = 0, kandydat B = 1; surowy licznik non-mapów nie jest miarą jakości.
+
 > **ERRATA 2026-10-19:** część ustaleń tego zwrotu skorygowana po audytach INT7 i REC9 — patrz `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md`. Treść poniżej pozostaje w wersji oryginalnej.
 
 ARTIFACT_ID: IW_NC_APPROXIMATE_MINIMALITY_WITNESS_AND_ATLAS_COST_ZERO_013_20261018
