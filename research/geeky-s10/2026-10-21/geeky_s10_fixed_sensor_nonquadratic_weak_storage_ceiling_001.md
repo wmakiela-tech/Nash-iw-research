@@ -184,16 +184,27 @@ For repeated zero-wait measurements of common strength s=epsilon,
 
     b_j = s(1-s)^{j-1}x_0.
 
-Hence
+Hence repeated strength-s measurements attain, in the all-finite-protocol supremum,
 
     sup_N sum_{j=1}^N b_j^2
       = [s/(2-s)] x_0^2.
+
+For completeness, the scalar restricted Bellman coefficient r_epsilon defined by
+V_epsilon(x)=r_epsilon x^2 obeys
+
+    r_epsilon
+      = sup_{0<=s<=epsilon}
+          [ s^2 + (1-s)^2 r_epsilon ].
+
+For fixed s the corresponding fixed point is s/(2-s), which is increasing in s. Therefore
+
+    r_epsilon = epsilon/(2-epsilon).
 
 The unrestricted all-protocol value is
 
     V_*(x_0)=x_0^2.
 
-Therefore
+Therefore exactly
 
     V_epsilon(x_0)/V_*(x_0)
       = epsilon/(2-epsilon)
