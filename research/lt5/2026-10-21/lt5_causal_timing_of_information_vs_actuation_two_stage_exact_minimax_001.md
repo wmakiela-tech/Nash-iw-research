@@ -203,15 +203,10 @@ The posterior search is a grid approximation and should not be promoted to an in
         return max(min(w,delta/s),w+max(abs(c)-B0,0)-B1)
 
     def approx(ell,h,B0,B1,s,delta,n=1501):
-        bs=np.linspace(s*ell-delta,s*h+delta,n)
+        # Scan adjusted observations obs0=b+s*u0, not raw b:
+        # the adjusted domain does not depend on the early action.
+        obs0=np.linspace(s*ell-delta,s*h+delta,n)
         def risk(u0):
-            # second observation is b=s*(y-u0)+eta;
-            # adjusted observation t=(b+s*u0) / s
-            lo=np.maximum(ell-u0,(bs-delta)/s)
-            hi=np.minimum(h-u0,(bs+delta)/s)
-            # To scan a fixed b grid for all u0, instead work with adjusted
-            # readings t_b=b+s*u0 and a fixed underlying y-grid:
-            obs0=np.linspace(s*ell-delta,s*h+delta,n)
             yl=np.maximum(ell,(obs0-delta)/s)
             yh=np.minimum(h,(obs0+delta)/s)
             ok=yl<=yh+1e-10
