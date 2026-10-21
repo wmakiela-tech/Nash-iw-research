@@ -331,19 +331,43 @@ and a positive uniform lower bound on the resulting dissipation coefficient supp
 
 This quadratic condition is NOT claimed necessary for finite nonquadratic V_*.
 
-## 11. Scope and adaptive-policy seam
+## 11. Causal action selection: pathwise extension
 
-The theorem as stated is for deterministic finite protocols with action sequence and times fixed independently of realized measurement values. This matches the REC10 triangular-factorization carrier.
+REC10's triangular factorization is stated for fixed deterministic times/actions because it is an operator identity for one frozen protocol. The weak-storage bound is more robust.
 
-The pointwise inequality (4.5) suggests a broader pathwise extension to causal action selection, but one must re-type the extremal storage and homogeneity/convexity when the policy depends on prior outputs. In particular:
+The one-step inequality
 
-    ADAPTIVE POLICY CLASS
+    b^2 <= epsilon
+           [V_*(x^-)-V_*(x^+)]
+
+holds for **every current state and every currently chosen legal action**. Therefore the telescoping proof does not require the future action sequence to have been selected in advance.
+
+Consequently, in the same noiseless deterministic reset-flow carrier, actions, strengths and waiting times may be chosen causally as arbitrary functions of the previous exact record history, provided:
+- every realized protocol terminates after finitely many shots;
+- every chosen action belongs to the same admitted family A;
+- every realized strength obeys s_j<=epsilon.
+
+Along every realized trajectory,
+
+    sum_j b_j^2 <= epsilon V_*(x_0).                     (11.1)
+
+This extension does not require the adaptive input-output map to remain linear. The storage V_* used in the proof is still the common supremum over legal finite open-loop continuations; its Bellman inequalities hold pointwise for every legal first action, so any causally selected realized sequence inherits them.
+
+What is NOT covered:
+- reset maps driven by noisy measured values rather than the declared exact b;
+- stochastic state noise;
+- expected-cost policies with a different observation model;
+- genuinely quantum instruments.
+
+Thus:
+
+    CAUSAL ACTION SELECTION
     !=
-    PREDETERMINED LINEAR PROTOCOL CLASS AUTOMATICALLY.
+    ESCAPE FROM THE STORAGE BUDGET
 
-No adaptive extension is claimed here.
+inside the declared deterministic carrier.
 
-Likewise, no quantum-instrument interpretation follows from the classical reset map.
+No quantum-instrument interpretation follows from the classical reset map.
 
 ## 12. Firewalls
 
@@ -367,8 +391,11 @@ UNBOUNDED STORAGE WITNESS
 COMMON QUADRATIC P
     != NECESSARY FOR FINITE V_*.
 
-PREDETERMINED PROTOCOL
-    != ADAPTIVE POLICY.
+CAUSAL ACTION SELECTION
+    != ESCAPE FROM FINITE COMMON STORAGE.
+
+NOISY/STOCHASTIC ADAPTATION
+    != DECLARED DETERMINISTIC ADAPTATION.
 
 CLASSICAL RESET MAP
     != QUANTUM MEASUREMENT INSTRUMENT.
@@ -386,8 +413,11 @@ UNIVERSAL WEAK RATE:
     V_epsilon <= epsilon V_*,
     N_epsilon <= sqrt(epsilon) N_*.
 
+CAUSAL EXACT-RECORD ADAPTATION:
+    covered pathwise for every finite realized protocol.
+
 OPEN:
-- adaptive outcome-dependent action policies require a separately typed storage object;
+- noisy/stochastic feedback in which the reset itself depends on corrupted observations;
 - source-valid noise/cost scaling and quantum instruments remain separate branches.
 
 NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE.
