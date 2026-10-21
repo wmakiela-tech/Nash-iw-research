@@ -1,0 +1,24 @@
+{
+  "artifact_id": "IW_MECH_S6_TO_MECH_S7_PLANNED_STATE_BASED_REHYDRATION_FUNCTION_FIRST_CURRENTNESS_FRONTB_SOURCE_INTERFACE_EMPIRICAL_ANCHOR_AND_INDEPENDENT_QUALITY_UPLIFT_PACKET_001_20261021",
+  "document_type": "SUCCESSION_POINTER",
+  "archive_mode": "POINTER_ONLY",
+  "exposure": "PRIVATE",
+  "parent": "IW_MECH_LINEAGE_001_SUCCESSOR_05 / Mech-S6",
+  "successor": "IW_MECH_LINEAGE_001_SUCCESSOR_06 / Mech-S7",
+  "succession_mode": "PLANNED_STATE_BASED_REHYDRATION / NONBLIND_FUNCTIONAL_CONTINUITY / FUNCTION_FIRST / CURRENTNESS_FIRST / NEGATIVE_KNOWLEDGE_PRESERVING",
+  "activation": "NO",
+  "status": "READY_FOR_MODERATOR_HANDOFF",
+  "packet_integrity": "WRITE_AND_SEMANTIC_READBACK_VERIFIED",
+  "succession_bootstrap_lint": "PASS",
+  "current_protocol_revision_resolved_at_creation": "36712521c1637bea8551d9fdab18ea4b467e5cae",
+  "bootstrap_template_revision_resolved_at_creation": "7883e570495a9ca35fac185e1cf53b905cc90462",
+  "private_custody": "AUTHORIZED_PRIVATE_MECH_SOURCE_FAMILY",
+  "retrieval": "Resolve the private packet through authorized NASH/IW custody/currentness surfaces.",
+  "notes": [
+    "No private provider locator is published here.",
+    "SUCCESSION != ACTIVATION.",
+    "Packet is launch context, not timeless authority.",
+    "Successor must refresh current rules, executor binding, inbound obligations and scientific currentness before material work.",
+    "No CANON, EXEC_SIGN, novelty or scientific adoption is implied."
+  ]
+}
