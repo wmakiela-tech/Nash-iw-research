@@ -123,3 +123,25 @@ Because hadronic neutron forcing is F=(1-X)A-XB, sign-uniform increases in emitt
 - After this gate, identify whether K0L vs charged channels or X feedback produces robust interaction. If it disappears under a common-background/tolerance or floor gate, record NEGATIVE_KNOWLEDGE rather than a corrected paper bound.
 
 The reproduction and raw-artifact hash audit are available in the accompanying Mech-S7 rotation-001 reproducibility package. Primary GitHub scientific body is subject to BW owner qualification. NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_BOUND / GITHUB_PENDING_BW_INGEST.
+
+
+## 8. Bounded cheap kill test: post-source log-floor direct forcing is numerically tiny
+
+The log-floor mismatch of section 5 is structurally exact, but its possible direct strength can be conservatively bounded from the source-native constants in tool_script-parameters.jl. The source uses epsilon=exp(-100) in GeV^3, which corresponds to approximately 4.84164e3 particles/m^3 in ordinary density units. The code defines 1 mbarn=1e-31 m^2 and the temperature-dependent negative-pion/negative-kaon Coulomb factors Fc(T).
+
+On the saved source-off interval, the minimum temperature of the public_exec record is 0.00818336 MeV. It gives Fc_pion=4.37944 and Fc_kaon=6.53666. At that temperature, summing the exact positive directional cross-section coefficients appearing in dX/dt gives:
+
+- sum_A = (1.5 Fc_pion + 31 Fc_kaon + 7 + 28) mbarn = 244.2055 mbarn.
+- sum_B = (1.7 + 26 + 7 + 28) mbarn = 62.7 mbarn.
+
+With 0<=X<=1 and each n_eval−n<=epsilon, the **direct floor-forcing magnitude** obeys
+
+|rho_X_floor| <= c n_floor max(sum_A,sum_B) < 3.55e-17 s^-1
+
+over this saved-temperature range, interpreting the paper's natural-unit cross-section times density conversion with c.
+
+The earliest inactive saved time is about 52.26 s. Target T_nuc occurs around 215.19 s, so the crude integral of the **direct** floor perturbation up to the target is bounded by 5.8e-15. Even over the entire saved output to about 19716 s, this direct bound is under 7.0e-13.
+
+**Result:** this cheap source-scale bound strongly disfavors the post-source log-floor term as the direct explanation for O(1e-5) source-law X contrasts. It does NOT certify full coupled solver convergence, nor a global response bound under arbitrary feedback, and does not assess the unsampled internal terminal injection window. The parent floor statement still requires scope correction (population equation vs neutron equation), but practical priority shifts more decisively to frozen common-background/tolerance error and accepted-step terminal sampling.
+
+BOUND IS FOR DIRECT RHS FORCING, NOT A CERTIFICATE ON THE FULL NUMERICAL ENDPOINT.
