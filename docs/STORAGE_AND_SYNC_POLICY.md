@@ -1,5 +1,8 @@
 # NASH/IW — Storage and Cross-Surface Sync Policy
 
+> **Storage migration directive (Moderator, 2026-10-22):** transfer the complete NASH/IW project corpus out of Google Drive into a dual GitHub architecture: current public research repository for legally releasable science, and a separate **PRIVATE** GitHub repository for BW, private lineage/succession, full nonpublic science, private documents, Slack source recovery, and manifests. Operational rules and completion gates: [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). **Status: IN_PROGRESS, PRIVATE_REPO_NOT_CONNECTED.** Older Drive-primary sections describe source handling *until* the private GitHub store is available. Never claim migration success or destroy originals before private commit/body readback, provenance and functional BW continuity.
+
+
 **As of:** 2026-10-12  
 **Status:** CURRENT / forward-only custody policy  
 **Scope:** GitHub ↔ BW ↔ Google Drive / frozen stores.
