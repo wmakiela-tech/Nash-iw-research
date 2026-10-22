@@ -157,7 +157,7 @@ h          exact minimax E*(h,0.04)
 0.40       0.06229846024624
 0.80       0.04000000000000
 
-Independent direct finite grid check at h=.20 over 100,000 candidate observation y's, recomputing endpoints I_y rather than optimizing by the closed form, yielded 0.10371634864421525 versus 0.10371735836604634 from exact (4.3), error ~1.01e-6 from grid spacing. This is a numerical CONTROL, not the proof. Script: reproduce_prf11_r19_intervention_optimal_recovery.py in the same directory.
+Independent direct finite grid check at h=.20 over 100,000 candidate observation y's, recomputing endpoints I_y rather than optimizing by the closed form, yielded 0.10371634864421525 versus 0.10371735836604634 from exact (4.3), error ~1.01e-6 from grid spacing. This is a numerical CONTROL, not the proof. The independent numeric check was executed in-session using NumPy. The optional standalone reproduction-script GitHub write was blocked and therefore no linked script is claimed. Equations (3.1) and (4.3) plus the exact parameter values above fully specify a self-contained reproduction.
 
 Two-point falsifier: take beta=.5 and beta=3, same complete baseline; their future target gap is ~.579602 >0. The baseline's noise-free exactness does not bound the unseen terminal target. An additional legal experiment with new e2 preparation fully separates models at any h>0 in exact arithmetic; with bounded noise its guaranteed predictive benefit follows (4.3) and can vanish at very early times.
 
