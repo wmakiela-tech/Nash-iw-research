@@ -1,5 +1,8 @@
 # NASH/IW — Current Research Resolver
 
+> **Current archive migration (2026-10-22):** Moderator directed a whole-project Google Drive → GitHub transfer to relieve storage pressure. The full target hierarchy and exact go/no-go protocol are in [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Public science continues in this repo; private BW/sources/succession require a separately permissioned private repo, **not yet connected as of the audit**. Until private migration and source readback are verified, existing Drive/BW sources remain authoritative and must not be deleted or exposed through public fallback.
+
+
 **As of:** 2026-10-12
 
 This public repository is an infrastructure, archive, reproducibility and external-bridge surface. It is **not** the sole or primary store for unpublished NASH/IW scientific currentness.
