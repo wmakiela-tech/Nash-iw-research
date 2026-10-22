@@ -8,7 +8,7 @@ exposure: PUBLIC
 claim_ceiling: EXACT_2X2_CONDITIONAL_ASYMPTOTIC_THEOREM / SHARP_PHASE_WITNESS / MATURE_HOST / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE
 bw_ingestion_event_id: GITHUB_PENDING_BW_INGEST
 canonical_path: research/geeky-s10/2026-10-23/geeky_s10_oblique_mixed_reset_exact_dose_phase_001.md
-source_revision: PENDING_COMMIT_AT_CREATION
+source_revision: initial_body_commit=acd49d9cffbfeffec4eb4debf95bb51dc2b625f5; reproduction_commit=ead9afb2905440ab12917e56eb04e57e7307de45
 supersedes: []
 ---
 
@@ -593,7 +593,7 @@ The mathematical ingredients are mature:
 - Lyapunov exponent / joint spectral growth;
 - Gaussian Fisher information.
 
-No novelty claim is made for these hosts.
+No novelty claim is made for these hosts.\n\nReproduction sanity script: `research/geeky-s10/2026-10-23/reproduce_geeky_s10_oblique_mixed_reset_exact_dose_phase_001.py`.
 
 The project-local contribution is the typed placement across the already separated carriers:
 - actual measurement strength \(s\);
