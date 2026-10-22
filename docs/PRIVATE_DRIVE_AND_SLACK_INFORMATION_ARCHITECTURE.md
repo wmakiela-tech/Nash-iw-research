@@ -16,6 +16,10 @@ The Moderator requested project-document organization with clear role separation
 
 **Organization must not rewrite the history of scientific evidence.** A Drive move preserves the same file ID and must not become a duplicated BW scientific event; moving a file does not by itself establish a new science claim or public-release permission. Do not move BW registry or established historical succession folders just to normalize presentation.
 
+## Użycie operacyjne przez wszystkie komórki (2026-10-22)
+
+Lista folderów poniżej jest strukturą **fizyczną**. Instrukcja **dokąd dokładnie zapisać każdy typ pracy oraz gdzie potem go znaleźć** jest obowiązującym [`IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md). Autor musi wybrać faktyczny istniejący podfolder według typu/tematu, wykonać odczyt ID/treści po zapisie, powiązać BW i dopiero potem przekazać w Slack. Dokumenty nowo tworzone nie mają trafiać na główną stronę My Drive; nie dodawaj nowych folderów liniowych bez uzasadnionej potrzeby. Historyczne lokatory BW i wcześniejsze zapisane foldery nie są przepisywane dla estetyki.
+
 ## Drive — where new private documents go
 
 The already existing project root `NASH–IW Shared Research Bridge` has current-applicable documents, architecture, BW/knowledge and governance/handoffs trees. These original locations remain intact.
