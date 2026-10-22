@@ -6,6 +6,10 @@ GitHub has several roles in the project at once: executable/reproducibility surf
 
 **Current publication default (Moderator, 2026-10-12):** complete public-safe scientific results belong in `research/<lineage>/<YYYY-MM-DD>/` on GitHub, with explicit BW ingestion/custody links. Google Drive is the private/restricted project-document home; a pointer-only GitHub file is not completed publication of a releasable scientific result. GitHub publication is not scientific acceptance. See [`docs/STORAGE_AND_SYNC_POLICY.md`](docs/STORAGE_AND_SYNC_POLICY.md).
 
+## Where to write and where to look
+
+**Obowiązujący wybór miejsca zapisu dla każdej komórki:** [`docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md). GitHub: public science `research/<lineage>/<YYYY-MM-DD>/` + BW commit; private Drive: `NASH–IW Shared Research Bridge/04_PRIVATE_PROJECT_DOCUMENTS_CURRENT/<class>/<topic>/`; Slack: transport; BW: source identity and qualification. Do not deposit new IW source bodies in the My Drive root or replace a complete result with a Slack/Drive pointer. The linked matrix also specifies the exact search order.
+
 ## Start here
 
 Active NASH/IW researchers should begin with:
