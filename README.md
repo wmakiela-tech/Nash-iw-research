@@ -1,5 +1,8 @@
 # NASH–IW Research Infrastructure
 
+> **Migracja całego NASH/IW z Google Drive na GitHub, decyzja 2026-10-22:** [plan i status migracji](docs/DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Publiczne materiały pozostają w tym repozytorium. Prywatne źródła, BW i sukcesje wymagają oddzielnego repozytorium GitHub z dostępem PRIVATE; nie wolno publikować ich tutaj. Transfer jest przygotowany, ale nie jest jeszcze ukończony. Oryginały w Drive pozostają do weryfikacji i bezpiecznego zwolnienia miejsca.
+
+
 Public, versioned infrastructure, archive and reproducibility surface for NASH/IW.
 
 GitHub has several roles in the project at once: executable/reproducibility surface, public-safe archive/index, durable asynchronous bridge to external participants such as Grok, and a public orientation layer pointing authorized researchers toward the private current-state resolvers. It is not the sole source of scientific truth.
