@@ -385,6 +385,26 @@ METHOD_MUST_BE_ALLOWED_TO_FAIL
 ```
 
 
+## 13a. Obowiązkowa lokalizacja wyniku i kolejność wyszukiwania (Moderator, 2026-10-22)
+
+**Przed zapisaniem pierwszego materialnego wyniku, także po sukcesji, komórka musi wybrać dokładny katalog i potwierdzić ścieżkę w raporcie.** Pełna macierz istniejących ścieżek i przykładów: [`IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md). To jest operacyjna część niniejszej procedury, nie opcjonalna sugestia.
+
+| Funkcja materiału | Miejsce zapisu pełnej treści |
+| --- | --- |
+| Nauka jawna, także wyniki negatywne/kontrprzykłady/recenzje | GitHub `research/<lineage>/<YYYY-MM-DD>/<artifact-slug>.md` |
+| Publiczny kod, test, dane | GitHub odpowiednie `runtime/`, `tests/`, `research/`; odsyłacz z pracy |
+| Prywatny pakiet następcy/rehydratacja | Drive `NASH–IW Shared Research Bridge/04_PRIVATE_PROJECT_DOCUMENTS_CURRENT/01_CELL_SUCCESSION_AND_HANDOFF_PACKETS/` |
+| Prywatna nauka i przeglądy | Drive `.../02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW/<01_FRONT_B_PBH_BBN, 02_H8R_TPE_QRF_AND_COMBS, 03_EDU1_AI_AND_EMPIRICAL, 04_OTHER_FORMAL_THEORY_AND_MECHANISMS, 05_REFEREE_PRIOR_ART_AND_REVIEWS>/` — jeden właściwy podfolder |
+| Robocza LT, Żywa Książka, monografia | Drive `.../03_MONOGRAPHS_AND_LIVING_BOOKS/`; LT → `01_LIVING_THEORY_DRAFTS/`, edukacja → `03_LIVING_BOOK_AND_EDUCATION/`, monografie techniczne bezpośrednio w katalogu rodzicu |
+| Prywatny kod/dane/ZIP/JSON | Drive `.../04_REPRODUCTION_DATA_CODE_PACKAGES/` |
+| Odzyskany oryginał Slack | Drive `.../05_SLACK_SOURCE_RECOVERY/` z oryginalnym ID i timestamp |
+| Wewnętrzne reguły/audyty systemu | Drive `.../06_SYSTEM_OPERATIONS_AND_GOVERNANCE/`; publiczną normę aktualizuj w **istniejącym** GitHub `docs/` |
+| Niepewne / zablokowane | Drive `.../00_TRIAGE_NEW_AND_UNCLASSIFIED/` lub `99_BLOCKED_HOLD_AND_EXCEPTION/` wyłącznie gdy zapis jest legalny; inaczej oryginał pozostaje na miejscu |
+
+`...` oznacza dokładnie `NASH–IW Shared Research Bridge/04_PRIVATE_PROJECT_DOCUMENTS_CURRENT`. **Zakaz domyślnego zapisu nowego IW bezpośrednio w My Drive root lub w folderze ChatGPT.** Nie przenoś skoroszytu BW, starych frozen archiwów i prywatnych materiałów do publicznego GitHub.
+
+**Odczyt:** `artifact_id/RETURN_ID → BW REGISTRY i właścicielska currentness → BW CROSS_SURFACE_CUSTODY → dokładny GitHub commit/Drive ID → pierwotny wątek Slack`. Dla reguł operacyjnych obowiązuje bieżący właścicielski `docs/`; dla sukcesji aktualny prywatny pakiet wskazany przez lineage. Nie wyciągaj currentness z nazwy folderu czy daty zmiany. Po zapisie: potwierdź `artifact_id | exposure | canonical_path | source_commit_or_revision | bw_event_or_pending | claim_ceiling | hold`. Brak zapisu BW nie może być przedstawiony jako `SYNCED`; brak możliwości publikacji nie daje prawa do ujawnienia prywatnego źródła.
+
 ## 14. BW ↔ GitHub cross-surface custody handshake
 
 ### Moderator direct forward-routing update (2026-10-12): public science GitHub-first
