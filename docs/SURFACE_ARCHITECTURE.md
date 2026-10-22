@@ -11,6 +11,10 @@ AUTHORITY != EVIDENCE != CURRENTNESS != CUSTODY != TRANSPORT
 STORAGE != DELIVERY != RECEIPT != ACCEPTANCE
 ```
 
+## 0. Deterministic document destinations (Moderator, 2026-10-22)
+
+The surface architecture is actionable only through **exact writable paths**. Every cell must use [`IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md) at write time and for retrieval: GitHub `research/<lineage>/<YYYY-MM-DD>/` for full public-safe science; private Drive `NASH–IW Shared Research Bridge/04_PRIVATE_PROJECT_DOCUMENTS_CURRENT/` and its functional/topic folders for private packages, scientific originals, reviews, books, data and source recoveries; the existing BW `REGISTRY` and `CROSS_SURFACE_CUSTODY` for exact identities, qualified claims and Git commits; and named Slack channels for delivery and navigation. Root Drive uploads and Slack-only material reports are not completed durable writes. Public filenames/folder labels are never claim or acceptance authority. Preserve existing BW and historic archives in place.
+
 ## 1. Surface roles
 
 ### GitHub — public durable archive + executable surface + external bridge
