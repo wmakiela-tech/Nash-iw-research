@@ -1,5 +1,8 @@
 # IW/NASH — obowiązująca mapa zapisu i wyszukiwania dokumentów
 
+> **Przejściowa zmiana kierunku archiwum, 2026-10-22:** Moderator nakazał migrację **całego** projektu NASH/IW z Google Drive na GitHub z powodu ograniczenia miejsca. **Przyszłym trwałym miejscem prywatnych źródeł będzie repozytorium `wmakiela-tech/Nash-iw-private` (PRIVATE), a publicznej nauki istniejące `wmakiela-tech/Nash-iw-research` (PUBLIC).** Szczegóły i warunki: [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Obecna tabela folderów Drive pozostaje *tymczasowo obowiązująca dla jeszcze niezarchiwizowanych źródeł* do momentu potwierdzenia dostępu do repo prywatnego i migracji odpowiedniej klasy materiału. Nie udawaj, że repo prywatne jest już dostępne. Nie wrzucaj prywatnych wyników do publicznego fallbacku i nie usuwaj kopii Drive przed readback i niezależnym backupem.
+
+
 **Stan:** DIRECT_MODERATOR_ROUTING / 2026-10-22 / dokument operacyjny, bez zmiany statusu naukowego.  
 **Zakres:** wszystkie komórki IW/NASH; nowe wyniki, zmiany wyników, sukcesje i odczyt informacji.  
 **Zasada nadrzędna:** najpierw rozpoznaj `artifact_id`, klasę udostępnienia i funkcję materiału, a potem **konkretny katalog**. Nie zapisuj nowych materiałów IW w głównym katalogu My Drive ani nie kończ pracy samą wiadomością w Slacku.
