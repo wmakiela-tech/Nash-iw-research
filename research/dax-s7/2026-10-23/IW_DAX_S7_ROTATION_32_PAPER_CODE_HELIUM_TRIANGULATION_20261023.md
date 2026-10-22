@@ -1,0 +1,5 @@
+# DAX-S7 rotation 32 — paper/code/standard helium Yp triangulation
+
+Source: Wu & Xu, JCAP02(2026)063, DOI 10.1088/1475-7516/2026/02/063. Eq (2.4) defines X_n=n_n/(n_n+n_p). Eq (5.1), section 5, prints Y_P≈2X_n(T_nuc)/(1-2X_n(T_nuc)). Public author code arXiv-2509.05618/main-scan.jl calculates 2*X_n/(1-X_n). Standard He-4 mass-fraction approximation is 2X_n. These are three different functions of the same X_n. At X_n=0.12: 0.315789 (paper), 0.272727 (code), 0.24 (standard). The paper also states comparison with BBN-simple nuclear reaction network and close agreement; this assertion has not been independently reproduced. Therefore the public code formula cannot automatically be assumed to produce published Figure 5, and paper/code/physical bound equivalence is OPEN. Need source trajectories, published figure provenance, code revision and independent nuclear-network comparison before bound claims. No numerical execution, no physical claim, NO_CANON, NO_EXEC_SIGN, NO_NOVELTY.
+
+Primary paper https://inspirehep.net/files/9adbfbb35c345cc510bed18e66a36b55 ; source code https://github.com/Fenyutanchan/Primordial-Black-Hole/blob/main/arXiv-2509.05618/main-scan.jl .
