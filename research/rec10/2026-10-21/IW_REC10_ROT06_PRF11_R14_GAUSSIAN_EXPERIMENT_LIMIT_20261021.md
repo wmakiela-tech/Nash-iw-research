@@ -73,3 +73,9 @@ Przy sigma²=1/4:
 **Disposition:** PASS_WITH_STRENGTHENING. NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE / NO_NEW_TASK. STABLE STOP przy niezmienionym modelu.
 
 **Custody:** plik utworzony jako załącznik do rozmowy. GitHub_write: BLOCKED. Slack_delivery: BLOCKED. Owner_receipt / BW_ingestion: NOT_VERIFIED.
+
+---
+
+### Aktualizacja custody / recovery — 2026-10-22
+
+Historyczne oznaczenia `GitHub_write: BLOCKED` i `Slack_delivery: BLOCKED` w oryginalnym raporcie dotyczą nieudanych prób z 21.10.2026 i pozostają zachowane jako ślad audytowy. **Ponowiony zapis: GitHub WRITE+EXACT READBACK PASS**, commit: `efc43814c7f2ec33373e421ad4a74b7708aa6d97`. **Ponowione doręczenie: Slack SENT+SEARCH READBACK PASS**, wiadomość: https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792655162182689. Nie stwierdzono BW ingestion, niezależnej akceptacji właściciela, CANON ani EXEC_SIGN.
