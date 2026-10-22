@@ -143,3 +143,50 @@ The original private BW workbook itself remained in its pre-existing `BW_V0_2_OP
 FOLDER_CLASS != SCIENTIFIC_STATUS
 PRIVATE_DRIVE_LOCATION != GITHUB_PUBLICATION_LICENSE
 ```
+
+
+## Trzeci obrót — deterministyczna procedura zapisu i odczytu (2026-10-22)
+
+**Problem wskazany bezpośrednio przez Moderatora:** porządek folderów bez obowiązkowych reguł zapisu i odszukiwania będzie ponownie rozbijany przez kolejne komórki. Z tego powodu systemowa **[mapa zapisu i wyszukiwania](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md)** określa dokładnie: typ artefaktu → istniejący folder Drive / ścieżka GitHub → BW `REGISTRY/CROSS_SURFACE_CUSTODY` → kanał Slack → kolejność odczytu. Komórki powinny używać tej mapy **przy tworzeniu wyniku**, a nie po zbiorczym sprzątaniu. Nie oznacza to nowej bariery przed rozpoczęciem badań.
+
+**Procedura jest obecna bezpośrednio lub poprzez obowiązujące odnośniki w:** `WORK_AND_REPRODUCIBILITY_PROTOCOL.md` (pełna tabela wyboru), `STORAGE_AND_SYNC_POLICY.md`, `START_HERE_CURRENT.md`, `SURFACE_ARCHITECTURE.md`, `NAMING_AND_INDEXING.md`, `REPOSITORY_STRUCTURE.md`, tym dokumencie oraz `README.md`. Każdy z tych zapisów został potwierdzony odczytem po commicie. Prywatnych ID folderów i dokumentów nie umieszczono w repozytorium publicznym.
+
+### Bieżąca partia przeniesień
+
+**29 kolejnych, indywidualnie zweryfikowanych przeniesień** z głównego katalogu My Drive do istniejących właściwych folderów IW:
+
+- **5** prywatnych pakietów sukcesyjnych LT4→LT5 (dwie wersje zachowane osobno), SCOPE8→SCOPE9, INT7→INT8 i REC9→REC10 → `01_CELL_SUCCESSION_AND_HANDOFF_PACKETS/`.
+- **3** wyniki Front B → `02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW/01_FRONT_B_PBH_BBN/`.
+- **14** wyników matematyki/mechanizmów (m.in. M13, DAX, GEEKY) → `02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW/04_OTHER_FORMAL_THEORY_AND_MECHANISMS/`.
+- **7** niezależnych audytów i przeglądów źródeł → `02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW/05_REFEREE_PRIOR_ART_AND_REVIEWS/`.
+
+Nie scalano automatycznie dokumentów o podobnym tytule ani różnych identyfikatorach, nie zmieniano ich treści, klas dostępu lub pierwotnego ID. Ruchy miały kontrolę źródłowego rodzica, prywatności, właściwego docelowego rodzica oraz stabilnego ID. Materiały RPG/Warhammer i inne prace spoza IW/NASH pominięto. Nie tworzono nowych katalogów, nie dotykano BW ani starych archiwów przez samą zmianę struktury.
+
+### Odczyt aktualnej liczebności po obrocie
+
+Dwa kolejne odczyty istniejących katalogów dały **172 pliki w nowej strukturze**, nie licząc podfolderów:
+
+| Katalog | Pliki |
+| --- | ---: |
+| `01_CELL_SUCCESSION_AND_HANDOFF_PACKETS` | 20 |
+| `02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW` bezpośrednio | 1 |
+| `02/.../01_FRONT_B_PBH_BBN` | 18 |
+| `02/.../02_H8R_TPE_QRF_AND_COMBS` | 23 |
+| `02/.../03_EDU1_AI_AND_EMPIRICAL` | 8 |
+| `02/.../04_OTHER_FORMAL_THEORY_AND_MECHANISMS` | 39 |
+| `02/.../05_REFEREE_PRIOR_ART_AND_REVIEWS` | 19 |
+| `03_MONOGRAPHS_AND_LIVING_BOOKS` bezpośrednio | 5 |
+| `03/.../01_LIVING_THEORY_DRAFTS` | 11 |
+| `03/.../03_LIVING_BOOK_AND_EDUCATION` | 3 |
+| `04_REPRODUCTION_DATA_CODE_PACKAGES` | 13 |
+| `05_SLACK_SOURCE_RECOVERY` | 9 |
+| `06_SYSTEM_OPERATIONS_AND_GOVERNANCE` | 2 |
+| `99_BLOCKED_HOLD_AND_EXCEPTION` | 1 |
+| `00_TRIAGE_NEW_AND_UNCLASSIFIED` | 0 |
+| **Razem** | **172** |
+
+Różnica pomiędzy poprzednim stanem 133 i obecnymi 172 **nie jest w całości skutkiem 29 nowych ruchów SYSS**: w katalogach występowały już inne późniejsze dodatki. Nie przedstawiaj jej jako 39 przeniesień tego obrotu. Liczby są odczytem konkretnego obszaru, nie pełną inwentaryzacją całego konta Drive i nie dowodem currentness/accepted science.
+
+**Granice i jawne HOLD:** Historyczne repozytoria, stare kopie i pozostałe źródła w My Drive root nadal wymagają celowej klasyfikacji; zachowany jest zablokowany pusty shell INT7 Thread076 oraz historyczna ekspozycja lokalizatorów w starych publicznych commitach. W tym obrocie nie ponawiano zablokowanych operacji, nie zmieniano udostępniania prywatnego katalogu i nie dokonywano naukowej rekwalifikacji. Dostęp innych osób do plików nadal podlega rzeczywistym uprawnieniom Google, nie nazwie folderu czy indeksowi Slack.
+
+`EXACT_ROUTE_AT_WRITE_TIME > CLEANUP_AFTER_THE_FACT`; `ONE_ARTIFACT_ID -> ONE_CANONICAL_BODY`; `FILE_MOVED != BW_ACCEPTED`; `FOLDER_COUNTS != SCIENCE_CURRENTNESS`.
