@@ -39,6 +39,12 @@ PRIVATE_SOURCE_CARRIER != PRIVATE_SCIENCE_CONTENT_BY_DEFINITION
 DRIVE_PRIVATE != GITHUB_UNSAFE_FALLBACK
 ```
 
+### Exact-path rule for every cell — controlling addendum (2026-10-22)
+
+All material-return writers must apply the exact route and retrieval matrix in [`IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md). **Generic instruction to “save on GitHub/Drive” is insufficient.** Public science goes in `research/<lineage>/<YYYY-MM-DD>/` as a complete body; private packets in Drive `04_PRIVATE_PROJECT_DOCUMENTS_CURRENT/01_CELL_SUCCESSION_AND_HANDOFF_PACKETS/`, private science in `02_PRIVATE_SCIENTIFIC_SOURCE_AND_REVIEW/<topic>/`, books in `03_MONOGRAPHS_AND_LIVING_BOOKS/`, private reproducibility in `04_REPRODUCTION_DATA_CODE_PACKAGES/`, science-bearing Slack recoveries in `05_SLACK_SOURCE_RECOVERY/`, and true holds in `99_BLOCKED_HOLD_AND_EXCEPTION/` when permitted. Public policies modify existing `docs/`; BW remains in its pre-existing private operating location.
+
+For every publication, preserve `artifact_id`, `exposure`, `canonical_path`, `git_commit/source_revision`, `bw_event_or_pending`, original qualification and claim ceiling. Check the final readback at both source and custody layers. Never use Slack dispatch, a Drive-root upload, or a GitHub pointer as a substitute for a complete durable result.
+
 ## Core invariant
 
 GitHub and BW must be mutually traceable without becoming competing truth stores.
