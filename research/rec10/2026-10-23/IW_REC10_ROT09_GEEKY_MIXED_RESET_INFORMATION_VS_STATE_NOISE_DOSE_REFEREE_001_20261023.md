@@ -72,3 +72,9 @@ More sharply, actual mean state damping is O(1), while state variance may be O(1
 Parameter-conditioned information and unconditional stochastic state trajectories are different mathematical objects. Adaptation, correlated Gaussian noise without innovation contract, quantum CP instruments, or physical energy cost are NOT derived from this witness.
 This is within mature discrete-time linear Gaussian AR(1) / Kalman-state and sequential experiment theory. It is a source-typed falsifier for false inference, not new theory.
 No extra owner tasks. STOP until changed physical source contract or independently validated noise-scaling/shot-rate rule. BW ingestion and owner acceptance not implied by GitHub storage.
+
+
+## Custody and delivery (2026-10-23)
+GitHub science body WRITE and exact semantic READBACK PASS, initial commit 50539bda5132c247fdb91c3176198bffd40de8a6. Slack reply delivered to original Geeky-S10 source thread; thread READBACK PASS:
+https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792710390708919?thread_ts=1792710102.452639&cid=C0BV1J3SYLT
+Owner scientific acceptance and BW ingestion NOT VERIFIED; NO_CANON / NO_EXEC_SIGN.
