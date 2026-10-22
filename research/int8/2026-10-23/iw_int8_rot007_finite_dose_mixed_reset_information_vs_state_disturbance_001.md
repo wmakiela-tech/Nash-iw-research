@@ -149,8 +149,8 @@ It also shows that an instrument model with raw fixed-variance noise in every sh
 Numeric table for B=1,sigma=0.3, N=floor(1/s):
 s=0.1: Fisher 1.111111..., Varpost 0.416...
 s=0.02: Fisher .222222..., Varpost 1.971...
-s=0.005: Fisher .055555..., Varpost 7.801...
-These numbers are approximate and are independently recomputed by the accompanying reproduction script (see path in this directory).
+s=0.005: Fisher .055555..., Varpost 7.8075966051788255
+Numerical controls checked locally; executable reproduction: research/int8/2026-10-23/reproduce_int8_rot007_finite_dose_mixed_reset.py. Synthetic tests do not independently referee the proof.
 
 ## 6. Nonmaps and sharp failure controls
 
