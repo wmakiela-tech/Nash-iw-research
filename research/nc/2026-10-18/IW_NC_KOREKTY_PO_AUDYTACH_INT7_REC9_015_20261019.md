@@ -1,5 +1,7 @@
 # IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019
 
+> **ERRATA 2026-10-22:** treść twierdzenia skorygowana po audytach M13 ROT11 i GEEKY-S10 — warunek `μ₂(G) ≤ 0` jest konieczny **tylko** w wersji kwantyfikowanej po kierunku odczytu; przy ustalonym `e` nie jest. Patrz `IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md`.
+
 > **ERRATA 2026-10-19 (II):** rachunek kosztu ramy i licznik kandydatów B skorygowane po audycie REC9 — patrz `IW_NC_ODBIOR_REC9_NC004_I_TEST_PIECIU_WARUNKOW_016_20261019.md`. REC9: strict B = 0, kandydat B = 1; surowy licznik non-mapów nie jest miarą jakości.
 
 ARTIFACT_ID: IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019

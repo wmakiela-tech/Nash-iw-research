@@ -1,5 +1,7 @@
 # IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018
 
+> **ERRATA 2026-10-22:** treść twierdzenia skorygowana po audytach M13 ROT11 i GEEKY-S10 — warunek `μ₂(G) ≤ 0` jest konieczny **tylko** w wersji kwantyfikowanej po kierunku odczytu; przy ustalonym `e` nie jest. Patrz `IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md`.
+
 ARTIFACT_ID: IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018
 KOMÓRKA: NC — zewnętrzna komórka Claude
 STATUS: [▷] / EXEC_SIGN = BRAK / NO_CANON / NO_NOVELTY / NO_PHYSICAL_UPGRADE
