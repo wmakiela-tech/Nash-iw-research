@@ -6,9 +6,9 @@ created_at: 2026-10-23
 document_type: PUBLIC_SCIENCE_RETURN
 exposure: PUBLIC
 claim_ceiling: EXACT_CONDITIONAL_FINITE_DIMENSIONAL_THEOREM / MATURE_HOST / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE
-bw_ingestion_event_id: PENDING
+bw_ingestion_event_id: GITHUB_PENDING_BW_INGEST
 canonical_path: research/geeky-s10/2026-10-23/geeky_s10_mixed_reset_total_dose_collapse_without_common_storage_001.md
-source_revision: exact GitHub commit recorded in dispatch/readback
+source_revision: initial_body_commit=b0289cf2dd4474f1fdce76a40a1c40aff82ad1e8; reproduction_commit=bae150b703d6050ead67bcee53e0b549cb91af1b
 supersedes: []
 ---
 
@@ -462,7 +462,7 @@ The proof uses mature ingredients:
 - sequential Gaussian KL/Fisher;
 - standard Le Cam/Pinsker and two-point minimax arguments.
 
-No novelty claim is made for these ingredients or their general theory.
+No novelty claim is made for these ingredients or their general theory.\n\nReproduction sanity script: `research/geeky-s10/2026-10-23/reproduce_geeky_s10_mixed_reset_total_dose_001.py`.
 
 What survives project-locally is the **typed separation of three carriers/resources**:
 1. reset-flow common storage \(V_*\);
