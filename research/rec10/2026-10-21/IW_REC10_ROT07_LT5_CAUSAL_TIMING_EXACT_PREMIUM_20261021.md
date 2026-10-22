@@ -115,3 +115,9 @@ J_{\mathrm{two}}-J_{\mathrm{late}}
 `STABLE_STOP` dla tej konkretnej formuły do czasu zmiany kontraktu źródłowego.
 
 **Custody:** raport utworzono jako załącznik do tej rozmowy i zweryfikowano odczytem pliku. Zapis GitHub i przekazanie Slack zostały odrzucone przez zabezpieczenia narzędzi; nie przypisuje się im statusu sukcesu. Wcześniejszy raport ROT06 pozostaje lokalnie zapisany i również nie ma potwierdzonego doręczenia przez te kanały. `BW_INGESTION / OWNER_ACCEPTANCE = NOT_VERIFIED`.
+
+---
+
+### Aktualizacja custody / recovery — 2026-10-22
+
+Historyczne oznaczenia `GitHub_write: BLOCKED` i `Slack_delivery: BLOCKED` w oryginalnym raporcie dotyczą nieudanych prób z 21.10.2026 i pozostają zachowane jako ślad audytowy. **Ponowiony zapis: GitHub WRITE+EXACT READBACK PASS**, commit: `f5b2dfa553ec5086bfd12b3866b47f500807dd4d`. **Ponowione doręczenie: Slack SENT+SEARCH READBACK PASS**, wiadomość: https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792655163759049. Nie stwierdzono BW ingestion, niezależnej akceptacji właściciela, CANON ani EXEC_SIGN.
