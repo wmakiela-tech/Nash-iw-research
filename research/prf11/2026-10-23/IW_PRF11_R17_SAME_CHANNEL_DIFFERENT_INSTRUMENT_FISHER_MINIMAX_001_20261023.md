@@ -139,7 +139,7 @@ Dla N kolejnych niezależnych KOPII ρ_θ lub po legalnej zmianie słownika przy
 
 ## 6. Reprodukcja obliczeniowa — niezależna od dowodu
 
-Dołączony kod `reproduce_r17_qubit_instrument.py` wykonuje:
+Dołączony [kod odtwarzający](reproduce_r17_qubit_instrument.py) wykonuje:
 - bezpośrednie kontrole macierzowe instrumentu Lüdersa i losowo-unitarnego (identyczny wynik kanału dla 4 sił i 3 parametrów);
 - sumowanie sekwencyjnych CP operacji dla wszystkich 2^N wyników N=1,2,3,4 i porównanie z faktoryzacją Pθ(y) poprzez A;
 - dokładne, numerycznie stabilne Fisher z dwumianowej statystyki wystarczającej, bez symulacji Monte Carlo;
@@ -165,7 +165,7 @@ Limit FI projektora σ_x to `1/(1-0.25²)=1.066666666667`, a nie QFI 2.285714285
 1. E. B. Davies, J. T. Lewis, *An Operational Approach to Quantum Probability*, Communications in Mathematical Physics **17** (1970), 239–260, DOI 10.1007/BF01647093. Oryginalny gospodarz teorii instrumentów; sprawdzono metadane publikacji, nie pełną lekturę dowodów.
 2. E. Haapasalo, T. Heinosaari, Y. Kuramochi, *Saturation of Repeated Quantum Measurements*, Journal of Physics A **49** (2016), 33LT01, DOI 10.1088/1751-8113/49/33/33LT01, https://arxiv.org/abs/1603.04271. **Bezpośredni dojrzały gospodarz** sukcesywnej nieostrej informacji i granicznego ostrego pomiaru; zweryfikowano artykuł w bazie instytucjonalnej i jego streszczenie; nie ogłaszać odzyskania pomiaru ostrego jako nowości.
 3. T. Bullock, T. Heinosaari, *Quantum State Discrimination via Repeated Measurements and the Rule of Three*, Quantum Studies: Mathematics and Foundations (2020), DOI 10.1007/s40509-020-00233-7. Pierwotny artykuł w pełnym HTML wydawcy; zawiera jawne operatory efektów kolejnych pomiarów i badanie rozpoznawania stanów.
-4. F. A. Pollock et al., *Operational Markov Condition for Quantum Processes* / teoria instrumentów wieloczasowych — kontekst strukturalny; bliższa formalizacja instrumentów w *Quantum Stochastic Processes and Quantum non-Markovian Phenomena*, PRX Quantum **2**, 030201 (2021), DOI 10.1103/PRXQuantum.2.030201. Pełny artykuł HTML z definicjami CP instrumentów i POVM przeglądnięty w zakresie relacji instrument–kanał–wynik.
+4. S. Milz i K. Modi, *Quantum Stochastic Processes and Quantum non-Markovian Phenomena*, PRX Quantum **2**, 030201 (2021), DOI 10.1103/PRXQuantum.2.030201. Pełny artykuł HTML z definicjami CP instrumentów i POVM przeglądnięty w zakresie relacji instrument–kanał–wynik.
 5. Wzór na QFI kubitu, np. *Quantum Fisher and Skew Information for Unruh Accelerated Dirac Qubit*, European Physical Journal C (2016), DOI 10.1140/epjc/s10052-016-4290-7 (oryginalny tekst HTML, jawny wzór zależny od wektora Blocha). To gospodarz FORMUŁY, a nie źródło nowej teorii metrologii.
 6. Ruskai, Szarek, Werner, *An Analysis of Completely-Positive Trace-Preserving Maps on M2*, Linear Algebra Appl. **347** (2002), DOI 10.1016/S0024-3795(01)00547-X, oryginalny host geometrii CPTP, użyty także przez LT5.
 
