@@ -56,6 +56,10 @@ supersedes: []  # old artifact IDs; direction is old -> this artifact
 - Derived summary: new ID with `derived_from`; never masquerade as the source.
 - Supersession: store `old_id -> new_id`; a later timestamp alone does not supersede anything.
 
+## Pre-filing and retrieval resolver (2026-10-22)
+
+A searchable filename alone is insufficient. **Choose the exact destination using [`IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md)** before writing; preserve the same `artifact_id` through Drive, GitHub, BW and Slack. That map binds the existing private Drive subfolders (succession, per-topic science, LT/education, data, Slack recovery and holds), public GitHub source paths and BW source/custody columns. On lookup, use `artifact_id → BW REGISTRY/currentness → CROSS_SURFACE_CUSTODY → full source → Slack thread`, not a guess based on filename/newest modification time.
+
 ## Repository placement
 
 Forward canonical placement:
