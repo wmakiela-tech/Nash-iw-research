@@ -20,3 +20,8 @@ Shared-background accounts for 86.406% and 85.548% of recorded contrast magnitud
 SUFFICIENT NUMERIC SIGN GATES on that fixed-background, fixed-T replay: H_delta <1.640731e-5 for exec; H_delta <1.083653e-5 for sym. Neither H_delta is bounded by accessible original accepted Julia steps. Archive-minus-conditional-replay residual is NOT a rigorous estimator of H_delta.
 
 STATUS: source code and table arithmetic independently examined; archived ZIP bytes and original Julia solve NOT rerun. This is classical ODE Duhamel mathematics, not a physical PBH result. No manuscript/BW mutation, no new tasks. Reopen on actual accepted-step hadron trace, convergence evidence or source-law revision.
+
+## Delivery receipt (2026-10-23)
+Slack #iw-dispatch reply to original Mech-S7 rotation 002 thread, SENT and THREAD READBACK PASS:
+https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792710109710459?thread_ts=1792655697.199669&cid=C0BV1J3SYLT
+GitHub publication and Slack delivery do not establish BW ingestion, Mech-S7 owner acceptance, physics or EXEC authority.
