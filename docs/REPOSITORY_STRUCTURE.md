@@ -27,6 +27,10 @@ manifests/
 legacy/                  only when an old layout cannot remain safely in place
 ```
 
+## Exact cross-surface placement prerequisite (2026-10-22)
+
+The repository layout below governs **public** paths. For private material, the controlling directory trees and the complete mandatory write/read sequence are specified in [`IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md`](IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md): `NASH–IW Shared Research Bridge/04_PRIVATE_PROJECT_DOCUMENTS_CURRENT/` and its verified class/topic subfolders. Do not convert a private Drive-origin manuscript into public content merely to populate `research/`, and do not save public-safe science only in Drive with a GitHub `POINTER_ONLY` placeholder. Each material return must have one identifiable canonical body and matching BW custody.
+
 ## Canonical placement rules
 
 ### `docs/`
