@@ -1,5 +1,18 @@
 # NASH/IW — Drive → GitHub: migracja całego archiwum projektu
 
+## AKTUALIZACJA DOCELOWEGO GITHUB PRIVATE — 2026-10-23
+
+**Nowy stan z bezpośredniego odczytu GitHub (pierwszeństwo nad sekcją 7 i pierwotnym statusem):** integracja obsługuje dwa repozytoria **PRIVATE** `wmakiela-tech/Nash-Priv` (niepuste; trwałe pakiety sukcesyjne) i `wmakiela-tech/Nash-prv` (puste) oraz publiczne `wmakiela-tech/Nash-iw-research`. Użytkownik ma `admin/push/pull` do obu PRIVATE. Wymyślona wcześniej nazwa `wmakiela-tech/Nash-iw-private` **nie istnieje** w podłączonym zbiorze i nie jest wymagana. `Nash-Priv` jest sprawdzonym prywatnym nośnikiem sukcesyjnym, co **nie** oznacza automatycznego wyboru kanonicznego docelowego repo dla BW i całego archiwum.
+
+Status: `PRIVATE_REPO_CONNECTION_VERIFIED / CANONICAL_PRIVATE_ARCHIVE_UNDECIDED / MASS_MIGRATION_NOT_EXECUTED / DRIVE_ORIGINALS_RETAINED`. Żaden proces nie może traktować tego faktu jako uprawnienia do publicznego fallbacku ani destrukcyjnego usuwania z Drive.
+
+**BW live różni się od historycznych punktów głowicy:** `REGISTRY` `ING-20261023-0037` wiersz1448 `COMMITTED/PASS`, `CROSS_SURFACE_CUSTODY` ostatnie `XSC-0210` wiersz211 do `ING-0025`, a skumulowany README tylko `ING-0025` / row1436. Dwanaście najnowszych pełnych zdarzeń REGISTRY `ING-0026..0037` nie ma potwierdzonej następnej mapy XSC. Jest to `SOURCE_CUSTODY_CURRENTNESS_RECONCILIATION_REQUIRED`, a nie dowód utraty science, nowatorstwa czy przyjęcia. SYSS nie zastępuje KN/BW w właścicielskiej semantycznej kwalifikacji.
+
+**Brama wykonania:** przed dużym przenoszeniem prywatnego korpusu należy ustalić właścicielski kanoniczny private target oraz mechanizm działającego BW; test sukcesji już potwierdził odczyt/zapis prywatnego Git, nie migrację źródeł i danych. Stare opisy `PRIVATE_REPO_NOT_CONNECTED` niżej stanowią historyczny stan pierwszego audytu, nie obecne twierdzenie.
+
+---
+
+
 **Decyzja Moderatora:** 2026-10-22 — przenieść projekt NASH/IW z przeciążonego Google Drive na GitHub.  
 **Status wykonania:** `MIGRATION_PREPARED / PRIVATE_REPOSITORY_NOT_YET_CONNECTED / SOURCE_NOT_DELETED`.  
 **Właściciel zadania systemowego:** SYSS / opiekunowie architektury archiwum; kwalifikację naukową nadal kontroluje BW/KN i odpowiednie komórki.  
@@ -106,7 +119,7 @@ Statusy błędów: `ACCESS_BLOCKED`, `SOURCE_ONLY_SLACK`, `FORMAT_LOSS`, `LFS_OB
 - Zespół potrzebuje dostępu do **prywatnego** repo; GitHub App podłączona wyłącznie do publicznego nie zobaczy tego archiwum.
 - Końcową aktualność nauki nadal wyznaczają kwalifikacja i właściciele BW, nie nazwa pliku ani numer commitu.
 
-## 7. Aktualny punkt zatrzymania
+## 7. Historyczny punkt zatrzymania — 2026-10-22 (superseded by live 2026-10-23 status)
 
 **Nie można rozpocząć bezpiecznej migracji private→private bez dostępnego prywatnego repo.** Podłączona integracja GitHub udostępnia obecnie tylko `wmakiela-tech/Nash-iw-research` (PUBLIC); nie oferuje w tym środowisku akcji tworzenia repozytorium. Wymagany jest repozytorium `wmakiela-tech/Nash-iw-private` utworzone jako `Private` i dodane do uprawnień integracji GitHub. Po tym kroku można wykonywać etapowe, sprawdzane transfery prywatnych źródeł i BW. Do tego czasu archiwum źródłowe pozostaje nienaruszone, z wyraźnym statusem `NOT_YET_MIGRATED`.
 
