@@ -201,3 +201,13 @@ HOLD: any actual original production runner bitwise identity, uniform upper boun
 No new task is assigned. The only scientifically admissible future transfer of the positive theorem is after choosing no-folding frequency support, same TT and derivative symbols, and a declared C regularity norm. Any physically meaningful TT interpretation additionally needs a moving metric/gauge/observable contract.
 
 NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / NO_PHYSICAL_UPGRADE / NO_NEW_OWNER_TASK / GITHUB_PENDING_BW_INGEST.
+
+
+---
+### Code publication receipt (separately verified)
+
+Source-compatible standalone Python script, archived with GitHub create + content readback PASS:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf11/2026-10-23/reproduce_prf11_r23_tt_commutator_host_and_alias.py
+GitHub commit e77e871f010facc2f377d5a2e0884c5608ca2018; Git blob dc34a5f37f22948ee86f2e04382d8ada6d6c6d90.
+
+The **same mathematics and full-source-hook test sequence** were executed in a separate local Python/NumPy reproducer, including original SHA256 verification and seven whole-grid cases; the archived GitHub script text was read back but not separately executed after publication. These are separate proof/custody statuses. The report's original complete derivation is authoritative if any script typo is discovered in later review. No BW ingestion is inferred.
