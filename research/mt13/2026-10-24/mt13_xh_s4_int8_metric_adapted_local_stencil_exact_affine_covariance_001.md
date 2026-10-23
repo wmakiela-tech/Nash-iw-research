@@ -64,8 +64,8 @@ N=31 m1 fixed .002047005875 / m15 fixed .199486932339;
 N=41 m1 fixed .001171957622 / m20 fixed .199706580118.
 All metric-adapted outputs agree with transformed source within 1e-15. Analytic fixed defect (3) agrees within 2e-13.
 Independent metric York single-mode projection for special and generic polarizations PASS. Random FULL symmetric tensor N11: adapted relative error 2.2779425e-16. Two distinct unimodular shears compose consistently with the adapted filter within 4e-14; integer signed-permutation E0 stabilizer defect exactly 0.
-Local ZIP includes original verified user helper, executable Python, Polish 12KB full proof, JSON, log, manifest/README. CLEAN EXTRACT CRC+SHA VERIFY and RERUN ALL_PASS.
-LOCAL ZIP exact SHA256: 7ce86b20e18c4b453cf5c9917af5b23e8cd84b54c40226b3542f16b53b9c5329.
+Local ZIP includes original verified user helper, executable Python, expanded Polish proof including raw-k alias audit, JSON, log, manifest/README. CLEAN EXTRACT CRC+SHA VERIFY and RERUN ALL_PASS.
+LOCAL ZIP exact SHA256: 8e435e0ffd5e71ea79c9534c08fb35720150d6c448709c148654398a92be3667.
 
 ## Owner-science implications (PROPOSED, not claimed accepted)
 XH-S4 Q43: AFFINE-FLAT finite-grid source-matched POSITIVE PASS and simultaneous fixed-E negative witness. Q42 nonflat York and Q62-Q68 Noether/off-shell/Duhamel remain distinct and OPEN for this host. XH original role and authorship preserved.
