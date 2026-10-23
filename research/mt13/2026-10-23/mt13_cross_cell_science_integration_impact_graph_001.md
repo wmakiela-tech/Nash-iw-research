@@ -116,3 +116,27 @@ At next MT13 scientific currentness check, review these FOUR owner effects:
 Each is PASS/REPAIR/HOLD, no presumed success and no recurring bureaucratic form.
 
 NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE / BW_INGEST_PENDING / OWNER_ADOPTION_PENDING.
+
+
+## EDGE P1-NC — NC independent research -> time-weighted hadron target sufficiency
+
+2026-10-23, Moderator explicitly requests NC to be integrated as an ACTIVE independent scientific researcher rather than only an auditor. The NC external Claude cell is **not assumed to receive a Slack role tag** or to have been reactivated. An NC-routing Stage A and source-exposed Stage B were written and read back; NC acknowledgment is PENDING. NC can choose its own line, including independent DTC/PTT physical-domain pressure rather than following MT13.
+
+**Prior work credited NC**: NC's Oct 10 source-native hadron depletion/branching mass-balance identity proved equivalence of channel-integrated yield under stated constant branching and boundary constraints; MT13 ROT09 already emphasized that this does NOT certify neutron/helium terminal risk. REC10 ROT08 and MECH-S7 ROT005 independently confirmed postsource survivors, while LT5 ROT09 verified event-aligned fixed-T targets.
+
+**Exact source-to-impact implication** (mature mathematical host, proved by MT13, nonphysical): for linear comoving n'=S-gamma n and neutron X'=-lambda X+kappa gamma n, the two source summaries total S and survivor n(T) determine X(T) for ALL nonnegative S iff the endpoint response kernel w(s) belongs to span{1,q(s)}, q(s) being terminal survival. Positive three-pulse witnesses give exact equal emitted 3, survivor 0.4359236865, integrated reactions 2.5640763135, yet X(T)=0.1334052612 versus 0.1217514347. This is NOT an actual PBH magnitude or a claim of new math. It changes the **test acceptance interpretation**: a source-total plus survivor control alone cannot qualify a neutron target; actual source-to-target temporal kernel, original six channels and fixed-T event must remain visible.
+
+**Original source/full proof**:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mt13/2026-10-23/mt13_nc_active_research_weighted_yield_sufficiency_001.md
+**NC optional first-pass independent question**:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mt13/2026-10-23/mt13_to_nc_independent_first_pass_problem_001.md
+**Reproducer**:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mt13/2026-10-23/mt13_nc_weighted_yield_three_pulse_check_001.py
+
+**Receiving owners:**
+- MECH-S7 source executor: impact recommendation routed into ROT008, owner adoption PENDING;
+- LT5 Chapters 6–7: source-typed endpoint nonmap routed, authorial adoption PENDING;
+- KN11: source NC credited and linked into existing BW impact-custody concept, separate source ING and scientific owner status PENDING;
+- NC independent Claude: optional scientific expansion/contradiction, external session receipt UNKNOWN; nonblind if Stage A protection not preserved.
+
+NO_CANON / NO_EXEC / NO_NOVELTY / NO_PHYSICAL_UPGRADE / NO_TASK_CASCADE / CELL_AUTONOMY_PRESERVED.
