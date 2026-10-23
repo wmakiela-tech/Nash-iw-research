@@ -1,0 +1,152 @@
+{
+  "result_id": "GEEKY-S11-ROT002-SIX-POLARIZATION-TT-TRACE-FRAME-RIGIDITY",
+  "max_trace_frame_abs_error": 1.3877787807814457e-17,
+  "max_trace_formula_point_error": 1.1102230246251565e-16,
+  "max_tt_input_err_rms": 3.626771794874605e-16,
+  "all_lower_bounds_pass": true,
+  "rows": [
+    {
+      "N": 7,
+      "alpha": 0,
+      "constant_C": false,
+      "trace_probe_sum": 0.041576048522993056,
+      "exact_rhs": 0.041576048522993056,
+      "abs_error": 0,
+      "operator_bound": 0.05264728452825974,
+      "observed_probe_ratio": 0.12284334365989831,
+      "lower_bound_check": true
+    },
+    {
+      "N": 7,
+      "alpha": 0.05,
+      "constant_C": false,
+      "trace_probe_sum": 0.0385042254465222,
+      "exact_rhs": 0.0385042254465222,
+      "abs_error": 0,
+      "operator_bound": 0.050665060575326264,
+      "observed_probe_ratio": 0.11821816649372592,
+      "lower_bound_check": true
+    },
+    {
+      "N": 7,
+      "alpha": 0.2,
+      "constant_C": false,
+      "trace_probe_sum": 0.029996014341034605,
+      "exact_rhs": 0.0299960143410346,
+      "abs_error": 3.469446951953614e-18,
+      "operator_bound": 0.04471838871652584,
+      "observed_probe_ratio": 0.10434263499520871,
+      "lower_bound_check": true
+    },
+    {
+      "N": 9,
+      "alpha": 0,
+      "constant_C": false,
+      "trace_probe_sum": 0.04645589529109157,
+      "exact_rhs": 0.04645589529109158,
+      "abs_error": 6.938893903907228e-18,
+      "operator_bound": 0.05565123256562043,
+      "observed_probe_ratio": 0.12985253747485942,
+      "lower_bound_check": true
+    },
+    {
+      "N": 9,
+      "alpha": 0.05,
+      "constant_C": false,
+      "trace_probe_sum": 0.044307600048849954,
+      "exact_rhs": 0.04430760004884997,
+      "abs_error": 1.3877787807814457e-17,
+      "operator_bound": 0.05434924105501993,
+      "observed_probe_ratio": 0.12681456520312498,
+      "lower_bound_check": true
+    },
+    {
+      "N": 9,
+      "alpha": 0.2,
+      "constant_C": false,
+      "trace_probe_sum": 0.03816784706298673,
+      "exact_rhs": 0.038167847062986746,
+      "abs_error": 1.3877787807814457e-17,
+      "operator_bound": 0.050443266523218434,
+      "observed_probe_ratio": 0.11770064838792163,
+      "lower_bound_check": true
+    },
+    {
+      "N": 17,
+      "alpha": 0,
+      "constant_C": false,
+      "trace_probe_sum": 0.05234971697215084,
+      "exact_rhs": 0.05234971697215084,
+      "abs_error": 0,
+      "operator_bound": 0.059076062254323644,
+      "observed_probe_ratio": 0.13784378591617574,
+      "lower_bound_check": true
+    },
+    {
+      "N": 17,
+      "alpha": 0.05,
+      "constant_C": false,
+      "trace_probe_sum": 0.05164509218345245,
+      "exact_rhs": 0.05164509218345246,
+      "abs_error": 6.938893903907228e-18,
+      "operator_bound": 0.05867713477636325,
+      "observed_probe_ratio": 0.13691295756083746,
+      "lower_bound_check": true
+    },
+    {
+      "N": 17,
+      "alpha": 0.2,
+      "constant_C": false,
+      "trace_probe_sum": 0.049559863581238234,
+      "exact_rhs": 0.04955986358123824,
+      "abs_error": 6.938893903907228e-18,
+      "operator_bound": 0.057480352342482055,
+      "observed_probe_ratio": 0.1341204724948227,
+      "lower_bound_check": true
+    },
+    {
+      "N": 31,
+      "alpha": 0,
+      "constant_C": false,
+      "trace_probe_sum": 0.05405369334933839,
+      "exact_rhs": 0.0540536933493384,
+      "abs_error": 6.938893903907228e-18,
+      "operator_bound": 0.0600298222271444,
+      "observed_probe_ratio": 0.14006922005129027,
+      "lower_bound_check": true
+    },
+    {
+      "N": 31,
+      "alpha": 0.05,
+      "constant_C": false,
+      "trace_probe_sum": 0.0538326233912347,
+      "exact_rhs": 0.053832623391234694,
+      "abs_error": 6.938893903907228e-18,
+      "operator_bound": 0.0599069408283852,
+      "observed_probe_ratio": 0.13978249753497354,
+      "lower_bound_check": true
+    },
+    {
+      "N": 31,
+      "alpha": 0.2,
+      "constant_C": false,
+      "trace_probe_sum": 0.05317213148779257,
+      "exact_rhs": 0.05317213148779256,
+      "abs_error": 6.938893903907228e-18,
+      "operator_bound": 0.059538296632107614,
+      "observed_probe_ratio": 0.13892232998602339,
+      "lower_bound_check": true
+    },
+    {
+      "N": 9,
+      "alpha": 0.05,
+      "constant_C": true,
+      "trace_probe_sum": 0,
+      "exact_rhs": 0,
+      "abs_error": 0,
+      "operator_bound": 0,
+      "observed_probe_ratio": 1.5958035690560542e-17,
+      "lower_bound_check": true
+    }
+  ]
+}
