@@ -1,0 +1,130 @@
+{
+  "status": "EXACT_COROLLARY_FROM_INT8_ROT016_EQ_2_3 / INDEPENDENT_FOURIER_VERIFIED / OPTIONAL_RETAINED_HELPER_VERIFIED",
+  "fixed_field": "H=diag(1,-1,0)cos(z)",
+  "fixed_transport": "C=(sin(x),0,0)",
+  "limit_any_fixed_alpha": 0.9354143466934853,
+  "normalized_Hs_to_L2_limit_formula": "sqrt(7/8)*2^(-s/2) for each fixed finite s>=0",
+  "witness_source": "retained helper supplied by user, not the byte-exact historical production file",
+  "rows": [
+    {
+      "N": 7,
+      "alpha": 0.0,
+      "q": 1,
+      "exact_formula": 0.8147706055925015,
+      "independent_FFT": 0.8147706055925014,
+      "delta": 1.1102230246251565e-16,
+      "TT_input_err": 1.1714814584511744e-16
+    },
+    {
+      "N": 7,
+      "alpha": 0.05,
+      "q": 1,
+      "exact_formula": 0.7840936613773702,
+      "independent_FFT": 0.7840936613773702,
+      "delta": 0.0,
+      "TT_input_err": 1.1714814584511744e-16
+    },
+    {
+      "N": 7,
+      "alpha": 0.2,
+      "q": 1,
+      "exact_formula": 0.6920628287319764,
+      "independent_FFT": 0.6920628287319764,
+      "delta": 0.0,
+      "TT_input_err": 1.1714814584511744e-16
+    },
+    {
+      "N": 9,
+      "alpha": 0.0,
+      "q": 1,
+      "exact_formula": 0.8612597756133217,
+      "independent_FFT": 0.8612597756133217,
+      "delta": 0.0,
+      "TT_input_err": 2.373241480813204e-16
+    },
+    {
+      "N": 9,
+      "alpha": 0.05,
+      "q": 1,
+      "exact_formula": 0.8411101245710378,
+      "independent_FFT": 0.8411101245710378,
+      "delta": 0.0,
+      "TT_input_err": 2.373241480813204e-16,
+      "source_helper_ratio": 0.8411101245710381,
+      "source_helper_diff": 2.220446049250313e-16,
+      "Lie_tensor_err": 2.8917711293779096e-16,
+      "helper_TT_err": 2.373241480813204e-16
+    },
+    {
+      "N": 9,
+      "alpha": 0.2,
+      "q": 1,
+      "exact_formula": 0.7806611714441862,
+      "independent_FFT": 0.7806611714441862,
+      "delta": 0.0,
+      "TT_input_err": 2.373241480813204e-16
+    },
+    {
+      "N": 17,
+      "alpha": 0.0,
+      "q": 1,
+      "exact_formula": 0.9142625199052531,
+      "independent_FFT": 0.9142625199052531,
+      "delta": 0.0,
+      "TT_input_err": 2.7396386433174425e-16
+    },
+    {
+      "N": 17,
+      "alpha": 0.05,
+      "q": 1,
+      "exact_formula": 0.9080887089344173,
+      "independent_FFT": 0.9080887089344173,
+      "delta": 0.0,
+      "TT_input_err": 2.7396386433174425e-16,
+      "source_helper_ratio": 0.9080887089344173,
+      "source_helper_diff": 0.0,
+      "Lie_tensor_err": 3.274045591964721e-16,
+      "helper_TT_err": 2.7396386433174425e-16
+    },
+    {
+      "N": 17,
+      "alpha": 0.2,
+      "q": 1,
+      "exact_formula": 0.88956727602191,
+      "independent_FFT": 0.8895672760219101,
+      "delta": 1.1102230246251565e-16,
+      "TT_input_err": 2.7396386433174425e-16
+    },
+    {
+      "N": 31,
+      "alpha": 0.0,
+      "q": 1,
+      "exact_formula": 0.9290229315315721,
+      "independent_FFT": 0.9290229315315722,
+      "delta": 1.1102230246251565e-16,
+      "TT_input_err": 3.4169512286185686e-16
+    },
+    {
+      "N": 31,
+      "alpha": 0.05,
+      "q": 1,
+      "exact_formula": 0.927121216132949,
+      "independent_FFT": 0.9271212161329491,
+      "delta": 1.1102230246251565e-16,
+      "TT_input_err": 3.4169512286185686e-16,
+      "source_helper_ratio": 0.9271212161329492,
+      "source_helper_diff": 2.220446049250313e-16,
+      "Lie_tensor_err": 3.933485588751363e-16,
+      "helper_TT_err": 3.4169512286185686e-16
+    },
+    {
+      "N": 31,
+      "alpha": 0.2,
+      "q": 1,
+      "exact_formula": 0.9214160699370797,
+      "independent_FFT": 0.9214160699370798,
+      "delta": 1.1102230246251565e-16,
+      "TT_input_err": 3.4169512286185686e-16
+    }
+  ]
+}
