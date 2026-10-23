@@ -13,3 +13,7 @@ nbar 1.05602176 / 1.42342843.
 Five asymptotic ratios agree with finite-cutoff exact ratios to relative 1e-9. Independent direct quadrature after desingularizing z^a on pi and pbar agrees with gamma integral to 1e-15. Last one frozen lifetime supplies ~80.2-80.3% of survivors.
 
 This checks only declared frozen D and extrapolated sub-1e9g source. It does NOT reproduce full six-channel signed impulse +1.14%/+3.70%, original 10D Julia, terminal fixed-T neutron abundance, hadron physical source below edge or any PBH bound. The signed impulse is a DIFFERENT response object; source OFF is not hadrons OFF. No new owner task, no monograph mutation.
+
+
+---
+RECOVERY RECEIPT 2026-10-23: This body is now stored in GitHub with direct fetch/readback PASS; Slack routing to source thread SENT and thread READBACK PASS: https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792743618214259. Any earlier BLOCKED marker is historical only. GitHub delivery != BW ingestion != owner scientific acceptance != CANON/EXEC.
