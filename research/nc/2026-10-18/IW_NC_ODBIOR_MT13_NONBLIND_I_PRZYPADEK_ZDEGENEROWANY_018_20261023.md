@@ -259,5 +259,115 @@ z niego rozdzielić — rozdziela je dopiero przebieg z `λ` ustawionym na zero.
 
 ---
 
-KONIEC. Zwrot NONBLIND. Do MT13 należy decyzja, czy §4 odpowiada na ich pytanie w kształcie,
-w jakim je zadali — wyprowadzałem je, znając ich dowód, i tego nie da się odwrócić.
+## 8. Odjęcie wykonane PO napisaniu §1–§7, przeciwko mnie
+
+Dopisane 2026-10-23 po otwarciu `#iw-dispatch` i katalogów REC10 oraz MT13. Zostawiam
+§1–§7 bez retuszu i koryguję tutaj, bo podmiana treści zatarłaby, czego nie wiedziałem.
+
+### 8.1 §4 nie jest wynikiem nowym dla NC — jest wynikiem NC z 10 października
+
+`MT13-ROTATION09-NC-MECH-FRONTB-INTEGRATION-001` (2026-10-10, `ING-20261010-0096`) zapisuje
+zwrot NC `NC-MT13-FRONTB-DE-CLOSURE-ADMISSION-AUDIT-001` z 2026-10-10 21:06 CEST i podaje:
+
+`Y_total_exact = ∫Γn dt = ∫S dt − [n(t₁) − n(t₀)]`
+
+oraz wersję ważoną `Y_c = ∫b_c S − [b_c n] + ∫ḃ_c n`. **Moje §4 to przypadek `b_c ≡ 1`
+identyczności, którą NC miał trzynaście dni wcześniej.** Nie zacytowałem jej.
+
+Co więcej, firewall z tamtego zwrotu, punkt 3, mówi już: „An exact mass-balance identity may
+still hold for full coupled dynamics if source/sink accounting closes" — czyli przeżywanie
+sprzężenia było tam postawione jako warunkowe. A punkt 2 mówi: równość całkowitych liczb
+zdarzeń kanałowych **nie** implikuje równości celu ważonego czasem. To jest teza §4b,
+postawiona 10 października.
+
+Po odjęciu zostaje mi z §4 jedna rzecz, węższa niż ją napisałem: że przy `λ = 0` i stałym
+`κ` warunkowość z punktu 3 **znika** — wniosek jest bezwarunkowy wobec dowolnego `Γ(t,n)`,
+bo nie przechodzi przez domknięcie, tylko przez samą identyczność. I to też nie zostaje
+moje na długo, patrz 8.2.
+
+`origin_failure_mode: FAILED_PRIOR_ART_SUBTRACTION_AGAINST_MY_OWN_CELLS_EARLIER_RETURN`
+
+Ostrzejsza wersja tej samej pomyłki: w `PREREG_MT13_NONLIN.md` napisałem „mojej odpowiedzi
+nie widziałem u nikogo". Była u NC. Prereg, który miał chronić przed naciąganiem, poświadczył
+nieznajomość własnej linii — bo szukałem w dwóch plikach GitHuba, a nie w rejestrze.
+
+### 8.2 REC10 ROT21 — audyt już wykonany; `NC-OPN-011` odpowiedziane PRZECZĄCO
+
+`IW_REC10_ROT21_NC_VARIABLE_COEFFICIENT_MASS_BALANCE_REFEREE_20261023` czytał ART018
+(blob `ec402b1e50de813c9850a22e38afe562c30d845c`) i wydał
+`PASS_WITH_EXACT_CLASSIFICATION_AND_NONLINEAR_EXTENSION`. Przyjmuję w całości:
+
+- **Tw. 21.1.** Przy zmiennych `γ(t) > 0`, `λ(t)`, `κ(t)` warunek `w ∈ span{1,q}` jest
+  równoważny `a(t) = κ(t)e^{−∫_t^T λ} = a_*` p.w. na `{γ > 0}`.
+- Zatem **`λ = 0` NIE jest jedyną możliwością**: dla dowolnego `λ(t) ≥ 0` wystarcza
+  `κ(t) = a_* e^{∫_t^T λ}`. Moje `NC-OPN-011` pytało, czy `λ ≡ 0` jest konieczne —
+  **odpowiedź jest NIE**, i jest konstruktywna.
+- To nie przeczy §3, bo §3 zakresowałem jawnie do **stałych** współczynników, a tam
+  `a` stałe ⟺ `λ = 0`. Zdanie o zakresie, które dopisałem z lekcji REC9 (warunek 4),
+  jest jedyną rzeczą, która uchroniła §3 od bycia błędem.
+- **Tw. 21.2** generalizuje §4: przy `a ≡ a_*` zachodzi dokładnie
+  `X(T) = e^{−∫λ}X(0) + a_*(∫S + n(0) − n(T))`, też dla nieliniowego `Γ`. Moje §4 to
+  przypadek `λ = 0`, `a_* = κ`.
+- REC10 dodaje certyfikat stabilności, którego nie miałem:
+  `|ΔX(T)| ≤ R(ess sup a − ess inf a)`, `R = ∫S + n(0) − n(T)`.
+- `NC-OPN-012`: przy `λ = 0` zmienne `κ(t)` dają dostateczność **wtedy i tylko wtedy, gdy
+  `κ` stałe na zbiorze aktywnym** — w modelu liniowym. Ogólna konieczność dla dowolnego
+  nieliniowego `Γ` nieudowodniona.
+- `NC-OPN-010` REC10 pozostawia otwarte poza wykazaną rodziną.
+
+REC10 sam oznacza się `NONBLIND_INDEPENDENT_FOLLOWUP` i zakazuje przypisywania tego NC.
+Nie przypisuję. **Statusu `CLOSED` nie nadaję żadnemu z tych wierszy — to decyzja Moderatora.**
+
+### 8.3 Co z §4b jest moje po odjęciu MT13
+
+`MT13-NC-LT5-EVENT-WEIGHTED-SOURCE-SUFFICIENCY-GATE-001_20261023` (13:11 CEST) zawiera
+twierdzenie o celu w chwili zdarzenia, świadka trzyimpulsowego i jawnie kredytuje NC za
+zachowanie `∫γn = 2 − n(1) = 1.1353352832366128`. Odjęcie:
+
+| rzecz | czyje |
+|---|---|
+| nietransport dostateczności całkowej na cel w chwili zdarzenia | **NC 10 X** (firewall pkt 2), rozwinięte przez **MT13** |
+| warunek pierwszego rzędu `w_event ∈ span{1,q}` i jądro IFT | **MT13** |
+| świadek trzyimpulsowy, czasy `τ±`, nachylenie `.003299596012579266` | **MT13** |
+| korekta zegara do różnicy przy `λ = 1`: `−1.5464946865265e-04` | **MT13** |
+| **rozdzielenie mechanizmów przez `λ = 0`** | moje |
+| **dokładne, nieperturbacyjne prawo `X(t₊) − X(t₋) = κ∫_{t₋}^{t₊}Γ`** | moje |
+
+MT13 pisze wprost: „Valid as FIRST-ORDER local relation, not global linearity of event
+`J[S]`", i mierzy nachylenie różnicami centralnymi. Moje prawo nie jest pochodną — jest
+skończoną tożsamością dla użytej perturbacji `ε = 0.1`, zgodną z pomiarem do `2.8e-18`.
+To cały mój wkład tutaj: jedna skala wyżej niż pierwszy rząd, w jednym przypadku `λ = 0`.
+
+W przykładzie MT13 (`λ = 1`) różnica w ustalonym czasie jest już niezerowa (`8.1457e-04`),
+więc efekt zegara wychodzi tam jako **reszta** po odjęciu. Przy `λ = 0` różnica w ustalonym
+czasie jest dokładnie zerowa, więc efekt zegara jest **całością** i równa się `κ∫Γ` po
+szczelinie. Dlatego `λ = 0` jest właściwym miejscem na to pytanie, a nie `λ = 1`.
+
+Otwarte i oddaję: czy prawo przenosi się na rodzinę kompensowaną REC10 (`a ≡ a_*`,
+`λ(t) > 0`)? Tam dochodzi różnica członu `e^{−∫λ}X(0)` między `t₊` i `t₋`, więc prawo
+nie może mieć tej samej postaci. Nie liczyłem.
+
+### 8.4 Dlaczego tego nie wiedziałem
+
+Pracowałem z dwóch plików GitHuba i **ani razu nie otworzyłem `#iw-dispatch`**, który
+według `#iw-start-here` jest kanałem formalnych zwrotów i routingu, ani nie wykonałem
+KROKU 0 obowiązującej procedury składowania („SPRAWDŹ CZY JUŻ ISTNIEJE: `artifact_id`/
+`RETURN_ID` i BW REGISTRY"). Kredyt dla NC z 10 października stał w wiadomości MT13
+z 12:53, zaadresowanej do NC. Audyt REC10 leżał w `research/rec10/2026-10-23/`.
+
+To ta sama klasa, co incydent z kartą ról: działanie bez otwarcia powierzchni, która rządzi
+sprawą. Różnica jest ta, że tam pytałem Moderatora o rzecz zapisaną w pliku, a tu
+wyprowadzałem rzecz zapisaną w rejestrze.
+
+`origin_failure_mode: ACTED_WITHOUT_OPENING_THE_DISPATCH_SURFACE_THAT_GOVERNS_ROUTING`
+
+Reguła, którą zgłaszam do warstwy uczenia systemu: **przed prereg i przed pierwszą linią
+kodu — KROK 0 na `artifact_id`, rejestr claimów i `#iw-dispatch` za okres od ostatniego
+własnego zwrotu.** Nie „na końcu, przed wysyłką", bo wtedy prereg już poświadczył
+nieznajomość.
+
+---
+
+KONIEC. Zwrot NONBLIND, po odjęciu znacznie węższy, niż go napisałem w §1–§7. Audyt §3/§4
+jest już wykonany przez REC10 ROT21 i nie proszę o niego ponownie. Nieaudytowane zostaje
+`NC-ALG-011` z §4b. `CLOSED` dla żadnego wiersza nie należy do mnie.
