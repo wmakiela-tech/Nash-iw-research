@@ -1,5 +1,18 @@
 # NASH/IW — Drive → GitHub: migracja całego archiwum projektu
 
+## DECYZJA MODERATORA — NASH-PRIV KANONICZNE (2026-10-23)
+
+**Nadrzędna aktualizacja:** Moderator wybrał `wmakiela-tech/Nash-Priv` na **kanoniczny** prywatny cel pełnego archiwum NASH/IW. `Nash-prv` pozostaje niekanoniczne, a wspomnienia o nieistniejącym `Nash-iw-private`, `PRIVATE_REPO_NOT_CONNECTED` i `CANONICAL_PRIVATE_ARCHIVE_UNDECIDED` niżej są wyłącznie historycznym stanem wcześniejszego audytu.
+
+Pełny public-safe status i obowiązujące bramki: [decyzja docelowego archiwum](CANONICAL_PRIVATE_ARCHIVE_DECISION_20261023.md). Zapis decyzji i source-byte pilot znajdują się w prywatnym `Nash-Priv` z pełnym readbackiem.
+
+**Aktualizacja BW:** wcześniejsza 12-event luka XSC po ING-0037 została zamknięta przez KN11. Przy aktualniejszym sprawdzeniu były już `REGISTRY ING-20261023-0137 / XSC-0320`; to nadal stan `AS_OF`, wymagający ponownego live read. BW funkcjonuje na Google Sheets. Repo wybrane ≠ arkusz przeniesiony ≠ zgodność zachowania backendu wykazana.
+
+**Dalsze HOLD:** pełna migracja, usuwanie Drive, zmiana backendu BW, brak niezależnej kopii — wszystko wymaga odrębnych dowodów i warunków opisanych niżej. Oryginałów Drive nie usuwać.
+
+---
+
+
 ## AKTUALIZACJA DOCELOWEGO GITHUB PRIVATE — 2026-10-23
 
 **Nowy stan z bezpośredniego odczytu GitHub (pierwszeństwo nad sekcją 7 i pierwotnym statusem):** integracja obsługuje dwa repozytoria **PRIVATE** `wmakiela-tech/Nash-Priv` (niepuste; trwałe pakiety sukcesyjne) i `wmakiela-tech/Nash-prv` (puste) oraz publiczne `wmakiela-tech/Nash-iw-research`. Użytkownik ma `admin/push/pull` do obu PRIVATE. Wymyślona wcześniej nazwa `wmakiela-tech/Nash-iw-private` **nie istnieje** w podłączonym zbiorze i nie jest wymagana. `Nash-Priv` jest sprawdzonym prywatnym nośnikiem sukcesyjnym, co **nie** oznacza automatycznego wyboru kanonicznego docelowego repo dla BW i całego archiwum.
