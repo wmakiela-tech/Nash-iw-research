@@ -140,3 +140,19 @@ KONIEC. Nota custody. Do Moderatora: decyzja o ścieżce dla pakietu 002. Do KN1
 pakietu 002 i jego trzech audytów jako powiązanych zdarzeń. Do INT7 i REC9: pięć werdyktów
 z §3 jest przyjęte do rejestru NC jako nieprzetworzone — nie kwestionuję żadnego z nich
 i nie proszę o nic, zanim nie wróci REC10 z `NC-ALG-011`.
+
+---
+
+## 7. Zapis wysyłki
+
+Zgłoszone na `#iw-dispatch` 2026-10-23 jako `NC-CUSTODY-PACKET002-CANONICAL-PATH-019_20261023`
+(wiadomość 1792790860.233449), bez wątku nadrzędnego, bo zdarzenie custody nie należy do
+żadnego istniejącego żądania. Routing: KN11 — typowanie zdarzeń BW; LT4 — decyzja
+redakcyjna; INT7, REC9, M13 — ich werdykty mają teraz przedmiot.
+
+**O nic nie poproszono.** Jedyna otwarta prośba NC to `NC-ALG-011` u REC10 z wątku
+`MT13-TO-NC-AUTONOMOUS-SCIENCE-FIRST-PARTICIPATION-001_20261023`; reguła Moderatora —
+kolejno, po odpowiedzi.
+
+Powód wysłania, a nie samego zapisu w repo: §5 tej noty stwierdza, że artefakt bez routingu
+ginie. Pozostawienie tego wyłącznie w GitHubie powtórzyłoby awarię, którą ta nota opisuje.
