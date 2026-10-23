@@ -1,0 +1,457 @@
+{
+  "schema": "LT5_STAGE1_FROZEN_PUBLIC_GITHUB_SOURCE_FRAME_V001",
+  "as_of": "2026-10-23",
+  "repository": "wmakiela-tech/Nash-iw-research",
+  "comparison": {
+    "api_url": "https://api.github.com/repos/wmakiela-tech/Nash-iw-research/compare/33559d5...c65b6d4",
+    "base_sha": "33559d581171863539f94d7d4c6471c45e3dba23",
+    "head_sha": "c65b6d4119277076114bd8ab782ca160f166b5e1",
+    "total_commits": 99,
+    "compare_file_entries": 91
+  },
+  "inclusion_rule": "diff.files with status exactly added, filename starts research/ and ends .md; not all October artifacts or all public/private sources",
+  "source_unit": "one path+blob, NOT scientific claim or independent trial",
+  "selection": {
+    "purpose": "12-lineage feasibility calibration only; not representative for inference",
+    "seed": "LT5-NASH-CORRECTION-STAGE1-20261023",
+    "algorithm": "For every lineage, choose document with smallest unsigned 32-bit FNV-1a rank of seed+'|'+UTF-16 path, break equal ranks by lexicographic path; JavaScript Math.imul xor per UTF-16 code unit. No cryptographic or true random property asserted.",
+    "lineages": 12,
+    "selected": [
+      {
+        "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_22_EVAPORATION_CLOCK_IDENTIFIABILITY_SUMMARY_20261023.md",
+        "lineage": "dax-s7",
+        "blob_sha": "b059bbb9e27e0e3451baa8ddeec09875c6e82617",
+        "status": "added",
+        "rank_u32": 866542888
+      },
+      {
+        "path": "research/geeky-s10/2026-10-23/geeky_s10_oblique_mixed_reset_exact_dose_phase_001.md",
+        "lineage": "geeky-s10",
+        "blob_sha": "8c152b690547b1fe2bfa1a63f15cb9cd5510aeba",
+        "status": "added",
+        "rank_u32": 136388876
+      },
+      {
+        "path": "research/int8/2026-10-23/iw_int8_rot007_finite_dose_mixed_reset_information_vs_state_disturbance_001.md",
+        "lineage": "int8",
+        "blob_sha": "4020d5c25bd03997cd91d90b214755f7b1e34f38",
+        "status": "added",
+        "rank_u32": 1668458078
+      },
+      {
+        "path": "research/kn11/2026-10-23/iw_kn11_rot05_bidirectional_projector_compression_nonmap_001.md",
+        "lineage": "kn11",
+        "blob_sha": "40420ba4d1c8d48aa7d09166a4a41779cfab6a52",
+        "status": "added",
+        "rank_u32": 59089558
+      },
+      {
+        "path": "research/lt5/2026-10-23/lt5_rev020_manuscript_impact_gap_audit_001.md",
+        "lineage": "lt5",
+        "blob_sha": "e25ecbc6a218065f84ecba3529e4fb26134e037f",
+        "status": "added",
+        "rank_u32": 82648357
+      },
+      {
+        "path": "research/m13/2026-10-23/IW_M13_ROT20_DTC0a_alpha_norm_identifiability_001.md",
+        "lineage": "m13",
+        "blob_sha": "e56fca7a4d15d9df2ec1893bd3cb95c23758a91b",
+        "status": "added",
+        "rank_u32": 690541651
+      },
+      {
+        "path": "research/mech-s7/2026-10-22/mech_s7_frontb_common_background_target_gate_002.md",
+        "lineage": "mech-s7",
+        "blob_sha": "765906aeb88aaac995cbf4c76fae7db1cbd27c31",
+        "status": "added",
+        "rank_u32": 501665935
+      },
+      {
+        "path": "research/mt13/2026-10-23/mt13_frontb_directional_rate_nonidentifiability_two_excitation_gate_001.md",
+        "lineage": "mt13",
+        "blob_sha": "8a1478c91a615dcbd992ee707539ec52b45b9657",
+        "status": "added",
+        "rank_u32": 139462424
+      },
+      {
+        "path": "research/nc/2026-10-18/IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md",
+        "lineage": "nc",
+        "blob_sha": "cee67d802c52e4a4c5d7b0d7554ecfb6c89085e0",
+        "status": "added",
+        "rank_u32": 1120016406
+      },
+      {
+        "path": "research/prf11/2026-10-23/IW_PRF11_R18_NOISY_SYNDROME_TARGET_RISK_DIAMOND_RECOVERY_001_20261023.md",
+        "lineage": "prf11",
+        "blob_sha": "3b9bcb52d4c0631f8010a568dc6885e126c962ef",
+        "status": "added",
+        "rank_u32": 344957642
+      },
+      {
+        "path": "research/rec10/2026-10-21/IW_REC10_ROT07_LT5_CAUSAL_TIMING_EXACT_PREMIUM_20261021.md",
+        "lineage": "rec10",
+        "blob_sha": "7501d0acc7158bfc6912a06ce546be9b29657415",
+        "status": "added",
+        "rank_u32": 1027132334
+      },
+      {
+        "path": "research/xh-s4/2026-10-22/IW_XH_S4_OCTOBER_RESEARCH_QUESTIONS_LINKS_AND_DISCRIMINATORS_012_20261022.md",
+        "lineage": "xh-s4",
+        "blob_sha": "1c3ef60e0494db9ed6f805f6e00f93f73cf54dd8",
+        "status": "added",
+        "rank_u32": 508495719
+      }
+    ]
+  },
+  "source_count": 58,
+  "files": [
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_21_PBH_MASS_AMPLITUDE_IDENTIFIABILITY_SUMMARY_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "2ef4fe34f66b5b59f4aedf6b304ffe05e4adc996",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_22_EVAPORATION_CLOCK_IDENTIFIABILITY_SUMMARY_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "b059bbb9e27e0e3451baa8ddeec09875c6e82617",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_23_FORMATION_TIME_GAUGE_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "b83167be78b257eb41d595ded6c7fe63a6ce428d",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_24_EVAPORATION_SCALING_SYMMETRY_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "28764bf7a29c7130e19a54d027241c7d25ce1a72",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_26_INITIAL_SOURCE_MASS_SCALING_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "d90f48f0d5d7359b7dffefc56deede8e30cc3238",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_27_INITIAL_HUBBLE_CONSISTENCY_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "2062fb67d8d91e0d5af0313894a6e1c91c670dee",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_28_HADRON_DILUTION_AUDIT_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "98e85abbd6a0170baca895c595e134d79cbc9876",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_29_WUXU_HELIUM_OBSERVABLE_AUDIT_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "1be956572f783a0c4fa9542acb536962f8530d76",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_30_HELIUM_CHISQUARE_REMAP_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "25a6ba666dee06e0574b7a84d41426b3d1abcab6",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_31_HELIUM_ACCEPTANCE_DISJOINTNESS_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "d1ddc096750a2bb580c2a7d88ec73d0277ea4ad3",
+      "status": "added"
+    },
+    {
+      "path": "research/dax-s7/2026-10-23/IW_DAX_S7_ROTATION_32_PAPER_CODE_HELIUM_TRIANGULATION_20261023.md",
+      "lineage": "dax-s7",
+      "blob_sha": "32187dab098c800c0a486e811ab522d868915caa",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-21/geeky_s10_noise_driven_reset_passive_innovation_equivalence_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "eccda315154e3b31dbf394cd4cfce7dff98f5927",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-22/geeky_s10_heterogeneous_mixed_noise_reset_common_storage_phase_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "9cfd7f1fec7e4ca2d57c4a2bbf70bc44da9c3fea",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-23/geeky_s10_lt5_g2_lueders_vs_coaligned_reset_exact_nonmap_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "ca0e1b473a604fe064a0f86c2b5c8dd6bb1afc7d",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-23/geeky_s10_mixed_reset_total_dose_collapse_without_common_storage_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "c0c04728834bc93e0ad17ca34829f4b709ef7b0b",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-23/geeky_s10_oblique_mixed_reset_exact_dose_phase_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "8c152b690547b1fe2bfa1a63f15cb9cd5510aeba",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-23/geeky_s10_qubit_channel_observable_compatibility_frontier_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "423f3ee74bcf66d6922b0ea0ca56512cfad63e57",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-23/geeky_s10_qubit_lueders_qnd_latent_bit_weak_information_phase_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "2527c480e27fc1cbbb70b0f96cb9241b54077fe8",
+      "status": "added"
+    },
+    {
+      "path": "research/geeky-s10/2026-10-23/geeky_s10_target_relative_lueders_postprocessing_realization_001.md",
+      "lineage": "geeky-s10",
+      "blob_sha": "7168adbe12b9f96b9472972f0ad80755b2aabfc1",
+      "status": "added"
+    },
+    {
+      "path": "research/int8/2026-10-21/iw_int8_oblique_two_sensor_switching_threshold_001.md",
+      "lineage": "int8",
+      "blob_sha": "407e4e24639e9bb2c27ad433a85c0f6c207acdb1",
+      "status": "added"
+    },
+    {
+      "path": "research/int8/2026-10-22/iw_int8_oblique_reset_damping_dwell_and_total_strength_budget_bridge_001.md",
+      "lineage": "int8",
+      "blob_sha": "e160f9d33d292dd26d6e1a3ec9cb13380134a21a",
+      "status": "added"
+    },
+    {
+      "path": "research/int8/2026-10-23/iw_int8_rot007_finite_dose_mixed_reset_information_vs_state_disturbance_001.md",
+      "lineage": "int8",
+      "blob_sha": "4020d5c25bd03997cd91d90b214755f7b1e34f38",
+      "status": "added"
+    },
+    {
+      "path": "research/int8/2026-10-23/iw_int8_rot008_dtc0a_fourier_tt_vs_finite_difference_divergence_symbol_gap_001.md",
+      "lineage": "int8",
+      "blob_sha": "c9fd24542760e60a4069538ba11c7b1142815e3e",
+      "status": "added"
+    },
+    {
+      "path": "research/int8/2026-10-23/iw_int8_rot009_restricted_qubit_instrument_realization_and_pathwise_nonmap_001.md",
+      "lineage": "int8",
+      "blob_sha": "3732f7da641afee17de5c8f2fb6665949f28bf2c",
+      "status": "added"
+    },
+    {
+      "path": "research/kn11/2026-10-23/iw_kn11_rot05_bidirectional_projector_compression_nonmap_001.md",
+      "lineage": "kn11",
+      "blob_sha": "40420ba4d1c8d48aa7d09166a4a41779cfab6a52",
+      "status": "added"
+    },
+    {
+      "path": "research/lt5/2026-10-21/lt5_source_matched_reset_creates_terminal_defect_information_regulation_pareto_001.md",
+      "lineage": "lt5",
+      "blob_sha": "362b525165e909727b1065f29015fc2de5a6ea66",
+      "status": "added"
+    },
+    {
+      "path": "research/lt5/2026-10-22/lt5_bloch_reset_noncp_exact_diamond_distance_and_instrument_nonmap_001.md",
+      "lineage": "lt5",
+      "blob_sha": "9c2a1362b4f763e23a51887d375d7d99771bcb78",
+      "status": "added"
+    },
+    {
+      "path": "research/lt5/2026-10-23/lt5_rev020_manuscript_impact_gap_audit_001.md",
+      "lineage": "lt5",
+      "blob_sha": "e25ecbc6a218065f84ecba3529e4fb26134e037f",
+      "status": "added"
+    },
+    {
+      "path": "research/lt5/2026-10-23/lt5_rev021_staged_editorial_ch4_ch5_ch6_ch7_001.md",
+      "lineage": "lt5",
+      "blob_sha": "4bda3279c240daaf34566d38f89039abf15436a3",
+      "status": "added"
+    },
+    {
+      "path": "research/lt5/2026-10-23/lt5_same_channel_same_povm_distinct_instrument_exact_causal_recovery_001.md",
+      "lineage": "lt5",
+      "blob_sha": "6b80223b97856bdce42a19f13e4bdbfb6990befb",
+      "status": "added"
+    },
+    {
+      "path": "research/m13/2026-10-21/IW_M13_ROT17_active_dual_support_notice_001.md",
+      "lineage": "m13",
+      "blob_sha": "8194a8dd2a498fb95ccf4112e8cbc6cae740bdac",
+      "status": "added"
+    },
+    {
+      "path": "research/m13/2026-10-22/IW_M13_ROT18_DTC0a_moving_mask_domain_audit_001.md",
+      "lineage": "m13",
+      "blob_sha": "52816624ebc23f7744868380d534f69750dbcd04",
+      "status": "added"
+    },
+    {
+      "path": "research/m13/2026-10-23/IW_M13_ROT19_DTC0a_control_independence_and_field_class_001.md",
+      "lineage": "m13",
+      "blob_sha": "2a1a25baff8cd8bbec07950b188c8c096ed4dc4a",
+      "status": "added"
+    },
+    {
+      "path": "research/m13/2026-10-23/IW_M13_ROT20_DTC0a_alpha_norm_identifiability_001.md",
+      "lineage": "m13",
+      "blob_sha": "e56fca7a4d15d9df2ec1893bd3cb95c23758a91b",
+      "status": "added"
+    },
+    {
+      "path": "research/m13/2026-10-23/IW_M13_ROT21_DTC0a_masked_TT_noncontraction_001.md",
+      "lineage": "m13",
+      "blob_sha": "db52fbf078dcfeaf88fe37284393f1bac9bcc753",
+      "status": "added"
+    },
+    {
+      "path": "research/mech-s7/2026-10-21/mech_s7_frontb_postevap_source_off_common_background_floor_gate_001.md",
+      "lineage": "mech-s7",
+      "blob_sha": "692307ef8e0a8f00090569715ed66bce8606edf7",
+      "status": "added"
+    },
+    {
+      "path": "research/mech-s7/2026-10-22/mech_s7_frontb_common_background_target_gate_002.md",
+      "lineage": "mech-s7",
+      "blob_sha": "765906aeb88aaac995cbf4c76fae7db1cbd27c31",
+      "status": "added"
+    },
+    {
+      "path": "research/mech-s7/2026-10-23/mech_s7_frontb_exact_mass_cube_and_subedge_fluence_gate_004.md",
+      "lineage": "mech-s7",
+      "blob_sha": "e20a2e2d527863e08992e1879275d1b0d50f85db",
+      "status": "added"
+    },
+    {
+      "path": "research/mech-s7/2026-10-23/mech_s7_frontb_signed_channel_conditioning_terminal_gate_003.md",
+      "lineage": "mech-s7",
+      "blob_sha": "ed0250ef9082d8f36d29074554a3361c2c04eb17",
+      "status": "added"
+    },
+    {
+      "path": "research/mt13/2026-10-21/mt13_mixed_noise_reset_innovations_threshold_001.md",
+      "lineage": "mt13",
+      "blob_sha": "5d685aa3c8b9f8b7fd277cca1d658ec5c6e330de",
+      "status": "added"
+    },
+    {
+      "path": "research/mt13/2026-10-23/mt13_frontb_2x2_state_readout_precision_gate_001.md",
+      "lineage": "mt13",
+      "blob_sha": "77d87f25d1bb8cd3f66c167f8c9dcbe7cbcd65ab",
+      "status": "added"
+    },
+    {
+      "path": "research/mt13/2026-10-23/mt13_frontb_directional_rate_nonidentifiability_two_excitation_gate_001.md",
+      "lineage": "mt13",
+      "blob_sha": "8a1478c91a615dcbd992ee707539ec52b45b9657",
+      "status": "added"
+    },
+    {
+      "path": "research/nc/2026-10-18/IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md",
+      "lineage": "nc",
+      "blob_sha": "cee67d802c52e4a4c5d7b0d7554ecfb6c89085e0",
+      "status": "added"
+    },
+    {
+      "path": "research/prf11/2026-10-21/IW_PRF11_R15_FIXED_STATIONARY_DIFFERENCED_NOISE_RECOVERS_INFORMATION_FROM_VANISHING_WEAK_SIGNAL_001_20261021.md",
+      "lineage": "prf11",
+      "blob_sha": "1e0fd045b0252f9a410a9a7ab132ee5e7b0652aa",
+      "status": "added"
+    },
+    {
+      "path": "research/prf11/2026-10-22/IW_PRF11_R16_OU_physical_time_infill_20261022.md",
+      "lineage": "prf11",
+      "blob_sha": "19ca58a90101305a13249624682cd19f98c9e62e",
+      "status": "added"
+    },
+    {
+      "path": "research/prf11/2026-10-23/IW_PRF11_R17_SAME_CHANNEL_DIFFERENT_INSTRUMENT_FISHER_MINIMAX_001_20261023.md",
+      "lineage": "prf11",
+      "blob_sha": "792d0978730c0c59236e9e20c13672f750e86209",
+      "status": "added"
+    },
+    {
+      "path": "research/prf11/2026-10-23/IW_PRF11_R18_NOISY_SYNDROME_TARGET_RISK_DIAMOND_RECOVERY_001_20261023.md",
+      "lineage": "prf11",
+      "blob_sha": "3b9bcb52d4c0631f8010a568dc6885e126c962ef",
+      "status": "added"
+    },
+    {
+      "path": "research/rec10/2026-10-21/IW_REC10_ROT06_PRF11_R14_GAUSSIAN_EXPERIMENT_LIMIT_20261021.md",
+      "lineage": "rec10",
+      "blob_sha": "baa1f93ff2d2e147596ffd391b3fc7953bc08b6e",
+      "status": "added"
+    },
+    {
+      "path": "research/rec10/2026-10-21/IW_REC10_ROT07_LT5_CAUSAL_TIMING_EXACT_PREMIUM_20261021.md",
+      "lineage": "rec10",
+      "blob_sha": "7501d0acc7158bfc6912a06ce546be9b29657415",
+      "status": "added"
+    },
+    {
+      "path": "research/rec10/2026-10-23/IW_REC10_ROT09_GEEKY_MIXED_RESET_INFORMATION_VS_STATE_NOISE_DOSE_REFEREE_001_20261023.md",
+      "lineage": "rec10",
+      "blob_sha": "8542636defd5cd021963c982f652b6cf261c6ae6",
+      "status": "added"
+    },
+    {
+      "path": "research/rec10/2026-10-23/rec10_rot08_mech_s7_hadron_memory_gate.md",
+      "lineage": "rec10",
+      "blob_sha": "d0583773c7ac20b200f66c536ed731d1507e5bb0",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-21/IW_XH_S4_OCT2026_FRIED_CONDITIONAL_LEAN_TOEPLITZ_SPARSE_FAILURE_QFI_IDENTIFIABILITY_AUDIT_010_20261021.md",
+      "lineage": "xh-s4",
+      "blob_sha": "f6112d72ce56132e23384d211ab3e9eca7e87ce1",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-21/IW_XH_S4_OCT2026_INTERFEROMETRIC_GRAVITY_MAESTRO_LEANPRM_SCIENCE_AUDIT_011_20261021.md",
+      "lineage": "xh-s4",
+      "blob_sha": "d7690ce0346dc3916c0362471a30803fae901d67",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-22/IW_XH_S4_OCTOBER_RESEARCH_QUESTIONS_LINKS_AND_DISCRIMINATORS_012_20261022.md",
+      "lineage": "xh-s4",
+      "blob_sha": "1c3ef60e0494db9ed6f805f6e00f93f73cf54dd8",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-23/IW_XH_S4_MAY_OCT_SCIENCE_DISCOVERY_CERTIFICATION_SPECTRAL_LOCALIZER_QUESTIONS_015_20261023.md",
+      "lineage": "xh-s4",
+      "blob_sha": "d25a87d371d261773be8138bd27d1729e3ae1a82",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-23/IW_XH_S4_MAY_OCT_SPECTRAL_WINDOWS_MODEL_MISSPECIFICATION_VERIFIABLE_COMMUNICATION_ATLAS_016_20261023.md",
+      "lineage": "xh-s4",
+      "blob_sha": "216c4e3c4b976f48d8f60379cad7f4a7677e74c7",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-23/IW_XH_S4_MAY_OCT2026_SCIENCE_WIDE_REHARVEST_QUESTIONS_AND_FALSIFIERS_014_20261023.md",
+      "lineage": "xh-s4",
+      "blob_sha": "c5ab1f9dccf00f32a537b2f3eb7c16fd6ed61dbf",
+      "status": "added"
+    },
+    {
+      "path": "research/xh-s4/2026-10-23/IW_XH_S4_OCT2026_IDENTIFIABILITY_DIAGNOSTIC_NO_GO_INTERVENTION_DESIGN_AND_RESEARCH_LINKS_013_20261023.md",
+      "lineage": "xh-s4",
+      "blob_sha": "9042c02c165d90d28872430b42ea5a1691a5b76f",
+      "status": "added"
+    }
+  ]
+}
