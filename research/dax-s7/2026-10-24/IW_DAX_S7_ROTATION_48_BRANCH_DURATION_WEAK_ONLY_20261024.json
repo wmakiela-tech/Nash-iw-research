@@ -1,0 +1,166 @@
+{
+  "status": "ANALYTICAL_SURROGATE_WITH_WEAK_ONLY_ODE_NOT_FULL_JULIA",
+  "cross_model": "radiation_dominated_constant_g_background_plus_PBH",
+  "weak_model": "Wu-Xu weak rates and neutron decay only, zero PBH hadrons",
+  "complete_source_grid_triple_crossing_from_rotation47": 0,
+  "tested_calibrations": {
+    "g_constant": {
+      "max_beta_1e_17": {
+        "clock": "g_constant",
+        "reference_time_s": 205.2044342176343,
+        "beta": 1e-17,
+        "mass_lo_g": 9538850832.436636,
+        "mass_hi_g": 9539480459.632353,
+        "mass_width_g": 629627.1957168579,
+        "relative_width": 6.600660884388983e-05,
+        "approx_relative_width": 6.694615760587737e-05,
+        "asymptotic_ratio": 0.9859656058601778,
+        "M_max_span_g": 9539480458.99321,
+        "mass_frac_in_window": 0.9999989848857893,
+        "tau_evap_s": 206.32034380186494,
+        "eps": 0.012962711641502679,
+        "t_cross1_s": 206.2143940057607,
+        "t_cross2_s": 206.32034380186494,
+        "t_cross3_s": 206.32034384326062,
+        "max_span_s": 0.10594983749990661,
+        "edge_limit_span_s": 0.10594985819974409,
+        "edge_y_first_cross": 0.08007914771741807,
+        "center_span_s": 0.09371734503540097,
+        "X0_011_last_minus_first": -1.4318044560507337e-05,
+        "Ystd_011_last_minus_first": -2.8636089121014674e-05,
+        "Ycode_011_last_minus_first": -3.6151531927643676e-05,
+        "X0_0_last_minus_first": 6.247685726310764e-13,
+        "X0_1_last_minus_first": -0.00013016404651366997,
+        "absolute_weak_only_X_bound": 0.00013017455554296375,
+        "max_temperature_MeV": 0.0781852706961634
+      },
+      "mass_width_scaling_beta_1e17_to_1e20": [
+        [
+          1e-17,
+          629627.1957168579
+        ],
+        [
+          1e-18,
+          20084.365509033203
+        ],
+        [
+          1e-19,
+          635.6885662078857
+        ],
+        [
+          1e-20,
+          20.104036331176758
+        ]
+      ],
+      "log_log_exponent": 1.4987014370201084
+    },
+    "g_variable_adiabatic_clock": {
+      "max_beta_1e_17": {
+        "clock": "g_variable_adiabatic_clock",
+        "reference_time_s": 208.85253295051325,
+        "beta": 1e-17,
+        "mass_lo_g": 9595142211.513056,
+        "mass_hi_g": 9595781117.01453,
+        "mass_width_g": 638905.5014743805,
+        "relative_width": 6.658635040424603e-05,
+        "approx_relative_width": 6.753969125244009e-05,
+        "asymptotic_ratio": 0.9858847319181427,
+        "M_max_span_g": 9595781116.365969,
+        "mass_frac_in_window": 0.9999989848857893,
+        "tau_evap_s": 209.99496582570256,
+        "eps": 0.013039215722609328,
+        "t_cross1_s": 209.88618308491579,
+        "t_cross2_s": 209.99496582570256,
+        "t_cross3_s": 209.99496586820524,
+        "max_span_s": 0.10878278328945612,
+        "edge_limit_span_s": 0.1087828045428224,
+        "edge_y_first_cross": 0.08031261912416861,
+        "center_span_s": 0.09622320446740673,
+        "X0_011_last_minus_first": -1.4700860813010586e-05,
+        "Ystd_011_last_minus_first": -2.940172162602117e-05,
+        "Ycode_011_last_minus_first": -3.7118086077091255e-05,
+        "X0_0_last_minus_first": 6.414656953317005e-13,
+        "X0_1_last_minus_first": -0.00013364419439954034,
+        "absolute_weak_only_X_bound": 0.0001336552353414135,
+        "max_temperature_MeV": 0.07818527069623224
+      },
+      "mass_width_scaling_beta_1e17_to_1e20": [
+        [
+          1e-17,
+          638905.5014743805
+        ],
+        [
+          1e-18,
+          20381.357303619385
+        ],
+        [
+          1e-19,
+          645.0919933319092
+        ],
+        [
+          1e-20,
+          20.401437759399414
+        ]
+      ],
+      "log_log_exponent": 1.4986939010119744
+    },
+    "g_variable_code_clock": {
+      "max_beta_1e_17": {
+        "clock": "g_variable_code_clock",
+        "reference_time_s": 214.95558106551593,
+        "beta": 1e-17,
+        "mass_lo_g": 9687868826.172268,
+        "mass_hi_g": 9688523192.082727,
+        "mass_width_g": 654365.9104595184,
+        "relative_width": 6.754487722745748e-05,
+        "approx_relative_width": 6.852119782244693e-05,
+        "asymptotic_ratio": 0.985751553883817,
+        "M_max_span_g": 9688523191.41847,
+        "mass_frac_in_window": 0.9999989848857893,
+        "tau_evap_s": 216.142730811473,
+        "eps": 0.013165238180657013,
+        "t_cross1_s": 216.02915361951685,
+        "t_cross2_s": 216.142730811473,
+        "t_cross3_s": 216.1427308558488,
+        "max_span_s": 0.11357723633196315,
+        "edge_limit_span_s": 0.11357725852204237,
+        "edge_y_first_cross": 0.08069567322030227,
+        "center_span_s": 0.10046409882275498,
+        "X0_011_last_minus_first": -1.5348732547201815e-05,
+        "Ystd_011_last_minus_first": -3.069746509440363e-05,
+        "Ycode_011_last_minus_first": -3.875386403510384e-05,
+        "X0_0_last_minus_first": 6.697230718934376e-13,
+        "X0_1_last_minus_first": -0.0001395339376659699,
+        "absolute_weak_only_X_bound": 0.00013954590783900832,
+        "max_temperature_MeV": 0.07818527069634598
+      },
+      "mass_width_scaling_beta_1e17_to_1e20": [
+        [
+          1e-17,
+          654365.9104595184
+        ],
+        [
+          1e-18,
+          20876.279527664185
+        ],
+        [
+          1e-19,
+          660.7624931335449
+        ],
+        [
+          1e-20,
+          20.897045135498047
+        ]
+      ],
+      "log_log_exponent": 1.4986815077260291
+    }
+  },
+  "epistemic": [
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_PBH_BOUND"
+  ],
+  "source_script": "IW_DAX_S7_ROTATION_47_REHEATING_GRID_SURROGATE_20261023.py",
+  "data_csv": "IW_DAX_S7_ROTATION_48_BRANCH_DURATION_WEAK_ONLY_20261024.csv"
+}
