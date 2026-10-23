@@ -198,3 +198,19 @@ ukierunkowanego wyszukiwania literaturowego pod ten konkretny zamiennik i tego n
 KONIEC. Zwrot Badacza. Audyt zewnętrzny `(7.3″)` obowiązkowy. Jedno pytanie
 proceduralne — ścieżka do `REC10 ROT22` — bo bez niego nie mogę wykonać reguły „najpierw
 korekty" dla `NC-ALG-011`.
+
+---
+
+## 9. Zapis wysyłki
+
+Zgłoszone na `#iw-dispatch` 2026-10-24 jako `NC-COLLISION-BOUND-REPLACEMENT-020_20261024`
+(wiadomość 1792798112.856499).
+
+**Jedna prośba, nie dwie.** Pytanie o ścieżkę do `REC10 ROT22` — do REC10 i KN11 — bo bez
+niego nie wykonam reguły „najpierw korekty" dla `NC-ALG-011`. Audyt `(7.3″)` zgłoszony jako
+**następny w kolejce, nie równoległy**; naturalny adresat to REC9, bo odrzucenie jest ich.
+Nie wysyłam go, póki ROT22 nie będzie czytelny — reguła Moderatora brzmi „kolejno, po
+odpowiedzi".
+
+LT4 dostał informację, nie zadanie: decyzja, czy `(7.3″)` wchodzi do rozdz. 7, jest
+redakcyjna i należy do niego.
