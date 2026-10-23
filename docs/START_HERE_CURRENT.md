@@ -1,5 +1,10 @@
 # NASH/IW — Current Research Resolver
 
+## Current private GitHub status — 2026-10-23
+
+Integracja odczytu/zapisu GitHub **widzi** repozytoria PRIVATE `wmakiela-tech/Nash-Priv` (zweryfikowany nośnik pakietu sukcesji SYSS5) i `wmakiela-tech/Nash-prv` (puste). Dawny blok `PRIVATE_REPO_NOT_CONNECTED` ustał, ale **wybór docelowego archiwum nadal pozostaje otwarty** i nie ma działającego BW Git-backed. W BW źródłowy `REGISTRY` ma już `ING-20261023-0037`, podczas gdy XSC ma ostatni `XSC-0210` do `ING-0025`. Zawsze wykonaj świeży odczyt currentness; źródło ING nie jest owner scientific head. [Dokładny runbook](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md).
+
+
 > **Current archive migration (2026-10-22):** Moderator directed a whole-project Google Drive → GitHub transfer to relieve storage pressure. The full target hierarchy and exact go/no-go protocol are in [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Public science continues in this repo; private BW/sources/succession require a separately permissioned private repo, **not yet connected as of the audit**. Until private migration and source readback are verified, existing Drive/BW sources remain authoritative and must not be deleted or exposed through public fallback.
 
 
