@@ -74,5 +74,16 @@ assert err<5e-14
 assert norm(pull(pull(h,A),B)-pull(h,A@B),np.eye(3))<5e-13
 assert norm(adapted(pull(h,A@B),A@B,alpha)-pull(E0(h,alpha),A@B),np.eye(3))<5e-13
 print("FULL_TENSOR_PASS",err,"TWO_SHEARS_PASS")
+# RAW-k TT aliasing DOES NOT commute with shears on the whole finite band.
+# Original k=(15,15,0) -> unwrapped A^T k=(15,30,0), raw representative (15,-1,0).
+u=np.array([1.,-1.,0.])/np.sqrt(2);v=np.array([0.,0.,1.])
+H_old=np.outer(u,u)-np.outer(v,v)
+H_new=A.T@H_old@A
+true_tt=TT(H_new,[15,30,0],g)
+raw_tt=TT(H_new,[15,-1,0],g)
+alias=float(norm(raw_tt-H_new,g)/norm(H_new,g))
+assert norm(true_tt-H_new,g)<1e-13
+assert abs(alias-0.8657251176555099)<2e-13
+print("RAW_K_TT_ALIAS_NONMAP",alias,"TRANSPORTED_UNWRAPPED_TT_PASS")
 print("SOURCE_VALIDATED" if os.path.isfile(HELPER) else "SOURCE_HELPER_ABSENT_NOT_SOURCE_RUN")
 print("PASS")
