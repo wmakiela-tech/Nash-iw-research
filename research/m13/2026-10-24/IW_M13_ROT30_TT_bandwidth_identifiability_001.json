@@ -1,0 +1,202 @@
+{
+  "return_id": "M13-ROT30-SHARP-TT-TENSOR-BANDWIDTH-2-VS-3-FIVE-MASK-IDENTIFIABILITY-001_20261024",
+  "N": 41,
+  "mask_k": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "source_helper_sha256": "23b0ec865263c5688682425af9d4c1f9cdb9f1d582a0f2f33d99c642c176f801",
+  "proof_source": "degree<=4 even trig energy uniquely identified from 5 nested averages; degree5 polynomial H(t)(t-lambda) is kernel with nonzero full average; TT source witnesses f_plus/minus=quadratic+-eps*cubic",
+  "lambda": 0.8226831039643815,
+  "oddN_ge13_crossgrid_controls": [
+    {
+      "N": 13,
+      "max_masked_RMS_difference": 0.0,
+      "global_RMS_difference": 0.4177078161540676,
+      "even_degree4_observation_condition_2norm": 458.8240533691484
+    },
+    {
+      "N": 15,
+      "max_masked_RMS_difference": 2.220446049250313e-16,
+      "global_RMS_difference": 0.2332086232911662,
+      "even_degree4_observation_condition_2norm": 246.8438558983077
+    },
+    {
+      "N": 17,
+      "max_masked_RMS_difference": 0.0,
+      "global_RMS_difference": 0.139703240196261,
+      "even_degree4_observation_condition_2norm": 194.3377241085397
+    },
+    {
+      "N": 21,
+      "max_masked_RMS_difference": 2.220446049250313e-16,
+      "global_RMS_difference": 0.05719747335287417,
+      "even_degree4_observation_condition_2norm": 218.6055850356529
+    },
+    {
+      "N": 31,
+      "max_masked_RMS_difference": 3.1086244689504383e-15,
+      "global_RMS_difference": 0.005929746525414004,
+      "even_degree4_observation_condition_2norm": 4255.807345725706
+    },
+    {
+      "N": 41,
+      "max_masked_RMS_difference": 2.220446049250313e-15,
+      "global_RMS_difference": 0.00042376045739578316,
+      "even_degree4_observation_condition_2norm": 37343.844174175145
+    },
+    {
+      "N": 61,
+      "max_masked_RMS_difference": 8.881784197001252e-16,
+      "global_RMS_difference": 9.68939304080152e-06,
+      "even_degree4_observation_condition_2norm": 711279.877408043
+    }
+  ],
+  "eps": 5.987527886633852,
+  "t_roots": [
+    -0.9275024511020946,
+    -0.8595696069872012,
+    -0.771489179821943,
+    -0.6653257001655652
+  ],
+  "pairwise_product_full_average": -9.234128805499705e-05,
+  "pairwise_product_masked_averages": {
+    "2": 7.4515750176857795e-16,
+    "3": 7.898443803761828e-16,
+    "4": 8.368726587136597e-16,
+    "5": 8.873670167839426e-16,
+    "6": 9.52393097336715e-16
+  },
+  "tensor_degree": 3,
+  "strictly_TT_source_checks": {
+    "plus": {
+      "relative_source_TT_projector_error": 3.966181434193854e-16,
+      "max_trace": 0.0,
+      "max_abs_yy_spectrum_nonzero_z": 7.994921155403809e-17
+    },
+    "minus": {
+      "relative_source_TT_projector_error": 5.078861041423116e-16,
+      "max_trace": 0.0,
+      "max_abs_yy_spectrum_nonzero_z": 1.7135476724509034e-16
+    }
+  },
+  "fourier": {
+    "plus": {
+      "cosine_coefficients": [
+        0.6074273074814324,
+        2.273548241330679,
+        2.3385655675032235,
+        1.4968819716584616
+      ],
+      "max_trig_degree3_fit_error": 2.6645352591003757e-15,
+      "max_fourier_beyond_3": 1.8239409028159595e-16
+    },
+    "minus": {
+      "cosine_coefficients": [
+        1.987078527265555,
+        1.3005958748479125,
+        -1.3385655675032229,
+        -1.4968819716584625
+      ],
+      "max_trig_degree3_fit_error": 2.6645352591003757e-15,
+      "max_fourier_beyond_3": 2.333164472305099e-16
+    }
+  },
+  "rms": {
+    "0": {
+      "RMS_T_plus": 2.609262541791637,
+      "RMS_T_minus": 2.6096863022490315,
+      "difference": -0.0004237604573944509
+    },
+    "2": {
+      "RMS_T_plus": 2.735917989786866,
+      "RMS_T_minus": 2.735917989786863,
+      "difference": 3.1086244689504383e-15
+    },
+    "3": {
+      "RMS_T_plus": 2.8111344565912835,
+      "RMS_T_minus": 2.8111344565912795,
+      "difference": 3.9968028886505635e-15
+    },
+    "4": {
+      "RMS_T_plus": 2.894756472244509,
+      "RMS_T_minus": 2.894756472244505,
+      "difference": 3.9968028886505635e-15
+    },
+    "5": {
+      "RMS_T_plus": 2.9866742667159154,
+      "RMS_T_minus": 2.986674266715912,
+      "difference": 3.552713678800501e-15
+    },
+    "6": {
+      "RMS_T_plus": 3.0879171167424047,
+      "RMS_T_minus": 3.0879171167424,
+      "difference": 4.440892098500626e-15
+    }
+  },
+  "full_grid_RMS_difference": 0.0004237604573944509,
+  "full_grid_RMS_relative_difference": 0.0001623930297298575,
+  "degree4_mask_observation_matrix": [
+    [
+      1.0,
+      0.10652763378710917,
+      -0.1018619449049408,
+      0.0943343029026876,
+      -0.08430388124440907
+    ],
+    [
+      1.0,
+      0.1656150672093494,
+      -0.14885528996241099,
+      0.12310018519263206,
+      -0.09130997352637729
+    ],
+    [
+      1.0,
+      0.22774747170611004,
+      -0.18682953896087603,
+      0.1282394246776379,
+      -0.0639004234369928
+    ],
+    [
+      1.0,
+      0.2922143524498554,
+      -0.21116635496897568,
+      0.10569230249475889,
+      -0.008184163587631403
+    ],
+    [
+      1.0,
+      0.35825159745781543,
+      -0.21782035011177395,
+      0.056572505372554815,
+      0.05840281988065463
+    ]
+  ],
+  "degree4_min_singular_value": 6.266579135684144e-05,
+  "degree4_condition_number_2norm": 37343.84417419752,
+  "degree4_exact_recovery_weights_float": [
+    6.753396019923642,
+    -11.940839653182046,
+    9.059341877293853,
+    -3.3886875418277027,
+    0.516789297792253
+  ],
+  "degree4_weights_L1": 31.6590543900195,
+  "degree4_paired_estimated_full_squared_energies": [
+    6.802283200618345,
+    6.802283200618324
+  ],
+  "degree2_tensor_positive_recovery_trials": 12,
+  "degree2_tensor_max_abs_squared_error": 1.0658141036401503e-14,
+  "limits": [
+    "source helper synthetic only",
+    "not historical K_A/K_B/K_C tensors",
+    "one-coordinate fixed-flat periodic TT",
+    "no original runtime byte-exact",
+    "no novelty or physical upgrade"
+  ]
+}
