@@ -68,23 +68,24 @@ Status: własna algebra i kontrole numeryczne PASS; nie ma jeszcze niezależnego
 
 ---
 
-## Projekt §6.10a — Status źródłowy PBH/BBN na 23 X 2026
+## Projekt §6.10a — Wu–Xu: wersje źródła, obserwabla i bramki fizyczne (stan na 23 X 2026)
 
-Równania w obecnym rozdziale 6 są tożsamościami dla zadanych układów ODE, a nie zrekonstruowanymi obfitościami pełnej nukleosyntezy. Ostatni audyt Wu–Xu porównuje prawo źródłowe tekstu z zachowaniem publicznego helpera oraz dwie mapy ładunkowe B_exec/B_sym; istotny jest porównywalny fizyczny background i odczyt w stałej temperaturze T_nuc≈0.07818527 MeV, nie automatycznie stała wartość czynnika skali.
+Istnieją trzy RÓŻNE wielkości otrzymywane z x=X_n=n_n/(n_n+n_p). Przy założeniu, że wszystkie neutrony są ostatecznie związane w He4, przy pominięciu innych nuklidów i poprawek związania, standardowy przybliżony udział baryonów/masy w He4 wynosi M=2x (PDG 2025 Eq 24.1 oraz autorska wersja arXiv 2509.05618v3 z 6 maja 2026, Eq 5.1). Natomiast opublikowany JCAP02(2026)063 z 17 lutego 2026 i arXiv v2 drukują R=2x/(1−2x), czyli stosunek masy helu do pozostającego po syntezie wodoru. Publiczny kod Julia w źródłowym commicie d395183674cace6c9906a8911bdeb7234ba4040d z 30 grudnia 2025 oblicza C=2x/(1−x), tj. stosunek masy helu do początkowej puli protonów. DAX-S7 R29–33 pierwotnie wykrył rozbieżność, PRF11 R20 sprawdził poprawkę autorską i chronologię. Nie potwierdzono, z którego wariantu faktycznie pochodzą tablice opublikowanego rysunku 5.
 
-Źródłowe cztery warianty dały na drukowanych danych proxy Y=2X/(1-X) pojedyncze kontrasty odpowiadające neutronowym X:
-  Delta_X_exec ≈ -1.89885665743e-5;
-  Delta_X_sym ≈ +1.26671312111e-5.
-Aby matematycznie CERTYFIKOWAĆ oba znaki na podstawie czterech końcowych wartości X, wystarczy, lecz konieczne do zweryfikowania jest niezależne ograniczenie błędu globalnego każdej obliczonej wartości:
-  epsilon_X < 6.33356560556e-6.
-To jest PRÓG WYMAGANY, a nie błąd globalny już dowiedziony. W szczególności samo nominalne reltol/abstol Julia, odtworzenie źródłowego helpera i kontrola źródło-off nie są certyfikatem globalnym. Trzeba związać błąd stanu, błędy temperatury i interpolacji fixed-T, oryginalny adaptacyjny 10D runner oraz brakujące aktywne źródło hadronowe poniżej M=1e9g z rzeczywistym celem. Wyjątkowo duże diagnostyczne proxy Y>1 nie są fizycznymi obfitościami helu.
+Dokładne przekształcenia w modelu dwuskładnikowym: x=C/(2+C), M=2C/(2+C), R=2C/(2−C), M=R/(1+R). Kodowa wielkość C>1 jest dozwolona jako STOSUNEK mas, ale NIE jest udziałem masowym Yp. Obserwacyjne Yp≈0.245±0.003 wolno zestawiać z obliczonym modelem M lub pełnym wynikiem sieci BBN, nie bezpośrednio z C lub R. Dla warunkowej jednopunktowej funkcji straty poprawna kompozycja z kodowym C daje chi²=[(2C/(2+C)−0.245)/0.003]².
 
-W tym stanie nie ma uprawnionego wniosku o Y_p/D/H, nowym bound PBH ani kanonizacji mechanizmu. Rozdział 6 zachowuje poprawne tożsamości czułości i quasi-stacjonarnego błędu; należy tylko zaktualizować stan brakujących źródeł i certyfikacji.
+W testowych czterech przypadkach MT13 kodowe C≈1.318–1.323 odpowiada x≈0.397–0.398 i przybliżonemu M≈0.794–0.796; to ekstremalne DIAGNOSTYKI, nie kosmologiczne obfitości. Dwa przeciwne kontrasty w x to −1.89885665743214e−5 oraz +1.26671312111572e−5; po poprawnym M=2x mają wartości −3.79771331486429e−5 i +2.53342624223144e−5. Interakcja czterech komórek wynosi I_M=2I_x=+6.33113955709572e−5. M jest liniowe w x: nie występuje w nim sztuczna krzywizna odczytu starego C. Samo I_M nie rozstrzyga jednak o interakcji mikroskopowych szybkości reakcji A/B, ponieważ różnicę może wytworzyć propagacja dynamiczna (MT13).
 
-Źródła: MT13 FrontB 2x2 i Mech-S7 ROT002.
+Aby CERTYFIKOWAĆ znaki dwóch warunkowych efektów w tych REDUKOWANYCH modelach, wystarczy globalny błąd każdej końcowej wartości x przy odpowiednim zdarzeniu T_nuc≈0.07818527 MeV mniejszy od eps_X=6.33356560558e−6 (równoważnie eps_M<1.26671312112e−5). To wymagana BRAMKA, nie osiągnięta dokładność. Nie odtworzono zaakceptowanych kroków oryginalnego adaptacyjnego Julia 10D poniżej M_BH=10^9g, brak globalnego oszacowania błędu fixed-T, źródłowo kompletnego hadronowego ledger, danych Figure5 i zweryfikowanej fizycznej sieci Yp/D/H. Sam nominalny reltol/abstol, zapisane odtworzenie źródło-off ani niefizyczny wskaźnik diagnostyczny nie dają ograniczeń PBH. Równania w aktualnym rozdziale 6 pozostają tożsamościami dla zadeklarowanych ODE, nie przyznają automatycznie fizycznego statusu.
+
+Źródła:
+https://arxiv.org/html/2509.05618v3
+https://inspirehep.net/files/9adbfbb35c345cc510bed18e66a36b55
+https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf11/2026-10-23/IW_PRF11_R20_WUXU_HELIUM_SOURCE_VERSION_STOICHIOMETRY_AND_LIKELIHOOD_NONMAP_001_20261023.md
 https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mt13/2026-10-23/mt13_frontb_2x2_state_readout_precision_gate_001.md
-https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/mech-s7/2026-10-22/mech_s7_frontb_common_background_target_gate_002.md
-Status: wyłącznie datowany audyt, nie obliczenie endpointu fizycznego.
+Pełen audyt i powtórzenie rachunku: LT5-ROT10-WUXU-HELIUM-OBSERVABLE.
+Status: źródłowo skorygowana wstawka autorska, NIE wynik fizyczny ani zaakceptowana REV021.
 
 ---
 
