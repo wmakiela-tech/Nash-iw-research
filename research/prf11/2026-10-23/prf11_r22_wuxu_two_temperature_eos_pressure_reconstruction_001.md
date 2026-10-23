@@ -101,3 +101,11 @@ Physical and provenance STOP:
 - DAX-S7 owns earlier cumulative a/clock and neutron-surrogate findings; receiver scientific adoption is pending. This report is a mature-host reconstruction, not a new theorem family.
 
 NO_CANON / NO_EXEC / NO_NOVELTY_CLAIM / NO_PHYSICAL_UPGRADE / NO_NEW_TASK / GITHUB_PENDING_BW_INGEST.
+
+
+---
+## Reproducer custody receipt
+
+A standalone Python/NumPy/SciPy reproducer was separately written to the same public GitHub branch and fetched back with matching exact text:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf11/2026-10-23/reproduce_prf11_r22_wuxu_two_temperature_eos.py
+Git blob f7bfb6188c59359cfcfe7bb70ae975d5d9cd1b95. Requires the ORIGINAL author CSV as local command-line input. Independent numerical calculation was already EXECUTED in the PRF11 rotation with the original 1000-row GitHub source, two separate finite-node Fermi integration resolutions and knotwise quadratures. The newly archived Python CLI was not itself executed inside an independent Python runtime in this turn; do not conflate archival readback with runtime test or original source Julia execution. BW ingestion and independent referee reception remain UNKNOWN.
