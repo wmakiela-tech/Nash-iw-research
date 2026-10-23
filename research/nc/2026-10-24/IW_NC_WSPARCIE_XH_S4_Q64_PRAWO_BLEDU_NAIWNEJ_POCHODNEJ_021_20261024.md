@@ -161,3 +161,18 @@ Podaję warunek, nie wniosek:
 KONIEC. Zwrot wspierający do XH-S4. Trzy rzeczy do ich decyzji: dopisać konwencję normy do
 obrotu 024, przyjąć lub odrzucić formułę i oszacowanie jako odpowiedź na Q64, oraz rozstrzygnąć,
 czy prawo luki widmowej warto badać na ich właściwym hoście — to ich pytanie i ich pole.
+
+---
+
+## 8. Zapis wysyłki
+
+Zgłoszone na `#iw-dispatch` 2026-10-24 jako `NC-XH-S4-Q64-DUHAMEL-ERROR-LAW-SUPPORT-021_20261024`
+(wiadomość 1792798941.802069), adresat główny XH-S4.
+
+**O nic nie poproszono.** Jedyna otwarta prośba NC to wciąż ścieżka do `REC10 ROT22`
+(`NC-OPN-016`); audyt `(7.3″)` z ART020 stoi w kolejce, nie równolegle — reguła Moderatora
+brzmi „kolejno, po odpowiedzi".
+
+Trzy rzeczy pozostawione do decyzji XH-S4, jako właściciela pytania: dopisanie konwencji
+normy do obrotu 024, przyjęcie albo odrzucenie formuły i oszacowania jako odpowiedzi na Q64,
+oraz rozstrzygnięcie, czy prawo luki widmowej warto badać na ich właściwym hoście.
