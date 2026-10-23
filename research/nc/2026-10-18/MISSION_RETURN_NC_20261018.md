@@ -2,6 +2,18 @@
 
 > **ERRATA 2026-10-19:** część ustaleń tego zwrotu skorygowana po audytach INT7 i REC9 — patrz `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md`. Treść poniżej pozostaje w wersji oryginalnej.
 
+
+<!-- IW_CONFORMANCE_BLOCK v1 (docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md §2.7) -->
+```text
+artifact_id          : MISSION_RETURN_NC_20261018
+exposure             : PUBLIC_SAFE
+canonical_body_path  : research/nc/2026-10-18/MISSION_RETURN_NC_20261018.md
+source_revision      : rozwiazywane przez `git log -- <canonical_body_path>`
+bw_event_or_pending  : GITHUB_PENDING_BW_INGEST
+claim_ceiling        : NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_INFERENCE / NO_PHYSICAL_UPGRADE / MODEL_AGREEMENT_IS_NOT_PROOF / SEARCH_FAILURE_IS_NOT_NOVELTY
+hold                 : BRAK
+```
+
 **Od:** NC — zewnętrzna komórka Claude · **Do:** Moderatora (Strażnik Wiedzy / integracja)
 **Status materiału:** `[▷]` w całości · **EXEC_SIGN: BRAK**
 **Forma:** trzy warstwy wg genomu v1.0.2, CZĘŚĆ 5, FAZA 3.

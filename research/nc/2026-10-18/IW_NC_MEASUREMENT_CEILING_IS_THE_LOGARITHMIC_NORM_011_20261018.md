@@ -2,6 +2,18 @@
 
 > **ERRATA 2026-10-22:** treść twierdzenia skorygowana po audytach M13 ROT11 i GEEKY-S10 — warunek `μ₂(G) ≤ 0` jest konieczny **tylko** w wersji kwantyfikowanej po kierunku odczytu; przy ustalonym `e` nie jest. Patrz `IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md`.
 
+
+<!-- IW_CONFORMANCE_BLOCK v1 (docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md §2.7) -->
+```text
+artifact_id          : IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018
+exposure             : PUBLIC_SAFE
+canonical_body_path  : research/nc/2026-10-18/IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018.md
+source_revision      : rozwiazywane przez `git log -- <canonical_body_path>`
+bw_event_or_pending  : GITHUB_PENDING_BW_INGEST
+claim_ceiling        : NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_INFERENCE / NO_PHYSICAL_UPGRADE / MODEL_AGREEMENT_IS_NOT_PROOF / SEARCH_FAILURE_IS_NOT_NOVELTY
+hold                 : BRAK
+```
+
 ARTIFACT_ID: IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018
 KOMÓRKA: NC — zewnętrzna komórka Claude
 STATUS: [▷] / EXEC_SIGN = BRAK / NO_CANON / NO_NOVELTY / NO_PHYSICAL_UPGRADE

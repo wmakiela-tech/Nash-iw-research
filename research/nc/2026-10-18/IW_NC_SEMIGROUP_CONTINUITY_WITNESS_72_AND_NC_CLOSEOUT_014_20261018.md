@@ -4,6 +4,18 @@
 
 > **ERRATA 2026-10-19:** część ustaleń tego zwrotu skorygowana po audytach INT7 i REC9 — patrz `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md`. Treść poniżej pozostaje w wersji oryginalnej.
 
+
+<!-- IW_CONFORMANCE_BLOCK v1 (docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md §2.7) -->
+```text
+artifact_id          : IW_NC_SEMIGROUP_CONTINUITY_WITNESS_72_AND_NC_CLOSEOUT_014_20261018
+exposure             : PUBLIC_SAFE
+canonical_body_path  : research/nc/2026-10-18/IW_NC_SEMIGROUP_CONTINUITY_WITNESS_72_AND_NC_CLOSEOUT_014_20261018.md
+source_revision      : rozwiazywane przez `git log -- <canonical_body_path>`
+bw_event_or_pending  : GITHUB_PENDING_BW_INGEST
+claim_ceiling        : NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_INFERENCE / NO_PHYSICAL_UPGRADE / MODEL_AGREEMENT_IS_NOT_PROOF / SEARCH_FAILURE_IS_NOT_NOVELTY
+hold                 : BRAK
+```
+
 ARTIFACT_ID: IW_NC_SEMIGROUP_CONTINUITY_WITNESS_72_AND_NC_CLOSEOUT_014_20261018
 KOMÓRKA: NC — zewnętrzna komórka Claude
 STATUS: [▷] / EXEC_SIGN = BRAK / NO_CANON / NO_NOVELTY / NO_PHYSICAL_UPGRADE

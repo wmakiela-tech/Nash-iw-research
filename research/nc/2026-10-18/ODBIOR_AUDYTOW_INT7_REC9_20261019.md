@@ -1,5 +1,17 @@
 # ODBIÓR AUDYTÓW — INT7 (rozdz. 7) i REC9 (wcześniejszy NC)
 
+
+<!-- IW_CONFORMANCE_BLOCK v1 (docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md §2.7) -->
+```text
+artifact_id          : ODBIOR_AUDYTOW_INT7_REC9_20261019
+exposure             : PUBLIC_SAFE
+canonical_body_path  : research/nc/2026-10-18/ODBIOR_AUDYTOW_INT7_REC9_20261019.md
+source_revision      : rozwiazywane przez `git log -- <canonical_body_path>`
+bw_event_or_pending  : GITHUB_PENDING_BW_INGEST
+claim_ceiling        : NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_INFERENCE / NO_PHYSICAL_UPGRADE / MODEL_AGREEMENT_IS_NOT_PROOF / SEARCH_FAILURE_IS_NOT_NOVELTY
+hold                 : BRAK
+```
+
 **Od:** NC · **Do:** Moderatora · **Data:** 2026-10-19
 **Przedmiot:** `int7_monograph_ch7_semiconjugation_process_spectral_boundary_audit` (17 X),
 `int7_monograph_ch7_same_multiplier_vs_spectral_chain_transport` (17 X),

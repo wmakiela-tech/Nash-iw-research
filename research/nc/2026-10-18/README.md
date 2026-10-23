@@ -36,18 +36,21 @@ który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są 
 
 | plik | treść | sha256 |
 |---|---|---|
-| `IW_NC_APPROXIMATE_MINIMALITY_WITNESS_AND_ATLAS_COST_ZERO_013_20261018.md` | domkniecie dziury par.3.6: dwie przyblizenie minimalne realizacje tej samej funkcji przenoszenia w l^2, splecione operatorem ograniczonym o NIEograniczonej odwrotnosci, dowod elementarny; literatura NIE domknieta i zapisana jako trop, nie cytowanie | `f9942fb9167926cccb3e8ef280a06f62303bf4cd40273a55e97f6d780d0a4f3d` |
-| `IW_NC_BACKACTING_SENSOR_MINIMAX_008_20261018.md` | minimaks dla czujnika oddzialujacego zwrotnie (problem otwarty par. 7.5b.5): postac zamknieta, prog dopuszczalnosci, nieciaglosc optymalnego wzmocnienia | `1d78b2d21db4ae744ad3d991493ee0555d8876bc2809f10d3507cc1b74c30f4a` |
-| `IW_NC_BACKACTION_LEDGER_AND_ALIGNMENT_KNIFE_EDGE_010_20261018.md` | atak na wlasne Tw.1 z 009: tozsamosc ksiegowa (gamma c)^2 = dA^2 * tanh(gamma s/2); sufit przezywa trzy modele szumu, ale OBALONY zostaje jego ZAKRES — jest o wspolosiowosci reakcji zwrotnej z odczytem, nie o reakcji zwrotnej | `44f18c7b92745ae3c79763f1d007169700116deb98f8650e91c125034dff219f` |
-| `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md` | ERRATA po audytach INT7 i REC9: odsylacz dla par.7.2 (czlon procesowy) byl za szeroki, bilans NIE wynosi zero otwartych; odsylacz dla par.5.10 przezywa, bo teza jest dwuczasowa; claim o braku progu tlumienia potwierdzony do a=50 z plateau przy sqrt(2) i z kontrola czulosci | `1ef0ea4908547b5addd8c472c54943d6ebb62e3421b1057504ec96827ab49eb9` |
-| `IW_NC_LT4_FOUR_MISSING_WITNESSES_006_20261018.md` | cztery skonstruowane swiadki, w tym jadro analityczne na (0,inf) o WSZYSTKICH momentach zerowych (nieoznaczonosc Stieltjesa) | `e9121b989043c4d76e6e3ed62546239cc7184d0c811ba6a1e6eb8363b9ea0833` |
-| `IW_NC_LT4_NONMAP_LAYER_AUDIT_005_20261018.md` | audyt warstwy non-mapow jako klasy: 96 zdan negatywnych, 44 ze swiadkiem, probka 10 swiadkow zweryfikowana 10/10, 12 dziur ze wzorcem na granicach rezimu | `8eeb5bc1da55b18f667f9a17eecfe389ebc2ed2441517b0dad2a65594f84427b` |
-| `IW_NC_LT4_PRIOR_ART_SUBTRACTION_FULL_MANUSCRIPT_004_20261018.md` | prior-art subtraction calej monografii: 68 obiektow numerowanych; po odjeciu gospodarzy i dwoch demotacjach zostaje 5 kandydatow do hierarchii B; 7 niecytowanych gospodarzy | `2d5303803b88c20511c8dc6a8ff425db2a56804623bfc5877db43764600c215a` |
-| `IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018.md` | domkniecie dwunastki: 6 swiadkow, 3 odsylacze wewnatrz manuskryptu, 1 przeredagowanie, 1 cytowanie, 2 otwarte | `8878bac42ea85eac483c9012a0d6f45b06e1060073b1ec6070d316937cd27d41` |
-| `IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018.md` | uogolnienie na dowolny generator: sufit zachodzi wtedy i tylko wtedy, gdy mu_2(G) <= 0 (norma logarytmiczna). Oscylator nie byl szczegolny jako oscylator. Kontrprzykad M13 lezy dokladnie na granicy i lamie sufit tak samo jak zlamal twierdzenie o normie logarytmicznej | `d4fad87f32c7d55f5c1a1e6e3a8ae84735fb3f7b5696b823e58a8d4c4391dd0c` |
-| `IW_NC_SACRIFICIAL_MEASUREMENT_AND_PROTOCOL_CEILING_009_20261018.md` | sufit niezalezny od protokolu M < 1/gamma (dowod elementarny) oraz pomiar OFIARNY: zysk 1.9x przy ograniczonych czasach pomiaru | `577617b58c05bed8a0aa34323a9e0378bdd30b8f312bf83368bea309f597630e` |
-| `IW_NC_SECTOR_ELIMINATION_WITNESS_AND_CEILING_TABLE_CLOSURE_012_20261018.md` | domkniecie dziury par.2.8 z 007: jawny wymierny swiadek rozdzielajacy garbling od eliminacji sektora PO POSTSELEKCJI, wiec nie przez slad; plus korekta 011 par.6.4 i domknieta tabela 2x2 (sufit wymaga wspolosiowosci ORAZ mu_2 <= 0); plus zgloszenie gravity well | `12932a01ed90884000d273da626efb5c620d2f925c04eba65fe7cca1b4f2878d` |
-| `IW_NC_SEMIGROUP_CONTINUITY_WITNESS_72_AND_NC_CLOSEOUT_014_20261018.md` | swiadek dla par.7.2 (ciaglosc): polgrupa kontrakcji na [0,2pi) sprzezona przez r(theta)=e^{i theta} daje V_t nieciagla ze skokiem 2|sin(pi e^{-t})|, maksymalnym (srednica okregu) przy t = ln 2; plus rozliczenie calej dwunastki non-mapow pozycja po pozycji i zamkniecie produkcji NC | `36edffc9bac74456a7a89c8e22b442806cbc28b1a6ede4ceb762c274d0bc65a3` |
+| `IW_NC_APPROXIMATE_MINIMALITY_WITNESS_AND_ATLAS_COST_ZERO_013_20261018.md` | domkniecie dziury par.3.6: dwie przyblizenie minimalne realizacje tej samej funkcji przenoszenia w l^2, splecione operatorem ograniczonym o NIEograniczonej odwrotnosci, dowod elementarny; literatura NIE domknieta i zapisana jako trop, nie cytowanie | `6e20895841b1d44ce51ee7afe64ab4278a80139664c400b326bd1e21bad1b966` |
+| `IW_NC_BACKACTING_SENSOR_MINIMAX_008_20261018.md` | minimaks dla czujnika oddzialujacego zwrotnie (problem otwarty par. 7.5b.5): postac zamknieta, prog dopuszczalnosci, nieciaglosc optymalnego wzmocnienia | `309b46622b753d58933d2511d4164f2417ed7a5141181faf9a2a93507c64912c` |
+| `IW_NC_BACKACTION_LEDGER_AND_ALIGNMENT_KNIFE_EDGE_010_20261018.md` | atak na wlasne Tw.1 z 009: tozsamosc ksiegowa (gamma c)^2 = dA^2 * tanh(gamma s/2); sufit przezywa trzy modele szumu, ale OBALONY zostaje jego ZAKRES — jest o wspolosiowosci reakcji zwrotnej z odczytem, nie o reakcji zwrotnej | `0fcdcf50f359da60f57214e9f15ea1fe260c128f4733817fd95116c0eb8c7685` |
+| `IW_NC_KOREKTY_PO_AUDYTACH_INT7_REC9_015_20261019.md` | ERRATA po audytach INT7 i REC9: odsylacz dla par.7.2 (czlon procesowy) byl za szeroki, bilans NIE wynosi zero otwartych; odsylacz dla par.5.10 przezywa, bo teza jest dwuczasowa; claim o braku progu tlumienia potwierdzony do a=50 z plateau przy sqrt(2) i z kontrola czulosci | `a8e8bd12fa45f70e980d3388f961e247788fff303b4740f38c1cc3eba5500914` |
+| `IW_NC_LT4_FOUR_MISSING_WITNESSES_006_20261018.md` | cztery skonstruowane swiadki, w tym jadro analityczne na (0,inf) o WSZYSTKICH momentach zerowych (nieoznaczonosc Stieltjesa) | `8ffb9b0c346887dbcad704b21e1a56555f8a535e75106b8e959259c0baa04362` |
+| `IW_NC_LT4_NONMAP_LAYER_AUDIT_005_20261018.md` | audyt warstwy non-mapow jako klasy: 96 zdan negatywnych, 44 ze swiadkiem, probka 10 swiadkow zweryfikowana 10/10, 12 dziur ze wzorcem na granicach rezimu | `0bb37e655d29062f8fcfcb721bfdf7e6dc45532e0c9317d03bd9aa9df1f32bb1` |
+| `IW_NC_LT4_PRIOR_ART_SUBTRACTION_FULL_MANUSCRIPT_004_20261018.md` | prior-art subtraction calej monografii: 68 obiektow numerowanych; po odjeciu gospodarzy i dwoch demotacjach zostaje 5 kandydatow do hierarchii B; 7 niecytowanych gospodarzy | `7ca35d090d8db948932455b5d709bb0bab0e21584b219a025e939054c3b8d3d1` |
+| `IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018.md` | domkniecie dwunastki: 6 swiadkow, 3 odsylacze wewnatrz manuskryptu, 1 przeredagowanie, 1 cytowanie, 2 otwarte | `9db5d7439e9da0c6e1a947cdd130f1c63dbc82f12974277a23e08ceb3c68155a` |
+| `IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018.md` | uogolnienie na dowolny generator: sufit zachodzi wtedy i tylko wtedy, gdy mu_2(G) <= 0 (norma logarytmiczna). Oscylator nie byl szczegolny jako oscylator. Kontrprzykad M13 lezy dokladnie na granicy i lamie sufit tak samo jak zlamal twierdzenie o normie logarytmicznej | `0d233ea2520b7b6aef275509ef658ba700496836a9b0f19552686250cb13d124` |
+| `IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md` |  | `24cba8eace11d71d2bd48423f173a7f2ed79788177bcd06ee934bac05612fbc2` |
+| `IW_NC_ODBIOR_MT13_NONBLIND_I_PRZYPADEK_ZDEGENEROWANY_018_20261023.md` |  | `f601bd3ad0453be00e0ec44b0377cef4890ad63e22fac5375319ce6dbd0a5118` |
+| `IW_NC_ODBIOR_REC9_NC004_I_TEST_PIECIU_WARUNKOW_016_20261019.md` |  | `8c5bc36cb24ef60e66e6054d0479ccb6d89b549873201dabd6dd6af79bda541e` |
+| `IW_NC_SACRIFICIAL_MEASUREMENT_AND_PROTOCOL_CEILING_009_20261018.md` | sufit niezalezny od protokolu M < 1/gamma (dowod elementarny) oraz pomiar OFIARNY: zysk 1.9x przy ograniczonych czasach pomiaru | `15720f285fb10d42d1fa28f12d59035ddd86b0b9190f3a8a0c4f0ea64b6b3b10` |
+| `IW_NC_SECTOR_ELIMINATION_WITNESS_AND_CEILING_TABLE_CLOSURE_012_20261018.md` | domkniecie dziury par.2.8 z 007: jawny wymierny swiadek rozdzielajacy garbling od eliminacji sektora PO POSTSELEKCJI, wiec nie przez slad; plus korekta 011 par.6.4 i domknieta tabela 2x2 (sufit wymaga wspolosiowosci ORAZ mu_2 <= 0); plus zgloszenie gravity well | `7d90784a203dc54041d7f8ad74dfeea6b4aacdcf4a868de8bff4e6bbd14cf269` |
+| `IW_NC_SEMIGROUP_CONTINUITY_WITNESS_72_AND_NC_CLOSEOUT_014_20261018.md` | swiadek dla par.7.2 (ciaglosc): polgrupa kontrakcji na [0,2pi) sprzezona przez r(theta)=e^{i theta} daje V_t nieciagla ze skokiem 2|sin(pi e^{-t})|, maksymalnym (srednica okregu) przy t = ln 2; plus rozliczenie calej dwunastki non-mapow pozycja po pozycji i zamkniecie produkcji NC | `a0a0bdad411a4628b5aed477086b3aa5a9e5bbff02c1e90bf26ed1cd89465fd2` |
 
 ## Kod
 
@@ -61,6 +64,7 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/PREREG_DELAY.md` | `3fc3386a23f25ab70269950beaf7bce232f9d3ae31afcc20af9de5658d54cb18` |
 | `code/PREREG_GEN.md` | `9241090d1d5e1267b1c544f6fef697bc9374661f2da790cd1d20c8ff197b96a5` |
 | `code/PREREG_L2.md` | `5399acbcf0c908009dbb6cfadca2df82ce42902fca2ce4f843f622ae619fb591` |
+| `code/PREREG_MT13_NONLIN.md` | `58209d2b3233bc8147b371fb2b448eb38f304bd63fee4ff78ea6b0da4a7a0b9b` |
 | `code/backaction.py` | `3a9c197274d4b99ba72db335ab52ec8e43d0f5c1b392372aa0290c4e171f9775` |
 | `code/bridge.py` | `34848e5a1ec64fdd73ac99dc224fe0d4221d9e06b79733a7a0df66211e26ced5` |
 | `code/cont.py` | `f7bac31c63b846a869bb4c8ad38047732ad96a6a8d186ea4d08ba8429a4af54d` |
@@ -82,6 +86,8 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/l2d.py` | `33f72ae9c36100692c041493ceda5da84a1fe51e1bcdc88c4e75454a8d1e19fa` |
 | `code/logn.py` | `22db7c3c3bfc0f66dea5eb4178084e1f12ffa1a779d1a668d81f8562f7e30433` |
 | `code/mkclaims.py` | `510796822c0c1d8e6539f25194142802c8524d72d4ee8ef0970c90e41078ed9c` |
+| `code/mt13_nonlin.py` | `7e751c7b64c063bc65b8192becfa4d97de732f01d0ef0c6cb14e8244d36d9545` |
+| `code/mt13_nonlin_ctrl.py` | `4794752a915a0ae9fa43d5a3efd3e630af6092bbf3d22225847f63a91303a6c3` |
 | `code/multi.py` | `5b94fb6c0e8e1f438e1c71b289ff20480a25632e531b873ca8a868279137a165` |
 | `code/prog.py` | `589117ea118d279a790b2182b39ac483915e73e1dfdbf7c6f8cfed55d0429c6b` |
 | `code/real36.py` | `1f669f48ed48dd18fde482ee905f3c98bc23cada50e445f70cc14887c8e0c289` |
@@ -92,6 +98,8 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/sg72.py` | `6b91d3c75116880ea3aa2fb75aa6cc3d23ce1d634e48c872e36e0f7e1e14be8c` |
 | `code/sharp.py` | `7c5cc996aab3cc25d0971d6789e4d886141a9ccd255ecfcb81be5894ead5d40d` |
 | `code/twin.py` | `bbe9464dbf5fd00ccaadc795b601425b341d334a82887ff472e9f3c62b387f3b` |
+| `code/weryf_m13_geeky.py` | `e602aad70d520767cb8e83a195ca4fed77d5a8da19cc2200dd332c9c7da1015c` |
+| `code/weryf_mt13.py` | `47ce192bbcd19bb6c9271b95245fc602b51b1e590741ac6c9b83c64eea898b51` |
 | `code/witness.py` | `4aa74e161e6714b671c666d852ddec3162e54a4bdbb7f750104bc4fb90bbfc1c` |
 
 ## Błędy własne zapisane w tych zwrotach

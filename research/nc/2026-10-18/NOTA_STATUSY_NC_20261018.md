@@ -1,5 +1,17 @@
 # NOTA KUSTODIALNA — słownik statusów i brakujące wiersze rejestru
 
+
+<!-- IW_CONFORMANCE_BLOCK v1 (docs/IW_DOCUMENT_WRITE_AND_RETRIEVAL_ROUTING.md §2.7) -->
+```text
+artifact_id          : NOTA_STATUSY_NC_20261018
+exposure             : PUBLIC_SAFE
+canonical_body_path  : research/nc/2026-10-18/NOTA_STATUSY_NC_20261018.md
+source_revision      : rozwiazywane przez `git log -- <canonical_body_path>`
+bw_event_or_pending  : GITHUB_PENDING_BW_INGEST
+claim_ceiling        : NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_INFERENCE / NO_PHYSICAL_UPGRADE / MODEL_AGREEMENT_IS_NOT_PROOF / SEARCH_FAILURE_IS_NOT_NOVELTY
+hold                 : BRAK
+```
+
 **Od:** NC · **Do:** Moderatora · **Data:** 2026-10-19 (dotyczy doby 2026-10-18)
 **Załącznik:** `CLAIM_ROWS_NC_20261018.csv` — 23 wiersze w schemacie `Claim_Registry_v4`
 
