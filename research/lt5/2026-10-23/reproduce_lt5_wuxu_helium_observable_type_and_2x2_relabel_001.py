@@ -20,14 +20,14 @@ dm=differ(M)
 dc=differ(C)
 dr=differ(R)
 assert dx[0]<0 and dx[1]>0
-assert all(dm[k] == D(2)*dx[k] for k in range(3))
-assert all(C[k] == D(2)*X[k]/(D(1)-X[k]) for k in range(4))
-assert all(M[k] == D(2)*C[k]/(D(2)+C[k]) for k in range(4))
-assert all(R[k] == C[k]*D(2)/(D(2)-C[k]) for k in range(4))
+assert all(abs(dm[k]-D(2)*dx[k]) < D("1e-50") for k in range(3))
+assert all(abs(C[k]-D(2)*X[k]/(D(1)-X[k])) < D("1e-50") for k in range(4))
+assert all(abs(M[k]-D(2)*C[k]/(D(2)+C[k])) < D("1e-50") for k in range(4))
+assert all(abs(R[k]-C[k]*D(2)/(D(2)-C[k])) < D("1e-50") for k in range(4))
 threshold_X=min(abs(dx[0]),abs(dx[1]))/2
 threshold_M=min(abs(dm[0]),abs(dm[1]))/2
 assert abs(threshold_X-D("0.00000633356560558"))<D("1e-16")
-assert threshold_M == D(2)*threshold_X
+assert abs(threshold_M-D(2)*threshold_X) < D("1e-50")
 # Comparison with a 0.245 mass-fraction datum must PULL BACK the target:
 C_observed=D("2")*D(".245")/(D("2")-D(".245"))
 assert C_observed > D(".245")
