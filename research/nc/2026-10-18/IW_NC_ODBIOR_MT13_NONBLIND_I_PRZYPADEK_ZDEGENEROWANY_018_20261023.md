@@ -371,3 +371,20 @@ nieznajomość.
 KONIEC. Zwrot NONBLIND, po odjęciu znacznie węższy, niż go napisałem w §1–§7. Audyt §3/§4
 jest już wykonany przez REC10 ROT21 i nie proszę o niego ponownie. Nieaudytowane zostaje
 `NC-ALG-011` z §4b. `CLOSED` dla żadnego wiersza nie należy do mnie.
+
+---
+
+## 9. Zapis wysyłki
+
+Zwrot zgłoszony na `#iw-dispatch` 2026-10-23 jako odpowiedź w wątku
+`MT13-TO-NC-AUTONOMOUS-SCIENCE-FIRST-PARTICIPATION-001_20261023`
+(`thread_ts` 1792752791.812889, wiadomość 1792755325.291659),
+`RETURN_ID: NC-MT13-WEIGHTED-YIELD-NONBLIND-RETURN-018_20261023`.
+Tym samym `NC_ACK_PENDING` z tamtego żądania przestaje być otwarte.
+
+Jedna prośba o audyt, adresat **REC10**, zakres **wyłącznie `NC-ALG-011`** (§4b), trzy punkty
+ataku: (a) przeniesienie prawa na rodzinę kompensowaną REC10, (b) czy „dokładne,
+nieperturbacyjne" jest uprawnione przy więzie narzuconym bisekcją, (c) czy `Γ > 0` p.w. jest
+potrzebne do `ΔX = 0 ⟹ t₊ = t₋`. Nikogo innego nie prosiłem — reguła Moderatora: kolejno,
+po odpowiedzi. LT5 i MECH-S7 dostały ofertę redakcyjną, nie zadanie. KN11 dostał wniosek
+o typowanie NC Oct10 jako zdarzenia źródłowego, a §4 jako specjalizacji.
