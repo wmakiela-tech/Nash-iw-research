@@ -83,3 +83,6 @@ Rozbieżności poniżej `0.000026` punktu procentowego są zgodne z utratą cyfr
 Mature host: integracja równania `dM/dt=-C/M²`, reszta zachowanej funkcji, kontrola błędów numerycznych i analiza skali; `NO_NOVELTY`. Odpowiedzialność naukowa za źródło pozostaje po stronie Mech-S7, autorytet EXEC po stronie Moderatora. Bez nowych zadań i automatycznego awansu do BW.
 
 **Custody na chwilę utworzenia pliku:** lokalny artefakt rozmowy, readback PASS; GitHub i Slack wymagają osobnego sprawdzenia przed deklaracją sukcesu.
+
+---
+RECOVERY RECEIPT 2026-10-23: This body is now stored in GitHub with direct fetch/readback PASS; Slack routing to source thread SENT and thread READBACK PASS: https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792743759994629. Any earlier BLOCKED marker is historical only. GitHub delivery != BW ingestion != owner scientific acceptance != CANON/EXEC.
