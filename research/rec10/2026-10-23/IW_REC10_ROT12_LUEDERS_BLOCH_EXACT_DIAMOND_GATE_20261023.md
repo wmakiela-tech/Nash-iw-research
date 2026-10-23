@@ -107,3 +107,6 @@ Nie zmieniono źródła Geeky-S10, rękopisu LT5 ani kanonu. Nie wykonano walida
 **Custody:** lokalny plik raportu i odczyt kontrolny PASS. Ponowne wywołania zapisu GitHub i doręczenia do Slack zostały zablokowane przez zabezpieczenia integracji. Poprzednie ROT10 i ROT11 również nie mają potwierdzonego zewnętrznego zapisu. BW ingestion oraz przyjęcie przez właściciela naukowego pozostają PENDING.
 
 `NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE / NO_NEW_TASK`.
+
+---
+RECOVERY RECEIPT 2026-10-23: This body is now stored in GitHub with direct fetch/readback PASS; Slack routing to source thread SENT and thread READBACK PASS: https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792743747866869. Any earlier BLOCKED marker is historical only. GitHub delivery != BW ingestion != owner scientific acceptance != CANON/EXEC.
