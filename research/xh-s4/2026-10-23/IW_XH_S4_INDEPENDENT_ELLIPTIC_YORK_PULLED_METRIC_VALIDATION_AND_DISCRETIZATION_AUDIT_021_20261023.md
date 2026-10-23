@@ -80,7 +80,7 @@ Typed link: York original geometry (1971) -> Ogurol2026 covariant CTT mathematic
 ## 7. Reproducibility + local code attestations
 Two independently implemented scripts:
 - xh_s4_021_york_constant_shear.py (sha256 3602afd49df9ad22336bd375ac6e50cdea45434af78fa2caa5b6ff6a6bb069b2), NumPy-only metric Fourier projector with no transported-operator shortcut. results JSON sha256 36911085b52bc6db80533c6c57ca36511cdcfffc89f3308683aa6aa41cd33cd3.
-- xh_s4_021_curved_york_elliptic.py (sha256 3d5b6c1ae3a114caafa7d6fdf8b9f501da542e9c470102878dd11680a79e7912), SciPy GMRES on full nonconstant-metric vector equation; reference pullback computed separately after solve. results JSON sha256 27e6428b4eb0cc244efb4fe8b626b9c1a2bcc7e30403f45b98651dd132c0ad01.
+- xh_s4_021_curved_york_elliptic.py (sha256 beba541ac8c9142d52a902c9356ea1f6ac2186c133c193ff3a33a4b7a7959034), SciPy GMRES on full nonconstant-metric vector equation; reference pullback computed separately after solve. results JSON sha256 27e6428b4eb0cc244efb4fe8b626b9c1a2bcc7e30403f45b98651dd132c0ad01.
 These local SHA256 apply to the frozen files before any later report edits. GitHub custody and independent replay/CRC pass require separate checks; don't claim unless actually verified. Runtime source NASH DTC0a byte-for-byte not imported into 021; 021 is mathematical York consistency test not a production run.
 
 EVIDENCE_SUMMARY: TWO_INDEPENDENT_PROJECTION_REALIZATIONS / ONE_METRIC-PDE_SOLVER / SOURCE-MAP_NO_NEW_THEOREM / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_CLAIM.
