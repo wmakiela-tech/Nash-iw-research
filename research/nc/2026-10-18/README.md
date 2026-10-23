@@ -46,7 +46,7 @@ który opisują, razem z predykcjami. Trzy z nich okazały się fałszywe i są 
 | `IW_NC_LT4_TWELVE_HOLES_FINAL_DISPOSITION_007_20261018.md` | domkniecie dwunastki: 6 swiadkow, 3 odsylacze wewnatrz manuskryptu, 1 przeredagowanie, 1 cytowanie, 2 otwarte | `9db5d7439e9da0c6e1a947cdd130f1c63dbc82f12974277a23e08ceb3c68155a` |
 | `IW_NC_MEASUREMENT_CEILING_IS_THE_LOGARITHMIC_NORM_011_20261018.md` | uogolnienie na dowolny generator: sufit zachodzi wtedy i tylko wtedy, gdy mu_2(G) <= 0 (norma logarytmiczna). Oscylator nie byl szczegolny jako oscylator. Kontrprzykad M13 lezy dokladnie na granicy i lamie sufit tak samo jak zlamal twierdzenie o normie logarytmicznej | `0d233ea2520b7b6aef275509ef658ba700496836a9b0f19552686250cb13d124` |
 | `IW_NC_ODBIOR_M13_ROT11_I_GEEKY_S10_KWANTYFIKATOR_017_20261022.md` |  | `24cba8eace11d71d2bd48423f173a7f2ed79788177bcd06ee934bac05612fbc2` |
-| `IW_NC_ODBIOR_MT13_NONBLIND_I_PRZYPADEK_ZDEGENEROWANY_018_20261023.md` |  | `f601bd3ad0453be00e0ec44b0377cef4890ad63e22fac5375319ce6dbd0a5118` |
+| `IW_NC_ODBIOR_MT13_NONBLIND_I_PRZYPADEK_ZDEGENEROWANY_018_20261023.md` |  | `8a3c7e6b7870ddfc62bce4781ffc821eef55f4b452ea88ea6cea2740403f7982` |
 | `IW_NC_ODBIOR_REC9_NC004_I_TEST_PIECIU_WARUNKOW_016_20261019.md` |  | `8c5bc36cb24ef60e66e6054d0479ccb6d89b549873201dabd6dd6af79bda541e` |
 | `IW_NC_SACRIFICIAL_MEASUREMENT_AND_PROTOCOL_CEILING_009_20261018.md` | sufit niezalezny od protokolu M < 1/gamma (dowod elementarny) oraz pomiar OFIARNY: zysk 1.9x przy ograniczonych czasach pomiaru | `15720f285fb10d42d1fa28f12d59035ddd86b0b9190f3a8a0c4f0ea64b6b3b10` |
 | `IW_NC_SECTOR_ELIMINATION_WITNESS_AND_CEILING_TABLE_CLOSURE_012_20261018.md` | domkniecie dziury par.2.8 z 007: jawny wymierny swiadek rozdzielajacy garbling od eliminacji sektora PO POSTSELEKCJI, wiec nie przez slad; plus korekta 011 par.6.4 i domknieta tabela 2x2 (sufit wymaga wspolosiowosci ORAZ mu_2 <= 0); plus zgloszenie gravity well | `7d90784a203dc54041d7f8ad74dfeea6b4aacdcf4a868de8bff4e6bbd14cf269` |
@@ -64,6 +64,7 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/PREREG_DELAY.md` | `3fc3386a23f25ab70269950beaf7bce232f9d3ae31afcc20af9de5658d54cb18` |
 | `code/PREREG_GEN.md` | `9241090d1d5e1267b1c544f6fef697bc9374661f2da790cd1d20c8ff197b96a5` |
 | `code/PREREG_L2.md` | `5399acbcf0c908009dbb6cfadca2df82ce42902fca2ce4f843f622ae619fb591` |
+| `code/PREREG_MT13_EVENT.md` | `6c11af49e6f36fac3afee652eb947f606c829c9131ebd4311ed8e4f00d63a163` |
 | `code/PREREG_MT13_NONLIN.md` | `58209d2b3233bc8147b371fb2b448eb38f304bd63fee4ff78ea6b0da4a7a0b9b` |
 | `code/backaction.py` | `3a9c197274d4b99ba72db335ab52ec8e43d0f5c1b392372aa0290c4e171f9775` |
 | `code/bridge.py` | `34848e5a1ec64fdd73ac99dc224fe0d4221d9e06b79733a7a0df66211e26ced5` |
@@ -86,6 +87,7 @@ prerejestracja zapisana i zahaszowana PRZED uruchomieniem kodu, który opisuje.
 | `code/l2d.py` | `33f72ae9c36100692c041493ceda5da84a1fe51e1bcdc88c4e75454a8d1e19fa` |
 | `code/logn.py` | `22db7c3c3bfc0f66dea5eb4178084e1f12ffa1a779d1a668d81f8562f7e30433` |
 | `code/mkclaims.py` | `510796822c0c1d8e6539f25194142802c8524d72d4ee8ef0970c90e41078ed9c` |
+| `code/mt13_event.py` | `30e849babe218ae68c66131be0518837106fc081b28fd0ae6a889af76bd176e7` |
 | `code/mt13_nonlin.py` | `7e751c7b64c063bc65b8192becfa4d97de732f01d0ef0c6cb14e8244d36d9545` |
 | `code/mt13_nonlin_ctrl.py` | `4794752a915a0ae9fa43d5a3efd3e630af6092bbf3d22225847f63a91303a6c3` |
 | `code/multi.py` | `5b94fb6c0e8e1f438e1c71b289ff20480a25632e531b873ca8a868279137a165` |

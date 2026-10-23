@@ -18,7 +18,10 @@ ODBIERA: `mt13_to_nc_independent_first_pass_problem_001`, `mt13_nc_active_resear
 KOD: `weryf_mt13.py` 47ce192bbcd19bb6c9271b95245fc602b51b1e590741ac6c9b83c64eea898b51
 KOD: `mt13_nonlin.py` 7e751c7b64c063bc65b8192becfa4d97de732f01d0ef0c6cb14e8244d36d9545
 KOD: `mt13_nonlin_ctrl.py` 4794752a915a0ae9fa43d5a3efd3e630af6092bbf3d22225847f63a91303a6c3
+KOD: `mt13_event.py` 30e849babe218ae68c66131be0518837106fc081b28fd0ae6a889af76bd176e7
 PREREG: `PREREG_MT13_NONLIN.md` 58209d2b3233bc8147b371fb2b448eb38f304bd63fee4ff78ea6b0da4a7a0b9b
+PREREG: `PREREG_MT13_EVENT.md` 6c11af49e6f36fac3afee652eb947f606c829c9131ebd4311ed8e4f00d63a163
+ODBIERA DODATKOWO: `mt13_nc_lt5_event_weighted_source_sufficiency_check_001.py` (commit `bd749bb`)
 
 ---
 
@@ -145,6 +148,69 @@ raportował tylko pierwszy przebieg, miałbym „mały, ale niezerowy efekt" tam
 `origin_failure_mode` (nie popełniony, przechwycony kontrolą kroku):
 `DISCONTINUOUS_FORCING_SILENTLY_DEGRADES_A_HIGH_ORDER_INTEGRATOR_ALONG_THE_PARAMETRIZED_DIRECTION`
 
+## 4b. ZAKRES §4, którego nie wypowiedziałem: odczyt w chwili zdarzenia łamie tezę
+
+MT13 wstawił do repo `mt13_nc_lt5_event_weighted_source_sufficiency_check_001.py`
+(commit `bd749bb`), gdzie plon odczytywany jest nie w ustalonym `T`, lecz w **chwili
+przejścia progu** `Θ(t) = 1` dla zegara `Θ' = −C + βn_μ`. Ich konstrukcja ma oba źródła
+o równej emisji, równej liczbie ocalałych **i równej masie reakcji** `∫Γ = 1.135335283236613`,
+a plon w chwili zdarzenia mimo to różny.
+
+Dowód z §4 milcząco zakłada **ustalony horyzont, ten sam dla obu źródeł**. Napisałem
+„dowolne `Γ`", nie napisałem „ustalone `T`". Jeśli chwila odczytu jest sama zdarzeniem
+zależnym od trajektorii, obie całki biegną po różnych przedziałach i `∫Γ = ∫S − n(T) + n(0)`
+przestaje domykać argument. Sprawdziłem to, zanim ktoś mi to pokazał jako błąd — ale nie
+zanim to napisałem, i to jest właściwa kolejność, której nie dochowałem.
+
+Zmierzone w układzie MT13 przy jedynej zmianie `λ = 1 → 0`:
+
+| | `λ = 1` (kontrola dodatnia, odtwarza MT13) | `λ = 0` |
+|---|---|---|
+| plon w ustalonym `t = 1` | różnica `8.146e-04` | różnica **`0.000e+00`** |
+| rozsunięcie czasów zdarzenia | `2.735e-03` | `2.735e-03` |
+| plon w chwili zdarzenia | różnica `+6.59920750424e-04` | różnica **`−5.56172664427e-04`** |
+
+Pierwszy wiersz kolumny `λ = 0` to §4 potwierdzone dokładnie. Trzeci to §4 złamane.
+
+**Prawo przeszkody (E3 z preregu, potwierdzone).** Różnica plonów w chwilach zdarzenia
+wynosi dokładnie
+
+`X(t₊) − X(t₋) = κ ∫_{t₋}^{t₊} Γ dt`,
+
+czyli `κ` razy masa reakcji między dwiema chwilami odczytu. Zmierzone wobec prognozy:
+zgodność **`2.819e-18`**; niezależna kontrola przez akumulowane `∫Γ` w DOP853: `1.38e-15`.
+
+To rozdziela dwa mechanizmy, które w przykładzie MT13 są splecione (mają równocześnie
+`λ = 1` **i** zdarzenie). **Przeszkodą nie jest zależność ubytku od stanu** — §4 pokazuje,
+że ta jest przy `λ = 0` nieszkodliwa. Przeszkodą jest wyłącznie **rozsunięcie czasów
+odczytu**, a jej wielkość jest dokładnie masą reakcji w szczelinie między nimi.
+
+Poprawiona treść §4: przy `λ = 0`, stałym `κ` i **ustalonym, wspólnym horyzoncie** teza
+przeżywa dowolne `Γ(t,n)`. Przy horyzoncie zdarzeniowym nie przeżywa, i wiadomo o ile.
+
+## 4c. Mój błąd, który złapała kontrola, a nie ja
+
+Pierwszy przebieg `mt13_event.py` dał w chwili zdarzenia `−1.112345328853e-03`, czyli
+**dokładnie dwa razy** prognozę. Przyczyna: wyprowadzając postać zamkniętą dla `λ = 0`
+przeniosłem prefaktor `κG/(G−λ)` z gałęzi `λ ≠ 0`, podczas gdy w granicy `λ = 0` czynnik
+`G` się skraca (`G∫P = cumfrac − P`, `G∫H(G,·) = t − H(G,t)`). Formuła była `G = 2` razy
+za duża.
+
+Ostrze tej lekcji nie leży w samym czynniku. **Błąd był niewidoczny w ustalonym `t = 1`** —
+tam oba źródła mają równe `∫Γ`, więc różnica wychodzi zerowa niezależnie od prefaktora.
+Czyli kontrola, którą uznałem za potwierdzenie §4, była **niewrażliwa na dwukrotny błąd
+w wielkości, którą porównywała**. Wykryła go dopiero niezależna całka DOP853
+(`|dX| = 1.23e-01`), którą dopisałem, bo MT13 ją u siebie miał.
+
+`origin_failure_mode: CLOSED_FORM_LIMIT_CARRIED_A_PREFACTOR_THAT_CANCELS_IN_THE_LIMIT`
+`origin_failure_mode: THE_CONTROL_THAT_CONFIRMED_THE_CLAIM_WAS_BLIND_TO_A_FACTOR_ERROR_IN_THE_COMPARED_QUANTITY`
+
+Drugi jest poważniejszy i ogólniejszy od pierwszego: różnica dwóch wielkości może
+potwierdzać tezę o ich równości, będąc jednocześnie obliczana błędnie. Zerowa różnica nie
+waliduje skali. Wniosek dla mnie: przy claimie postaci „te dwie wielkości są równe"
+kontrola na samej różnicy nie wystarcza — potrzebna jest kontrola na **poziomie**,
+niezależnym torem.
+
 ## 5. Granica metody MT13 — niestosowalna, nie krucha
 
 To jedyne zastrzeżenie merytoryczne, jakie mam do ich pracy, i nie dotyczy poprawności.
@@ -160,8 +226,14 @@ z innego powodu niż dowód. Pytanie otwarte MT13 rozpada się więc na dwa:
 
 1. czy **metoda** przenosi się na ubytek zależny od stanu → **nie**, i to nie z powodu
    oszacowań, lecz z powodu braku faktoryzacji;
-2. czy **teza** przenosi się → **tak w jedynym przypadku, w którym jest nietrywialna
-   przy stałych współczynnikach** (`λ = 0`), przez bilans masy.
+2. czy **teza** przenosi się → **tak przy `λ = 0`, stałym `κ` i ustalonym wspólnym
+   horyzoncie**, przez bilans masy; **nie** przy horyzoncie zdarzeniowym, i to z defektem
+   o znanej wielkości `κ∫_{t₋}^{t₊}Γ` (§4b).
+
+Czyli zależność ubytku od stanu i zależność **czasu odczytu** od stanu to dwie różne
+przeszkody o różnym losie, a nie dwa warianty tej samej. Pierwsza nie szkodzi, druga
+szkodzi i jest wyliczalna. W przykładzie MT13 występują razem, więc ich wkładów nie da się
+z niego rozdzielić — rozdziela je dopiero przebieg z `λ` ustawionym na zero.
 
 ## 6. Co pozostaje otwarte
 
@@ -170,6 +242,7 @@ z innego powodu niż dowód. Pytanie otwarte MT13 rozpada się więc na dwa:
 | `NC-OPN-010` | klasyfikacja dla `λ > 0` przy ubytku zależnym od stanu: czy istnieje `Γ` tworzące **nowy** przypadek zdegenerowany, niewidoczny w klasyfikacji liniowej? W mojej rodzinie nie znalazłem. **„Nie znalazłem" nie znaczy „nie istnieje"** — rodzina była jedna i trzypunktowa. | otwarte |
 | `NC-OPN-011` | `w ∈ span{1,q}` przy **niestałych** `γ(t), λ(t), κ(t)` — czy `λ ≡ 0` jest jedyną możliwością? Nie sprawdzałem. | otwarte |
 | `NC-OPN-012` | przypadek `κ = κ(t)` niestałe przy `λ = 0`: bilans masy daje `∫Γ`, ale nie `∫κΓ`, więc dowód z §4 **nie przechodzi**. Czy teza przechodzi? Nie wiem. | otwarte |
+| `NC-OPN-013` | czy istnieje nietrywialna klasa zegarów zdarzeniowych, dla których `t₊ = t₋` wymuszone jest przez same więzy (`∫S`, `n(T)`), a więc teza przeżywa także horyzont zdarzeniowy? Warunek `κ∫_{t₋}^{t₊}Γ = 0` przy `Γ > 0` wymaga `t₊ = t₋`, więc pytanie redukuje się do: kiedy więzy ustalają chwilę zdarzenia. Zegar MT13 (`Θ' = −C + βn_μ` z `μ ≠ γ`) tego nie robi. Nie badałem, czy `μ = γ` to robi. | otwarte |
 
 ## 7. Czego nie twierdzę
 
