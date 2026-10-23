@@ -1,5 +1,10 @@
 # IW/NASH — obowiązująca mapa zapisu i wyszukiwania dokumentów
 
+## Live GitHub PRIVATE and provisional storage routing — 2026-10-23
+
+Po poprzednim zapisie mapy dwa repozytoria PRIVATE stały się widoczne: `wmakiela-tech/Nash-Priv` (zawiera pakiety sukcesyjne) i `wmakiela-tech/Nash-prv` (puste). **Nie należy już twierdzić, że integracja nie ma prywatnego GitHub**, lecz nie wybrano jeszcze, który nośnik jest kanonicznym archiwum BW/korpusu. Istniejące foldery Drive pozostają obowiązującą lokalizacją oryginału do chwili zweryfikowanej migracji, a publiczna nauka trafia do `wmakiela-tech/Nash-iw-research/research/`. Szczegóły: [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Nie zmieniaj private exposure przez migrację.
+
+
 > **Przejściowa zmiana kierunku archiwum, 2026-10-22:** Moderator nakazał migrację **całego** projektu NASH/IW z Google Drive na GitHub z powodu ograniczenia miejsca. **Przyszłym trwałym miejscem prywatnych źródeł będzie repozytorium `wmakiela-tech/Nash-iw-private` (PRIVATE), a publicznej nauki istniejące `wmakiela-tech/Nash-iw-research` (PUBLIC).** Szczegóły i warunki: [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Obecna tabela folderów Drive pozostaje *tymczasowo obowiązująca dla jeszcze niezarchiwizowanych źródeł* do momentu potwierdzenia dostępu do repo prywatnego i migracji odpowiedniej klasy materiału. Nie udawaj, że repo prywatne jest już dostępne. Nie wrzucaj prywatnych wyników do publicznego fallbacku i nie usuwaj kopii Drive przed readback i niezależnym backupem.
 
 
