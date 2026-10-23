@@ -1,5 +1,14 @@
 # NASH/IW — Current Research Resolver
 
+## MODERATOR CANONICAL PRIVATE REPO DECISION — 2026-10-23
+
+**New controlling storage decision:** The Moderator explicitly selected **`wmakiela-tech/Nash-Priv`** as the single canonical private IW/NASH archive. `Nash-prv` is not the parallel archive. The previously unsettled target line below is **AS_OF / SUPERSEDED**; neither this approval nor one byte-exact pilot means BW is migrated or Drive originals can be deleted.
+
+See [canonical decision and executable migration guards](CANONICAL_PRIVATE_ARCHIVE_DECISION_20261023.md). Any historical runbook mention of unconnected `Nash-iw-private` or unsettled target must be resolved against this decision before further transfer.
+
+---
+
+
 ## SYSS5 CURRENTNESS CORRECTION — 2026-10-23 (controlling live-read rule)
 
 **Source and custody are live ledgers, not permanent values in this document.** In the SYSS5 takeover read, `REGISTRY` contained `ING-20261023-0116` (physical row 1527, `COMMITTED`) and `CROSS_SURFACE_CUSTODY` contained its corresponding `XSC-0301`. The `README` currentness projection still described an earlier `ING-20261023-0071 / XSC-0256` cut. These are **as-of observations, not lasting current heads**.
