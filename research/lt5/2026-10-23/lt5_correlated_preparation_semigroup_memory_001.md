@@ -1,0 +1,11 @@
+LT5 / Obrót 11 (2026-10-23). Source: living monograph REV020 Ch1 theorem 4 already handles y0=0 and Ch7.5a arbitrary independent unknown hidden preparation. Distinct known correlated preparation y0=Rx0.
+
+Full linear L=[A B;C D]; change z=y-Rx gives x'=E x+Bz, z'=G x+H z, where E=A+BR, H=D-RB, G=C+DR-RA-RBR, z0=0. Prepared projected response S_R(t)=P exp(tL) J_R has semigroup law iff S_R(t)=exp(tE) iff K_R(t)=B exp(tH)G=0 iff B H^k G=0 for k=0..m-1 (m=dim hidden). Proof: block shear similarity T_R=[I 0;R I]; Schur Laplace transfer [zI-E-B(zI-H)^(-1)G]^(-1); inverse equality; analytic kernel and Cayley-Hamilton. Standard classical linear systems, no novelty.
+
+Invariant graph condition G=0 is sufficient but NOT necessary: with A=0,B=[1,0],C=(-1,1)^T,D=diag(2,-2),R=(1,0)^T, one gets E=1,H=diag(1,-2),G=(0,1)^T !=0. K_R=0, although K0=B exp(tD) C=-exp(2t)!=0; prepared x=exp(t), and y2=(exp(t)-exp(-2t))/3 becomes nonzero. So hidden residual evolves but is invisible. Simpler saddle x'=y,y'=x admits R=+1 and R=-1 giving exact prepared exp(+t), exp(-t) although K0=1 and y0=0 gives cosh(t).
+
+If actual y0=R x0+eta, ||eta||<=rho, and K_R=0, then x(t)=exp(tE)x0+M_R(t)eta with M_R=integral_0^t exp((t-s)E) B exp(sH) ds. Scalar target worst-case risk rho ||tau M_R(t)||dual. In saddle R=1: x=exp(t)x0+eta sinh(t), so exact graph Markovianity may be arbitrarily fragile over long horizons. This is a specialization of existing LT Ch7.5a optimal recovery.
+
+Controls: 71 saddle-time values for both R; 51 noninvariant-graph times; 11 random 2+3 block shear tests PASS under Python scipy.linalg.expm, with numerical tolerances 2e-12. Reproducer and complete Polish proof present as verified local artifacts /mnt/data/lt5_correlated_prep_checks.py and /mnt/data/LT5_ROT11_Skorelowane_przygotowanie_i_pamiec.md, but local files are NOT automatically GitHub.
+
+Prior art: standard Riccati/invariant graph subspace and Schur/Mori-Zwanzig realization. Example https://repository.library.washu.edu/iwota2016/special/AppliedHarmonicAnalysis/11/ . Proposed monograph §1.5a after Thm4, not new chapter; REV020 unchanged; REV021 not issued; referee pending. Source status NO_CANON/NO_EXEC_SIGN/NO_NOVELTY/NO_PHYSICAL_UPGRADE. No BW ingestion claim.
