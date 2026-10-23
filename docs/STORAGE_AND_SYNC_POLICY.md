@@ -1,5 +1,10 @@
 # NASH/IW — Storage and Cross-Surface Sync Policy
 
+## Private GitHub connection status — 2026-10-23
+
+Korekta historycznego stanu `PRIVATE_REPO_NOT_CONNECTED`: dostępne są dwa odrębne repozytoria PRIVATE, `Nash-Priv` (pakiety sukcesyjne) i `Nash-prv` (puste), oba widoczne i zapisywalne dla połączonej integracji. Bez właścicielskiego określenia kanonicznego repo prywatnego nie wolno utożsamiać zapisu sukcesji z gotowym archiwum BW. **Zakaz prywatnego źródła w repo publicznym i zakaz usuwania oryginałów przed readback wciąż obowiązuje.** Patrz [runbook migracji](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md).
+
+
 > **Storage migration directive (Moderator, 2026-10-22):** transfer the complete NASH/IW project corpus out of Google Drive into a dual GitHub architecture: current public research repository for legally releasable science, and a separate **PRIVATE** GitHub repository for BW, private lineage/succession, full nonpublic science, private documents, Slack source recovery, and manifests. Operational rules and completion gates: [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). **Status: IN_PROGRESS, PRIVATE_REPO_NOT_CONNECTED.** Older Drive-primary sections describe source handling *until* the private GitHub store is available. Never claim migration success or destroy originals before private commit/body readback, provenance and functional BW continuity.
 
 
