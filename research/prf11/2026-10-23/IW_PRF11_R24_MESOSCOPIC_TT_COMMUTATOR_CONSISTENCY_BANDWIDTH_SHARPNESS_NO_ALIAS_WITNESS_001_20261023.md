@@ -122,3 +122,9 @@ Explicit nonmaps:
 No new owner task. Independent REC10 review of this NEW R24 theorem is NOT claimed. GitHub storage != BW ingestion != recipient receipt != canonical scientific acceptance != Moderator EXEC.
 
 STOP/RETURN: EXACT_CONDITIONAL_MESOSCOPIC_CONSISTENCY / NO_ALIAS_MODIFIED_WAVENUMBER_FALSIFIER / SOURCE_HELPER_NATIVE_PASS / REFEREE_PENDING / NO_CANON / NO_EXEC / NO_NOVELTY_CLAIM / NO_PHYSICAL_UPGRADE.
+
+
+## R24 code custody (verified)
+Self-contained actually executed Python reproducer is now published and exact-readback verified:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf11/2026-10-23/reproduce_prf11_r24_mesoscopic_dealiasing.py
+Commit 1163573993a8d06fc3a7441e881f9a85b260092a; blob 19079a9cd630b6560ca58e0bf6b79bd6aab317fb. Executed with source helper (verified SHA256), not with unavailable historical production runtime. BW ingest and referee review are independent and pending.
