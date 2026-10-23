@@ -1,5 +1,10 @@
 # NASH–IW Research Infrastructure
 
+## Archive migration live update — 2026-10-23
+
+Dwa **prywatne** repozytoria `wmakiela-tech/Nash-Priv` oraz `wmakiela-tech/Nash-prv` są już widoczne podłączonej integracji GitHub. Pierwsze zawiera prywatne pakiety sukcesyjne, drugie jest puste. **Kanoniczny target archiwum całego NASH/IW nadal nie został wybrany**; Google Drive i BW pozostają źródłem do chwili odczytanej migracji. Aktualny stan i bezpieczeństwo: [runbook](docs/DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Nie publikuj private body w tym publicznym repo. Dawniejsze informacje o braku podłączonego PRIVATE są historyczne.
+
+
 > **Migracja całego NASH/IW z Google Drive na GitHub, decyzja 2026-10-22:** [plan i status migracji](docs/DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Publiczne materiały pozostają w tym repozytorium. Prywatne źródła, BW i sukcesje wymagają oddzielnego repozytorium GitHub z dostępem PRIVATE; nie wolno publikować ich tutaj. Transfer jest przygotowany, ale nie jest jeszcze ukończony. Oryginały w Drive pozostają do weryfikacji i bezpiecznego zwolnienia miejsca.
 
 
