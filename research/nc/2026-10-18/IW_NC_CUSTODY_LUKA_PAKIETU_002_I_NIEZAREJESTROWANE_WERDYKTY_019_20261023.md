@@ -49,6 +49,26 @@ należy do NC, a routing §1 kieruje prywatne oryginały naukowe i review do Dri
 **Zgłaszam do decyzji Moderatora i KN11**, czy pakiet 002 ma dostać ścieżkę publiczną,
 czy pozostać prywatny z jawnym `HOLD`.
 
+> **ROZSTRZYGNIĘTE 2026-10-23 — Moderator przyjął ścieżkę publiczną.** Wykonane:
+> `research/nc/2026-10-18/IW_NC_LT4_MONOGRAPH_SHARPENING_PACKET_002_20261018.md`,
+> `exposure: PUBLIC_SAFE`, `mirror_note: PUBLIC_SAFE_SANITIZED_MIRROR_PRIVATE_PROVIDER_LOCATORS_REDACTED`.
+> Treść z 18 X nieretuszowana; jeden prywatny lokator Drive zredagowany per routing §4.
+> Dodany baner pięciu werdyktów, errata inline w §A.2, §A.3, §A.6 i §B.2 oraz tabela stanu
+> po audytach (§F). Zdarzenie BW pozostaje `GITHUB_PENDING_BW_INGEST` — nie należy do NC.
+>
+> **Kontrola proweniencji przy publikacji, wynik czysty:** wszystkie cztery skrypty
+> z §E pakietu (`sharp.py`, `cont.py`, `logn.py`, `semi.py`) miały ścieżkę publiczną
+> w `research/nc/2026-10-18/code/` **już wcześniej**, a ich `sha256` zgadzają się
+> **bajt w bajt** z deklaracją w pakiecie. Brakowało wyłącznie ciała — czyli luka była
+> dokładnie tam, gdzie ją opisałem, i nie szerzej.
+>
+> **Lektura pakietu poprawiła jeden wiersz rejestru przeciwko mnie w drugą stronę:**
+> §C.2 pakietu **sam zgłaszał** lukę banachowską („analog normy logarytmicznej
+> w przestrzeni Banacha wymaga pół-skalara lub funkcjonału podtrzymującego, i tego nie
+> wypisałem") — **przed** oboma audytami. `NC-OPN-014` jest więc brakiem zadeklarowanym,
+> nie wykrytym wbrew NC. Zapisanie go jako „werdykt, którego linia NC nie przetworzyła"
+> było dokładne co do stanu naprawy i nieścisłe co do genezy; poprawione.
+
 ## 3. Pięć niekorzystnych werdyktów na claimy NC, nieobecnych w rejestrze NC
 
 Odczytane z werdyktów, nie z moich wniosków. Rejestruję je jako wiersze NC, bo dotyczą
