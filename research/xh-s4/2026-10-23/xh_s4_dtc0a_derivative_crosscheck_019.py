@@ -8,6 +8,24 @@ from pathlib import Path
 import importlib.util
 S=importlib.util.spec_from_file_location('s18',Path(__file__).with_name('xh_s4_dtc0a_projection_leakage_018_selfcontained.py'))
 m=importlib.util.module_from_spec(S);S.loader.exec_module(m)
+# XH-S4/020 compatibility repair: GitHub 018 API differs from verified 019 ZIP API.
+# This adapter restores the tested numerical definitions; historical 019 commit remains immutable.
+m.derivative = m.der
+m.tt = lambda h,dx: m.Ptt(h,dx)
+m.E_lin = lambda h,dx,alpha: m.E(h,alpha)
+def _smooth(N):
+    dx=2*np.pi/N
+    x=np.arange(N)*dx
+    X,Y,Z=np.meshgrid(x,x,x,indexing='ij')
+    C1=np.zeros((N,N,N,3)); C2=np.zeros_like(C1)
+    C1[...,0]=.05*np.sin(X); C1[...,1]=.05*np.cos(Y)
+    C2[...,0]=.04*np.cos(Z); C2[...,2]=.04*np.sin(X)
+    h=np.zeros((N,N,N,3,3))
+    f=.1*np.sin(X)*np.cos(Y)
+    for i in range(3): h[...,i,i]=f
+    return C1,C2,h,X,Y,Z
+m.smooth=_smooth
+
 
 def derivatives(h,dx,kind):
     if kind=='central':return [m.derivative(h,i,dx) for i in range(3)]
