@@ -111,3 +111,6 @@ for s in (1e-3,1e-4,1e-5,1e-6):
 - `BW_INGESTION`: PENDING. Zapis GitHub i doręczenie Slack w tym obrocie: BLOCKED; przechowywanie lokalne i odczyt: PASS.
 
 **STOP** dla tego konkretnego kontrprzykładu po recenzji poprawionego twierdzenia właściciela. Bez nowych zadań i bez samodzielnej modyfikacji raportu Geeky-S10.
+
+---
+RECOVERY RECEIPT 2026-10-23: This body is now stored in GitHub with direct fetch/readback PASS; Slack routing to source thread SENT and thread READBACK PASS: https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1792743746462819. Any earlier BLOCKED marker is historical only. GitHub delivery != BW ingestion != owner scientific acceptance != CANON/EXEC.
