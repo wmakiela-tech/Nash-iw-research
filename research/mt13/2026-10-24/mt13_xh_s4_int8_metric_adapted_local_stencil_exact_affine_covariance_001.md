@@ -32,9 +32,11 @@ Proof: tau_{A^-1 ej} U_A = U_A tau_ej and constant A matrices commute with scala
 
 If A'^T A'=A^T A, then A'=R A with R an integer orthogonal signed permutation. E0 commutes with U_R; hence E_g is independent of representation A on this AFFINE FLAT METRIC ORBIT. For B in SL3Z, U_B U_A=U_{A B} and E_{B^Tg_A B}U_B=U_B E_g. Natural family rather than fixed universal kernel.
 
-For the constant-metric Fourier York P_g (covariant rank-2 TT), geometric tensor pullback satisfies P_{g_A}U_A=U_A P_I. Thus
-  P_{g_A} E_{g_A} P_{g_A} U_A= U_A P_I E0 P_I.                (2)
-No independent nonflat elliptic York solver and no arbitrary diffeomorphism is asserted.
+CRITICAL FULL-BAND TT ALIASING REPAIR: for UNALIASED modes, where k'=A^T k is represented with the identical integer covector and not reduced modulo N, the metric Fourier York P_g obeys P_g U_A=U_A P_I. Therefore on such carrier modes:
+  P_g^rawk E_{g_A} P_g^rawk U_A=U_A P_I E0 P_I.              (2a)
+On the WHOLE finite lattice this projected relation is guaranteed instead for the operator TRANSPORTED BY CONJUGATION P_g^trans:=U_A P_I U_A^-1:
+  P_g^trans E_{g_A} P_g^trans U_A=U_A P_I E0 P_I.             (2b)
+The finite Fourier projector freshly rebuilt using the principal-zone alias of transformed frequency is NOT generally equal to P_g^trans. Exact E_g covariance (1) needs NO projector; its proof is full-band. The source-specific TT witness below is unaliased. None of this constructs an independent nonflat elliptic York solver or arbitrary-diffeomorphism-invariant metric discretization.
 
 ## Exact source-fixed no-go on a GENUINE TT input
 Choose A=[[1,1,0],[0,1,0],[0,0,1]] and g_A=[[1,1,0],[1,2,0],[0,0,1]],
@@ -47,6 +49,12 @@ Thus EVEN WITH THE CORRECT MOVING TT PROJECTOR, the fixed E0 gives the exact rel
  ||P_g(E0 U_A-U_A E0)h_m||_{L2(g)} / ||U_A h_m||_{L2(g)}
    = 4|alpha| sin²(pi m/N).                                  (3)
 The metric-dependent family E_g makes the defect IDENTICALLY ZERO by (1). On fixed m, (3)=O(N^-2); on m=(N-1)/2, (3)->4|alpha|. These are different target quantifiers. This source-specific one-shear TT lower witness DOES NOT equal INT8's universal fixed-filter minimax constant 6|alpha|, so do not conflate them.
+
+
+## Exact alias nonmap for newly recomputed raw-k metric TT
+On N=31 with SAME A, take an independent originally TT Fourier mode k=(15,15,0), H=uu^T-vv^T, u=(1,-1,0)/sqrt(2), v=(0,0,1). After pullback H'=A^T H A and unwrapped k_true'=A^T k=(15,30,0), so TT_g(k_true') H'=H' to machine precision. But the grid aliases this mode to k_alias'=(15,-1,0). The naive standard metric Fourier TT projector P_g(k_alias') gives
+  ||P_g(k_alias')H'-H'||_g / ||H'||_g = 0.8657251176555099;
+the unwrapped-k projection error is <2e-16. Trace remains zero but aliased divergence does not. This exposes an independent full-band raw-k TT failure that survives the exact metric adaptation of E_g. The correct scope is either unaliased modes, or a fully transported P_g^trans finite operator (not assumed identical to source P_TT).
 
 ## Direct original-source execution and independent geometry controls
 Source apply_E(...,E_lin,dx,order=2,alpha=.05) run without modification. All eight exact source TT tests:
