@@ -147,7 +147,7 @@ For a FIXED source alpha with 1−6alpha≠0, the R23 folded certificate (3.2) h
 
 File ACTUALLY EXECUTED:
   /mnt/data/reproduce_prf11_r25_sobolev_collocation_threshold.py
-SHA256 62b18c96d07c3d29ff005591d45c779b45ec5097ff7d30a70f7e14bb66c2b744, 4401 bytes.
+GitHub archival path: [reproduce_prf11_r25_sobolev_collocation_threshold.py](reproduce_prf11_r25_sobolev_collocation_threshold.py); EXACT file bytes SHA256 **4c0aa4d4de31aa27ec5feb58a8c55d19ab0f7e35475ed916e392794dd08c1993**, 4401 bytes, Git blob **ddb3b7b4056da636bf4a1afe9fcb515f3279bb86**, published commit **3ac07c8f02ac6fe2e546959d6584996d1c6e2970**, Github content readback PASS. The archived Git blob SHA was independently matched using local git hash-object; the EXACT archived source was re-executed AFTER matching, with all native/source checks PASS.
 
 Native retained DTC helper SHA256 independently verified before import:
   /mnt/data/deepseek_python_20260627_a87249.py
