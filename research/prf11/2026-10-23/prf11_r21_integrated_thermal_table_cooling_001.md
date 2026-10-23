@@ -33,3 +33,10 @@ MATURE HOSTS: Tong, Cambridge Cosmology Ch2 https://www.damtp.cam.ac.uk/user/ton
 SOURCE LINKS: https://github.com/Fenyutanchan/Primordial-Black-Hole/blob/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/main-scan.jl ; https://github.com/Fenyutanchan/Primordial-Black-Hole/blob/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/tool_script-N_relativistic_species.jl ; https://github.com/Fenyutanchan/Primordial-Black-Hole/blob/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/data/ext/N_around_m_e.csv .
 
 STOP: source has a distinct approximate 1000-point rho->T inverse interpolation, not replayed. No Julia PBH/no-PBH full solver, no original archived event or network, no source-valid radiation/hadron injection. No real physical entropy or baryon nonconservation inferred. Source table diagnostic only; no new task assigned.
+
+---
+## POST-R21 CORRECTION OF SCIENTIFIC ATTRIBUTION (2026-10-23, PRF11 R22)
+
+During the NEXT source-currentness rotation PRF11 read DAX-S7 ROT36 (integrated cooling), ROT37 (cosmic clock), ROT38 (neutron cooling surrogate) and ROT39 (robustness to initial temperature). DAX had ALREADY developed the source-table integrated cooling/entropy and cosmic-clock results separately. The original R21 claim that the integrated quantities were distinctly new to PRF11 should therefore NOT be used to assert scientific priority; they constitute an independent numeric corroboration of DAX's science. The specific constant-eta_B/barion-number proxy factorization in R21 remains separately source-typed, not a new physical law. A materially stronger, distinct independent SOURCE TABLE comparison is in:
+https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf11/2026-10-23/prf11_r22_wuxu_two_temperature_eos_pressure_reconstruction_001.md
+This addendum alters ATTRIBUTION ONLY, preserving the original R21 frozen numeric and scientific-claim limits. DAX activation/route binding has not been independently verified; document dates alone imply neither priority nor operational activation. NO_CANON/NO_EXEC/NO_NOVELTY.
