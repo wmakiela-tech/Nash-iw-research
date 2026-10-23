@@ -49,6 +49,9 @@ For a>0, S=exp(a d²/dt²) on real-line Schwartz/distributional functions is con
 
 Standalone standard-library script xh_s4_025_causality_and_data_controls.py actually executed PASS, generated JSON; local source SHA256 70c8f508f021b05629a01d204c0dde587681a2af579248d1d239d505fc34125e; original JSON SHA256 0ef86af563791c70a4f134af7683ff2cf730ae8694a0fb21468aa14c13f3cb83. No heavy physics run.
 
+## 7b. Explicit Q73: history is a source-data type, not a scalar initial condition
+Q73 P0: If the candidate dynamics uses retarded memory, is the mathematical initial state a point value, finite jet, a function segment on a prehistory interval, or auxiliary memory-field data? H_point_value (the actual state space is finite-dimensional and Markov after valid auxiliary completion), H_full_history (point initial data leave the source evolution underdetermined). Exact negative discriminator: the delay control in section 7 [B] has two admissible continuous histories with identical u(0)=0 but different future u(1)=0 and −0.5. A putative covariant curvature-history theory requires declaring its auxiliary C, chi, Delta initial/boundary data and uniqueness theorem, not assuming this particular delay host applies automatically.
+
 ## 8. Typed literature graph and new scientific program
 - XH024 Rhythm Noether action coupling (ON-SHELL energy exchange) -> Thaalba 2609.05407: HYPERBOLICITY and proper propagating DOFs are separate; model host differs (memory tensor vs scalar Galileon).
 - Hu/Koshelev/Naskar 2607.11765 (ghost around background not bounce) -> Koshelev/Melichev/Rachwal October JHEP (one-loop UV) DIFFERENT theorem targets/backgrounds, not a contradiction: loop cancellation ≠ bounce stability.
