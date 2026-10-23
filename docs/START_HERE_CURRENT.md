@@ -1,5 +1,18 @@
 # NASH/IW — Current Research Resolver
 
+## SYSS5 CURRENTNESS CORRECTION — 2026-10-23 (controlling live-read rule)
+
+**Source and custody are live ledgers, not permanent values in this document.** In the SYSS5 takeover read, `REGISTRY` contained `ING-20261023-0116` (physical row 1527, `COMMITTED`) and `CROSS_SURFACE_CUSTODY` contained its corresponding `XSC-0301`. The `README` currentness projection still described an earlier `ING-20261023-0071 / XSC-0256` cut. These are **as-of observations, not lasting current heads**.
+
+The earlier paragraph below describing `ING-0037 / XSC-0210` as an open 12-event discrepancy is **historical and superseded**: KN11 closed that specific discrepancy by `XSC-0222`, and source/custody ingestion continued later. At each material turn compare live `REGISTRY`, `CROSS_SURFACE_CUSTODY`, `README`, relevant GitHub source and Slack returns; a stale README is a **derived-readout currentness difference**, not evidence that a source event was lost or that science was validated. KN/BW owns source qualification and ledger repair; SYSS diagnoses cross-surface architecture, not a parallel BW.
+
+Two private GitHub repositories are connected, but **the canonical private archive target and operational Git-backed BW replacement remain undecided**. No mass private migration, public fallback or original Drive deletion follows from connector availability. Exact source/body, exposure, independent backup and readback gates remain mandatory.
+
+**Scope:** forward operational correction; no BW edit, no scientific claim promotion, no `EXEC_SIGN`. Earlier as-of audit snapshots remain provenance-valid.
+
+---
+
+
 ## Current private GitHub status — 2026-10-23
 
 Integracja odczytu/zapisu GitHub **widzi** repozytoria PRIVATE `wmakiela-tech/Nash-Priv` (zweryfikowany nośnik pakietu sukcesji SYSS5) i `wmakiela-tech/Nash-prv` (puste). Dawny blok `PRIVATE_REPO_NOT_CONNECTED` ustał, ale **wybór docelowego archiwum nadal pozostaje otwarty** i nie ma działającego BW Git-backed. W BW źródłowy `REGISTRY` ma już `ING-20261023-0037`, podczas gdy XSC ma ostatni `XSC-0210` do `ING-0025`. Zawsze wykonaj świeży odczyt currentness; źródło ING nie jest owner scientific head. [Dokładny runbook](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md).
