@@ -1,0 +1,93 @@
+{
+  "status": "SOURCE_EQUATION_QUASISTATIONARY_SURROGATE_NOT_JULIA_NOT_NUCLEAR_NETWORK",
+  "mass_g": 9672500000,
+  "reference_T_nuc_MeV": 0.07818527068831994,
+  "observational_Yp": {
+    "mean": 0.245,
+    "sigma": 0.003
+  },
+  "beta_range": [
+    1e-20,
+    1e-17
+  ],
+  "input_rows": 14,
+  "source_vs_conserved_beta_acceptance_bands": {
+    "code_original": {
+      "1": {
+        "lower_beta": 1e-20,
+        "upper_beta": 2.355034515820187e-20
+      },
+      "2": {
+        "lower_beta": 1e-20,
+        "upper_beta": 4.51215657460336e-20
+      },
+      "3": {
+        "lower_beta": 1e-20,
+        "upper_beta": 6.693789087596889e-20
+      }
+    },
+    "code_baryon_conserved": {
+      "1": {
+        "lower_beta": 1e-20,
+        "upper_beta": 2.811414833302572e-20
+      },
+      "2": {
+        "lower_beta": 1e-20,
+        "upper_beta": 5.404150754791401e-20
+      },
+      "3": {
+        "lower_beta": 1e-20,
+        "upper_beta": 8.003062342920388e-20
+      }
+    },
+    "mass_original": {
+      "1": {
+        "lower_beta": 2.2213167659216136e-19,
+        "upper_beta": 2.7897464389492624e-19
+      },
+      "2": {
+        "lower_beta": 1.9327235914987865e-19,
+        "upper_beta": 3.068042918076689e-19
+      },
+      "3": {
+        "lower_beta": 1.6448562077139226e-19,
+        "upper_beta": 3.3517610508656525e-19
+      }
+    },
+    "mass_baryon_conserved": {
+      "1": {
+        "lower_beta": 2.655498474464977e-19,
+        "upper_beta": 3.320619257784693e-19
+      },
+      "2": {
+        "lower_beta": 2.317577425737175e-19,
+        "upper_beta": 3.6645308114360567e-19
+      },
+      "3": {
+        "lower_beta": 1.9750428739335196e-19,
+        "upper_beta": 4.014031303230454e-19
+      }
+    }
+  },
+  "source_provenance": {
+    "main_scan_git_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "low_gstar_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+    "pdg_gs_git_blob": "33aceb876fc36cb2486d36c690e6401d85d76b46",
+    "pdg_grho_to_gs_git_blob": "28b0c13563d7b3bdeaee191a3a981197345d05b8",
+    "hadron_emission_git_blob": "06d0883a27b108692720422294ba2baacd381a64"
+  },
+  "method": "Parallel X_n evolutions on same reconstructed Wu-Xu background, six quasi-steady hadrons, only n_B source formula vs conserved comoving n_B anchored at first T_nuc crossing; 12000+16000 numerical steps",
+  "checks": {
+    "beta_zero_delta_X": 0,
+    "source_beta_2e-19_original": 0.11984967067854044,
+    "conserved_beta_2e-19": 0.11810915292867183
+  },
+  "caveats": [
+    "Source eta_B interpreted as nuclear-era baryon-photon ratio for normalization",
+    "No transport or baryon deposition physics from PBH simulated separately",
+    "No complete stiff Julia six-hadron solver",
+    "No nuclear reaction network: Yp_2X approximate",
+    "No inference of actual physical PBH constraint",
+    "Source emission table extrapolated below 1e9 g"
+  ]
+}
