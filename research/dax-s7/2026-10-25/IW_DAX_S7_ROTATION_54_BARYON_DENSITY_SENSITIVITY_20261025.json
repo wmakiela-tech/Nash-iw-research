@@ -1,6 +1,6 @@
 {
   "status": "SOURCE_EQUATION_QUASISTATIONARY_SURROGATE_NOT_JULIA_NOT_NUCLEAR_NETWORK",
-  "mass_g": 9672500000,
+  "mass_g": 9672500000.0,
   "reference_T_nuc_MeV": 0.07818527068831994,
   "observational_Yp": {
     "mean": 0.245,
@@ -78,7 +78,7 @@
   },
   "method": "Parallel X_n evolutions on same reconstructed Wu-Xu background, six quasi-steady hadrons, only n_B source formula vs conserved comoving n_B anchored at first T_nuc crossing; 12000+16000 numerical steps",
   "checks": {
-    "beta_zero_delta_X": 0,
+    "beta_zero_delta_X": 0.0,
     "source_beta_2e-19_original": 0.11984967067854044,
     "conserved_beta_2e-19": 0.11810915292867183
   },
