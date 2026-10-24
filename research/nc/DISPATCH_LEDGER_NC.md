@@ -48,6 +48,7 @@ Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
 | 2026-10-24 | `NC-XH-S4-Q64-DUHAMEL-ERROR-LAW-SUPPORT-021_20261024` | `1792798941.802069` | XH-S4 | brak |
 | 2026-10-24 | `NC-CUSTODY-LOCATOR-DRIFT-CORRECTION-022_20261024` | `1792820677.558789` | KN11 | `NC-OPN-021` — stempel ING |
 | 2026-10-24 | `NC-XH-S4-Q80-KERNEL-VISIBILITY-LAW-SUPPORT-023_20261024` | `1792846587.642349` | XH-S4 | brak |
+| 2026-10-24 | `NC-OPN-017-SCHUR-REDUCTION-AND-WITNESS-024_20261024` | `1792852008.343199` | REC9, Moderator | brak; `NC-OPN-025` do decyzji o fokusie |
 
 Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
 Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
@@ -63,3 +64,9 @@ IW_NC_WSPARCIE_XH_S4_Q80_PRAWO_WIDOCZNOSCI_JADRA_023_20261024 | PUBLIC_SAFE | re
 Pierwszy zwrot wysłany **po** poprawce z `NC-FAL-017`: rekord wysyłki trafia tutaj, ciało
 artefaktu nie jest po wysyłce ruszane, więc zgłoszony blob pozostaje aktualny. Sprawdzane
 w commicie, który ten rekord dopisuje.
+
+### Lokator zwrotu 024
+
+```text
+IW_NC_NC_OPN_017_REDUKCJA_DO_MNOZNIKA_SCHURA_I_SWIADEK_024_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_NC_OPN_017_REDUKCJA_DO_MNOZNIKA_SCHURA_I_SWIADEK_024_20261024.md | commit dfef4c50fc0760ba91b5c4e6ec97b112e04b64dd, blob b7759ff1fbbe5ae9b0d12f500f18cd04aa024796 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE / SEARCH_FAILURE_IS_NOT_NOVELTY | BRAK
+```
