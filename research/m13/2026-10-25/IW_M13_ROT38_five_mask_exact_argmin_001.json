@@ -1,0 +1,254 @@
+{
+  "N": 41,
+  "alpha_true": 0.05,
+  "alternative_constraint": "beta in [0,.2], |beta-.05|>=.01",
+  "cases": [
+    {
+      "ROT36_difference_sigma": 4.391598196207269e-12,
+      "ROT36_numeric_cross_check_sigma": 1.4536987165617488,
+      "channel": "A",
+      "endpoint_left0p04_sigma_directed_decimal": [
+        "[1.4578609643797377628334412298867637758671677471161, 1.4578609643797377628334412298867637758671677471161]",
+        "[1.4578609643797377628334412298867637759820493936852, 1.4578609643797377628334412298867637759820493936852]"
+      ],
+      "endpoint_left0p04_sigma_interval": [
+        1.4578609643797376,
+        1.4578609643797376
+      ],
+      "endpoint_right0p06_sigma_directed_decimal": [
+        "[1.4536987165573573163177167624666957457749504761205, 1.4536987165573573163177167624666957457749504761205]",
+        "[1.4536987165573573163177167624666957458908536473748, 1.4536987165573573163177167624666957458908536473748]"
+      ],
+      "endpoint_right0p06_sigma_exact_dyadic": [
+        [
+          0,
+          8299152556384413553476760510497883327861605207,
+          -152,
+          153
+        ],
+        [
+          0,
+          4149576278192206776738380255248941664261647671,
+          -151,
+          152
+        ]
+      ],
+      "endpoint_right0p06_sigma_interval": [
+        1.4536987165573572,
+        1.4536987165573572
+      ],
+      "exact_argmin_beta": 0.06,
+      "excluded_abs_alpha_distance": 0.01,
+      "five_mask_true_alpha": 0.05,
+      "global_interval_derivative_sign_certificates": [
+        {
+          "interval": [
+            0.0,
+            0.039999999999999994
+          ],
+          "max_bernstein_upper": 3.0405610046842357e-32,
+          "min_bernstein_lower": 5.8796935964485664e-33,
+          "sign": "+"
+        },
+        {
+          "interval": [
+            0.06,
+            0.19999999999999998
+          ],
+          "max_bernstein_upper": -5.780934302147032e-33,
+          "min_bernstein_lower": -7.687397071510525e-32,
+          "sign": "-"
+        }
+      ],
+      "global_min_five_sigma_interval": [
+        1.4536987165573572,
+        1.4536987165573572
+      ],
+      "sigma_energy_per_voxel": 1.5231337439625533e-11
+    },
+    {
+      "ROT36_difference_sigma": 6.707523425575346e-12,
+      "ROT36_numeric_cross_check_sigma": 578.0771885490373,
+      "channel": "B",
+      "endpoint_left0p04_sigma_directed_decimal": [
+        "[694.74907978601963399101584032865323595327824876356, 694.74907978601963399101584032865323595327824876356]",
+        "[694.7490797860196339910158403286532359615355875368, 694.7490797860196339910158403286532359615355875368]"
+      ],
+      "endpoint_left0p04_sigma_interval": [
+        694.7490797860196,
+        694.7490797860196
+      ],
+      "endpoint_right0p06_sigma_directed_decimal": [
+        "[578.07718854904403439894743932388074494907877914985, 578.07718854904403439894743932388074494907877914985]",
+        "[578.07718854904403439894743932388074495670646506283, 578.07718854904403439894743932388074495670646506283]"
+      ],
+      "endpoint_right0p06_sigma_exact_dyadic": [
+        [
+          0,
+          6445776043457587735725451707371713240448235809,
+          -143,
+          153
+        ],
+        [
+          0,
+          6445776043457587735725451707371713240533287349,
+          -143,
+          153
+        ]
+      ],
+      "endpoint_right0p06_sigma_interval": [
+        578.077188549044,
+        578.077188549044
+      ],
+      "exact_argmin_beta": 0.06,
+      "excluded_abs_alpha_distance": 0.01,
+      "five_mask_true_alpha": 0.05,
+      "full_five_H_beta0_directed_decimal": [
+        "[-5.1384241869395453415647600376317812830489747254155e-46, -5.1384241869395453415647600376317812830489747254155e-46]",
+        "[-5.1384241869395453415647600376317812827736992091681e-46, -5.1384241869395453415647600376317812827736992091681e-46]"
+      ],
+      "global_interval_derivative_sign_certificates": [
+        {
+          "interval": [
+            0.019999999999999997,
+            0.039999999999999994
+          ],
+          "max_bernstein_upper": 2.2667889481798585e-45,
+          "min_bernstein_lower": 1.4599214283024853e-45,
+          "sign": "+"
+        },
+        {
+          "interval": [
+            0.06,
+            0.19999999999999998
+          ],
+          "max_bernstein_upper": -4.3020509366509134e-45,
+          "min_bernstein_lower": -9.204382469159017e-43,
+          "sign": "-"
+        }
+      ],
+      "global_min_five_sigma_interval": [
+        578.077188549044,
+        578.077188549044
+      ],
+      "left_branch_0_to0p02_argument": "Full 5 masks >= B pair masks 5/6, which has monotonic polar angle: d_pair(beta) >= d_pair(.02) on [0,.02]",
+      "left_branch_pair_mask5_6_ratio_sign_certificate": {
+        "interval": [
+          0.0,
+          0.19999999999999998
+        ],
+        "max_bernstein_upper": 9.593960418549207e-27,
+        "min_bernstein_lower": 1.3534019673297396e-28,
+        "sign": "+"
+      },
+      "pair_beta0p02_sigma_directed_decimal": [
+        "[1036.9450537323642595284731133735185308216937922409, 1036.9450537323642595284731133735185308216937922409]",
+        "[1036.9450537323642595284731133735185308257988595463, 1036.9450537323642595284731133735185308257988595463]"
+      ],
+      "pair_beta0p02_sigma_exact_dyadic": [
+        [
+          0,
+          5781161857040525319969453459275126281796055143,
+          -142,
+          153
+        ],
+        [
+          0,
+          2890580928520262659984726729637563140909470829,
+          -141,
+          152
+        ]
+      ],
+      "pair_beta0p02_sigma_interval": [
+        1036.9450537323642,
+        1036.9450537323642
+      ],
+      "sigma_energy_per_voxel": 6.12706075415169e-16
+    },
+    {
+      "ROT36_difference_sigma": 1.1937117960769683e-12,
+      "ROT36_numeric_cross_check_sigma": 109.87007094842295,
+      "channel": "C",
+      "endpoint_left0p04_sigma_directed_decimal": [
+        "[111.89281028567584592008389412817194836245090456203, 111.89281028567584592008389412817194836245090456203]",
+        "[111.89281028567584592008389412817194836352205607681, 111.89281028567584592008389412817194836352205607681]"
+      ],
+      "endpoint_left0p04_sigma_interval": [
+        111.89281028567584,
+        111.89281028567584
+      ],
+      "endpoint_right0p06_sigma_directed_decimal": [
+        "[109.87007094842176103512880661386199181714587330161, 109.87007094842176103512880661386199181714587330161]",
+        "[109.8700709484217610351288066138619918181993121908, 109.8700709484217610351288066138619918181993121908]"
+      ],
+      "endpoint_right0p06_sigma_exact_dyadic": [
+        [
+          0,
+          9800737828660941981161024207452025378268760695,
+          -146,
+          153
+        ],
+        [
+          0,
+          1225092228582617747645128025931503172295341323,
+          -143,
+          150
+        ]
+      ],
+      "endpoint_right0p06_sigma_interval": [
+        109.87007094842176,
+        109.87007094842176
+      ],
+      "exact_argmin_beta": 0.06,
+      "excluded_abs_alpha_distance": 0.01,
+      "five_mask_true_alpha": 0.05,
+      "global_interval_derivative_sign_certificates": [
+        {
+          "interval": [
+            0.0,
+            0.039999999999999994
+          ],
+          "max_bernstein_upper": 6.574343338275429e-41,
+          "min_bernstein_lower": 1.3628849939640975e-41,
+          "sign": "+"
+        },
+        {
+          "interval": [
+            0.06,
+            0.19999999999999998
+          ],
+          "max_bernstein_upper": -9.381964738625807e-41,
+          "min_bernstein_lower": -1.6847910805125638e-38,
+          "sign": "-"
+        }
+      ],
+      "global_min_five_sigma_interval": [
+        109.87007094842176,
+        109.87007094842176
+      ],
+      "sigma_energy_per_voxel": 1.787578627119217e-14
+    }
+  ],
+  "conditional_noise": "iid additive common-variance voxel ENERGY noise, tau_channel=0.01*g_channel,mask2(alpha=.05); common positive gain for 5 masks; no empirical calibration",
+  "historical_45_max_relative_error": 2.886579864025407e-15,
+  "masks": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "max_gap_vs_ROT36_uncertified_numerical_result": 6.707523425575346e-12,
+  "negative_knowledge": [
+    "NO blanket claim for all alpha_true: only alpha_true=0.05 fixed in exact 5-mask argmin proof",
+    "Full-five β derivative not globally monotone for B: excluded [0,.02] through a distinct pair-based lower certificate",
+    "Neither independence of channel errors nor voxel noise covariance is measured empirically",
+    "Raw K_A(h=fI) ambient puretrace diagnostic not TT restricted invariant",
+    "Original historical runtime byte-exact unavailable; no BW ingestion, independent referee or EXEC signoff",
+    "No physics, novelty, K/J3 or TPE upgrades"
+  ],
+  "proof_algebra": "D²=||a||W²-(a^T W b)²/(b^T W b); H=p'q-pq'/2, p=a^T W b, q=b^T W b, sign derivative of D² opposite H; B left branch excluded using certified mask5/6 monotone pair",
+  "proof_class": "source-matching sparse Fourier direct mpmath.iv outward interval Bernstein signs plus analytic shell gain-profile geometry; assumes interval library sound; not formal proof assistant",
+  "return_id": "M13-ROT38-DTC0A-EXACT-FIVE-MASK-GLOBAL-ARGMIN-ALPHA0P05_001_20261025",
+  "source_file": "verify_m13_rot33_interval.py from ROT33 source-matched independent interval helper; missing historical dtc0a_runtime_v0_3_1.py is not asserted"
+}
