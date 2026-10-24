@@ -1,0 +1,1360 @@
+{
+  "status": "LOCAL_SOURCE_EQUATION_MATCHED_NOT_FULL_JULIA",
+  "source": "Fenyutanchan/Primordial-Black-Hole",
+  "source_background": "main-scan.jl plus N_around_m_e.csv",
+  "source_emission": "data/out/hadrons_from_PBH.dat, below-table loglog EXTRAPOLATION",
+  "background_ref": "DAX-S7 rotation 49 first crossing coordinates",
+  "source_blobs": {
+    "background": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "thermo": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+    "emission": "06d0883a27b108692720422294ba2baacd381a64"
+  },
+  "mass_g": 9672500000.0,
+  "beta": 1e-17,
+  "Tn_MeV": 0.07818527068831994,
+  "first_crossing_s": 215.05755469059486,
+  "conditional_Xn_first": 0.11,
+  "base": {
+    "steps": 12000,
+    "X_first": 0.11,
+    "scaled_emission": 1,
+    "initial_hadron_factor": 1.0,
+    "a_first": 35.071137473435506,
+    "events": [
+      {
+        "t": 215.05755469059486,
+        "ln_a": 35.071137473435506,
+        "X": 0.11,
+        "direction": "down",
+        "phase": "initial"
+      },
+      {
+        "t": 215.07109822431892,
+        "ln_a": 35.071170474994034,
+        "X": 0.11151097115236998,
+        "direction": "up",
+        "phase": "evap"
+      },
+      {
+        "t": 215.0805647665951,
+        "ln_a": 35.07119354088775,
+        "X": 0.11192653033308265,
+        "direction": "down",
+        "phase": "post"
+      }
+    ],
+    "X_at_evap": 0.1118274374153852,
+    "T_at_evap": 0.07818667379512571,
+    "T_min_before_evap": 0.07818482549133061,
+    "T_max_before_evap": 0.07818667379512571,
+    "delta_X": 0.0019265303330826544,
+    "T_start": 0.07818527068831994,
+    "y_first": 0.040753551471191904,
+    "nPBH_scale_end": 0.9998318029285752
+  },
+  "num_suite_rows": 31,
+  "series": [
+    {
+      "group": "convergence",
+      "value": 3000,
+      "output": {
+        "steps": 3000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822376702,
+            "ln_a": 35.071170474992854,
+            "X": 0.11151097307489437,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.08056476658814,
+            "ln_a": 35.07119354088807,
+            "X": 0.11192653341273563,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182743960686331,
+        "T_at_evap": 0.07818667379512458,
+        "T_min_before_evap": 0.07818482549139752,
+        "T_max_before_evap": 0.07818667379512458,
+        "delta_X": 0.0019265334127356315,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029275736
+      }
+    },
+    {
+      "group": "convergence",
+      "value": 6000,
+      "output": {
+        "steps": 6000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822414438,
+            "ln_a": 35.07117047499357,
+            "X": 0.11151097152832716,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.08056476658604,
+            "ln_a": 35.07119354088764,
+            "X": 0.11192653098042009,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182743785743028,
+        "T_at_evap": 0.07818667379512421,
+        "T_min_before_evap": 0.07818482549133468,
+        "T_max_before_evap": 0.07818667379512421,
+        "delta_X": 0.001926530980420088,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.999831802928831
+      }
+    },
+    {
+      "group": "convergence",
+      "value": 12000,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11151097115236998,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11192653033308265,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118274374153852,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019265303330826544,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "convergence",
+      "value": 24000,
+      "output": {
+        "steps": 24000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.071098224325,
+            "ln_a": 35.07117047499454,
+            "X": 0.1115109710535179,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088858,
+            "X": 0.11192653015822712,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182743730181285,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549132291,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019265301582271216,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029260816
+      }
+    },
+    {
+      "group": "convergence",
+      "value": 48000,
+      "output": {
+        "steps": 48000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822433634,
+            "ln_a": 35.07117047499399,
+            "X": 0.11151097103068416,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.08056476656162,
+            "ln_a": 35.0711935408873,
+            "X": 0.11192653010963122,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118274372714023,
+        "T_at_evap": 0.07818667379512016,
+        "T_min_before_evap": 0.07818482549132093,
+        "T_max_before_evap": 0.07818667379512016,
+        "delta_X": 0.0019265301096312165,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029296835
+      }
+    },
+    {
+      "group": "X_initial",
+      "value": 0.08,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.08,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.08,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.0816311041230372,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.08208007132729706,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.0819725437853771,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0020800713272970534,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "X_initial",
+      "value": 0.11,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11151097115236998,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11192653033308265,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118274374153852,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019265303330826544,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "X_initial",
+      "value": 0.2,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.2,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.2,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.2011541101130056,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.201470545305682,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.20139628307748608,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0014705453056819973,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "X_initial",
+      "value": 0.4,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.4,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.4,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.40037436714878594,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.40047465261577164,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.4004538009587626,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0004746526157716202,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "X_initial",
+      "value": 0.6,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.6,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.6,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.5996013653165703,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.5994875987366426,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.5995192580864804,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": -0.0005124012633573871,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "X_initial",
+      "value": 0.8,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.8,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.8,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.7988212030528573,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.7984911769362328,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.7985762829952262,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": -0.0015088230637672062,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 0,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 0,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.10999816959811265,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.1099968902138771,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.10999803259064653,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": -3.1097861229040236e-06,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 0.1,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 0.1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11014972041884422,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.1101902953686458,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11018136867320809,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.00019029536864580143,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 0.25,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 0.25,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11037693375380804,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11048021904239835,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11045620775434259,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.00048021904239835267,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 0.5,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 0.5,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11075532180060546,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.1109629347857247,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11091383314810686,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0009629347857247061,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 1,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11151097115236998,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11192653033308265,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118274374153852,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019265303330826544,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 1.5,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1.5,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.1122651208182742,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11288768347530799,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11273885096137397,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0028876834753079894,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "emission_scale",
+      "value": 2,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 2,
+        "initial_hadron_factor": 1.0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11301777395544141,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.113846400810681,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11364807933870939,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0038464008106809944,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "initial_hadron_factor",
+      "value": 0,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 0,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11150095777942802,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11191652812233883,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11181743239244303,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019165281223388342,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "initial_hadron_factor",
+      "value": 0.25,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 0.25,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11150346114405063,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11191902869638598,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11181993366954651,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019190286963859798,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "initial_hadron_factor",
+      "value": 0.5,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 0.5,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11150596449441347,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11192152925619073,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182243493240286,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019215292561907266,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "initial_hadron_factor",
+      "value": 1,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11151097115236998,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11192653033308265,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118274374153852,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019265303330826544,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "initial_hadron_factor",
+      "value": 2,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 2,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11152098429719408,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11193653231598535,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11183744221041236,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019365323159853537,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "initial_hadron_factor",
+      "value": 5,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 5,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11155102236302478,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11196653689770569,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11186745522806679,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019665368977056924,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": -0.0002,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.07093747343551,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.07093747343551,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109437370576,
+            "ln_a": 35.0709704656138,
+            "X": 0.11151103170574966,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805785745273,
+            "ln_a": 35.070993574534725,
+            "X": 0.11192768356366267,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182853270193792,
+        "T_at_evap": 0.07818667608721769,
+        "T_min_before_evap": 0.07818482611940411,
+        "T_max_before_evap": 0.07818667608721769,
+        "delta_X": 0.0019276835636626716,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998317042550994
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": -0.0001,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.0710374734355,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.0710374734355,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109630024064,
+            "ln_a": 35.071070470307,
+            "X": 0.11151100161273977,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.08057166952602,
+            "ln_a": 35.07109355770879,
+            "X": 0.11192710686233445,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182798497691704,
+        "T_at_evap": 0.07818667494099979,
+        "T_min_before_evap": 0.07818482580537928,
+        "T_max_before_evap": 0.07818667494099979,
+        "delta_X": 0.0019271068623344517,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998317590728434
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": -2e-05,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.07111747343551,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.07111747343551,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109783967366,
+            "ln_a": 35.07115047405697,
+            "X": 0.11151097727078109,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.080566146996,
+            "ln_a": 35.07117354425141,
+            "X": 0.11192664562517327,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118275469146154,
+        "T_at_evap": 0.07818667402426974,
+        "T_min_before_evap": 0.07818482555413706,
+        "T_max_before_evap": 0.07818667402426974,
+        "delta_X": 0.001926645625173265,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998317919652175
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": 0,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.071137473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071137473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109822431892,
+            "ln_a": 35.071170474994034,
+            "X": 0.11151097115236998,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805647665951,
+            "ln_a": 35.07119354088775,
+            "X": 0.11192653033308265,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118274374153852,
+        "T_at_evap": 0.07818667379512571,
+        "T_min_before_evap": 0.07818482549133061,
+        "T_max_before_evap": 0.07818667379512571,
+        "delta_X": 0.0019265303330826544,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318029285752
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": 2e-05,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.071157473435505,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071157473435505,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07109860880362,
+            "ln_a": 35.07119047593071,
+            "X": 0.1115109650118163,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.08056338624183,
+            "ln_a": 35.07121353752421,
+            "X": 0.11192641504787888,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118273279226928,
+        "T_at_evap": 0.07818667356598957,
+        "T_min_before_evap": 0.07818482542851124,
+        "T_max_before_evap": 0.07818667356598957,
+        "delta_X": 0.0019264150478788822,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318138919118
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": 0.0001,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.07123747343551,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.07123747343551,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07110014591134,
+            "ln_a": 35.07127047967532,
+            "X": 0.11151094032095378,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.0805578657251,
+            "ln_a": 35.07129352407197,
+            "X": 0.11192595397585592,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.1118268900172915,
+        "T_at_evap": 0.07818667264959378,
+        "T_min_before_evap": 0.07818482517723974,
+        "T_max_before_evap": 0.07818667264959378,
+        "delta_X": 0.001925953975855918,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998318577460689
+      }
+    },
+    {
+      "group": "A_initial_offset",
+      "value": 0.0002,
+      "output": {
+        "steps": 12000,
+        "X_first": 0.11,
+        "scaled_emission": 1,
+        "initial_hadron_factor": 1,
+        "a_first": 35.071337473435506,
+        "events": [
+          {
+            "t": 215.05755469059486,
+            "ln_a": 35.071337473435506,
+            "X": 0.11,
+            "direction": "down",
+            "phase": "initial"
+          },
+          {
+            "t": 215.07110206504134,
+            "ln_a": 35.071370484350375,
+            "X": 0.11151090912142421,
+            "direction": "up",
+            "phase": "evap"
+          },
+          {
+            "t": 215.08055096693164,
+            "ln_a": 35.071393507261064,
+            "X": 0.11192537779060298,
+            "direction": "down",
+            "phase": "post"
+          }
+        ],
+        "X_at_evap": 0.11182634278259151,
+        "T_at_evap": 0.0781866715044066,
+        "T_min_before_evap": 0.07818482486312095,
+        "T_max_before_evap": 0.0781866715044066,
+        "delta_X": 0.0019253777906029779,
+        "T_start": 0.07818527068831994,
+        "y_first": 0.040753551471191904,
+        "nPBH_scale_end": 0.9998319125641196
+      }
+    }
+  ]
+}
