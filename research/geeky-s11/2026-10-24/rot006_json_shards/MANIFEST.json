@@ -1,0 +1,59 @@
+{
+  "artifact_id": "GEEKY-S11-ROT006-EXACT-REASSEMBLABLE-JSON-CUSTODY",
+  "date": "2026-10-24",
+  "source_original_filename": "geeky_s11_rot006_all_alpha_two_band_results.json",
+  "source_sha256": "9bd42019f524a1b324c0a3bcae5f4f7d8ba55444f2accd5352b6cf936fd54890",
+  "source_git_blob_sha1": "b73e745efa01ad68bef3bfffb8b19cf7b8093229",
+  "source_bytes": 79917,
+  "format": "eight consecutive raw UTF-8 character slices of ORIGINAL JSON, no enclosing wrappers or extra newlines",
+  "rebuild": "Concatenate part001 through part008 as binary/UTF-8 byte streams with NO separators, parse as a single JSON document; then compare SHA256 and source bytes. Shell: cat geeky_s11_rot006_results.part0{01..08}.txt > geeky_s11_rot006_all_alpha_two_band_results.json",
+  "readback": "All 8 shard blobs fetched from GitHub and concatenated 79,917-character text is EXACTLY equal to source Files readback; JSON parses successfully. Local source SHA256 calculated from container bytes.",
+  "parts": [
+    {
+      "filename": "geeky_s11_rot006_results.part001.txt",
+      "chars": 13000,
+      "blob_sha": "66424fb9e4b345e6fed285142ee0645f5015d5ab"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part002.txt",
+      "chars": 13000,
+      "blob_sha": "45e434f076ed03b1f8048bc721f952a262bbc563"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part003.txt",
+      "chars": 13000,
+      "blob_sha": "025c16e90b10a0016b5981af03c4861d7c8ad951"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part004.txt",
+      "chars": 13000,
+      "blob_sha": "2b7345bcd563c6a508ea44bbac2f7695178cdcb0"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part005.txt",
+      "chars": 13000,
+      "blob_sha": "368791eb0d57f357076879fa530ff8a4fe3fd9f4"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part006.txt",
+      "chars": 6000,
+      "blob_sha": "87cb849d7be9a198150013e228ffe103441675d1"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part007.txt",
+      "chars": 6000,
+      "blob_sha": "9dca683dfd512d910ac3e2d3faf8a2ee09626d8f"
+    },
+    {
+      "filename": "geeky_s11_rot006_results.part008.txt",
+      "chars": 2917,
+      "blob_sha": "b599c4fa3747b7171c2e74d16001c5e48dd36b75"
+    }
+  ],
+  "guards": [
+    "REPO_SAVED != BW_INGEST",
+    "NOT_PHYSICAL_KJ3",
+    "NO_REFEREE_PASS",
+    "NO_EXEC"
+  ]
+}
