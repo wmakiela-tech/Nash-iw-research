@@ -54,3 +54,18 @@ Odczyt `X_sparse` wypada poza przedziałem trzech rzeczywistych `X_n(T_nuc)`; dl
 Skrypt `IW_DAX_S7_ROTATION_50_WEAK_BRANCH_SAMPLED_YN_20261024.py` zawiera deterministyczny RK4 tła, propagację liniowej dynamiki neutronów, odtworzenie 10000 węzłów `ln a` oraz sortowaną interpolację. Zależy od skryptu obrotu 49 (w tym od loadera danych) oraz oryginalnych trzech tabel z kontrolą SHA. Lokalnie wykonano `--selftest` **PASS** dla modelu stałego `g*` i `beta=0`. **Nie wykonano jeszcze tego skryptu w bieżącym kontenerze z kompletem oryginalnych CSV** (ich bajty są dostępne przez konektor GitHub, a numeryczne wiersze sprawdzono w niezależnej implementacji JavaScript uruchomionej w narzędziu konektorów). Raportowane wyniki pochodzą z niezależnej implementacji JS, a nie ze skryptu Python. Pełne Julia: `NOT_RUN`.
 
 **Końcowy werdykt:** `SOURCE-SAMPLED_XN_OFF_BRANCH_VERIFIED_IN_WEAK_ONLY_PORT / MAGNITUDE_SMALL / HADRONIC_TEST_OPEN / JULIA_TEST_OPEN / NO_CANON / NO_EXEC_SIGN / NO_PBH_BOUND`.
+
+### 6. Niezależna kontrola: czy wynik jest tylko zwykłym błędem interpolacji?
+
+Po przygotowaniu pierwszego raportu wykonano kontrolę **`beta=0`** z tą samą masą początkową, oryginalnymi tablicami, tą samą procedurą propagacji neutronów i rekonstrukcją odczytu, ale przy monotonicznym chłodzeniu bez zasilania PBH. Przy takim samym zagęszczeniu implementacji JavaScript (`n_pre=12000`, `n_evap=15000`, `n_post=12000`):
+
+| Model | Zdarzenie(a) `T=T_nuc`: `Xn` | Z 10000 próbek | Z 100000 próbek |
+|---|---|---:|---:|
+| `beta=0`, jedno przejście | `0.10903292507` | `0.10903289689` | `0.10903292474` |
+| `beta=1e-17`, trzy przejścia | `[0.10905052619, 0.10904868297, 0.10904731401]` | `0.10905216345` | `0.10904864915` |
+
+Zwykły błąd interpolacji w monotonicznym wariancie wyniósł przy 10000 próbkach `-2.8183e-8`. Wariant z ponownym ogrzewaniem różnił się względem *ostatniego* przejścia o `+4.8494e-6` (około 172 razy więcej co do wartości bezwzględnej). Jest to dowód numeryczny, że efekt nie jest po prostu tą samą skalą zwykłego błędu interpolacji w wariancie bez PBH. **Porównanie dwóch różnych trajektorii nie stanowi ścisłego rozkładu błędu na czynniki przyczynowe.**
+
+Co istotne, interpolacja przy 100000 zapisanych próbkach daje `0.10904864915`, blisko drugiego przejścia `0.10904868297`, chociaż **nadal żadna próbka nie leży między pierwszym a ostatnim przejściem**. Sama przypadkowa zgodność wartości nie dowodzi rekonstrukcji wszystkich gałęzi. Właściwym falsyfikatorem jest nadal jawne wykrywanie zdarzeń `T=T_nuc` na gęstej trajektorii i porównanie wartości przy każdym przecięciu.
+
+Osobne dane tej kontroli zapisano w `IW_DAX_S7_ROTATION_50_MONOTONIC_VS_REHEATING_SAMPLING_CONTROL_20261024.csv`. Dotychczasowy werdykt obrotu pozostaje warunkowy; tę kontrolę dodano, aby zapobiec nadinterpretacji artefaktu samplingowego.
