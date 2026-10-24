@@ -1,0 +1,49 @@
+{
+  "schema": "LT5_NASH_STAGE1_L4_REC07_POST_REVIEW_REFERENCE_KEY_V001",
+  "case_id": "L4-REC07-001",
+  "date": "2026-10-24",
+  "status": "REFERENCE_KEY_PUBLIC_NOT_BLIND_GOLD_STANDARD",
+  "must_not_be_included_in_stimulus": true,
+  "reviewed_input_sha": "76e31e82574aa194111d90a0ee139b76d09ceb81",
+  "review_output_path": "research/rec10/2026-10-21/IW_REC10_ROT07_LT5_CAUSAL_TIMING_EXACT_PREMIUM_20261021.md",
+  "review_output_commit": "f5b2dfa553ec5086bfd12b3866b47f500807dd4d",
+  "review_output_blob": "de5a386c4fb036c3ec6450533858df19637dba56",
+  "review_output_url": "https://github.com/wmakiela-tech/Nash-iw-research/blob/f5b2dfa553ec5086bfd12b3866b47f500807dd4d/research/rec10/2026-10-21/IW_REC10_ROT07_LT5_CAUSAL_TIMING_EXACT_PREMIUM_20261021.md",
+  "author_theorem": {
+    "source_value": "J_two=max(e, w+max(|c|-B0,0)-B1), e=min(w,delta/s), w=(h-ell)/2, c=(h+ell)/2",
+    "comparison": "J_late=max(e, w+|c|-B0-B1)",
+    "conditional_assumptions": "s>0, ell<=h, bounded adversarial eta, fixed u0 before b, u1 permitted after b with separate nontransferable control budgets",
+    "reviewer_verdict": "PASS_THEOREM",
+    "issue_type": "VALID_ORIGINAL_THEOREM_NOT_FALSE_ACCEPT"
+  },
+  "reviewer_increment": {
+    "formula": "J_two-J_late=min(max(B0-|c|,0),max(w-B1-e,0))",
+    "proof": "If B0<=|c| the second terms in both max coincide so gap zero. Else let q=B0-|c|>0, a=w-B1. J_two=max(e,a), J_late=max(e,a-q). Their difference is min(q,max(a-e,0)).",
+    "source_owner": "REC10",
+    "type": "EXACT_SHARPENING_VALID_PRIOR_BOUND",
+    "math_host": "classical minimax/set-membership dynamic feedback"
+  },
+  "author_own_prior_fix": {
+    "first_git_blob": "47b73fcfff0f0bc26b6485b18e1551f49adf5582",
+    "reviewed_git_blob": "76e31e82574aa194111d90a0ee139b76d09ceb81",
+    "theorem_section_stable": true,
+    "standalone_numeric_scan_updated": true,
+    "reviewer_not_credited_with_prior_numeric_fix": true
+  },
+  "independent_arithmetic_spotcheck": {
+    "deterministic_generator": "xorshift32 seed 0x4D595DF4, 100000 parameter sets; 6 explicit boundary cases",
+    "compare": "direct J_two - J_late against reviewer min-positive-parts formula",
+    "maximal_absolute_difference_observed": 0,
+    "strictly_positive_premium_cases": 10333,
+    "code_test_status": "PASS, local JavaScript execution; NOT substitute for theorem or independent blinded expert review"
+  },
+  "evaluation_codes": {
+    "original_correctness": "INTERNALLY_REVIEWED_PASS_NOT_BLINDED_EXPERT_ADJUDICATED",
+    "review_effect": "VALID_THEOREM_STRENGTHENED",
+    "material_error_detected_by_rec": "NO",
+    "original_author_numeric_fix": "SELF_CORRECTION_PRE_REVIEW",
+    "adoption": "SOURCE_REPORT_ONLY; REV021 staged integration separate, canon unchanged",
+    "external_independence": "NOT_PRESENT",
+    "leakage_risk": "PUBLIC_HISTORIC_CASE_AND_KNOWN_REFERENCE_ANSWER"
+  }
+}
