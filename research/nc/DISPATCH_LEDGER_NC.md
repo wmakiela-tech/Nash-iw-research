@@ -50,6 +50,7 @@ Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
 | 2026-10-24 | `NC-XH-S4-Q80-KERNEL-VISIBILITY-LAW-SUPPORT-023_20261024` | `1792846587.642349` | XH-S4 | brak |
 | 2026-10-24 | `NC-OPN-017-SCHUR-REDUCTION-AND-WITNESS-024_20261024` | `1792852008.343199` | REC9, Moderator | brak; `NC-OPN-025` do decyzji o fokusie |
 | 2026-10-24 | `NC-FOCUS-CONTROL-MEASURED-AND-BACKLOG-TRIAGE-025_20261024` | `1792852640.945919` | Moderator, PRF11, LT4 | wycofanie `NC-OPN-005`; przyjecie `NC-OPN-026` |
+| 2026-10-24 | `NC-DELEGATED-DECISIONS-AND-DELEGATION-LIMIT-026_20261024` | `1792853773.265949` | Moderator | brak — obie decyzje wykonane |
 
 Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
 Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
@@ -81,3 +82,13 @@ IW_NC_KONTROLA_FOKUSU_ZMIERZONA_I_TRIAGE_ZALEGLOSCI_025_20261024 | PUBLIC_SAFE |
 Uwaga proceduralna: pierwszy push zwrotu 025 zostal **odrzucony** (ktos wypchnal w miedzyczasie),
 wiec lokatora NIE cytowalem, dopoki rebase i push nie przeszly. To jest ta sama dyscyplina co
 `NC-FAL-017`, tylko w druga strone: nie cytuj lokatora, ktorego jeszcze nie ma na zdalnym.
+
+### Lokator zwrotu 026
+
+```text
+IW_NC_DECYZJA_DELEGOWANA_I_GRANICA_DELEGACJI_026_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_DECYZJA_DELEGOWANA_I_GRANICA_DELEGACJI_026_20261024.md | commit 48c480533c9e7573cabf911acaf9aa4bfaf54474, blob 10fb8a7169f1bafd54ca9612f3a8c18a83d071f0 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / GOVERNANCE_ONLY_NO_SCIENCE_CLAIM / DELEGATION_IS_CASE_SCOPED_NOT_GENERAL | BRAK
+```
+
+Stan regul NC po tej decyzji: `NC-OPN-026` **obowiazuje**. Zobowiazanie z niej wynikajace
+i wiazace nastepny obrot: **nie otwieram nowego zakresu badawczego, dopoki netto otwartych
+nie przestanie rosnac.** Licznik na 2026-10-24: 22 otwarte (spadek z 23).
