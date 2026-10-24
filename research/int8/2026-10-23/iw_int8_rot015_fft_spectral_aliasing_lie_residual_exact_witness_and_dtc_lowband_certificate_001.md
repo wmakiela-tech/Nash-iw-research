@@ -90,7 +90,7 @@ Numerical roundoff above is relative to unnormalized unit-amplitude f,g; unlike 
 
 Inspected/byte-hashed user-retained helper:
   /mnt/data/deepseek_python_20260627_a87249.py
-  SHA256=23b0ec865263c5688682425af9d4c1f9dcb9f1d582a0f2f33d99c642c176f801.
+  SHA256=23b0ec865263c5688682425af9d4c1f9cdb9f1d582a0f2f33d99c642c176f801.
 Its function `generate_smooth_fields(N,2π)` is EXACTLY
   C1^x=.05 sin x,  C1^y=.05 cos y,
   C2^x=.04 cos z,  C2^z=.04 sin x,
@@ -134,3 +134,7 @@ canonical_path: research/int8/2026-10-23/iw_int8_rot015_fft_spectral_aliasing_li
 bw_status: GITHUB_PENDING_BW_INGEST / NO_REFEREE_OR_OWNER_ACCEPTANCE_INFERRED.
 
 NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE / NO_NEW_TASK.
+
+
+## Source-custody correction (2026-10-24, INT8 ROT023)
+Earlier report text transposed two adjacent hexadecimal characters at positions 33–34 (one-based) of the retained helper SHA256, writing `...f9dcb9...` instead of the independently rehashed actual `...f9cdb9...`. This is a provenance transcription error, **not** a changed script byte or a mathematical/numeric correction. The executable reproducer code used the correct digest where checked. The original commit/blob remains an immutable historical receipt; this correction creates a new version. Direct source path: `deepseek_python_20260627_a87249.py`.
