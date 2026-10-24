@@ -16,7 +16,7 @@ Currentness via IW Slack #iw-dispatch, 2026-10-24. INT8 ROT018 (prime) and ROT01
 XH-S4 ROT020–024 owns metric York geometry and E-filter naturality concerns; M13 ROT023–028 owns historic pure-trace DTC source-family K_A and masks; Geeky-S11 owns TT rigidity/smooth leakage; PRF11 R24–25 owns commutator/stencil Sobolev errors. Our result neither replaces nor advances their physical-status claims.
 
 ## Exact operator setup
-N>=5 any ODD number, including COMPOSITE N. G=(Z/NZ)^3; full periodic Hilbert space of symmetric covariant tensor arrays with normalized Frobenius L2 (NO interior mask). Original retained source helper deepseek_python_20260627_a87249.py SHA256 23b0ec865263c5688682425af9d4c1f9dcb9f1d582a0f2f33d99c642c176f801 defines
+N>=5 any ODD number, including COMPOSITE N. G=(Z/NZ)^3; full periodic Hilbert space of symmetric covariant tensor arrays with normalized Frobenius L2 (NO interior mask). Original retained source helper deepseek_python_20260627_a87249.py SHA256 23b0ec865263c5688682425af9d4c1f9cdb9f1d582a0f2f33d99c642c176f801 defines
 E_alpha = I + alpha sum_{j=1}^3 (tau_ej + tau_-ej - 2I),
 whose exact Fourier multiplier is e(k)=1-4alpha sum_j sin^2(pi k_j/N).
 C_N = all REAL componentwise SCALAR translation-invariant convolutions T_c commuting with U_A H(x)=A^T H(Ax) A for EVERY integer A in SL(3,Z), WITHOUT changing the kernel with A.
@@ -51,3 +51,7 @@ ZIP checked CRC, SHA256 manifest 4/4 and TWO clean-directory runs (with and with
 ESSENTIAL STOP: full-band L2 norm gap ~.3 is NOT 30% of DTC historical KA/KB or any physical observable. For FIXED Fourier bandwidth K, admissible identity approximation satisfies ||E_alpha-I||_(V_K->L2) <=12|alpha|sin^2(pi K/N)=O(K^2/N^2). Also, the universal SAME KERNEL requirement differs from the GEOMETRICALLY NATURAL FAMILY E_(phi*g) U_phi = U_phi E_g; the latter is NOT excluded. Nor do we claim anything for all tensor-coupled operators, curved geometry, Lorentzian Box, J3/K, covariance of full NASH, or the byte-unavailable historic production dtc0a_runtime_v0_3_1.py. Scientific owner, independent referee and BW ingestion are PENDING. No new task cascade.
 
 NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE.
+
+
+## Source-custody correction (2026-10-24, INT8 ROT023)
+Earlier report text transposed two adjacent hexadecimal characters at positions 33–34 (one-based) of the retained helper SHA256, writing `...f9dcb9...` instead of the independently rehashed actual `...f9cdb9...`. This is a provenance transcription error, **not** a changed script byte or a mathematical/numeric correction. The executable reproducer code used the correct digest where checked. The original commit/blob remains an immutable historical receipt; this correction creates a new version. Direct source path: `deepseek_python_20260627_a87249.py`.
