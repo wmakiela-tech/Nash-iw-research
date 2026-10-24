@@ -1,0 +1,186 @@
+{
+  "N": 41,
+  "alpha_interval": [
+    "0",
+    "1/5"
+  ],
+  "certificate_type": "rigorous conditional arithmetic interval bound assuming mpmath.iv outward rounding and retained functional source",
+  "historical_RMS_45_max_rel_error": 2.886579864025407e-15,
+  "limitations": [
+    "DOES NOT certify ROT36 exact global MINIMIZER or sharpen numerical optimum",
+    "Different channels use different entirely synthetic tau; sigma values not empirical cross-channel comparisons",
+    "Only source-specific known generator and shared positive gain, no unknown channel/mask gains",
+    "Conditional on mpmath.iv outward rounding and correct source-formula reconstruction",
+    "Original historical runtime bytes absent; no physical, gauge, J3/K, TPE upgrade"
+  ],
+  "minimum_alpha_separation": "1/100",
+  "noise_model": "iid Gaussian additive voxel ENERGY noise only for reporting normalized tau; positive distances independent of Gaussianity",
+  "positive_gain_reason": "channel energies and shell energy polynomials strictly positive over interval, so unconstrained positive projection valid",
+  "results": [
+    {
+      "ROT36_numeric_distance_sigma": 1.3882665607513514,
+      "ROT36_uncertified_numerically_minimized_pair_distance": 2.1145156442952234e-11,
+      "bounds_gi": [
+        1.4915534025788445e-09,
+        1.5338357512425808e-09
+      ],
+      "bounds_gj": [
+        1.3872069492118897e-09,
+        1.4281001713451543e-09
+      ],
+      "bounds_outer_shell": [
+        1.6405604580986868e-09,
+        1.6848264837094696e-09
+      ],
+      "certified_inf_distance_sigma_alpha0p05_lower": 1.388266560752848,
+      "certified_inf_distance_sigma_alpha0p05_upper": 1.388266560752848,
+      "channel": "A",
+      "conservatism": "Bernstein extrema and pair determinant bound discard cross-component correlations; cert is NOT exact global minimum",
+      "endpoint_distance_sigma_intervals": {
+        "0.039999999999999994": [
+          1.3921083490081985,
+          1.3921083490081985
+        ],
+        "0.06": [
+          1.388266560752848,
+          1.388266560752848
+        ]
+      },
+      "exact_argmin_alpha_candidates": [
+        0.039999999999999994,
+        0.06
+      ],
+      "exact_global_argmin_alpha": 0.06,
+      "global_noise_calibration": "tau=0.01*g(channel,mask2,alpha=.05) per voxel (ENERGY, synthetic)",
+      "interval_certified_min_distance_sigma_all_alphas_lower": 1.2672419211737662,
+      "interval_certified_min_distance_sigma_alpha0p05_lower": 1.2940729635066937,
+      "interval_certified_min_separation_sigma_alpha0p05_subdivided_lower": 0.8943751597353601,
+      "interval_certified_separation_any_true_alpha_energy_metric_lower": 1.930178931903698e-11,
+      "interval_certified_separation_true_alpha0p05_energy_metric_lower": 1.971046197866667e-11,
+      "interval_partition_size_per_branch": 1000,
+      "log_RMS_derivative_abs_lower": 0.0026690468939459377,
+      "n_voxels": [
+        50653,
+        29791
+      ],
+      "numerical_ROТ36_gap_to_certified_inf": -1.496580637194711e-12,
+      "pair": [
+        2,
+        5
+      ],
+      "sign": "UP",
+      "strict_endpoint_winner_interval_certified": true
+    },
+    {
+      "ROT36_numeric_distance_sigma": 231.5219393442682,
+      "ROT36_uncertified_numerically_minimized_pair_distance": 1.4185489882813536e-13,
+      "bounds_gi": [
+        3.1865182332243036e-14,
+        6.073876727533058e-13
+      ],
+      "bounds_gj": [
+        3.3356545541269084e-14,
+        5.99921040156209e-13
+      ],
+      "bounds_outer_shell": [
+        2.4583138646238556e-14,
+        6.410980952654482e-13
+      ],
+      "certified_inf_distance_sigma_alpha0p05_lower": 231.52193934425404,
+      "certified_inf_distance_sigma_alpha0p05_upper": 231.52193934425404,
+      "channel": "B",
+      "conservatism": "Bernstein extrema and pair determinant bound discard cross-component correlations; cert is NOT exact global minimum",
+      "endpoint_distance_sigma_intervals": {
+        "0.039999999999999994": [
+          295.0011790368861,
+          295.0011790368861
+        ],
+        "0.06": [
+          231.52193934425404,
+          231.52193934425404
+        ]
+      },
+      "exact_argmin_alpha_candidates": [
+        0.039999999999999994,
+        0.06
+      ],
+      "exact_global_argmin_alpha": 0.06,
+      "global_noise_calibration": "tau=0.01*g(channel,mask2,alpha=.05) per voxel (ENERGY, synthetic)",
+      "interval_certified_min_distance_sigma_all_alphas_lower": 0.27217934057445087,
+      "interval_certified_min_distance_sigma_alpha0p05_lower": 0.5654216477983744,
+      "interval_certified_min_separation_sigma_alpha0p05_subdivided_lower": 113.60511967265312,
+      "interval_certified_separation_any_true_alpha_energy_metric_lower": 1.6676593557246047e-16,
+      "interval_certified_separation_true_alpha0p05_energy_metric_lower": 3.4643727877731994e-16,
+      "interval_partition_size_per_branch": 1000,
+      "log_RMS_derivative_abs_lower": 0.012994969471788718,
+      "n_voxels": [
+        29791,
+        24389
+      ],
+      "numerical_ROТ36_gap_to_certified_inf": 1.4154011296341196e-11,
+      "pair": [
+        5,
+        6
+      ],
+      "sign": "UP",
+      "strict_endpoint_winner_interval_certified": true
+    },
+    {
+      "ROT36_numeric_distance_sigma": 90.52169744334249,
+      "ROT36_uncertified_numerically_minimized_pair_distance": 1.618146516402713e-12,
+      "bounds_gi": [
+        9.218940066490623e-13,
+        7.13280284696985e-12
+      ],
+      "bounds_gj": [
+        7.738033271385128e-13,
+        6.259111504386215e-12
+      ],
+      "bounds_outer_shell": [
+        1.2835367594059674e-12,
+        9.266388453006005e-12
+      ],
+      "certified_inf_distance_sigma_alpha0p05_lower": 90.52169744334066,
+      "certified_inf_distance_sigma_alpha0p05_upper": 90.52169744334066,
+      "channel": "C",
+      "conservatism": "Bernstein extrema and pair determinant bound discard cross-component correlations; cert is NOT exact global minimum",
+      "endpoint_distance_sigma_intervals": {
+        "0.039999999999999994": [
+          92.78953252965296,
+          92.78953252965296
+        ],
+        "0.06": [
+          90.52169744334066,
+          90.52169744334066
+        ]
+      },
+      "exact_argmin_alpha_candidates": [
+        0.039999999999999994,
+        0.06
+      ],
+      "exact_global_argmin_alpha": 0.06,
+      "global_noise_calibration": "tau=0.01*g(channel,mask2,alpha=.05) per voxel (ENERGY, synthetic)",
+      "interval_certified_min_distance_sigma_all_alphas_lower": 2.1887231112921937,
+      "interval_certified_min_distance_sigma_alpha0p05_lower": 4.243996192847773,
+      "interval_certified_min_separation_sigma_alpha0p05_subdivided_lower": 42.00010068328193,
+      "interval_certified_separation_any_true_alpha_energy_metric_lower": 3.912514654427801e-14,
+      "interval_certified_separation_true_alpha0p05_energy_metric_lower": 7.586476887910007e-14,
+      "interval_partition_size_per_branch": 1000,
+      "log_RMS_derivative_abs_lower": 0.056593173801453164,
+      "n_voxels": [
+        50653,
+        35937
+      ],
+      "numerical_ROТ36_gap_to_certified_inf": 1.8332002582610585e-12,
+      "pair": [
+        2,
+        4
+      ],
+      "sign": "DOWN",
+      "strict_endpoint_winner_interval_certified": true
+    }
+  ],
+  "return_id": "M13-ROT37-DTC0A-INTERVAL-CERTIFIED-GLOBAL-LOWER-SEPARATION-001_20261025",
+  "source_arithmetic": "mpmath.iv 45 digits, exact rational modes and TT symbol, outward-rounded trigonometric stencil and masked sums",
+  "statement": "source-formula interval-certified lower bounds for optimally re-gained 2-mask GLS distance for ANY alpha,beta with |alpha-beta|>=.01; five-mask GLS distance >= any pair distance"
+}
