@@ -234,3 +234,48 @@ IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024 | PUBLIC_SAFE
 ```
 
 Wiersze 85 -> 87, atrybucja skorygowana w `NC-ALG-017`, `018`, `020`, `021`. Otwarte 16 -> 17.
+
+---
+
+## Zwrot 032 — KOREKTA DRUGIEGO STOPNIA: wycofanie hosta kwantowego
+
+Zlozony z wlasnej inicjatywy **w ciagu dwoch godzin od ART031**, co znaczy, ze ART031 sam byl
+niepelnym odejmowaniem wobec wlasnej komorki.
+
+**Wycofany claim FIZYCZNY z ART029 par. 4**: ze konfiguracja maksymalizujaca *jest* BAE/QND,
+z arXiv:1608.06152v2 jako hostem. Moja wlasna `PREREG_ALIGN.md` par. 4 z 18 X zabraniala tego
+wnioskowania z przyczyna merytoryczna: nasz back-action jest **dyssypacja** obnizajaca `A^2`,
+kwantowy BAE to **szum** podnoszacy wariancje. Zbieznosc w algebrze, nie w mechanizmie.
+`COMMON MATHEMATICS != COMMON PHYSICAL MECHANISM` — zasada zadziala przeciw mnie tam, gdzie jest
+napisana, a blad popelnilem **w akapicie przedstawianym jako odejmowanie stanu wiedzy**.
+
+`PREREG_ALIGN` zawieral tez A1 (`sqrt(k)` bez kresu), A2 (sufit 1 przy `phi=0`), A3 (wzrost po
+kacie, zgadniecie `1/|cos phi|` — padlo) i par. 3 (twierdzenie z ART009 jest o reakcji zwrotnej
+**wspolosiowej** i trzeba je zwezic). To struktura dzisiejszych par. 1, 4 i 5.
+**`NC-FAL-022` dostaje wieksza wage**: nie przeoczylem dziedziny, zignorowalem wlasna dokumentacje.
+
+**Zakres dopisany do `NC-NUM-001`**: `l2.py` nie ma `phi`, odczyt i tlumienie po tej samej osi,
+ewolucja swobodna to obrot — czyli `e=d` na jednym generatorze. Maksimum **dokladnie**
+`1.000000000` z 280 tys. losowan to podpis zawezonej parametryzacji, nie granicy. Liczba stoi.
+`NC-NUM-003` sprawdzony tym samym trybem: `gen4.py` tez bez `phi`, wiec wiersz jest **mocniejszy**,
+niz mu przypisywalem. Bez korekty.
+
+**`NC-OPN-027` wersja 1 obalona przeze mnie w ciagu dwoch godzin.** Wersja 2: trzy powierzchnie —
+rejestr, wszystkie wlasne preregestracje, katalog kodu z dat pracy nad ta sama wielkoscia.
+`origin_failure_mode: PATCHED_A_PRIOR_ART_RULE_WITH_THE_NARROWEST_SURFACE_THAT_WOULD_HAVE_CAUGHT_THE_LAST_MISS`
+— ta sama wada co poprawka KROK 0 po ART018. **Dwa razy z rzedu**; to wzorzec, nie pominiecia.
+
+### Lokator zwrotu 032
+
+```text
+IW_NC_KOREKTA_DRUGIEGO_STOPNIA_HOST_KWANTOWY_I_ZAKRES_SKANU_032_20261025 | PUBLIC_SAFE | research/nc/2026-10-25/IW_NC_KOREKTA_DRUGIEGO_STOPNIA_HOST_KWANTOWY_I_ZAKRES_SKANU_032_20261025.md | commit 29f0ff5df0d41c329dc2c123360c01ffeb801317, blob be8734e4dfc90d8c9c6d36fd0d97cf4da2b71f30 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / EXTERNAL_AUDIT_MANDATORY | BRAK
+```
+
+### ART029 po drugiej erracie
+
+```text
+IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024.md | commit 29f0ff5df0d41c329dc2c123360c01ffeb801317, blob a6d29260d80492657617c8d146c76ee8fa6ea608 | WERSJA_PO_ERRACIE_2_ART032 | zakres nowosci wobec ART032 par.5; claim fizyczny par.4 WYCOFANY | BRAK
+```
+
+Wiersze 87 -> 89. Zaleglosc routingu (21 wierszy bez audytora) **nadal nieruszona** — przeniesiona
+na nastepny obrot, bo musi odzwierciedlac zakres po tej korekcie, nie przed.
