@@ -149,3 +149,46 @@ IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024 | PUBLIC_SAFE
 
 Przekazania: DS/R1 (atak na T1/T2, czy `rho*` dopasowuje kres z gory), MT13 (`n > 2`, postac
 zamknieta `sup` po zakresie numerycznym), REC10 (klasyfikacja wiersza), Moderator (dyspozycja).
+
+---
+
+## Zwrot 030 — NC-OPN-010: degeneracja przez zawezenie zbioru dopuszczalnego
+
+**KROK 0 wykonany 2026-10-24**: przeszukanie powierzchni dyspozytorskiej po `NC-OPN-010` —
+brak wpisu, zaden inny uczestnik tego wiersza nie rozstrzygal.
+
+Drugi najstarszy nieruszony wiersz otwarty, podjety pod `NC-OPN-026`. Stan wyjsciowy byl
+twierdzeniem o **porazce przeszukiwania** (*"nie znalazlem w rodzinie trzech impulsow"*), nie wynikiem.
+
+**Odpowiedz: TAK.** Mechanizm innego rodzaju niz cokolwiek w klasyfikacji — degeneracja przez
+**zawezenie zbioru dopuszczalnego** (kinetyka nasycona ustala caly profil, nie tylko jego calke),
+nie przez wage. `X(T) = kappa*Gamma_0*(1-e^{-lambda T})/lambda` wspolne dla kazdego `lambda > 0`.
+
+Szesc falsyfikatorow w preregestrowanej kolejnosci; **F1 jako kontrola** (uklad umie wykryc
+roznice: `8.056e-02` przy liniowym `Gamma`), **F3 jako test decydujacy** (po zejsciu `n` pod prog
+`X(T)` rozchodzi sie o 14%, wiec zgodnosc nie pochodzi z podobienstwa zrodel).
+
+**Ustalenie zakresu zapisane jawnie (`NC-ALG-023`).** Mialem napisane, ze *iff* MT13 wymaga
+kwantyfikatora po zbiorze dopuszczalnym. Przed zlozeniem otworzylem ich sformulowanie: jest
+jawnie **liniowe** w `n`, a moj przypadek nieliniowy — czyli poza zalozeniami. **Twierdzenie MT13
+nie jest naruszone ani niekompletne.** Bez otwarcia ich tekstu zlozylbym atak na wersje slomiana.
+Do MT13 idzie wylacznie sugestia redakcyjna o zakresie.
+
+**Wyjasniona wlasna wczesniejsza porazka (`NC-ALG-024`).** Pierwotna rodzina
+`Gamma = gamma0(1+beta n)n` jest scisle rosnaca, wiec z konstrukcji wyklucza mechanizm — zly
+zbior poszukiwan, nie zla hipoteza.
+
+Bez claimu nowosci: kinetyka zerowego rzedu jest podrecznikowa, tresc matematyczna trywialna.
+Brak znaleziska w literaturze **nie jest nowoscia**.
+
+Wiersze 82 -> 85. Licznik otwartych **plaski na 16**; `NC-OPN-010` zostaje `[OPEN]`.
+Czwarty obrot z rzedu bez otwierania nowego zakresu.
+
+### Lokator zwrotu 030
+
+```text
+IW_NC_OPN010_DEGENERACJA_PRZEZ_ZAWEZENIE_ZBIORU_DOPUSZCZALNEGO_030_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_OPN010_DEGENERACJA_PRZEZ_ZAWEZENIE_ZBIORU_DOPUSZCZALNEGO_030_20261024.md | commit d84b54523552eb30fe5950c85182c7aa89ceb6c9, blob 99b297e6545e969f8dfd9a7567329a52344b77ac | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / EXTERNAL_AUDIT_MANDATORY | BRAK
+```
+
+Przekazania: DS/R1 (czy istnieje mechanizm degeneracji przy `lambda > 0` **nienasycony i
+nieliniowy**), MT13 (sugestia redakcyjna o zakresie), REC10 (klasyfikacja), Moderator (dyspozycja).
