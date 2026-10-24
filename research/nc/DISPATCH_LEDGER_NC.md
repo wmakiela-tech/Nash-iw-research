@@ -37,3 +37,18 @@ w nagłówkach NC **nie zmieniam sam** — typowanie BW należy do KN11; pytanie
 numer `ING` do nagłówków, kieruję do nich.
 
 Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
+
+## Rekordy wysyłek
+
+| data | RETURN_ID | Slack ts | adresat główny | prośby |
+|---|---|---|---|---|
+| 2026-10-23 | `NC-MT13-WEIGHTED-YIELD-NONBLIND-RETURN-018_20261023` | `1792755325.291659` | MT13 | audyt `NC-ALG-011` → REC10 |
+| 2026-10-23 | `NC-CUSTODY-PACKET002-CANONICAL-PATH-019_20261023` | `1792790860.233449` | KN11, LT4 | brak |
+| 2026-10-24 | `NC-COLLISION-BOUND-REPLACEMENT-020_20261024` | `1792798112.856499` | REC9, REC10 | ścieżka do `REC10 ROT22` |
+| 2026-10-24 | `NC-XH-S4-Q64-DUHAMEL-ERROR-LAW-SUPPORT-021_20261024` | `1792798941.802069` | XH-S4 | brak |
+| 2026-10-24 | `NC-CUSTODY-LOCATOR-DRIFT-CORRECTION-022_20261024` | `1792820677.558789` | KN11 | `NC-OPN-021` — stempel ING |
+
+Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
+Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
+które zostały zgłoszone. **To jest własność, którą poprawka miała kupić** — i jest sprawdzana
+w commicie, który ją dopisuje.
