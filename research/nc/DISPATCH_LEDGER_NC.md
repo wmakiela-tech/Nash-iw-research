@@ -279,3 +279,39 @@ IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024 | PUBLIC_SAFE
 
 Wiersze 87 -> 89. Zaleglosc routingu (21 wierszy bez audytora) **nadal nieruszona** — przeniesiona
 na nastepny obrot, bo musi odzwierciedlac zakres po tej korekcie, nie przed.
+
+---
+
+## Dyspozycja 033 — routing zaleglosci audytowej (bez osobnego artefaktu)
+
+Zaleglosc zmierzona 2026-10-24: z 36 wierszy `[▷]` **22 nie bylo w kolejce audytu** — jedenascie
+przy GPT, ktorego zadeklarowana funkcja to synteza i redakcja, **nie** falsyfikacja, i jedenascie
+bez audytora w ogole. W dziesieciu z nich w polu **nazwa audytora** staly slowa "audyt
+obowiazkowy". Zapisanie obowiazku potraktowalem jako jego wykonanie — to jest ta luka
+reguła–wykonanie, o ktorej mowia reguly projektu, w najbardziej doslownej postaci.
+
+Diagnoza, ktora podalem Moderatorowi wczesniej — ze waskim gardlem jest pojemnosc audytu — byla
+**falszywa**. U DS/R1 lezalo szesc wierszy. Waskim gardlem bylo to, ze nie kierowalem.
+
+**Przypisane 28 wierszy wedle zadeklarowanej funkcji komorki:**
+
+| komorka | funkcja | kolejka |
+|---|---|---|
+| DS/R1 | falsyfikacja, granice claimow | `NC-ALG-021`, `001`, `005`, `013`, `014`, `015`, `016`, `003`, `004` |
+| Gemini | testbed, runtime, mechanizm | `NC-NUM-001`, `002`, `003`, `004` |
+| LT4 | wlasciciel pakietu 002 monografii | `NC-ALG-006`, `007`, `008` |
+| MT13 | obszar przez nich rozstrzygniety | `NC-NUM-007`, `011`, `NC-ALG-018`, `023` |
+| REC10 | klasyfikacja | `NC-ALG-017`, `020`, `022`, `NC-NUM-008` |
+| Grok | lateralny red-team | `NC-FAL-023`, `NC-NUM-009`, `010` |
+| M13 | wlasciciel generatora | `NC-NUM-005` |
+
+**Prosze kazda komorke wylacznie o pozycje 1.** Dwadziescia osiem rownoleglych prosb byloby tym
+samym bledem w innej formie, a regula projektu mowi, ze sekwencja jest tansza i czystsza od
+wysylki rownoleglej dla precyzyjnych misji. Kolejnosc wewnatrz komorki jest moja; kazdy moze
+podniesc dowolny wiersz wyzej bez pytania mnie.
+
+**Nie oznaczam zadnego wiersza jako zwolnionego z audytu.** Gdybym sam orzekal, co nie jest
+claim-relevant, zwalnialbym wlasna prace od sprawdzenia — to byloby self-sealing w czystej
+postaci. Domyslnie kazdy wiersz jest claim-relevant.
+
+`[▷]` bez audytora funkcyjnego: **36 -> 0**. Wiersze 89, licznik otwartych bez zmian (17).
