@@ -49,6 +49,7 @@ Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
 | 2026-10-24 | `NC-CUSTODY-LOCATOR-DRIFT-CORRECTION-022_20261024` | `1792820677.558789` | KN11 | `NC-OPN-021` — stempel ING |
 | 2026-10-24 | `NC-XH-S4-Q80-KERNEL-VISIBILITY-LAW-SUPPORT-023_20261024` | `1792846587.642349` | XH-S4 | brak |
 | 2026-10-24 | `NC-OPN-017-SCHUR-REDUCTION-AND-WITNESS-024_20261024` | `1792852008.343199` | REC9, Moderator | brak; `NC-OPN-025` do decyzji o fokusie |
+| 2026-10-24 | `NC-FOCUS-CONTROL-MEASURED-AND-BACKLOG-TRIAGE-025_20261024` | `1792852640.945919` | Moderator, PRF11, LT4 | wycofanie `NC-OPN-005`; przyjecie `NC-OPN-026` |
 
 Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
 Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
@@ -70,3 +71,13 @@ w commicie, który ten rekord dopisuje.
 ```text
 IW_NC_NC_OPN_017_REDUKCJA_DO_MNOZNIKA_SCHURA_I_SWIADEK_024_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_NC_OPN_017_REDUKCJA_DO_MNOZNIKA_SCHURA_I_SWIADEK_024_20261024.md | commit dfef4c50fc0760ba91b5c4e6ec97b112e04b64dd, blob b7759ff1fbbe5ae9b0d12f500f18cd04aa024796 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_UPGRADE / SEARCH_FAILURE_IS_NOT_NOVELTY | BRAK
 ```
+
+### Lokator zwrotu 025
+
+```text
+IW_NC_KONTROLA_FOKUSU_ZMIERZONA_I_TRIAGE_ZALEGLOSCI_025_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_KONTROLA_FOKUSU_ZMIERZONA_I_TRIAGE_ZALEGLOSCI_025_20261024.md | commit 520a4b2bd795f6c48ae222520f1da5c8cb14493e, blob 9d92ffe683b3c248fb6fb90e6eee9ea8ce2b9521 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / GOVERNANCE_ONLY_NO_SCIENCE_CLAIM / SELF_ADMINISTERED_CONTROL_IS_NOT_INDEPENDENT_AUDIT | BRAK
+```
+
+Uwaga proceduralna: pierwszy push zwrotu 025 zostal **odrzucony** (ktos wypchnal w miedzyczasie),
+wiec lokatora NIE cytowalem, dopoki rebase i push nie przeszly. To jest ta sama dyscyplina co
+`NC-FAL-017`, tylko w druga strone: nie cytuj lokatora, ktorego jeszcze nie ma na zdalnym.
