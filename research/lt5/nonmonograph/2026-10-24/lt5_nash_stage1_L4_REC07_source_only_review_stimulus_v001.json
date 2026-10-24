@@ -1,0 +1,41 @@
+{
+  "schema": "LT5_NASH_STAGE1_L4_REC07_SOURCE_ONLY_PSEUDOBLIND_STIMULUS_V001",
+  "case_id": "L4-REC07-001",
+  "date": "2026-10-24",
+  "status": "METHODOLOGY_DEMONSTRATION_NOT_ACTUAL_BLIND_EXPERIMENT",
+  "data_boundary": "PUBLIC_SOURCE_ONLY_REVIEW_REPORT_WITHHELD",
+  "original_author": "LT5",
+  "review_owner": "REC10",
+  "input": {
+    "repository": "wmakiela-tech/Nash-iw-research",
+    "path": "research/lt5/2026-10-21/lt5_causal_timing_of_information_vs_actuation_two_stage_exact_minimax_001.md",
+    "commit": "33559d581171863539f94d7d4c6471c45e3dba23",
+    "blob_sha": "76e31e82574aa194111d90a0ee139b76d09ceb81",
+    "url": "https://github.com/wmakiela-tech/Nash-iw-research/blob/33559d581171863539f94d7d4c6471c45e3dba23/research/lt5/2026-10-21/lt5_causal_timing_of_information_vs_actuation_two_stage_exact_minimax_001.md",
+    "source_exact": "The committed text, not a paraphrase, is the sole scientific input artifact. Do not append contemporary GitHub/Slack/Drive review notes."
+  },
+  "reviewer_task": "Given the original author's scientific note and the stated experiment, verify the theorem, its quantifiers, proof and counterexamples; find any material issue or rigorously justified sharpening without replacing the declared model. Clearly distinguish error from valid-but-nonsharp proof. State mature prior-art host. Preserve uncertainty if validity is not independently established.",
+  "safeguards": [
+    "Only original file is a scientific input; original source may itself mention earlier author's research and prior art. That is not post-REC07 leakage.",
+    "Do not provide the REC10 reference report, the later staged LT5 manuscripts, these benchmark notes, or NASH conversation history as task context.",
+    "Do not access newer code or search the original claim's exact strings in a way that reveals the actual review result; freeze model/system version and external sources.",
+    "The current ChatGPT conversation ALREADY contains the outcome. This cannot be used as a blinded experimental subject.",
+    "Separate outcome validity from incremental review improvement: a true theorem with sharper later corollary is not a false acceptance.",
+    "Exact first-public/cross-channel disclosure before 2026-10-21 Git is not proved; source-only isolation remains CONDITIONAL."
+  ],
+  "verification_of_source": {
+    "exact_git_blob_checked": true,
+    "referee_report_quotes_source_blob": true,
+    "review_reference_sha": "76e31e82574aa194111d90a0ee139b76d09ceb81",
+    "late_reviewer_commit": "f5b2dfa553ec5086bfd12b3866b47f500807dd4d",
+    "first_git_source_commit": "d5a7a27cd9047b733cd7880ac6f4bc88b9d823f8",
+    "author_own_numeric_fix_commit": "33559d581171863539f94d7d4c6471c45e3dba23"
+  },
+  "scoring_placeholders": {
+    "blind_answer": "NOT_COLLECTED",
+    "independent_gold_truth": "NOT_ADJUDICATED",
+    "reviewer_independence": "NOT_ESTABLISHED",
+    "treatment_arm": "NOT_ASSIGNED",
+    "claim_error_rate": "NOT_COMPUTABLE"
+  }
+}
