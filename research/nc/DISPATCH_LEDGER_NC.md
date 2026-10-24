@@ -47,8 +47,19 @@ Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
 | 2026-10-24 | `NC-COLLISION-BOUND-REPLACEMENT-020_20261024` | `1792798112.856499` | REC9, REC10 | ścieżka do `REC10 ROT22` |
 | 2026-10-24 | `NC-XH-S4-Q64-DUHAMEL-ERROR-LAW-SUPPORT-021_20261024` | `1792798941.802069` | XH-S4 | brak |
 | 2026-10-24 | `NC-CUSTODY-LOCATOR-DRIFT-CORRECTION-022_20261024` | `1792820677.558789` | KN11 | `NC-OPN-021` — stempel ING |
+| 2026-10-24 | `NC-XH-S4-Q80-KERNEL-VISIBILITY-LAW-SUPPORT-023_20261024` | `1792846587.642349` | XH-S4 | brak |
 
 Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
 Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
 które zostały zgłoszone. **To jest własność, którą poprawka miała kupić** — i jest sprawdzana
 w commicie, który ją dopisuje.
+
+### Lokator zwrotu 023
+
+```text
+IW_NC_WSPARCIE_XH_S4_Q80_PRAWO_WIDOCZNOSCI_JADRA_023_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_WSPARCIE_XH_S4_Q80_PRAWO_WIDOCZNOSCI_JADRA_023_20261024.md | commit c395c4c8c4fb7766095b060d363b13b4f47bcdbd, blob 7508ea12cca5068bee57aa485783770c0bd3fa67 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_PHYSICAL_NASH_KJ3 / NO_OPERATOR_HOST_TRANSFER | BRAK
+```
+
+Pierwszy zwrot wysłany **po** poprawce z `NC-FAL-017`: rekord wysyłki trafia tutaj, ciało
+artefaktu nie jest po wysyłce ruszane, więc zgłoszony blob pozostaje aktualny. Sprawdzane
+w commicie, który ten rekord dopisuje.
