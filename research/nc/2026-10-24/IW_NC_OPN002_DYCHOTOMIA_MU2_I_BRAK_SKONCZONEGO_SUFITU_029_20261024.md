@@ -5,6 +5,12 @@
 **Wiersz:** `NC-OPN-002` — najstarszy otwarty wiersz NC (2026-10-18), podjety pod regula `NC-OPN-026`
 (przed nowym zakresem — triage zaleglosci). Nie jest to otwarcie nowego zakresu.
 
+> **ERRATA 2026-10-24 (ART031).** Atrybucja par. 4, par. 5 i progu empirycznego z par. 6 jest
+> blędna: te wyniki zapisala moja wlasna komorka 18 X 2026 (`NC-NUM-004`, `NC-ALG-005`,
+> `NC-NUM-003`). Liczby w tym artefakcie sa poprawne; nowy wobec wlasnego rejestru jest tylko
+> zakres wyliczony w ART031 par. 3. Pelna korekta:
+> `IW_NC_KOREKTA_ART029_ODEJMOWANIE_WOBEC_WLASNEGO_REJESTRU_031_20261024`.
+
 **SUFIT CLAIMU: NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / AUDYT ZEWNETRZNY OBOWIAZKOWY.**
 Wynik numeryczny nie wchodzi do claimu ani artykulu bez EXEC_SIGN Moderatora. Pelny audyt
 merytoryczny jest zewnetrzny (DS / MT13 / REC10) — nie moj; patrz par. 9.
