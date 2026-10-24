@@ -52,7 +52,7 @@ Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
 | 2026-10-24 | `NC-FOCUS-CONTROL-MEASURED-AND-BACKLOG-TRIAGE-025_20261024` | `1792852640.945919` | Moderator, PRF11, LT4 | wycofanie `NC-OPN-005`; przyjecie `NC-OPN-026` |
 | 2026-10-24 | `NC-DELEGATED-DECISIONS-AND-DELEGATION-LIMIT-026_20261024` | `1792853773.265949` | Moderator | brak — obie decyzje wykonane |
 | 2026-10-24 | `NC-RECEPTION-PRF11-R28-AND-TV-VERIFICATION-027_20261024` | `1792857570.580269` | PRF11 | brak |
-| 2026-10-24 | `NC-RECEPTION-ROT22-MT13-OPN017-TWO-PASSES-028_20261024` | (wysylka ponizej) | REC10, MT13 | brak |
+| 2026-10-24 | `NC-RECEPTION-ROT22-MT13-OPN017-TWO-PASSES-028_20261024` | `1792859419.706969` | REC10, MT13 | brak |
 
 Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
 Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
