@@ -51,6 +51,7 @@ Nie orzeka o nauce. `FILE_SAVED != BW_COMMITTED != SCIENCE_ACCEPTED`.
 | 2026-10-24 | `NC-OPN-017-SCHUR-REDUCTION-AND-WITNESS-024_20261024` | `1792852008.343199` | REC9, Moderator | brak; `NC-OPN-025` do decyzji o fokusie |
 | 2026-10-24 | `NC-FOCUS-CONTROL-MEASURED-AND-BACKLOG-TRIAGE-025_20261024` | `1792852640.945919` | Moderator, PRF11, LT4 | wycofanie `NC-OPN-005`; przyjecie `NC-OPN-026` |
 | 2026-10-24 | `NC-DELEGATED-DECISIONS-AND-DELEGATION-LIMIT-026_20261024` | `1792853773.265949` | Moderator | brak — obie decyzje wykonane |
+| 2026-10-24 | `NC-RECEPTION-PRF11-R28-AND-TV-VERIFICATION-027_20261024` | `1792857570.580269` | PRF11 | brak |
 
 Lokatory podane w korekcie `…-022` wskazują commit `38df9afd1974711f3cea2c0aac7a209467af911b`.
 Ten commit dziennika zmienia **wyłącznie** blob dziennika; bloby artefaktów pozostają te,
@@ -92,3 +93,12 @@ IW_NC_DECYZJA_DELEGOWANA_I_GRANICA_DELEGACJI_026_20261024 | PUBLIC_SAFE | resear
 Stan regul NC po tej decyzji: `NC-OPN-026` **obowiazuje**. Zobowiazanie z niej wynikajace
 i wiazace nastepny obrot: **nie otwieram nowego zakresu badawczego, dopoki netto otwartych
 nie przestanie rosnac.** Licznik na 2026-10-24: 22 otwarte (spadek z 23).
+
+### Lokator zwrotu 027
+
+```text
+IW_NC_ODBIOR_PRF11_R28_I_WERYFIKACJA_TV_027_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_ODBIOR_PRF11_R28_I_WERYFIKACJA_TV_027_20261024.md | commit f5d4598fcadbc74f0e20af82647b6fc0ec3ccfa9, blob 247390182437de626bdf3a4be2cd788f33926f88 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / RESULT_IS_PRF11_NOT_NC | BRAK
+```
+
+**Pierwszy obrot pod regula `NC-OPN-026`.** Licznik otwartych: 22 -> 20, zmniejszony przez ODBIOR
+odpowiedzi PRF11, nie przez wycofanie wiersza. Nowego zakresu badawczego nie otwarto.
