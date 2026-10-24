@@ -1,0 +1,21 @@
+{
+  "schema": "LT5_NASH_SOURCE_ONLY_CANDIDATE_FIXTURE_V002",
+  "study_case_id": "CASE_A",
+  "case_state": "HISTORICAL_METHODS_DEMONSTRATION_NOT_BLINDED_EXPERIMENT",
+  "scientific_input": {
+    "source_repository": "wmakiela-tech/Nash-iw-research",
+    "file_path": "research/lt5/2026-10-21/lt5_causal_timing_of_information_vs_actuation_two_stage_exact_minimax_001.md",
+    "pinned_commit": "33559d581171863539f94d7d4c6471c45e3dba23",
+    "blob_sha": "76e31e82574aa194111d90a0ee139b76d09ceb81",
+    "source_url": "https://github.com/wmakiela-tech/Nash-iw-research/blob/33559d581171863539f94d7d4c6471c45e3dba23/research/lt5/2026-10-21/lt5_causal_timing_of_information_vs_actuation_two_stage_exact_minimax_001.md"
+  },
+  "task": "Przeczytaj wyłącznie przypisany artykuł matematyczny w tej zamrożonej wersji. Oceń prawdziwość deklarowanych twierdzeń w ich własnej klasie założeń, sprawdź dowody, testy brzegowe i przypisanie wcześniejszej literatury. Zgłoś ewentualny błąd materialny albo możliwe ścisłe zaostrzenie twierdzenia, wyraźnie je rozróżniając. Jeśli żadnego błędu ani zaostrzenia nie znajdziesz, powiedz to wprost.",
+  "protocol_limits": [
+    "Nie przeszukuj aktualnej gałęzi repozytorium ani publicznych dyskusji pod kątem późniejszych recenzji lub rozwiązań.",
+    "Nie używaj późniejszych opracowań badania NASH jako danych wejściowych.",
+    "Zamrożona wersja tekstu autora może zawierać jego własną argumentację i testy; nie usuwaj ich z dokumentu.",
+    "Ponieważ pełny materiał istnieje publicznie i mógł być wcześniej widziany przez model, to jedynie test metodologiczny. Nie wolno nazywać go rzeczywistą recenzją zaślepioną."
+  ],
+  "blind_truth_status": "NOT_ADJUDICATED",
+  "trial_status": "NOT_RUN"
+}
