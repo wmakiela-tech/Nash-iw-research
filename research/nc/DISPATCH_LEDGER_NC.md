@@ -112,3 +112,40 @@ IW_NC_ODBIOR_ROT22_MT13_OPN017_I_DWA_PASS_028_20261024 | PUBLIC_SAFE | research/
 
 Licznik otwartych pod regula `NC-OPN-026`: 22 -> 20 -> **16**. Dwa obroty z rzedu bez
 otwierania nowego zakresu badawczego; spadek w calosci z ODBIORU cudzych odpowiedzi.
+
+---
+
+## Zwrot 029 — NC-OPN-002: dychotomia przy mu_2 = 0
+
+**KROK 0 wykonany 2026-10-24** przed wysylka: przeszukanie powierzchni dyspozytorskiej po
+`NC-OPN-002` i po `RETURN_ID` dla 029 — brak wpisu, zaden inny uczestnik nie rozstrzygal tego
+wiersza. Ostatni moj zlozony zwrot to 028. (Pominiecie tego kroku bylo przyczyna
+`FAILED_PRIOR_ART_SUBTRACTION_AGAINST_MY_OWN_CELLS_EARLIER_RETURN` w ART018.)
+
+Podjety **najstarszy otwarty wiersz** (2026-10-18) zgodnie z `NC-OPN-026`, nie nowy zakres.
+
+Rozstrzygniecie: **ciasna stala kresu nie istnieje**; pytanie bylo zle postawione, bo nie
+ustalalo ani `m`, ani relacji miedzy `e` i `d`. Prog dychotomii to dokladnie `mu_2 = 0`.
+
+Preregestrowany falsyfikator **F5 wystrzelil i sam byl zly** — oparty na tozsamosci ksiegowej
+waznej tylko przy `e = d`, z tolerancja rownosci dla kresu osiaganego tylko na brzegu dziedziny.
+Kod byl dobry. Blad wlasny: `NC-FAL-022`. Hipoteza **H-A padla** — konstrukcja, nie przeszukiwanie
+(guard po `NC-FAL-018`).
+
+Odejmowanie stanu wiedzy wykonane w zrodlach, nie z pamieci: kryterium widmowe jest instancja
+Briat & Seuret arXiv:1304.1998 Tw. 2.1(b); konfiguracja maksymalizujaca to BAE/QND
+(arXiv:1608.06152v2). Odrzucone jako host po sprawdzeniu: Hespanha-Liberzon-Teel,
+hypocoercivity arXiv:2204.13033. Przy nazwanych hostach T2 i redukcja rangi 1 sa elementarnymi
+dedukcjami z dojrzalego hosta — **nie nowym wynikiem matematycznym**.
+
+Wiersze 75 -> 82. Licznik otwartych **plaski na 16**; `NC-OPN-002` zostaje `[OPEN]`, bo `CLOSED`
+nadaje Moderator. Trzeci obrot z rzedu bez otwierania nowego zakresu.
+
+### Lokator zwrotu 029
+
+```text
+IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024.md | commit f453111188fc79408a3381dc0904d875d41341a3, blob 6c6cf15a5ff832339dc944bcc057635e2200a171 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / EXTERNAL_AUDIT_MANDATORY | BRAK
+```
+
+Przekazania: DS/R1 (atak na T1/T2, czy `rho*` dopasowuje kres z gory), MT13 (`n > 2`, postac
+zamknieta `sup` po zakresie numerycznym), REC10 (klasyfikacja wiersza), Moderator (dyspozycja).
