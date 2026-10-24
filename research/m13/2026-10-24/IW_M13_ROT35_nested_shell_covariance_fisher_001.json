@@ -1,0 +1,1660 @@
+{
+  "N": 41,
+  "covariance_S_normalized_by_tau2": [
+    [
+      1.9742167295125657e-05,
+      1.9742167295125657e-05,
+      1.9742167295125657e-05,
+      1.9742167295125657e-05,
+      1.9742167295125657e-05
+    ],
+    [
+      1.9742167295125657e-05,
+      2.3323615160349855e-05,
+      2.3323615160349855e-05,
+      2.3323615160349855e-05,
+      2.3323615160349855e-05
+    ],
+    [
+      1.9742167295125657e-05,
+      2.3323615160349855e-05,
+      2.7826474107465842e-05,
+      2.7826474107465842e-05,
+      2.7826474107465842e-05
+    ],
+    [
+      1.9742167295125657e-05,
+      2.3323615160349855e-05,
+      2.7826474107465842e-05,
+      3.3567184720217515e-05,
+      3.3567184720217515e-05
+    ],
+    [
+      1.9742167295125657e-05,
+      2.3323615160349855e-05,
+      2.7826474107465842e-05,
+      3.3567184720217515e-05,
+      4.1002091106646436e-05
+    ]
+  ],
+  "covariance_exact_algebra_relative_residual": 6.130308566183834e-16,
+  "fisher_profiles": [
+    {
+      "A_2_6_info_fraction": 0.737891669855166,
+      "C_2_4_info_fraction": 0.7912996176576363,
+      "all_pairs": [
+        {
+          "J0": 4.672297722999653e-18,
+          "info_fraction_full": 0.9110224443570365,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 4.058283552389973e-18,
+          "info_fraction_full": 0.7912996176576363,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.784373908941308e-18,
+          "info_fraction_full": 0.737891669855166,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 2.8023830024546305e-18,
+          "info_fraction_full": 0.5464193346141821,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 2.2311070809510095e-18,
+          "info_fraction_full": 0.43502977485889804,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 2.1785507305331537e-18,
+          "info_fraction_full": 0.424782137044966,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 2.0154368323972852e-18,
+          "info_fraction_full": 0.39297756657488453,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 9.923435326696237e-19,
+          "info_fraction_full": 0.19349092981047697,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 8.271273347616253e-19,
+          "info_fraction_full": 0.16127644490627266,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 1.112653701363814e-19,
+          "info_fraction_full": 0.021694946573066257,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0,
+      "channel": "A",
+      "common_gain_logderivative_proj": -0.13953439187305572,
+      "info_J0_units_of_squared_energy2": 5.128630751020822e-18,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 0.006725697398346138,
+      "top_pairs": [
+        {
+          "J0": 4.672297722999653e-18,
+          "info_fraction_full": 0.9110224443570365,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 4.058283552389973e-18,
+          "info_fraction_full": 0.7912996176576363,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.784373908941308e-18,
+          "info_fraction_full": 0.737891669855166,
+          "pair": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.7435762716746681,
+      "C_2_4_info_fraction": 0.7873436583484037,
+      "all_pairs": [
+        {
+          "J0": 4.483568259285104e-18,
+          "info_fraction_full": 0.9119174633105536,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 3.871083927820493e-18,
+          "info_fraction_full": 0.7873436583484037,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.65589552143794e-18,
+          "info_fraction_full": 0.7435762716746681,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 2.706011698165416e-18,
+          "info_fraction_full": 0.5503784443047941,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 2.1731118767584948e-18,
+          "info_fraction_full": 0.4419914129866779,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 2.0655541649943445e-18,
+          "info_fraction_full": 0.420115141677921,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 1.9334215045381877e-18,
+          "info_fraction_full": 0.3932405468071683,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 9.66274839600295e-19,
+          "info_fraction_full": 0.19653161268690322,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 8.168702187156825e-19,
+          "info_fraction_full": 0.16614405639135246,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 1.1401410375637311e-19,
+          "info_fraction_full": 0.023189443377787687,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.05,
+      "channel": "A",
+      "common_gain_logderivative_proj": -0.13936594345752532,
+      "info_J0_units_of_squared_energy2": 4.916638226236298e-18,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 0.006869164439949251,
+      "top_pairs": [
+        {
+          "J0": 4.483568259285104e-18,
+          "info_fraction_full": 0.9119174633105536,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 3.871083927820493e-18,
+          "info_fraction_full": 0.7873436583484037,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.65589552143794e-18,
+          "info_fraction_full": 0.7435762716746681,
+          "pair": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.7509524850616586,
+      "C_2_4_info_fraction": 0.7820535689380715,
+      "all_pairs": [
+        {
+          "J0": 4.25232147310544e-18,
+          "info_fraction_full": 0.9129558320025627,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 3.642611249899735e-18,
+          "info_fraction_full": 0.7820535689380715,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.497750127194126e-18,
+          "info_fraction_full": 0.7509524850616586,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 2.5873844390299526e-18,
+          "info_fraction_full": 0.5555007372290693,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 2.1012593681657476e-18,
+          "info_fraction_full": 0.4511316952045906,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 1.928172811466294e-18,
+          "info_fraction_full": 0.4139707273945517,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 1.832917539895989e-18,
+          "info_fraction_full": 0.39351981457925395,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 9.33973010118553e-19,
+          "info_fraction_full": 0.20052014221258257,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 8.039668692278149e-19,
+          "info_fraction_full": 0.17260836148927147,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 1.1747345382626656e-19,
+          "info_fraction_full": 0.025221064647742004,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.113,
+      "channel": "A",
+      "common_gain_logderivative_proj": -0.13915120981500792,
+      "info_J0_units_of_squared_energy2": 4.657751584518608e-18,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 0.007057483615889579,
+      "top_pairs": [
+        {
+          "J0": 4.25232147310544e-18,
+          "info_fraction_full": 0.9129558320025627,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 3.642611249899735e-18,
+          "info_fraction_full": 0.7820535689380715,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.497750127194126e-18,
+          "info_fraction_full": 0.7509524850616586,
+          "pair": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.7615428542037217,
+      "C_2_4_info_fraction": 0.7741359687337688,
+      "all_pairs": [
+        {
+          "J0": 3.944870682851146e-18,
+          "info_fraction_full": 0.9141939553384126,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 3.3405015092972775e-18,
+          "info_fraction_full": 0.7741359687337688,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.2861605152168914e-18,
+          "info_fraction_full": 0.7615428542037217,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 2.428668165886725e-18,
+          "info_fraction_full": 0.5628254853646497,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 2.0042734926572558e-18,
+          "info_fraction_full": 0.46447522850305073,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 1.747487602103586e-18,
+          "info_fraction_full": 0.4049670398111239,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 1.6992771266863085e-18,
+          "info_fraction_full": 0.39379462663112785,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 8.903654972168927e-19,
+          "info_fraction_full": 0.20633547232257335,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 7.861916411902601e-19,
+          "info_fraction_full": 0.18219396880058447,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 1.2223803019033927e-19,
+          "info_fraction_full": 0.02832773930924297,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.2,
+      "channel": "A",
+      "common_gain_logderivative_proj": -0.13885016855261167,
+      "info_J0_units_of_squared_energy2": 4.315135382174835e-18,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 0.007332310148621612,
+      "top_pairs": [
+        {
+          "J0": 3.944870682851146e-18,
+          "info_fraction_full": 0.9141939553384126,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 3.3405015092972775e-18,
+          "info_fraction_full": 0.7741359687337688,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 3.2861605152168914e-18,
+          "info_fraction_full": 0.7615428542037217,
+          "pair": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.4823499601023647,
+      "C_2_4_info_fraction": 0.8878921722431183,
+      "all_pairs": [
+        {
+          "J0": 3.092722499889992e-22,
+          "info_fraction_full": 0.8878921722431183,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 2.693057387147951e-22,
+          "info_fraction_full": 0.773151995866174,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 2.2531587264046056e-22,
+          "info_fraction_full": 0.6468611380643051,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 1.6801303368413443e-22,
+          "info_fraction_full": 0.4823499601023647,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 9.095269911601904e-23,
+          "info_fraction_full": 0.26111683021147025,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 8.56214953404875e-23,
+          "info_fraction_full": 0.24581143471900116,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 4.0770931251187554e-23,
+          "info_fraction_full": 0.1170495921127078,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 1.2104607889248697e-23,
+          "info_fraction_full": 0.03475121545278797,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 2.39855939910145e-24,
+          "info_fraction_full": 0.006886043333011891,
+          "pair": [
+            5,
+            6
+          ]
+        },
+        {
+          "J0": 1.5593542899429206e-24,
+          "info_fraction_full": 0.004476762683503913,
+          "pair": [
+            4,
+            6
+          ]
+        }
+      ],
+      "alpha": 0,
+      "channel": "B",
+      "common_gain_logderivative_proj": -1.319511286727573,
+      "info_J0_units_of_squared_energy2": 3.4832185670436994e-22,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 3.28293151737489e-05,
+      "top_pairs": [
+        {
+          "J0": 3.092722499889992e-22,
+          "info_fraction_full": 0.8878921722431183,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 2.693057387147951e-22,
+          "info_fraction_full": 0.773151995866174,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 2.2531587264046056e-22,
+          "info_fraction_full": 0.6468611380643051,
+          "pair": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.9636087980901326,
+      "C_2_4_info_fraction": 0.5108937066509334,
+      "all_pairs": [
+        {
+          "J0": 1.4723160547022482e-21,
+          "info_fraction_full": 0.9636087980901326,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 1.251479188480148e-21,
+          "info_fraction_full": 0.8190743779466907,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 1.1090000383817257e-21,
+          "info_fraction_full": 0.7258239089724801,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 8.828570091348577e-22,
+          "info_fraction_full": 0.5778166846315721,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 7.806041290193286e-22,
+          "info_fraction_full": 0.5108937066509334,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 6.787980827154582e-22,
+          "info_fraction_full": 0.44426317470511395,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 4.388418874491806e-22,
+          "info_fraction_full": 0.2872154401671787,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 4.270298259077409e-22,
+          "info_fraction_full": 0.27948462286843284,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 3.331532281087525e-22,
+          "info_fraction_full": 0.21804379616212613,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 2.5791767140579696e-22,
+          "info_fraction_full": 0.16880325155444104,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.05,
+      "channel": "B",
+      "common_gain_logderivative_proj": 22.850697144894603,
+      "info_J0_units_of_squared_energy2": 1.5279188583794282e-21,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 1.5674801185674125e-05,
+      "top_pairs": [
+        {
+          "J0": 1.4723160547022482e-21,
+          "info_fraction_full": 0.9636087980901326,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 1.251479188480148e-21,
+          "info_fraction_full": 0.8190743779466907,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 1.1090000383817257e-21,
+          "info_fraction_full": 0.7258239089724801,
+          "pair": [
+            3,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.8605581789477696,
+      "C_2_4_info_fraction": 0.6860135593359687,
+      "all_pairs": [
+        {
+          "J0": 1.0948072685268387e-21,
+          "info_fraction_full": 0.8851039100423135,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 1.0644460369146915e-21,
+          "info_fraction_full": 0.8605581789477696,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 8.485474107024128e-22,
+          "info_fraction_full": 0.6860135593359687,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 6.807058647010509e-22,
+          "info_fraction_full": 0.5503209923389947,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 6.572087066919791e-22,
+          "info_fraction_full": 0.5313245652722506,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 4.524255313788783e-22,
+          "info_fraction_full": 0.3657663027440888,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 3.92237436522783e-22,
+          "info_fraction_full": 0.3171068540661394,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 3.4854190813671504e-22,
+          "info_fraction_full": 0.2817809258067167,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 2.7656912926723944e-22,
+          "info_fraction_full": 0.22359407427101008,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 1.0690735994424396e-22,
+          "info_fraction_full": 0.08642993613503916,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.113,
+      "channel": "B",
+      "common_gain_logderivative_proj": 15.545135741483572,
+      "info_J0_units_of_squared_energy2": 1.2369251294737814e-21,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 1.7421296823208273e-05,
+      "top_pairs": [
+        {
+          "J0": 1.0948072685268387e-21,
+          "info_fraction_full": 0.8851039100423135,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 1.0644460369146915e-21,
+          "info_fraction_full": 0.8605581789477696,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 8.485474107024128e-22,
+          "info_fraction_full": 0.6860135593359687,
+          "pair": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.7587403263528069,
+      "C_2_4_info_fraction": 0.7770063542908879,
+      "all_pairs": [
+        {
+          "J0": 7.035932299760467e-22,
+          "info_fraction_full": 0.8853637502052254,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 6.174822612747758e-22,
+          "info_fraction_full": 0.7770063542908879,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 6.02966359090156e-22,
+          "info_fraction_full": 0.7587403263528069,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 3.7911642117540077e-22,
+          "info_fraction_full": 0.47705964485710545,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 3.667520681973016e-22,
+          "info_fraction_full": 0.46150101032913576,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 3.3836326645752695e-22,
+          "info_fraction_full": 0.4257780742613524,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 2.5999562030356223e-22,
+          "info_fraction_full": 0.32716445756127066,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 1.4471732082669014e-22,
+          "info_fraction_full": 0.18210446665487837,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 1.388085763043946e-22,
+          "info_fraction_full": 0.17466922142171676,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 3.353452720057571e-23,
+          "info_fraction_full": 0.04219803929135537,
+          "pair": [
+            5,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.2,
+      "channel": "B",
+      "common_gain_logderivative_proj": 9.541603283706307,
+      "info_J0_units_of_squared_energy2": 7.946939659693039e-22,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 2.1734628878279437e-05,
+      "top_pairs": [
+        {
+          "J0": 7.035932299760467e-22,
+          "info_fraction_full": 0.8853637502052254,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 6.174822612747758e-22,
+          "info_fraction_full": 0.7770063542908879,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 6.02966359090156e-22,
+          "info_fraction_full": 0.7587403263528069,
+          "pair": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.4042687444953046,
+      "C_2_4_info_fraction": 0.8750890008019322,
+      "all_pairs": [
+        {
+          "J0": 1.1985845902740108e-21,
+          "info_fraction_full": 0.8750890008019322,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 1.0277962453883846e-21,
+          "info_fraction_full": 0.7503960894401974,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 9.39677523348846e-22,
+          "info_fraction_full": 0.6860604346626782,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 5.537154358441841e-22,
+          "info_fraction_full": 0.4042687444953046,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 3.97097868057917e-22,
+          "info_fraction_full": 0.28992194576766445,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 3.2125863213196544e-22,
+          "info_fraction_full": 0.23455156830198148,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 1.3053668562456938e-22,
+          "info_fraction_full": 0.09530509462422318,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 4.0064665206892974e-23,
+          "info_fraction_full": 0.029251292005471836,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 2.0011712078673523e-23,
+          "info_fraction_full": 0.014610590916456643,
+          "pair": [
+            5,
+            6
+          ]
+        },
+        {
+          "J0": 9.872466971093957e-25,
+          "info_fraction_full": 0.0007207907833363387,
+          "pair": [
+            4,
+            6
+          ]
+        }
+      ],
+      "alpha": 0,
+      "channel": "C",
+      "common_gain_logderivative_proj": 13.66927063383626,
+      "info_J0_units_of_squared_energy2": 1.3696716438849386e-21,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 0.0004830108884363287,
+      "top_pairs": [
+        {
+          "J0": 1.1985845902740108e-21,
+          "info_fraction_full": 0.8750890008019322,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 1.0277962453883846e-21,
+          "info_fraction_full": 0.7503960894401974,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 9.39677523348846e-22,
+          "info_fraction_full": 0.6860604346626782,
+          "pair": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.08772102922690517,
+      "C_2_4_info_fraction": 0.682799336910998,
+      "all_pairs": [
+        {
+          "J0": 3.3026232048993655e-20,
+          "info_fraction_full": 0.8339051648196164,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 2.7041791195284795e-20,
+          "info_fraction_full": 0.682799336910998,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 1.3163565613041411e-20,
+          "info_fraction_full": 0.3323771641849049,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 4.700400322258712e-21,
+          "info_fraction_full": 0.11868408420423383,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 4.2429160754141864e-21,
+          "info_fraction_full": 0.10713270662954358,
+          "pair": [
+            5,
+            6
+          ]
+        },
+        {
+          "J0": 3.7910430203473635e-21,
+          "info_fraction_full": 0.09572301042490117,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 3.474130139787539e-21,
+          "info_fraction_full": 0.08772102922690517,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 1.0104479051608926e-21,
+          "info_fraction_full": 0.025513589489858435,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 3.320945195461293e-22,
+          "info_fraction_full": 0.008385314275239726,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 2.920496824990671e-22,
+          "info_fraction_full": 0.007374190863148198,
+          "pair": [
+            3,
+            6
+          ]
+        }
+      ],
+      "alpha": 0.05,
+      "channel": "C",
+      "common_gain_logderivative_proj": 12.162095900706168,
+      "info_J0_units_of_squared_energy2": 3.9604302074490234e-20,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 8.982432685410628e-05,
+      "top_pairs": [
+        {
+          "J0": 3.3026232048993655e-20,
+          "info_fraction_full": 0.8339051648196164,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 2.7041791195284795e-20,
+          "info_fraction_full": 0.682799336910998,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 1.3163565613041411e-20,
+          "info_fraction_full": 0.3323771641849049,
+          "pair": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.0691820705042428,
+      "C_2_4_info_fraction": 0.6550327006157247,
+      "all_pairs": [
+        {
+          "J0": 6.350950615845882e-20,
+          "info_fraction_full": 0.8271404850660323,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 5.0294725122087577e-20,
+          "info_fraction_full": 0.6550327006157247,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 2.3084184158545648e-20,
+          "info_fraction_full": 0.300645752694299,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 8.705826191665693e-21,
+          "info_fraction_full": 0.11338367647054738,
+          "pair": [
+            5,
+            6
+          ]
+        },
+        {
+          "J0": 8.33760618622103e-21,
+          "info_fraction_full": 0.10858802157827657,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 7.857818873573623e-21,
+          "info_fraction_full": 0.1023393269415785,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 5.311938191966725e-21,
+          "info_fraction_full": 0.0691820705042428,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 1.2593710950412022e-21,
+          "info_fraction_full": 0.016401903926500296,
+          "pair": [
+            3,
+            5
+          ]
+        },
+        {
+          "J0": 1.0622976387194566e-21,
+          "info_fraction_full": 0.013835241955473502,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 9.52880632549221e-22,
+          "info_fraction_full": 0.012410207483747137,
+          "pair": [
+            4,
+            5
+          ]
+        }
+      ],
+      "alpha": 0.113,
+      "channel": "C",
+      "common_gain_logderivative_proj": 9.399527794041578,
+      "info_J0_units_of_squared_energy2": 7.678200656976513e-20,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 6.451124519277522e-05,
+      "top_pairs": [
+        {
+          "J0": 6.350950615845882e-20,
+          "info_fraction_full": 0.8271404850660323,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 5.0294725122087577e-20,
+          "info_fraction_full": 0.6550327006157247,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 2.3084184158545648e-20,
+          "info_fraction_full": 0.300645752694299,
+          "pair": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "A_2_6_info_fraction": 0.06150007180643439,
+      "C_2_4_info_fraction": 0.6419293495430183,
+      "all_pairs": [
+        {
+          "J0": 7.978533936252082e-20,
+          "info_fraction_full": 0.8230534428748948,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 6.222749135360454e-20,
+          "info_fraction_full": 0.6419293495430183,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 2.7758166555769405e-20,
+          "info_fraction_full": 0.2863490302123462,
+          "pair": [
+            2,
+            5
+          ]
+        },
+        {
+          "J0": 1.1098165524473638e-20,
+          "info_fraction_full": 0.11448698993444865,
+          "pair": [
+            5,
+            6
+          ]
+        },
+        {
+          "J0": 1.0906010959253818e-20,
+          "info_fraction_full": 0.11250475262453762,
+          "pair": [
+            4,
+            6
+          ]
+        },
+        {
+          "J0": 9.146210724987087e-21,
+          "info_fraction_full": 0.09435092069052607,
+          "pair": [
+            3,
+            4
+          ]
+        },
+        {
+          "J0": 5.961707763175723e-21,
+          "info_fraction_full": 0.06150007180643439,
+          "pair": [
+            2,
+            6
+          ]
+        },
+        {
+          "J0": 1.6509245588217175e-21,
+          "info_fraction_full": 0.01703068700241974,
+          "pair": [
+            3,
+            6
+          ]
+        },
+        {
+          "J0": 1.3719995019595655e-21,
+          "info_fraction_full": 0.014153338479636986,
+          "pair": [
+            4,
+            5
+          ]
+        },
+        {
+          "J0": 1.2492248428874172e-21,
+          "info_fraction_full": 0.012886813743958649,
+          "pair": [
+            3,
+            5
+          ]
+        }
+      ],
+      "alpha": 0.2,
+      "channel": "C",
+      "common_gain_logderivative_proj": 6.846888687392953,
+      "info_J0_units_of_squared_energy2": 9.693822442906456e-20,
+      "sigma_alpha_Cramer_Rao_per_voxel_1pct_reference_energy": 5.7413975957643776e-05,
+      "top_pairs": [
+        {
+          "J0": 7.978533936252082e-20,
+          "info_fraction_full": 0.8230534428748948,
+          "pair": [
+            2,
+            3
+          ]
+        },
+        {
+          "J0": 6.222749135360454e-20,
+          "info_fraction_full": 0.6419293495430183,
+          "pair": [
+            2,
+            4
+          ]
+        },
+        {
+          "J0": 2.7758166555769405e-20,
+          "info_fraction_full": 0.2863490302123462,
+          "pair": [
+            2,
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "incorrect_diagonal_covariance_control": [
+    {
+      "channel": "A",
+      "naive_diagonal_information_fraction_of_correct": 0.4336007392939928
+    },
+    {
+      "channel": "B",
+      "naive_diagonal_information_fraction_of_correct": 0.4182455357087355
+    },
+    {
+      "channel": "C",
+      "naive_diagonal_information_fraction_of_correct": 0.19266368103686116
+    }
+  ],
+  "independent_shell_counts": [
+    7778,
+    6938,
+    6146,
+    5402,
+    24389
+  ],
+  "limitations": [
+    "Classical nested-sample Gaussian/quasi-Gaussian Fisher conditional on error model; does not infer actual voxel independence",
+    "No independent gains for masks; one common positive source amplitude; original helper functional replacement only",
+    "Fisher local CRLB is not a global error guarantee; parameter folding may occur for individual mask pairs",
+    "Comparisons between distinct channels require unknown cross-channel covariance, not assumed"
+  ],
+  "linearized_gaussian_monte_carlo": [
+    {
+      "channel": "A",
+      "n": 20000,
+      "ratio": 1.0002581712065446,
+      "sigma_Fisher": 0.006869164439948898,
+      "sigma_empirical": 0.006870937860420313
+    },
+    {
+      "channel": "B",
+      "n": 20000,
+      "ratio": 1.001519439466498,
+      "sigma_Fisher": 1.5674801185674193e-05,
+      "sigma_empirical": 1.5698618097225215e-05
+    },
+    {
+      "channel": "C",
+      "n": 20000,
+      "ratio": 0.9960584734857867,
+      "sigma_Fisher": 8.982432685410135e-05,
+      "sigma_empirical": 8.947028188818454e-05
+    }
+  ],
+  "masks": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "max_historical_relative_error_45_values": 1.4432899320127035e-14,
+  "monte_carlo_max_pairwise_relative_covariance_error": 0.020690424287729704,
+  "monte_carlo_shots": 30000,
+  "noise_host": "iid per voxel additive errors in squared Frobenius RMS energy; same variance tau², NOT observed experimental noise; units arbitrarily normalized; independent across voxels and one channel only",
+  "return_id": "M13-ROT35-NESTED-SHELL-COVARIANCE-AND-CONDITIONAL-FISHER-001_20261024",
+  "sample_counts": [
+    50653,
+    42875,
+    35937,
+    29791,
+    24389
+  ],
+  "shell_energy_at_alpha005": [
+    {
+      "channel": "A",
+      "mean_energy": 1.8025001235856779e-09,
+      "relative_alpha_sensitivity_dlog_energy": -0.13160350408159413,
+      "shell": "2→3",
+      "voxels": 7778
+    },
+    {
+      "channel": "A",
+      "mean_energy": 1.6597180074032118e-09,
+      "relative_alpha_sensitivity_dlog_energy": -0.1325767502560771,
+      "shell": "3→4",
+      "voxels": 6938
+    },
+    {
+      "channel": "A",
+      "mean_energy": 1.5262748360226948e-09,
+      "relative_alpha_sensitivity_dlog_energy": -0.13637406048362347,
+      "shell": "4→5",
+      "voxels": 6146
+    },
+    {
+      "channel": "A",
+      "mean_energy": 1.4062992208539453e-09,
+      "relative_alpha_sensitivity_dlog_energy": -0.14256302271380916,
+      "shell": "5→6",
+      "voxels": 5402
+    },
+    {
+      "channel": "A",
+      "mean_energy": 1.420271864491124e-09,
+      "relative_alpha_sensitivity_dlog_energy": -0.14616712822926367,
+      "shell": "k6_core",
+      "voxels": 24389
+    },
+    {
+      "channel": "B",
+      "mean_energy": 4.6783423182120896e-14,
+      "relative_alpha_sensitivity_dlog_energy": 27.3252487719187,
+      "shell": "2→3",
+      "voxels": 7778
+    },
+    {
+      "channel": "B",
+      "mean_energy": 5.073968622101213e-14,
+      "relative_alpha_sensitivity_dlog_energy": 27.18606893395385,
+      "shell": "3→4",
+      "voxels": 6938
+    },
+    {
+      "channel": "B",
+      "mean_energy": 5.687521119852806e-14,
+      "relative_alpha_sensitivity_dlog_energy": 26.3154291837831,
+      "shell": "4→5",
+      "voxels": 6146
+    },
+    {
+      "channel": "B",
+      "mean_energy": 6.442978765044354e-14,
+      "relative_alpha_sensitivity_dlog_energy": 24.363080777124242,
+      "shell": "5→6",
+      "voxels": 5402
+    },
+    {
+      "channel": "B",
+      "mean_energy": 6.929443250541857e-14,
+      "relative_alpha_sensitivity_dlog_energy": 20.66121171340899,
+      "shell": "k6_core",
+      "voxels": 24389
+    },
+    {
+      "channel": "C",
+      "mean_energy": 2.760506738599395e-12,
+      "relative_alpha_sensitivity_dlog_energy": 11.5798581264117,
+      "shell": "2→3",
+      "voxels": 7778
+    },
+    {
+      "channel": "C",
+      "mean_energy": 2.0752618699355997e-12,
+      "relative_alpha_sensitivity_dlog_energy": 12.13795038627119,
+      "shell": "3→4",
+      "voxels": 6938
+    },
+    {
+      "channel": "C",
+      "mean_energy": 1.5622905627492343e-12,
+      "relative_alpha_sensitivity_dlog_energy": 12.735829183285126,
+      "shell": "4→5",
+      "voxels": 6146
+    },
+    {
+      "channel": "C",
+      "mean_energy": 1.2277321797600741e-12,
+      "relative_alpha_sensitivity_dlog_energy": 13.227194905910585,
+      "shell": "5→6",
+      "voxels": 5402
+    },
+    {
+      "channel": "C",
+      "mean_energy": 1.5762345688346954e-12,
+      "relative_alpha_sensitivity_dlog_energy": 12.458365349753073,
+      "shell": "k6_core",
+      "voxels": 24389
+    }
+  ],
+  "shell_unmixing_B": [
+    [
+      6.5123425044998715,
+      -5.5123425044998715,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.179734793888729,
+      -5.179734793888729,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.847217702570778,
+      -4.847217702570778,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      5.514809329877823,
+      -4.514809329877823
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ]
+}
