@@ -1,0 +1,1485 @@
+{
+  "return_id": "M13-ROT34-DTC0A-ONE-CHANNEL-FIVE-MASK-SOURCE-INTERVAL-IDENTIFIABILITY-001_20261024",
+  "source_family": "retained helper matching historic RMS, fixed N41, five nested masks 2..6, alpha 0..0.2, channel amplitudes common ONLY across masks, polynomial source operator",
+  "arithmetic": "mpmath.iv outward rounded 45 decimal digits; generated directly from modal operator, all Bernstein coefficients intervals",
+  "source_model_and_target_limits": "not full historical runtime; no physics; no arbitrary TT tensors; assumption all mask reads use same gain",
+  "rows": [
+    {
+      "channel": "A",
+      "k1": 2,
+      "k2": 3,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.0018893139998235817,
+          0.0018893139998235817
+        ],
+        [
+          0.0018533317915228088,
+          0.0018533317915228088
+        ],
+        [
+          0.0018177422036021872,
+          0.0018177422036021872
+        ],
+        [
+          0.0017825418376120454,
+          0.0017825418376120454
+        ],
+        [
+          0.001747727319498633,
+          0.001747727319498633
+        ],
+        [
+          0.0017132952994653348,
+          0.0017132952994653348
+        ],
+        [
+          0.0016792424518343918,
+          0.0016792424518343918
+        ],
+        [
+          0.0016455654749091308,
+          0.0016455654749091308
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0170162624753005,
+      "RMS_ratio_at_alpha_point2": 1.0172009288868882,
+      "total_log_ratio_shift": 0.00018156017251163073,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0008697338014612459,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0009453236533202919,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 11.497866724027476
+    },
+    {
+      "channel": "A",
+      "k1": 2,
+      "k2": 4,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.003974902122709369,
+          0.003974902122709369
+        ],
+        [
+          0.0039059285619357648,
+          0.0039059285619357648
+        ],
+        [
+          0.0038376865126704732,
+          0.0038376865126704732
+        ],
+        [
+          0.00377016976876327,
+          0.00377016976876327
+        ],
+        [
+          0.0037033721676626584,
+          0.0037033721676626584
+        ],
+        [
+          0.0036372875901754947,
+          0.0036372875901754947
+        ],
+        [
+          0.003571909960227441,
+          0.003571909960227441
+        ],
+        [
+          0.003507233244624242,
+          0.003507233244624242
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0296831044976225,
+      "RMS_ratio_at_alpha_point2": 1.0300790289630646,
+      "total_log_ratio_shift": 0.00038443708026923706,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0018544415423853045,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0019888639979879657,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 5.392503945808081
+    },
+    {
+      "channel": "A",
+      "k1": 2,
+      "k2": 5,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.0056468728670631685,
+          0.0056468728670631685
+        ],
+        [
+          0.005558379329117069,
+          0.005558379329117069
+        ],
+        [
+          0.00547079166412824,
+          0.00547079166412824
+        ],
+        [
+          0.005384102386865467,
+          0.005384102386865467
+        ],
+        [
+          0.005298304063134044,
+          0.005298304063134044
+        ],
+        [
+          0.005213389309507113,
+          0.005213389309507113
+        ],
+        [
+          0.00512935079305782,
+          0.00512935079305782
+        ],
+        [
+          0.005046181231092316,
+          0.005046181231092316
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0363586879197333,
+      "RMS_ratio_at_alpha_point2": 1.036928415194518,
+      "total_log_ratio_shift": 0.0005495884176092441,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0026690468939459377,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0028254555108788394,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 3.7466870129804972
+    },
+    {
+      "channel": "A",
+      "k1": 2,
+      "k2": 6,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.00628260322834584,
+          0.00628260322834584
+        ],
+        [
+          0.006195950501832156,
+          0.006195950501832156
+        ],
+        [
+          0.006110139835495652,
+          0.006110139835495652
+        ],
+        [
+          0.006025164556975857,
+          0.006025164556975857
+        ],
+        [
+          0.005941018037139364,
+          0.005941018037139364
+        ],
+        [
+          0.005857693689871451,
+          0.005857693689871451
+        ],
+        [
+          0.005775184971868219,
+          0.005775184971868219
+        ],
+        [
+          0.005693485382429213,
+          0.005693485382429213
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0354172638326566,
+      "RMS_ratio_at_alpha_point2": 1.0360549392131073,
+      "total_log_ratio_shift": 0.0006156736254108057,
+      "rigorous_lower_abs_dlogR_dalpha": 0.003011839185796589,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0031435529991352897,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 3.320258060836106
+    },
+    {
+      "channel": "A",
+      "k1": 3,
+      "k2": 4,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.0020855881228857877,
+          0.0020855881228857877
+        ],
+        [
+          0.002052596770412956,
+          0.002052596770412956
+        ],
+        [
+          0.002019943885300214,
+          0.002019943885300214
+        ],
+        [
+          0.001987626669382462,
+          0.001987626669382462
+        ],
+        [
+          0.0019556423435633055,
+          0.0019556423435633055
+        ],
+        [
+          0.0019239881477148644,
+          0.0019239881477148644
+        ],
+        [
+          0.0018926613405778883,
+          0.0018926613405778883
+        ],
+        [
+          0.0018616591996621855,
+          0.0018616591996621855
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.012454906071504,
+      "RMS_ratio_at_alpha_point2": 1.012660330629337,
+      "total_log_ratio_shift": 0.00020287690775779355,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0009847077431637847,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0010435403446676737,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 10.155382045086531
+    },
+    {
+      "channel": "A",
+      "k1": 3,
+      "k2": 5,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.003757558867239587,
+          0.003757558867239587
+        ],
+        [
+          0.0037050475375942607,
+          0.0037050475375942607
+        ],
+        [
+          0.0036530482606968663,
+          0.0036530482606968663
+        ],
+        [
+          0.00360155697676392,
+          0.00360155697676392
+        ],
+        [
+          0.0035505696522728416,
+          0.0035505696522728416
+        ],
+        [
+          0.003500082279836028,
+          0.003500082279836028
+        ],
+        [
+          0.0034500908780752213,
+          0.0034500908780752213
+        ],
+        [
+          0.0034005914914961794,
+          0.0034005914914961794
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0190187966093633,
+      "RMS_ratio_at_alpha_point2": 1.0193938933276607,
+      "total_log_ratio_shift": 0.00036802824509773096,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0017993130988281736,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0018801318575585473,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 5.557722744916305
+    },
+    {
+      "channel": "A",
+      "k1": 3,
+      "k2": 6,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.004393289228522258,
+          0.004393289228522258
+        ],
+        [
+          0.004342618710309346,
+          0.004342618710309346
+        ],
+        [
+          0.004292395553635841,
+          0.004292395553635841
+        ],
+        [
+          0.004242616531355034,
+          0.004242616531355034
+        ],
+        [
+          0.004193278434493695,
+          0.004193278434493695
+        ],
+        [
+          0.004144378072189333,
+          0.004144378072189333
+        ],
+        [
+          0.004095912271627402,
+          0.004095912271627402
+        ],
+        [
+          0.004047877877978467,
+          0.004047877877978467
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0180931240102005,
+      "RMS_ratio_at_alpha_point2": 1.018535187877631,
+      "total_log_ratio_shift": 0.000434113452899085,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0021421053953244967,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0021982293458149976,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 4.668343283393074
+    },
+    {
+      "channel": "A",
+      "k1": 4,
+      "k2": 5,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.0016719707443537994,
+          0.0016719707443537994
+        ],
+        [
+          0.0016524507671813046,
+          0.0016524507671813046
+        ],
+        [
+          0.0016331038937318658,
+          0.0016331038937318658
+        ],
+        [
+          0.0016139288732253195,
+          0.0016139288732253195
+        ],
+        [
+          0.0015949244619212794,
+          0.0015949244619212794
+        ],
+        [
+          0.0015760894230949858,
+          0.0015760894230949858
+        ],
+        [
+          0.0015574225270131353,
+          0.0015574225270131353
+        ],
+        [
+          0.0015389225509096886,
+          0.0015389225509096886
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.006483143593356,
+      "RMS_ratio_at_alpha_point2": 1.006649379357182,
+      "total_log_ratio_shift": 0.0001651513373398361,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0008146053582128772,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0008365915128908735,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 12.27598521635295
+    },
+    {
+      "channel": "A",
+      "k1": 4,
+      "k2": 6,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.002307701105636471,
+          0.002307701105636471
+        ],
+        [
+          0.002290021939896391,
+          0.002290021939896391
+        ],
+        [
+          0.0022724503595782115,
+          0.0022724503595782115
+        ],
+        [
+          0.002254985965149442,
+          0.002254985965149442
+        ],
+        [
+          0.002237628355768207,
+          0.002237628355768207
+        ],
+        [
+          0.0022203771293250137,
+          0.0022203771293250137
+        ],
+        [
+          0.0022032318824841256,
+          0.0022032318824841256
+        ],
+        [
+          0.0021861922107245507,
+          0.0021861922107245507
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0055688583312552,
+      "RMS_ratio_at_alpha_point2": 1.005801409486084,
+      "total_log_ratio_shift": 0.00023123654514147854,
+      "rigorous_lower_abs_dlogR_dalpha": 0.001153077089317107,
+      "rigorous_upper_abs_dlogR_dalpha": 0.0011590829233586565,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 8.67251932002706
+    },
+    {
+      "channel": "A",
+      "k1": 5,
+      "k2": 6,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.0006357303612826717,
+          0.0006357303612826717
+        ],
+        [
+          0.0006375711727150863,
+          0.0006375711727150863
+        ],
+        [
+          0.0006393459496055123,
+          0.0006393459496055123
+        ],
+        [
+          0.0006410555548178598,
+          0.0006410555548178598
+        ],
+        [
+          0.0006427008427035134,
+          0.0006427008427035134
+        ],
+        [
+          0.0006442826591689486,
+          0.0006442826591689486
+        ],
+        [
+          0.0006458018417429695,
+          0.0006458018417429695
+        ],
+        [
+          0.0006472592196435652,
+          0.0006472592196435652
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9990916039996092,
+      "RMS_ratio_at_alpha_point2": 0.9991576313575642,
+      "total_log_ratio_shift": 6.608520780161773e-05,
+      "rigorous_lower_abs_dlogR_dalpha": 0.00031786518064133584,
+      "rigorous_upper_abs_dlogR_dalpha": 0.00034305018726362395,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 31.460140788011643
+    },
+    {
+      "channel": "B",
+      "k1": 2,
+      "k2": 3,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -1.0142569585904795,
+          -1.0142569585904795
+        ],
+        [
+          0.45601700136599405,
+          0.45601700136599405
+        ],
+        [
+          2.886768019058359,
+          2.886768019058359
+        ],
+        [
+          6.256125831660267,
+          6.256125831660267
+        ],
+        [
+          10.542528956965848,
+          10.542528956965848
+        ],
+        [
+          15.72472147040762,
+          15.72472147040762
+        ],
+        [
+          21.781749804764118,
+          21.781749804764118
+        ],
+        [
+          28.692959572557264,
+          28.692959572557264
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9763563458040189,
+      "RMS_ratio_at_alpha_point2": 0.994510974335624,
+      "total_log_ratio_shift": 0.018423505078426272,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 2,
+      "k2": 4,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -1.6971712933484653,
+          -1.6971712933484653
+        ],
+        [
+          1.613543486934716,
+          1.613543486934716
+        ],
+        [
+          6.4693971724827755,
+          6.4693971724827755
+        ],
+        [
+          12.835040442431868,
+          12.835040442431868
+        ],
+        [
+          20.67562383369205,
+          20.67562383369205
+        ],
+        [
+          29.956792519551453,
+          29.956792519551453
+        ],
+        [
+          40.64468112505573,
+          40.64468112505573
+        ],
+        [
+          52.70590857916292,
+          52.70590857916292
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9477418125473037,
+      "RMS_ratio_at_alpha_point2": 0.9917168595848341,
+      "total_log_ratio_shift": 0.045355527210655736,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 2,
+      "k2": 5,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -1.9614380265773232,
+          -1.9614380265773232
+        ],
+        [
+          3.3425297758838273,
+          3.3425297758838273
+        ],
+        [
+          10.324430904164457,
+          10.324430904164457
+        ],
+        [
+          18.945577650819782,
+          18.945577650819782
+        ],
+        [
+          29.167830757412272,
+          29.167830757412272
+        ],
+        [
+          40.953593678370375,
+          40.953593678370375
+        ],
+        [
+          54.2658068852782,
+          54.2658068852782
+        ],
+        [
+          69.06794221159622,
+          69.06794221159622
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9183694077028183,
+      "RMS_ratio_at_alpha_point2": 0.993611136342725,
+      "total_log_ratio_shift": 0.07874620460842413,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 2,
+      "k2": 6,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -1.8345707804078366,
+          -1.8345707804078366
+        ],
+        [
+          5.094005634263752,
+          5.094005634263752
+        ],
+        [
+          13.448446184297989,
+          13.448446184297989
+        ],
+        [
+          23.195449443153564,
+          23.195449443153564
+        ],
+        [
+          34.30218802272043,
+          34.30218802272043
+        ],
+        [
+          46.73630360536672,
+          46.73630360536672
+        ],
+        [
+          60.465902011044314,
+          60.465902011044314
+        ],
+        [
+          75.45954829945309,
+          75.45954829945309
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.8959735125471474,
+      "RMS_ratio_at_alpha_point2": 0.9997752707062536,
+      "total_log_ratio_shift": 0.10961967378435435,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 3,
+      "k2": 4,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.6829143347579856,
+          -0.6829143347579856
+        ],
+        [
+          1.157526485568722,
+          1.157526485568722
+        ],
+        [
+          3.6113827782782386,
+          3.6113827782782386
+        ],
+        [
+          6.664528483160781,
+          6.664528483160781
+        ],
+        [
+          10.30303771626952,
+          10.30303771626952
+        ],
+        [
+          14.513182676717756,
+          14.513182676717756
+        ],
+        [
+          19.28143156822822,
+          19.28143156822822
+        ],
+        [
+          24.594446535434546,
+          24.594446535434546
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9706925310828483,
+      "RMS_ratio_at_alpha_point2": 0.9971904636319809,
+      "total_log_ratio_shift": 0.026932022132229304,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 3,
+      "k2": 5,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.9471810679868435,
+          -0.9471810679868435
+        ],
+        [
+          2.886512774517833,
+          2.886512774517833
+        ],
+        [
+          7.520854051680798,
+          7.520854051680798
+        ],
+        [
+          12.937153385666068,
+          12.937153385666068
+        ],
+        [
+          19.116987392941255,
+          19.116987392941255
+        ],
+        [
+          26.042195896870755,
+          26.042195896870755
+        ],
+        [
+          33.69487915997861,
+          33.69487915997861
+        ],
+        [
+          42.05739513588107,
+          42.05739513588107
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9406088377973832,
+      "RMS_ratio_at_alpha_point2": 0.9990951955120454,
+      "total_log_ratio_shift": 0.06032269952999791,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 3,
+      "k2": 6,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.8203138218173569,
+          -0.8203138218173569
+        ],
+        [
+          4.637988632897758,
+          4.637988632897758
+        ],
+        [
+          10.706012671758826,
+          10.706012671758826
+        ],
+        [
+          17.369079375690347,
+          17.369079375690347
+        ],
+        [
+          24.612720758207416,
+          24.612720758207416
+        ],
+        [
+          32.42267754463217,
+          32.42267754463217
+        ],
+        [
+          40.784896967025084,
+          40.784896967025084
+        ],
+        [
+          49.68553057483093,
+          49.68553057483093
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9176705988522285,
+      "RMS_ratio_at_alpha_point2": 1.0052933517140386,
+      "total_log_ratio_shift": 0.09119616870592795,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 4,
+      "k2": 5,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.2642667332288579,
+          -0.2642667332288579
+        ],
+        [
+          1.7289862889491112,
+          1.7289862889491112
+        ],
+        [
+          3.9386330660144337,
+          3.9386330660144337
+        ],
+        [
+          6.359454093746574,
+          6.359454093746574
+        ],
+        [
+          8.986304914240206,
+          8.986304914240206
+        ],
+        [
+          11.814115325566588,
+          11.814115325566588
+        ],
+        [
+          14.837888597028481,
+          14.837888597028481
+        ],
+        [
+          18.05270069000859,
+          18.05270069000859
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.969008009928844,
+      "RMS_ratio_at_alpha_point2": 1.001910098370904,
+      "total_log_ratio_shift": 0.03339067739776845,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 4,
+      "k2": 6,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.13739948705937127,
+          -0.13739948705937127
+        ],
+        [
+          3.4804621473290362,
+          3.4804621473290362
+        ],
+        [
+          7.168557025034547,
+          7.168557025034547
+        ],
+        [
+          10.924668809457788,
+          10.924668809457788
+        ],
+        [
+          14.746615314631926,
+          14.746615314631926
+        ],
+        [
+          18.632248133934112,
+          18.632248133934112
+        ],
+        [
+          22.57945227147325,
+          22.57945227147325
+        ],
+        [
+          26.58614577615409,
+          26.58614577615409
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9453772121111598,
+      "RMS_ratio_at_alpha_point2": 1.0081257175811178,
+      "total_log_ratio_shift": 0.06426414657369847,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "B",
+      "k1": 5,
+      "k2": 6,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.12686724616948666,
+          0.12686724616948666
+        ],
+        [
+          1.7514758583799248,
+          1.7514758583799248
+        ],
+        [
+          3.252664243439014,
+          3.252664243439014
+        ],
+        [
+          4.6329238764946306,
+          4.6329238764946306
+        ],
+        [
+          5.89471253319471,
+          5.89471253319471
+        ],
+        [
+          7.040454633771794,
+          7.040454633771794
+        ],
+        [
+          8.072541584737504,
+          8.072541584737504
+        ],
+        [
+          8.993332118186938,
+          8.993332118186938
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9756134133303817,
+      "RMS_ratio_at_alpha_point2": 1.0062037694003887,
+      "total_log_ratio_shift": 0.030873469175929917,
+      "rigorous_lower_abs_dlogR_dalpha": 0.012994969471788718,
+      "rigorous_upper_abs_dlogR_dalpha": 0.5043319784303241,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 0.7695349616859621
+    },
+    {
+      "channel": "C",
+      "k1": 2,
+      "k2": 3,
+      "bernstein_sign": "DOWN",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "NEG",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.07600592819298932,
+          -0.07600592819298932
+        ],
+        [
+          -0.4082327115979097,
+          -0.4082327115979097
+        ],
+        [
+          -0.8745085883637705,
+          -0.8745085883637705
+        ],
+        [
+          -1.4717587979735491,
+          -1.4717587979735491
+        ],
+        [
+          -2.196952095834542,
+          -2.196952095834542
+        ],
+        [
+          -3.0471002985277913,
+          -3.0471002985277913
+        ],
+        [
+          -4.019257832261221,
+          -4.019257832261221
+        ],
+        [
+          -5.110521284526498,
+          -5.110521284526498
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0583036985885557,
+      "RMS_ratio_at_alpha_point2": 1.0420389648211752,
+      "total_log_ratio_shift": -0.015488005056660996,
+      "rigorous_lower_abs_dlogR_dalpha": 0.03547340603097778,
+      "rigorous_upper_abs_dlogR_dalpha": 0.11812689324364684,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 0.2819036696349493
+    },
+    {
+      "channel": "C",
+      "k1": 2,
+      "k2": 4,
+      "bernstein_sign": "DOWN",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "NEG",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.13115803115473634,
+          -0.13115803115473634
+        ],
+        [
+          -0.6048848818893781,
+          -0.6048848818893781
+        ],
+        [
+          -1.2653378044857324,
+          -1.2653378044857324
+        ],
+        [
+          -2.1082318203072274,
+          -2.1082318203072274
+        ],
+        [
+          -3.1293426033335683,
+          -3.1293426033335683
+        ],
+        [
+          -4.324505846281803,
+          -4.324505846281803
+        ],
+        [
+          -5.6896166311932586,
+          -5.6896166311932586
+        ],
+        [
+          -7.220628804486338,
+          -7.220628804486338
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0915036678200984,
+      "RMS_ratio_at_alpha_point2": 1.0675144584640592,
+      "total_log_ratio_shift": -0.02222324709290328,
+      "rigorous_lower_abs_dlogR_dalpha": 0.056593173801453164,
+      "rigorous_upper_abs_dlogR_dalpha": 0.17132494380561059,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 0.17670122848502273
+    },
+    {
+      "channel": "C",
+      "k1": 2,
+      "k2": 5,
+      "bernstein_sign": "DOWN",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "NEG",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.15085359559288328,
+          -0.15085359559288328
+        ],
+        [
+          -0.5707618883764725,
+          -0.5707618883764725
+        ],
+        [
+          -1.1494757285970043,
+          -1.1494757285970043
+        ],
+        [
+          -1.8833478460608999,
+          -1.8833478460608999
+        ],
+        [
+          -2.76878261049433,
+          -2.76878261049433
+        ],
+        [
+          -3.8022354917837777,
+          -3.8022354917837777
+        ],
+        [
+          -4.980212524019671,
+          -4.980212524019671
+        ],
+        [
+          -6.299269773343091,
+          -6.299269773343091
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0941592806962699,
+      "RMS_ratio_at_alpha_point2": 1.0723034101185,
+      "total_log_ratio_shift": -0.020177233758632267,
+      "rigorous_lower_abs_dlogR_dalpha": 0.04958616159819134,
+      "rigorous_upper_abs_dlogR_dalpha": 0.15768889309182885,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 0.20167084953290543
+    },
+    {
+      "channel": "C",
+      "k1": 2,
+      "k2": 6,
+      "bernstein_sign": "DOWN",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "NEG",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.13564210689710537,
+          -0.13564210689710537
+        ],
+        [
+          -0.37438101357283143,
+          -0.37438101357283143
+        ],
+        [
+          -0.6937396194193199,
+          -0.6937396194193199
+        ],
+        [
+          -1.0918618176940684,
+          -1.0918618176940684
+        ],
+        [
+          -1.5669178022014958,
+          -1.5669178022014958
+        ],
+        [
+          -2.1171037922819442,
+          -2.1171037922819442
+        ],
+        [
+          -2.7406417597388235,
+          -2.7406417597388235
+        ],
+        [
+          -3.4357791577039034,
+          -3.4357791577039034
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0696394106503413,
+      "RMS_ratio_at_alpha_point2": 1.0566682998393224,
+      "total_log_ratio_shift": -0.01220074747540521,
+      "rigorous_lower_abs_dlogR_dalpha": 0.027498141697906018,
+      "rigorous_upper_abs_dlogR_dalpha": 0.10000860934126485,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 0.3636639684398995
+    },
+    {
+      "channel": "C",
+      "k1": 3,
+      "k2": 4,
+      "bernstein_sign": "DOWN",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "NEG",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.055152102961747024,
+          -0.055152102961747024
+        ],
+        [
+          -0.19665217029146836,
+          -0.19665217029146836
+        ],
+        [
+          -0.3905769440616874,
+          -0.3905769440616874
+        ],
+        [
+          -0.635721882674401,
+          -0.635721882674401
+        ],
+        [
+          -0.930899501391851,
+          -0.930899501391851
+        ],
+        [
+          -1.2749391940398043,
+          -1.2749391940398043
+        ],
+        [
+          -1.6666870559671394,
+          -1.6666870559671394
+        ],
+        [
+          -2.1050057082617353,
+          -2.1050057082617353
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.0313709280954237,
+      "RMS_ratio_at_alpha_point2": 1.0244477361240094,
+      "total_log_ratio_shift": -0.006735242036242157,
+      "rigorous_lower_abs_dlogR_dalpha": 0.016000677484553152,
+      "rigorous_upper_abs_dlogR_dalpha": 0.053574065609323915,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 0.6249787450710841
+    },
+    {
+      "channel": "C",
+      "k1": 3,
+      "k2": 5,
+      "bernstein_sign": "DOWN",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "NEG",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.07484766739989396,
+          -0.07484766739989396
+        ],
+        [
+          -0.1625291767785628,
+          -0.1625291767785628
+        ],
+        [
+          -0.27436040405723583,
+          -0.27436040405723583
+        ],
+        [
+          -0.4097824920858077,
+          -0.4097824920858077
+        ],
+        [
+          -0.5682445157074139,
+          -0.5682445157074139
+        ],
+        [
+          -0.7492033987497326,
+          -0.7492033987497326
+        ],
+        [
+          -0.9521238316015774,
+          -0.9521238316015774
+        ],
+        [
+          -1.1764781893747809,
+          -1.1764781893747809
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.03388023887239,
+      "RMS_ratio_at_alpha_point2": 1.0290434871622278,
+      "total_log_ratio_shift": -0.004689228701971033,
+      "rigorous_lower_abs_dlogR_dalpha": 0.008993665884666033,
+      "rigorous_upper_abs_dlogR_dalpha": 0.04370184616537763,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 1.1119029173224082
+    },
+    {
+      "channel": "C",
+      "k1": 3,
+      "k2": 6,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.05963617870411604,
+          -0.05963617870411604
+        ],
+        [
+          0.033851698025078224,
+          0.033851698025078224
+        ],
+        [
+          0.18166624790015137,
+          0.18166624790015137
+        ],
+        [
+          0.3825686269466888,
+          0.3825686269466888
+        ],
+        [
+          0.6353374905123778,
+          0.6353374905123778
+        ],
+        [
+          0.9387688105694654,
+          0.9387688105694654
+        ],
+        [
+          1.2916756943035859,
+          1.2916756943035859
+        ],
+        [
+          1.6928882039889595,
+          1.6928882039889595
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.010711208962894,
+      "RMS_ratio_at_alpha_point2": 1.0140391439399368,
+      "total_log_ratio_shift": 0.0032872575812556938,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "C",
+      "k1": 4,
+      "k2": 5,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.019695564438146934,
+          -0.019695564438146934
+        ],
+        [
+          0.03412299351290556,
+          0.03412299351290556
+        ],
+        [
+          0.116408377682567,
+          0.116408377682567
+        ],
+        [
+          0.22651058697086196,
+          0.22651058697086196
+        ],
+        [
+          0.3637888058520186,
+          0.3637888058520186
+        ],
+        [
+          0.5276113084540361,
+          0.5276113084540361
+        ],
+        [
+          0.7173553633137137,
+          0.7173553633137137
+        ],
+        [
+          0.9324071388071397,
+          0.9324071388071397
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 1.002432985755765,
+      "RMS_ratio_at_alpha_point2": 1.0044860766207617,
+      "total_log_ratio_shift": 0.00204601333427082,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "C",
+      "k1": 4,
+      "k2": 6,
+      "bernstein_sign": "UNDECIDED",
+      "endpoint_derivative_sign0": "NEG",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": true,
+      "normalized_Bernstein_bounds": [
+        [
+          -0.0044840757423690175,
+          -0.0044840757423690175
+        ],
+        [
+          0.2305038683165466,
+          0.2305038683165466
+        ],
+        [
+          0.5726963445053376,
+          0.5726963445053376
+        ],
+        [
+          1.0196397706005025,
+          1.0196397706005025
+        ],
+        [
+          1.5689152639614028,
+          1.5689152639614028
+        ],
+        [
+          2.218138279042139,
+          2.218138279042139
+        ],
+        [
+          2.964958247456609,
+          2.964958247456609
+        ],
+        [
+          3.807058220596745,
+          3.807058220596745
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9799686819070216,
+      "RMS_ratio_at_alpha_point2": 0.989839801663818,
+      "total_log_ratio_shift": 0.010022499617497935,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0,
+      "rigorous_upper_abs_dlogR_dalpha": null,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": null
+    },
+    {
+      "channel": "C",
+      "k1": 5,
+      "k2": 6,
+      "bernstein_sign": "UP",
+      "endpoint_derivative_sign0": "POS",
+      "endpoint_derivative_sign_point2": "POS",
+      "strict_fold_witness": false,
+      "normalized_Bernstein_bounds": [
+        [
+          0.015211488695777915,
+          0.015211488695777915
+        ],
+        [
+          0.19638087480364103,
+          0.19638087480364103
+        ],
+        [
+          0.4564341966129106,
+          0.4564341966129106
+        ],
+        [
+          0.7935645825978123,
+          0.7935645825978123
+        ],
+        [
+          1.2059907215157744,
+          1.2059907215157744
+        ],
+        [
+          1.6919565953576772,
+          1.6919565953576772
+        ],
+        [
+          2.249731214179211,
+          2.249731214179211
+        ],
+        [
+          2.8776083528133425,
+          2.8776083528133425
+        ]
+      ],
+      "RMS_ratio_at_alpha0": 0.9775902188296339,
+      "RMS_ratio_at_alpha_point2": 0.9854191359165315,
+      "total_log_ratio_shift": 0.007976486283226893,
+      "rigorous_lower_abs_dlogR_dalpha": 0.0070956369923233405,
+      "rigorous_upper_abs_dlogR_dalpha": 0.06039227276554573,
+      "worst_case_alpha_error_bound_for_0point5_percent_per_mask": 1.4093284852934436
+    }
+  ],
+  "n_pair_channel_certificates": 30,
+  "n_monotone_up": 12,
+  "n_monotone_down": 6,
+  "n_endpoint_certified_fold": 12,
+  "n_unresolved": 0,
+  "max_relative_frozen_RMS_error_45_samples": 2.886579864025407e-15,
+  "best_C_pair_by_certified_min_slope": null
+}
