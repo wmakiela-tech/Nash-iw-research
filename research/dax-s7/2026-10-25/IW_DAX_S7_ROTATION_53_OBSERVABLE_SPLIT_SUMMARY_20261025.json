@@ -1,0 +1,65 @@
+{
+  "rotation": 53,
+  "date": "2026-10-25",
+  "lineage": "DAX-S7",
+  "status": "SOURCE_TABLE_QUASI_STATIONARY_PORT_NOT_JULIA_NO_CANON",
+  "mass_initial_g": 9672500000,
+  "source_beta_range": [
+    1e-20,
+    1e-17
+  ],
+  "observation": {
+    "mean": 0.245,
+    "sigma": 0.003
+  },
+  "three_sigma_beta_ranges": {
+    "code": [
+      1e-20,
+      6.660702396780746e-20
+    ],
+    "mass_approx": [
+      1.663630759782517e-19,
+      3.3361058117996536e-19
+    ]
+  },
+  "one_sigma_beta_ranges": {
+    "code": [
+      1e-20,
+      2.345843032325925e-20
+    ],
+    "mass_approx": [
+      2.20162636513207e-19,
+      2.75559316375297e-19
+    ]
+  },
+  "central_fit_beta": {
+    "code": 1.7920322213818424e-21,
+    "mass_approx": 2.4741493086858607e-19
+  },
+  "three_sigma_disjoint": true,
+  "min_gap_factor": 2.4976806659108264,
+  "central_fit_factor": 138.06388518941,
+  "baseline_beta_zero": {
+    "Xn": 0.1090330203538812,
+    "Yp_code": 0.24475210158111085,
+    "Yp_mass": 0.2180660407077624,
+    "chi2_code": 0.0068281806764151675,
+    "chi2_mass": 80.60424035065691
+  },
+  "source_row_counts": {
+    "low_g": 1000,
+    "high_gs": 89,
+    "high_ratio": 82,
+    "emission": 100
+  },
+  "limit": [
+    "quasi-stationary source-table port not original Julia",
+    "mass off published grid",
+    "no full nuclear network",
+    "sub-table emissions extrapolated at Tn",
+    "beta central code root outside source grid",
+    "not certified PBH bounds",
+    "NO_EXEC_SIGN",
+    "NO_CANON"
+  ]
+}
