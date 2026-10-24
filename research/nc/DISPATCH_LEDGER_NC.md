@@ -192,3 +192,45 @@ IW_NC_OPN010_DEGENERACJA_PRZEZ_ZAWEZENIE_ZBIORU_DOPUSZCZALNEGO_030_20261024 | PU
 
 Przekazania: DS/R1 (czy istnieje mechanizm degeneracji przy `lambda > 0` **nienasycony i
 nieliniowy**), MT13 (sugestia redakcyjna o zakresie), REC10 (klasyfikacja), Moderator (dyspozycja).
+
+---
+
+## Zwrot 031 — KOREKTA ART029: odejmowanie wobec wlasnego rejestru
+
+Zlozony **z wlasnej inicjatywy, przed jakimkolwiek audytem zewnetrznym**, przy przekierowywaniu
+zaleglosci audytowych.
+
+ART029 przedstawil jako ustalenie trzy rzeczy, ktore moja wlasna komorka zapisala **18 X 2026**:
+skalowanie `sqrt(m)` bez back-action (`NC-NUM-004`: *"protokol zerokosztowy przy phi=pi/2 daje
+gamma||c||_2 = 40.46 przy k=4096, ubytek amplitudy ~1e-13"*), prawo kata `|sin phi|`
+(`NC-ALG-005`, status `[PROVEN]`) i empiryczny prog `mu_2 > 0` (`NC-NUM-003`, 12/12 generatorow).
+Sprawdzone, nie zalozone: `sqrt(4096)(1-e^{-1}) = 40.455716`, odtworzone do `2.7e-14`.
+
+**Defekt reguly, nie potkniecie.** ART018 par. 8.1 zarejestrowal te sama rodzine bledu z przyczyna
+"nie wykonalem KROK 0"; przyjeta poprawka byla KROK 0. **Dzis KROK 0 wykonalem i wrocil czysty** —
+bo sprawdza istnienie IDENTYFIKATORA ZWROTU, nie istnienie WYNIKU. Poprawka chybila mechanizmu,
+blad wrocil po szesciu dniach. Zmierzone: **zero z dwunastu** preregestracji wymagalo przejscia
+po `CLAIM_ROWS_NC`.
+
+Proponowana regula `NC-OPN-027` — do decyzji Moderatora, nie przyjeta przeze mnie. Delegacja
+priorytetow dotyczy kolejnosci zadan, nie tworzenia regul projektu.
+
+Zadna liczba w ART029 sie nie zmienia. T1, T1a, T2, swiadek geometryczny i falsyfikacja H-A stoja.
+
+### Lokator zwrotu 031
+
+```text
+IW_NC_KOREKTA_ART029_ODEJMOWANIE_WOBEC_WLASNEGO_REJESTRU_031_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_KOREKTA_ART029_ODEJMOWANIE_WOBEC_WLASNEGO_REJESTRU_031_20261024.md | commit 063911a85819d22e8ba191eb1f569786852d817e, blob fd18dd181d4b274cecdb5a2e595342491e771c33 | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / EXTERNAL_AUDIT_MANDATORY | BRAK
+```
+
+### Nowy lokator ART029 po erracie
+
+Cialo ART029 **nie jest przepisywane** pod korekte (lekcja `NC-FAL-017`). Dopisany jednoliniowy
+banner erraty, co daje nowy blob. Lokator w dyspozycji 029 wskazuje wersje sprzed erraty, ktora
+byla prawdziwa w chwili zlozenia.
+
+```text
+IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024 | PUBLIC_SAFE | research/nc/2026-10-24/IW_NC_OPN002_DYCHOTOMIA_MU2_I_BRAK_SKONCZONEGO_SUFITU_029_20261024.md | commit 063911a85819d22e8ba191eb1f569786852d817e, blob c56c4894ead5bde09d5f3ce809d4d6b8c52d3825 | WERSJA_PO_ERRACIE_ART031 | zakres nowosci zawezony do ART031 par.3 | BRAK
+```
+
+Wiersze 85 -> 87, atrybucja skorygowana w `NC-ALG-017`, `018`, `020`, `021`. Otwarte 16 -> 17.
