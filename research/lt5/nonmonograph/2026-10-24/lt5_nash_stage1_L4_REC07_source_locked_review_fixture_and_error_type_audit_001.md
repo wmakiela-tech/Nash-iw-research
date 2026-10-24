@@ -53,10 +53,12 @@ Public dispatch searches also show an LT5 rotation-4 report on 2026-10-21 ~23:11
 
 ## 2. Frozen reviewer-only *candidate* stimulus (does NOT contain answer)
 
-Machine-readable input:
-  lt5_nash_stage1_L4_REC07_source_only_review_stimulus_v001.json
+Machine-readable **current neutral candidate**:
+  lt5_nash_stage1_CASE_A_source_only_candidate_v002.json
 
-Its scientific evidence consists of an EXACT immutable GitHub source URL and the verified blob SHA 76e31e82574aa194111d90a0ee139b76d09ceb81. The input contains no REC10 content or reviewer-derived premium formula. Task: check the source theorem and quantifiers, independently derive an improvement or explain none, maintain the causality and port budgets, separate a theorem defect from a valid sharpening, and subtract mature prior art.
+Self-audit correction: the previously written v001 file named lt5_nash_stage1_L4_REC07_source_only_review_stimulus_v001.json did NOT contain the review's mathematical formula but DID reveal reviewer identity and even its commit in metadata. It must be classified CUE_LEAKING_INVALID_STIMULUS; its existence is preserved for the methods audit and it is superseded, NOT silently deleted. The neutral v002 removes the reviewer name, the reference-report commit SHA and all post-review result text from its own payload. It provides only the original author's exact immutable GitHub source URL and the verified blob SHA 76e31e82574aa194111d90a0ee139b76d09ceb81. It asks an evaluator to check the theorem, its quantifiers and independently derive an improvement or explain none, while preserving the original causality contract.
+
+The original author's repository and Git path remain identifiable, and the entire reference key is publicly accessible in a separate artifact. Thus the v002 variant is an input/answer-separation **demonstrator**, not a valid sealed blind task. Any truly blind future trial requires additional corpus and access isolation unavailable in this turn.
 
 The source-only instruction must be delivered only to an *isolated* future reviewer with no earlier solution context. It is **not self-contained anonymized experimental evidence**, because the author name/repo and public discussion may reveal the answer to any model with browsing or learned provenance. The stimulus **does not establish blind review**; it is a scientifically truthful rehearsal fixture.
 
@@ -128,8 +130,8 @@ External mature hosts: set-membership dynamic programming, bounded minimax outpu
 
 ## 7. Custody and next source-gated work
 
-This report, the input-only manifest, the separately labeled reference key and the code test are public-safe research views under research/lt5/nonmonograph/2026-10-24. KN11/BW remains existing knowledge custody; these are not competing BW registers. The parent LT monograph REV020 and staged REV021 were not changed.
+This report, the corrected neutral v002 source-only input, the separately labeled reference key, the superseded cue-leaking v001 audit artifact and the code test are public-safe research views under research/lt5/nonmonograph/2026-10-24. KN11/BW remains existing knowledge custody; these are not competing BW registers. The parent LT monograph REV020 and staged REV021 were not changed.
 
 Next high-information comparison: INT8's single-file first-vs-second Git version, where a concrete numerical-witness value was actually corrected, with no evidence it was an independent reviewer correction. Contrast that with the REC10 *valid theorem sharpening*. The pair forms a **predefined candidate taxonomy**, not an already randomized sample.
 
-**Disposition:** VERIFIED_REVIEWED_SOURCE_SHA / TWO_SEPARATED_REFERENCE_CARRIERS / 100K_ARITHMETIC_PASS / HISTORICAL_SOURCE_CONTAMINATION_HOLD / NO_STAGE2_TRIAL / NO_CAUSAL_CLAIM / NO_CANON / NO_EXEC / NO_NOVELTY.
+**Disposition:** VERIFIED_REVIEWED_SOURCE_SHA / INITIAL_METADATA_LEAK_CAUGHT_AND_SUPERSEDED_BY_V002 / TWO_SEPARATED_REFERENCE_CARRIERS / 100K_ARITHMETIC_PASS / HISTORICAL_SOURCE_CONTAMINATION_HOLD / NO_STAGE2_TRIAL / NO_CAUSAL_CLAIM / NO_CANON / NO_EXEC / NO_NOVELTY.
