@@ -1,0 +1,58 @@
+[
+  {
+    "channel": "A",
+    "mask1": 2,
+    "mask2": 6,
+    "alpha_true": 0.05,
+    "alpha_alternative": 0.1,
+    "alternative_common_amplitude_best_relative_Linf": 1.0035802000663179,
+    "minimax_relative_mismatch": 7.73626741782944e-05,
+    "residuals_relative": [
+      7.736267417834952e-05,
+      -7.736267417834952e-05
+    ],
+    "alternative_indistinguishable_under_point5_percent_each": true
+  },
+  {
+    "channel": "B",
+    "mask1": 5,
+    "mask2": 6,
+    "alpha_true": 0.05,
+    "alpha_alternative": 0.1,
+    "alternative_common_amplitude_best_relative_Linf": 0.6241223860224688,
+    "minimax_relative_mismatch": 0.00445394910222339,
+    "residuals_relative": [
+      0.004453949102223298,
+      -0.004453949102223409
+    ],
+    "alternative_indistinguishable_under_point5_percent_each": true
+  },
+  {
+    "channel": "C",
+    "mask1": 2,
+    "mask2": 4,
+    "alpha_true": 0.05,
+    "alpha_alternative": 0.1,
+    "alternative_common_amplitude_best_relative_Linf": 0.7548259621343443,
+    "minimax_relative_mismatch": 0.0034669413343286467,
+    "residuals_relative": [
+      -0.003466941334328566,
+      0.003466941334328677
+    ],
+    "alternative_indistinguishable_under_point5_percent_each": true
+  },
+  {
+    "channel": "C",
+    "mask1": 2,
+    "mask2": 3,
+    "alpha_true": 0.05,
+    "alpha_alternative": 0.1,
+    "alternative_common_amplitude_best_relative_Linf": 0.7556094505222793,
+    "minimax_relative_mismatch": 0.002432567692157641,
+    "residuals_relative": [
+      -0.0024325676921577166,
+      0.0024325676921574946
+    ],
+    "alternative_indistinguishable_under_point5_percent_each": true
+  }
+]
