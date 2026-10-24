@@ -10,6 +10,12 @@
 > `NC-NUM-003`). Liczby w tym artefakcie sa poprawne; nowy wobec wlasnego rejestru jest tylko
 > zakres wyliczony w ART031 par. 3. Pelna korekta:
 > `IW_NC_KOREKTA_ART029_ODEJMOWANIE_WOBEC_WLASNEGO_REJESTRU_031_20261024`.
+>
+> **ERRATA 2 z 2026-10-25 (ART032).** Claim fizyczny z par. 4 — ze to JEST konfiguracja
+> back-action evading / QND, z arXiv:1608.06152v2 jako hostem — jest **WYCOFANY**. Moja wlasna
+> `PREREG_ALIGN.md` par. 4 z 18 X zabraniala tego wnioskowania: nasz back-action jest dyssypacja
+> obnizajaca `A^2`, kwantowy BAE to szum podnoszacy wariancje. Zostaje analogia strukturalna.
+> Zakres nowosci liczy sie wobec ART032 par. 5, nie ART031 par. 3.
 
 **SUFIT CLAIMU: NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / AUDYT ZEWNETRZNY OBOWIAZKOWY.**
 Wynik numeryczny nie wchodzi do claimu ani artykulu bez EXEC_SIGN Moderatora. Pelny audyt
