@@ -1,0 +1,2999 @@
+{
+  "B_pair2_6_fold_control": {
+    "B_full5_projective_distance": 1.6741727946781903e-13,
+    "B_masks2_6_projective_distance": 9.862457898345732e-28,
+    "channel": "B",
+    "five_mask_divided_by_voxel_sigma": 273.24240151263245,
+    "fold_alternative_alpha": 0.015151964071294542,
+    "full5_conditional_sep_positive": true,
+    "optimal_common_gain_B_2_6": 0.9109103178137407,
+    "optimal_common_gain_B_full5": 0.909283707411852,
+    "source_conditional_noiseless_2mask_nonmap": true,
+    "true_alpha": 0.0
+  },
+  "domain_alpha": [
+    0.0,
+    0.2
+  ],
+  "five_dimensional_95pct_Gaussian_norm_threshold": 3.327235743604043,
+  "formula": "d= min_{t>=0} ||U[g(alpha_true)-t*g(beta)]||_W; U=B shells and W=diag(voxel counts), or pair selector U with W=Cov(mask pair)^-1 * tau^2",
+  "global_continuous_minimization_status": "bounded optimization plus 4097 point per branch test; not a rigorous interval global optimality certificate",
+  "limitations": [
+    "Source quartic generated numerically from retained helper not the unavailable byte-exact production file",
+    "All global minimum values numerical, with dense checks, not certified interval minima",
+    "One channel at a time; five nested mask readings with shared common positive gain",
+    "Gaussian iid per-voxel additive ENERGY noise wholly synthetic, no experimental tau or channel cross-covariance",
+    "Distances in noise whitened shell geometry; 95 percent radius interpretation assumes isotropic normal shell measurement noise",
+    "A local Fisher optimum need not optimize nonlocal parameter separation; B2/6 has noiseless fold",
+    "No general tensor TT/full field identifiability, no physical claim, no novelty, no canon, no EXEC"
+  ],
+  "local_diagnostics": [
+    {
+      "a": 0.02,
+      "ch": "A",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.00014102831758699974
+    },
+    {
+      "a": 0.02,
+      "ch": "A",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 1.4101826772860981e-05
+    },
+    {
+      "a": 0.02,
+      "ch": "A",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 1.4066931504075342e-06
+    },
+    {
+      "a": 0.05,
+      "ch": "A",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.00014296476977671002
+    },
+    {
+      "a": 0.05,
+      "ch": "A",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 1.4295994644752952e-05
+    },
+    {
+      "a": 0.05,
+      "ch": "A",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 1.4281897638968033e-06
+    },
+    {
+      "a": 0.1,
+      "ch": "A",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.00014625013493752004
+    },
+    {
+      "a": 0.1,
+      "ch": "A",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 1.4623721166784343e-05
+    },
+    {
+      "a": 0.1,
+      "ch": "A",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 1.4606574851860898e-06
+    },
+    {
+      "a": 0.02,
+      "ch": "B",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.017714733123086024
+    },
+    {
+      "a": 0.02,
+      "ch": "B",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 0.001821112186235485
+    },
+    {
+      "a": 0.02,
+      "ch": "B",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 0.00018260258231261872
+    },
+    {
+      "a": 0.05,
+      "ch": "B",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.009427241742349435
+    },
+    {
+      "a": 0.05,
+      "ch": "B",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 0.0009412702200929379
+    },
+    {
+      "a": 0.05,
+      "ch": "B",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 9.411020958505212e-05
+    },
+    {
+      "a": 0.1,
+      "ch": "B",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.009957519321313058
+    },
+    {
+      "a": 0.1,
+      "ch": "B",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 0.001003357355617851
+    },
+    {
+      "a": 0.1,
+      "ch": "B",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 0.00010041231215174307
+    },
+    {
+      "a": 0.02,
+      "ch": "C",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.007858822963282996
+    },
+    {
+      "a": 0.02,
+      "ch": "C",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 0.0008020669392621027
+    },
+    {
+      "a": 0.02,
+      "ch": "C",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 8.037013361428258e-05
+    },
+    {
+      "a": 0.05,
+      "ch": "C",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.0010012417918956462
+    },
+    {
+      "a": 0.05,
+      "ch": "C",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 9.660336116168455e-05
+    },
+    {
+      "a": 0.05,
+      "ch": "C",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 9.624662481111379e-06
+    },
+    {
+      "a": 0.1,
+      "ch": "C",
+      "delta": 0.001,
+      "relative_vs_Fisher_tangent": 0.0033304144258530233
+    },
+    {
+      "a": 0.1,
+      "ch": "C",
+      "delta": 0.0001,
+      "relative_vs_Fisher_tangent": 0.0003333770601262609
+    },
+    {
+      "a": 0.1,
+      "ch": "C",
+      "delta": 1e-05,
+      "relative_vs_Fisher_tangent": 3.3340979706419915e-05
+    }
+  ],
+  "max_historical_45_RMS_relative_error": 1.4432899320127035e-14,
+  "max_local_tangent_relative_error_delta1e3": 0.017714733123086024,
+  "max_local_tangent_relative_error_delta1e5": 0.00018260258231261872,
+  "n_anchors": 7,
+  "noise_assumption": "per-voxel additive iid Gaussian ENERGY noise with per-channel tau=0.01*g(mask2,alpha=.05); no empirical noise calibration",
+  "records": [
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.1586371649386052e-11,
+          "local_eff_tangent": 2.16154984282114e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.9545235391721631
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0112107021912134e-11,
+          "local_eff_tangent": 2.0145181936108607e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.8893333204198256
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9433681802270837e-11,
+          "local_eff_tangent": 1.9453467323183782e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.8593341685366938
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.672308451794229e-11,
+          "local_eff_tangent": 1.6740319598069467e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.7394747982297192
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4927912788838804e-11,
+          "local_eff_tangent": 1.4936890844320493e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.6600944512164496
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.473133364729642e-11,
+          "local_eff_tangent": 1.4759914398576466e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.6514019566666396
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4177415488234865e-11,
+          "local_eff_tangent": 1.4196608159682631e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.6269083581042242
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.955626917615446e-12,
+          "local_eff_tangent": 9.961644104612206e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.44022591635265507
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.095556682342155e-12,
+          "local_eff_tangent": 9.094654115256073e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.40219463910773434
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.3422005978896114e-12,
+          "local_eff_tangent": 3.3356464161633193e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.1477881134976033
+        }
+      ],
+      "alpha_true": 0.0,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.1586371649386052e-11,
+        "local_eff_tangent": 2.16154984282114e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9545235391721631
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.1586371649386052e-11,
+        "local_eff_tangent": 2.16154984282114e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9545235391721631
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.2614813321531524e-11,
+      "five_masks_nearest_alt_alpha": 0.01,
+      "five_masks_sep_in_sigma_units": 1.4847555844109417,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.7423777922054708,
+      "full5_vs_bestpair_gain": 1.0476431004176991,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.1409680036356623e-11,
+          "local_eff_tangent": 2.143886926921794e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.9547134976302851
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9923762685565393e-11,
+          "local_eff_tangent": 1.995689527237862e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.8884525657175055
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9300267461642178e-11,
+          "local_eff_tangent": 1.9320110084323376e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.860649286781217
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.6606782143779815e-11,
+          "local_eff_tangent": 1.6624072293492309e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.7405397482796878
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4849660660142374e-11,
+          "local_eff_tangent": 1.4858687912689703e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.6621851164236252
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.457592601724042e-11,
+          "local_eff_tangent": 1.460454920527067e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.6499785744340338
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.406050040563166e-11,
+          "local_eff_tangent": 1.4079739910177918e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.6269944014995668
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.902883418994009e-12,
+          "local_eff_tangent": 9.908936256750056e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.44159541149226933
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.071180329553816e-12,
+          "local_eff_tangent": 9.072060828127068e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.4045076005506311
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.345549683543026e-12,
+          "local_eff_tangent": 3.352090297464055e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.1491867900149525
+        }
+      ],
+      "alpha_true": 0.02,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.1409680036356623e-11,
+        "local_eff_tangent": 2.143886926921794e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.03,
+        "separation_ratio_vs_all5": 0.9547134976302851
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.1409680036356623e-11,
+        "local_eff_tangent": 2.143886926921794e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.03,
+        "separation_ratio_vs_all5": 0.9547134976302851
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.2425240754946955e-11,
+      "five_masks_nearest_alt_alpha": 0.03,
+      "five_masks_sep_in_sigma_units": 1.4723093650729484,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.7361546825364742,
+      "full5_vs_bestpair_gain": 1.0474346518428004,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.1145156442952234e-11,
+          "local_eff_tangent": 2.117443803099857e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.9549891906314952
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.964185269326174e-11,
+          "local_eff_tangent": 1.9675070337410986e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.8870947375890955
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9100468916219787e-11,
+          "local_eff_tangent": 1.912039623396123e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.8626439534838476
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.6432587710691338e-11,
+          "local_eff_tangent": 1.644995956884162e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.7421531110518077
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4732377967815372e-11,
+          "local_eff_tangent": 1.4741478476592791e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.6653656949533053
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4343350304521848e-11,
+          "local_eff_tangent": 1.4372035920479243e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.6477958455977678
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3885443991306238e-11,
+          "local_eff_tangent": 1.3904752800888938e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.6271151956048197
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.823822037778071e-12,
+          "local_eff_tangent": 9.829927973287317e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.443678148330393
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.037254446958764e-12,
+          "local_eff_tangent": 9.038087290549419e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.04,
+          "separation_ratio_vs_all5": 0.4081540060068274
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.3700732661227682e-12,
+          "local_eff_tangent": 3.3765974553770907e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.04,
+          "separation_ratio_vs_all5": 0.15220429082500936
+        }
+      ],
+      "alpha_true": 0.05,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.1145156442952234e-11,
+        "local_eff_tangent": 2.117443803099857e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.060000000000000005,
+        "separation_ratio_vs_all5": 0.9549891906314952
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.1145156442952234e-11,
+        "local_eff_tangent": 2.117443803099857e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.060000000000000005,
+        "separation_ratio_vs_all5": 0.9549891906314952
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.2141775687502608e-11,
+      "five_masks_nearest_alt_alpha": 0.060000000000000005,
+      "five_masks_sep_in_sigma_units": 1.4536987165617488,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.7268493582808744,
+      "full5_vs_bestpair_gain": 1.0471322710351736,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0705668204892905e-11,
+          "local_eff_tangent": 2.0735100167152326e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.9554217249719712
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9173635067279942e-11,
+          "local_eff_tangent": 1.920699058862435e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.8847291142062628
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.876834348070772e-11,
+          "local_eff_tangent": 1.8788409389380756e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.8660277430199923
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.6142965087909457e-11,
+          "local_eff_tangent": 1.616047072309757e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.7448848980786871
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4537168590269973e-11,
+          "local_eff_tangent": 1.4546389742068272e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.6707886243169874
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3957165096706578e-11,
+          "local_eff_tangent": 1.3985951474903733e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.6440255209567607
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3594536933068721e-11,
+          "local_eff_tangent": 1.361395871939051e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.6272927682535937
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.692201798122746e-12,
+          "local_eff_tangent": 9.698395210625445e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.4472273036110293
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.980490385064779e-12,
+          "local_eff_tangent": 8.981243989695981e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.09000000000000001,
+          "separation_ratio_vs_all5": 0.4143868012318114
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4105218500951247e-12,
+          "local_eff_tangent": 3.417017991930157e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.09000000000000001,
+          "separation_ratio_vs_all5": 0.15737172241089412
+        }
+      ],
+      "alpha_true": 0.1,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.0705668204892905e-11,
+        "local_eff_tangent": 2.0735100167152326e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.11,
+        "separation_ratio_vs_all5": 0.9554217249719712
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.0705668204892905e-11,
+        "local_eff_tangent": 2.0735100167152326e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.11,
+        "separation_ratio_vs_all5": 0.9554217249719712
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.167175778371623e-11,
+      "five_masks_nearest_alt_alpha": 0.11,
+      "five_masks_sep_in_sigma_units": 1.4228401064331604,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.7114200532165802,
+      "full5_vs_bestpair_gain": 1.0466582178977943,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.02679335849599e-11,
+          "local_eff_tangent": 2.0297511459380513e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.9558164955842496
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8707482242001294e-11,
+          "local_eff_tangent": 1.8740970762268167e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.8822270925055252
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8437325949432802e-11,
+          "local_eff_tangent": 1.8457527218055821e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.869486778366423
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5854236225521855e-11,
+          "local_eff_tangent": 1.5871872609823272e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.7476707206346977
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4342298029383327e-11,
+          "local_eff_tangent": 1.4351637990357696e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.6763691514779149
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3572801175810687e-11,
+          "local_eff_tangent": 1.3601684194130575e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.6400804107998473
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3304713841374192e-11,
+          "local_eff_tangent": 1.3324245419029275e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.6274376667609699
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.560775770563557e-12,
+          "local_eff_tangent": 9.567055370180272e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.45087710366626127
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.923453802940724e-12,
+          "local_eff_tangent": 8.924128414062896e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.13999999999999999,
+          "separation_ratio_vs_all5": 0.42082160505814703
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4504377605113277e-12,
+          "local_eff_tangent": 3.4569050164337236e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.13999999999999999,
+          "separation_ratio_vs_all5": 0.16271936725364144
+        }
+      ],
+      "alpha_true": 0.15,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.02679335849599e-11,
+        "local_eff_tangent": 2.0297511459380513e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.16,
+        "separation_ratio_vs_all5": 0.9558164955842496
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.02679335849599e-11,
+        "local_eff_tangent": 2.0297511459380513e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.16,
+        "separation_ratio_vs_all5": 0.9558164955842496
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.1204837621651403e-11,
+      "five_masks_nearest_alt_alpha": 0.16,
+      "five_masks_sep_in_sigma_units": 1.392184875799894,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.696092437899947,
+      "full5_vs_bestpair_gain": 1.0462259279054844,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0006145633668986e-11,
+          "local_eff_tangent": 2.003580890273701e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.9560330925726757
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.842879332783104e-11,
+          "local_eff_tangent": 1.8462359295819583e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8806562043584347
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.823925574319333e-11,
+          "local_eff_tangent": 1.8259536666797346e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.871598777379847
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5681436073333435e-11,
+          "local_eff_tangent": 1.5699149442707745e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.7493683240983314
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4225543913696964e-11,
+          "local_eff_tangent": 1.4234954270211692e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6797956483157896
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3343066657819709e-11,
+          "local_eff_tangent": 1.337200567402735e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6376247336623679
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3131348420660048e-11,
+          "local_eff_tangent": 1.3150944334769672e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6275073604945377
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.482017379929983e-12,
+          "local_eff_tangent": 9.488348065040432e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.453116885458753
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.889102814859558e-12,
+          "local_eff_tangent": 8.889730153935641e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.16999999999999998,
+          "separation_ratio_vs_all5": 0.4247832945884707
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4741303891588013e-12,
+          "local_eff_tangent": 3.4805799127496644e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.16999999999999998,
+          "separation_ratio_vs_all5": 0.16601816665567698
+        }
+      ],
+      "alpha_true": 0.18,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.0006145633668986e-11,
+        "local_eff_tangent": 2.003580890273701e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9560330925726757
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.0006145633668986e-11,
+        "local_eff_tangent": 2.003580890273701e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9560330925726757
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.0926206204675034e-11,
+      "five_masks_nearest_alt_alpha": 0.19,
+      "five_masks_sep_in_sigma_units": 1.3738915763387787,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.6869457881693893,
+      "full5_vs_bestpair_gain": 1.0459888970046107,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.989137170832065e-11,
+          "local_eff_tangent": 1.9861698524677092e-09,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.9561010312090752
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.831060759672496e-11,
+          "local_eff_tangent": 1.8277038899390851e-09,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8801198359774399
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8148067279716668e-11,
+          "local_eff_tangent": 1.8127770175114283e-09,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8723071538264311
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5601915380290593e-11,
+          "local_eff_tangent": 1.5584184822718749e-09,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.7499235147112914
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4166669187797536e-11,
+          "local_eff_tangent": 1.4157236639461533e-09,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6809368010344514
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3248193742584625e-11,
+          "local_eff_tangent": 1.3219257173168345e-09,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6367892513739651
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3055238123955025e-11,
+          "local_eff_tangent": 1.3035632423041012e-09,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6275146237286442
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.442265242796723e-12,
+          "local_eff_tangent": 9.435918064590948e-10,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.45385304080417954
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.866148965372232e-12,
+          "local_eff_tangent": 8.866744843460841e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.42616136749884
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4898180356797344e-12,
+          "local_eff_tangent": 3.4962555711824293e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.16774200751824975
+        }
+      ],
+      "alpha_true": 0.2,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.989137170832065e-11,
+        "local_eff_tangent": 1.9861698524677092e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9561010312090752
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.989137170832065e-11,
+        "local_eff_tangent": 1.9861698524677092e-09,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9561010312090752
+      },
+      "channel": "A",
+      "five_masks_min_separation": 2.080467550920454e-11,
+      "five_masks_nearest_alt_alpha": 0.19,
+      "five_masks_sep_in_sigma_units": 1.3659125859216716,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 0.6829562929608358,
+      "full5_vs_bestpair_gain": 1.045914571115367,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.5231337439625572e-11
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.797618486848352e-14,
+          "local_eff_tangent": 1.5487283167494064e-12,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.37452102926646375
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.3020526913884645e-14,
+          "local_eff_tangent": 1.2487410820273838e-12,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.33583520789619986
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.0590345654737531e-14,
+          "local_eff_tangent": 3.4791677006503573e-12,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.08267241686208912
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.996682363368773e-15,
+          "local_eff_tangent": 6.385211919050734e-12,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.07803804696521967
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.932608117836067e-21,
+          "local_eff_tangent": 1.7586138006651693e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.02937380833865091,
+          "separation_ratio_vs_all5": 1.508670152586824e-08
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.6178201345259173e-21,
+          "local_eff_tangent": 1.5010525395217204e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.03956578051850397,
+          "separation_ratio_vs_all5": 1.2629342320812337e-08
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.2946417454019343e-21,
+          "local_eff_tangent": 1.6410537429188452e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.0211737100209843,
+          "separation_ratio_vs_all5": 1.0106484297332786e-08
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.0957299461299511e-21,
+          "local_eff_tangent": 9.536912451942664e-12,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.021245675340861615,
+          "separation_ratio_vs_all5": 8.55370030667567e-09
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.0033741719582696e-21,
+          "local_eff_tangent": 1.296198417234547e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.015151963986193956,
+          "separation_ratio_vs_all5": 7.832734692250553e-09
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.7629057882957097e-22,
+          "local_eff_tangent": 9.253188387820034e-12,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.014136854121188315,
+          "separation_ratio_vs_all5": 1.37619381812505e-09
+        }
+      ],
+      "alpha_true": 0.0,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 4.797618486848352e-14,
+        "local_eff_tangent": 1.5487283167494064e-12,
+        "masks": [
+          5,
+          6
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.37452102926646375
+      },
+      "best_global_vs_best_local_identical": false,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.932608117836067e-21,
+        "local_eff_tangent": 1.7586138006651693e-11,
+        "masks": [
+          2,
+          4
+        ],
+        "nearest_alt_alpha": 0.02937380833865091,
+        "separation_ratio_vs_all5": 1.508670152586824e-08
+      },
+      "channel": "B",
+      "five_masks_min_separation": 1.281001095250902e-13,
+      "five_masks_nearest_alt_alpha": 0.01,
+      "five_masks_sep_in_sigma_units": 209.07269352322174,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 104.53634676161087,
+      "full5_vs_bestpair_gain": 2.670077036684958,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5728501597902477e-13,
+          "local_eff_tangent": 2.0516535150202997e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.9647595642928791
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5367934749851479e-13,
+          "local_eff_tangent": 1.8439773538638484e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.9426430064593899
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.1285635401457198e-13,
+          "local_eff_tangent": 1.2790944206262674e-11,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.6922417005145698
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.0115809657211544e-13,
+          "local_eff_tangent": 1.3006451586363012e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.6204865769707264
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.279109731467668e-14,
+          "local_eff_tangent": 1.9850843021940497e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.0,
+          "separation_ratio_vs_all5": 0.5078265241953411
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 7.660984501979392e-14,
+          "local_eff_tangent": 1.5629028150822326e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.0,
+          "separation_ratio_vs_all5": 0.4699117728525258
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.024345179557296e-14,
+          "local_eff_tangent": 2.6947539302778294e-12,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.12416989382310495
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 5.18515971536597e-22,
+          "local_eff_tangent": 8.244816033746736e-12,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.007276080887390952,
+          "separation_ratio_vs_all5": 3.1804888702510466e-09
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 5.841195874310238e-23,
+          "local_eff_tangent": 1.4866560478162556e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.0009799735276240739,
+          "separation_ratio_vs_all5": 3.582890303676752e-10
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.1149814305123876e-23,
+          "local_eff_tangent": 8.590309254376241e-12,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.0010312878975752414,
+          "separation_ratio_vs_all5": 1.2972936745994748e-10
+        }
+      ],
+      "alpha_true": 0.02,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.5728501597902477e-13,
+        "local_eff_tangent": 2.0516535150202997e-11,
+        "masks": [
+          3,
+          6
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9647595642928791
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.5728501597902477e-13,
+        "local_eff_tangent": 2.0516535150202997e-11,
+        "masks": [
+          3,
+          6
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9647595642928791
+      },
+      "channel": "B",
+      "five_masks_min_separation": 1.6303027386342304e-13,
+      "five_masks_nearest_alt_alpha": 0.01,
+      "five_masks_sep_in_sigma_units": 266.08235237908434,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 133.04117618954217,
+      "full5_vs_bestpair_gain": 1.0365276873237845,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4616016768239625e-13,
+          "local_eff_tangent": 3.8370770837999254e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.9773251477133806
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.228991314356073e-13,
+          "local_eff_tangent": 3.5376251758490965e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.9116515150766021
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.9813034250969887e-13,
+          "local_eff_tangent": 3.330165218696748e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.8417209957514983
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.6891871737724904e-13,
+          "local_eff_tangent": 2.9712909805921986e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.7592468739059325
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.586317330869705e-13,
+          "local_eff_tangent": 2.793929363851882e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.7302032999201293
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.316705200489478e-13,
+          "local_eff_tangent": 2.6053753716412037e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.6540828390036278
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.893791962722852e-13,
+          "local_eff_tangent": 2.0664699995592945e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.5346803828118922
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8825461512752532e-13,
+          "local_eff_tangent": 2.0948553349794316e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.5315053166545793
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.7165224525701399e-13,
+          "local_eff_tangent": 1.825248553235469e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.48463131120581543
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4185489882813536e-13,
+          "local_eff_tangent": 1.6059815422532097e-11,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.4005035035639209
+        }
+      ],
+      "alpha_true": 0.05,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 3.4616016768239625e-13,
+        "local_eff_tangent": 3.8370770837999254e-11,
+        "masks": [
+          2,
+          6
+        ],
+        "nearest_alt_alpha": 0.060000000000000005,
+        "separation_ratio_vs_all5": 0.9773251477133806
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 3.4616016768239625e-13,
+        "local_eff_tangent": 3.8370770837999254e-11,
+        "masks": [
+          2,
+          6
+        ],
+        "nearest_alt_alpha": 0.060000000000000005,
+        "separation_ratio_vs_all5": 0.9773251477133806
+      },
+      "channel": "B",
+      "five_masks_min_separation": 3.541914054829114e-13,
+      "five_masks_nearest_alt_alpha": 0.060000000000000005,
+      "five_masks_sep_in_sigma_units": 578.0771885490373,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 289.03859427451863,
+      "full5_vs_bestpair_gain": 1.0232009299460585,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.122270153163099e-13,
+          "local_eff_tangent": 3.4366474109362925e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.939405494899536
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.1043334454395847e-13,
+          "local_eff_tangent": 3.434978097588211e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.9340088312640059
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.7247380410031584e-13,
+          "local_eff_tangent": 2.982547937838762e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.8197989803307247
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.504225964555579e-13,
+          "local_eff_tangent": 2.7813224705173015e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.753452941665011
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.4382720201537733e-13,
+          "local_eff_tangent": 2.692706715978052e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.7336092078617119
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.973331283535961e-13,
+          "local_eff_tangent": 2.149059511734379e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.5937212861394575
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8663388714830355e-13,
+          "local_eff_tangent": 2.0493130870232587e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.5615302024520802
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8110941760003456e-13,
+          "local_eff_tangent": 2.0209609662643013e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.5449085880642558
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5962904538441637e-13,
+          "local_eff_tangent": 1.769777536275329e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.48028003671549957
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.0172989842278994e-13,
+          "local_eff_tangent": 1.1427293749934421e-11,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.3060773760307871
+        }
+      ],
+      "alpha_true": 0.1,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 3.122270153163099e-13,
+        "local_eff_tangent": 3.4366474109362925e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.11,
+        "separation_ratio_vs_all5": 0.939405494899536
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 3.122270153163099e-13,
+        "local_eff_tangent": 3.4366474109362925e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.11,
+        "separation_ratio_vs_all5": 0.939405494899536
+      },
+      "channel": "B",
+      "five_masks_min_separation": 3.323666052748614e-13,
+      "five_masks_nearest_alt_alpha": 0.11,
+      "five_masks_sep_in_sigma_units": 542.4568461307549,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 271.22842306537746,
+      "full5_vs_bestpair_gain": 1.0645030345569186,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.771379111936008e-13,
+          "local_eff_tangent": 2.980345356861387e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.9430467074797639
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.63894388006979e-13,
+          "local_eff_tangent": 2.8480083704149288e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.8979815596521505
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.5273483112330014e-13,
+          "local_eff_tangent": 2.7085132702832514e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.8600077460704544
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0859413992379168e-13,
+          "local_eff_tangent": 2.2489319210233403e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.7098055116583671
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0397493919492482e-13,
+          "local_eff_tangent": 2.2083430397483832e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.694087265028793
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9040961485075796e-13,
+          "local_eff_tangent": 2.0345389741092253e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.6479270901051789
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.674653890805517e-13,
+          "local_eff_tangent": 1.7985117623940694e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.569852327705927
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.3952617280634852e-13,
+          "local_eff_tangent": 1.5174860116203827e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.4747805787579948
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.305139201975715e-13,
+          "local_eff_tangent": 1.411949463849869e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.44411362628989337
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 7.230716009150673e-14,
+          "local_eff_tangent": 7.922178495755191e-12,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.24604728006293106
+        }
+      ],
+      "alpha_true": 0.15,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.771379111936008e-13,
+        "local_eff_tangent": 2.980345356861387e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.16,
+        "separation_ratio_vs_all5": 0.9430467074797639
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.771379111936008e-13,
+        "local_eff_tangent": 2.980345356861387e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.16,
+        "separation_ratio_vs_all5": 0.9430467074797639
+      },
+      "channel": "B",
+      "five_masks_min_separation": 2.9387506365854913e-13,
+      "five_masks_nearest_alt_alpha": 0.16,
+      "five_masks_sep_in_sigma_units": 479.6346493862051,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 239.81732469310256,
+      "full5_vs_bestpair_gain": 1.0603928650283296,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.6022338300059757e-13,
+          "local_eff_tangent": 2.769187327871046e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.9419368296288517
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.4298790007363877e-13,
+          "local_eff_tangent": 2.593446013707342e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8795491381072774
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.4181430352245056e-13,
+          "local_eff_tangent": 2.5661008783631685e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8753010424828844
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9253966326025134e-13,
+          "local_eff_tangent": 2.0535195259796453e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6969404436216686
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8511259492219719e-13,
+          "local_eff_tangent": 1.9598339788334976e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6700565059711944
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.838691026740957e-13,
+          "local_eff_tangent": 1.9681968188667502e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.665555407213893
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5793988145049544e-13,
+          "local_eff_tangent": 1.6790452086914934e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.5716987823692029
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.2203569837110845e-13,
+          "local_eff_tangent": 1.3120918508327018e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.44173554851126023
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.1776511188507138e-13,
+          "local_eff_tangent": 1.2599946551762e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.42627720403456754
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.023506497113304e-14,
+          "local_eff_tangent": 6.526018372258618e-12,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.21803431143336827
+        }
+      ],
+      "alpha_true": 0.18,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.6022338300059757e-13,
+        "local_eff_tangent": 2.769187327871046e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9419368296288517
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.6022338300059757e-13,
+        "local_eff_tangent": 2.769187327871046e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9419368296288517
+      },
+      "channel": "B",
+      "five_masks_min_separation": 2.762641557429414e-13,
+      "five_masks_nearest_alt_alpha": 0.19,
+      "five_masks_sep_in_sigma_units": 450.89181718289336,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 225.44590859144668,
+      "full5_vs_bestpair_gain": 1.0616423188315365,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.814974392802676e-13,
+          "local_eff_tangent": 2.6525331854215254e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.9413049733410758
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.630074125545853e-13,
+          "local_eff_tangent": 2.4849190354512832e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8794757994821781
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.6134028135233895e-13,
+          "local_eff_tangent": 2.4555373324181845e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.873901045779626
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0709025895600722e-13,
+          "local_eff_tangent": 1.947091218137646e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6924933000605288
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0225226586201162e-13,
+          "local_eff_tangent": 1.9150772000008746e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6763154372280584
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.9634727195751074e-13,
+          "local_eff_tangent": 1.8394653202969192e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.6565696088323646
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.7095979739433406e-13,
+          "local_eff_tangent": 1.6124379687371395e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.5716759198240773
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.2899293206665912e-13,
+          "local_eff_tangent": 1.202985123878089e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.4313420711415515
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.257078366736398e-13,
+          "local_eff_tangent": 1.1781705152664912e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.4203569742992666
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.260245082839612e-14,
+          "local_eff_tangent": 5.790900379088317e-12,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.20933759986867542
+        }
+      ],
+      "alpha_true": 0.2,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.814974392802676e-13,
+        "local_eff_tangent": 2.6525331854215254e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9413049733410758
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.814974392802676e-13,
+        "local_eff_tangent": 2.6525331854215254e-11,
+        "masks": [
+          2,
+          5
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9413049733410758
+      },
+      "channel": "B",
+      "five_masks_min_separation": 2.990501986631583e-13,
+      "five_masks_nearest_alt_alpha": 0.19,
+      "five_masks_sep_in_sigma_units": 488.0810076193964,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 244.0405038096982,
+      "full5_vs_bestpair_gain": 1.062354952243152,
+      "voxel_sigma_tau_1pct_mask2_baseline": 6.127060754151623e-16
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.93250655689293e-13,
+          "local_eff_tangent": 3.205926146045106e-11,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.9059854862321679
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.925819713551504e-13,
+          "local_eff_tangent": 3.4620580443925777e-11,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.9047572703248674
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.973498969056197e-13,
+          "local_eff_tangent": 3.065415996807489e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.7298383395948398
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.6824841098705797e-13,
+          "local_eff_tangent": 2.3531158829161747e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.4927092630409078
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.5134859039275635e-13,
+          "local_eff_tangent": 1.992731462233943e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.4616682659296756
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.8801707320142762e-13,
+          "local_eff_tangent": 1.7923689132864217e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.34534315873600185
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.1995507082727847e-13,
+          "local_eff_tangent": 4.473445213586213e-12,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.22032926244688839
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 7.055674970123395e-14,
+          "local_eff_tangent": 9.93602887055577e-13,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.12959616058838092
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.296975179171173e-22,
+          "local_eff_tangent": 1.1425265232169744e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.03657659222437886,
+          "separation_ratio_vs_all5": 1.1566062920931917e-09
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.0280423999840852e-22,
+          "local_eff_tangent": 6.329665489251409e-12,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.020953214580803747,
+          "separation_ratio_vs_all5": 3.7250370752805024e-10
+        }
+      ],
+      "alpha_true": 0.0,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 4.93250655689293e-13,
+        "local_eff_tangent": 3.205926146045106e-11,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9059854862321679
+      },
+      "best_global_vs_best_local_identical": false,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 4.925819713551504e-13,
+        "local_eff_tangent": 3.4620580443925777e-11,
+        "masks": [
+          2,
+          4
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9047572703248674
+      },
+      "channel": "C",
+      "five_masks_min_separation": 5.444354939289751e-13,
+      "five_masks_nearest_alt_alpha": 0.01,
+      "five_masks_sep_in_sigma_units": 30.45659003018879,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 15.228295015094394,
+      "full5_vs_bestpair_gain": 1.1037704413553264,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.726083414013088e-13,
+          "local_eff_tangent": 1.0812859598861196e-10,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.9160165737358362
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.19263158171171e-13,
+          "local_eff_tangent": 1.0087523349892695e-10,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.8657753102305514
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.872003036812567e-13,
+          "local_eff_tangent": 7.393119861999107e-11,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.6472151644734844
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.244292421377483e-13,
+          "local_eff_tangent": 4.527226011244343e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.3997335860971207
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.073756127763431e-13,
+          "local_eff_tangent": 4.218143846877797e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.38367223182692356
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.0331293169514684e-13,
+          "local_eff_tangent": 3.5304217031566144e-11,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.2856644968321534
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.5238205673257664e-13,
+          "local_eff_tangent": 2.5658679083725863e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.03,
+          "separation_ratio_vs_all5": 0.23769706369934201
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.507452167386178e-13,
+          "local_eff_tangent": 3.0607365532660147e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.23615546416827105
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.143047545938087e-15,
+          "local_eff_tangent": 2.4944172873576173e-12,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.01,
+          "separation_ratio_vs_all5": 0.00766923970860793
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.060676759883706e-23,
+          "local_eff_tangent": 5.8228828565716e-12,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.0007191391852344882,
+          "separation_ratio_vs_all5": 5.708032847127719e-11
+        }
+      ],
+      "alpha_true": 0.02,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 9.726083414013088e-13,
+        "local_eff_tangent": 1.0812859598861196e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9160165737358362
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 9.726083414013088e-13,
+        "local_eff_tangent": 1.0812859598861196e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.01,
+        "separation_ratio_vs_all5": 0.9160165737358362
+      },
+      "channel": "C",
+      "five_masks_min_separation": 1.061780287920634e-12,
+      "five_masks_nearest_alt_alpha": 0.01,
+      "five_masks_sep_in_sigma_units": 59.39768308998839,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 29.698841544994195,
+      "full5_vs_bestpair_gain": 1.0916833042896266,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.792500053658843e-12,
+          "local_eff_tangent": 1.8173120824171073e-10,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.9126717729936383
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.618146516402713e-12,
+          "local_eff_tangent": 1.6444388463938435e-10,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.8238976880777389
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.1242835624675971e-12,
+          "local_eff_tangent": 1.1473258304876153e-10,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.5724417526294805
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.692520621731812e-13,
+          "local_eff_tangent": 6.855946559197419e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.3407572930982449
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.449300542578875e-13,
+          "local_eff_tangent": 6.513767017185353e-11,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.3283734663633413
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.116296557902652e-13,
+          "local_eff_tangent": 6.157144646951106e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.04,
+          "separation_ratio_vs_all5": 0.31141819004477006
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 5.722941559748558e-13,
+          "local_eff_tangent": 5.89417520929477e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.2913900732897156
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.045770509634329e-13,
+          "local_eff_tangent": 3.178754323883951e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.060000000000000005,
+          "separation_ratio_vs_all5": 0.1550788668310279
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.7597786279234042e-13,
+          "local_eff_tangent": 1.8223460690788582e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.04,
+          "separation_ratio_vs_all5": 0.08960112872213315
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.6026446496734895e-13,
+          "local_eff_tangent": 1.708946115297266e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.04,
+          "separation_ratio_vs_all5": 0.08160047364632647
+        }
+      ],
+      "alpha_true": 0.05,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.792500053658843e-12,
+        "local_eff_tangent": 1.8173120824171073e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.060000000000000005,
+        "separation_ratio_vs_all5": 0.9126717729936383
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 1.792500053658843e-12,
+        "local_eff_tangent": 1.8173120824171073e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.060000000000000005,
+        "separation_ratio_vs_all5": 0.9126717729936383
+      },
+      "channel": "C",
+      "five_masks_min_separation": 1.9640139058747216e-12,
+      "five_masks_nearest_alt_alpha": 0.060000000000000005,
+      "five_masks_sep_in_sigma_units": 109.87007094842295,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 54.935035474211475,
+      "full5_vs_bestpair_gain": 1.095684154578286,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.3485303997906855e-12,
+          "local_eff_tangent": 2.4292073611276135e-10,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.9097360183897378
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.092423711374258e-12,
+          "local_eff_tangent": 2.1661113119189924e-10,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.8105295192855715
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.4205159276643944e-12,
+          "local_eff_tangent": 1.4728963387818475e-10,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.55025666442631
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.669994084888241e-13,
+          "local_eff_tangent": 8.969039387952702e-11,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.335844317746612
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.464471689617115e-13,
+          "local_eff_tangent": 8.744812270112134e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.3278831210092591
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.298898545831404e-13,
+          "local_eff_tangent": 8.624878897355474e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.32146941426765985
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 6.849479123554868e-13,
+          "local_eff_tangent": 7.127572432670972e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.26532413063342924
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.361747356154359e-13,
+          "local_eff_tangent": 3.521087208545574e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.13022197434159966
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.977345996205436e-13,
+          "local_eff_tangent": 3.044075558328297e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.11533165132535506
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.837954628042235e-13,
+          "local_eff_tangent": 2.915827864736824e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.11,
+          "separation_ratio_vs_all5": 0.10993213219279496
+        }
+      ],
+      "alpha_true": 0.1,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.3485303997906855e-12,
+        "local_eff_tangent": 2.4292073611276135e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.11,
+        "separation_ratio_vs_all5": 0.9097360183897378
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.3485303997906855e-12,
+        "local_eff_tangent": 2.4292073611276135e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.11,
+        "separation_ratio_vs_all5": 0.9097360183897378
+      },
+      "channel": "C",
+      "five_masks_min_separation": 2.581551518590701e-12,
+      "five_masks_nearest_alt_alpha": 0.11,
+      "five_masks_sep_in_sigma_units": 144.41611011824554,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 72.20805505912277,
+      "full5_vs_bestpair_gain": 1.0992199712725812,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.607594914623813e-12,
+          "local_eff_tangent": 2.6972552224774074e-10,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.9081279992213217
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.3099219565219102e-12,
+          "local_eff_tangent": 2.39041009414256e-10,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.8044596163956971
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.5516295254761566e-12,
+          "local_eff_tangent": 1.6071207737835007e-10,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.5403746604202412
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.693865799144895e-13,
+          "local_eff_tangent": 1.0032070334083652e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.33760117047043187
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.56070888636397e-13,
+          "local_eff_tangent": 9.888451361600931e-11,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.3329638121097421
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 8.963988300403569e-13,
+          "local_eff_tangent": 9.298867858535497e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.31218226092695145
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 7.292994154178176e-13,
+          "local_eff_tangent": 7.568951603991082e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.2539877705859881
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.598828791700449e-13,
+          "local_eff_tangent": 3.7039047560435585e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.12533377680016317
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4255008845523163e-13,
+          "local_eff_tangent": 3.569532437952169e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.11929741261472525
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.328354402140255e-13,
+          "local_eff_tangent": 3.433465636793612e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.16,
+          "separation_ratio_vs_all5": 0.11591416316100471
+        }
+      ],
+      "alpha_true": 0.15,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.607594914623813e-12,
+        "local_eff_tangent": 2.6972552224774074e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.16,
+        "separation_ratio_vs_all5": 0.9081279992213217
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.607594914623813e-12,
+        "local_eff_tangent": 2.6972552224774074e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.16,
+        "separation_ratio_vs_all5": 0.9081279992213217
+      },
+      "channel": "C",
+      "five_masks_min_separation": 2.87139579096747e-12,
+      "five_masks_nearest_alt_alpha": 0.16,
+      "five_masks_sep_in_sigma_units": 160.6304610832641,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 80.31523054163205,
+      "full5_vs_bestpair_gain": 1.1011663563478433,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.696268135816541e-12,
+          "local_eff_tangent": 2.784187742303258e-10,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.9074694273010393
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.3832677913258474e-12,
+          "local_eff_tangent": 2.4618000441284905e-10,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.8021244730708179
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.594339705621888e-12,
+          "local_eff_tangent": 1.6479848991786e-10,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.5365989088269395
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.004282658661876e-12,
+          "local_eff_tangent": 1.037520953321011e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.3380063714724952
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.940460637245284e-13,
+          "local_eff_tangent": 1.0265260910480508e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.3345610921169631
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.166441823082865e-13,
+          "local_eff_tangent": 9.486603035038881e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.30851032955823543
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 7.41901281875725e-13,
+          "local_eff_tangent": 7.680358443549176e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.24969798902206825
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.831810895050988e-13,
+          "local_eff_tangent": 3.943000131444117e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.1289653351707451
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.5070143297747273e-13,
+          "local_eff_tangent": 3.614797398006415e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.11803382026815427
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.4212131560277574e-13,
+          "local_eff_tangent": 3.553115455693737e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.11514605324796733
+        }
+      ],
+      "alpha_true": 0.18,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.696268135816541e-12,
+        "local_eff_tangent": 2.784187742303258e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9074694273010393
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.696268135816541e-12,
+        "local_eff_tangent": 2.784187742303258e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.9074694273010393
+      },
+      "channel": "C",
+      "five_masks_min_separation": 2.9711944608819254e-12,
+      "five_masks_nearest_alt_alpha": 0.19,
+      "five_masks_sep_in_sigma_units": 166.21335788010524,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 83.10667894005262,
+      "full5_vs_bestpair_gain": 1.1019654986881062,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    },
+    {
+      "all_pairs": [
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.9151699270020165e-12,
+          "local_eff_tangent": 2.82462987597481e-10,
+          "masks": [
+            2,
+            3
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.907343460978481
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 2.5752836889068856e-12,
+          "local_eff_tangent": 2.494543873209143e-10,
+          "masks": [
+            2,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.801554239994939
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.7210642232045128e-12,
+          "local_eff_tangent": 1.6660782261266676e-10,
+          "masks": [
+            2,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.5356793627651687
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.087751355875512e-12,
+          "local_eff_tangent": 1.053478311332536e-10,
+          "masks": [
+            5,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.33856142339500733
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 1.0779032009267033e-12,
+          "local_eff_tangent": 1.0443184839514466e-10,
+          "masks": [
+            4,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.3354961959059553
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 9.890633970791125e-13,
+          "local_eff_tangent": 9.563582343974026e-11,
+          "masks": [
+            3,
+            4
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.30784490383235036
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 7.987219567975157e-13,
+          "local_eff_tangent": 7.721209596411205e-11,
+          "masks": [
+            2,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.24860133809951357
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 4.1804934365615953e-13,
+          "local_eff_tangent": 4.063157096147966e-11,
+          "masks": [
+            3,
+            6
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.13011740235769104
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.8167192090682965e-13,
+          "local_eff_tangent": 3.704051163197524e-11,
+          "masks": [
+            4,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.11879496919414685
+        },
+        {
+          "global_min_distance_over_alpha_separated_0p01": 3.6671564590857394e-13,
+          "local_eff_tangent": 3.5344374982364086e-11,
+          "masks": [
+            3,
+            5
+          ],
+          "nearest_alt_alpha": 0.19,
+          "separation_ratio_vs_all5": 0.11413984490977305
+        }
+      ],
+      "alpha_true": 0.2,
+      "best_global_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.9151699270020165e-12,
+        "local_eff_tangent": 2.82462987597481e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.907343460978481
+      },
+      "best_global_vs_best_local_identical": true,
+      "best_local_pair": {
+        "global_min_distance_over_alpha_separated_0p01": 2.9151699270020165e-12,
+        "local_eff_tangent": 2.82462987597481e-10,
+        "masks": [
+          2,
+          3
+        ],
+        "nearest_alt_alpha": 0.19,
+        "separation_ratio_vs_all5": 0.907343460978481
+      },
+      "channel": "C",
+      "five_masks_min_separation": 3.2128626615750243e-12,
+      "five_masks_nearest_alt_alpha": 0.19,
+      "five_masks_sep_in_sigma_units": 179.73266254322718,
+      "five_masks_symmetric_ball_radius_threshold_in_sigma_units": 89.86633127161359,
+      "full5_vs_bestpair_gain": 1.1021184843516678,
+      "voxel_sigma_tau_1pct_mask2_baseline": 1.7875786271192106e-14
+    }
+  ],
+  "return_id": "M13-ROT36-DTC0A-GLOBAL-NOISE-PROFILE-FULL-SHELL-VS-MASKPAIR-001_20261025",
+  "separation_requirement_abs_alpha": 0.01,
+  "source": "ROT32 source-matched numeric quartic squared-RMS; ROT34 directed interval monotone mask pairs; ROT35 exact covariance; original runtime not byte exact",
+  "two_95pct_Gaussian_error_balls_sufficient_separation": 6.654471487208086,
+  "unknown_common_gain": "t=s^2 positive shared within one channel across all masks"
+}
