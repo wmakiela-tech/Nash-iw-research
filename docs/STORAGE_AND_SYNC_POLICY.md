@@ -29,6 +29,14 @@ This modifies **default placement and write completion criteria**, not scientifi
 
 **Do not use "the document is on a private Drive" as proof its scientific *content* is permanently private.** Content exposure classification and actual release eligibility govern routing, not the storage container. Conversely, identifying a science topic does not automatically authorize publishing restricted raw documents. Validate source licenses, private locations, personal data, prohibited sharing and source completeness before publication.
 
+### Operacyjna bramka metadanych dla publicznych materiałów naukowych — 2026-10-25
+
+**Kontrola autorów przed commitem (nie nowy status naukowy):** w publicznym pliku `research/` wpisz u góry rzeczywiste `artifact_id: ...`, `exposure: PUBLIC`, `claim_ceiling: ...` lub inne dozwolone pole (`scientific_claim_ceiling`, `result_class`, `status`), oraz **dokładnie rzeczywisty** `bw_ingestion_event_id: ING-...` albo jawne `sync_state: GITHUB_PENDING_BW_INGEST`. Nazwy w szablonach lub wiadomościach Slack (`BW_PENDING`, `bw_event_or_pending`, `RETURN_ID/CLASS/CEILING`) nie są polami parsowanymi przez guarda. Pola muszą znaleźć się w pierwszych 3500 znakach. Osobne adnotacje o źródle lub claim ceiling nie podnoszą kwalifikacji BW.
+
+**Przed publikacją i po naprawie istniejącego dokumentu** użyj `python scripts/preflight_public_science_writeback.py research/<lineage>/<date>/<file>.md` albo zakresu commitów z `--base/--head`. Preflight stosuje reguły `scripts/check_public_science_writeback.py` do wskazanych plików (także zmodyfikowanych); sam workflow GitHub działa forward-only na nowo dodanych `--diff-filter=A`. Nie traktuj jego zielonego wyniku po edycji jako świadectwa naprawy starego pliku. Nie poprawiaj nieprawdziwie ekspozycji, numeru ING ani wyniku naukowego tylko dla zielonego CI. Jeśli niewiadome: HOLD na publikację lub jawne PENDING według rzeczywistego stanu, a nie obniżenie wymagań guarda.
+
+**Run discovery ≠ run failure:** ID z alertu GitHub jest wiążącym punktem nawigacji; ograniczony konektor do `pull_request` może zwracać zero dla faktycznego `push`. Sprawdź `head_sha` + `event=push` przez GitHub Actions API, wybierz właściwy `workflow_id=382571550`; nie zmieniaj w tym celu triggerów ani uprawnień. [Praktyczna składnia i szablon](../CONTRIBUTING.md).
+
 ### Publication-complete handshake for new scientific work
 
 1. Preserve the complete load-bearing science body: object/theorem/counterexample, exact hypotheses, domain, method/source, boundary/caveats, negative knowledge and unresolved tests; don't replace it with a short pointer or promotional abstract.
