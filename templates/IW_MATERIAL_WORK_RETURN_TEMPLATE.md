@@ -4,6 +4,25 @@ Controlling protocol: `IW_OW_CELL_WORK_ARTIFACT_AND_REPRODUCIBILITY_PROTOCOL_001
 
 Delete guidance text before use. Keep the field names so returns remain searchable across surfaces.
 
+## PUBLIC research body metadata (use before publishing under research/)
+
+For **full, approved public-safe scientific body** copy the block below to the top of the file, before any long narrative (the CI guard examines only the first 3500 characters). Replace every placeholder with truthful values; the name and value must start at the beginning of the line:
+
+```yaml
+artifact_id: IW_REAL_ARTIFACT_ID
+exposure: PUBLIC
+claim_ceiling: SOURCE_ONLY_NO_CANON_NO_EXEC
+sync_state: GITHUB_PENDING_BW_INGEST
+```
+
+If and only if a genuine BW ingestion event exists, use `bw_ingestion_event_id: ING-YYYYMMDD-NNNN` with the **actual** event ID instead of the pending sync state. The guard recognizes `scientific_claim_ceiling`, `claim_ceiling`, `result_class` or `status` as the claim/status-bearing field; still state the substantive ceiling honestly in the body. `RETURN_ID`, `CLASS`, `CEILING`, `BW_PENDING`, `bw_event_or_pending` and `exposure: PUBLIC_SAFE` do **not** substitute for the required metadata names/values.
+
+Do not copy this public-only block into private, unapproved or protected documents. The generic template's `exposure: PUBLIC | PRIVATE | RESTRICTED` is a choice instruction, **not** a valid final public metadata value. Use a genuinely public-safe full body; no pointer-only scientific replacement.
+
+Before publication or after fixing any existing body, run `python scripts/preflight_public_science_writeback.py research/<lineage>/<YYYY-MM-DD>/<file>.md`. The normal CI guard (`--diff-filter=A`) does not inspect metadata changes to existing files; see `CONTRIBUTING.md`.
+
+
+
 ```yaml
 from_cell: IW_...
 to_cell_or_route: IWTO_...
