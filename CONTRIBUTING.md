@@ -30,6 +30,28 @@ Do not create new ad-hoc top-level folders.
 
 Historical paths are provenance. Do not mass-rename them solely to fit the current layout.
 
+## Public research preflight — metadata gate (2026-10-25)
+
+Dla każdego nowego **public-safe** pełnego tekstu `research/**/*.md` / `.rst` / `.txt` przed publikacją zastosuj [wspólny szablon](templates/IW_MATERIAL_WORK_RETURN_TEMPLATE.md), a następnie uruchom:
+
+```bash
+python scripts/preflight_public_science_writeback.py research/<lineage>/<YYYY-MM-DD>/<file>.md
+# dla wszystkich nowo dodanych i zmodyfikowanych research docs w danym zakresie
+python scripts/preflight_public_science_writeback.py --base <BASE_SHA> --head <HEAD_SHA>
+```
+
+W pierwszych **3500 znakach pliku**, od początku wierszy bez wcięć, muszą wystąpić rzeczywiste (nie opisowe) wartości:
+- `artifact_id: <real-artifact-id>`;
+- `exposure: PUBLIC` — tylko po zgodzie na publiczną ekspozycję, inaczej nie publikuj w tym repo;
+- jedna z rozpoznawanych nazw: `scientific_claim_ceiling`, `claim_ceiling`, `result_class`, `status`, z niepustą wartością (preferuj jawny `claim_ceiling` i uczciwą kategorię wyniku);
+- **albo** `bw_ingestion_event_id: ING-YYYYMMDD-NNNN` (prawdziwy istniejący ING), **albo** `sync_state: GITHUB_PENDING_BW_INGEST` (gdy KN/BW jeszcze nie dokonał ingestii).
+
+Nazwy `RETURN_ID`, `CLASS`, `CEILING`, `BW_PENDING`, `bw_event_or_pending` i `exposure: PUBLIC_SAFE` **nie** zastępują rozpoznawanych pól. Nie wymyślaj ING i nie deklaruj `SYNCED` na podstawie samego publikowania. Całe źródło musi być pełnym body, nie `POINTER_ONLY/HASH_ONLY`, i spełniać istniejące wymagania linta długości.
+
+**Istotna luka CI:** workflow `Public source locator guard` uruchamia drugą kontrolę `check_public_science_writeback.py` z `--diff-filter=A`. Zielony run po poprawieniu istniejących plików **nie poświadcza** poprawności ich metadanych; użyj jawnego preflight na pełnej treści (lub `--base/--head` z `A+M`). Nie uruchamiaj rerun starego SHA jako testu korekty.
+
+**Odnajdywanie runów:** domyślne `fetch_commit_workflow_runs` konektora filtruje tylko `pull_request`; dla `push` podaj istniejący `run_id` z alertu lub wykonaj GitHub API `GET /repos/wmakiela-tech/Nash-iw-research/actions/runs?head_sha=<FULL_SHA>&event=push` (dobierz `workflow_id=382571550` z odpowiedzi). Zero wyników z wyszukiwania `pull_request` **nie oznacza**, że run nie istnieje. Nie zmieniaj triggerów workflow tylko w celu naprawienia wyszukiwarki.
+
 ## BW handshake
 
 A material GitHub commit is not complete project custody by itself.
