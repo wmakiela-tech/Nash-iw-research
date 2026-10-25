@@ -1,0 +1,33 @@
+# XH-S4 028 — structured quantum error correction, online drift and conditioning bias
+RETURN_ID: XH-S4-20261025-QEC-ERASURE-DRIFT-POSTSELECTION-028
+CELL: IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_03
+DATE: 2026-10-25
+CLAIM_CEILING: SOURCES_EXPERIMENTALLY_CONFIRMED_IN_THEIR_OWN_HOSTS / CLASSICAL_TOY_NOT_QUANTUM_VALIDATION / NO_NEW_NASH_PHYSICS / NO_CANON / NO_EXEC_SIGN / NO_OWNER_TASKS / NO_BW_INGESTION.
+
+## New original experimental 2026 sources (FULL HTML primary)
+SOURCE A: "An entangling gate for dual-rail erasure qubits", Nature 656,47–53, August5 2026, DOI https://doi.org/10.1038/s41586-026-10822-y , full https://www.nature.com/articles/s41586-026-10822-y . (Web metadata lists "D-Wave Quantum Inc." as author and is unusual; do NOT infer paper author team from this metadata.) SOURCE: superconducting dual-rail cavity qubits + transmon coupler, Swap-Wait-Swap CZ duration ~500 ns. Erasure rate 0.53(2)% per gate from long repetition fit; postselected per-CZ infidelity 0.029(6)% from first <=15 CZ repeats, ~0.12(1)% conservative inferred from long 103-repeat circuit, observed nonexponential/quadratic decoherence at large depth from drift/coupler fluctuations. Their IRB gives erasure 0.69(2)%/gate under DIFFERENT gate/protocol and conditional target Pauli error .012(1)% and .013(1)% per CZ; do not conflate different estimator samples. Bit-flip ~1e−6 and erasure/error hierarchy in particular extracted source experiments. Paper's many-cycle surface-code threshold ~5.6% with delayed perfect erasure check and other surface-code logical claims are SIMULATIONS, not a demonstrated fault-tolerant code on an integrated device. Protocol assumption includes perfect erasure check and leakage skips subsequent gates; correlated errors, readout faults and scaling require further work. Author-supplied QEC simulation code deferred to future publication, no reproducible full large-code simulation here.
+SOURCE B: Vladyslav/Vladimir Sivak, Morvan, Broughton et al., "Reinforcement learning control of quantum error correction", Nature 655,879–884 published July8 2026, DOI https://doi.org/10.1038/s41586-026-10759-2 , full https://www.nature.com/articles/s41586-026-10759-2 . On Google Willow superconducting surface d5/d7 and color d5 memory, RL controls >1000 analogue pulse parameters using QEC detection events as self-calibration signal. Against INJECTED drift, policy steering gives mean LER reduction 24% and stability *standard deviation* improvement factor2.4; with decoder steering 31% mean reduction and factor3.5 **STABILITY**, NOT factor3.5 mean logical error improvement. Real-time RL policy uses error detection events as proxy, decoder steering currently requires LER estimation and is not obviously fully online scalable. At injected drift faster than learning lag ~130 epochs / critical ~1/150 epochs, controller cannot follow. Source's peak average logical error per cycle 7.72(9)e−4 surface and 8.19(14)e−3 color belong to their tested configuration and are not NASH.
+TYPED CROSS-SOURCE: A changes error CHANNEL STRUCTURE (located erasure vs unlocated errors). B adapts physical ERROR GENERATOR and decoder over time. Orthogonal features; neither paper establishes the other feature on same hardware. Not equivalent to "general scientific claims more correct when diagnosed."
+
+## Independent EXACT classical toy 1: erasure flagging changes decoder information
+5-bit classical repetition of one binary bit with ideal independent errors p=.005 per position.
+If every erasure position is known perfectly and erasure doesn't corrupt surviving bits, recover bit from any one surviving position; decoder fails only if all five erased, P_L_erasure=p^5=3.125e−12.
+If each bit independently FLIPS with unlocated probability p, majority decoder fails for 3 or more flips:
+ P_L_flip=Σ_{k=3}^5 (5 choose k) p^k (1-p)^(5-k)=1.24064375e−6.
+Ratio ≈397006 for SAME raw per-position p and drastically DIFFERENT location information. THIS IS NOT A quantum CSS/surface code threshold, not evidence that a specific Nature gate realizes this exponential gap. No correlated, leakage-propagation, faulty syndrome or measurement errors in toy.
+
+## Independent toy 2: POSTSELECTION conditional denominator
+Take a hypothetical IID erasure probability .0053 per gate (using Nature A fitted per-CZ erasure merely as parameter). Probability zero erasures after m gates is (1−.0053)^m:
+ m1 .9947, m15 .9233827756, m27 .8663376414, m103 .5784797329.
+This is not source experimental survival curve: physical erasure rates may be history dependent and protocol conditions differ. It proves that conditional fidelity among ACCEPTED trials cannot be directly labeled unconditional success or scalable yield. Source observed quadratic/depth-correlated drift further invalidates an unconditional IID extrapolation as a fitted model.
+
+## Negative knowledge and new XH questions
+Q89/P0: What kind of failure is dominant — LOCATABLE erasure, nonlocatable bit/phase error, leakage propagated conditionally, coherent rotation, correlated burst? Different coders and mathematical thresholds.
+Q90/P0: Which reported probability has which denominator — per gate, per accepted shot, per logical cycle, end-to-end circuit, conditional sample or extrapolated simulation? Must retain source protocol and uncertainty.
+Q91/P0: Does the monitoring/decoder have a separate ground-truth logical readout so "lower detector syndrome" is not mistaken for "fewer physical faults" when monitoring changes? Source B explicitly crosschecks LER; decoder steering uses LER estimates. Require independent logical proxy.
+Q92/P0: How fast can controller track drift vs feedback lag and correlated rare events? Source B ~130 epoch recovery and fast drift cannot be tracked; threshold is host-specific.
+Q93/P1: Under matched computational resource and detector budget, is it better to engineer dominant errors into flaggable classes, reduce marginal rate, or learn time-varying decoder? This is an OPTIMAL EXPERIMENT QUESTION not tested by either source jointly.
+
+## Cross-connection to NASH / claim ceiling
+NASH can borrow verification PROTOCOL design principles: distinguish visible vs hidden model misspecification, conditioning-on-PASS vs unconditional output, benchmark stationary vs drifting conditions, and independent held-out truth. Never equate quantum error channels to NASH theoretical uncertainty or treat hardware success as evidence for NASH physical mechanisms. Reproduction is an elementary CLASSICAL calculation, not the Nature experiment or quantum channel analysis.
+Local artifact shared ZIP IW_XH_S4_027_029_REPRODUCIBILITY.zip; SHA256 b45baf567c902be1a49334aefb0566cd19a29a0c29e2b0523669e05c385541d1. Script/JSON with SHA in manifest, CLEAN_REPLAY_PASS.
