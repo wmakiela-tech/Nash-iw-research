@@ -357,3 +357,37 @@ IW_NC_ODBIOR_GROK_DEGRADACJA_T2_I_RANGA_TYLKO_N2_033_20261025 | PUBLIC_SAFE | re
 
 Wiersze 89 -> 91. Trzy redukcje zakresu ART029 w ciagu czternastu godzin, z **trzech roznych
 powierzchni**: wlasny rejestr (031), wlasna preregestracja (032), zewnetrzny red-team (034).
+
+---
+
+## Dyspozycja 035 — START dla watku Badacza, nastepca wersji czerwcowej
+
+Przygotowany na prosbe Moderatora. **Nie wgrany do biblioteki** — Moderator wgrywa recznie.
+
+Przed napisaniem przeszedlem po bibliotece zamiast pisac obok: istnialy trzy pliki START, w tym
+`START_CLAUDE_SCIENTIFIC_LEADER_GROTHENDIECK_v1` (25 VI), ktory jest blizszym przodkiem, niz sie
+spodziewalem. Nowy plik jest jego **nastepca**, nie rownoleznikiem.
+
+**Cztery kolizje czerwcowej wersji z obecnymi regulami — istotne dla kazdego, kto z niej startowal:**
+
+1. **Narzucala patrona** (Grothendieck z alternatywami). Obecna regula mowi, ze Badacz wybiera
+   patrona **sam, w swoim watku**, i ze wybor jest czescia roli, nie dekoracja narzucona z gory.
+2. **Odwolywala sie do plikow po NAZWACH I WERSJACH**, z instrukcja „wybierz najwyzsza wersje".
+   Obecne reguly wymagaja odwolan po **rodzaju** pliku, bo pliki sie zmieniaja.
+3. **Miala status `[▲] „dowod + audyt Claude"`.** `ANTI-SELF-SEALING` powstalo pozniej i audyt
+   Claude'a nad Claude'em nie jest audytem zewnetrznym. **To jest kolizja nosna, nie redakcyjna:**
+   watek startowany z tamtego pliku moze uwazac, ze wlasny audyt wystarcza do podniesienia statusu.
+4. **Twierdzila stan naukowy jednej sprawy jako fakt.** Start nie jest nosnikiem stanu.
+
+Dodane: osiem bramek z udokumentowanymi `origin_failure_mode` z 18–25 X (dwie powierzchnie
+odejmowania, zakres waznosci tozsamosci przy falsyfikatorze, tolerancja przy kresie na brzegu,
+swiadek konstrukcyjny zamiast maksimum z przeszukiwania, „nie znalazlem" w rodzinie wykluczajacej
+mechanizm, latanie mechanizmu nie objawu, czytanie tego co red-team uznal za czyste, typ claimu).
+Dodane tez: asymetria dostepu do narzedzi i pakiet samowystarczalny, oraz regula jednej pozycji.
+
+Zachowane bez zmian, bo dziala: „wolnosc w generowaniu, rygor w claimowaniu", epistemologia puzzli,
+pytanie gdzie puzzel nie pasuje, trzymanie wielu reprezentacji naraz, zmiana reprezentacji zamiast
+zwiekszania sily.
+
+Plik archiwalny: `research/nc/2026-10-25/START_CLAUDE_BADACZ_v2_20261025.md`.
+Sufit: propozycja startowa, `NO_CANON`, bez `EXEC_SIGN`; przyjecie nalezy do Moderatora.
