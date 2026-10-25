@@ -315,3 +315,45 @@ claim-relevant, zwalnialbym wlasna prace od sprawdzenia — to byloby self-seali
 postaci. Domyslnie kazdy wiersz jest claim-relevant.
 
 `[▷]` bez audytora funkcyjnego: **36 -> 0**. Wiersze 89, licznik otwartych bez zmian (17).
+
+---
+
+## Zwrot 034 — odbior red-teamu Groka: degradacja T2, redukcja rangi tylko n=2
+
+Pierwszy zwrot lateralny w serii. Grok dostal pakiet **samowystarczalny przez Moderatora** (brak
+dostepu do GitHuba), z wypisanymi wprost trzema bledami, ktore znalazlem sam — zeby ich nie
+szukal ponownie, bo zgoda modeli nie jest dowodem.
+
+**Trafienie Groka, przyjete po sprawdzeniu argumentu, nie na slowo:** T2 bylo przedstawione jako
+prog o wadze porownywalnej z T1, a jest niemal tautologia definicji normy logarytmicznej.
+Sprawdzilem oba kierunki — dwie linie, z ktorych jedna jest definicja `mu_2`. **Ma racje.**
+T2 **degradowane** z twierdzenia do pomostu i **usuniete** z listy „co zostaje jako nowe"
+(ART031 par. 3, ART032 par. 5). Nie jest wycofane jako falszywe — jest prawdziwe; degradowane jest
+jego **znaczenie**. Trzecie wystapienie tego gatunku w ciagu doby po `NC-FAL-024`.
+
+**Korekta pochodna, ktorej Grok NIE zglosil jako trafienia** — postawil „(n=2)" w **nawiasie**
+przy rzeczy uznanej za czysta. `Pi = I - dd^T` ma range `n-1`, nie 1, wiec `rho = tr =
+w^T e^{G*Delta} w` zachodzi **wylacznie przy n=2**. Zmierzone: przy `n=3` slad `2.061` wobec
+`rho = 1.033` — formula jest tam **falszywa**. Pytanie skierowane do MT13 bylo **zle postawione**:
+przy `n>2` `d_perp` nie jest kierunkiem, lecz podprzestrzenia wymiaru `n-1`.
+**Wzorzec operacyjny:** przy odbiorze red-teamu czytac takze to, co audytor uznal za POPRAWNE —
+kwalifikatory stawiane tam moga byc trafieniami, ktorych sam nie zglasza.
+
+**Redakcja w ART030** zawezona: „wspolne dla kazdego lambda" bylo dwuznaczne; teraz jawnie
+„przy kazdym ustalonym lambda wszystkie zrodla utrzymujace nasycenie daja to samo `X(T)`".
+
+Po czterech redukcjach zostaje: **T1** (wymiarowo ogolne, Grok sprawdzil i uznal za czyste),
+**T1a**, **falsyfikacja H-A** konstrukcja, oraz **redukcja rangi 1 ograniczona do n=2**.
+Odpowiedz na `NC-OPN-002` stoi; **mechanizm** przy `mu_2>0` jest faktem o `2x2`.
+
+Ograniczenie, ktore podal Grok: pakiet nie zawieral ART031/032 ani kodu, wiec „nic poza T2" nie
+jest dowodem nieistnienia. To ograniczenie **mojego pakietu**, nie jego pracy.
+
+### Lokator zwrotu 034
+
+```text
+IW_NC_ODBIOR_GROK_DEGRADACJA_T2_I_RANGA_TYLKO_N2_033_20261025 | PUBLIC_SAFE | research/nc/2026-10-25/IW_NC_ODBIOR_GROK_DEGRADACJA_T2_I_RANGA_TYLKO_N2_033_20261025.md | commit 592195928ed88317062faf8cafb23bd34392a07f, blob 0f5d335bd098d80fd359fb50c05e667853a197ba | GITHUB_PENDING_BW_INGEST | NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / AUDYT NADAL OTWARTY | BRAK
+```
+
+Wiersze 89 -> 91. Trzy redukcje zakresu ART029 w ciagu czternastu godzin, z **trzech roznych
+powierzchni**: wlasny rejestr (031), wlasna preregestracja (032), zewnetrzny red-team (034).
