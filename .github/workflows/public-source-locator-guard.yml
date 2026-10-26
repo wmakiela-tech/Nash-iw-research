@@ -29,3 +29,10 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: python scripts/check_public_science_writeback.py --base "$BASE_SHA" --head "$HEAD_SHA"
+      - name: Check newly added AND modified public scientific metadata
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python scripts/preflight_public_science_writeback.py --base "$BASE_SHA" --head "$HEAD_SHA"
+      - name: Test public scientific metadata preflight
+        run: python -m unittest discover -s tests -p test_preflight_public_science_writeback.py -v
