@@ -169,3 +169,8 @@ R11 future falsifiers/review:
 ## 7. Source-typed return
 
 PRF12_R11 / EXACT_9_PRODUCT_EFFECT_COMPLETENESS / C8_EQUANGULAR_TIGHT_FRAME_9 / PRODUCT_RANKONE_OUTCOME_MINIMALITY_PROVED_LOCAL / EXACT_HELSTROM_FOR_ALL_Q_IDEAL_N3 / INDEPENDENT_NUMPY_MATRIX_REPRO_PASS / NO_LOCC_IMPLEMENTABILITY / BINARY_LOCC_CLOSURE_GAP_OPEN / INDEPENDENT_REFEREE_PENDING / NO_NOVELTY / NO_CANON / NO_EXEC / GITHUB_PENDING_BW_INGEST.
+
+
+## Later R12 strengthening — 2026-10-27
+
+PRF12 R12 proved that, for the SAME frozen n=3 ideal SWAP Cauchy/Lévy source pair and exact endpoint Helstrom performance, **every nonzero PRODUCT positive operator effect in an exactly optimal fine-grained POVM is automatically rank one**, even if its local factor ranks were not initially restricted. The R11 nine-outcome minimality therefore holds among ALL individually PRODUCT PSD effects, not merely the initially assumed rank-one subfamily. Crucial proof: no two-dimensional product-factor slice lies in either Q-perp=Sym^3(C²) or P-perp, the latter following from the polynomial identity (b0+b1*t)(c0+c1*t)=0 implying a zero local ket. This does NOT imply minimum nine for general SEPARABLE summed effects, LOCC closure nonapproximability, or any real device cost. Full theorem and new equatorial adaptive LOCC witnesses: https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf12/2026-10-27/IW_PRF12_R12_RANKONE_RIGIDITY_PRODUCT_EFFECT_MINIMALITY_AND_EQUATORIAL_LOCC_001_20261027.md . Independent referee pending.
