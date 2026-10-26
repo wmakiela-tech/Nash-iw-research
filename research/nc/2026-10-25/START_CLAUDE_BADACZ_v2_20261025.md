@@ -1,3 +1,9 @@
+artifact_id: START_CLAUDE_BADACZ_v2_20261025
+exposure: PUBLIC
+result_class: PROCEDURAL_START_PROPOSAL_NOT_SCIENTIFIC_RESULT
+status: PROPOSAL_ONLY_REQUIRES_MODERATOR_ACCEPTANCE
+sync_state: GITHUB_PENDING_BW_INGEST
+
 # START — CLAUDE / BADACZ — v2
 
 **Przeznaczenie:** uruchomienie nowego wątku badawczego Claude w projekcie Nash (IW/Nash-IDG).
