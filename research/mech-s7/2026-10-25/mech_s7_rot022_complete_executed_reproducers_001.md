@@ -1,3 +1,8 @@
+artifact_id: MECH-S7-ROT022-COMPLETE-EXECUTED-REPRODUCERS-001_20261025
+exposure: PUBLIC
+claim_ceiling: EXECUTED_CONDITIONAL_7D_REPRODUCERS / NOT_ORIGINAL_JULIA_10D / NO_PHYSICAL_BBN
+sync_state: GITHUB_PENDING_BW_INGEST
+
 # Mech-S7 ROT022 — complete executed Python source and reproduction protocol
 
 This file contains **all three executed ROT022 scripts verbatim**. To reproduce: save each fenced section as the named `.py` file in one directory with the documented ROT021/020/013 dependency files and original Wu-Xu trajectory ZIPs, then run in numeric order with Python+NumPy+SciPy. Full set of dependencies and exactly pinned raw archives are included in the local reproducibility ZIP. Source below `M=1e9g` remains physically unvalidated; no original Julia 10D run.
