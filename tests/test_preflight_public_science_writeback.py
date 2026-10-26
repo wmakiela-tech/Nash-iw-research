@@ -110,6 +110,65 @@ class TestPreflight(unittest.TestCase):
                 cwd=tmp, capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_unrelated_commit_does_not_fail_ci(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            filename = root / "README.md"
+            filename.write_text("one\\n", encoding="utf-8")
+
+            def git(*args):
+                return subprocess.run(
+                    ["git", *args], cwd=tmp, capture_output=True, text=True,
+                    check=True).stdout.strip()
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+            git("add", ".")
+            git("commit", "-q", "-m", "baseline docs")
+            base = git("rev-parse", "HEAD")
+            filename.write_text("two\\n", encoding="utf-8")
+            git("add", ".")
+            git("commit", "-q", "-m", "docs only")
+            head = git("rev-parse", "HEAD")
+            result = subprocess.run(
+                [sys.executable,
+                 str(BASE / "scripts/preflight_public_science_writeback.py"),
+                 "--base", base, "--head", head],
+                cwd=tmp, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("PASS: 0", result.stdout)
+
+    def test_nontext_research_helper_does_not_fail_ci(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "research/test"
+            root.mkdir(parents=True)
+            filename = root / "helper.py"
+            filename.write_text("value = 1\\n", encoding="utf-8")
+
+            def git(*args):
+                return subprocess.run(
+                    ["git", *args], cwd=tmp, capture_output=True, text=True,
+                    check=True).stdout.strip()
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+            git("add", ".")
+            git("commit", "-q", "-m", "baseline research helper")
+            base = git("rev-parse", "HEAD")
+            filename.write_text("value = 2\\n", encoding="utf-8")
+            git("add", ".")
+            git("commit", "-q", "-m", "modify research helper")
+            head = git("rev-parse", "HEAD")
+            result = subprocess.run(
+                [sys.executable,
+                 str(BASE / "scripts/preflight_public_science_writeback.py"),
+                 "--base", base, "--head", head],
+                cwd=tmp, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("PASS: 0", result.stdout)
+
     def test_no_input(self):
         result = subprocess.run(
             [sys.executable, str(BASE / "scripts/preflight_public_science_writeback.py")],
