@@ -66,7 +66,7 @@ N32 p2 8.10958e-6; p3 4.47428e-6.
 N128 p2 8.20801e-6; p3 4.52859e-6.
 N256 p2 8.21295e-6; p3 4.53131e-6.
 
-A complete expanded 11KB report, both standalone executed scripts, both JSON outputs, immutable original helper, README, stdout and nine-content-entry SHA manifest are stored in the local user-conversation ZIP GEEKY_S11_ROT023_SCALAR_TT_MEMORY_ECHO_ALL_ALPHA_REPRO_001.zip, SHA256 8f99864d211ff00af2047b40ecee32d8b77b57c4a73e4e1a1065528ce248d7dd. Clean extracted ZIP CRC, SHA256 9/9, and independent reexecution of BOTH scripts with BYTE-IDENTICAL outputs PASS. This report publication does NOT claim separate GitHub code upload.
+A complete expanded 11KB report, both standalone executed scripts, both JSON outputs, immutable original helper, README, stdout and nine-content-entry SHA manifest are stored in the local user-conversation ZIP GEEKY_S11_ROT023_SCALAR_TT_MEMORY_ECHO_ALL_ALPHA_REPRO_001.zip, SHA256 29b959a3e76f2cebd7f5233f0f9c761ed98df36c46a79bc748d5710faf205070. Clean extracted ZIP CRC, SHA256 9/9, and independent reexecution of BOTH scripts with BYTE-IDENTICAL outputs PASS. This report publication does NOT claim separate GitHub code upload.
 
 ## Guardrails
 
