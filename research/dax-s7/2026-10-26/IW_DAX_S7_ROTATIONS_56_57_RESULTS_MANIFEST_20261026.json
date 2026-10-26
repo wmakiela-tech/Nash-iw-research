@@ -1,0 +1,81 @@
+{
+  "title": "IW/NASH DAX-S7 rotations 56 and 57 independent Wu-Xu source-equation audit",
+  "date": "2026-10-26",
+  "status": "SOURCE_EQUATION_DILUTION_OMISSION_VERIFIED / EIGHT_ARM_CONDITIONAL_PORT / NO_EXEC / NO_CANON",
+  "lineage": "IW_DIVERGENT_SEARCH_AND_ANOMALY_CELL_001_SUCCESSOR_06 / DAX-S7",
+  "source_repository": "Fenyutanchan/Primordial-Black-Hole",
+  "source_blobs": {
+    "arXiv-2509.05618/main-scan.jl": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "arXiv-2509.05618/data/ext/N_around_m_e.csv": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+    "arXiv-2509.05618/data/ext/N_s_from_PDG2024.csv": "33aceb876fc36cb2486d36c690e6401d85d76b46",
+    "arXiv-2509.05618/data/ext/N_rho_OVER_N_s_from_PDG2024.csv": "28b0c13563d7b3bdeaee191a3a981197345d05b8",
+    "arXiv-2509.05618/data/out/hadrons_from_PBH.dat": "06d0883a27b108692720422294ba2baacd381a64"
+  },
+  "rotation_56": {
+    "missing_term": "-3H*n_h in six physical hadron number-density ODEs",
+    "T_MeV_scope": [
+      0.07818527068831994,
+      10
+    ],
+    "Tnuc_s_minus1_H_rad": 0.002436459207683932,
+    "Xn_snapshot": 0.12,
+    "maximum_3H_over_D_found_on_discrete_grid": 0.000005289839866500802,
+    "grid": "601 log-spaced T x 11 Xn values",
+    "boundary": "No global Yp bound; H_rad local rate control; all temperatures outside scope untested"
+  },
+  "rotation_57": {
+    "mass_g": 9672500000,
+    "betas": [
+      0,
+      1e-20,
+      5e-20,
+      1e-19,
+      2e-19,
+      3e-19,
+      5e-19,
+      1e-18,
+      3e-18,
+      1e-17
+    ],
+    "cases": 10,
+    "arms_per_case": 8,
+    "arms_total": 80,
+    "background_steps_pre": 10000,
+    "background_steps_evap": 12000,
+    "beta_focus": 3e-19,
+    "X_source_finite_original": 0.1251319493319071,
+    "X_source_finite_plus3H": 0.12513193729706112,
+    "X_conserved_finite_original": 0.1225598596447421,
+    "X_conserved_finite_plus3H": 0.12255985015911582,
+    "delta_X_baryon": -0.002572089687165005,
+    "delta_X_expansion_source": -1.2034845980890552e-8,
+    "delta_X_expansion_conserved": -9.485626284444493e-9,
+    "delta_X_interaction": 2.549219696446059e-9,
+    "ratio_baryon_to_expansion_source": 213720.19976400863,
+    "Yp_change_2X": -0.00514417937433001,
+    "Yp_code_change": -0.0067012535254032946,
+    "source_table_inputs_validated_by_connector": true,
+    "julia_solver_executed": false,
+    "local_full_data_replay_executed": false,
+    "python_static_selftest": "PASS",
+    "python_syntax_check": "PASS",
+    "grid_refinement_for_all_80_cases": "NOT_PERFORMED"
+  },
+  "outputs": {
+    "reports": [
+      "IW_DAX_S7_ROTATION_56_HADRON_EXPANSION_DILUTION_AUDIT_20261026.md",
+      "IW_DAX_S7_ROTATION_57_JOINT_BARYON_HADRON_EXPANSION_AUDIT_20261026.md"
+    ],
+    "code": "IW_DAX_S7_ROTATIONS_56_57_EXPANSION_DILUTION_FULL_PORT_20261026.py",
+    "data": "IW_DAX_S7_ROTATION_57_JOINT_BARYON_HADRON_EXPANSION_MATRIX_20261026.csv"
+  },
+  "negative_knowledge": [
+    "NO_CANON",
+    "NO_PBH_BOUND",
+    "NOT_FULL_JULIA",
+    "NO_FULL_NUCLEAR_BBN_NETWORK",
+    "LOW_MASS_HADRON_EXTRAPOLATION_UNTESTED",
+    "NUMERICAL_TOLERANCE_FOR_1E-8_NOT_FORMALLY_CERTIFIED"
+  ],
+  "next_falsifier": "Run modified source Julia with source nB vs comoving-conserved nB and six hadrons with/without -3H*n_h; compare at first T_nuc time crossing."
+}
