@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""PRF12 R09: exact n=3 source model and explicit LOCC gap >= mu(q)/72.
-Independent finite 8x8 computational checks; external necessary theorem:
+"""PRF12 R09 AUDIT: exact n=3 source model and restricted binary-decision product-minor threshold mu(q)/72; NOT a full LOCC discrimination bound.
+Independent 8x8 computational checks; WARNING: cannot apply the theorem below directly to binary effects obtained by coarse-graining refined LOCC outcomes. Source:
 S. M. Cohen, PRA 105, 022207 (2022), Theorem 1.
 No numerical optimization over all LOCC is performed or claimed.
 """
+# SCIENTIFIC CLAIM WITHDRAWAL: legacy filename is misleading. This code verifies ONLY
+# a restricted product-minor obstruction; full LOCC positive gap is NOT proved.
 import numpy as np
 from math import exp,sqrt
 from itertools import product
@@ -73,7 +75,7 @@ def main():
               f"explicit_LOCC_gap_lower={mu/72:.12f}; "
               f"LOCC_gap_upper={hel-r08_lower_locc(q):.12f}")
     q=1/3;x=exp(-q);mu=(1-exp(-2*q))*(1-x)/8
-    print('R09 CERTIFIED DELTA lower at q=1/3:',mu/72)
-    print('ASSUMPTION: Cohen (2022) theorem 1 for closure(LOCC)')
-    print('THEOREM PROOF: no nonscalar product in near-optimal binary zonotope')
+    print('NOT AN LOCC GAP LOWER BOUND; restricted binary-zonotope threshold at q=1/3:',mu/72)
+    print('COARSE-GRAINING BLOCKER: Cohen path criterion on fine-grained POVM cannot be transferred without proof to binary decision zonotope')
+    print('RIGOROUS RESTRICTED LEMMA: no nonscalar product in near-optimal binary decision zonotope; full LOCC delta remains UNKNOWN')
 if __name__=="__main__": main()
