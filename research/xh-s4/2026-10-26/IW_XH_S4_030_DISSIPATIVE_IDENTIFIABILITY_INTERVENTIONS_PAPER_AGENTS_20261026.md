@@ -1,0 +1,19 @@
+# XH-S4 / ROTATION 030 / 2026-10-26
+RETURN_ID: XH-S4-030-IDENTIFIABLE-DISSIPATIVE-DYNAMICS-EXPERIMENT-DESIGN-PAPER2AGENT-20261026
+CLASS: 2026_EXACT_SOURCE_THEOREM / ACTIVE_DESIGN_FALSIFIER / EXECUTABLE_PAPER_CUSTODY
+GUARDS: NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_PRIORITY / NO_NASH_PHYSICAL_KJ3 / NO_BW_INGESTION / NO_OWNER_TASKS.
+
+## 2026 new theoretical and method hosts
+Zhu, Soh, Pavliotis, Li, *Identifiable learning of dissipative dynamics*, Nature Communications 17,9460, Aug6 2026 https://doi.org/10.1038/s41467-026-76255-3 . Authors' UIDD Theorem 1: for a NONDEGENERATE regular Itô SDE with a unique stationary density rho, potential V=−log rho determined up to additive constant, canonical reversible/irreversible drift under imposed decomposition; uses M=σσ^T/2 positive and banded antisymmetric W and divergence corrections. Does NOT state uniqueness for arbitrary partial observations, deterministic models or NASH geometry. Applications include 300-bead polymer flow and stochastic gradient Langevin, source-specific experimental/computational scope.
+Miao, Davis, Zhang, Pritchard, Zou, *Reimagining research papers as interactive and reliable AI agents*, Nature Sep16 2026 https://doi.org/10.1038/s41586-026-11044-y . Paper2Agent exposes paper source/data/methods as executable MCP workflows and tests, reproduces selected computational results; gene/ADHD mechanistic prioritization remained a computational hypothesis requiring experimental validation. SOURCE EVIDENCE TYPES must not collapse: paper's code executes vs source result reproduces vs new physical hypothesis confirmed.
+*Optimal experiment design for practical parameter identifiability and model discrimination*, Mathematical Biosciences 399,109710 Sept2026 DOI https://doi.org/10.1016/j.mbs.2026.109710 . Publisher abstract/highlights only: profile likelihood and optimal control design, parameter vs model discrimination. NO full source theorem reviewed, avoid invented numerical specifics.
+## XH exact controls with code and independent calculation
+Controlled ODE dx/dt=−x+theta*u(t), initial x0=0. When u(t)=0, observed x=0 for ANY theta, Fisher information 0 at any sampling schedule. When u=1, x_theta=theta(1−e^-t), for theta=2 at t1 x=1.2642411. With independent Gaussian sensor SD=.1 at t=.2,1,2, local Fisher info for theta=Σ(1−e^-t)^2/.01 =118.0080013. Requires measured full state and known input, not guarantee global identification with unknown gains or misspecification.
+Stationary-distribution counterexample: OU dZ=(−I+omega J)Zdt+sqrt2 dW with J skew. For every omega=0,.5,2, invariant covariance Sigma=I exactly (drift covariance Lyapunov residual zero), centered invariant law N(0,I). However stationary probability current j(x)=omega Jx rho(x), absent at omega0, nonzero otherwise; trajectories/directed response distinguish. This does not contradict UIDD Theorem 1 because only stationary marginals, NOT trajectory drift or source diffusion, were observed.
+## Research Q97–Q100
+Q97/P0 declare whether available readout is stationary snapshot, time trajectory, active forcing response or raw TT RMS, and identify exactly which mechanism can be inferred.
+Q98/P0 test excitation rank, measurement gain and local Fisher information; zero-input fail vs active-input pass controls.
+Q99/P1 within-model identifiable parameters not equal discrimination of rival mechanisms; held-out prospective intervention and profile likelihood with nuisance.
+Q100/P0 paper-method code execution, deterministic result reproduction and external experimental validation belong to separate evidence tiers. Paper2Agent and Github readback help custody, not proof of novel physics.
+## Reproduction
+Detailed standalone REPORT.md, NumPy reproduce.py, results.json, SHA manifest ZIP IW_XH_S4_030_REPRODUCIBILITY_20261026.zip, clean-room replay PASS. ZIP SHA256 12f926a20dbc56690e113590a1ba0d1821588d155e3f8954fb9104645e75ef8f.
