@@ -101,3 +101,43 @@ GITHUB_COMMIT != BW_EVENT
 MIRROR_SYNC != SCIENTIFIC_VALIDATION
 PUBLIC_GITHUB != PRIVATE_IW_COMMONS
 ```
+
+## Public publication release gate — author + PR (2026-10-26)
+
+For **any public-safe** change, use a feature branch and open a pull request
+instead of publishing directly on `main`. After making and locally committing
+the candidate change, check the full branch diff **before pushing**:
+
+```bash
+git fetch origin main
+python scripts/prepublish_public_science.py --base origin/main --head HEAD
+# Only if PASS:
+git push -u origin <feature-branch>
+# Open a PR into main, wait for both checks.
+```
+
+This unified author-side check is fail-closed for unreadable/detached Git
+history, reports **categories** rather than private provider coordinates, and
+checks newly added lines for direct Drive/Slack coordinates and added or
+modified full public `research/**/*.md/.rst/.txt` bodies for the required
+`artifact_id`, `exposure: PUBLIC`, claim ceiling and BW event/pending state.
+
+The same script runs in the `Public source locator guard` workflow for PRs
+and as a post-push audit of `main`. The stable check job is
+`Public source locator guard / newly-added-public-locators`. The ordinary
+`CI / unit-tests` job remains independent. This is **not** a BW write,
+publication-rights review or proof of scientific correctness.
+
+**Repository-owner setting required to make this fail-closed server-side:**
+in GitHub Settings → Branches → add a protection rule for `main`.
+Require a pull request and the two successful status checks listed above,
+disable force pushes and deletion, and apply the rule to administrators
+(where available). Confirm a deliberately failing synthetic PR cannot merge.
+Without this protection a direct push can land before a failed Actions audit;
+a green check on a later commit never repairs prior public disclosure.
+
+Historical offending commits and links require separate risk-reviewed
+remediation (removing a link from HEAD does not purge Git history). Do not
+force-rewrite shared `main` or remove scientific source artifacts merely
+to make a check green. For private or restricted content, use the authorized
+private surface and only public-safe, ID-typed source descriptions here.
