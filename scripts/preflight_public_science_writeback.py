@@ -36,8 +36,11 @@ def changed_paths(base: str, head: str) -> list[str]:
          "--diff-filter=AM", base, head, "--", "research/"],
         check=True, capture_output=True,
     )
-    return [part.decode("utf-8", "replace") for part
-            in result.stdout.split(b"\0") if part]
+    paths = [part.decode("utf-8", "replace") for part
+             in result.stdout.split(b"\0") if part]
+    # Diff also contains scripts/data in research/. The science metadata guard
+    # applies only to text research bodies, never code/data artifacts.
+    return [path for path in paths if eligible_path(path)]
 
 
 def preflight_path(path: str, body: str) -> list[str]:
@@ -60,6 +63,11 @@ def main(argv: list[str] | None = None) -> int:
     try:
         candidates = changed_paths(args.base, args.head) if args.base else args.paths
         if not candidates:
+            if args.base:
+                # A routine docs/code-only commit must not fail a metadata gate
+                # intended for added or modified public research text bodies.
+                print("PASS: 0 added/modified public research text bodies selected")
+                return 0
             print("FAIL: NO_ELIGIBLE_RESEARCH_PATHS_SELECTED")
             return 2
         failures = []
