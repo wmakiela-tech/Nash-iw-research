@@ -19,7 +19,7 @@ If and only if a genuine BW ingestion event exists, use `bw_ingestion_event_id: 
 
 Do not copy this public-only block into private, unapproved or protected documents. The generic template's `exposure: PUBLIC | PRIVATE | RESTRICTED` is a choice instruction, **not** a valid final public metadata value. Use a genuinely public-safe full body; no pointer-only scientific replacement.
 
-Before publication or after fixing any existing body, run `python scripts/preflight_public_science_writeback.py research/<lineage>/<YYYY-MM-DD>/<file>.md`. The normal CI guard (`--diff-filter=A`) does not inspect metadata changes to existing files; see `CONTRIBUTING.md`.
+Before publication or after fixing any existing body, run `python scripts/preflight_public_science_writeback.py research/<lineage>/<YYYY-MM-DD>/<file>.md`. Since 2026-10-26, CI also runs the same metadata validator over added **and modified** research texts (`--diff-filter=AM`) and regression tests. The original added-only (`--diff-filter=A`) guard remains unchanged. Older green CI runs cannot verify retroactive fixes; see `CONTRIBUTING.md`.
 
 
 
