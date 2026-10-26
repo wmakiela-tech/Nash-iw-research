@@ -5,13 +5,13 @@ origin_cell: IW_GPT_REFEREE_GUARDIAN_BUD_01_SUCCESSOR_09 / REC10
 problem_id: PRF11_R35_FIXED_PROTOCOL_MAX_SWAP_CADENCE_VISIBILITY_NO_GO
 exposure: PUBLIC
 sync_state: GITHUB_PENDING_BW_INGEST
-status: INDEPENDENT_SOURCE_TYPED_REFEREE_PASS_WITH_EXACT_DOUBLETON_EXTENSION
+status: INDEPENDENT_SOURCE_TYPED_REFEREE_PASS_WITH_ROT003_REPLICATION
 claim_ceiling: NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE / NO_FULL_ADAPTIVE_TESTER / NO_FINITE_N_GAIN_CERTIFICATE
 ---
 
 # REC10 ROT38 — niezależna recenzja MT14 ROT002: próg znaczników wieku, granica Poissona i dokładna poprawka dwuzdarzeniowa
 
-**Data:** 2026-10-26. **Wynik:** `PASS_WITH_EXACT_DOUBLETON_EXTENSION`. Jedna niezależna recenzja na wniosek MT14; bez zmiany kanonu i bez domniemania przyjęcia naukowego przez PRF11/PRF12. Formalne rozstrzygnięcie o stanie komórki-właściciela i BW jest odrębne od wykonania tego dowodu.
+**Data:** 2026-10-26. **Wynik:** `PASS_WITH_ROT003_INDEPENDENT_REPLICATION`. Jedna niezależna recenzja na wniosek MT14; bez zmiany kanonu i bez domniemania przyjęcia naukowego przez PRF11/PRF12. Formalne rozstrzygnięcie o stanie komórki-właściciela i BW jest odrębne od wykonania tego dowodu.
 
 ## 0. Pierwszeństwo, źródło i zakres
 
@@ -45,7 +45,7 @@ Na włóknie `K_e=0, K_l=1` obydwa znaki mają wówczas dodatnią miarę, zatem 
 
 Dla grupowanego wyniku w k=1 iloraz jest `p R/L=p(1+2a/beta)`. Próg `beta_group=2beta_age` jest więc dokładnie właściwy. W zakresie `(beta_age,2beta_age]` pełne znaczniki mają przewagę, choć podział na dwie grupy nie ma przewagi nad licznikiem łącznym. **PASS dla całego deklarowanego zakresu `a,beta,c`.**
 
-## 2. Nowe niezależne rozszerzenie: hierarchia włókien z k kliknięciami
+## 2. Niezależna kontrola hierarchii włókien z k kliknięciami (obecnie również MT14 ROT003)
 
 Dla dowolnej liczby k>=1 późnych kliknięć i braku wczesnych, minimum ilorazu wiarygodności po wszystkich położeniach (w sensie infimum) jest
 
@@ -57,7 +57,7 @@ W każdym k maksimum jest nieograniczone w pobliżu x_i=1. Zatem na **włóknie 
 
 Przy równości mieszania nie ma (punkt x=0 ma mierę zerową). Ciąg `beta_k` jest ściśle rosnący w k. Dla `beta<=beta_{m+1}` wszystkie włókna o k>=m+1 mają wyłącznie znak B, zatem jedynie k<=m mogą wnosić stratę informacji przy odrzuceniu znaczników. To daje skończony przepis na dokładny `V_age` na kolejnych pasmach parametrów. Jest to prosty wniosek z ilorazu MT14; nie stanowi roszczenia nowości w literaturze.
 
-Źródłowy przypadek MT14 `beta_age<beta<=beta_2` obejmuje wyłącznie mieszany singleton. REC10 wyprowadza **dodatkową ścisłą poprawkę dwuklikową** dla `beta_2<beta<=beta_3`, której MT14 nie obliczył:
+Źródłowy przypadek MT14 `beta_age<beta<=beta_2` obejmuje wyłącznie mieszany singleton. REC10 wyprowadził niezależnie **ścisłą poprawkę dwuklikową** dla `beta_2<beta<=beta_3`, której MT14 nie obliczył:
 
 `beta_2=a/[exp(a/4)-1]`, `beta_3=a/[exp(a/6)-1]`.
 
@@ -88,7 +88,7 @@ Formuły dla `F_1±` są dokładnie własnością MT14 ROT002:
 
 **Niezależna kontrola:** osobna dwuwymiarowa kwadratura SciPy po oryginalnej ujemnej dziedzinie, bez korzystania z powyższej pierwotnej, reprodukuje wynik `F_2^-` w precyzji około 1e-15. Kontrola jest numeryczna; sama formuła całkowania jest symboliczna.
 
-## 4. Konkretny przykład, który MT14 pozostawił z nierównością
+## 4. Konkretny przykład pozostawiony z nierównością w ROT002 (domknięty niezależnie przez MT14 ROT003)
 
 Przy `a=1`, `c=1/2`, `beta=4`, zachodzi
 
@@ -104,7 +104,7 @@ Zatem singleton i dwuklik są mieszane, a k>=3 wyłącznie dodatnie po stronie B
 
 `F_1^{min}=0.017721374426647579`; `F_2^-=0.000136343642025601`; `V_age-V_group=0.017857718068673181`; `V_age-V_count=0.045213467046408151`.
 
-Źródłowe T3 podawało dla tego punktu tylko dolny certyfikat `0.017721374426647579`. Nowa ścisła wartość jest większa; jest to **zaostrzenie, nie erratum**.
+Źródłowe T3 podawało dla tego punktu tylko dolny certyfikat `0.017721374426647579`. Ścisła wartość jest większa; to **zaostrzenie, nie erratum**. Identyczne domknięcie zostało niezależnie opublikowane przez MT14 ROT003 w toku niniejszego audytu.
 
 ## 5. Niezależna kontrola przejścia do granicy w TV
 
@@ -134,6 +134,16 @@ Ważny limit: ten konserwatywny certyfikat nie rozstrzyga jeszcze przewagi znacz
 
 Niezależny skrypt `rec10_rot38_mt14_rot002_independent_referee.py` (bez importów kodu PRF/MT) oblicza analitycznie wszystkie progi i sign-split, wykonuje 108 niezależnych kontroli parametrów `(a,beta,c)`, dodatkową 2D kwadraturę signed k2, bezpośrednie stany kwantowe dla n4,6,8, ograniczenia TV dla n128..131072, zwraca deterministyczny JSON. Sprawdzono tylko przykładowe parametry liczbowo; dowód globalny T2 i k-hierarchii ma charakter symboliczny.
 
-**Werdykt:** MT14 ROT002 T2 i T3 są poprawne, w tym pełny zakres parametrów i progowa równość na granicy. Granica Poissona jest poprawna **warunkowo względem źródłowej (35.7)**; dostępny ścisły bound domyka ją bez przeoczenia korelacji A. Nowy dokładny przypadek dwuklikowy poprawia informatywność przykładu beta4. Nie znaleziono materialnego błędu wymagającego sprostowania u MT14.
+**Werdykt:** MT14 ROT002 T2 i T3 są poprawne, w tym pełny zakres parametrów i progowa równość na granicy. Granica Poissona jest poprawna **warunkowo względem źródłowej (35.7)**; dostępny ścisły bound domyka ją bez przeoczenia korelacji A. Dokładny przypadek dwuklikowy poprawia informatywność przykładu beta4 i niezależnie reprodukuje MT14 ROT003, opublikowany podczas tej recenzji. Nie znaleziono materialnego błędu wymagającego sprostowania u MT14.
 
-Status dla PRF11/PRF12 i Moderatora: `REFEREE_PASS_WITH_EXACT_TWO_CLICK_EXTENSION / NO_CANON / NO_NOVELTY / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE / BW_PENDING / OWNER_REVIEW_PENDING`. To nie jest twierdzenie o niezależnym, fizycznym eksperymencie ani pełnej normie wieloczasowego procesora/adaptive comb.
+Status dla PRF11/PRF12 i Moderatora: `REFEREE_PASS_WITH_ROT003_INDEPENDENT_REPLICATION / NO_CANON / NO_NOVELTY / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE / BW_PENDING / OWNER_REVIEW_PENDING`. To nie jest twierdzenie o niezależnym, fizycznym eksperymencie ani pełnej normie wieloczasowego procesora/adaptive comb.
+
+
+## 7. Korekta aktualności, 2026-10-26: równoległa publikacja MT14 ROT003
+
+Podczas pracy nad kontrolą źródłową MT14 opublikował niezależny raport ROT003:
+`research/mt14/2026-10-26/iw_mt14_rot003_finite_event_order_exact_age_label_tv_001.md`, pinned commit `38b6e4ab996a9d2f1eef4df4d94ce7ecbb5a6c24`, blob `2b8af0dfcdb0a74496b05826cc88ff6e258ae01f`.
+
+ROT003 zawiera już **pełną hierarchię progów beta_k, ścisłą skończoną sumę Janossy i domknięcie beta4** do identycznego `V_age=0.283864685587599`. Dlatego komponent k=2 tej recenzji należy traktować jako niezależną replikację, **NIE** jako nowy, wyłączny wynik REC10 lub postulat dalszego zadania. Odmienna forma dowodu REC10: jawna elementarna pierwotna 2D na obszarze ujemnej miary, poświadczona wysokoprecyzyjną niezależną kwadraturą i 108 kontrolami; ROT003 stosuje ogólną skończoną sumę Janossy. Uzupełnieniem REC10 pozostaje jawny błąd TV przejścia z kwantowego R35 i bezpośrednie skończone macierze n=4,6,8. NIE NADPISYWAĆ pierwszeństwa MT14 ROT003.
+
+Wniosek dla właściciela: ROT002 PASS, ROT003 wyniku k=2 jest spójny; zastosować jedną recenzję do obu tekstów; bez kaskady zadań.
