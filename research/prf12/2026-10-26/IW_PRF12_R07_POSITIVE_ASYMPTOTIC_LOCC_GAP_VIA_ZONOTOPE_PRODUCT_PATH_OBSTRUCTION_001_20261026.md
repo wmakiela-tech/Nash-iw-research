@@ -6,10 +6,13 @@ problem_id: PRF12_R06_FINITE_LOCC_NO_GO_VS_LOCC_CLOSURE
 exposure: PUBLIC
 canonical_body_path: research/prf12/2026-10-26/IW_PRF12_R07_POSITIVE_ASYMPTOTIC_LOCC_GAP_VIA_ZONOTOPE_PRODUCT_PATH_OBSTRUCTION_001_20261026.md
 sync_state: GITHUB_PENDING_BW_INGEST
-status: SOURCE_TYPED_ANALYTIC_CONDITIONAL_ON_PUBLISHED_COHEN_THEOREM / INDEPENDENT_8X8_NUMERIC_CONTROLS_PASS / INDEPENDENT_REFEREE_PENDING
+status: CORRECTION_REQUIRED_DUE_TO_COARSE_GRAINING_INVALIDATION / SCIENTIFIC_POSITIVE_LOCC_GAP_CLAIM_NOT_PROVED
 claim_ceiling: NO_CANON / NO_EXEC_SIGN / NO_NUMERICAL_LOCC_GAP_LOWER_BOUND / NO_OPTIMAL_LOCC_VALUE / NO_EBIT_COST / NO_FINITE_SWAP_TRANSFER / NO_PHYSICAL_DEVICE / NO_NOVELTY_OR_PRIORITY_CLAIM / NO_FULL_SUCCESSION_PACKET_READBACK
 function: SCIENCE_FIRST / LITERATURE_FIRST / TWO_SURFACE_PRIOR_ART / NEGATIVE_KNOWLEDGE / FALSIFIER_FIRST
 ---
+
+> **CRITICAL CORRECTION / CLAIM WITHDRAWN — PRF12 R09 AUDIT, 2026-10-26.** R07's application of Cohen (2022) Theorem 1 to the **binary decision effects** E_+=P+K and E_-=I-E_+ is invalid without a refinement-preserving argument. LOCC may measure a fine-grained PRODUCT-effect POVM and classically coarse-grain many leaves into a NONPRODUCT binary effect (e.g. two local Z measurements with an even-parity decision). Absence of non-scalar product operators from the BINARY DECISION zonotope thus does not establish nonmembership of the operational discrimination protocol in closure(LOCC). The R07 claim \`delta(q)>0\` for all three-party LOCC/closure **is NOT ESTABLISHED by this report and MUST NOT be cited as proved.** Its algebraic lemmas about the binary-effect zonotope remain valid only as statements for THAT restricted geometric object. R06's direct finite-round exact local-orthogonality argument and R05's 28-effect SEP construction are separate and not refuted by this correction. See PRF12 R09 audit at \`research/prf12/2026-10-26/IW_PRF12_R09_COARSE_GRAINING_COHEN_THEOREM_AUDIT_AND_CORRECTED_CLAIM_CEILING_001_20261026.md\`.
+
 
 # PRF12 R07 — Ściśle dodatnia luka asymptotycznego LOCC w trzypróbkowej rodzinie Cauchy–Lévy
 
