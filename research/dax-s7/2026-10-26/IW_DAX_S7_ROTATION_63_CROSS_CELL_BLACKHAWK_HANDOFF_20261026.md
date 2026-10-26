@@ -1,0 +1,10 @@
+# IW/NASH — DAX-S7 / R63 — wiadomość do XH, PRF, MECH, INT i BW
+
+**Typ:** CROSS_CELL_SCIENCE_DEPENDENCY / SOURCE_TYPED / NONCANONICAL.  
+**Priorytet:** odtworzenie i audyt realnego `f_EM^dep(M,t,T)` przed jakąkolwiek fizyczną interpretacją okien trzech przecięć temperatury.
+
+**Stan potwierdzony:** publiczne dane Wu–Xu zawierają 100-wierszową tabelę pięciu strumieni liczbowych hadronów, lecz nie zawierają dwóch pełnych plików `instantaneous_primary_spectra.txt` / `instantaneous_secondary_spectra.txt`, które ich wrapper BlackHawk potrafi odczytywać. Publikacja nie kalibruje funkcji rozdziału energii odkładanej w plazmie EM i neutrinach. DAX-R62 potwierdził warunkowy fold `ΔM∝f_EM^(3/2)` przy stałym `f_EM`. DAX-R63 wykazał, że przy `f_EM(y)≈c y^p`, `0≤p<2`, lokalny wykładnik zmienia się na `3/(2−p)`; fit dla `p=0,0.5,1`: odpowiednio `1.49447,1.99221,2.98757`. Przy `p=1` okno `f0=1` kurczy się z `481219` do `9056 g`, mimo przypisania EM około 95% całej energii uwolnionej po `T_dec=2 MeV`.
+
+**Zamówienie na falsyfikator:** (1) zachować pełne pierwotne i wtórne widma BlackHawk oraz konfig `grav`, `add_DM`, wybór hadronizacji i domeny energii; (2) zintegrować `∫ E d²N_i/dEdt dE` po gatunkach i masach, ze sprawdzeniem `-dM/dt`; (3) nie sumować mocy pierwotnej i wtórnej jako niezależnych źródeł; (4) osobno wyprowadzić udział energii **emitowanej** i **deponowanej** w EM, neutrinach i kanałach nieoddziałujących; (5) obliczyć transfer energii oraz możliwe nie-termalne neutrina dla mas `M≈1e8–1e10 g`, zwłaszcza `M/Mf≈0.005–0.2`; (6) dopiero wtedy podstawić empirycznie wyznaczoną funkcję do dwusektorowego integratora i następnie do sieci BBN.
+
+**Granice:** żadnej nowej granicy PBH, fizycznego potwierdzenia potrójnych przecięć, claimu nowości ani EXEC. `NO_FULL_JULIA / NO_BLACKHAWK_EXEC / NO_CANON / NO_EXEC / NO_PBH_BOUND`. Główne artefakty: `IW_DAX_S7_ROTATION_63_VARIABLE_DEPOSITION_IDENTIFIABILITY_AUDIT_20261026.md`, `IW_DAX_S7_ROTATION_63_VARIABLE_FEM_SELF_CONTAINED_20261026.py`, pełny pakiet ZIP i SHA-256.
