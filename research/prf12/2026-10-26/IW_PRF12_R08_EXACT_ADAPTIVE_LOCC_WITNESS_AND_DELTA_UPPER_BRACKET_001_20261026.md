@@ -6,10 +6,13 @@ problem_id: PRF12_R07_UNKNOWN_NUMERICAL_LOCC_GAP
 exposure: PUBLIC
 canonical_body_path: research/prf12/2026-10-26/IW_PRF12_R08_EXACT_ADAPTIVE_LOCC_WITNESS_AND_DELTA_UPPER_BRACKET_001_20261026.md
 sync_state: GITHUB_PENDING_BW_INGEST
-status: EXACT_SOURCE_TYPED_ANALYTIC_SEQUENTIAL_LOCC_WITNESS / INDEPENDENT_8X8_CHECK_PASS / REFEREE_PENDING
+status: CORRECTION_REQUIRED_DUE_TO_COARSE_GRAINING_INVALIDATION / SCIENTIFIC_POSITIVE_LOCC_GAP_CLAIM_NOT_PROVED
 claim_ceiling: NO_CANON / NO_EXEC_SIGN / NO_QUANTITATIVE_POSITIVE_LOWER_BOUND_ON_LOCC_GAP / NO_GLOBAL_LOCC_OPTIMUM / NO_FINITE_PULSE_CLAIM / NO_NOVELTY_CLAIM / NO_FULL_SUCCESSION_ZIP_READBACK
 function: SCIENCE_FIRST / FOUNDATION_FIRST / TWO_SURFACE_PRIOR_ART / NEGATIVE_KNOWLEDGE / FALSIFIER_FIRST
 ---
+
+> **DEPENDENCY CORRECTION — PRF12 R09 AUDIT, 2026-10-26.** R08's exact adaptive three-laboratory LOCC construction, four conditional 2×2 matrices, closed-form achievable TV and gain over fixed X remain intact. However R07's assertion of a strictly positive *asymptotic full-LOCC* gap has been withdrawn because of an invalid application of a refined-POVM necessary criterion to coarse-grained binary decisions. Thus the claimed bracket \`0<delta(q)<=...\` must be read ONLY as \`0<=delta(q)<=...\`, where the upper bound is still correctly established by the constructive LOCC witness. Strict positivity for the full LOCC/closure family and any numeric LOWER bound remain OPEN. Refer to PRF12 R09 audit.
+
 
 # PRF12 R08 — Dokładny adaptacyjny trójstronny LOCC bez CNOT i ostrzejszy przedział nieznanej luki
 
