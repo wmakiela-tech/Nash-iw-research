@@ -1,0 +1,49 @@
+{
+  "rotation": "IW_DAX_S7_R61",
+  "date": "2026-10-26",
+  "verdict": "PBH_INJECTION_CANCELLATION_EXACT_FOR_EQUAL_BOOKKEEPING / HEATING_THRESHOLD_DISAGREEMENT / NO_PHYSICAL_UPGRADE / NO_EXEC / NO_CANON",
+  "provenance": {
+    "source_main_scan_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "species_code_blob": "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc",
+    "original_source_table_blobs": {
+      "ext/N_around_m_e.csv": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+      "ext/N_s_from_PDG2024.csv": "33aceb876fc36cb2486d36c690e6401d85d76b46",
+      "ext/N_rho_OVER_N_s_from_PDG2024.csv": "28b0c13563d7b3bdeaee191a3a981197345d05b8"
+    },
+    "historic_verified_inputs": {
+      "IW_DAX_S7_ROTATION_59_PAPER_CODE_NEUTRINO_ENTROPY_COMPARISON_20261026.csv": "a1934e09b02d797a7b759510da99b10e1facfa97",
+      "IW_DAX_S7_ROTATION_60_FERMI_EOS_CONTINUITY_20261026.csv": "37e9220244840d7a2d122db38115ab6d54a60419"
+    }
+  },
+  "method": "13 source-table thermodynamic checkpoints; fully rerun electron Fermi-Dirac energy and pressure integrals; analytic identity; optional separate full source-table background port",
+  "numbers": {
+    "T_nuc_MeV": 0.07818527068831994,
+    "C_source": -3.868975850192499,
+    "C_EOS": -3.965356974274729,
+    "C_paper": -3.9655024379091355,
+    "R_E_at_equal_injection": 0.09638112408223032,
+    "I_threshold_source": 3.868975850192499,
+    "I_threshold_EOS": 3.965356974274729,
+    "false_reheating_window_width": 0.09638112408223032,
+    "I_3p9_source_temperature_slope": 0.0069872358468436495,
+    "I_3p9_EOS_temperature_slope": -0.014719648929209805
+  },
+  "background_optional_results": [],
+  "full_source_connector_background": {
+    "matrix_filename": "IW_DAX_S7_ROTATION_61_SOURCE_TABLE_BRANCH_RETUNING_20261026.csv",
+    "rows": 9,
+    "method": "independent connector-side JavaScript port of the three source table CSVs, not locally re-executed Python --background",
+    "converged_crossing_counts": {
+      "code_M96725e5": 3,
+      "paper_M96725e5": 1,
+      "paper_M9580552280": 3
+    }
+  },
+  "limitations": [
+    "No complete Julia Wu-Xu execution",
+    "Not a physical two-sector neutrino/EM Hawking deposition model",
+    "f parameter is a diagnostic, not a measured branching fraction",
+    "No PBH exclusion or publication correction claim",
+    "Paper-entropy background with the same PBH source is a conditional stress test, not a complete physical model"
+  ]
+}
