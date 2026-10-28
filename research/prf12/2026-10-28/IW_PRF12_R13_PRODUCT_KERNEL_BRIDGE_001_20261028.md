@@ -1,0 +1,5 @@
+# PRF12 R13: product rigidity and kernel bridge
+
+Frozen n=3 equal ideal SWAP Cauchy/Lévy model. Let P=span(W,Wbar), Q its negative four-dimensional sector, K=span(000,111). For full-rank positive product F=A tensor B tensor C, P F Q=0 iff A,B,C are proportional: F=t H tensor H tensor H. Proof: antisymmetry of F W and F Wbar under swaps gives u1 wedge u2=0, v1 wedge v2=0 and v1 wedge u2+u1 wedge v2=0 for uj=Aj|0>, vj=Aj|1>. Invertibility forces A proportional B; repeat for other pairs.
+
+Put omega^3=1, omega!=1; e(z)=(|0>+z|1>)/sqrt(1+|z|^2), nu(z)=e(z) tensor e(omega*z) tensor e(omega^2*z). A continuous PRODUCT path from I to a negative-labeled rank-one ray is F(t)=diag(1,1-t) tensor cubed for 0<=t<=1 and F(t)=exp(-(t-1))*|nu(t-1)><nu(t-1)| for 1<=t<=2. It passes through K at t=1, has non-increasing trace and satisfies P F Q=0 throughout. This path is NOT shown to belong to the zonotope of any one optimal refined POVM and does NOT implement LOCC. It blocks only an over-simple orthogonality-based asymptotic no-go argument. Checks: 201 points PASS; referee pending; no canon/EXEC.
