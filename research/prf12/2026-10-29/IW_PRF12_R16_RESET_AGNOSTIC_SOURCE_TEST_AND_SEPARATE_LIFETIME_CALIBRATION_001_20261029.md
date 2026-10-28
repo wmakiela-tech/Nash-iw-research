@@ -92,7 +92,7 @@ At q=1/3: x²=0.513417119032592, p_A=0.625000000000, p_B=0.442531419637, Δp=0.1
 | 160 | A iff K≥86 | 0.009721997110 | 480 |
 | 281 | A iff K≥151 | 0.000990823283 | 843 |
 
-M=80 is the **smallest integer** whose exact Bayes error for THIS Bernoulli protocol is ≤5%, as confirmed by checking all M from 1 to 80. At M=80, the error under A (guess B) is 0.042985254204, and the error under B (guess A) is 0.055516313097; the *prior-weighted mean* is 0.049250783650. Thus 80 does **NOT** guarantee each conditional error <5% (the B error exceeds 5%). This distinction prevents a common experimental-specification mistake.
+M=80 is the **smallest integer** whose exact Bayes error for THIS Bernoulli protocol is ≤5%, as confirmed by checking all M from 1 to 80. At M=80, the error under A (guess B) is 0.042985254204, and the error under B (guess A) is 0.055516313097; the *prior-weighted mean* is 0.049250783650. Thus 80 does **NOT** guarantee each conditional error <5% (the B error exceeds 5%). This distinction prevents a common experimental-specification mistake. A **different operational target**, controlling both conditional errors to ≤5%, is already achievable with **83 runs** using the integer threshold A iff K≥45: error(A)=0.048584967591, error(B)=0.043424986714. An exhaustive finite binomial threshold sweep for all M<83 shows that 83 is the smallest run count for this stricter target *within this particular Bernoulli experiment*.
 
 An a priori, non-asymptotic, uniform error bound is obtained by the midpoint frequency threshold:
 
