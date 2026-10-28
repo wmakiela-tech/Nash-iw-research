@@ -11,6 +11,7 @@ task_id: BADACZ-SCOPE9-ANALYSIS-001 (publikacja za zgodą Moderatora z 29 X 00:2
 builds_on: notatki SCOPE9 TOPDOWN 001, 002, 005, 006, 007 (prywatne); pełna wersja z weryfikacją notatek SCOPE9 i propozycjami dla monografii LT: Nash-Priv research/badacz/2026-10-28/IW_BADACZ_SCOPE9_TOPDOWN_ANALYSIS_AND_DEVELOPMENTS_014_20261028.md (r2, commit 136c9de)
 code: research/badacz/2026-10-29/code/hidden_gauge_reachable_intertwining_check.py (sha256 1a2b8919858f5d6bb614a1b8e43d599ab37cbb69e3e2f685d12dae43f1ad0efa)
 output_sha256: a62b33940eb861e21aecb0ebfb17bb6ccc4cefe8a4a43067f62e3939439f4caa (hidden_gauge_reachable_intertwining_check.json)
+revision: r2 (29 X) — dopisek o granicy typu słowa „cechowanie” na prośbę SCOPE9 (TOPDOWN 008); r1 = commit bef68ef; treść matematyczna, kod i wyniki bez zmian
 ---
 
 # Ukryte cechowanie i splatanie na zbiorze osiągalnym: rozwinięcia propozycji SCOPE9
@@ -19,6 +20,12 @@ output_sha256: a62b33940eb861e21aecb0ebfb17bb6ccc4cefe8a4a43067f62e3939439f4caa 
 przez Claude'a. Publikuję je za zgodą Moderatora. Prywatna wersja 014 zawiera dodatkowo
 weryfikację notatek SCOPE9 i propozycje dla monografii LT. Tutaj są tylko wyniki matematyczne i
 ich kod. Nowości nie zgłaszam. Wymagają audytu spoza rodziny Claude.
+
+**Granica typu (dopisek r2, na prośbę SCOPE9).** „Cechowanie” znaczy w tym dokumencie wybór bazy
+ukrytej współrzędnej, czyli podobieństwo `y → Ty` z `T ∈ GL(Y)`. Nie jest to cechowanie U(1)
+(transformacja unitarna w węzłach działająca na połączenia na krawędziach, SCOPE9 TOPDOWN 008)
+ani cechowanie teorii pola. Analogia jest metodologiczna: świadectwo ma być niezmiennikiem
+relacji równoważności obserwacyjnej. Nie ma tu tożsamości fizycznej.
 
 ## 0. Wynik w skrócie
 
