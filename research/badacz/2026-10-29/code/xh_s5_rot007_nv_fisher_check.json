@@ -1,0 +1,89 @@
+{
+ "X1": {
+  "f(a)": "103/200",
+  "f'(a)": "97/100",
+  "mu": [
+   "2575",
+   "2575"
+  ],
+  "score_delta": [
+   "4850",
+   "-4850"
+  ],
+  "J": "1881800/103",
+  "J_equals_1881800/103": true,
+  "<s_d,s_g>": "0",
+  "<s_d,s_b>": "0",
+  "CR_sd": 0.007398299017735734,
+  "alias_witness_equal_means": true,
+  "ref_bound_sd": 0.021324512382603956,
+  "ref_ratio": 2.882353407382332,
+  "centre_mean_C1": 3.9984006397441023,
+  "centre_sign_alias_exact": true,
+  "bhattacharyya_closed": 0.4010183051835672,
+  "bhattacharyya_pmf": 0.40101830518544945,
+  "psn_opt_x_C0.05": 0.2868125213133189,
+  "psn_opt_x_C0.97": 0.15041505821697393,
+  "C1_q_at_x=1e-4": 15.999998080000154
+ },
+ "X2": {
+  "mc_sd": 0.0076420430497391644,
+  "leading_order_sd": 0.00763314623825593,
+  "mc_mean": -3.640510320176811e-05
+ },
+ "X3": {
+  "fibre_identical_means_exact_rational": true,
+  "fibre_example_delta0=0.1_d=0.2": [
+   5029.9880047980805,
+   1621.4714114354258
+  ],
+  "J_eff_table": [
+   {
+    "delta": 0.0,
+    "J_known/J0": 1.0,
+    "J_eff_gain/J0": 1.0,
+    "J_eff_gain_offset/J0": 1.0
+   },
+   {
+    "delta": 0.01,
+    "J_known/J0": 1.0016965737289578,
+    "J_eff_gain/J0": 1.0012968184822488,
+    "J_eff_gain_offset/J0": 1.7210412383738299e-12
+   },
+   {
+    "delta": 0.05,
+    "J_known/J0": 1.0424521174574288,
+    "J_eff_gain/J0": 1.032606464799139,
+    "J_eff_gain_offset/J0": 5.161392067756229e-14
+   },
+   {
+    "delta": 0.1,
+    "J_known/J0": 1.170043722796871,
+    "J_eff_gain/J0": 1.1325780361778308,
+    "J_eff_gain_offset/J0": -5.9894243162018574e-15
+   },
+   {
+    "delta": 0.2,
+    "J_known/J0": 1.668351536034145,
+    "J_eff_gain/J0": 1.5519540979058033,
+    "J_eff_gain_offset/J0": 1.428505536954816e-16
+   }
+  ]
+ },
+ "X4": {
+  "g_alt": 3767.4071306044893,
+  "b_alt": 1062.4826806956348,
+  "m14_reported": [
+   3767.4071306,
+   1062.4826807
+  ]
+ },
+ "verdict": {
+  "X1_exact": true,
+  "X2_mc_close_to_leading_order": true,
+  "X3_fibre_and_discontinuity": true,
+  "X4_m14_example": true
+ },
+ "seed": 20261029,
+ "code_sha256": "9e9a1f0d99a0339c5f25493846a0c75bca7357e11b8c6d27090d3e77a63cb724"
+}
