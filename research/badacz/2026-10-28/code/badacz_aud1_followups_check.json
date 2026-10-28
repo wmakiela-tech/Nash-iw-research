@@ -1,0 +1,65 @@
+{
+ "R": {
+  "cases": 300,
+  "min_ratio": 0.9999999999999923,
+  "min_dim_ker_cap_traceless": 3
+ },
+ "S": {
+  "cases": 200,
+  "violations": 0,
+  "min_slack": 0.06374836345754309,
+  "tauI_sup": 0.9000000000000007,
+  "tauI_1-sigma3": 0.9
+ },
+ "F": {
+  "cases": 223,
+  "viol_bound": 0,
+  "max_idempotence_err": 1.3423924268555597e-12,
+  "max_imag": 2.220446049250313e-16,
+  "max_ratio": 0.8458505304796567,
+  "rank_E_counts": {
+   "2": 223
+  },
+  "min_sup_E_minus_P_over_dirs": 1.0168581961736671,
+  "norm_P(ez)-P(ex)": 1.0,
+  "viol_final": 0,
+  "min_slack_final": 0.08686999608035129,
+  "min_supB_minus_(1-tau)": 0.060920336209062675,
+  "rank34_min_over_all_dirs": 1.0474481602178602,
+  "frontier_table": [
+   {
+    "delta": 0.01,
+    "nonnormal_lower_bound_e": 0.9696938456699068,
+    "selfadjoint_frontier_1-tau": 0.9898979485566356
+   },
+   {
+    "delta": 0.05,
+    "nonnormal_lower_bound_e": 0.8416407864998737,
+    "selfadjoint_frontier_1-tau": 0.9472135954999579
+   },
+   {
+    "delta": 0.09,
+    "nonnormal_lower_bound_e": 0.7,
+    "selfadjoint_frontier_1-tau": 0.9
+   },
+   {
+    "delta": 0.16,
+    "nonnormal_lower_bound_e": 0.5,
+    "selfadjoint_frontier_1-tau": 0.8
+   },
+   {
+    "delta": 0.21,
+    "nonnormal_lower_bound_e": 0.5,
+    "selfadjoint_frontier_1-tau": 0.7
+   }
+  ]
+ },
+ "verdict": {
+  "R_rank2_lemma": true,
+  "S_sigma3_corollary": true,
+  "F_sign_bound": true,
+  "F_end_to_end": true
+ },
+ "seed": 20261028,
+ "code_sha256": "082782ac3d375205fc9b2d65f8c12a76b63fd8a84e50bf6f0964820e906eeca0"
+}
