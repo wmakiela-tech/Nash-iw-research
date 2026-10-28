@@ -1,0 +1,76 @@
+{
+ "P1": {
+  "W1": {
+   "primal_at_e": "1",
+   "dual_at_lam": "1",
+   "r_star_exact": "1",
+   "each_preparation_separately_consistent": true
+  },
+  "W2": {
+   "primal_at_e": "1/4",
+   "dual_at_lam": "1/4",
+   "r_star_exact": "1/4",
+   "each_preparation_separately_consistent": true
+  },
+  "W3": {
+   "primal_at_e": "0",
+   "dual_at_lam": "0",
+   "r_star_exact": "0",
+   "each_preparation_separately_consistent": true
+  }
+ },
+ "P2_P3": {
+  "P2_cases": 200,
+  "P2_max_primal_dual_gap": 7.105427357601002e-15,
+  "P2_iff_agreement": "200/200",
+  "P3_separately_accepted": 153,
+  "P3_jointly_accepted": 121,
+  "P3_separate_accepts_but_joint_rejects": 32
+ },
+ "P4": {
+  "falsifier": {
+   "r_OP_exact": 0.4,
+   "r_OP_closed_form": 0.4,
+   "argmin_e": [
+    -0.0
+   ],
+   "outer_relaxation_value": -0.09999999999999998,
+   "exact_rejects_with_delta_0": true,
+   "relaxation_accepts_with_delta_0": true
+  },
+  "inner_error": {
+   "r_ignoring_Delta": 0.19999999999999996,
+   "r_OP": -0.30000000000000004,
+   "e": [
+    1.0
+   ],
+   "constructed_C": [
+    [
+     1.2,
+     -1.2
+    ]
+   ],
+   "constructed_n": [
+    0.0,
+    0.0
+   ],
+   "construct_residual": 0.0
+  },
+  "random": {
+   "cases": 120,
+   "LP_value_above_grid_min": 0,
+   "max_(grid_min - LP)/(L h)": 0.37649871569768756,
+   "feasible_cases": 74,
+   "constructive_certificates_ok": 74
+  }
+ },
+ "verdict": {
+  "P1_exact_r_star": true,
+  "P2_duality": true,
+  "P4_falsifier": true,
+  "P4_inner_error": true,
+  "P4_exact_vs_grid": true
+ },
+ "seed": 20261029,
+ "code_sha256": "05eae35fb154ced7d55758e3ea077afa68318449dc71a97951a3c495055c5732"
+}

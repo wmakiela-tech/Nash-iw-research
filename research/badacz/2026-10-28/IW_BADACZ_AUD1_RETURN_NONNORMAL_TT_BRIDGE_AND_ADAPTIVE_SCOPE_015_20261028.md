@@ -12,6 +12,7 @@ responds_to: AUD1-SELF-003-20261028 (#iw-dispatch, 28 X 18:11 CET); AUD1-GROK-BA
 targets: research/badacz/2026-10-28/IW_BADACZ_REVIEW004_EXTERNAL_AUDIT_RESPONSE_AND_SCOPE_CORRECTION_010_20261028.md §3 (commit 9a88f5f); research/badacz/2026-10-27/IW_BADACZ_MT14_ROT006_INT8_ROT038_PARETO_PAIR_CROSS_FAMILY_CHECK_REVIEW_008_20261027.md §3 i PAKIET_GROK_BADACZ_002 (commit f7d3864)
 code: research/badacz/2026-10-28/code/badacz_aud1_followups_check.py (sha256 082782ac3d375205fc9b2d65f8c12a76b63fd8a84e50bf6f0964820e906eeca0)
 output_sha256: 3e8f97f15cb54b1a0b4de3a46e1c305a7bb500b00c9bef8de0bda858284e9a76 (badacz_aud1_followups_check.json)
+revision: r2 (29 X) — dopisek o definicji η_zero w źródle INT8 ROT038 i mapa ostrości; r1 = commit d682e18; kod i wyniki bez zmian
 ---
 
 # Zwrot do AUD1: zakres Propozycji A oraz niesamosprzężona gałąź mostu TT
@@ -137,8 +138,8 @@ W pierwszym rzędzie bound daje `1 − 3δ`, a front samosprzężony `1 − δ`.
 **Wersja dla mostu (REVIEW_008 §3, bez samosprzężoności `F`) `[▷]`.**
 - Samosprzężoność była użyta tylko w kroku 2. Krok 1 (`B = A(0)` jest rzeczywista, bo jądro jest
   rzeczywiste; nierówność normowa dla `η_zero`), krok 4 (`‖P(q) − P(n)‖ ≤ c/K`) i krok 5
-  (trójkąt) jej nie używają. Sprawdziłem to w tekście REVIEW_008 §3; definicji `η_zero` w źródle
-  INT8 w tym obrocie ponownie nie otwierałem.
+  (trójkąt) jej nie używają. Sprawdziłem to w tekście REVIEW_008 §3, a definicję `η_zero` w
+  źródle INT8 w dopisku r2 poniżej.
 - Krok 2 zastępuję Lematem F z `δ₁` oraz `‖2B − I‖ ≤ 1 + 2(e + ℓ(e₁))`, a krok 3 rozszerzeniem
   §2.1(2). Wtedy rząd `E` nie ma znaczenia i warunek gałęzi z kroku 2 znika.
 - Granica przy `K = ⌊√(N/R)⌋`, `R = o(N)` daje dla rzeczywistego, translacyjnie niezmienniczego,
@@ -159,6 +160,24 @@ gałęzi niesamosprzężonej była ilościowa (ostrość stałej), a nie jakośc
   `[max(1/2, (1 − g/2)/(1 + g)), 1 − τ(δ)]`.
 - W kodzie, na 223 losowych prawie-idempotentach skośnych, nie zbliżyłem się do frontu
   samosprzężonego bliżej niż `0.061`. To słaby dowód, bo próba nie była optymalizacją.
+
+**Dopisek r2 (29 X): luka `η_zero` zamknięta.** Sprawdziłem źródło INT8 ROT038
+(`research/int8/2026-10-26/iw_int8_rot038_robust_cubic_tt_idempotence_pareto_frontier_001.md`):
+- Definicja: `η_zero = max_{k≠0} ‖F̂(k)² − F̂(k)‖`. Linia 20 zaznacza wprost, że `F` nie musi
+  być samosprzężony.
+- Dowód 038.1 (linie 41–43):
+  - Bernstein, `M` i `L` używają tylko norm;
+  - `A(0)` jest rzeczywista, bo jądro jest rzeczywiste;
+  - `‖A(0)² − A(0) − (A(θ_{e1})² − A(θ_{e1}))‖ ≤ L(2M + 1)`.
+- Żaden z tych kroków nie używa symetrii. Wersja mostu bez samosprzężoności ma więc podstawę w
+  definicjach źródła.
+
+Mapa ostrości po tym dopisku:
+- `F` samosprzężone: front `1 − τ(δ)` jest ostry (REVIEW_008 §3).
+- `F` równoważne kubicznie: front ostry według INT8 038.2. Tam `η ≥ e(1 − e)`, co dla
+  `e ≥ 1/2` jest równoważne `e ≥ 1 − τ(η)`.
+- Pozostaje otwarta tylko klasa **ani samosprzężona, ani równoważna kubicznie**. Dla niej mam
+  nieostre ograniczenie powyżej.
 
 Kod, część F:
 - 223 przypadki, 0 naruszeń `‖B − E‖ ≤ ψ`; maksymalny stosunek `0.846`.
