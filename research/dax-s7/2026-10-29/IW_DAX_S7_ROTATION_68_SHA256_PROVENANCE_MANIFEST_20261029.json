@@ -1,0 +1,105 @@
+{
+  "rotation": 68,
+  "date": "2026-10-29",
+  "lineage": "IW_DAX_S7",
+  "status": "BOUNDED_OPERATOR_ONLY / NO_EXEC / NO_CANON / NO_PBH_BOUND",
+  "temperature_MeV": 0.07818527068831994,
+  "run": "python IW_DAX_S7_ROTATION_68_BOUNDED_CHANNEL_OPERATOR_20261029.py --out . --nquad 84 --ngrid 130 --ntrials 750",
+  "tests": {
+    "main_case_count": 32,
+    "mc_main_trials_per_case": 750,
+    "mc_main_trials_total": 24000,
+    "independent_grid_seed_controls": 24,
+    "extra_mc_control_trials_each": 500,
+    "muon_rate_method": "BW lepton mass substitution plus isotropic blackbody and proper angular 1/2",
+    "dpp_distribution": "NOT IDENTIFIED, five explicitly synthetic controls",
+    "tpp_event_loss": "separated; none of TPP events applied as energy loss",
+    "muon_event": "UNRESOLVED_MUON_OPPORTUNITY, not immediate neutrino energy"
+  },
+  "external_sources": [
+    "https://github.com/Fenyutanchan/Primordial-Black-Hole/tree/main/arXiv-2509.05618",
+    "https://arxiv.org/abs/hep-ph/9909339",
+    "https://doi.org/10.1103/PhysRevD.106.123016",
+    "https://arxiv.org/abs/astro-ph/0001252",
+    "https://doi.org/10.1093/mnras/253.2.235"
+  ],
+  "files": [
+    {
+      "path": "IW_DAX_S7_ROTATION_68_COMPETING_CHANNELS_AND_ENERGY_LOSS_IDENTIFIABILITY_AUDIT_20261029.md",
+      "size": 11044,
+      "sha256": "1e9f5994710394ab9dc7b67c0c6f8a55a032685eab3b3e7a7c314ece5c149a07"
+    },
+    {
+      "path": "IW_DAX_S7_ROTATION_68_CROSS_CELL_DPP_TPP_MUON_HANDOFF_20261029.md",
+      "size": 2768,
+      "sha256": "a36a11fa850a433dae67387de6d03ed9ae3632d7bdb17b364476506a78387854"
+    },
+    {
+      "path": "IW_DAX_S7_ROTATION_68_BOUNDED_CHANNEL_OPERATOR_20261029.py",
+      "size": 12637,
+      "sha256": "209dfd0add25ab8511e36a80da0cdf09f24faa7dd9edba3c2cb5c1e747c40c75"
+    },
+    {
+      "path": "IW_DAX_S7_R68_TPP_ENERGY_LOSS_PROXY_20261029.py",
+      "size": 2215,
+      "sha256": "7566a2bf140c8dac8fa2f97a32698199b14d1a069f18b99cbae08bb319381e3b"
+    },
+    {
+      "path": "IW_DAX_S7_R68_GRID_SEED_AND_NEGATIVE_CONTROLS_20261029.py",
+      "size": 1043,
+      "sha256": "a05de5ddeedc4f5f74d560e3990edc4f1f80a93b5a07be69ea38a28ff9a539ed"
+    },
+    {
+      "path": "R67_FROZEN_EXACT_DIFFERENTIAL_BW_CASCADE_20261029.py",
+      "size": 18059,
+      "sha256": "0a05145c9afdf43fe8e65f91f0d4babf63107eacabbd2198ee7f04dc8a13d143"
+    },
+    {
+      "path": "IW_DAX_S7_R68_CHANNEL_RATE_HIERARCHY_20261029.csv",
+      "size": 1843,
+      "sha256": "9f557524b561b93b89a54d3f2adb8eb622afd1365dae3254a2254dd702f4e230"
+    },
+    {
+      "path": "IW_DAX_S7_R68_BOUNDED_DPP_MUON_LINEAGE_MATRIX_20261029.csv",
+      "size": 7162,
+      "sha256": "8390022d840a62bd6d2fed312317c5016ae5a02a719ec17c9555c5bc24d31e5b"
+    },
+    {
+      "path": "IW_DAX_S7_R68_DPP_FOUR_LEPTON_FRACTION_CONTROLS_20261029.csv",
+      "size": 519,
+      "sha256": "074f99d242fd73c6d2e702fa4d7e63fa139484633c6d2b3a5fa68b256af4c4b8"
+    },
+    {
+      "path": "IW_DAX_S7_R68_GRID_SEED_AND_NEGATIVE_CONTROLS_20261029.csv",
+      "size": 4602,
+      "sha256": "13d681fcd9d3e45e97175b61389fa33ae5a8372bff34ea8e57daaf2386e62f88"
+    },
+    {
+      "path": "IW_DAX_S7_R68_TPP_EVENT_VS_LOSS_PROXY_20261029.csv",
+      "size": 1244,
+      "sha256": "7bc16fa81031512a3ecb051d86f30f2a49e39ee5d5e4d053e42f17aa69f205c7"
+    },
+    {
+      "path": "IW_DAX_S7_R68_MUON_DECAY_LATENCY_BENCHMARK_20261029.csv",
+      "size": 1141,
+      "sha256": "a236753f3a4c3ad3bc5403b22f36fd7da7cdfc0199e869b639f811efa99593e4"
+    },
+    {
+      "path": "full_run.log",
+      "size": 2198,
+      "sha256": "4cfea7a16bc79dfbac1288fdd2786189b76cb1baffc1733bafc3bf6fa26612b2"
+    },
+    {
+      "path": "controls.log",
+      "size": 1536,
+      "sha256": "137421f6879dde0907bf70759f79ed5c5d8b559e4f0250fba9ed0ed6601d0868"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "original_julia_run": false,
+  "BlackHawk_run": false
+}
