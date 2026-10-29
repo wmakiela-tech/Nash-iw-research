@@ -1,0 +1,105 @@
+{
+  "artifact_id": "IW_INT8_ROT042_INDEPENDENT_EXACT_TT_20261029",
+  "cases": [
+    {
+      "N": 3,
+      "case": "xy_shear",
+      "certified_norm_sq_lower": "49/4",
+      "certified_norm_sq_upper": "24500000000001/2000000000000",
+      "other_equal_winning_modes": 0,
+      "rational_middle_eigenspace": true,
+      "tested_projective_directions": 13,
+      "winning_eigen_sq_det": "49/4",
+      "winning_eigen_sq_trace": "53/4",
+      "winning_q": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "case": "xy_shear",
+      "certified_norm_sq_lower": "49/4",
+      "certified_norm_sq_upper": "24500000000001/2000000000000",
+      "other_equal_winning_modes": 1,
+      "rational_middle_eigenspace": true,
+      "tested_projective_directions": 62,
+      "winning_eigen_sq_det": "49/4",
+      "winning_eigen_sq_trace": "53/4",
+      "winning_q": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "N": 3,
+      "case": "long_middle",
+      "certified_norm_sq_lower": "923492666970371/2000000000000",
+      "certified_norm_sq_upper": "230873166742593/500000000000",
+      "other_equal_winning_modes": 0,
+      "rational_middle_eigenspace": true,
+      "tested_projective_directions": 13,
+      "winning_eigen_sq_det": "11109/16",
+      "winning_eigen_sq_trace": "1853/4",
+      "winning_q": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "N": 5,
+      "case": "long_middle",
+      "certified_norm_sq_lower": "2209/4",
+      "certified_norm_sq_upper": "1104500000000001/2000000000000",
+      "other_equal_winning_modes": 0,
+      "rational_middle_eigenspace": true,
+      "tested_projective_directions": 62,
+      "winning_eigen_sq_det": "2209/4",
+      "winning_eigen_sq_trace": "2213/4",
+      "winning_q": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "N": 3,
+      "case": "irreducible_mix",
+      "certified_norm_sq_lower": "9937889320326877/162000000000000",
+      "certified_norm_sq_upper": "4968944660163479/81000000000000",
+      "other_equal_winning_modes": 0,
+      "rational_middle_eigenspace": false,
+      "tested_projective_directions": 13,
+      "winning_eigen_sq_det": "49720/729",
+      "winning_eigen_sq_trace": "5059/81",
+      "winning_q": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "N": 5,
+      "case": "irreducible_mix",
+      "certified_norm_sq_lower": "24309992102621387/364500000000000",
+      "certified_norm_sq_upper": "97239968410486277/1458000000000000",
+      "other_equal_winning_modes": 0,
+      "rational_middle_eigenspace": false,
+      "tested_projective_directions": 62,
+      "winning_eigen_sq_det": "453796/6561",
+      "winning_eigen_sq_trace": "49376/729",
+      "winning_q": [
+        2,
+        -1,
+        -2
+      ]
+    }
+  ],
+  "generic_characteristic": "z^3-5*z^2+6*z-1; no rational root and no integer middle eigendirection",
+  "independence": "exact SymPy q-Gram and integer-square-root rational interval; no numpy, no original helper",
+  "status": "EXACT_RATIONAL_PASS",
+  "total_mode_directions": 225
+}
