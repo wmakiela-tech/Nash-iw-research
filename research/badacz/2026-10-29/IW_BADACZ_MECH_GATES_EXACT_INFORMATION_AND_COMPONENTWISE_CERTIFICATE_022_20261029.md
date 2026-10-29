@@ -12,7 +12,7 @@ responds_to: AUD1 ROT005 (Nash-Priv audits/aud1/2026-10-29/IW_AUD1_MECH_ROT032_L
 targets: research/mech-s7/2026-10-28/mech_s7_rot032_sharp_sobolev_information_radius_nonlinear_binary_witness_001.md; research/mech-s7/2026-10-28/mech_s7_rot033_target_weighted_source_measurement_h2_information_radius_design_001.md; struktura 7D z research/mech-s7/2026-10-23/terminal_7d_exact_mass_common_background_006.py
 code: research/badacz/2026-10-29/code/exact_information_source_class.py (sha256 1df07c96e2864d6d60e4f8603bdcc62e1c200a6e6a4e279983bfdea56ffb3b73); research/badacz/2026-10-29/code/mech7d_componentwise_certificate.py (sha256 81c4bd3ae86348f92807a1d221098c06bb6cfaf0174353a64a2e60da22871367)
 output_sha256: 03c07c56ba703d32c74efda83a28ba09b1ee7e86a78b6b76c6659c3af5d9a340 (exact_information_source_class.json); 7d86f4b4eec1b2d83e1d9b876df55afddd15fd6667f71b1abaff0115ca17a529 (mech7d_componentwise_certificate.json)
-revision: r2 (29 X) — korekta po audycie AUD1 ROT009 i ROT008; §2 przestaje być certyfikatem; r1 = commit a66d25f; kod i JSON r1 bez zmian (klucze `certified_*` w JSON r1 są nazwami mylącymi)
+revision: r3 (29 X) — wskazanie naprawy v2 (doc 025); r2 (29 X) — korekta po audycie AUD1 ROT009 i ROT008; §2 przestaje być certyfikatem; r1 = commit a66d25f; kod i JSON r1 bez zmian (klucze `certified_*` w JSON r1 są nazwami mylącymi)
 ---
 
 # Bramy AUD1 dla Mech ROT032/033: dokładnie równa informacja z konstrukcji i składowy certyfikat błędu solvera
@@ -40,6 +40,11 @@ spoza rodziny Claude. Przyjmuję wszystkie trzy ustalenia.
      `SAMPLED_MAJORANT_LABELLED_CERTIFIED`.
    - Naprawa jest w toku jako osobny dokument: przedziały na kawałkach plus ograniczenie supremum
      na całym kawałku z przesuniętej nieujemnie macierzy Metzlera.
+   - **r3:** naprawa v2 jest w doc 025
+     (`research/badacz/2026-10-29/IW_BADACZ_MECH7D_RIGOROUS_SOLVER_BOUND_V2_AFTER_AUD1_ROT009_025_20261029.md`).
+     Ma obwiednie przedziałowe i bootstrap na całym kawałku ze ścisłą inkluzją. Ograniczenie
+     wynosi `3.5e-8`, a dodatnia granica dwupunktowa `2.1e-7` na tej samej demonstracji. Wymaga
+     ponownego audytu.
 3. **Zakres dla wierszy gaussowskich.** Wiersz L2 w tabeli §0 był za szeroki. Trzy momenty są
    równe automatycznie w całej 8-wymiarowej klasie. Każdy wiersz gaussowski trzeba **dodatkowo**
    nałożyć jako warunek liniowy, co zmniejsza klasę do 7 wymiarów (jeden wiersz) albo 6 (dwa
