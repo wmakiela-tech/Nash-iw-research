@@ -12,7 +12,7 @@ claim_ceiling: NO_FULL_SOURCE_ON_FIXED_DRIVE_PROJECTOR_HARDWARE / NO_CANON / NO_
 
 **Readable core conclusions:** [R21 3-contract core theorem](IW_PRF12_R21_FIXED_DRIVE_SPAM_CORE_RESULTS_001_20261029.md)
 
-**Full source body:** Stored across seven GitHub Markdown segments, split only to satisfy upload limits. The PART_00 through PART_06 GitHub **full-readback content strings concatenate to EXACTLY the complete 15,273-character authoritative local Markdown report** (no difference in ordering or wording), verified 2026-10-29.
+**Full source body:** Stored across seven GitHub Markdown segments, split only to satisfy upload limits. The PART_00 through PART_06 GitHub **full-readback content strings concatenate to EXACTLY the complete 15,274-character authoritative local Markdown report** (no difference in ordering or wording), verified 2026-10-29.
 
 - [Part 00: frontmatter and abstract](IW_PRF12_R21_FULL_PROOF_PART_00_001_20261029.md)
 - [Part 01: source map and mature prior art](IW_PRF12_R21_FULL_PROOF_PART_01_001_20261029.md)
