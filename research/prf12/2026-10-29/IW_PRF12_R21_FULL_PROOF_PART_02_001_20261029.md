@@ -1,0 +1,16 @@
+## 1. Three mutually EXCLUSIVE source/gate contracts
+
+**General two-shot source:** ONE re-prepared qubit, TWO sequential source exposures length Δ each, requiring the same hidden static ξ across both under A; under B, independent Markovian dephasing increments, including those during driven gates when declared source ON. Pair label = equal local signs under a single randomly chosen measurement axis. Different pairs may have arbitrarily dependent ξ values under A; the random basis and quantum preparations are independent conditional on this history. No coherent quantum memory across two shots. Free exposure q=γΔ; source B generator Dγ=(γ/2)(Ad_Z−Id), hence offdiagonal decay e^(−γt).
+
+**S1 / GATED SPAM:** Source physically **OFF** throughout preparation and basis-switch rotations, ON only during free exposure. A source must retain the same ξ when resumed for the second shot despite source gating and sensor reset. Control Hamiltonian H=Ω_axis σ_axis/2 with bounded Rabi Ω≤Ωmax, and rectangular rotations |θ|=π/2 of duration t_g=π/(2Ωmax). Preparation Y +π/2, X readout pre-rotation Y −π/2 or Y readout X +π/2. Direct Z projection after finite rotation; intrinsic detector readout takes t_d, sensor reset takes t_reset, both counted as dead time. Assumed accurate gates and QND Z final detection; no gamma while gates are OFF. Physical time per pair is EXACTLY
+
+ T_pair,S1 = 2[Δ+π/Ωmax+t_d+t_reset].      (R21.1)
+
+**S2 / ALWAYS-ON FULL SPAM:** Same prepared |0>, same finite Y +π/2, then source-active free exposure Δ, then same finite X/Y axis-setting pulses; source stays active during both pulses. Each shot's final Z detector is instantaneous in state space but with separately countable dead time; full finite switching is included. Under A, each pulse Hamiltonian H=(Ω_axis σ_axis+ξ Z)/2 with constant ξ across both shots. Under B, driven Lindblad evolution with H=Ω_axis σ_axis/2 and Dγ on even during pulses. This is the *direct falsifier* of transporting R20 exact phase-invariance to finite source-active gates.
+
+**S3 / ALWAYS-ON FINITE PREP, COVARIANT OR IDEAL PROJECTIVE READOUT:** Source-active finite Y +π/2 preparation plus source-active free evolution Δ and an optional basis-INDEPENDENT pre-readout idle t_d; final direct projective measurement is selected among three precisely orthogonal X,Y,Z laboratory axes. Conditional under A all preceding evolution is unitary for each fixed ξ, and is identical for both shots of a pair. Under B the same operations produce a mixed output. Finite *basis-dependent* readout drive times are NOT included: S3 requires a direct calibrated three-axis measurement or an implementation whose source-dependent basis rotations preserve the exact Pauli 2-design. Explicit source-on finite X/Y/Z BASIS ROTATIONS belong instead to S2 and generally do NOT meet this assumption. The idle duration is not a proof of finite readout-switch duration. The total pair clock for S3 if detector latency t_d and reset t_reset are counted is
+
+ T_pair,S3 = 2[π/(2Ωmax)+Δ+t_d+t_reset].   (R21.2)
+
+Counting time does not create a quantum-realization claim for direct Pauli readout. For S3 the base of a final Z detector is a different physical resource from S1/S2's X/Y pre-rotations; **do not rank S1 and S3 as same hardware**.
+
