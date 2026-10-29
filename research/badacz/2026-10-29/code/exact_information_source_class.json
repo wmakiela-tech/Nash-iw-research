@@ -1,0 +1,121 @@
+{
+ "L": 2.575878427993727,
+ "zmid": -1.3713208229359144,
+ "E1": {
+  "orthogonality_x_moments_exact": true,
+  "z_moments_symbolic_L_zmid_exact_zero": true,
+  "kernel_dim_of_degree10_class": 8,
+  "gegenbauer_family_rank": 8,
+  "example_k3_leading_coeffs": [
+   "429/2",
+   "0",
+   "-1815/2"
+  ]
+ },
+ "E2": {
+  "G1_max_abs_diff_vs_tanhsinh50_over_rownorm": 3.6549659454344075e-48,
+  "G2_max_abs_diff_vs_tanhsinh50_over_rownorm": 2.037429578052713e-51,
+  "G1_row_60digits_first3": [
+   "-0.14593091629213347683",
+   "-0.051230659108172759386",
+   "0.0118772079072301283"
+  ],
+  "G1_pivot_l": 3,
+  "G1_partner_l": 4,
+  "G1_exact_coefficient": "-0.3510610390852071226513493319403992947655",
+  "G1_residual_exact_object": "1.3336e-53",
+  "G1_residual_float_representative_rel": 4.457369825307896e-17,
+  "two_gaussian_rows_normalised_singular_values": [
+   1.4012743082966395,
+   0.190867265155069
+  ]
+ },
+ "E3": [
+  {
+   "W": "u^1.7",
+   "kernel": "in_moment_span_control",
+   "radius_share_class": 6.232024848787974e-16,
+   "radius_exact_class": 2.7348893502650323e-15,
+   "ratio_exact/share": 4.388444232209573,
+   "sup|h|_share": 0.3649136875523743,
+   "sup|h|_exact": 0.21989438296570946,
+   "exact_class_moment_quadrature_residual": 5.482922671064266e-15
+  },
+  {
+   "W": "u^1.7",
+   "kernel": "cubic",
+   "radius_share_class": 0.0021482664856416708,
+   "radius_exact_class": 0.002043186334287541,
+   "ratio_exact/share": 0.9510860723953699,
+   "sup|h|_share": 0.4726590945568277,
+   "sup|h|_exact": 0.48728495384790377,
+   "exact_class_moment_quadrature_residual": 2.5768838695107495e-15
+  },
+  {
+   "W": "u^1.7",
+   "kernel": "bump",
+   "radius_share_class": 0.007209297325516484,
+   "radius_exact_class": 0.007329503446066136,
+   "ratio_exact/share": 1.0166737637694863,
+   "sup|h|_share": 0.5086913753901952,
+   "sup|h|_exact": 0.5209285065890303,
+   "exact_class_moment_quadrature_residual": 1.6040297332868168e-16
+  },
+  {
+   "W": "u^1.7",
+   "kernel": "oscill",
+   "radius_share_class": 0.011926295434114616,
+   "radius_exact_class": 0.012177303307145535,
+   "ratio_exact/share": 1.0210465919126004,
+   "sup|h|_share": 0.47927317639258005,
+   "sup|h|_exact": 0.49589211563416125,
+   "exact_class_moment_quadrature_residual": 2.46474252733707e-16
+  },
+  {
+   "W": "u^1.7(1+.3 sin 2z)",
+   "kernel": "in_moment_span_control",
+   "radius_share_class": 1.136585218573235e-15,
+   "radius_exact_class": 2.1850979468101856e-15,
+   "ratio_exact/share": 1.9225113182038012,
+   "sup|h|_share": 0.21355173062774513,
+   "sup|h|_exact": 0.2370279799634077,
+   "exact_class_moment_quadrature_residual": 4.181858822083531e-15
+  },
+  {
+   "W": "u^1.7(1+.3 sin 2z)",
+   "kernel": "cubic",
+   "radius_share_class": 0.0020562317036397757,
+   "radius_exact_class": 0.0019303905830317806,
+   "ratio_exact/share": 0.9388001262769943,
+   "sup|h|_share": 0.48254713383928693,
+   "sup|h|_exact": 0.48604439133388266,
+   "exact_class_moment_quadrature_residual": 1.9988348406441453e-15
+  },
+  {
+   "W": "u^1.7(1+.3 sin 2z)",
+   "kernel": "bump",
+   "radius_share_class": 0.007414535751060144,
+   "radius_exact_class": 0.0075141905684578255,
+   "ratio_exact/share": 1.013440466233295,
+   "sup|h|_share": 0.5230020212966645,
+   "sup|h|_exact": 0.5250436597485516,
+   "exact_class_moment_quadrature_residual": 4.78934987247247e-16
+  },
+  {
+   "W": "u^1.7(1+.3 sin 2z)",
+   "kernel": "oscill",
+   "radius_share_class": 0.012839352864198943,
+   "radius_exact_class": 0.013115263438434051,
+   "ratio_exact/share": 1.0214894455470924,
+   "sup|h|_share": 0.49807953205595945,
+   "sup|h|_exact": 0.5017873876604619,
+   "exact_class_moment_quadrature_residual": 2.1587068765161312e-16
+  }
+ ],
+ "verdict": {
+  "E1_exact_zero_moments_any_spectrum": true,
+  "E2_gaussian_rows_closed_form": true,
+  "E3_control_radius_zero_both": true
+ },
+ "code_sha256": "1df07c96e2864d6d60e4f8603bdcc62e1c200a6e6a4e279983bfdea56ffb3b73"
+}
