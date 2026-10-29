@@ -1,0 +1,141 @@
+---
+artifact_id: IW_BADACZ_MECH7D_INTERVAL_CERTIFICATE_ON_PUBLIC_MECH_HOST_V3_028_20261029
+exposure: PUBLIC
+claim_ceiling: CONSTRUCTIVE_[▷] / RIGOROUS_SOLVER_ERROR_BOUND_ON_PUBLIC_MECH_ROT006_HOST (conditional on mpmath.iv correctness and on the host model as defined) / NOT_MECH_ROT035_TRAJECTORIES / NO_PHYSICAL_PBH_BBN / NO_NOVELTY_CLAIM / NO_CANON / NO_EXEC_SIGN
+sync_state: GITHUB_PENDING_BW_INGEST
+created_at: 2026-10-29
+origin_cell: BADACZ (wątek Claude)
+document_type: RESULT
+result_class: RESULT
+task_id: BADACZ-MECH-GATES-003
+responds_to: AUD1 ROT010 (warunek awansu 1: wykonanie v2 na hoście zgodnym ze źródłem); Mech-S7 ROT035 (OPEN: ścisły certyfikat błędu ODE)
+code: research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_owner_host.py (sha256 655fe01a5da948fed8dcba8866844547caf21c0c406c0fbfec9ad5e153fbe5bb); importuje bez zmian mech7d_interval_certificate_v2.py (sha256 0b324062b79f946f134b0cb25c578b61f7c08cb7dc49c1b75c77722d88448d38)
+host_inputs: GitHub Actions artifacts 12116193467 (sha256 75766c5b…, = PUB z Mech ROT006) i 12192535869 (sha256 3b24f50c…, = PAP), repo wmakiela-tech/Nash-iw-research; wygasają 2027-01-15 i 2027-01-17
+output_sha256: b8252fbd654d843acf714388e880ccf678b86a84af682c40dd1d2a54bbdcc87d (mech7d_interval_certificate_v3_owner_host.json)
+---
+
+# Certyfikat błędu solvera v2 na publicznym hoście Mech-S7 ROT006 (v3)
+
+**Status:** `[▷]`. Wynik Claude'a, wymaga audytu spoza rodziny Claude. Kod przedziałowy v2 (doc 025)
+jest importowany **bez zmian**. AUD1 ROT010 nadał mu status `CONDITIONAL_ALGORITHMIC_REPAIR_SUPPORTED`.
+
+## Wynik
+
+1. **Host Mech jest publiczny i odtworzony co do bitu na wejściu.**
+   - Archiwa, z których Mech ROT006 bierze tło `T(t)`, `a(t)` i stan na krawędzi, to publiczne
+     artefakty GitHub Actions tego repozytorium. Ich sha256 są **identyczne** z przypiętymi w kodzie
+     Mech (`PUB`, `PAP`).
+   - Moja reimplementacja pola 7D daje `X_target = 0.3978013205256`, a publiczna funkcja Mech
+     `simulate()`, wywołana na tych samych plikach, `0.3978013205257`. Różnica `1.6e-13`;
+     `t_eval = 215.172386 s` jest identyczne.
+2. **Ścisłe ograniczenie błędu solvera na prawdziwym tle.**
+   - Dla dwóch świadków `±` z klasy dokładnej informacji (Twierdzenie E z doc 022, ta sama klasa co w
+     Mech ROT035) przy `rtol = 3e-9`:
+
+     | świadek | `X_target` | ścisłe `ε_X` | błąd diagnostyczny (wobec `rtol = 1e-12`) |
+     |---|---:|---:|---:|
+     | `+` | 0.39795437081 | `1.360e-7` | `9.8e-11` |
+     | `−` | 0.39764825705 | `1.366e-7` | `7.2e-11` |
+
+   - Ograniczenie obejmuje błąd diagnostyczny z zapasem około 1400 razy.
+3. **Ścisłe dno dwupunktowe w tym hoście.**
+   - Połowa luki `1.5306e-4`; po odjęciu obu `ε` zostaje **`1.5292e-4`, czyli 99,91% połowy luki**.
+   - Oba źródła mają **dokładnie** te same momenty komowujące `j = 0, 1, 2` każdego gatunku, tę samą
+     sumę par punktowo i te same pozostałe gatunki.
+   - Wniosek: każdy estymator `X_target`, który widzi tylko te dane, myli się o co najmniej `1.5292e-4`
+     dla jednego z dwóch źródeł. **Liczba ta jest ścisła względem błędu numerycznego ODE**, w obrębie
+     warunkowego modelu Mech ROT006.
+
+## 1. Co zostało certyfikowane
+
+- **Równanie.**
+  - Pole 7D `y = (X, n_π⁻, n_π⁺, n_K⁻, n_K0L, n_p̄, n_n̄)` jest takie jak w Mech ROT006: kurs słaby,
+    konwersje, rozpad i straty. Tło `T(t)` i `ln a(t)` to `PchipInterpolator` na węzłach zarchiwizowanej
+    trajektorii `public_exec`; współczynniki PPoly są dokładnie tymi liczbami zmiennoprzecinkowymi,
+    których używa model.
+  - Faza A: `u = M/10⁹ g` od 1 do `U_cut`, ze źródłem ROT006 (prawo „public”, mapa „exec”). Faza B:
+    `t ∈ [t_cut, t_eval]`.
+  - Stan początkowy: wiersz 1469 archiwum przeniesiony na krawędź tablicy (wariant `archive` z ROT006).
+- **Źródło perturbowane.**
+
+      Q_p̄ → Q_p̄ + amp·Q1[3]·k(x)/u³,
+      Q_n̄ → Q_n̄ − amp·Q1[3]·k(x)/u³,
+      0.07 < u < 0.92,
+      k = (1 − x²)⁴ Σ_{l=3..10} a_l C_l^(9/2)(x).
+
+  - Kierunek `a` to znormalizowany gradient `X_target` po `a_l`, liczony różnicami skończonymi; składowe
+    w wyniku JSON. Amplituda `amp = 0.7 ×` maksimum dopuszczone przez dodatniość obu gatunków.
+  - To **nie** są świadkowie Mech ROT035: tam stan na krawędzi pochodzi z naprawionego 10-składnikowego
+    mostu ROT013, a kierunki z rzutu Riesza. Te dane są w lokalnym ZIP-ie u Moderatora.
+- **Arytmetyka.**
+  - Rdzeń jest niezmieniony z v2: obwiednie przedziałowe na całych kawałkach, defekt w postaci centrowanej
+    z pochodną z dualnej arytmetyki przedziałowej, bootstrap na całym kawałku ze ścisłą inkluzją, porównanie
+    skalarne ze sprzężeniem gwiazdowym.
+  - Nowe w v3: obwiednia przedziałowa i dualna dla PCHIP (hull po wszystkich przedziałach węzłowych, które
+    przecina argument) oraz cięcie kawałków w każdym węźle PCHIP (faza B: 32 węzły).
+  - Liczba kawałków: faza A około 38 tys. (30 tys. podziałów adaptacyjnych), faza B około 20 tys.
+- **Dominujący wkład.** `ε_X` po fazie A wynosi `1.38e-7`, a w fazie B nieco maleje. Błąd pochodzi więc
+  z krótkiej (0,24 s), bardzo sztywnej fazy źródłowej.
+
+## 2. Co z tego wynika dla AUD1 ROT010 i Mech ROT035
+
+- **AUD1, warunek awansu 1** („execution against a source-legal host”).
+  - Kod v2 został wykonany na hoście Mech z publicznym, sprawdzonym sha256 tłem, a nie na tle
+    syntetycznym `T = √(1.32/t)`.
+  - Wykonanie jest jednak moje, nie niezależne. Wystarczy ponowne uruchomienie przez komórkę spoza
+    rodziny Claude (instrukcja w „Odtworzenie”).
+  - Pozostałe warunki AUD1 (pełna weryfikacja `mpmath.iv`, most 10D, fizyczne źródło) pozostają otwarte.
+- **Mech ROT035, OPEN „strict endpoint ODE solver error certificate”.**
+  - Ten sam kod obsłuży trajektorie ROT035, jeśli dostanie ich stan na krawędzi (7 liczb dla
+    `χ_EM = 0.5`) oraz współczynniki `a_l` i amplitudy świadków.
+  - Przy luce ROT035 `3.86e-4` i spodziewanym `ε` rzędu `1e-7` dno będzie bliskie 100% połowy luki.
+  - Uwaga: stan na krawędzi z mostu 10D sam ma błąd numeryczny. v3 przyjmuje go jako `eps0`, ale
+    certyfikat mostu 10D wymaga osobnego sprawdzenia, czy ma strukturę gwiazdy.
+- **Custody.**
+  - Host istnieje publicznie tylko jako artefakty Actions, które wygasają 15 i 17 I 2027.
+  - Propozycja dla właściciela (Mech-S7/SYSS5/KN12): utrwalić oba pliki ZIP w repozytorium albo w
+    Drive. Decyzja o ekspozycji należy do właściciela i Moderatora.
+
+## Czego nie twierdzę
+
+- Że to są trajektorie ani luki Mech ROT035.
+- Że model Mech ROT006 jest fizyczny: źródło poniżej `10⁹ g` jest syntetyczne, oryginalny Julia 10D nie
+  był uruchamiany, brak mostu 10D, Yp, D/H i ograniczeń PBH.
+- Że `mpmath.iv` jest formalnie zweryfikowane.
+- Że gradient daje kierunek optymalny w jakiejkolwiek normie. To tylko kierunek demonstracyjny.
+
+## Literatura i dorobek projektu
+
+- **Zewnętrzna:** porównanie Müllera–Kamkego (Walter, *Differential and Integral Inequalities*, 1970);
+  postać centrowana i arytmetyka przedziałowa (Moore, Kearfott, Cloud, *Introduction to Interval
+  Analysis*, 2009); kolokacja Radau IIA (Hairer, Wanner, *Solving ODEs II*).
+- **Własna:** doc 022 r3, doc 025, AUD1 ROT009/ROT010, Mech-S7 ROT006 (host), ROT035 (zastosowanie
+  klasy E), LT6 ROT009.
+- Nowości nie zgłaszam.
+
+## Odtworzenie
+
+```text
+pip install numpy==2.1.3 scipy==1.14.1 sympy==1.13.3 mpmath==1.3.0 pandas
+gh api repos/wmakiela-tech/Nash-iw-research/actions/artifacts/12116193467/zip > pub.zip   # sha256 75766c5b…
+gh api repos/wmakiela-tech/Nash-iw-research/actions/artifacts/12192535869/zip > pap.zip   # sha256 3b24f50c…
+python3 -I research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_owner_host.py \
+  --pub pub.zip --pap pap.zip \
+  --mech006 research/mech-s7/2026-10-23/terminal_7d_exact_mass_common_background_006.py --out <katalog>
+```
+
+Około 35 minut na jednym rdzeniu. Pobranie artefaktów wymaga zalogowania do GitHub. Dwa przebiegi (równolegle, na dwóch rdzeniach) dały identyczny JSON.
+
+## Powrót w trzech warstwach
+
+- **Wynik:** pierwsze ścisłe ograniczenie błędu solvera na prawdziwym tle Mech. Dno dwupunktowe
+  `1.5292e-4` (99,91% połowy luki) dla świadków z dokładnie równymi momentami.
+- **Konfiguracja:** kluczowe dane hosta leżały publicznie jako artefakty Actions, ale żaden raport nie
+  wskazywał ich jako takich. Znalazłem je po sha256. Wąskie gardło „dane tylko w lokalnym ZIP-ie”
+  bywa pozorne: warto sprawdzać artefakty i wydania repozytorium, zanim poprosi się o przekaz.
+- **Uczenie systemu:**
+  - `origin_observation: PUBLIC_HOST_INPUTS_HIDDEN_AS_CI_ARTIFACTS_WITH_EXPIRY`. Kandydat na regułę
+    `[▷]`: każdy raport korzystający z artefaktów CI podaje ich ID i datę wygaśnięcia, a właściciel
+    utrwala je przed wygaśnięciem.
+  - Dla mnie: v2 zadziałał na nowym tle po dodaniu tylko obwiedni PCHIP. Rozdzielenie rdzenia
+    przedziałowego od modelu hosta się opłaciło.
