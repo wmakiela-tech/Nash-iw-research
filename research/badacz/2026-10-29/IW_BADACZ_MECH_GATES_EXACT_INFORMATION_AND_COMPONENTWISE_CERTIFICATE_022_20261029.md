@@ -1,7 +1,7 @@
 ---
 artifact_id: IW_BADACZ_MECH_GATES_EXACT_INFORMATION_AND_COMPONENTWISE_CERTIFICATE_022_20261029
 exposure: PUBLIC
-claim_ceiling: CONSTRUCTIVE_MATH_[▷] / MATURE_HOSTS_GEGENBAUER_ORTHOGONALITY_MUELLER_KAMKE_COMPARISON / SYNTHETIC_DEMO_ONLY / SEMI_RIGOROUS_SAMPLED_MAJORANTS / NO_MECH_DATA_USED / NO_NOVELTY_CLAIM / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_CLAIM
+claim_ceiling: CONSTRUCTIVE_MATH_[▷] / THEOREM_E_EXTERNALLY_CHECKED_PASS_AUD1_ROT009 / SOLVER_CERTIFICATE_R1_INVALID_AS_CERTIFICATE_AUD1_ROT009 / MATURE_HOSTS_GEGENBAUER_ORTHOGONALITY_MUELLER_KAMKE_COMPARISON / SYNTHETIC_DEMO_ONLY / NO_MECH_DATA_USED / NO_NOVELTY_CLAIM / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_CLAIM
 sync_state: GITHUB_PENDING_BW_INGEST
 created_at: 2026-10-29
 origin_cell: BADACZ (wątek Claude)
@@ -12,6 +12,7 @@ responds_to: AUD1 ROT005 (Nash-Priv audits/aud1/2026-10-29/IW_AUD1_MECH_ROT032_L
 targets: research/mech-s7/2026-10-28/mech_s7_rot032_sharp_sobolev_information_radius_nonlinear_binary_witness_001.md; research/mech-s7/2026-10-28/mech_s7_rot033_target_weighted_source_measurement_h2_information_radius_design_001.md; struktura 7D z research/mech-s7/2026-10-23/terminal_7d_exact_mass_common_background_006.py
 code: research/badacz/2026-10-29/code/exact_information_source_class.py (sha256 1df07c96e2864d6d60e4f8603bdcc62e1c200a6e6a4e279983bfdea56ffb3b73); research/badacz/2026-10-29/code/mech7d_componentwise_certificate.py (sha256 81c4bd3ae86348f92807a1d221098c06bb6cfaf0174353a64a2e60da22871367)
 output_sha256: 03c07c56ba703d32c74efda83a28ba09b1ee7e86a78b6b76c6659c3af5d9a340 (exact_information_source_class.json); 7d86f4b4eec1b2d83e1d9b876df55afddd15fd6667f71b1abaff0115ca17a529 (mech7d_componentwise_certificate.json)
+revision: r2 (29 X) — korekta po audycie AUD1 ROT009 i ROT008; §2 przestaje być certyfikatem; r1 = commit a66d25f; kod i JSON r1 bez zmian (klucze `certified_*` w JSON r1 są nazwami mylącymi)
 ---
 
 # Bramy AUD1 dla Mech ROT032/033: dokładnie równa informacja z konstrukcji i składowy certyfikat błędu solvera
@@ -21,6 +22,29 @@ i funkcje sprzężone są poza publicznym repo). Demonstracja jest syntetyczna, 
 strukturę układu 7D z publicznego kodu Mech. Nowości nie zgłaszam. Wynik wymaga audytu spoza
 rodziny Claude i decyzji właścicieli (Mech-S7, LT6).
 
+**KOREKTA r2 (29 X), po zewnętrznym audycie AUD1 ROT009 i ROT008.** AUD1 sprawdził ten dokument
+spoza rodziny Claude. Przyjmuję wszystkie trzy ustalenia.
+1. **Twierdzenie E (§1) — PASS.** AUD1 niezależnie sprawdził 24 całki (zero w arytmetyce
+   dokładnej) i liniową niezależność ośmiu modów.
+2. **§2 nie jest certyfikatem błędu solvera.** Są dwa niezależne błędy:
+   - (a) majoranty `M̄` i `ρ̄` to maksima z próbek, a JSON i tabela §2.3 nazywały wynik
+     „certyfikatem”. AUD1 podał wielomian zerujący się we wszystkich węzłach 5- i 9-punktowych,
+     dla którego próbkowany defekt jest zerem, a błąd nie;
+   - (b) **błąd logiczny w bootstrapie reszty kwadratowej.** Sprawdzałem `ε ≤ ε̄` tylko na końcu
+     kawałka, a `ε̄` traktowałem jako ograniczenie na całym kawałku. AUD1 podał dokładny
+     kontrprzykład (`x' = −10x + 100n + 10xn`, `n' = −10n`), w którym moja pętla zwraca ograniczenie
+     przekroczone o 13%. Odtworzyłem go: `0.0045441` wobec prawdziwego `0.0051381`.
+   - Liczby w §2.3 („certyfikat `ε_X`”, „certyfikowana dolna granica”) są więc tylko
+     **diagnostycznymi oszacowaniami**. Stan L4 cofam do **OTWARTE**.
+   - origin_failure_mode: `ENDPOINT_BOOTSTRAP_USED_AS_INTERVAL_BOUND` oraz
+     `SAMPLED_MAJORANT_LABELLED_CERTIFIED`.
+   - Naprawa jest w toku jako osobny dokument: przedziały na kawałkach plus ograniczenie supremum
+     na całym kawałku z przesuniętej nieujemnie macierzy Metzlera.
+3. **Zakres dla wierszy gaussowskich.** Wiersz L2 w tabeli §0 był za szeroki. Trzy momenty są
+   równe automatycznie w całej 8-wymiarowej klasie. Każdy wiersz gaussowski trzeba **dodatkowo**
+   nałożyć jako warunek liniowy, co zmniejsza klasę do 7 wymiarów (jeden wiersz) albo 6 (dwa
+   wiersze). Sama dokładna znajomość wierszy nie daje ich równości.
+
 ## 0. Które ograniczenia rozwiązuję
 
 AUD1 ROT005 i LT6 ROT009 wskazały, czego brakuje, żeby dwupunktowa dolna granica minimaksowa
@@ -29,9 +53,9 @@ Mech ROT032 była ścisła:
 | | ograniczenie | źródło | stan po tej notatce |
 |---|---|---|---|
 | L1 | momenty par `±c*` są równe tylko do `1.2e-12`, a idealny obserwator je rozróżnia | AUD1 CHECK 2 | **usunięte konstrukcyjnie** (§1) |
-| L2 | naprawa przez rzut wymaga dokładnego `M`; przy `M̂ ≠ M_true` mamy tylko istnienie | LT6 T009.3 STOP | **usunięte dla wierszy momentów i wierszy gaussowskich** (§1) |
+| L2 | naprawa przez rzut wymaga dokładnego `M`; przy `M̂ ≠ M_true` mamy tylko istnienie | LT6 T009.3 STOP | **usunięte dla wierszy momentów**; wiersze gaussowskie wymagają dodatkowego nałożenia, co daje klasę 7- albo 6-wymiarową (korekta r2) |
 | L3 | przeniesienie luki celu z `±c` na `±p` wymaga stałej `L_T` | LT6 T009.2 | **niepotrzebne**, bo nie ma naprawy (§1) |
-| L4 | błędy solvera `ε±` muszą być certyfikowane; ponowne uruchomienie z mniejszym `rtol` to nie certyfikat | AUD1 Gate A | **rozwiązane półściśle na demonstracji**; przepis dla Mech (§2) |
+| L4 | błędy solvera `ε±` muszą być certyfikowane; ponowne uruchomienie z mniejszym `rtol` to nie certyfikat | AUD1 Gate A | **OTWARTE** (korekta r2): §2 zawiera błąd logiczny i majoranty z próbek; naprawa w toku |
 | L5 | dodatniość w sensie ciągłym | LT6 T009.2 | warunek jawny, potrzebna dolna granica danych (§1.4) |
 | L6 | źródło fizyczne poniżej `1e9 g`, Julia 10D, most 10D sprzed krawędzi | Mech, AUD1 | **nie do rozwiązania matematyką** (§4) |
 
@@ -179,7 +203,7 @@ Syntetyczne tło jest późne (`t_edge = 150 s`, `T ≈ 0.094` MeV), tak jak okn
 |---|---|---|
 | `X_nuc` (Radau, `rtol = 3e-9`) | `0.137329145763` | `0.137328656154` |
 | rzeczywisty błąd (wobec `rtol = 1e-13`) | `4.5e-13` | `4.6e-13` |
-| **certyfikat `ε_X`** | **`2.48e-9`** | **`2.44e-9`** |
+| oszacowanie `ε_X` (r1; **nie** certyfikat, zob. korekta r2) | `2.48e-9` | `2.44e-9` |
 | `log₁₀` czynnika Gronwalla–Lipschitza | `2.3·10⁹` | `2.3·10⁹` |
 | maks. `μ_∞(J)` (faza A / B) | `19.7 / 28.9 s⁻¹` | `19.7 / 28.9 s⁻¹` |
 
@@ -212,7 +236,7 @@ dodatkowym czynnikiem bezpieczeństwa nadal by wystarczyła.
 
 ## 3. Złożenie: ścisła dwupunktowa granica bez naprawy
 
-Dla pary `±A k` z §1 i certyfikatów z §2:
+Dla pary `±A k` z §1 i **ważnych** certyfikatów `ε±` (korekta r2: §2 r1 ich nie dostarcza):
 
 `max błąd ≥ ( |X̂(+) − X̂(−)| − ε₊ − ε₋ ) / 2`.
 
@@ -288,14 +312,16 @@ identyczny JSON.
 
 ## Powrót w trzech warstwach
 
-- **Wynik:** L1–L3 usunięte konstrukcyjnie dla wierszy momentów i wierszy gaussowskich. L4
-  rozwiązane półściśle na demonstracji o strukturze Mech, z przepisem. L5 sprowadzone do jawnego
+- **Wynik (po korekcie r2):** L1–L3 usunięte konstrukcyjnie dla wierszy momentów; wiersze
+  gaussowskie trzeba nałożyć dodatkowo. L4 pozostaje otwarte, bo certyfikat r1 ma błąd logiczny
+  (AUD1 ROT009). L5 sprowadzone do jawnego
   warunku. L6 pozostaje.
 - **Konfiguracja:**
   - AUD1 i LT6 dobrze nazwali luki (dokładna vs przybliżona informacja; `ε_M`; `ε±`);
   - zamiast łatać naprawę, zmieniłem pytanie: w jakiej parametryzacji operator obserwacji w ogóle
     nie zależy od danych;
-  - Mech publikuje kod struktury 7D, co umożliwiło certyfikat bez jego danych.
+  - Mech publikuje kod struktury 7D, co umożliwiło budowę oszacowania bez jego danych; audyt AUD1
+    wykrył w nim błąd logiczny w ciągu kilku godzin. To dowód, że kontrola zewnętrzna działa.
 - **Uczenie systemu:**
   - origin_observation: jeśli bramka wymaga „dokładnej informacji”, najpierw sprawdzam, czy
     dokładność da się uzyskać konstrukcyjnie przez wybór klasy, zanim zacznę ją naprawiać
