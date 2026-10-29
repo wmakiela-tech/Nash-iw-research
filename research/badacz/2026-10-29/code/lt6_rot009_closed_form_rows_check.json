@@ -1,0 +1,49 @@
+{
+ "C1": {
+  "example": {
+   "q": [
+    "6/25",
+    "3/50",
+    "0"
+   ],
+   "p": [
+    "9/25",
+    "-9/25",
+    "2/5"
+   ],
+   "Mp": "0",
+   "|c|^2": "54/25",
+   "|p|^2": "261/125",
+   "|q|^2": "9/125",
+   "target_gap": "2958/625"
+  },
+  "random_worst": {
+   "pyth": 2.440667321619251e-12,
+   "q_bound": 1.7541523789077473e-14,
+   "weyl_second": -7.967157760381516e-05,
+   "target_bound": -0.009395140243959987
+  }
+ },
+ "C2": {
+  "slopes_pbar_nbar": [
+   -1.2042914285384585,
+   -1.2047630639830331
+  ],
+  "rows_closed_vs_gauss512_rel": 7.507080427470559e-13,
+  "residual_double_null_rel": 2.5767978938712093e-13,
+  "residual_after_50digit_repair_rel": 2.789344523418525e-52,
+  "q_H_over_c_H": 2.4319850248141957e-12
+ },
+ "C3": {
+  "cases": 300,
+  "max_rel_diff_formula_vs_direct": 5.316231833624914e-09
+ },
+ "verdict": {
+  "C1_example_exact": true,
+  "C1_random_inequalities": true,
+  "C2_closed_form_rows": true,
+  "C3_noise_radius_formula": true
+ },
+ "seed": 20261029,
+ "code_sha256": "746416ca4ed959ab2fd78aad5dc2dc6cfeac2050850b4eb9e653aac492e45aa1"
+}
