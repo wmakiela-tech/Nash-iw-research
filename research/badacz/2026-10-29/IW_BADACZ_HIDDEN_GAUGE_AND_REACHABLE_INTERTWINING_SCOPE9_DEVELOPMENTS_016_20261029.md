@@ -11,7 +11,9 @@ task_id: BADACZ-SCOPE9-ANALYSIS-001 (publikacja za zgodą Moderatora z 29 X 00:2
 builds_on: notatki SCOPE9 TOPDOWN 001, 002, 005, 006, 007 (prywatne); pełna wersja z weryfikacją notatek SCOPE9 i propozycjami dla monografii LT: Nash-Priv research/badacz/2026-10-28/IW_BADACZ_SCOPE9_TOPDOWN_ANALYSIS_AND_DEVELOPMENTS_014_20261028.md (r2, commit 136c9de)
 code: research/badacz/2026-10-29/code/hidden_gauge_reachable_intertwining_check.py (sha256 1a2b8919858f5d6bb614a1b8e43d599ab37cbb69e3e2f685d12dae43f1ad0efa)
 output_sha256: a62b33940eb861e21aecb0ebfb17bb6ccc4cefe8a4a43067f62e3939439f4caa (hidden_gauge_reachable_intertwining_check.json)
-revision: r2 (29 X) — dopisek o granicy typu słowa „cechowanie” na prośbę SCOPE9 (TOPDOWN 008); r1 = commit bef68ef; treść matematyczna, kod i wyniki bez zmian
+code_r3: research/badacz/2026-10-29/code/theorem_w_iii_repair_check.py (sha256 f128887c11dd1f2a47dad188b0a32a943c77e0f6066d24105bdc4005b7a4fa17)
+output_sha256_r3: 38dedd13c7f90699f9d8f0634ca328b3bc87f4e2cda759596b1d0031cc3c9715 (theorem_w_iii_repair_check.json)
+revision: r3 (29 X) — ERRATUM: Twierdzenie W(iii) w wersji r1/r2 jest fałszywe przy odczycie pełnym tylko na stanie zredukowanym (kontrprzykład AUD1 ROT011); zastąpione przez (iii′) i (iii″); poprawiony wniosek W4. r2 = commit e4f51e4 (dopisek o granicy typu słowa „cechowanie”); r1 = commit bef68ef
 ---
 
 # Ukryte cechowanie i splatanie na zbiorze osiągalnym: rozwinięcia propozycji SCOPE9
@@ -27,6 +29,23 @@ ukrytej współrzędnej, czyli podobieństwo `y → Ty` z `T ∈ GL(Y)`. Nie jes
 ani cechowanie teorii pola. Analogia jest metodologiczna: świadectwo ma być niezmiennikiem
 relacji równoważności obserwacyjnej. Nie ma tu tożsamości fizycznej.
 
+**ERRATUM r3 (po AUD1 ROT011, 29 X).**
+- **Co było źle.** Twierdzenie W(iii) w r1/r2 mówiło: dwa modele ze wspólnym `𝒫` i odczytem
+  tomograficznie pełnym mają te same statystyki wszystkich historii ⇔ ich operacje zgadzają się na
+  `W`. Gdy „tomograficznie pełny” oznacza pełny odczyt stanu **zredukowanego**, kierunek ⇒ jest
+  **fałszywy**.
+- **Kontrprzykład AUD1** (potwierdzony dokładnie, kod r3):
+  - `𝒳 = ℝ²`, `𝒴 = ℝ`, `r(x, y) = x`, `p = (1, 0)`, `A = [[0, 1], [1, 0]]`, `S = diag(1, 2)`,
+    `B = S A S⁻¹`;
+  - wtedy `r Bᵐ p = r Aᵐ p` dla każdego `m` oraz `r e^{tB} p = r e^{tA} p`;
+  - mimo to `W = ℝ²` i `A p ≠ B p`.
+- **Poprawka.** Właściwa treść mówi o **podobieństwie** ilorazów obserwowalnych przestrzeni
+  osiągalnych, nie o równości operacji (§2, (iii′)). Równość operacji na `W` wynika tylko przy
+  odczycie różnowartościowym na `W` (§2, (iii″)). To jest dokładnie ukryte cechowanie z §1.
+- **Zakres.** Punkty (i), (ii) i wnioski W1–W3 oraz W5 nie zależą od (iii) i pozostają bez zmian.
+  Wniosek W4 poprawiłem (§2): różnica operacji na `W` nie daje sama rozróżnialności; rozstrzyga
+  rodzina instrumentów.
+
 ## 0. Wynik w skrócie
 
 - **A. Ukryte cechowanie.** Gdy część stanu `y` jest ukryta, podobieństwo `y → Ty` nie zmienia
@@ -40,6 +59,9 @@ relacji równoważności obserwacyjnej. Nie ma tu tożsamości fizycznej.
   historii interwencji z danej klasy przygotowań wtedy i tylko wtedy, gdy splatanie zachodzi na
   przestrzeni osiągalnej `W`.
   - Obejmuje to słabą i silną łączalność oraz przykłady SCOPE9 002 i 005.
+  - **r3:** porównanie dwóch modeli: równość statystyk wszystkich historii ⇔ podobieństwo ilorazów
+    obserwowalnych `W/N` splatające operacje (teoria realizacji: Schützenberger, Fliess, Kalman).
+    Równość operacji na `W` wynika tylko przy odczycie różnowartościowym na `W`.
   - Rodziny zgodnych instrumentów nie są zamknięte na sumę.
   - Pierwszeństwo idei (wersja automatowa, iloraz bisymulacyjny) ma SCOPE9 TOPDOWN 001 FD01.
 
@@ -134,14 +156,54 @@ zaburzeń zdefiniowanych niezmienniczo, na przykład zaburzeń jądra.
   historii ⇔ `r Φ_a w = φ_a r w` dla każdego `w ∈ W` i każdego `a`.
 - (ii) Takie `φ_a` istnieją ⇔ `Φ_a(W ∩ ker r) ⊂ ker r` dla każdego `a`; są wtedy jednoznaczne na
   `r(W)`.
-- (iii) Dwa modele ze wspólnym `𝒫` i z odczytem tomograficznie pełnym dają te same statystyki
-  wszystkich historii ⇔ ich operacje zgadzają się na `W`.
+- ~~(iii) Dwa modele ze wspólnym `𝒫` i z odczytem tomograficznie pełnym dają te same statystyki
+  wszystkich historii ⇔ ich operacje zgadzają się na `W`.~~ **Fałszywe w r1/r2** (erratum r3,
+  kontrprzykład AUD1 ROT011). Zastąpione przez (iii′) i (iii″).
+- **(iii′) (r3).** Weźmy dwa modele `M = (𝒳, {Φ_a}, π, r)` i `M′ = (𝒳′, {Ψ_a}, π′, r′)` z tymi
+  samymi etykietami przygotowań, przygotowaniami `π(p)` i `π′(p)` oraz odczytami do tego samego `𝒴`.
+  - Niech `W` będzie przestrzenią osiągalną, a `N ⊂ W` największą podprzestrzenią niezmienniczą
+    zawartą w `W ∩ ker r`, czyli częścią nieobserwowalną: `N = {w ∈ W : r Φ_h w = 0` dla każdej
+    historii `h}`. Analogicznie `W′` i `N′`.
+  - **Równoważność.** `r Φ_h π(p) = r′ Ψ_h π′(p)` dla każdej historii `h` i etykiety `p` ⇔ istnieje
+    liniowa bijekcja `T : W/N → W′/N′` taka, że:
+    - `T[π(p)] = [π′(p)]`,
+    - `T Φ̄_a = Ψ̄_a T`,
+    - `r̄′ T = r̄`.
+  - Takie `T` jest jednoznaczne. Modele są więc równoważne obserwacyjnie dokładnie z dokładnością do
+    podobieństwa na ilorazach obserwowalnych, a nie z dokładnością do równości operacji.
+- **(iii″) (r3, wniosek).** Jeśli `𝒳 = 𝒳′`, `π = π′`, `r = r′` i `r` jest różnowartościowe na
+  `W + W′`, to `N = N′ = 0`, a z `r T = r` wynika `T = id`. Wtedy równość statystyk ⇔ `Φ_a = Ψ_a` na
+  `W`.
+  - Ten warunek oznacza pełną tomografię **stanu osiągalnego**, nie tylko stanu zredukowanego. Przy
+    nim redukcja nic nie ukrywa.
+  - W ogólnym przypadku z ukrytą częścią stanu porównujemy niezmienniki podobieństwa (§1), a nie
+    operacje.
 
 *Dowód (i).*
 - ⇐: indukcja po długości historii, bo `Φ_h p ∈ W`.
 - ⇒: dla `w = Φ_h p` porównujemy historię `(h, a)` z historią `h`, po czym stosujemy `φ_a` do
   obu stron. Warunek jest liniowy w `w`, więc przechodzi na `span = W`.
-- (ii) i (iii) analogicznie. Strategie adaptacyjne obsługujemy po gałęziach. ∎
+- (ii) analogicznie: `φ_a(r w) := r Φ_a w` jest dobrze określone na `r(W)` wtedy i tylko wtedy, gdy
+  `r w = 0` ⇒ `r Φ_a w = 0` dla `w ∈ W`. Strategie adaptacyjne obsługujemy po gałęziach. ∎
+
+*Dowód (iii′) (r3; standardowa konstrukcja Hankela, Myhilla–Nerode'a i Kalmana).*
+- ⇐: indukcja daje `[Ψ_h π′(p)] = T[Φ_h π(p)]`, skąd
+  `r′ Ψ_h π′(p) = r̄′ T [Φ_h π(p)] = r̄ [Φ_h π(p)] = r Φ_h π(p)`.
+- ⇒: definiujemy `T[Φ_h π(p)] := [Ψ_h π′(p)]` na generatorach `W/N`.
+  - Poprawność: jeśli `Σ c_i Φ_{h_i} π(p_i) ∈ N`, to dla każdej historii `g` zachodzi
+    `Σ c_i r Φ_g Φ_{h_i} π(p_i) = 0`. Z równości statystyk `Σ c_i r′ Ψ_g Ψ_{h_i} π′(p_i) = 0` dla
+    każdego `g`, czyli `Σ c_i Ψ_{h_i} π′(p_i) ∈ N′`.
+  - Ta sama konstrukcja w drugą stronę daje odwrotność.
+  - Splatanie i `r̄′ T = r̄` wynikają z definicji.
+  - Jednoznaczność: `T` jest wyznaczone na generatorach. ∎
+- *Uwaga o błędzie r1/r2.* Słowo „analogicznie” ukryło fałszywą odwrotność: z równości statystyk
+  wynika podobieństwo, a nie równość. Kontrprzykład AUD1 jest dokładnie przypadkiem `T = S ≠ id`
+  przy `N = 0`.
+- *Kontrole (kod r3):*
+  - 169 losowych modeli minimalnych z podobieństwem `T ≠ id` zachowującym `π` i `r`: statystyki
+    zgodne do `3.9e-12`, operacje na `W` różne (najmniej `0.37`), a `T` odtworzone z samych danych
+    Hankela z błędem `6.6e-13`;
+  - przykład nieminimalny (`N ≠ 0`): statystyki identyczne, operacje na `W` różne o `1.84`.
 
 **Precedens.** SCOPE9 TOPDOWN 001 FD01 ma wersję skończoną, automatową.
 - Minimalny iloraz względny wobec zbioru interwencji to najmniejsza kongruencja akcji
@@ -173,6 +235,10 @@ zaburzeń zdefiniowanych niezmienniczo, na przykład zaburzeń jądra.
 - **W4 (SCOPE9 005 w języku `W`).**
   - Dla kanału defazującego `D₀` mamy `W_passive = range D₀ = span{I, Z}` i tam `V_A = V_B`.
   - Interwencja Hadamarda daje `W ⊇ span{I, X}`, gdzie `V_A ≠ V_B`.
+  - **Poprawka r3.** Sama różnica `V_A ≠ V_B` na `W` nie daje rozróżnialności; to był wadliwy
+    kierunek dawnego (iii). Rozstrzyga rodzina instrumentów. Przy odczycie w bazie `Z` (kod r3):
+    - historia `(H, V)` daje dla obu modeli te same wyniki `(1, 0)`, choć `V_A ≠ V_B` na `W`;
+    - historia `(H, V, H)` rozróżnia maksymalnie: `⟨Z⟩ = +1` wobec `−1`.
   - Uwarunkowanie identyfikacji przy `ε > 0` wynosi `1/ε`.
 - **W5 (rodziny instrumentów nie są zamknięte na sumę).**
   - Rodziny zgodne z daną redukcją są zamknięte na podrodziny, bo `W` maleje.
@@ -231,3 +297,11 @@ identyczny JSON.
     Moderatora);
   - origin_failure_mode `OWN_SURFACE_PRIOR_ART_CHECKED_AFTER_WRITING` (TOPDOWN 001 znaleziony po
     pierwszej wersji); łatka: czytam całą serię źródłową przed rozwijaniem.
+  - **r3:** origin_failure_mode `CONVERSE_ASSERTED_BY_ANALOGY`. Dowód (iii) w r1/r2 brzmiał
+    „analogicznie”, a odwrotność była fałszywa. Łatka: każdy kierunek „⇔” dowodzę osobno i dla
+    każdego szukam kontrprzykładu z ukrytym podobieństwem, zanim uznam go za wynik. Błąd znalazł
+    zewnętrzny audyt (AUD1, rodzina GPT).
+
+```text
+python3 -I research/badacz/2026-10-29/code/theorem_w_iii_repair_check.py --out <plik.json>   # r3, kilka sekund
+```

@@ -1,0 +1,61 @@
+{
+ "A_aud1_counterexample": {
+  "Ap_ne_Bp": true,
+  "B": "Matrix([[0, 1/2], [2, 0]])",
+  "equal_continuous_time": true,
+  "equal_stats_m_0_to_19": true,
+  "old_iii_falsified": true,
+  "rank_W": 2,
+  "similarity_T_is_S": true
+ },
+ "B_nonminimal_unobservable_block": {
+  "dim_W": 4,
+  "note": "last coordinate is reachable but unobservable (N != 0); models differ only there",
+  "operator_difference_on_W": 1.8416235533677465,
+  "stat_difference": 0.0
+ },
+ "B_random_similarity_models": {
+  "cases": 169,
+  "max_hankel_T_intertwining_or_recovery_error": 6.615263892228995e-13,
+  "max_stat_difference_words_le_5": 3.90087961932295e-12,
+  "min_operator_difference_on_W_full_reachable": 0.374626701379047
+ },
+ "C_injective_readout": {
+  "check_T_forced_identity": true,
+  "note": "with r = identity on X, any similarity fixing r is the identity: r T = r => T = I"
+ },
+ "D_W4_qubit": {
+  "H_V_H_separates": true,
+  "H_V_separates": false,
+  "VA_ne_VB_on_W_after_H": true,
+  "history_H_V_H_readout_Z": [
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    -1.0
+   ]
+  ],
+  "history_H_V_readout_Z": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    1.0,
+    0.0
+   ]
+  ]
+ },
+ "verdicts": {
+  "A_counterexample_confirmed": true,
+  "B_T_recovered_from_data_and_intertwines": true,
+  "B_nonminimal_equal_stats_different_W_action": true,
+  "B_operators_differ_on_W": true,
+  "B_similarity_gives_equal_stats": true,
+  "D_one_H_does_not_separate": true,
+  "D_two_H_separate": true
+ }
+}
