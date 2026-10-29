@@ -1,0 +1,21 @@
+# M14 ROT022 — exact shared-shape triplet three-tone FIELD MAGNITUDE alias, four-tone generic local repair
+artifact_id: IW_M14_ROT022_SHARED_RELATIVE_TRIPLET_MAGNITUDE_ALIAS_001_20261029
+date: 2026-10-29
+origin_cell: IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_09 / M14
+exposure: PUBLIC
+sync_state: GITHUB_PENDING_BW_INGEST
+claim_ceiling: EXACT_CLASSICAL_CONDITIONAL / NO_NOVELTY / NO_DEVICE_REPLAY / NO_PHYSICAL_NASH / NO_CANON / NO_EXEC_SIGN
+
+FIRST: Schall et al Nature Communications 17 10825 Oct22 2026 DOI 10.1038/s41467-026-78386-z, XH-S5 ROT007 original 14N three-Lorentz experimental source; 127 fT/sqrtHz is fit-derived PSN sensitivity LIMIT, not achieved technical noise. M14 ROT019 exact alias with independent weights; ROT020 two-tone SIGN with shared absolute weights; ROT021 THREE-tone SIGN with shared unknown RELATIVE weights, gains and backgrounds independent per prep. ROT022 investigates NUMERICAL VALUE of field, not SIGN.
+
+FROZEN CLASS: s=±1, tones (1,2,3) or (1,2,3,4), mu_s(x)=beta_s-G_s*sum_{j=-1,0,+1}w_j/[ (x-e-sB-j*d)^2+v], d=1/5,v=1/2 known; w_j positive, sum1, SAME across preparations but UNKNOWN; G_s>0 and beta_s separate and constant within a preparation; |e|<=.1, |B|<=.05. Hypothetical signed response, never demonstrated on Schall device.
+
+EXACT 6-CHANNEL ALIAS: H0 e=.01,B=.0200, w=(.25,.5,.25), beta-3.1 G-.8, beta+2.9 G+1.2. H1 SAME e=.01, B=.0201, positive shared weight vector w'≈(.31724882518521036,.39251112190538784,.2902400529094018); independently positive refit G-'=.80215278148486,G+'=1.20294716593001, beta-'=3.10003956903098,beta+'=2.90004553523138. SIX MEANS match exactly as Fractions, hence identical full Poisson laws for all repetitions, despite different NONZERO positive B and SAME e. EXACT construction: let R_s=(mu_s(2)-mu_s(1))/(mu_s(3)-mu_s(2)); D_ab(y)=1/((a-y)^2+v)-1/((b-y)^2+v); at H1 u_s=e+sB form rational row a_sj=D_12(u_s+j*d)-R_s(H0)*D_23(u_s+j*d); take cross-product a_minus×a_plus and normalize entries to sum1 to get exact w'; solve G'_s from first difference and beta'_s from first mean. Strict positive weights/gains/beta and global mean positivity beta-G/v>0 verified exact. Fourth tone x4 distinguishes THIS pair: gap s- +2.35501865062459e-6, s+ -4.39020908166855e-7. No global 4-tone theorem.
+
+LOCAL 2-D FIBRE: at H0, Jacobian of TWO log ratios w.r.t two independent weights is EXACT nonzero rational, decimal -1.3061577667339692e-4. Analytic implicit function theorem => OPEN 2D observational fibre indexed by (e,B) near H0, with shared positive weight shape and positive individual gains/backgrounds refitted. Four rational nearby field shifts checked. Structural magnitude nonidentification, while sign fixed and ROT021 correct.
+
+FOUR-TONE LOCAL REPAIR: Two independent affine-invariant log adjacent-difference ratios per preparation at tones (1,2,3,4) yield FOUR equations for normalized shape wminus,wzero, common e and B. Exact rational 4x4 Jacobian determinant at H0 = +3.894933841798053e-7 ≠0. Thus LOCAL invertibility by inverse function theorem; analyticity and connected positive interior imply regular points form an OPEN DENSE subset (generic), but NOT GLOBAL injectivity/conditioning. Independent mpmath85 program max 6-mean alias gap 3.22e-86, nonlinear four-ratio inverse error 4.80e-83, analytic/numeric derivative gap 2.98e-15, 100 sampled full-rank controls. SVD condition number ~2306.9; a local inverse can be poor statistically.
+
+EXACT/INDEPENDENT REPRO: Original full Polish proof, stdlib Fraction EXACT checker, independently coded mpmath85/NumPy checker, TWO frozen JSON, README, dispatch, SHA256 manifest in Moderator-local ZIP IW_M14_ROT022_SHARED_SHAPE_MAGNITUDE_ALIAS_FOUR_TONE_LOCAL_REPAIR_REPRO_001_20261029.zip, SHA256 c7040a1957fee219c0ea0bd5e6e5690d9650f5521e426049313816c1c0db7256. ZIP CRC PASS, manifest SHA 7/7 PASS, isolated clean two-script rerun JSON byte-identical PASS. GitHub note NOT a copy of entire ZIP/code.
+
+HARD STOP: no original Schall Source Data download/author hardware fit; no real source sign-switch/relative shape calibration or technical-noise model. No fT sensor performance, NASH physics, mathematical novelty, LT/BW/referee adoption or EXEC. NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / BW_PENDING / REFEREE_PENDING / NO_TASK_CASCADE.
