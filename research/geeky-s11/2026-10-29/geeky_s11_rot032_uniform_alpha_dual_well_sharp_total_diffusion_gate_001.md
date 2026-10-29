@@ -52,7 +52,7 @@ The FULL real normalized exact result is:
 
 For tau_N<=1/64 and sufficiently large N, qout^m>=exp(-pi²/4), rK>=.9, sin(hK)/h>=(2sqrt2/pi)K, K>=N/[16sqrt(1+alpha*m)]. Thus an explicit TRUE lower bound is
  ||U_m(C)||_(L2->L2) >= .0030368543776987202 * epsilon * N/sqrt(1+alpha*m),
-which diverges whenever tau_N->0. For any sequence with inf_N tau_N=0 choose a subsequence tau->0; no UNIFORM all-N bound over the source generator class is possible. This is NOT a counterexample using a fixed smooth input H or a statement that every C is unstable (C=0 is trivially stable). It is a sharp BUDGET gate for general uniform smooth-generator certification, not physical NCDG.
+which diverges whenever tau_N->0. For any sequence with liminf_(N->infinity) tau_N=0, choose a subsequence with N->infinity and tau_N->0; no UNIFORM asymptotic all-N bound over the source generator class is possible. This is NOT a counterexample using a fixed smooth input H or a statement that every C is unstable (C=0 is trivially stable). It is a sharp BUDGET gate for general uniform smooth-generator certification, not physical NCDG.
 
 ## Executed provenance and retention
 
@@ -61,6 +61,6 @@ Four independent standalone scripts:
 2. 2188 adaptive Fourier TT witness and independent matrix projection checks through N8192;
 3. 132 LITERAL unchanged helper real 3D source apply_E, apply_P_TT and full three-term lie_derivative_tensor, explicit U_m sum N8/12/16, max absolute discrepancy 1.66533453694e-16;
 4. 7368 Python stdlib Fraction-only exact algebraic alpha/S and TT projector certificates, no false exact trigonometry.
-TOTAL 9948/9948 TYPED ASSERTIONS PASS, NOT real physical datasets. Standalone LOCAL Moderator-conversation archive GEEKY_S11_ROT032_UNIFORM_ALPHA_DUAL_WELL_SHARP_DIFFUSION_GATE_REPRO_001.zip includes full 11KB Polish report, four standalone runnable scripts, four original JSON, four stdout logs, unchanged helper, README and SHA manifest. ZIP SHA256 bac47992f5b7be3ffc82d31660bfb203c1f76181c15c7fdca675f9dd315e12ac. CLEAN ZIP CRC PASS; all payload SHA256 15/15; delete all four JSON and rerun all four scripts in clean extraction produces four BYTE IDENTICAL JSON PASS. Source code/ZIP local, NOT claimed separately published on GitHub.
+TOTAL 9948/9948 TYPED ASSERTIONS PASS, NOT real physical datasets. Standalone LOCAL Moderator-conversation archive GEEKY_S11_ROT032_UNIFORM_ALPHA_DUAL_WELL_SHARP_DIFFUSION_GATE_REPRO_001.zip includes full 11KB Polish report, four standalone runnable scripts, four original JSON, four stdout logs, unchanged helper, README and SHA manifest. ZIP SHA256 1004babd90d8ebfc86ab536a10087a4c28e71cec0c3afdf435e6cbb6bf405ab3. CLEAN ZIP CRC PASS; all payload SHA256 15/15; delete all four JSON and rerun all four scripts in clean extraction produces four BYTE IDENTICAL JSON PASS. Source code/ZIP local, NOT claimed separately published on GitHub.
 
 Limits: no original historical production runner, masked h=fI K_A, NASH K/J3, physical GR/GW/PBH, mathematical novelty, independent referee, BW, adoption or EXEC. NO_NEW_TASK / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE.
