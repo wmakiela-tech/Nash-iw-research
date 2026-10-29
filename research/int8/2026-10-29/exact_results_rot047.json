@@ -1,0 +1,12 @@
+{
+  "N2_rms_limit": "4*pi^2*sqrt(185)/65",
+  "artifact_id": "IW_INT8_ROT047_INSERTED_P_COMMUTATOR_CLOSURE_001_20261029",
+  "minus_coefficient": "-s1*(2*s1-s2)/5",
+  "nonzero_mode_witnesses": 150,
+  "plus_coefficient": "-4*s1*(2*s1-s2)/65",
+  "rational_gradient_checks": 169,
+  "restriction": "N odd >=7 for unwrapped sum k+l=(2,3,0); E_mode Identity; constant h=I; source auxiliary full-lattice K_A_out not historical masked K_A",
+  "rms2_coefficient": "185/4225 * s1^2 * (2*s1-s2)^2",
+  "source": "NONE_INDEPENDENT",
+  "status": "EXACT_SYMPY_PASS"
+}
