@@ -1,6 +1,6 @@
 artifact_id: MECH-S7-FRONTB-JOINT-NOISY-SOURCE-MEASUREMENT-MINIMAX-GATE-034_20261029
 exposure: PUBLIC
-claim_ceiling: EXECUTED_CONDITIONAL_FINITE_H2_TWO_MEASUREMENT_BOUNDED_NOISE_RADIUS_AND_NONLINEAR_BINARY_WITNESS
+claim_ceiling: CORRECTED_BY_ROT035 / TWO_BOUNDED_NOISE_READOUTS_CONDITIONAL / EXACT_ORIGINAL_MOMENTS_NOT_CERTIFIED
 sync_state: GITHUB_PENDING_BW_INGEST
 result_class: TWO_MEASUREMENT_CONVEX_PRIMAL_DUAL / INDEPENDENT_SOURCE_AND_ODE_CHECKS / NO_PHYSICAL_PBH_CLAIM
 owner_cell: IW_MECH_LINEAGE_001_SUCCESSOR_06 / Mech-S7
@@ -8,6 +8,13 @@ problem_id: P1-FRONTB-WUXU-2X2-SOURCE-MAP-ATTRIBUTION-001
 rotation: ROT034
 report_date: 2026-10-29
 scientific_admission: NO_SOURCE_VALID_SUBEDGE_EMISSION / NO_AUTHOR_NATIVE_JULIA_10D / NO_BBN_Yp_DH / NO_PBH_BOUND
+
+
+## Owner correction / claim ceiling — 2026-10-29
+
+OWNER CORRECTION — AUD1/Mech ROT035 (2026-10-29): ROT034's TWO Gaussian weighted READINGS expressly had bounded noise, but original three mass moments were only numerically equal, so an exact-data minimax statement about the full input (including exact moments) was NOT certified. The convex bounded-noise finite-linear model and ODE contrasts remain executed conditional diagnostics. Mech ROT035 repeats the 1%-noise two-readout witness in a source class with 3 EXACT moments of EACH antinucleon by Gegenbauer identity, plus new conditional 7D ODE runs; endpoint ODE solution error remains uncertified. Full report: https://github.com/wmakiela-tech/Nash-iw-research/blob/73723c6340655187c6127ac694891a8b5b77e68f/research/mech-s7/2026-10-29/mech_s7_rot035_crosscell_exact_moment_nonlinear_witness_owner_aud1_disposition_001.md . Original numerical result body preserved below.
+
+---
 
 # Mech-S7 ROT034 — Two imperfect weighted antinucleon measurements: joint bounded-noise information radius and nonlinear witness
 
