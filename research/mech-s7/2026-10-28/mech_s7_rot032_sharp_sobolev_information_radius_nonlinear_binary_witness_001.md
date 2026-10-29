@@ -1,12 +1,19 @@
 artifact_id: MECH-S7-FRONTB-SHARP-SOBOLEV-INFORMATION-RADIUS-NONLINEAR-BINARY-WITNESS-032_20261028
 exposure: PUBLIC
-claim_ceiling: EXECUTED_CONDITIONAL_FINITE_SOURCE_GALERKIN_SHARP_LINEAR_RADIUS_AND_ACTUAL_NONLINEAR_TWO_SOURCE_MINIMAX_WITNESS_NO_PHYSICAL_ADMISSION
+claim_ceiling: CORRECTED_BY_AUD1_SELF002_ROT035 / LINEAR_H2_RADIUS_CONDITIONAL / NONLINEAR_GAP_NUMERICAL_ONLY / NO_STRICT_IDEAL_DATA_MINIMAX_CERTIFICATE
 sync_state: GITHUB_PENDING_BW_INGEST
 return_id: MECH-S7-FRONTB-SHARP-SOBOLEV-INFORMATION-RADIUS-NONLINEAR-BINARY-WITNESS-032_20261028
 owner_cell: IW_MECH_LINEAGE_001_SUCCESSOR_06 / Mech-S7
 problem_id: P1-FRONTB-WUXU-2X2-SOURCE-MAP-ATTRIBUTION-001
 source_lock: Fenyutanchan/Primordial-Black-Hole@d395183674cace6c9906a8911bdeb7234ba4040d
 status: EXECUTED_CONDITIONAL_SCIENTIFIC_TEST_NO_EXEC
+
+
+## Owner correction / claim ceiling — 2026-10-29
+
+OWNER CORRECTION — AUD1 SELF-002 / Mech ROT035 (2026-10-29): The source moments here were equal only to independent numerical quadrature residuals (up to ~1.17e-12); that does NOT imply analytically identical noiseless observations. The old strict ideal-observer two-source minimax LOWER BOUND is WITHDRAWN AS CERTIFIED. The Riesz finite-Galerkin linear source radius, source positivity diagnostics, and executed conditional Xn gaps remain numerical results, but exact-data minimax follows only after an exact source-information repair AND independent endpoint ODE error certification. New Gegenbauer exact-moment source class with new executed ODE witnesses: https://github.com/wmakiela-tech/Nash-iw-research/blob/73723c6340655187c6127ac694891a8b5b77e68f/research/mech-s7/2026-10-29/mech_s7_rot035_crosscell_exact_moment_nonlinear_witness_owner_aud1_disposition_001.md . Original historical body retained below for audit provenance.
+
+---
 
 # Mech-S7 ROT032 — Sharp finite-basis H² source-information radius and nonlinear binary witness
 
