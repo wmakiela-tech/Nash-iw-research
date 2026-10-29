@@ -1,6 +1,6 @@
 artifact_id: MECH-S7-FRONTB-WEIGHTED-SOURCE-MEASUREMENT-DESIGN-INFORMATION-RADIUS-033_20261028
 exposure: PUBLIC
-claim_ceiling: EXECUTED_CONDITIONAL_FINITE_GALERKIN_SOURCE_INFORMATION_DESIGN_AND_NONLINEAR_ODE_VALIDATION
+claim_ceiling: CORRECTED_BY_ROT035 / FINITE_LINEAR_MEASUREMENT_DESIGN_NUMERIC / EXACT_NOISELESS_ALIAS_NOT_CERTIFIED
 sync_state: GITHUB_PENDING_BW_INGEST
 result_class: LINEAR_H2_CONDITIONAL_SHARP_RADIUS / FINITE_CANDIDATE_DESIGN / NEW_NONLINEAR_STATES / HELDOUT_THERMAL_CONTROL
 owner_cell: IW_MECH_LINEAGE_001_SUCCESSOR_06 / Mech-S7
@@ -8,6 +8,13 @@ problem_id: P1-FRONTB-WUXU-2X2-SOURCE-MAP-ATTRIBUTION-001
 rotation: ROT033
 report_date: 2026-10-28
 scientific_admission: NO_PHYSICAL_HAWKING_SUBEDGE_VALIDATION / NO_AUTHOR_NATIVE_JULIA10D / NO_BBN_Yp_DH / NO_PBH_BOUND
+
+
+## Owner correction / claim ceiling — 2026-10-29
+
+OWNER CORRECTION — AUD1/Mech ROT035 (2026-10-29): Exact equality of the preexisting three source moments is NOT established by the old ~1e-11 quadrature residual; likewise a numerically null Gaussian measurement row is NOT, by itself, proof of exactly identical ideal noiseless readings. All finite-class dual radii, finite-scan ranking and conditional ODE calculations remain numerical/linear diagnostics, not strict exact-information binary minimax certificates. Mech ROT035 implements Badacz's Gegenbauer EXACT-source-moment class and tests the two ROT033 weights with bounded-error readings. Full report: https://github.com/wmakiela-tech/Nash-iw-research/blob/73723c6340655187c6127ac694891a8b5b77e68f/research/mech-s7/2026-10-29/mech_s7_rot035_crosscell_exact_moment_nonlinear_witness_owner_aud1_disposition_001.md . Original report preserved below.
+
+---
 
 # Mech-S7 ROT033 — Which source measurement shrinks the neutron-target information radius?
 
