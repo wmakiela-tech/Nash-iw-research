@@ -1,0 +1,268 @@
+{
+  "artifact_id": "IW_INT8_ROT042_GENERAL_INTEGER_METRIC_TT_NORM_20261029",
+  "record_type": "DERIVED_COMPACT_SUMMARY_OF_FROZEN_MAIN_JSON_NOT_BYTE_IDENTICAL",
+  "frozen_main_json_sha256": "5751bd9efdd652154ac86bc8782d82134eaedf7548e0fd451165d9e0e0542bee",
+  "frozen_full_zip_sha256": "0fbfefce85760f7ee93f940af4419cadd0bd5ede594ff72857315dc7d85a2c2c",
+  "status": "PASS",
+  "half_grid_directions_checked": 65466,
+  "matrix_grid_pairs": 21,
+  "bound_violations": 0,
+  "crosscheck_max_abs": 0,
+  "original_source_helper_status": "SOURCE_SHA_VERIFIED_PASS",
+  "original_source_helper_sha256": "23b0ec865263c5688682425af9d4c1f9cdb9f1d582a0f2f33d99c642c176f801",
+  "original_source_cases": 6,
+  "original_source_test_pairs": [
+    [
+      "xy_shear",
+      3
+    ],
+    [
+      "long_middle",
+      3
+    ],
+    [
+      "long_middle",
+      5
+    ],
+    [
+      "irreducible_mix",
+      3
+    ],
+    [
+      "irreducible_mix",
+      5
+    ],
+    [
+      "irreducible_mix",
+      7
+    ]
+  ],
+  "results": {
+    "xy_shear": {
+      "wielandt_upper_rounded": 3.5,
+      "records": [
+        {
+          "N": 3,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 5,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 7,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 9,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 15,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 21,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 31,
+          "max_nonzero_TT_norm": 3.5,
+          "maximizer_q": [
+            0,
+            0,
+            1
+          ],
+          "strict_gap": 0
+        }
+      ]
+    },
+    "long_middle": {
+      "wielandt_upper_rounded": 23.5,
+      "records": [
+        {
+          "N": 3,
+          "max_nonzero_TT_norm": 21.488283633,
+          "maximizer_q": [
+            1,
+            1,
+            0
+          ],
+          "strict_gap": 2.011716367
+        },
+        {
+          "N": 5,
+          "max_nonzero_TT_norm": 23.5,
+          "maximizer_q": [
+            2,
+            1,
+            0
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 7,
+          "max_nonzero_TT_norm": 23.5,
+          "maximizer_q": [
+            2,
+            1,
+            0
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 9,
+          "max_nonzero_TT_norm": 23.5,
+          "maximizer_q": [
+            2,
+            1,
+            0
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 15,
+          "max_nonzero_TT_norm": 23.5,
+          "maximizer_q": [
+            2,
+            1,
+            0
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 21,
+          "max_nonzero_TT_norm": 23.5,
+          "maximizer_q": [
+            2,
+            1,
+            0
+          ],
+          "strict_gap": 0
+        },
+        {
+          "N": 31,
+          "max_nonzero_TT_norm": 23.5,
+          "maximizer_q": [
+            2,
+            1,
+            0
+          ],
+          "strict_gap": 0
+        }
+      ]
+    },
+    "irreducible_mix": {
+      "wielandt_upper_rounded": 8.227365273,
+      "records": [
+        {
+          "N": 3,
+          "max_nonzero_TT_norm": 7.832304629,
+          "maximizer_q": [
+            1,
+            -1,
+            -1
+          ],
+          "strict_gap": 0.395060644
+        },
+        {
+          "N": 5,
+          "max_nonzero_TT_norm": 8.166644344,
+          "maximizer_q": [
+            2,
+            -1,
+            -2
+          ],
+          "strict_gap": 0.060720929
+        },
+        {
+          "N": 7,
+          "max_nonzero_TT_norm": 8.178561538,
+          "maximizer_q": [
+            3,
+            -1,
+            -2
+          ],
+          "strict_gap": 0.048803735
+        },
+        {
+          "N": 9,
+          "max_nonzero_TT_norm": 8.206899485,
+          "maximizer_q": [
+            4,
+            -2,
+            -3
+          ],
+          "strict_gap": 0.020465788
+        },
+        {
+          "N": 15,
+          "max_nonzero_TT_norm": 8.222221971,
+          "maximizer_q": [
+            5,
+            -2,
+            -4
+          ],
+          "strict_gap": 0.005143302
+        },
+        {
+          "N": 21,
+          "max_nonzero_TT_norm": 8.226027403,
+          "maximizer_q": [
+            9,
+            -4,
+            -7
+          ],
+          "strict_gap": 0.00133787
+        },
+        {
+          "N": 31,
+          "max_nonzero_TT_norm": 8.226872244,
+          "maximizer_q": [
+            11,
+            -5,
+            -9
+          ],
+          "strict_gap": 0.000493029
+        }
+      ]
+    }
+  },
+  "limitations": "Numerical records rounded to 9 decimals as in frozen JSON; this compact report is derived, NOT the byte-exact frozen full result. Original production masked K_A not run; no physical claim."
+}
