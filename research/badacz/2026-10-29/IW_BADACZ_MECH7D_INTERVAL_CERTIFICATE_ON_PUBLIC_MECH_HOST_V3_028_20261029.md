@@ -12,12 +12,36 @@ responds_to: AUD1 ROT010 (warunek awansu 1: wykonanie v2 na hoście zgodnym ze �
 code: research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_owner_host.py (sha256 655fe01a5da948fed8dcba8866844547caf21c0c406c0fbfec9ad5e153fbe5bb); importuje bez zmian mech7d_interval_certificate_v2.py (sha256 0b324062b79f946f134b0cb25c578b61f7c08cb7dc49c1b75c77722d88448d38)
 host_inputs: GitHub Actions artifacts 12116193467 (sha256 75766c5b…, = PUB z Mech ROT006) i 12192535869 (sha256 3b24f50c…, = PAP), repo wmakiela-tech/Nash-iw-research; wygasają 2027-01-15 i 2027-01-17
 output_sha256: b8252fbd654d843acf714388e880ccf678b86a84af682c40dd1d2a54bbdcc87d (mech7d_interval_certificate_v3_owner_host.json)
+code_r2: research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_1_owner_host.py (sha256 ebad2394e5efd1b9ab99484685d1f22f27b483b03ca172a99b1ec1df3534b1fc), v3.1 po AUD1 ROT014
+output_sha256_r2: 84cf3cb097b26250c0c97454f6650852bda9436322915f3ac743855d928f98c6 (mech7d_interval_certificate_v3_1_owner_host.json)
+revision: r2 (29 X) — naprawa po AUD1 ROT014: v3 nie był formalnie ścisłym certyfikatem (wybór segmentu PCHIP i brzeg nośnika decydowane na zaokrąglonym floacie); v3.1 domyka obie luki, dodaje ścisły certyfikat dodatniości i testy regresyjne; liczby bez zmian (identyczne co do bitu); r1 = commit 5b6bf45
 ---
 
-# Certyfikat błędu solvera v2 na publicznym hoście Mech-S7 ROT006 (v3)
+# Certyfikat błędu solvera v2 na publicznym hoście Mech-S7 ROT006 (v3 → v3.1)
 
 **Status:** `[▷]`. Wynik Claude'a, wymaga audytu spoza rodziny Claude. Kod przedziałowy v2 (doc 025)
 jest importowany **bez zmian**. AUD1 ROT010 nadał mu status `CONDITIONAL_ALGORITHMIC_REPAIR_SUPPORTED`.
+
+**ERRATUM r2 (po AUD1 ROT014, 29 X).**
+- **Luka 1 (AUD1).** W v3 obwiednia PCHIP wybierała segmenty po zaokrągleniu końców przedziału do
+  `float64`. Przedział tuż poniżej węzła mógł wtedy pominąć lewy segment. Kontrprzykład AUD1:
+  `PCHIP(t) = t`, `t ∈ [1 − 1e-20, 1 + 1e-20]` daje obwiednię `[1, …]`, która nie zawiera `1 − 1e-20`.
+  W r1 przymiotnik „ścisły” nie był więc formalnie uzasadniony.
+- **Luka 2 (ta sama klasa, znaleziona przy naprawie).** Człon Gegenbauera był włączany według flagi
+  liczonej ze zmiennoprzecinkowego środka kawałka. Kawałek przecinający brzeg nośnika z dokładnością do
+  zaokrąglenia mógł dostać obwiednię bez tego członu na wąskim pasku.
+- **Naprawa (v3.1).**
+  - Segmenty wybieram porównaniami w wysokiej precyzji, z zapasem ±1 segment, i sprawdzam, że
+    pokrywają cały przedział.
+  - Na kawałku, którego `x` przecina `±1`, człon jest obwiedziony przez hull wartości na części
+    wewnętrznej z zerem. To jest poprawne, bo `k` znika na brzegu do rzędu 3.
+  - Dodatniość źródeł mam teraz z certyfikatu przedziałowego, a nie z gęstej siatki float.
+  - Testy regresyjne uruchamiają się przed obliczeniem i przerywają je przy porażce: oba przykłady
+    AUD1, 1500 losowych punktów przy węzłach dla wartości i pochodnej, test brzegu nośnika oraz kontrola
+    negatywna (stary selektor pomija lewy segment).
+- **Wynik po naprawie.** 25 kawałków przecinało brzeg nośnika i są teraz obsłużone. `ε_X` oraz liczby
+  kawałków są **identyczne co do bitu** z r1. Luka była formalna, nie liczbowa, i jest domknięta. Liczby
+  w tabelach poniżej obowiązują teraz jako wynik v3.1.
 
 ## Wynik
 
@@ -65,6 +89,8 @@ jest importowany **bez zmian**. AUD1 ROT010 nadał mu status `CONDITIONAL_ALGORI
 
   - Kierunek `a` to znormalizowany gradient `X_target` po `a_l`, liczony różnicami skończonymi; składowe
     w wyniku JSON. Amplituda `amp = 0.7 ×` maksimum dopuszczone przez dodatniość obu gatunków.
+    W r2 dodatniość jest certyfikowana przedziałowo: na 4000 podprzedziałach `x ∈ [−1, 1]`
+    `|δ| / min(Q_p̄, Q_n̄) ≤ 0.7067 < 1`.
   - To **nie** są świadkowie Mech ROT035: tam stan na krawędzi pochodzi z naprawionego 10-składnikowego
     mostu ROT013, a kierunki z rzutu Riesza. Te dane są w lokalnym ZIP-ie u Moderatora.
 - **Arytmetyka.**
@@ -119,12 +145,15 @@ jest importowany **bez zmian**. AUD1 ROT010 nadał mu status `CONDITIONAL_ALGORI
 pip install numpy==2.1.3 scipy==1.14.1 sympy==1.13.3 mpmath==1.3.0 pandas
 gh api repos/wmakiela-tech/Nash-iw-research/actions/artifacts/12116193467/zip > pub.zip   # sha256 75766c5b…
 gh api repos/wmakiela-tech/Nash-iw-research/actions/artifacts/12192535869/zip > pap.zip   # sha256 3b24f50c…
-python3 -I research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_owner_host.py \
+python3 -I research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_1_owner_host.py \
   --pub pub.zip --pap pap.zip \
   --mech006 research/mech-s7/2026-10-23/terminal_7d_exact_mass_common_background_006.py --out <katalog>
 ```
 
-Około 35 minut na jednym rdzeniu. Pobranie artefaktów wymaga zalogowania do GitHub. Dwa przebiegi (równolegle, na dwóch rdzeniach) dały identyczny JSON.
+Około 35 minut na jednym rdzeniu. Pobranie artefaktów wymaga zalogowania do GitHub. Dwa przebiegi v3.1
+(równolegle, na dwóch rdzeniach) dały identyczny JSON (`84cf3cb0…`). Testy regresyjne uruchamiają się
+na początku i przerywają przebieg przy porażce. Plik v3 (r1) zostaje w repozytorium jako obiekt audytu
+AUD1 ROT014; nie należy go używać.
 
 ## Powrót w trzech warstwach
 
@@ -137,5 +166,10 @@ Około 35 minut na jednym rdzeniu. Pobranie artefaktów wymaga zalogowania do Gi
   - `origin_observation: PUBLIC_HOST_INPUTS_HIDDEN_AS_CI_ARTIFACTS_WITH_EXPIRY`. Kandydat na regułę
     `[▷]`: każdy raport korzystający z artefaktów CI podaje ich ID i datę wygaśnięcia, a właściciel
     utrwala je przed wygaśnięciem.
+  - **r2:** origin_failure_mode `FLOAT_ROUNDED_DECISION_INSIDE_INTERVAL_CODE`: wybór segmentu i flagę
+    nośnika ustalałem na zaokrąglonych floatach, choć arytmetyka była przedziałowa. Łatka: każda
+    decyzja dyskretna w kodzie przedziałowym zapada na porównaniach dokładnych albo pokrywa obie
+    możliwości (hull). Do tego testy regresyjne z przykładami przeciwnika przed każdym przebiegiem.
+    Błąd znalazł zewnętrzny audyt (AUD1, rodzina GPT).
   - Dla mnie: v2 zadziałał na nowym tle po dodaniu tylko obwiedni PCHIP. Rozdzielenie rdzenia
     przedziałowego od modelu hosta się opłaciło.

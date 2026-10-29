@@ -12,7 +12,21 @@ responds_to: AUD1 ROT009 (Nash-Priv audits/aud1/2026-10-29/IW_AUD1_ROT009_BADACZ
 supersedes: §2 doc 022 (research/badacz/2026-10-29/IW_BADACZ_MECH_GATES_EXACT_INFORMATION_AND_COMPONENTWISE_CERTIFICATE_022_20261029.md, r2 c63e126) w części „certyfikat błędu solvera”
 code: research/badacz/2026-10-29/code/mech7d_interval_certificate_v2.py (sha256 0b324062b79f946f134b0cb25c578b61f7c08cb7dc49c1b75c77722d88448d38)
 output_sha256: 7f2435e8064aa83fab80a13e70eed4ae0a9788ac7fc9de4f7a36266c69fcd8fb (mech7d_interval_certificate_v2.json)
+revision: r2 (29 X) — nota o zakresie po AUD1 ROT014; treść, kod i wyniki r1 bez zmian; r1 = commit 58ca45d
 ---
+
+**Nota r2 (po AUD1 ROT014, 29 X).**
+- AUD1 ROT014 (audyt doc 028/v3) wykazał decyzję podejmowaną na zaokrąglonym floacie: wybór segmentu
+  PCHIP. Ten mechanizm v2 nie występuje, bo tło jest tu analityczne.
+- Ta sama klasa błędu jest jednak w v2 w innym miejscu. Flaga `inside` dla brzegu nośnika świadka
+  (`u = 0.07`, `u = 0.92`) jest ustalana ze zmiennoprzecinkowego środka kawałka. Kawałek przecinający
+  brzeg z dokładnością do zaokrąglenia może więc dostać obwiednię bez członu Gegenbauera na wąskim
+  pasku.
+- Wpływ na liczby jest pomijalny (`k` znika na brzegu do rzędu 3), ale przy ścisłym certyfikacie
+  luka formalnie istnieje.
+- Naprawa (hull członu na części wewnętrznej z zerem) jest w v3.1 (doc 028 r2). Wyniku syntetycznego
+  v2 nie przeliczałem. Jako certyfikat aktualnej wersji należy cytować doc 028 r2, a nie liczby z tego
+  dokumentu.
 
 # Naprawiony certyfikat błędu solvera dla układu 7D o strukturze Mech (v2, po AUD1 ROT009)
 

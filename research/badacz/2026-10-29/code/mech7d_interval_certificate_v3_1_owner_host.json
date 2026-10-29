@@ -1,0 +1,181 @@
+{
+ "self_tests_v3_1": {
+  "aud1_linear": true,
+  "aud1_nonlinear": true,
+  "negative_control_v3_selector_on_aud1_example": {
+   "k0_k1": [
+    1,
+    1
+   ],
+   "skips_left_segment": true
+  },
+  "random_cross_knot_points": 1500,
+  "random_cross_knot_failures": 0,
+  "support_edge_points": 41,
+  "support_edge_points_inside": 20,
+  "support_edge_enclosure_contains_pointwise_sources": true,
+  "all_pass": true
+ },
+ "host": {
+  "t_edge": 51.09825802317032,
+  "t_cut": 51.33592433955715,
+  "t_eval": 215.17238635792995,
+  "T_edge_MeV": 0.14358611266323185,
+  "X_edge": 0.4979679142532315,
+  "nPBH0": 1.2057876631918118e-09,
+  "PUB": "75766c5bcc38fe72b3405e32f5c8ef81a50237d6930f318780d49524ff6bafd5",
+  "PAP": "3b24f50ce2f50272874593db3ad26e5e73e871f986ebae91ae6a4fdf8ab15a4e"
+ },
+ "host_fidelity": {
+  "mech006_X_target": 0.3978013205257177,
+  "v3_X_target_unperturbed": 0.3978013205255591,
+  "abs_diff": 1.585953590677036e-13,
+  "mech006_t_eval": 215.17238635792995,
+  "v3_t_eval": 215.17238635792995
+ },
+ "positivity_certificate": {
+  "max_ratio_upper_bound": 0.7066748387754165,
+  "nseg": 4000,
+  "pass": true
+ },
+ "witness": {
+  "direction_a_l(l=3..10)": [
+   0.977544152873236,
+   0.2000736629852621,
+   -0.03822508001958304,
+   -0.049388399424695306,
+   -0.02122539832471941,
+   -0.00518137035863274,
+   -0.0002079356894376685,
+   0.0004247972258541221
+  ],
+  "gradient": [
+   0.026929150058185403,
+   0.005511580911598586,
+   -0.001053015265661336,
+   -0.0013605396905419218,
+   -0.0005847121430281283,
+   -0.00014273513834085473,
+   -5.728162116116035e-06,
+   1.1702211307492675e-05
+  ],
+  "amp": 0.0055559322699754886,
+  "amp_over_positivity_max": 0.7,
+  "moments_j012_and_pair_sum": "exactly unchanged (Gegenbauer orthogonality, Theorem E of doc 022)"
+ },
+ "runs": {
+  "1": {
+   "X_target_rtol3e-9": 0.39795437080932644,
+   "X_target_ref_rtol1e-12": 0.39795437071146633,
+   "diagnostic_error": 9.786010890522334e-11,
+   "bound_eps_X": 1.3601920645885863e-07,
+   "bound_eps_X_after_phaseA": 1.3809796206388054e-07,
+   "bound_eps_all_components_end": [
+    1.3601920645885863e-07,
+    1.584717550058129e-85,
+    3.3288237330076855e-86,
+    1.836624836705326e-80,
+    0.0,
+    4.537451522153157e-17,
+    4.3425176683144594e-16
+   ],
+   "phaseA": {
+    "pieces": 38036,
+    "refinements": 30292,
+    "breaks": 2,
+    "max_rho_upper": [
+     1.0172268149259966e-06,
+     28.917787370592084,
+     28.917787370592084,
+     3.2486279134096483,
+     1.6033681719436486,
+     2.215174275496993,
+     2.2227719491417988
+    ],
+    "sub": 8,
+    "tol_piece": 3e-12,
+    "maxdepth": 6
+   },
+   "phaseB": {
+    "pieces": 19980,
+    "refinements": 10284,
+    "breaks": 32,
+    "max_rho_upper": [
+     5.2568411172479184e-05,
+     135.56665499881254,
+     135.56142768241932,
+     98.86092139731798,
+     1.634653396575382,
+     0.7143852005404635,
+     0.7110882712160135
+    ],
+    "sub": 8,
+    "tol_piece": 3e-12,
+    "maxdepth": 6
+   }
+  },
+  "-1": {
+   "X_target_rtol3e-9": 0.3976482570492619,
+   "X_target_ref_rtol1e-12": 0.3976482569774401,
+   "diagnostic_error": 7.182177075293339e-11,
+   "bound_eps_X": 1.3659685900761923e-07,
+   "bound_eps_X_after_phaseA": 1.3885304088834814e-07,
+   "bound_eps_all_components_end": [
+    1.3659685900761923e-07,
+    1.591150005817215e-85,
+    3.342494757783074e-86,
+    1.848491515992175e-80,
+    0.0,
+    4.542900808074098e-17,
+    4.4067101242903184e-16
+   ],
+   "phaseA": {
+    "pieces": 38123,
+    "refinements": 30379,
+    "breaks": 2,
+    "max_rho_upper": [
+     1.0172268149259966e-06,
+     19.29509015985214,
+     19.295090159852137,
+     2.167633172504667,
+     1.069840197860606,
+     1.4780381748838358,
+     1.4831059113449259
+    ],
+    "sub": 8,
+    "tol_piece": 3e-12,
+    "maxdepth": 6
+   },
+   "phaseB": {
+    "pieces": 20001,
+    "refinements": 10305,
+    "breaks": 32,
+    "max_rho_upper": [
+     5.260080947425212e-05,
+     135.56666853968485,
+     135.56141822862529,
+     98.86097992145521,
+     1.6346533978402127,
+     0.7145663124059184,
+     0.7109070745722894
+    ],
+    "sub": 8,
+    "tol_piece": 3e-12,
+    "maxdepth": 6
+   }
+  }
+ },
+ "half_gap_numeric": 0.0001530568800322818,
+ "two_point_floor": 0.00015292057199954855,
+ "floor_over_half_gap": 0.9991094289083607,
+ "support_edge_straddling_pieces": 25,
+ "verdict": {
+  "self_tests_pass": true,
+  "positivity_certified": true,
+  "host_fidelity_below_1e-8": true,
+  "covers_diagnostic_error": true,
+  "two_point_floor_positive": true
+ },
+ "code_sha256": "ebad2394e5efd1b9ab99484685d1f22f27b483b03ca172a99b1ec1df3534b1fc",
+ "v2_code_sha256": "0b324062b79f946f134b0cb25c578b61f7c08cb7dc49c1b75c77722d88448d38"
+}
