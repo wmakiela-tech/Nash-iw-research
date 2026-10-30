@@ -1,0 +1,16 @@
+# Narzedzia NC edytujace publiczny rejestr CLAIM_ROWS_NC i naglowki artefaktow
+# Zabezpieczone 2026-10-30: wczesniej istnialy wylacznie w efemerycznym kontenerze komorki.
+# To NIE sa obliczenia stojace za claimami; to proweniencja zmian w rejestrze (kazda zmiana ma tez commit z opisem).
+# plik | mtime_oryginalu | sha256
+addrows.py | 2026-10-23 13:13:34 | 9778d596f716ebb0d228b3ce830c61687367358aa6848ec69584e62b1bafd955
+addrows029.py | 2026-10-24 21:56:26 | eb59f7f3a6b981211f6fc374f9cca6ec0c0ccdc4ef41ad5f41b448c34fdee56b
+addrows030.py | 2026-10-24 22:32:28 | 17ae9ab4420d4e88d1b0d7bbcdc8aee214bd5dffad08ee10fc1fd65cf76411b1
+addrows031.py | 2026-10-24 23:02:17 | b7a830c6d20c4a3998af82b9282911b40b1487403367c2d48ce6076252bf2a3e
+addrows032.py | 2026-10-25 00:24:55 | e30cb48162b600ee69b80bb0863e1967c5148d61d3c5e71848a3a0113703de2b
+conform.py | 2026-10-23 13:13:48 | f8b888558faa8550d1be6f591c10f9252504fc24f18b421d33d4e6fd2992e45a
+mkreadme.py | 2026-10-19 07:10:38 | d92d59564fc14f201481ad5a11c530c2eb07ac504f93c492e589f31d9e3e9fbe
+route.py | 2026-10-25 00:46:20 | 8c13ec8c1288baaa0fb659f17289e8822c8a67baeef4606b556687d94e4d15fe
+
+# Dolaczone poza tym katalogiem:
+research/nc/2026-10-18/code/cross2.py | 2026-10-18 20:43:38 | 0b09bf57f2208749ccb312711fc04f9ee34a6c70a876b1a0dde4b1adfdcab1db | cytowany w ART012 par. ~151 (opis incydentu), bez hasha w cytacie
+research/nc/2026-10-24/code/kreiss.py | 2026-10-24 21:18:46 | 770baef9f2cd267361b3d455d412b53ee4d7667b12c9722f0192b1f50e9a462a | ZGODNY z hashem wypisanym przy uruchomieniu (770baef9...); przebieg przerwany przed wynikiem, zastapiony kreiss2.py
