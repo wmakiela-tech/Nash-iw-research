@@ -1,0 +1,67 @@
+{
+ "EXPLORATORY_note": "Not a physical recalibration: a correct standard treatment would retune T_nuc so that 2X = 0.245, which changes X itself; only stored Y at the author's T_nuc is available. Indicates sensitivity only.",
+ "EXPLORATORY_sbbn_anchored_linear_surrogates": {
+  "c=2 (standard slope)": {
+   "allowed_to_excluded": 0,
+   "contour_shift_log10_beta_max": 0.1466978883945984,
+   "contour_shift_log10_beta_median": 0.09913601150244489,
+   "excluded_to_allowed": 261,
+   "flips_vs_original": 261,
+   "slope_ratio_vs_author_at_SBBN": 0.7936468569104321
+  },
+  "c=Y0/X0=2.245 (proportional)": {
+   "allowed_to_excluded": 0,
+   "contour_shift_log10_beta_max": 0.11009931915584303,
+   "contour_shift_log10_beta_median": 0.050389989786634004,
+   "excluded_to_allowed": 131,
+   "flips_vs_original": 131,
+   "slope_ratio_vs_author_at_SBBN": 0.8908685968819601
+  }
+ },
+ "T1_expected": "51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786",
+ "T1_pass": true,
+ "T1_sha256": "51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786",
+ "T2_max_abs_diff": 4.3655745685100555e-11,
+ "T2_max_rel_diff": 3.625798937071253e-11,
+ "T3_Y_gt_1": 158,
+ "T3_chi2_gt_4": 5531,
+ "T3_total": 10000,
+ "T4_allowed_to_excluded": 4469,
+ "T4_excluded_to_allowed": 513,
+ "T4_flips": 4982,
+ "T6_SBBN_X_at_Tnuc_implied": 0.10913140311804008,
+ "T6_X_gt_one_third": 158,
+ "T6_equals_T3_Y_gt_1": true,
+ "T6_note": "Y = 2X/(1-X) = 2 n/p for X = n/(n+p); the standard mass fraction is Y = 2X = 2(n/p)/(1+n/p).",
+ "Y_range": [
+  0.24457984107485917,
+  1.2891415044418126
+ ],
+ "contour_columns_with_boundary": 78,
+ "h5py": "3.12.1",
+ "hdf5": "1.14.4",
+ "orientation": {
+  "beta_range": [
+   1e-20,
+   1e-17
+  ],
+  "frac_nondecreasing_along_axis0": 0.878989898989899,
+  "frac_nondecreasing_along_axis1": 0.686969696969697,
+  "m_range_g": [
+   600000000.0,
+   10000000000.0
+  ],
+  "shape": [
+   100,
+   100
+  ]
+ },
+ "verdicts": {
+  "T1_sha256": true,
+  "T2_chi2_identity": true,
+  "T3_Y_gt1_158": true,
+  "T3_chi2_gt4_5531": true,
+  "T4_flips_4982_4469_513": true,
+  "T6_X_gt_third_iff_Y_gt_1": true
+ }
+}
