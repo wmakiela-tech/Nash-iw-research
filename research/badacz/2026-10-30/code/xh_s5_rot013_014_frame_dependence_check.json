@@ -1,0 +1,69 @@
+{
+ "EXTRA2_Lambda_is_spatial_rotation": true,
+ "EXTRA2_law_residual_50digits": [
+  "5.6903e-160",
+  "2.8451e-160"
+ ],
+ "EXTRA2_transformation_law_R'=Lambda R + u(Lambda) A": true,
+ "EXTRA3_static_rotation_keeps_ideal": true,
+ "EXTRA_iu_dA_equals_Lie_derivative": true,
+ "X1_metric_is_eta": {
+  "active_rot013": true,
+  "active_rot014": true,
+  "control": true
+ },
+ "X2_F1_origin": [
+  [
+   "0",
+   "0",
+   "2/5",
+   "0"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "7/10"
+  ],
+  [
+   "-2/5",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "-7/10",
+   "0",
+   "0"
+  ]
+ ],
+ "X2_F_ty": "2/5",
+ "X2_F_xz": "7/10",
+ "X2_control_iuF1_zero": true,
+ "X2_det": "49/625",
+ "X2_rank": 4,
+ "X3_B_xz_control": "(11*x + 16*z)*sin(11*x*z/100 + 7*x/10 + 2*z**2/25)/100 + (11*z + 70)*cos(11*x*z/100 + 7*x/10 + 2*z**2/25)/100",
+ "X3_C": "1.20690032243787617533623799633",
+ "X3_F_ty_on_line": "2*f(y)/5",
+ "X3_line_integral": "0.482760128975150470134495198532",
+ "X4_F_ty_on_line_general": "kappa*f(y)*cos(kappa*f(y)*h(t))*Derivative(h(t), t)",
+ "X4_F_ty_t0": "kappa*f(y)",
+ "X4_coframe_equals_control_where_h=0": true,
+ "X4_line_integral_over_kappa": "1.20690032243787617533623799633",
+ "verdicts": {
+  "EXTRA2_spatial_rotation": true,
+  "EXTRA2_transformation_law": true,
+  "EXTRA3_static_rotation_keeps_ideal": true,
+  "EXTRA_nonideality_is_Lie_transport_defect": true,
+  "X1_all_metrics_flat": true,
+  "X2_F_ty_2_5": true,
+  "X2_F_xz_7_10": true,
+  "X2_control_ideal": true,
+  "X2_det_49_625": true,
+  "X2_rank_4": true,
+  "X3_C": true,
+  "X3_line": true,
+  "X4_coincidence_where_h0": true
+ }
+}
