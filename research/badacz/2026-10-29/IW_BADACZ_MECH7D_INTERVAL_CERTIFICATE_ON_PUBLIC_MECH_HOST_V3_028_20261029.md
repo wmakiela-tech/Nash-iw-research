@@ -14,7 +14,7 @@ host_inputs: GitHub Actions artifacts 12116193467 (sha256 75766c5b…, = PUB z M
 output_sha256: b8252fbd654d843acf714388e880ccf678b86a84af682c40dd1d2a54bbdcc87d (mech7d_interval_certificate_v3_owner_host.json)
 code_r2: research/badacz/2026-10-29/code/mech7d_interval_certificate_v3_1_owner_host.py (sha256 ebad2394e5efd1b9ab99484685d1f22f27b483b03ca172a99b1ec1df3534b1fc), v3.1 po AUD1 ROT014
 output_sha256_r2: 84cf3cb097b26250c0c97454f6650852bda9436322915f3ac743855d928f98c6 (mech7d_interval_certificate_v3_1_owner_host.json)
-revision: r2 (29 X) — naprawa po AUD1 ROT014: v3 nie był formalnie ścisłym certyfikatem (wybór segmentu PCHIP i brzeg nośnika decydowane na zaokrąglonym floacie); v3.1 domyka obie luki, dodaje ścisły certyfikat dodatniości i testy regresyjne; liczby bez zmian (identyczne co do bitu); r1 = commit 5b6bf45
+revision: r3 (30 X) — nota o kontrakcie nośnika po AUD1 ROT016 (argument formalny, bez zmiany kodu i wyników); r2 (29 X, commit 675404f) — naprawa po AUD1 ROT014: v3 nie był formalnie ścisłym certyfikatem (wybór segmentu PCHIP i brzeg nośnika decydowane na zaokrąglonym floacie); v3.1 domyka obie luki, dodaje ścisły certyfikat dodatniości i testy regresyjne; liczby bez zmian (identyczne co do bitu); r1 = commit 5b6bf45
 ---
 
 # Certyfikat błędu solvera v2 na publicznym hoście Mech-S7 ROT006 (v3 → v3.1)
@@ -42,6 +42,30 @@ jest importowany **bez zmian**. AUD1 ROT010 nadał mu status `CONDITIONAL_ALGORI
 - **Wynik po naprawie.** 25 kawałków przecinało brzeg nośnika i są teraz obsłużone. `ε_X` oraz liczby
   kawałków są **identyczne co do bitu** z r1. Luka była formalna, nie liczbowa, i jest domknięta. Liczby
   w tabelach poniżej obowiązują teraz jako wynik v3.1.
+
+**NOTA r3 (po AUD1 ROT016, 30 X): które ODE jest certyfikowane.**
+- **Uwaga AUD1.** Model float (`G_f_host`) włącza perturbację dla `0.07 < u < 0.92`. Model przedziałowy
+  (`src_g`) włącza ją dla `|x(u)| < 1`, gdzie `x = (ln u − ZM)·fl(2/Lz)`, a `ZM` i `Lz` są stałymi binary64.
+  To różne zbiory: różnią się o pasy szerokości około `4.5e-18` przy `u = 0.07` i `1.2e-16` przy
+  `u = 0.92`, w których `|k| ~ 1e-64`.
+- **Kontrakt (doprecyzowanie, kod bez zmian).** Certyfikowane jest ODE zdefiniowane przez model
+  przedziałowy `G_g`: tło PCHIP i pole Mech ROT006, a perturbacja na `|x(u)| < 1` z dokładnie tymi
+  stałymi binary64.
+  - Model float służy wyłącznie do wygenerowania przybliżenia `ŷ`, czyli wielomianów kolokacyjnych
+    Radau.
+  - Certyfikat ogranicza `|y − ŷ|` dla rozwiązania `y` ODE `G_g` przez obwiednię defektu
+    `r = ŷ′ − G_g(s, ŷ)` liczoną z `G_g`. Każda niezgodność `G_f` z `G_g`, także w tych pasach, jest
+    częścią `r` i jest obwiedziona.
+  - Wybór nośnika w `G_f` nie wpływa więc na ważność ograniczenia, tylko ewentualnie na jego wielkość,
+    tu niezauważalnie.
+- **Dokładna informacja w certyfikowanym modelu.** `x` jest funkcją afiniczną `z = ln u`, a nośnik to
+  `|x| < 1`. Ortogonalność Gegenbauera daje więc dokładnie zerowe momenty `∫ u³ δQ z^j dz`, `j = 0, 1, 2`,
+  przy dowolnych stałych afinicznych, w tym binary64. Suma par jest zachowana punktowo.
+- **Pozostałe elementy dotyczą tego samego modelu.** Certyfikat dodatniości liczony jest na `|x| ≤ 1`.
+  Dno dwupunktowe `|ŷ₊ − ŷ₋|/2 − (ε₊ + ε₋)/2` jest ścisłe dla rozwiązań ODE `G_g`.
+- **Wniosek.** Bez ponownego przebiegu: liczby r1/r2 obowiązują dla tak zdefiniowanego modelu. Względem
+  modelu, w którym nośnik ma dokładnie rzeczywiste końce `0.07` i `0.92`, oba różnią się tylko w pasach
+  poniżej ULP o źródło rzędu `1e-60` względnie. Tej różnicy nie zaliczam do certyfikatu.
 
 ## Wynik
 
