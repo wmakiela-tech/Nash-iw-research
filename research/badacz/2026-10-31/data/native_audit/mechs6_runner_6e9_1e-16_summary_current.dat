@@ -1,0 +1,13 @@
+label=current
+mass_g=6.0e9
+beta=1.0e-16
+Yp=1.3230817938392783
+n_points=1600
+source_active_points=1470
+source_active_below_1e9g_points=0
+floor_pi_minus_points=0
+floor_pi_plus_points=0
+floor_K_minus_points=0
+floor_K0L_points=0
+floor_pbar_points=0
+floor_nbar_points=0

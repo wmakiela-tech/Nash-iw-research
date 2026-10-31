@@ -1,0 +1,51 @@
+---
+artifact_id: IW_BADACZ_WUXU_NATIVE_AUDIT_MANIFEST_SHA256_20261031
+exposure: PUBLIC
+claim_ceiling: PROVENANCE_MANIFEST / NO_RESULT / NO_CANON / NO_EXEC_SIGN
+sync_state: GITHUB_PENDING_BW_INGEST
+created_at: 2026-10-31
+origin_cell: BADACZ (wątek Claude)
+document_type: MANIFEST
+---
+
+# MANIFEST SHA-256: audyt natywny Wu–Xu, E2, E5, E5b (Badacz, 31 X 2026)
+
+Ścieżki są względem `research/badacz/2026-10-31/`. Dotyczy dokumentów REVIEW_035, REVIEW_038 i SYNTH_039 oraz preregów
+034, 036, 037 i 040.
+
+Sprawdzenie: skopiuj blok poniżej do pliku i uruchom `sha256sum -c <plik>` w katalogu `research/badacz/2026-10-31/`.
+
+```text
+5f73229bcb29b4b31a6659387bd512a379c7e45aa8bb3a109852dda128b0c594  code/wuxu_native_audit.jl
+e3a19c2ea058b9c93e9746549f853a6819fa1830102ae63f9cb037cee78232e8  code/wuxu_native_audit_points_and_analysis.py
+b2ac660fba8102f99c38996ca40a482d6933277e77459e67355d97fce853badd  code/wuxu_subedge_variant_boundary.jl
+585d3210dc933a96963cf5b50436a798252e8f2992cc1bb6f4b50595e3cc2f30  code/wuxu_e2_e5_analysis.py
+e1116dd02e2130a81f99a7c0ee47927bfabdbf56773ad0927aa8c3a36cdf41f2  code/wuxu_leftwall_timing.jl
+fe1cd25fc3f9a3438ca42c4eefdab6284a8561df27afcfdb5503cb0218df5c7d  data/native_audit/RUNLOG.md
+5048ed9df5cb78b2a9c6c46a821b89b5f8545357472fbf3df4a6e1186d596006  data/native_audit/analysis.json
+be73c366b574ddac9fd0b6be6d1ef50b738a2556e32c313880a84059dbc33fbd  data/native_audit/default_rerun2.csv
+12afe33d634b681477be24d118359314023b581b96f7d79bf9d937263f07a54c  data/native_audit/default_w1.csv
+4f6997acccebb59300944ca73e6040740b568173a90d0d2f5b344a4f5dc33dcd  data/native_audit/default_w2.csv
+cfb671222d6329e878a0c3f69eb04b7859a9b6e2c884f7363b5881a22bb47705  data/native_audit/det2.dat
+601e97dcd8885171929ca30a7bf5177f25aecea5009b14c517cd3380a13df672  data/native_audit/e2_e5_analysis.json
+d6cb644952d901c29a57d61c2284447566ce6a80d8a14722dd6f83230aafb891  data/native_audit/e2_native.csv
+5ddc5ea0a40882ad8cd81a31601fd0b1a226ded745327a055978ba066c9a88a5  data/native_audit/e2_native_rerun2.csv
+2526da404ee0d3bb02eab0501385eebcf9df1bd7247c059a7d88b6225260acca  data/native_audit/e2_ols8.csv
+2a0e7ebb792959ce9f91b99540a0abed2c077d41ab33279c0ddbc5e53c948ed4  data/native_audit/e2_zero.csv
+e864d764d8863ff109983a5dc2110c5d385a293a931f762d406522390b75812e  data/native_audit/e5_native_sym.csv
+a42c860ce199e3bb0963fa3c918749d2c9307c5f3bb772fa4740dd011e9ea05e  data/native_audit/e5b_native_nsym.csv
+8e4c7b7de8938e5d984113adbec7f239a6986a2748a7f2fe257d1807c612a1ac  data/native_audit/leftwall_timing.csv
+0cf876ed26875c2d743e5c5436d7825e99aaaf4d52e9b6021d5fd644ff422fb7  data/native_audit/mechs6_runner_6e9_1e-16_summary_current.dat
+5d4984f7fce2a64d1186515172ad26b981438797719816da8a39a77e6c29c99c  data/native_audit/n5.dat
+edf136e8fc520ae5a43c20eb7600fa8c59b5ef09c74ec8ffa11163a10b87903e  data/native_audit/n5_ladder_1e-3_1e-6.csv
+9d0a0eebd9d8cddc1a3f30953aa9bdbacafe4ca3fb42ef3fa5fea98b6a9c579e  data/native_audit/n5_ladder_1e-5_1e-8.csv
+3cadc77aded206a74bdb0c8faafa0a63c80485eaeaa7f30d70fd437810bb28ba  data/native_audit/n5_ladder_1e-7_1e-10_INVALID_maxiters.csv
+86fa3ca111a2cae568a73f98ebd6719a5631e317c5097a25bb65e8a24178c90a  data/native_audit/points.dat
+c85b301725572525bea2e01a83c2bd601a3c829dd620e664c091a5b9ecae62bf  data/native_audit/points.json
+13de60a239ac1e6354df9fb3b0f2d652efd9fec39b0c4797fc2f94da3a948256  data/native_audit/timing_points.dat
+```
+
+Źródła zewnętrzne (niekopiowane):
+- `scanning.jld2`: sha256 `51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786`;
+- `scanning_old.jld2` (v1): sha256 `7f8ebe6c6c7b380f20c725908d900c5508bb4f16519a7f17e10955a55e78ecf1`;
+- commit autorów `d395183674cace6c9906a8911bdeb7234ba4040d` (Fenyutanchan/Primordial-Black-Hole).
