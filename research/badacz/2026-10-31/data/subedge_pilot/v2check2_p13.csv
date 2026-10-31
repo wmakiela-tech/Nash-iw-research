@@ -1,0 +1,3 @@
+# variant=p13 charge_map=B_exec(authors) s8=-1.270923577;-1.266332883;-1.266511751;-1.275581163;-1.276094157 logm1_GeV=75.40720036
+j,m_g,boundary_log10beta,status,n_evals,Y_lo,Y_hi,lo,hi
+22,1121174456,-17.275081,bracketed,13,0.2509809019,0.2510244074,-17.276367,-17.273438

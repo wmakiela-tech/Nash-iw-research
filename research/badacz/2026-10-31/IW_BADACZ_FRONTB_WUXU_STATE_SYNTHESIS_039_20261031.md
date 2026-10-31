@@ -8,7 +8,8 @@ origin_cell: BADACZ (wątek Claude)
 document_type: SYNTHESIS
 task_id: BADACZ-FRONTB-SYNTHESIS-001
 owner_of_line: Mech-S7 (źródło i dynamika Front B); synteza nie przejmuje decyzji właściciela
-based_on: REVIEW_035, REVIEW_038 (Badacz, 31 X); Mech-S6 (18 X); Mech-S7 ROT036; MT14 ROT016–018; Rec9 (18 X); XH-S4 002/004; DAX-S7 R33; REVIEW_031
+revision: r2 (31 X, wieczór): dodane wyniki REVIEW_042 (prawo `T^{1.3}`, pilotaż PYTHIA), poprawione twierdzenie o niewykonalności E4 w kontenerze
+based_on: REVIEW_035, REVIEW_038, REVIEW_042 (Badacz, 31 X); Mech-S6 (18 X); Mech-S7 ROT036; MT14 ROT016–018; Rec9 (18 X); XH-S4 002/004; DAX-S7 R33; REVIEW_031
 ---
 
 # Front B (Wu–Xu, Fig. 5) po przebiegach natywnych: co ustalone, co warunkowe, co otwarte
@@ -27,6 +28,7 @@ Przy granicy odpowiedź jest prawie liniowa w `β`. Zmiana efektu hadronów o cz
 | szum solvera i środowiska (domyślne `reltol = 1e-3`) | `≤ 0.013 dex` (szum `Y ~1e-4`) | ustalone `[▷]`, REVIEW_035 |
 | definicja `Y` (v3: `2X`) z rekalibracją SBBN | `+0.03…+0.07` | ustalone `[▷]`, REVIEW_035 N4 |
 | nachylenie ekstrapolacji poniżej `1e9 g` (2 → 8 wierszy) | `−0.02…−0.04` przy `m ≤ 1.6e9 g`, `~0` wyżej | ustalone `[▷]`, REVIEW_038 V1 |
+| prawo z tekstu autorów `T^{1.3}` zamiast nachylenia kodu (`−1.20`, artefakt brzegu tabeli) | `−0.03…−0.055` przy `m ≤ 1.6e9 g`, `≤ 0.012` wyżej | ustalone `[▷]`, REVIEW_042 (głąb tabeli, PYTHIA i tekst autorów zgodne na `≈ −1.30`) |
 | mapa ładunkowa: tylko nukleony (poparte źródłem, Rec9) | `+0.06` (lewa ściana) do `+0.30` (`7.7e9 g`); 90–99% pełnego `B_sym` dla `m ≳ 3e9 g` | warunkowe na tym, że kolumny tabeli to sumy `p + p̄`, `n + n̄` (tak piszą autorzy, Rec9); REVIEW_038 E5b |
 | mapa ładunkowa: pełne `B_sym` (`π/K` jako założenie symetrii) | `+0.27…+0.30` (czynnik `1.85–2.0` w `β`) | warunkowe (symetria `π/K`), REVIEW_038 E5 |
 | istnienie emisji hadronów poniżej `1e9 g` | lewa ściana znika (`> +2 dex` przy `1.12–1.33e9 g`), `+0.01` przy `7.7e9 g` | miara zależności, nie wariant fizyczny; REVIEW_038 V2 |
@@ -43,6 +45,11 @@ Przy granicy odpowiedź jest prawie liniowa w `β`. Zmiana efektu hadronów o cz
 4. **Lewa ściana (`m ≈ 1.1–1.6e9 g`) jest przewidywaniem ekstrapolacji.** Bez emisji poniżej krawędzi tabeli
    ograniczenie przy `1.12–1.26e9 g` znika aż do `β = 1e-15`. W obrębie rodziny potęgowej kształt
    ekstrapolacji zmienia granicę o setne części dex.
+5. **Nachylenie ekstrapolacji w kodzie (`−1.20`) to artefakt brzegu tabeli** (REVIEW_042).
+   - Głąb tabeli (`T = 3.7–6.7 TeV`), pilotaż PYTHIA 8.318 i prawo `T^{1.3}` z tekstu autorów zgadzają się
+     na `≈ −1.30`.
+   - Poprawne prawo wzmacnia lewą ścianę o `0.03–0.055 dex`.
+   - W obrębie fragmentacji SM emisja poniżej `1e9 g` jest więc ustalona do kilku setnych dex konturu.
 
 ## Warunkowe
 
@@ -53,15 +60,17 @@ Przy granicy odpowiedź jest prawie liniowa w `β`. Zmiana efektu hadronów o cz
   - Rozstrzygnięcie kontraktu należy do Rec/REC10, a decyzja o linii do Mech-S7. Pytanie do autorów: czy
     kolumny `proton_dN_over_dt` i `neutron_dN_over_dt` są sumami cząstek i antycząstek.
 - **Krawędź tabeli.** Tablice hadronizacji BlackHawk sięgają około 100 TeV energii cząstki pierwotnej
-  (arXiv:2108.02737), a przy `1e9 g` `T_BH ≈ 10.6 TeV`. Fizyczna emisja przy `T_BH > 10 TeV` nie jest
-  w projekcie zwalidowana (Mech-S7 ROT036: UNKNOWN).
+  (arXiv:2108.02737), a przy `1e9 g` `T_BH ≈ 10.6 TeV`. Autorzy podają limit partonu `1e5 GeV` jako powód
+  nieużywania BlackHawk poniżej `1e9 g`. Spłaszczenie ostatnich wierszy tabeli jest z tym zgodne (hipoteza
+  mechanizmu `[▷]`, REVIEW_042).
 
 ## Otwarte (eksperymenty rozstrzygające)
 
-- **E4 — fizyczne widmo hadronów poniżej `1e9 g`** (`T_BH` od 10 TeV do końca parowania). Wymaga generatora
-  (PYTHIA/HERWIG poza zakresem tablic BlackHawk albo innego narzędzia) i nie da się go zrobić w tym
-  kontenerze. Właściciel: Mech-S7 z XH (źródła). Bez E4 lewa ściana Fig. 5 ma status przewidywania
-  ekstrapolacji.
+- **E4 — fizyczne widmo hadronów poniżej `1e9 g`** (`T_BH` od 10 TeV do końca parowania).
+  - Część z fragmentacji SM wykonana jako pilotaż: PYTHIA 8.318 z PyPI działa w kontenerze. W r1 tego
+    dokumentu błędnie napisałem, że się nie da, bez sprawdzenia.
+  - Otwarte: współczynniki szarości zależne od spinu, pierwotne `t/W/Z/H`, stopnie swobody spoza SM.
+  - Właściciel: Mech-S7 z XH (źródła).
 - **Proweniencja figury.** Którego skanu i jakiej formuły użyto w JCAP i w arXiv v3 (MT14 ROT016–018,
   XH-S4 004). Pytanie do autorów albo do XH.
 - **Fizyczny punkt końcowy.** Pełna sieć BBN z `D/H` i dopasowaniem `η` (MT14 ROT014/015, Mech-S7 ROT011).
