@@ -391,3 +391,32 @@ zwiekszania sily.
 
 Plik archiwalny: `research/nc/2026-10-25/START_CLAUDE_BADACZ_v2_20261025.md`.
 Sufit: propozycja startowa, `NO_CANON`, bez `EXEC_SIGN`; przyjecie nalezy do Moderatora.
+
+---
+
+## Dyspozycja 036 — dostarczenie przekazan do DS i Gemini (2026-10-31)
+
+**ZAPIS != DOSTARCZENIE.** Od 25 X przekazania NC do DS/R1 i Gemini (z ART029, ART030, ART032 i kolejki 033)
+byly publikowane wylacznie na #iw-dispatch. DS i Gemini nie czytaja Slacka ani GitHuba — material dla nich musi
+byc paczka samowystarczalna przekazywana recznie przez Moderatora. Te przekazania byly wiec **zapisane, nie
+dostarczone**. Wykryte 31 X przy poleceniu Moderatora „Wyslij zwroty".
+
+**Przed wyslaniem — korekta wlasna (`NC-FAL-028`, ART029 errata 3).** Przy przepisywaniu T1a do paczki dla DS:
+warunek rownosci byl niepelny (brak wspolliniowosci `w_j`), a zdanie o oscylatorze „rownosc przy dowolnych
+czasach" falszywe — przy ustalonych czasach tylko `Delta in pi*Z`. Kod i wynik: `research/nc/2026-10-31/code/osc.py`,
+`osc_out.txt`. Blad przeszedl wczesniej przez red-team Groka (sprawdzil tylko czesc o deficycie). T1 stoi.
+
+**Paczki — jedna na odbiorce, przekazane Moderatorowi 31 X do recznego relay:**
+- `research/nc/2026-10-31/packets/PAKIET_DS_R1_NC_T1_SUFIT_POMIAROWY_v1_20261031.md` — DS pozycja 1: T1 i
+  poprawione T1a. **Zmiana kolejnosci wobec 033** (gdzie pozycja 1 byla `NC-ALG-021`): analogie do BAE obejrzal juz
+  Grok 25 X; najmocniejszy pozostaly wynik (T1) nie mial jeszcze ataku od falsyfikatora. `NC-ALG-021` -> pozycja 2.
+- `research/nc/2026-10-31/packets/PAKIET_GEMINI_NC_TESTBED_SKAN_SWOBODNE_E_D_v1_20261031.md` — Gemini pozycja 1
+  (`NC-NUM-001`): czy losowe przeszukiwanie znajduje naroznik `sqrt(m)`. Kod referencyjny w paczce uruchomiony
+  przed wyslaniem: kontrola `2.8284271247` (`sqrt(8)`), `e = d` daje `1.0`.
+
+Status obu: `HANDED_TO_MODERATOR_FOR_RELAY`. Odbior przez DS/Gemini — nie potwierdzony. Kolejnosc rekomendowana:
+DS najpierw (falsyfikacja claimu), Gemini po zwrocie DS — regula „jedna prosba naraz".
+
+**Pozycje dla komorek GPT, ktore wpadly w luke sukcesji** (LT4 -> LT6, M13 -> M14, MT13 -> MT14): ponownie
+zaadresowane do nastepcow na #iw-dispatch 31 X, jedna pozycja na komorke. `NC-NUM-011` nie jest wysylany —
+zastapiony twierdzeniem MT13 T1 (`2(1-1/r)`), patrz `NC-FAL-021`.

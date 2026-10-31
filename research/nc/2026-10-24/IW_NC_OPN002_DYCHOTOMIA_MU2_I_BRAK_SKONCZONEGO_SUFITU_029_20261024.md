@@ -16,6 +16,14 @@
 > `PREREG_ALIGN.md` par. 4 z 18 X zabraniala tego wnioskowania: nasz back-action jest dyssypacja
 > obnizajaca `A^2`, kwantowy BAE to szum podnoszacy wariancje. Zostaje analogia strukturalna.
 > Zakres nowosci liczy sie wobec ART032 par. 5, nie ART031 par. 3.
+>
+> **ERRATA 3 z 2026-10-31.** T1a w par. 3 jest blednie sformulowany. Rownosc w podadditywnosci
+> `lambda_max(sum w_j w_j^T) <= sum ||w_j||^2` wymaga, by wszystkie `w_j` byly **wspolliniowe**, nie tylko
+> jednostkowe. Zdanie, ze dla oscylatora (izometria) rownosc zachodzi przy **dowolnych** czasach, jest **falszywe**:
+> przy ustalonych czasach kres `sqrt(m)` jest osiagany tylko dla odstepu `Delta in pi*Z`; przy `Delta = pi/2` wynosi
+> `2/sqrt(3)` dla `m=2` i `sqrt(2)` dla `m=4` (`research/nc/2026-10-31/code/osc.py`). Kres `sqrt(m)` jest
+> przyblizany dla kazdego `G` z `mu_2 <= 0` przez skupienie czasow przy `t -> 0` — to znajdowal optymalizator.
+> T1 (nierownosc) i liczby z par. 3 stoja.
 
 **SUFIT CLAIMU: NO_CANON / NO_EXEC_SIGN / NO_NOVELTY_CLAIM / AUDYT ZEWNETRZNY OBOWIAZKOWY.**
 Wynik numeryczny nie wchodzi do claimu ani artykulu bez EXEC_SIGN Moderatora. Pelny audyt
