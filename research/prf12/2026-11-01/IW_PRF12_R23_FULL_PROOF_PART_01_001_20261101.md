@@ -1,0 +1,11 @@
+Composite pulses for off-resonance control are a mature technique. Kukita, Kiya, Kondo, *General off-resonance-error-robust symmetric composite pulses with three elementary operations*, Phys. Rev. A **106**, 042613 (2022), https://doi.org/10.1103/PhysRevA.106.042613 ; Cummins and Jones, *Resonance offset tailored composite pulses*, JMR **148**, 338–342 (2001), https://doi.org/10.1006/jmre.2000.2247 . CORPSE's conventional angle sequence is used here solely as a **declared comparator**, not claimed invented or globally pulse-optimal. The comparison implements active noise during EVERY segment.
+
+## 1. Frozen experimental contract and what may NOT be inferred
+
+Each pair consists of **two sequential destructively measured shots of one freshly prepared qubit**. Static source A holds **the same single arbitrary real xi throughout BOTH shots**, including all control pulses and free intervals; xi may be arbitrary and perfectly correlated from pair to pair. Source B has independent symmetric Cauchy–Levy increments in every sensing/control interval and across both shots, with Bloch generator `dr/dt = [Omega_axis]cross r - diag(gamma,gamma,0) r`. A: Bloch rotation generator `[xi e_z + Omega_axis]cross r`. All source-on controls are finite square pulses, drive amplitude `Omega_max=10 gamma`, free sensing per shot `gamma Delta=0.5`. Prep is Y `+pi/2`; X analysis is Y `-pi/2`, Y analysis is X `+pi/2`; Z analysis is the **ideal instantaneous terminal Z projection**, with no analysis pulse. Every pair chooses ONE common, freshly private X/Y/Z axis according to w and uses it in BOTH shots. Preparations and measurements are independent conditional on the source history and basis choices; hidden source does not anticipate the private random coin. No physical reset/detection time or noise is modeled. There are no entangling gates, multi-qubit memory or SWAP; this experiment differs from the original 3-qubit no-closure LOCC question.
+
+For any fixed xi, let `m_j(xi)` be the **final z magnetization** after the finite prep/free/analysis circuit of basis j. Let `n_j` be the corresponding source-B magnetization, obtained from Markovian Bloch/Lindblad evolution. The same bit per pair records agreement of both destructive outcomes. EXACT identities:
+
+`p_A(xi;w) = 1/2 + (1/2) sum_{j=X,Y,Z} w_j m_j(xi)^2`;
+`p_B(w)    = 1/2 + (1/2) sum_{j=X,Y,Z} w_j n_j^2`.
+
