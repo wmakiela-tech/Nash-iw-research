@@ -1,0 +1,70 @@
+{
+  "N": 3,
+  "artifact_id": "IW_INT8_ROT049_EXACT_RATIONAL_GRID_PURETRACE_20261101",
+  "negative_controls": "E_lin with planar f and generic H yields nonzero K_C despite bracket identically zero; Identity K_C zero on all tensor fields",
+  "scaling": "grid spacing unit1 and E=I+alpha Delta; exact rational 3-grid source-independent structural controls",
+  "source_status": "NO_SOURCE_IMPORT",
+  "status": "EXACT_FRACTION_PASS",
+  "tests": [
+    {
+      "mode": "Identity",
+      "name": "constant",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "E_lin",
+      "name": "constant",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "Identity",
+      "name": "z_nonconstant",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "E_lin",
+      "name": "z_nonconstant",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "Identity",
+      "name": "x_nonconstant",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "E_lin",
+      "name": "x_nonconstant",
+      "sum_of_squares_exact": "70227/5120000",
+      "zero": false
+    },
+    {
+      "mode": "Identity",
+      "name": "xy_nonconstant",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "E_lin",
+      "name": "xy_nonconstant",
+      "sum_of_squares_exact": "3969/320000",
+      "zero": false
+    },
+    {
+      "mode": "Identity",
+      "name": "arbitrary_tensor",
+      "sum_of_squares_exact": "0",
+      "zero": true
+    },
+    {
+      "mode": "E_lin",
+      "name": "arbitrary_tensor",
+      "sum_of_squares_exact": "89325237/369920000",
+      "zero": false
+    }
+  ]
+}
