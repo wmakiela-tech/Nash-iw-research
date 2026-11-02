@@ -57,7 +57,7 @@ Kontrola niezależna: skrajne Krausy amplitude damping, asymetryczna macierz ass
 
 ## 3. Twierdzenie R25.2 — resetowe hazardy i skończona próba BEZ iid xi
 
-Rozpatrz proces A, dla którego warunkowo względem dowolnego wcześniejszego zapisu i ustawienia programu (ale niezależnie od nowego prywatnego losowania osi) szansa **braku zmiany** xi podczas pełnego przedziału pary jest co najmniej s=e^(−lambda L_pair). Przy braku zmiany korzystamy z a0=.576; przy możliwej zmianie xi w środku impulsu albo ekspozycji używamy tylko bezpiecznego idealnego floor f=0. Jeżeli źródło może się zmienić WYŁĄCZNIE między dwoma kompletnymi odczytami i pozostaje statyczne podczas nich, zachowany analityczny dowód R24 daje f=.31. Dla Y z korekcją detektora zachodzi
+Rozpatrz proces A, dla którego warunkowo względem dowolnej wcześniejszej historii, bieżącej ukrytej wartości xi, wszystkich innych ukrytych zmiennych mogących wpływać na intensywność resetów oraz wylosowanej osi pomiarowej prawdopodobieństwo **braku zmiany** xi podczas pełnego przedziału pary jest co najmniej s=e^(−lambda L_pair). Wystarcza egzogeniczny zegar Poissona o intensywności lambda niezależny od aktualnej xi, bieżącej osi i historii, z użyciem najdłuższego możliwego czasu pary L_pair. Sam bound Pr(no reset|zaobserwowana przeszłość)>=s NIE wystarcza: selektywny względem bieżącej xi reset może zaburzać wagę średniej po losowanych osiach. Przy braku zmiany korzystamy z a0=.576; przy możliwej zmianie xi w środku impulsu albo ekspozycji używamy tylko bezpiecznego idealnego floor f=0. Jeżeli źródło może się zmienić WYŁĄCZNIE między dwoma kompletnymi odczytami i pozostaje statyczne podczas nich, zachowany analityczny dowód R24 daje f=.31. Dla Y z korekcją detektora zachodzi
 
   E_A[Y|past]>= a(s,f):=s a0+(1−s)f,
   E_B[Y|past]<=b0.                                     (R25.6)
@@ -141,7 +141,7 @@ Przykładowe górne granice R25.10 przy gamma=T=1 i Hmax=5: h=.02 daje 0.600964;
 2. **T1 podczas analizy/sterowania poprzecznego:** m_d=e^(−Gamma t_d)m+... nie opisuje pełnego kanału; R25 nie dowodzi jego korekcji.
 3. **Korelacje odczytów:** niezależność dwóch klasycznych kanałów assignment i detektorowego T1 jest istotna dla mnożenia E[t1t2]; wspólny klasyczny dryf może dać nieusuwalny składnik kowariancji.
 4. **Kalibracja bliska osobliwości:** gdy c zbliża się do zera, W=(1+|d|)/c² diverguje, a liczba wymaganych prób N ~W²/D² może rosnąć jak c^(−4). Przy c=0 w ogóle nie ma informacji w odczytanych bitach w tym kanale.
-5. **Poisson tylko w sensie marginalnym:** jeśli brak warunkowego hazardu, nie wolno stosować wykładniczego ograniczenia martyngałowego z R25.7.
+5. **Poisson tylko w sensie marginalnym albo tylko względem zaobserwowanej historii:** to NIE wystarcza. Konieczna jest dolna granica przeżycia również przy warunkowaniu na bieżącą xi, ustawienie osi i inne istotne zmienne ukryte, lub egzogeniczny zegar resetów niezależny od nich; inaczej nie wolno użyć a(s,f) z R25.6 ani testu R25.7.
 6. **Wariant A_h z szybkimi resetami:** nie jest to kontrprzykład dla twierdzenia R23 o JEDNEJ xi na całą parę, lecz niezależny „information boundary” dla szerszej rodziny procesów.
 7. **Nieustalone zasoby:** realny czas odczytu Z, leakage, bit-flip przez inne mechanizmy, pomyłka ponownego przygotowania, zmienność eta+/eta− z osią i widmem źródła oraz kalibracja empiryczna NIE są zweryfikowane.
 8. **Nie wolno utożsamiać** żadnego wyniku R25 z nierozstrzygniętym domknięciem pełnego LOCC dla oryginalnego pojedynczego bloku trzech kubitów.
