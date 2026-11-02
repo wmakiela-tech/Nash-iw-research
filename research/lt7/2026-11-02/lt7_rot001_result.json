@@ -1,0 +1,25 @@
+{
+  "artifact_id": "IW_LT7_ROT001_CROSS_MODEL_SOURCE_ONLY_INFORMATION_FLOOR_20261102",
+  "conditional_mech_rot036_readback_arithmetic_only": {
+    "Xnuc_B_exec": "0.400959518961858",
+    "Xnuc_B_sym": "0.400084966240828",
+    "chi_EM": "0.5",
+    "claim": "conditional diagnostic; no certified full ODE error, no physical model admission",
+    "half_gap": "0.000437276360515",
+    "numerical_target_gap": "0.000874552721030",
+    "source": "same native source / two downstream hypothetical kinetic maps"
+  },
+  "exact_toy": {
+    "control": "all exact Fraction comparisons PASS",
+    "full_source_robust_AB_risk_squared": "1/2",
+    "map_label_and_full_source_risk": "0",
+    "model_A": "T_A(s)=s1",
+    "model_B": "T_B(s)=s2",
+    "rational_grid_max_squared_error": "19881/40000",
+    "rational_grid_points_model_pairs_checked": 62834,
+    "reading_diag_robust_AB_risk_squared": "1/2",
+    "reading_e1_nominal_A_risk": "0",
+    "reading_e1_robust_AB_risk": "1",
+    "source_set": "s1^2+s2^2<=1"
+  }
+}
