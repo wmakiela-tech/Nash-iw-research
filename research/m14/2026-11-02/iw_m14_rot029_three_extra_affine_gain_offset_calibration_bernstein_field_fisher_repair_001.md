@@ -1,0 +1,27 @@
+# M14 ROT029 — Three extra counters overcome unknown shared affine calibration (one positive fibre)
+artifact_id: IW_M14_ROT029_THREE_EXTRA_AFFINE_CALIBRATION_BERNSTEIN_FIELD_FISHER_REPAIR_001_20261102
+origin: IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_09 / M14
+date: 2026-11-02
+return_id: M14-ROT029-THREE_EXTRA_AFFINE_GAIN_OFFSET_BERNSTEIN_FIELD_FISHER_REPAIR_001_20261102
+exposure: PUBLIC
+status: EXACT_BERNSTEIN_PASS / INDEPENDENT_MPMATH75_PASS / ZIP_CLEAN_REPLAY_PASS / BW_PENDING / REFEREE_PENDING
+claim_ceiling: EXACT_CLASSICAL_SYNTHETIC_POSITIVE_1D_FIBRE / NO_NOVELTY / NO_DEVICE_REPLAY / NO_GLOBAL_INVERSE / NO_NASH_PHYSICAL / NO_CANON / NO_EXEC_SIGN
+
+FIRST OWNERS/SOURCE: XH-S5 ROT007 owns real Schall et al Nature Communications 17:10825 (2026), DOI 10.1038/s41467-026-78386-z 14N overlapping three-Lorentz source; photon-shot-noise sensitivity LIMIT is NOT achieved technical-noise sensitivity. M14 ROT026 FIRST exact efficient-Fisher-zero on 10-counter nominal grid; ROT027 FIRST one EXTRA KNOWN calibrated counter repairs this exact positive fibre; ROT028 FIRST two extra counters with ONE shared unknown offset repair this fibre. ROT029 separately allows TWO unknown new-channel affine calibration parameters (gain and offset). Standard nuisance projection, exact rational determinants and Bernstein bounds: NO mathematical novelty.
+
+SOURCE-TYPED EXPERIMENT (hypothetical sign response s=±): m_s(x)=beta_s−G_s Σ_(j=-1..1)w_j/((x−e−sB−jd)^2+v). TEN existing parameters theta=(two common normalized positive triplet weights,e,B,v,d,2 per-prep beta,2 per-prep G), all unknown. FIVE original tones (.75,1.25,1.75,2.25,5) EACH preparation =10 independent unit-exposure Poisson counts. ROT026 positive family:
+ wminus=(155+t)/1000,w0=.51,wplus=.49−wminus,t∈[0,1]; e=.04,B=−.03,v=.53,d=.22; (beta−,G−)=(3.1,.8),(beta+,G+)=(2.9,1.2). All weights and all-real mean intensities strictly positive.
+
+NEW AFFINE CALIBRATION: each extra sign-minus count at x ∈{5.5,6,6.5} has mean m_extra(x)=eta+gamma*m_minus(x); two unknowns eta and gamma are SHARED across extras, do NOT affect old 10. Certificate at eta=0,gamma=1, but BOTH treated as nuisance. Total unknown parameter count 12, field B plus ELEVEN nuisances.
+
+EXACT NEGATIVE: With ONLY TWO extras (5.5,6), nuisance score columns (d_eta,d_gamma)=(1,m_-(x)) span all extra observations because m_-(5.5) != m_-(6) on right tail. After profiling, NO new field information remains: Ieff_B(12 observed,12 unknown)=Ieff_B(10 old,10 unknown). At the algebraic ROT026 fold Ieff_B=ZERO EXACT. This is not a failure of the underlying detector.
+
+EXACT POSITIVE: With THREE extras (5.5,6,6.5), total THIRTEEN observations, TWELVE unknowns, select nine original rows (omit old s− x=.75) plus three extra rows as 12x12 Jacobian minor. Eliminate gain/offset nuisance to get q=(mu6−mu5.5)r6.5−(mu6.5−mu5.5)r6+(mu6.5−mu6)r5.5; r are original ten-parameter Jacobian rows, mu original predicted mean at each extra tone. Full 12x12 determinant equals determinant of nine old rows and this q. Exact Fraction rational interpolation yields degree SIX polynomial C(t), certified by 11 rational samples t=-5..5 and three held-out tests t=1/7,2/3,5/11. ALL SEVEN EXACT degree-6 Bernstein coefficients satisfy b_k <= b0=C(0)<0, C(0)≈−1.4251867739422916e−22. Therefore by Bernstein nonnegative partition unity: C(t)<=C(0)<0 throughout ALL t∈[0,1]. Independent exact Sturm count ZERO roots. Thus J13x12 has full rank12 throughout this entire positive fibre. With all independent Poisson means positive, after profiling ELEVEN nuisance directions field FI is >0 throughout. Conservative explicit LOWER BOUND:
+ Ieff_B(t)>=C(0)^2 / ((31/10)*60^22)≈4.977993949588248e−84,
+only a mathematical positivity certificate, NOT usable accuracy forecast.
+
+INDEPENDENT 75-digit RAW mean differentiation and weighted Poisson-Fisher projection: exact old ROT026 fold wminus=.155279418103510806400758096567... gives 10-old FI=0, 12-twoextras with two unknown affine params FI=0, 13-threeextras with same two unknown affine params FI≈.0006011219260372254863. At wminus .155, .1555,.156: FI13≈.000572142981287,.000625598633227,.000685947225759. Separate 301-point NumPy complex-step controls all FI13>0; NOT source of interval-wide proof. Extra 3 vs original 10 = 30% increase in unit-exposure observations, NOT equal-total-exposure comparison.
+
+VERIFIED LOCAL ORIGINAL: full Polish theorem, runnable exact stdlib Fraction+SymPy program, INDEPENDENT mpmath75+NumPy program, TWO frozen JSON, README, dispatch and SHA manifest; ZIP CRC PASS, SHA256 payload 7/7 PASS, clean extraction both scripts rerun JSON BYTE_IDENTICAL PASS. LOCAL ZIP IW_M14_ROT029_THREE_EXTRA_AFFINE_CALIBRATION_BERNSTEIN_FISHER_FULL_REPRO_001_20261102.zip SHA256 d79ea0d786fb89745d9570466136ff5c59d004312f90473f852673886a8c9c3b. Full original ZIP is LOCAL, NOT automatically GitHub-hosted.
+
+HARD STOP: NO validated author Schall signed preparations/relative line shape or new-channel calibration; NO real sensor photon/technical noise or fT claim, NO parameter-wide uniformity or global nonlinear triplet inverse, NO mathematical novelty, NO NASH physical J3/K/GR upgrades, BW/REC11/AUD1/LT adoption NOT verified. NO_CANON / NO_EXEC_SIGN / NO_NEW_TASK_CASCADE.
