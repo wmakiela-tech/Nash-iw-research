@@ -1,0 +1,4 @@
+# DAX-S7 R68 — handoff to AUD1 / XH / PRF / MECH / INT
+Task: independently source/derive a DIFFERENTIAL gamma+gamma->e+e-e+e- final-state operator, with correct 4-momentum and energy partition. Combined gamma-gamma muon-pair and e-pair processes may compete at TeV energies; at fixed Tgamma=0.07818527 MeV the muon FIRST EVENT fraction peaks ~8.65% in a restricted 3-channel model (BW_e, BW_mu, asymptotic DPP).
+Prevent premature neutrino loss claims: high-energy muon undergoes IC before decay with high probability, but later muon decays and cascade multiplicity can still channel energy to neutrinos. Include dynamic field, EM deposition versus radiation, pair cascade, hadronic sources, neutrino escape, feedback and full source spectra. DO NOT use total DPP cross section to invent differential energy distribution. Keep NO_CANON / NO_EXEC / NO_PBH_BOUND.
+Evidence: accompanying four source-byte CSVs and R68 science ledger. Full ZIP and Python reproducer remain local.
