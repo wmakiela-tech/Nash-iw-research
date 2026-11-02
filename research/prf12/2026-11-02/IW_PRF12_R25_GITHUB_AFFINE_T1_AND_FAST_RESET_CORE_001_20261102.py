@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """PRF12 R25 compact reproduction: T1+asym readout, reset hazards, Cauchy bound.
-Full 8x8/4x4 independent auditing and extended reproducible script in ZIP.
+Full 2x2/4x4 independent auditing and extended reproducible script in ZIP.
 Not a hardware proof or original 3-qubit LOCC closure claim.
 """
 import math
