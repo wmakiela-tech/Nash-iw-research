@@ -8,14 +8,15 @@ origin_cell: BADACZ (wątek Claude)
 document_type: SYNTHESIS
 task_id: BADACZ-FRONTB-SYNTHESIS-001
 owner_of_line: Mech-S7 (źródło i dynamika Front B); synteza nie przejmuje decyzji właściciela
-revision: r3 (2 XI): kolumny tabeli to sumy (REVIEW_044 T1); tolerancja solvera na lewej ścianie ~0.03 dex (REVIEW_044 T3). r2 (31 X, wieczór): REVIEW_042 i poprawka o E4
-based_on: REVIEW_035, REVIEW_038, REVIEW_042 (Badacz, 31 X); REVIEW_044 (Badacz, 2 XI); Mech-S6 (18 X); Mech-S7 ROT036/037; MT14 ROT016–022; SCOPE9 TOPDOWN016/017; Rec9 (18 X); XH-S4 002/004; DAX-S7 R33; REVIEW_031
+revision: r4 (2 XI, popołudnie): tolerancja solvera na lewej ścianie +0.01…+0.03 dex, kierunek znany (REVIEW_047). r3 (2 XI): kolumny tabeli to sumy (REVIEW_044 T1). r2 (31 X): REVIEW_042 i poprawka o E4
+based_on: REVIEW_035, REVIEW_038, REVIEW_042 (Badacz, 31 X); REVIEW_044, REVIEW_045, REVIEW_047 (Badacz, 2 XI); Mech-S6 (18 X); Mech-S7 ROT036/037; MT14 ROT016–022; SCOPE9 TOPDOWN016/017; Rec9 (18 X); XH-S4 002/004; DAX-S7 R33; REVIEW_031
 ---
 
 # Front B (Wu–Xu, Fig. 5) po przebiegach natywnych: co ustalone, co warunkowe, co otwarte
 
 **Status:** `[▷]`. Synteza Badacza. Wszystkie liczby pochodzą z artefaktów z kodem i odtworzeniem, wymienionych
-w `based_on`. Nie ma tu nowego twierdzenia fizycznego. Decyzje o linii należą do Mech-S7, o kontrakcie źródła
+w `based_on`. Nie ma tu nowego twierdzenia fizycznego. Decyzje o linii należą do Mech-S7 (stan 2 XI: wątek niedostępny,
+pakiet następcy Mech-S8 gotowy, nieaktywny; Govi-S2), o kontrakcie źródła
 do Rec/REC10, o statusie do Moderatora.
 
 ## Budżet niepewności konturu `χ² = 4` (przesunięcie w `log₁₀ β`; plus = słabsze ograniczenie)
@@ -25,7 +26,7 @@ Przy granicy odpowiedź jest prawie liniowa w `β`. Zmiana efektu hadronów o cz
 
 | źródło niepewności | przesunięcie | status |
 |---|---|---|
-| szum solvera i środowiska (domyślne `reltol = 1e-3`) | między środowiskami `≤ 0.013 dex`; w jednym środowisku szum `Y` `5–8e-5` (granica z regresji `±0.001–0.003`); tolerancja `1e-3 → 1e-5` przesuwa lewą ścianę o `~0.03 dex` | ustalone `[▷]`, REVIEW_035, REVIEW_044 T2/T3 |
+| szum solvera i środowiska (domyślne `reltol = 1e-3`) | między środowiskami `≤ 0.013 dex`; w jednym środowisku szum `Y` `5–8e-5` (granica z regresji `±0.001–0.003`); efekt systematyczny tolerancji `1e-3 → 1e-5`: `+0.025` (`1.12e9 g`), `+0.012…+0.015` (`1.19e9 g`), kontur domyślny leży za nisko w `β`; `1e-6` nieosiągnięte | ustalone `[▷]`, REVIEW_035, REVIEW_044, REVIEW_047 |
 | definicja `Y` (v3: `2X`) z rekalibracją SBBN | `+0.03…+0.07` | ustalone `[▷]`, REVIEW_035 N4 |
 | nachylenie ekstrapolacji poniżej `1e9 g` (2 → 8 wierszy) | `−0.02…−0.04` przy `m ≤ 1.6e9 g`, `~0` wyżej | ustalone `[▷]`, REVIEW_038 V1 |
 | prawo z tekstu autorów `T^{1.3}` zamiast nachylenia kodu (`−1.20`, artefakt brzegu tabeli) | `−0.03…−0.055` przy `m ≤ 1.6e9 g`, `≤ 0.012` wyżej | ustalone `[▷]`, REVIEW_042 (głąb tabeli, PYTHIA i tekst autorów zgodne na `≈ −1.30`) |
