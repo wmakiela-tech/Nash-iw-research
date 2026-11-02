@@ -13,7 +13,7 @@ code: research/badacz/2026-10-29/code/hidden_gauge_reachable_intertwining_check.
 output_sha256: a62b33940eb861e21aecb0ebfb17bb6ccc4cefe8a4a43067f62e3939439f4caa (hidden_gauge_reachable_intertwining_check.json)
 code_r3: research/badacz/2026-10-29/code/theorem_w_iii_repair_check.py (sha256 f128887c11dd1f2a47dad188b0a32a943c77e0f6066d24105bdc4005b7a4fa17)
 output_sha256_r3: 38dedd13c7f90699f9d8f0634ca328b3bc87f4e2cda759596b1d0031cc3c9715 (theorem_w_iii_repair_check.json)
-revision: r3 (29 X) — ERRATUM: Twierdzenie W(iii) w wersji r1/r2 jest fałszywe przy odczycie pełnym tylko na stanie zredukowanym (kontrprzykład AUD1 ROT011); zastąpione przez (iii′) i (iii″); poprawiony wniosek W4. r2 = commit e4f51e4 (dopisek o granicy typu słowa „cechowanie”); r1 = commit bef68ef
+revision: r4 (2 XI) — jedno zdanie zakresu w §4 (skończone słowa, granica C0) po recenzji przypisanej Grokowi (proweniencja I1: zgłoszona jako zewnętrzna, niepoświadczona; PASS W(i)–(iii″), W1–W5) i sprawdzeniu AUD1 ROT025 (PASS_EXACT tylko dla mechanizmu ilorazu (iii′)); treść twierdzeń bez zmian; r3 = commit 6d105e1. r3 (29 X) — ERRATUM: Twierdzenie W(iii) w wersji r1/r2 jest fałszywe przy odczycie pełnym tylko na stanie zredukowanym (kontrprzykład AUD1 ROT011); zastąpione przez (iii′) i (iii″); poprawiony wniosek W4. r2 = commit e4f51e4 (dopisek o granicy typu słowa „cechowanie”); r1 = commit bef68ef
 ---
 
 # Ukryte cechowanie i splatanie na zbiorze osiągalnym: rozwinięcia propozycji SCOPE9
@@ -265,6 +265,12 @@ działa jak ustalenie cechowania. To porównanie strukturalne, nie fizyczne.
 - Łączalność: Kemeny–Snell (silna); Rubino–Sericola 1989 (słaba).
 - Li–Rabitz 1989: dokładne skupianie, warunek globalny.
 - Bisymulacja: Larsen–Skou 1991, za SCOPE9 TOPDOWN 001; samego artykułu nie otwierałem.
+
+**Zakres (r4).** W(i)–(iii″) dotyczą operacji i odczytu liniowych oraz historii będących wszystkimi
+skończonymi słowami nad alfabetem operacji (zbiór zamknięty na składanie, z czego korzysta dowód (iii′)),
+z instrumentami adaptacyjnymi rozpisanymi na gałęzie; przeniesienie na czas ciągły i ogólne półgrupy C0
+(domknięcia, operatory nieograniczone) albo na ograniczony język dopuszczalnych historii wymaga osobnego
+dowodu i nie jest tu twierdzone.
 
 **Odtworzenie.**
 
