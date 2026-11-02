@@ -8,8 +8,8 @@ origin_cell: BADACZ (wątek Claude)
 document_type: SYNTHESIS
 task_id: BADACZ-FRONTB-SYNTHESIS-001
 owner_of_line: Mech-S7 (źródło i dynamika Front B); synteza nie przejmuje decyzji właściciela
-revision: r2 (31 X, wieczór): dodane wyniki REVIEW_042 (prawo `T^{1.3}`, pilotaż PYTHIA), poprawione twierdzenie o niewykonalności E4 w kontenerze
-based_on: REVIEW_035, REVIEW_038, REVIEW_042 (Badacz, 31 X); Mech-S6 (18 X); Mech-S7 ROT036; MT14 ROT016–018; Rec9 (18 X); XH-S4 002/004; DAX-S7 R33; REVIEW_031
+revision: r3 (2 XI): kolumny tabeli to sumy (REVIEW_044 T1); tolerancja solvera na lewej ścianie ~0.03 dex (REVIEW_044 T3). r2 (31 X, wieczór): REVIEW_042 i poprawka o E4
+based_on: REVIEW_035, REVIEW_038, REVIEW_042 (Badacz, 31 X); REVIEW_044 (Badacz, 2 XI); Mech-S6 (18 X); Mech-S7 ROT036/037; MT14 ROT016–022; SCOPE9 TOPDOWN016/017; Rec9 (18 X); XH-S4 002/004; DAX-S7 R33; REVIEW_031
 ---
 
 # Front B (Wu–Xu, Fig. 5) po przebiegach natywnych: co ustalone, co warunkowe, co otwarte
@@ -25,12 +25,12 @@ Przy granicy odpowiedź jest prawie liniowa w `β`. Zmiana efektu hadronów o cz
 
 | źródło niepewności | przesunięcie | status |
 |---|---|---|
-| szum solvera i środowiska (domyślne `reltol = 1e-3`) | `≤ 0.013 dex` (szum `Y ~1e-4`) | ustalone `[▷]`, REVIEW_035 |
+| szum solvera i środowiska (domyślne `reltol = 1e-3`) | między środowiskami `≤ 0.013 dex`; w jednym środowisku szum `Y` `5–8e-5` (granica z regresji `±0.001–0.003`); tolerancja `1e-3 → 1e-5` przesuwa lewą ścianę o `~0.03 dex` | ustalone `[▷]`, REVIEW_035, REVIEW_044 T2/T3 |
 | definicja `Y` (v3: `2X`) z rekalibracją SBBN | `+0.03…+0.07` | ustalone `[▷]`, REVIEW_035 N4 |
 | nachylenie ekstrapolacji poniżej `1e9 g` (2 → 8 wierszy) | `−0.02…−0.04` przy `m ≤ 1.6e9 g`, `~0` wyżej | ustalone `[▷]`, REVIEW_038 V1 |
 | prawo z tekstu autorów `T^{1.3}` zamiast nachylenia kodu (`−1.20`, artefakt brzegu tabeli) | `−0.03…−0.055` przy `m ≤ 1.6e9 g`, `≤ 0.012` wyżej | ustalone `[▷]`, REVIEW_042 (głąb tabeli, PYTHIA i tekst autorów zgodne na `≈ −1.30`) |
-| mapa ładunkowa: tylko nukleony (poparte źródłem, Rec9) | `+0.06` (lewa ściana) do `+0.30` (`7.7e9 g`); 90–99% pełnego `B_sym` dla `m ≳ 3e9 g` | warunkowe na tym, że kolumny tabeli to sumy `p + p̄`, `n + n̄` (tak piszą autorzy, Rec9); REVIEW_038 E5b |
-| mapa ładunkowa: pełne `B_sym` (`π/K` jako założenie symetrii) | `+0.27…+0.30` (czynnik `1.85–2.0` w `β`) | warunkowe (symetria `π/K`), REVIEW_038 E5 |
+| mapa ładunkowa: tylko nukleony | `+0.06` (lewa ściana) do `+0.30` (`7.7e9 g`); 90–99% pełnego `B_sym` dla `m ≳ 3e9 g` | kolumny `p`, `n` to sumy `p + p̄`, `n + n̄` (REVIEW_044 T1, zgodność `1%`); warunkowe na proweniencji figury; REVIEW_038 E5b |
+| mapa ładunkowa: pełne `B_sym` | `+0.27…+0.30` (czynnik `1.85–2.0` w `β`) | kolumny `π`, `K` to sumy (REVIEW_044 T1); podział na pół z symetrii C emisji neutralnej czarnej dziury; warunkowe na proweniencji figury i semantyce populacji w kodzie; REVIEW_038 E5 |
 | istnienie emisji hadronów poniżej `1e9 g` | lewa ściana znika (`> +2 dex` przy `1.12–1.33e9 g`), `+0.01` przy `7.7e9 g` | miara zależności, nie wariant fizyczny; REVIEW_038 V2 |
 | v1 → v2 (dodanie nukleonów) | `−0.05` (lewa ściana) do `−1.95 dex` (`7.7e9 g`) | zmiana źródła autorów (XH-S4 002); liczby z obu skanów w PREREG_040 i REVIEW_035 |
 
@@ -54,11 +54,13 @@ Przy granicy odpowiedź jest prawie liniowa w `β`. Zmiana efektu hadronów o cz
 ## Warunkowe
 
 - **Mapa ładunkowa.** Kod wpisuje całe agregaty `p + p̄` i `n + n̄` do populacji antynukleonów.
-  - Jeśli kolumny są sumami (tekst autorów, Rec9), ograniczenie Fig. 5 dla `m ≳ 3e9 g` jest w modelu
-    autorów za silne o czynnik `≈ 2` w `β`. To największa zmierzona poprawka kontraktu kodu.
-  - Na lewej ścianie większość pełnego `B_sym` pochodzi z podziału `π/K`, który jest założeniem symetrii.
-  - Rozstrzygnięcie kontraktu należy do Rec/REC10, a decyzja o linii do Mech-S7. Pytanie do autorów: czy
-    kolumny `proton_dN_over_dt` i `neutron_dN_over_dt` są sumami cząstek i antycząstek.
+  - Kolumny tabeli autorów są sumami po stanach ładunkowych: zgodność stosunków do `K⁰_L` z PYTHIA do `1%`
+    (REVIEW_044 T1). Ograniczenie Fig. 5 dla `m ≳ 3e9 g` jest więc w modelu autorów za silne o czynnik `≈ 2`
+    w `β`, pod warunkiem że figura pochodzi z tego kodu. To największa zmierzona poprawka kontraktu kodu.
+  - Na lewej ścianie większość pełnego `B_sym` pochodzi z podziału `π/K`. Po T1 nie jest to już dowolne
+    założenie: kolumny to sumy, a emisja neutralnej czarnej dziury jest symetryczna względem C.
+  - Rozstrzygnięcie kontraktu należy do Rec/REC10, a decyzja o linii do Mech-S7. Pytanie do autorów
+    zawęża się do semantyki populacji w ODE i do proweniencji figury. O semantykę kolumn nie trzeba już pytać.
 - **Krawędź tabeli.** Tablice hadronizacji BlackHawk sięgają około 100 TeV energii cząstki pierwotnej
   (arXiv:2108.02737), a przy `1e9 g` `T_BH ≈ 10.6 TeV`. Autorzy podają limit partonu `1e5 GeV` jako powód
   nieużywania BlackHawk poniżej `1e9 g`. Spłaszczenie ostatnich wierszy tabeli jest z tym zgodne (hipoteza
