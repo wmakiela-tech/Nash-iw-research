@@ -1,0 +1,13 @@
+E_gamma_GeV,partition,energy_fractions,sum_fraction,energy_biased_next_carrier_sum_z2,energy_biased_mean_time_to_FIRST_IC_s,status
+1000.0,equal_4,0.25;0.25;0.25;0.25,1.0,0.25,8.070982474019673e-11,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000.0,two_leading,0.49;0.49;0.01;0.01,1.0,0.48039999999999994,1.4685161241633072e-10,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000.0,one_leading,0.97;0.01;0.01;0.01,1.0,0.9411999999999999,2.7294639352825155e-10,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000.0,equal_4,0.25;0.25;0.25;0.25,1.0,0.25,5.1159477650589653e-08,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000.0,two_leading,0.49;0.49;0.01;0.01,1.0,0.48039999999999994,9.493292820883757e-08,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000.0,one_leading,0.97;0.01;0.01;0.01,1.0,0.9411999999999999,1.797114456658472e-07,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000000.0,equal_4,0.25;0.25;0.25;0.25,1.0,0.25,3.7450746067321314e-05,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000000.0,two_leading,0.49;0.49;0.01;0.01,1.0,0.48039999999999994,7.013957322000011e-05,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000000.0,one_leading,0.97;0.01;0.01;0.01,1.0,0.9411999999999999,0.00013395820980652783,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000000000.0,equal_4,0.25;0.25;0.25;0.25,1.0,0.25,0.029536208323678363,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000000000.0,two_leading,0.49;0.49;0.01;0.01,1.0,0.48039999999999994,0.05561491659476175,"TOY; NOT differential DPP operator, NOT thermal deposition"
+1000000000000.0,one_leading,0.97;0.01;0.01;0.01,1.0,0.9411999999999999,0.1067744531132075,"TOY; NOT differential DPP operator, NOT thermal deposition"
