@@ -9,7 +9,7 @@ SRC_SHA='23b0ec865263c5688682425af9d4c1f9cdb9f1d582a0f2f33d99c642c176f801'
 TENSORS=[]
 for i in range(3):
  M=np.zeros((3,3));M[i,i]=1;TENSORS.append(M)
-for i,j in [(0,1),(0,2),(1,2)):
+for i,j in [(0,1),(0,2),(1,2)]:
  M=np.zeros((3,3));M[i,j]=M[j,i]=1/math.sqrt(2);TENSORS.append(M)
 TENSORS=np.array(TENSORS)
 
