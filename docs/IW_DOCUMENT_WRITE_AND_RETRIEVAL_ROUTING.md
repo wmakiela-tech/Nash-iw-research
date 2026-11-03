@@ -1,5 +1,14 @@
 # IW/NASH — obowiązująca mapa zapisu i wyszukiwania dokumentów
 
+## Forward storage routing correction — 2026-11-03
+
+**Direct Moderator decision:** `wmakiela-tech/Nash-Priv` is the canonical GitHub destination for the privately classified IW/NASH corpus and private custody manifests; `wmakiela-tech/Nash-iw-research` remains the public-safe science/code destination. **Drive is now a write-failure fallback and an additional archival repository for critical or native-format documents**, not a universal private final destination. Older rows below prescribing Drive as the default private destination are historical until read in light of this direction.
+
+For each private transfer: preserve complete source bytes/format and exact Drive ID, write an appropriately classified Git blob, verify pinned commit/readback, keep a manifest and maintain protected historical dependencies. Never place private content in the public repo as fallback. Remove only **genuinely redundant** Drive files after explicit duplicate authorization, independent backup, exact provenance/source dependency checks, pre-delete ledger, exact ID deletion + 404, and retained-copy readback. Native Google Docs revision history is not transferred by a mere DOCX export. Operating BW remains Google Sheets under KN12 until separate owner-approved dual-run/cutover; current LT, monographs, SCOPE books, unfinished format-loss migrations, and original Slack-only source evidence retain their integrity holds.
+
+This applies forward from 2026-11-03 without rewriting earlier source provenance or scientific qualifications.
+
+
 ## Live GitHub PRIVATE and provisional storage routing — 2026-10-23
 
 Po poprzednim zapisie mapy dwa repozytoria PRIVATE stały się widoczne: `wmakiela-tech/Nash-Priv` (zawiera pakiety sukcesyjne) i `wmakiela-tech/Nash-prv` (puste). **Nie należy już twierdzić, że integracja nie ma prywatnego GitHub**, lecz nie wybrano jeszcze, który nośnik jest kanonicznym archiwum BW/korpusu. Istniejące foldery Drive pozostają obowiązującą lokalizacją oryginału do chwili zweryfikowanej migracji, a publiczna nauka trafia do `wmakiela-tech/Nash-iw-research/research/`. Szczegóły: [`DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md`](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md). Nie zmieniaj private exposure przez migrację.
