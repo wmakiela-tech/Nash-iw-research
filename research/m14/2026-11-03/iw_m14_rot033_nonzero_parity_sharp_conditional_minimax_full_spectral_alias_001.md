@@ -1,0 +1,28 @@
+# M14 ROT033 — Nonzero parity of four NV Zeeman pairs: exact conditional minimax and full-spectral alias
+ARTIFACT: IW_M14_ROT033_NONZERO_PARITY_SHARP_CONDITIONAL_MINIMAX_AND_FULL_SPECTRUM_ALIAS_001_20261103
+DATE: 2026-11-03
+ORIGIN: IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_09 / M14
+RETURN_ID: M14-ROT033-NONZERO_PARITY_CONDITIONAL_SHARP_MINIMAX_SPECTRAL_ALIAS_001_20261103
+EXPOSURE: PUBLIC
+CEILING: EXACT_CLASSICAL_CONDITIONAL / NO_MATH_NOVELTY / NO_REAL_DEVICE_REPLAY / NO_NASH_PHYSICAL / NO_CANON / NO_EXEC_SIGN / BW_PENDING / AUD1_REC11_LT7_PENDING
+
+SOURCE FIRST: XH-S5 owns Schall et al., Nature Communications 17 (2026) 10825, DOI https://doi.org/10.1038/s41467-026-78386-z. In actual paper Fig2b shows 4 NV families/8 resonance branches; Fig3b uses a DIFFERENT sample, with 3 14N hyperfine components per resonance. Quoted 127 fT/sqrtHz and <400 fT/sqrtHz are PHOTON-SHOT-NOISE sensitivity LIMITS, not achieved technical-noise performance. Original raw authors' Source Data NOT downloaded or fitted. Earlier M14 ROT031 first geometric common-drift inversion and ROT032 first parity-dark error gauge and zero-parity octahedron. ROT033 closes only the s != 0 exact-calibration gap. No novelty.
+
+MODEL: tetrahedral matrix A with rows (1,1,1), (1,-1,-1), (-1,1,-1), (-1,-1,1). Known paired Zeeman centers y_{i,+},y_{i,-}; g_i=(y_{i,+}-y_{i,-})/2 = a_i dot b + eta_i, with b=(gamma/sqrt3)*B_vector. Per-orientation antisymmetric branch bias eta_i UNKNOWN, but independently certified |eta_i|<=eps, eps>0. Exact centers (no counting noise) and known geometrical labels assumed. Mean s=(sum g_i)/4; b_hat=A^T g/4. Identities A^T A=4I3, A^T 1=0, AA^T=4I4-11^T.
+
+THEOREM A (EXACT CONDITIONAL FEASIBILITY): data g admit some b,eta with |eta_i|<=eps IFF |s|<=eps. For |s|<=eps the FULL compatible field set is
+F(g)=b_hat-Q_s, Q_s={q in R3: |s+a_i dot q|<=eps for ALL four i}.
+Proof: every eta=g-Ab=s*1 + A*(b_hat-b); if |s|<=eps choose eta=s1,b=b_hat. No hidden assumptions on eta sum.
+
+THEOREM B (SHARP CONDITIONAL MINIMAX): write t=|s|/eps. The exact maximum Euclidean uncertainty radius about b_hat, and MINIMUM achievable worst-case radius among ALL estimators conditional on the observed g, is
+R(s)=eps*sqrt(1-2t+3t^2), 0<=t<=1/2;
+R(s)=eps*sqrt(3)*(1-t), 1/2<=t<=1.
+Indeed q=A^T eta/4, ||q||^2=(sum_i eta_i^2-4s^2)/4. Maximizing this convex expression over cube eta in [-eps,eps]^4 with sum eta=4s achieves a vertex (at least 3 saturated eta coordinates). For s>=0 the vertices are permutations of (eps,eps,-eps,4s-eps) when 0<=s<=eps/2, and permutations of (eps,eps,eps,4s-3eps) when eps/2<=s<=eps; negate signs for s<0. The displayed two exact radii follow. Minimaxi proof beyond just an upper bound: take any maximizing eta, permute its 4 entries; corresponding field-error vectors all have norm R and mean zero (A^T1=0). For ANY competing estimate b_hat+c, average squared error on that finite admissible orbit equals R^2+||c||^2; maximum error >= sqrt(R^2+||c||^2). Thus b_hat is the UNIQUE Euclidean Chebyshev center and R is exact conditional minimax.
+
+GEOMETRY: At s=0 the field error polytope is the six-vertex octahedron of ROT032; for 0<|s|<eps/2 it has 12 vertices (truncated tetrahedron); for eps/2<=|s|<eps it has 4 tetrahedral vertices; at |s|=eps it collapses to a single point. For s/eps=0,1/8,1/4,1/3,2/5,1/2,3/4,1 the exact squared radius R^2/eps^2 is respectively 1,51/64,11/16,2/3,17/25,3/4,3/16,0. CRITICAL NONMONOTONICITY: R(eps/3)^2=2eps²/3 < R(eps/2)^2=3eps²/4. A larger nonzero parity does NOT always reduce uncertainty monotonically.
+
+THEOREM C (INFINITE-SHOT ALIAS EVEN WITH NONZERO PARITY): choose eps=1,g=(7/10,-1/2,4/5,0), s=1/4,b_hat=(-3/20,1/2,1/10). TWO distinct legal models have eta1=(1,1,-1,0), q1=(3/4,-1/4,1/4), b1=(-9/10,3/4,-3/20); eta2=(-1,1,1,0), q2=(-1/4,-1/4,-3/4), b2=(1/10,3/4,17/20). Both satisfy exactly g=A b+eta, |eta|<=1. For ANY same per-orientation e_i, centers y_i±=e_i±g_i identical. Therefore all EIGHT full positive triple-Lorentz source spectra with independently varying positive per-branch weights, linewidths and splitting can be exactly identical for these two fields, at all frequencies and all independent Poisson repetitions. No exact global field inverse follows from nonzero parity.
+
+REPRO: Full Moderator-local Polish proof, pure Python stdlib Fraction exact vertex/orbit/all-eight-center positive Lorentz checks (48 exact positive channel instances), independently written NumPy/SciPy direct 8 halfspace/3-plane intersections (not reuse Fraction vertices), independent SLSQP minimum enclosing spheres, 6000 bounded error perturbations, mpmath 85-digit 960 spectral evaluations (max paired model difference 0 at this precision). TWO frozen JSON from two separate scripts. Local full ZIP CRC PASS, SHA256 payload manifest and clean isolated byte-identical JSON replay are recorded in the complete Moderator ZIP. The full ZIP is NOT represented as hosted in GitHub.
+
+SOURCE HARD STOP: assumes all 8 exact center labels, calibrated gamma and a separately justified deterministic antisymmetric shift eps; no device source raw fit, no verified paired-drifts, no actual technical-noise sensitivity, no photon-shot-noise prediction or fT number. The physical norm would be (sqrt3/|gamma|)*R(s) ONLY if both gamma and eps externally calibrated. M14 ROT023 nonlinear five-tone global inverse STILL OPEN. No physical NASH J3/K gravity, no novel mathematics, no BW ingestion or external REC11/AUD1/LT7 referee verdict, no canon, NO EXEC, NO NEW TASK CASCADE.
