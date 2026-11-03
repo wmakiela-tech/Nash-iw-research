@@ -1,5 +1,14 @@
 # NASH/IW — Storage and Cross-Surface Sync Policy
 
+## Current overriding storage direction — 2026-11-03 (direct Moderator instruction)
+
+**Forward custody rule:** Continue migrating the complete IW/NASH project corpus to GitHub. The canonical private repository is `wmakiela-tech/Nash-Priv`; the established public scientific repository remains `wmakiela-tech/Nash-iw-research`, with normal exposure/publication checks. **Google Drive is the fallback when authorized GitHub writes fail and an additional archive for key materials**, including native Google Docs/Sheets and original revision/dependency history. It is no longer the default terminal repository for privately classified sources that can be faithfully archived in `Nash-Priv`.
+
+The Moderator authorized deletion of **verified redundant copies**, not indiscriminate Drive emptying: before any deletion preserve source bytes and format, independently read back the pinned Git commit/blob, retain necessary independent backup(s), verify citations/dependencies and owner release, record an exact-ID pre-delete gate, check Drive 404 after deletion, and recheck retained source(s). Protect operational BW (KN12 owner), active LT, monographs, SCOPE books, native originals with nontransferred revision history, unresolved format-loss transfers and Slack-only sources. A completed Git archive does **not** authorize BW cutover, scientific CANON promotion, or automatic destruction of its Drive original.
+
+This paragraph supersedes the historical statements below that describe a private repo as not yet selected/connected or treat Drive as the universal private final destination. Historical facts are preserved as dated provenance, not live instructions. See the private Moderator decision `IW_SYSS6_MODERATOR_GITHUB_PRIMARY_DRIVE_RESERVE_POLICY_001_20261103` in `Nash-Priv`.
+
+
 ## Private GitHub connection status — 2026-10-23
 
 Korekta historycznego stanu `PRIVATE_REPO_NOT_CONNECTED`: dostępne są dwa odrębne repozytoria PRIVATE, `Nash-Priv` (pakiety sukcesyjne) i `Nash-prv` (puste), oba widoczne i zapisywalne dla połączonej integracji. Bez właścicielskiego określenia kanonicznego repo prywatnego nie wolno utożsamiać zapisu sukcesji z gotowym archiwum BW. **Zakaz prywatnego źródła w repo publicznym i zakaz usuwania oryginałów przed readback wciąż obowiązuje.** Patrz [runbook migracji](DRIVE_TO_GITHUB_FULL_PROJECT_MIGRATION.md).
