@@ -121,7 +121,8 @@ if a.n1:
                      "flag_tolerance_limited": abs(D1 - D0d) > 0.02, "configs": N}
 json.dump(res, open(a.out, "w"), indent=1, sort_keys=True)
 for j in Dv:
-    print(j, {n: (round(v["Delta"], 4), round(v["W"], 2)) if "W" in v else "NA" for n, v in Dv[j].items()})
+    print(j, {n: ((round(v["Delta"], 4) if "Delta" in v else v.get("from")), round(v["W"], 2), round(v["se_W"], 2)) if "W" in v else "NA"
+              for n, v in Dv[j].items()})
 for k, v in V.items():
     print(k, v)
 if "N1" in res:
