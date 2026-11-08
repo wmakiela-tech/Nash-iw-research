@@ -8,7 +8,7 @@ origin_cell: BADACZ (wątek Claude)
 document_type: MANIFEST
 ---
 
-# SHA-256 — research/badacz/2026-11-08 (PREREG_048 / REVIEW_049 / REVIEW_050; PREREG_051 / REVIEW_053; PREREG_052 / REVIEW_054)
+# SHA-256 — research/badacz/2026-11-08 (PREREG_048 / REVIEW_049 / REVIEW_050; PREREG_051 / REVIEW_053; PREREG_052 / REVIEW_054; SYNTH_055)
 
 Sprawdzenie z katalogu `research/badacz/2026-11-08/`: `grep -E '^[0-9a-f]{64}  ' data/MANIFEST_SHA256.md | sha256sum -c`.
 
@@ -49,4 +49,6 @@ fad1b6bb0547c05f1dbfa00635695f2aa67e2e85febd2a31be312126af091a97  data/yp051/con
 56b58f2fa1db861bb17173ac4ba39e00c550a83ff3049eb73c041d62111552c2  data/yp051/yp_b.csv
 6d998f97fca140aa3ba7af4b0549d4426e3ce7aa7003c4184590ef706a647087  data/yp051/yp_c.csv
 86fa9c80b72d2f5ba2f2378b4a74fcc6a59242359d14709373069aaf04e79a05  data/yp051/yp051_analysis.json
+6a41de5ee47fa96b988b0b34e1775a2fc9e9e86743db9d62d6356fd577c08ade  code/wuxu_kernel_p13_bridge_posthoc.py
+2966a807d9cf8ded6c46416f035e9cd6a4ba9429de5d70b64b6696ffd09e5f7d  data/kernel_p13_bridge_posthoc.json
 ```
