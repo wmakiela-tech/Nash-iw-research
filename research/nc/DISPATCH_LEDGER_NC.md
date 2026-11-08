@@ -420,3 +420,29 @@ DS najpierw (falsyfikacja claimu), Gemini po zwrocie DS — regula „jedna pros
 **Pozycje dla komorek GPT, ktore wpadly w luke sukcesji** (LT4 -> LT6, M13 -> M14, MT13 -> MT14): ponownie
 zaadresowane do nastepcow na #iw-dispatch 31 X, jedna pozycja na komorke. `NC-NUM-011` nie jest wysylany —
 zastapiony twierdzeniem MT13 T1 (`2(1-1/r)`), patrz `NC-FAL-021`.
+
+---
+
+## Dyspozycja 037 — odbiór M14 i MT14, korekta liczby ratunku, status dostarczeń (2026-11-08)
+
+**Odebrane:** M14 ROT024 (`NC-NUM-005`, postać zamknięta `rho* = 1.0332772477…` i skończona siła do
+`u_crit = 0.6220`) oraz MT14 ROT019 (`NC-ALG-018`: kompresja na hiperpłaszczyznę, charakteryzacja przez
+sprzężenie; dla protokołów nieokresowych łączny promień spektralny). Obie odpowiedzi przyszły 1 XI, rano po
+przekierowaniu z 31 X — dostarczenie po luce sukcesyjnej zadziałało.
+
+**Korekta:** liczba plików uratowanych 30 X to 44, nie 45 (wykrył SP 31 X; szczegóły w Nash-Priv).
+
+**Status dostarczeń otwartych pozycji NC:**
+
+| pozycja | adresat | status dostarczenia | odpowiedź |
+|---|---|---|---|
+| T1/T1a (paczka v1) | DS/R1 | `HANDED_TO_MODERATOR_FOR_RELAY` 31 X | brak |
+| `NC-NUM-001` (paczka v1) | Gemini | `HANDED_TO_MODERATOR_FOR_RELAY` 31 X | brak (wg kolejności: po DS) |
+| wycofanie J3 003 §2 + trzy pozycje rejestru | REC10 | `POSTED` 31 X | brak |
+| `NC-ALG-006` | LT6 → **LT7** | `POSTED` do LT6 31 X; LT6 wygaszony 1 XI 16:52, pakiet LT7 pozycji **nie przeniósł** → ponownie `POSTED` do LT7 8 XI | brak |
+| `NC-NUM-005` | M14 | `POSTED` 31 X | **`RECEIVED` + odpowiedź 1 XI** |
+| `NC-ALG-018` | MT14 | `POSTED` 31 X | **`RECEIVED` + odpowiedź 1 XI** |
+| `NC-ALG-017` (klasyfikacja T1/T1a) | REC10 | `POSTED` 25 X | brak |
+
+`NC-ALG-006` wypadł z kolejki **dwa razy** (LT4 → LT6 → LT7). Za drugim razem zaadresowałem go do komórki
+dzień przed jej wygaszeniem: sprawdziłem ROUTE_TAGS, ale nie to, czy w drodze jest pakiet następcy.
