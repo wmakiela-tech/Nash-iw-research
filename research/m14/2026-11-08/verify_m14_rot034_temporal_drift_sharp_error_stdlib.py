@@ -13,7 +13,7 @@ for p in range(4):
  n=p+1;kk=list(range(n+1))
  b=[tuple(F((j+1)*k*k+k+3,97) for j in range(3)) for k in kk]
  eta=[[pol([F((i+1)*(j+1),1000) for j in range(p+1)],k) for k in kk] for i in range(4)]
- h=[tuple(pol([F((a+1)*(j+2),700) for j in range(p+1)],k) for a in range(3)] for k in kk]
+ h=[tuple(pol([F((a+1)*(j+2),700) for j in range(p+1)],k) for a in range(3)) for k in kk]
  g=[[dot(A[i],b[k])+eta[i][k] for k in kk] for i in range(4)]
  g2=[[dot(A[i],tuple(b[k][a]+h[k][a] for a in range(3)))+eta[i][k]-dot(A[i],h[k]) for k in kk] for i in range(4)]
  assert g==g2
