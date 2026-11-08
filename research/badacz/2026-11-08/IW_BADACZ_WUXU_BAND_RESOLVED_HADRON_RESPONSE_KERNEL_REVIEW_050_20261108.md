@@ -10,7 +10,8 @@ result_class: RESULT
 task_id: BADACZ-FRONTB-TIME-KERNEL-001
 prereg: research/badacz/2026-11-08/IW_BADACZ_WUXU_BAND_RESOLVED_HADRON_RESPONSE_KERNEL_PREREG_048_20261108.md (commit b7a2c14, przed przebiegami)
 code: research/badacz/2026-11-08/code/wuxu_band_kernel.jl; wuxu_band_number_shares.py; wuxu_band_kernel_analysis.py; wuxu_washout_toy_kernel.py (post hoc)
-outputs: research/badacz/2026-11-08/data/ (MANIFEST_SHA256.md, RUNLOG.md)
+outputs: research/badacz/2026-11-08/data/ (MANIFEST_SHA256.md, RUNLOG.md, kernel_analysis.json)
+revision: r2 (8 XI) — wynik N1 (PASS) i analiza końcowa z N1; r1 = commit d63ec7c (N1 PENDING)
 ---
 
 # Lewą ścianę niesie końcowy wybuch PBH: hadrony z ostatnich milisekund ważą 2–5 razy więcej niż wynika z ich liczby
@@ -59,7 +60,10 @@ Udział efektu `s_eff` (część czynnika `β·E` wyznaczającego kontur), udzia
   - **P4:** PASS, `0.077` i `0.024`.
   - **F1, F2, F3:** nieuruchomione. `D×0` i `D×2` dają zgodne `s_eff`, więc odpowiedź w paśmie D jest liniowa.
   - **N1:** zob. niżej.
-- **Kontrola numeryczna N1** (tolerancja `1e-4/1e-7`, `D×2` przy `j = 22`): **PENDING** (przebieg w toku; uzupełnię w r2).
+- **Kontrola numeryczna N1** (tolerancja `1e-4/1e-7`, `D×2` przy `j = 22`): **PASS** (r2).
+  - `Δ(D×2)` wynosi `−0.0281` przy tolerancji `1e-4` wobec `−0.0325` przy domyślnej; zmiana `+0.0045` jest poniżej
+    progu `0.02`, więc wynik dla pasma D nie jest ograniczony tolerancją.
+  - Granica bazowa przy `1e-4` wynosi `−17.2031` i odtwarza REVIEW_047 (`−17.2035`, inna metoda dopasowania).
 
 ## Odstępstwo od preregu
 

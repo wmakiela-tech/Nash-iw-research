@@ -1,0 +1,39 @@
+---
+artifact_id: IW_BADACZ_20261108_MANIFEST_SHA256
+exposure: PUBLIC
+claim_ceiling: PROVENANCE_MANIFEST / NO_CANON / NO_EXEC_SIGN
+sync_state: GITHUB_PENDING_BW_INGEST
+created_at: 2026-11-08
+origin_cell: BADACZ (wątek Claude)
+document_type: MANIFEST
+---
+
+# SHA-256 — research/badacz/2026-11-08 (PREREG_048 / REVIEW_049 / REVIEW_050)
+
+Sprawdzenie z katalogu `research/badacz/2026-11-08/`: `grep -E '^[0-9a-f]{64}  ' data/MANIFEST_SHA256.md | sha256sum -c`.
+
+```text
+483454f09da8efddbebf320fdcc972108d912f17c0818c2441cc7ed610604dae  code/wuxu_band_kernel.jl
+b2da93632398c144d4d41a767fdaa069dbd87b41bd6e40cdced9dddaea6e733b  code/wuxu_band_kernel_analysis.py
+04fd0244b488e0d9bd44690d6d8a99d2886b9c90af7a39d942900c6d9f3a69eb  code/wuxu_band_number_shares.py
+af2d87a664ae2ee7653450b5bf1632b94cdc48f6e630b2f00228df60fd4ec194  code/wuxu_v3_appendixB_dirac_trace_check.py
+621f3aec69b154bb2dc21e7ae4c568ccdbc1b01ca4675771030f2bb7e6416bd2  code/wuxu_washout_toy_kernel.py
+6fd933afbe62ccbcdfa62677cd390f5c5a8dafc3f3f811e5296546d71173f65a  data/identity.csv
+6e15a7198b977c3bbd92c0b1e0cfe03a3a088e6d5b508a5677605eb7552c0172  data/kernel_w1.csv
+1f6faae02e70ae5f5e6af9ff16b64ad1af2eadef522029bec9ad99e928892389  data/kernel_w2.csv
+900f25a4412761b3c8d171283fc2085d54c03fb0bc7fc19a663a884eb10fd7e8  data/kernel_w3.csv
+2e27c69ee9fea8b5cccc58791fa5af22177d84bcf727ecea81ebd0923b8fe307  data/kernel_w4.csv
+ee637c7e5f5c9f2164d2b6b7dd90a2994bee8274e5696266b28a57eb56a66e14  data/n1_D2.csv
+1be4383938cc3e3373480d1446c2228d431d073a534745ad3275a412359fe595  data/n1_base.csv
+fab0f7c57696898b8320ef5f9e10c154927a961e55f03a30dab95b06da825f8b  data/appendixB_dirac_trace_check.json
+a4b01c0f0a3e10370f218c74960ebaf3492388146c2f70099a7406ba6d7670d9  data/band_number_shares.json
+f63c1bd31e2637c246d0efaca1b81ce5bd616dc0166ad9bb4760f79248d17613  data/kernel_analysis.json
+e0acc9261ea2b25aaac34b4d90221d98c1c5c51ee51fc135919b5f8fa4614db6  data/washout_toy_kernel.json
+2d8c67bd69f8deb5336d91c48405c40fe2c0f4bc271541d444e7ab5c2d19c0bf  data/configs_n1_D2.dat
+9811fa26a0d0f84fbe5bdcf7c3615dbf0082678e346c46f7faedca46a87b0cb2  data/configs_n1_base.dat
+2224163fc50e04e9ec05d42c41b12d3de146e192553e2e05ab7cc34f5bbd3876  data/configs_w1.dat
+222a7f646beaf9372210f7747341477378830c175b59ab0fcb6c3b9546eba924  data/configs_w2.dat
+5e6f7b7094ee8ddf04478ca3adf0d4a1eeeac288b4e845c2c804480eb18b69a4  data/configs_w3.dat
+925457ff8a012b5a9439c530b3398d45fa20cf339a66856185e48802d7276da6  data/configs_w4.dat
+1e9e1075f2ab4855647a073a8de5c52b55fe68a9618c4cc1239c744c7dd93f38  data/identity_points.dat
+```

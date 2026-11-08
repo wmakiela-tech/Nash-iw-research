@@ -33,6 +33,8 @@ document_type: RUNLOG
 | 09:48–10:00 | `w3`, `w4` ukończone | `kernel_w3.csv`, `kernel_w4.csv` | bez OOM |
 | 10:01– | N1: `base` i `D×2` przy `j = 22`, `BADACZ_TOL=1e-4:1e-7`, 2 procesy | `n1_base.csv`, `n1_D2.csv` | około 41 s na punkt |
 
+| ~10:13 | N1 ukończone; analiza końcowa | `n1_base.csv`, `n1_D2.csv`, `kernel_analysis.json` | `Δ(D×2)` zmienia się o `+0.0045` dex (PASS) |
+
 **Odstępstwo od PREREG_048 (09:47):**
 - **Powód:** `C×10` i `D×10` są obliczeniowo niewykonalne przy domyślnym solverze autorów. Silna iniekcja w końcowym
   wybuchu wymusza bardzo wiele kroków, a `magic()` zapisuje każdy krok, co prowadzi do OOM. To ta sama klasa awarii co
