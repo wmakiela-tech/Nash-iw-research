@@ -27,6 +27,8 @@ document_type: RUNLOG
 | 09:47 | **odstępstwo od PREREG_048**, przed jakimkolwiek wynikiem dla pasma D | — | szczegóły pod tabelą |
 | 09:48– | `w3`: `D×2`, `D×0` (`j = 22`) i wszystkie konfiguracje bez ×10 dla `j = 62`; `w4`: to samo dla `j = 28` i `34` | `kernel_w3.csv`, `kernel_w4.csv` | pierwsza próba uruchomienia (`&`) przerwana po kilku sekundach i ponowiona jako zadanie w tle; pliki tymczasowe przerwanych procesów usunięte z klonu autorów |
 
+| 09:50 | model zabawkowy wymywania, post hoc (`code/wuxu_washout_toy_kernel.py`) | `washout_toy_kernel.json` | liczony po obejrzeniu natywnych A/B/C dla `j = 22, 28`; przewidywania dla D oraz dla `j = 34, 62` commitowane przed obejrzeniem tych wyników (w chwili commitu `kernel_w3.csv` miał 15 wierszy, `kernel_w4.csv` 16; nie otwierałem ich) |
+
 **Odstępstwo od PREREG_048 (09:47):**
 - **Powód:** `C×10` i `D×10` są obliczeniowo niewykonalne przy domyślnym solverze autorów. Silna iniekcja w końcowym
   wybuchu wymusza bardzo wiele kroków, a `magic()` zapisuje każdy krok, co prowadzi do OOM. To ta sama klasa awarii co
