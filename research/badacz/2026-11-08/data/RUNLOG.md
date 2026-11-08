@@ -21,3 +21,23 @@ document_type: RUNLOG
 | 09:08 | PREREG_048 opublikowany (`b7a2c14`) | — | przed przebiegami produkcyjnymi |
 | 09:09– | produkcja: 32 konfiguracje, 2 procesy (`w1`: `j = 22, 62`; `w2`: `j = 28, 34`) | `kernel_w1.csv`, `kernel_w2.csv` | tolerancja domyślna |
 | ~09:12 | REVIEW_049: ślady Diraca i sumy spinorowe | `appendixB_dirac_trace_check.json` | niezależne od przebiegów Julii |
+| 09:09–09:47 | `w1`, `w2` ukończyły `base`, `A×2`, `B×2`, `C×2` dla `j = 22, 28` | `kernel_w1.csv`, `kernel_w2.csv` | po ~1.5 min na konfigurację |
+| ~09:24 | `w2`, `C×10` przy `j = 28` | — | proces **zabity przez OOM** (anon-rss 3.3 GB), bez ukończonego punktu |
+| 09:25–09:47 | `w1`, `C×10` przy `j = 22` | `kernel_w1.csv` (1 wiersz `bracket`) | pierwszy punkt trwał 1286 s; przerwany `kill -9` o 09:47 |
+| 09:47 | **odstępstwo od PREREG_048**, przed jakimkolwiek wynikiem dla pasma D | — | szczegóły pod tabelą |
+| 09:48– | `w3`: `D×2`, `D×0` (`j = 22`) i wszystkie konfiguracje bez ×10 dla `j = 62`; `w4`: to samo dla `j = 28` i `34` | `kernel_w3.csv`, `kernel_w4.csv` | pierwsza próba uruchomienia (`&`) przerwana po kilku sekundach i ponowiona jako zadanie w tle; pliki tymczasowe przerwanych procesów usunięte z klonu autorów |
+
+**Odstępstwo od PREREG_048 (09:47):**
+- **Powód:** `C×10` i `D×10` są obliczeniowo niewykonalne przy domyślnym solverze autorów. Silna iniekcja w końcowym
+  wybuchu wymusza bardzo wiele kroków, a `magic()` zapisuje każdy krok, co prowadzi do OOM. To ta sama klasa awarii co
+  w REVIEW_035.
+- **Co usunięte:** `C×10` i `D×10` przy wszystkich masach.
+- **Czym zastąpione:**
+  - pasmo D: łączę preregowane `D×2` i `D×0`, ważąc odwrotnością wariancji;
+  - P2: `W(C×2)/W(D)`;
+  - F3: `D×0` wobec `D×2`;
+  - N1: `D×2` zamiast `D×10` (tolerancja `1e-4/1e-7`).
+- **Co widziałem przed decyzją:** jedną wartość `C×10` przy `j = 22` (`Y_C = 0.25085` w `log10 β = −17.827`) oraz wyniki
+  `base`, `A×2`, `B×2`, `C×2` dla `j = 22` i `28`. Żadnego wyniku dla pasma D.
+- **Zmiany w kodzie:** skrypt analizy (`code/wuxu_band_kernel_analysis.py`) ma dodaną gałąź dla tego odstępstwa;
+  definicje z preregu zostały bez zmian.
