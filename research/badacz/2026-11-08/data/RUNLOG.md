@@ -49,3 +49,15 @@ document_type: RUNLOG
   `base`, `A×2`, `B×2`, `C×2` dla `j = 22` i `28`. Żadnego wyniku dla pasma D.
 - **Zmiany w kodzie:** skrypt analizy (`code/wuxu_band_kernel_analysis.py`) ma dodaną gałąź dla tego odstępstwa;
   definicje z preregu zostały bez zmian.
+
+## PREREG_051 / REVIEW_052 — kontrfaktyk wzoru Y_P (8 XI 2026, po południu; czas zegara kontenera = CET)
+
+| czas (CET) | przebieg | plik | uwagi |
+|---|---|---|---|
+| 14:08:30 | PREREG_051 i sterownik opublikowane (`102e9d2`) | — | sterownik wcześniej nieuruchamiany |
+| 14:08:50 | pierwsze uruchomienie (`&` w poleceniu tła) | — | procesy osierocone i zabite po kilku sekundach, przed zapisaniem jakiegokolwiek wiersza (pliki CSV puste, usunięte razem z plikiem tymczasowym sterownika w klonie autorów); ten sam błąd uruchomienia co 8 XI rano |
+| 14:09:07– | produkcja: 2 procesy (`a`: j = 22, 28; `b`: j = 34, 62 i skan j = 99), kalibracja SBBN w każdym procesie | `yp051/yp_a.csv`, `yp051/yp_b.csv` | tolerancja domyślna, kod autorów `d395183` bez zmian |
+| 14:12:04– | PREREG_052 (`4281386`): `base22r`, `CD2_22`, `CD0_22` na zwolnionym rdzeniu | `kernel_cd052.csv` | sterownik `wuxu_band_kernel.jl` bez zmian; koniec 14:16:05 |
+| 14:12:53 | PREREG_051 procesy `a`, `b` zakończone | `yp051/yp_a.csv`, `yp051/yp_b.csv` | 18 + 35 punktów |
+| 14:13:03–14:14:25 | PREREG_051: siatka 9 punktów przy j = 99 wokół przejścia V0 ze skanu (−19.23) | `yp051/yp_c.csv`, `yp051/configs_c.dat` | zgodnie z preregiem (skan, potem siatka) |
+| 14:16–14:17 | analizy końcowe | `yp051/yp051_analysis.json`, `cd052_analysis.json` | w analizie 051 dodana post hoc ocena szumu korzeni (rozrzut wokół krzywej 3. stopnia), oznaczona w kodzie i w REVIEW_053; główna metoda korzenia bez zmian; w skrypcie 052 poprawione serializowanie typu bool numpy (bez wpływu na liczby) |

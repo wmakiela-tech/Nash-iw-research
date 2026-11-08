@@ -8,7 +8,7 @@ origin_cell: BADACZ (wątek Claude)
 document_type: MANIFEST
 ---
 
-# SHA-256 — research/badacz/2026-11-08 (PREREG_048 / REVIEW_049 / REVIEW_050)
+# SHA-256 — research/badacz/2026-11-08 (PREREG_048 / REVIEW_049 / REVIEW_050; PREREG_051 / REVIEW_053; PREREG_052 / REVIEW_054)
 
 Sprawdzenie z katalogu `research/badacz/2026-11-08/`: `grep -E '^[0-9a-f]{64}  ' data/MANIFEST_SHA256.md | sha256sum -c`.
 
@@ -36,4 +36,17 @@ e0acc9261ea2b25aaac34b4d90221d98c1c5c51ee51fc135919b5f8fa4614db6  data/washout_t
 5e6f7b7094ee8ddf04478ca3adf0d4a1eeeac288b4e845c2c804480eb18b69a4  data/configs_w3.dat
 925457ff8a012b5a9439c530b3398d45fa20cf339a66856185e48802d7276da6  data/configs_w4.dat
 1e9e1075f2ab4855647a073a8de5c52b55fe68a9618c4cc1239c744c7dd93f38  data/identity_points.dat
+66ed5479ce58d1ce20a53fcafc393c1d6b3c999b596f1b96e1099c4e17d885e5  code/wuxu_yp_formula_counterfactual.jl
+8e3c9f58431a3e42e0d78e173670c57347fd3cf7abbfd30bafb5d34ca0fdd156  code/wuxu_yp_formula_counterfactual_analysis.py
+2d288012710f050f9321b40ec1b2a79a3b6a4d5e09e3b82e41bb2e8966086194  code/wuxu_cd052_analysis.py
+c9abf54fbbc992f85137d0ba5d000b235e14ac05e463f8d6fb09051b241b0e4d  data/configs_cd052.dat
+d8dd2303092603ab2fcfd2c305ed9a2b980b9cb534a6b910ff33acfbacd20d16  data/kernel_cd052.csv
+ca24ddc008335a742a72a6801bab2f90c4d2efe031caa6def3e13076ebbccd16  data/cd052_analysis.json
+c1cb89e9d266460c60ceb3b17c66ff5f15ddf32f90998e68b220eac4fd0c80b4  data/yp051/configs_a.dat
+fad1b6bb0547c05f1dbfa00635695f2aa67e2e85febd2a31be312126af091a97  data/yp051/configs_b.dat
+6ee98a5e03ff5a203944702828d23478700bbde2e7d5286e6c514b88747dbe7b  data/yp051/configs_c.dat
+7a32098dd7c56d2a2e4c5662c9e8882e57e58294c527bbd016face5d8280d02d  data/yp051/yp_a.csv
+56b58f2fa1db861bb17173ac4ba39e00c550a83ff3049eb73c041d62111552c2  data/yp051/yp_b.csv
+6d998f97fca140aa3ba7af4b0549d4426e3ce7aa7003c4184590ef706a647087  data/yp051/yp_c.csv
+86fa9c80b72d2f5ba2f2378b4a74fcc6a59242359d14709373069aaf04e79a05  data/yp051/yp051_analysis.json
 ```
