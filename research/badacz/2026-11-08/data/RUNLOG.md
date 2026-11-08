@@ -29,6 +29,10 @@ document_type: RUNLOG
 
 | 09:50 | model zabawkowy wymywania, post hoc (`code/wuxu_washout_toy_kernel.py`) | `washout_toy_kernel.json` | liczony po obejrzeniu natywnych A/B/C dla `j = 22, 28`; przewidywania dla D oraz dla `j = 34, 62` commitowane przed obejrzeniem tych wyników (w chwili commitu `kernel_w3.csv` miał 15 wierszy, `kernel_w4.csv` 16; nie otwierałem ich) |
 
+| ~09:51 | moje zadanie oczekiwania na koniec przebiegu wyszło od razu | — | warunek łapał stary wpis OOM z 09:24 w `dmesg`; bez wpływu na przebiegi (monitor liczył tylko nowe OOM) |
+| 09:48–10:00 | `w3`, `w4` ukończone | `kernel_w3.csv`, `kernel_w4.csv` | bez OOM |
+| 10:01– | N1: `base` i `D×2` przy `j = 22`, `BADACZ_TOL=1e-4:1e-7`, 2 procesy | `n1_base.csv`, `n1_D2.csv` | około 41 s na punkt |
+
 **Odstępstwo od PREREG_048 (09:47):**
 - **Powód:** `C×10` i `D×10` są obliczeniowo niewykonalne przy domyślnym solverze autorów. Silna iniekcja w końcowym
   wybuchu wymusza bardzo wiele kroków, a `magic()` zapisuje każdy krok, co prowadzi do OOM. To ta sama klasa awarii co
