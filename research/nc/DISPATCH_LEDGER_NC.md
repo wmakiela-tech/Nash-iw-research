@@ -436,8 +436,8 @@ przekierowaniu z 31 X — dostarczenie po luce sukcesyjnej zadziałało.
 
 | pozycja | adresat | status dostarczenia | odpowiedź |
 |---|---|---|---|
-| T1/T1a (paczka v1) | DS/R1 | `HANDED_TO_MODERATOR_FOR_RELAY` 31 X | brak |
-| `NC-NUM-001` (paczka v1) | Gemini | `HANDED_TO_MODERATOR_FOR_RELAY` 31 X | brak (wg kolejności: po DS) |
+| T1/T1a (paczka v1) | DS/R1 | `HANDED_TO_MODERATOR_FOR_RELAY` 31 X; **`NOT_YET_RELAYED`** wg Moderatora 8 XI | brak — **nie z winy DS** |
+| `NC-NUM-001` (paczka v1) | Gemini | `HANDED_TO_MODERATOR_FOR_RELAY` 31 X; **`NOT_YET_RELAYED`** wg Moderatora 8 XI | brak — **nie z winy Gemini** (wg kolejności: po DS) |
 | wycofanie J3 003 §2 + trzy pozycje rejestru | REC10 | `POSTED` 31 X | brak |
 | `NC-ALG-006` | LT6 → **LT7** | `POSTED` do LT6 31 X; LT6 wygaszony 1 XI 16:52, pakiet LT7 pozycji **nie przeniósł** → ponownie `POSTED` do LT7 8 XI | brak |
 | `NC-NUM-005` | M14 | `POSTED` 31 X | **`RECEIVED` + odpowiedź 1 XI** |
@@ -446,3 +446,5 @@ przekierowaniu z 31 X — dostarczenie po luce sukcesyjnej zadziałało.
 
 `NC-ALG-006` wypadł z kolejki **dwa razy** (LT4 → LT6 → LT7). Za drugim razem zaadresowałem go do komórki
 dzień przed jej wygaszeniem: sprawdziłem ROUTE_TAGS, ale nie to, czy w drodze jest pakiet następcy.
+
+**Aktualizacja 8 XI, 10:56:** Moderator potwierdził, że paczki dla DS i Gemini jeszcze nie poszły. Sprawdzone po tygodniowej delcie (M14 ROT024, MT14 ROT019, KN12 ROT021–028): żadna nie unieważnia treści paczek — T1 i T1a nie zależą od redukcji rangi ani od granicy `w=2`; skan dla Gemini nie zależy od niczego z tej delty. Paczki v1 pozostają aktualne, bez nowej wersji.
