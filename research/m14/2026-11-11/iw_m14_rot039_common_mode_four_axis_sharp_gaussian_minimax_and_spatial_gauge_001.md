@@ -56,9 +56,9 @@ This distinction is STRUCTURAL: unbounded common mode is harmless ONLY when all 
 | Contract | Four orientations | First three orientations |
 | --- | --- | --- |
 | C0 exact common h, derivative unbounded | 3sigma²C²/N | INFINITY |
-| C1 exact common h, |h^(m)|<=H | 3sigma²C²/N | (9/2)sigma²C²/N+3eps² |
-| C2 common h unrestricted + |r_i^(m)|<=H | 3sigma²C²/N+eps² | INFINITY |
-| C3 independent |eta_i^(m)|<=H **(ROT038 owner)** | 3sigma²C²/N+eps² | (9/2)sigma²C²/N+3eps² |
+| C1 exact common h, derivative m bounded by H | 3sigma²C²/N | (9/2)sigma²C²/N+3eps² |
+| C2 common h unrestricted + residual derivative m bounded by H | 3sigma²C²/N+eps² | INFINITY |
+| C3 independent derivative m bounded by H **(ROT038 owner)** | 3sigma²C²/N+eps² | (9/2)sigma²C²/N+3eps² |
 
 The C1/C2/C3 derivative restrictions are coordinate-wise, not claims about experimental hardware. For m3,L1,N144,sigma²1,H3/5: C32,eps1/10. Four-axis Chebyshev times (0,1/4,3/4,1) and per-axis counts (6,12,12,6): C0/C1 exactly 64/3, C2 exactly 6403/300. Three-axis counts (8,16,16,8): C1 exactly 3203/100, but C0/C2 infinite. As N→infinity: C0 four-axis risk tends to zero, C2 four-axis has irreducible 0.01 floor, C1 three-axis has 0.03 floor. Not a real fT prediction.
 
