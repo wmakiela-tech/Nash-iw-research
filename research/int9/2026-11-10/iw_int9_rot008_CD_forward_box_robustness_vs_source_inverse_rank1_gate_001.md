@@ -7,6 +7,9 @@ scientific_claim_ceiling: CONDITIONAL_MODEL_INTERNAL_FORWARD_RECTANGLE_ONLY / NO
 sync_state: GITHUB_PENDING_BW_INGEST
 ---
 
+> **ERRATUM / AKTUALIZACJA ŹRÓDEŁ (11 XI 2026):** Stwierdzenie w pierwotnym ROT008, że nie wykonano jeszcze natywnego, wspólnego przebiegu C×2+D×2 przy j=22, jest **NIEAKTUALNE**. Badacz wykonał taki przebieg na podstawie wcześniejszego PREREG052 i opisał w REVIEW054 już 8 XI 2026; wykonał także C+D×0. Wynik przy wspólnej bazie: Δ(CD2)=−0.1360 dex, wobec przewidywania A1 ≈−0.149 dex; kierunek CD0 wykazał niezgodność z globalnym A1. Pierwotna arytmetyka ROT008 ma nadal wyłącznie **warunkowy** status, bez certyfikacji fizycznej ani identyfikowalności C/D. Pierwszeństwo natywnego testu należy do Badacza; AUD1 ROT035 i REC11 ROT012 niezależnie sprawdziły ograniczenie A1. **Korekta i nowy matematyczny wynik:** https://github.com/wmakiela-tech/Nash-iw-research/blob/7ebb022847c506e58aaf8d14d4f64d2d4e8effe6/research/int9/2026-11-11/iw_int9_rot011_native_cd_count_proxy_sharp_shared_baseline_distance_and_rot008_erratum_001.md . Przestarzałe zapowiedzi wykonania testu w poniższym tekście zachowano jako historię stanu wiedzy w chwili sporządzenia.
+
+
 # INT9 ROT008 — Identifiable combined forward target despite non-identifiable C/D source inverse
 
 ## Scientific priority and source-typed question
