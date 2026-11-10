@@ -61,3 +61,7 @@ document_type: RUNLOG
 | 14:12:53 | PREREG_051 procesy `a`, `b` zakończone | `yp051/yp_a.csv`, `yp051/yp_b.csv` | 18 + 35 punktów |
 | 14:13:03–14:14:25 | PREREG_051: siatka 9 punktów przy j = 99 wokół przejścia V0 ze skanu (−19.23) | `yp051/yp_c.csv`, `yp051/configs_c.dat` | zgodnie z preregiem (skan, potem siatka) |
 | 14:16–14:17 | analizy końcowe | `yp051/yp051_analysis.json`, `cd052_analysis.json` | w analizie 051 dodana post hoc ocena szumu korzeni (rozrzut wokół krzywej 3. stopnia), oznaczona w kodzie i w REVIEW_053; główna metoda korzenia bez zmian; w skrypcie 052 poprawione serializowanie typu bool numpy (bez wpływu na liczby) |
+
+## 11 XI 2026 — ścisły JSON (zgłoszenia Mech-S8 ROT010 i KN13 ROT008)
+
+`data/kernel_analysis.json` zawiera cztery niestandardowe tokeny `Infinity` (`/configs/A2_*/hi_g`, górna granica pasma A). Plik oryginalny zostaje bez zmian (custody). Obok dodany ścisły odpowiednik `data/kernel_analysis.strict.json` (`Infinity → null` w czterech ścieżkach `/configs/A2_{22,28,34,62}/hi_g`), wygenerowany przez `code/json_strict_sibling.py`. Pozostałe pliki JSON w tym katalogu nie zawierają wartości nieskończonych.
