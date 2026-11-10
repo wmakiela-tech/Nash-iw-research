@@ -46,10 +46,10 @@ Module[{gurl, gu, archive, out, arxivPDF, gitPDF, bg, ba, delta, rg, ra,
   "verification"->If[And@@Values[checks],"PASS","FAIL"],
   "checks"->checks,
   "files"-><|
-   "original_author_git"=> <|"url"->gurl,"bytes"->FileByteCount[gitPDF],
+   "original_author_git"-> <|"url"->gurl,"bytes"->FileByteCount[gitPDF],
        "sha256"->FileHash[gitPDF,"SHA256","HexString"],
        "creation_date"->ToString[dg,InputForm]|>,
-   "arxiv_v3"=> <|"url"->"https://arxiv.org/src/2509.05618v3",
+   "arxiv_v3"-> <|"url"->"https://arxiv.org/src/2509.05618v3",
        "path_inside_archive"->"fig/Y_P.pdf","bytes"->FileByteCount[arxivPDF],
        "sha256"->FileHash[arxivPDF,"SHA256","HexString"],
        "creation_date"->ToString[da,InputForm]|>
