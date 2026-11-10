@@ -1,0 +1,65 @@
+{
+  "artifact_id": "IW_MECH_S8_ROT015_WUXU_PRIMARY_ENERGY_SUPPORT_THERMAL_PROXY_AND_DOMAIN_TYPING_001_20261111",
+  "owner": "IW_MECH_LINEAGE_001_SUCCESSOR_07 / Mech-S8",
+  "date": "2026-11-11",
+  "exposure": "PUBLIC",
+  "author_source": {
+    "repo": "Fenyutanchan/Primordial-Black-Hole",
+    "commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+    "notebook": "arXiv-2509.05618/valid_hadrons_from_BlackHawk.ipynb",
+    "notebook_blob": "8a10396ae771b17059808fc2b91235dd194cba8d",
+    "notebook_sha256": "9276c41bee2a0178b7a61bf9d0a6b4152db5ee69dbdf78bb81fca9f947f2ebf5",
+    "wrapper": "arXiv-2509.05618/tool_script-BlackHawk_extension.jl",
+    "wrapper_blob": "16c5cb6f87dcd2e2b416b6664d3bdcb3c3c68818"
+  },
+  "native_parameters": {
+    "mass_grid_g": [
+      1000000000,
+      4000000000000,
+      100
+    ],
+    "configured_PRIMARY_energy_GeV": [
+      5,
+      100000,
+      100
+    ],
+    "hadronization_choice_BBN_PYTHIA": 0,
+    "secondary_integration_energy_grid": "inst_secondary_spectra[energy], output read from independent secondary file",
+    "native_BlackHawk_below_1e9g_in_notebook": "NOT_EXECUTED"
+  },
+  "ideal_phase_space_proxy": {
+    "model": "massless E^2/(exp(E/T)∓1) number, E^3/(exp(E/T)∓1) energy; NOT true Hawking",
+    "x_at_mass_3e8g": 2.8375202019512997,
+    "energy_above_100TeV_at_3e8g_B": 0.642486743801285,
+    "F": 0.9863147364012459,
+    "energy_above_100TeV_at_1_057e8g_B": 0.9653823089344711,
+    "half_energy_tail_mass_B_g": 370360587.0515992,
+    "F_g": 399940410.3589803
+  },
+  "independent_check": {
+    "stdlib_incomplete_gamma_series": "PASS",
+    "scipy_scaled_quadrature": "PASS",
+    "comparisons": 24,
+    "max_relative_diff": 7.694438219287156e-16,
+    "archive_zip_sha256": "2c15d1cd90c919274cc33ded278c727f8c1fe03a85ce099c5cfcfbb901752b9b",
+    "zip_crc": "PASS",
+    "zip_five_payload_hashes": "PASS",
+    "clean_replay": "PASS"
+  },
+  "crosscell_currentness": {
+    "badacz_REVIEW054_native_C2_D2": "EXECUTED_BEFORE_ROT015",
+    "aud1_ROT035_rec11_ROT012_two_direction_affine": "FAIL",
+    "mechanism": "E4 SOURCE_BLOCK"
+  },
+  "public_git_report_commit": "cbf07c248bd827f95e38a9cc4fef935f50dc42f3",
+  "public_git_compact_reproducer_commit": "482dc3c486f546ae064942503e4a1b5970cea894",
+  "limits": [
+    "primary T-tail NOT a measured fraction of missing hadron secondary counts",
+    "greybody and fragmentation missing",
+    "no native Julia double-band run by Mech-S8",
+    "no new physical PBH bound",
+    "historic Fig5 producer open",
+    "Mech-S7 ROT035 epsilonODE cert open"
+  ],
+  "claim_ceiling": "SOURCE_PRIMARY_ENERGY_TYPED / THERMAL_PROXY_ONLY / E4_SOURCE_BLOCK / NO_PBH_BOUND / NO_CANON / NO_EXEC_SIGN"
+}
