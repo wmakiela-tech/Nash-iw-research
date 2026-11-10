@@ -1,0 +1,164 @@
+{
+  "ceiling": "SOURCE_FIT_METADATA_AND_CONDITIONAL_REGRESSION_ALGEBRA_ONLY/NO_NATIVE_JULIA_REPLAY/NO_PHYSICAL_ERROR_DISTRIBUTION/NO_PBH_BOUND/NO_CANON/NO_EXEC_SIGN",
+  "common_mode_enclosures": {
+    "22": {
+      "common_h_abs_max": "0.000018128429160505336119556284588992",
+      "enclosure_s_D2_minus_s_D0": {
+        "high": "0.0024451700921352563832075273509833064278079752875068477469939098",
+        "low": "0.0017248430441625399979958911307827447742457526713034703392833610"
+      },
+      "excludes_zero": true,
+      "reason": "one common Y_C offset per j cannot exactly reconcile D0 and D2 under <=1 original root-fit-SE per configuration"
+    },
+    "28": {
+      "common_h_abs_max": "0.0000258669746976506153731908474280348",
+      "enclosure_s_D2_minus_s_D0": {
+        "high": "0.0056086065960665848931778831609947835192705530024690892034310089",
+        "low": "0.0053822144720821576601586131475365238394816416398479358563275511"
+      },
+      "excludes_zero": true,
+      "reason": "one common Y_C offset per j cannot exactly reconcile D0 and D2 under <=1 original root-fit-SE per configuration"
+    },
+    "34": {
+      "common_h_abs_max": "0.0000203483666618509157556103061920336",
+      "enclosure_s_D2_minus_s_D0": {
+        "high": "-0.0047853490461920397219057404284611319394604779861890915137666069",
+        "low": "-0.0048684297749542992134340902328542598110539730274487756395621781"
+      },
+      "excludes_zero": true,
+      "reason": "one common Y_C offset per j cannot exactly reconcile D0 and D2 under <=1 original root-fit-SE per configuration"
+    },
+    "62": {
+      "common_h_abs_max": "0.0000199398584169430558345727095647084",
+      "enclosure_s_D2_minus_s_D0": {
+        "high": "-0.0061328619266919339291253795805592673516513491506070874712768841",
+        "low": "-0.0064246967105587504920121854866059185894169410670994893567455341"
+      },
+      "excludes_zero": true,
+      "reason": "one common Y_C offset per j cannot exactly reconcile D0 and D2 under <=1 original root-fit-SE per configuration"
+    }
+  },
+  "offset_curve_witness": {
+    "22": {
+      "B": {
+        "abs_shift_div_original_sigma_resid": 0.028363923906499458,
+        "constant_shift_each_of_seven_Yc_values": 2.8427384048894167e-06,
+        "root_shift_in_original_fit_se": -0.07499999999996786,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "C": {
+        "abs_shift_div_original_sigma_resid": 0.3261135653945516,
+        "constant_shift_each_of_seven_Yc_values": 1.8686964358851275e-05,
+        "root_shift_in_original_fit_se": -0.8600000000000033,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D0": {
+        "abs_shift_div_original_sigma_resid": 0.3333147924868314,
+        "constant_shift_each_of_seven_Yc_values": 1.8525277730269422e-05,
+        "root_shift_in_original_fit_se": -0.8607650780380708,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D2": {
+        "abs_shift_div_original_sigma_resid": 0.32355011731184447,
+        "constant_shift_each_of_seven_Yc_values": -1.5500073209620424e-05,
+        "root_shift_in_original_fit_se": 0.855014688387284,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      }
+    },
+    "28": {
+      "B": {
+        "abs_shift_div_original_sigma_resid": 0.2156387046495846,
+        "constant_shift_each_of_seven_Yc_values": 1.6728297669638545e-05,
+        "root_shift_in_original_fit_se": -0.5650000000005728,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "C": {
+        "abs_shift_div_original_sigma_resid": 0.3300844678213627,
+        "constant_shift_each_of_seven_Yc_values": -3.912042903621048e-05,
+        "root_shift_in_original_fit_se": 0.8599999999995681,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D0": {
+        "abs_shift_div_original_sigma_resid": 0.3247995914193927,
+        "constant_shift_each_of_seven_Yc_values": -2.3605819163022274e-05,
+        "root_shift_in_original_fit_se": 0.8592118574516493,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D2": {
+        "abs_shift_div_original_sigma_resid": 0.3249294878952368,
+        "constant_shift_each_of_seven_Yc_values": 2.2232671939033247e-05,
+        "root_shift_in_original_fit_se": -0.8595002778215323,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      }
+    },
+    "34": {
+      "B": {
+        "abs_shift_div_original_sigma_resid": 0.08261964179043088,
+        "constant_shift_each_of_seven_Yc_values": -8.131127359073166e-06,
+        "root_shift_in_original_fit_se": 0.2180000000000307,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "C": {
+        "abs_shift_div_original_sigma_resid": 0.08248551797293661,
+        "constant_shift_each_of_seven_Yc_values": 4.4359439322928895e-06,
+        "root_shift_in_original_fit_se": -0.21800000000046146,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D0": {
+        "abs_shift_div_original_sigma_resid": 0.08226127628767192,
+        "constant_shift_each_of_seven_Yc_values": 9.769072143490084e-06,
+        "root_shift_in_original_fit_se": -0.21723406238457138,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D2": {
+        "abs_shift_div_original_sigma_resid": 0.04107717374127252,
+        "constant_shift_each_of_seven_Yc_values": 3.8055341526278005e-06,
+        "root_shift_in_original_fit_se": -0.10710915515092005,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      }
+    },
+    "62": {
+      "B": {
+        "abs_shift_div_original_sigma_resid": 0.16275755901365696,
+        "constant_shift_each_of_seven_Yc_values": -1.321678118979215e-05,
+        "root_shift_in_original_fit_se": 0.4290000000001208,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "C": {
+        "abs_shift_div_original_sigma_resid": 0.1621678320589013,
+        "constant_shift_each_of_seven_Yc_values": -1.1304523709610808e-05,
+        "root_shift_in_original_fit_se": 0.42900000000058736,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D0": {
+        "abs_shift_div_original_sigma_resid": 0.05873082224731819,
+        "constant_shift_each_of_seven_Yc_values": 4.104647424140252e-06,
+        "root_shift_in_original_fit_se": -0.1526596844258754,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      },
+      "D2": {
+        "abs_shift_div_original_sigma_resid": 0.16530938657073307,
+        "constant_shift_each_of_seven_Yc_values": 8.524762701220502e-06,
+        "root_shift_in_original_fit_se": -0.42752373276517075,
+        "slopes_and_regression_residuals_unchanged_exactly_under_constant_translation": true
+      }
+    }
+  },
+  "return_id": "IW_MECH_S8_ROT014_WUXU_CURVE_SHIFT_VS_COMMON_YC_CALIBRATION_FALSIFIER_001_20261111",
+  "source": {
+    "commit": "11eeb1c37c21f19b2510e3bba5ae50169cbd5d79",
+    "data_kind": "7-point linear-fit root, marginal SE, slope and RMS regression residual per configuration",
+    "git_blob": "1df29aff025755f9042628ec85752178b991d398",
+    "owner": "Badacz REVIEW050"
+  },
+  "status": "PASS_TWO_DIFFERENT_ERROR_MODELS_SEPARATED",
+  "summary": {
+    "constant_per_curve_translation_rank1_algebra_compatible": true,
+    "hypothetically_shifted_Yc_points": 112,
+    "interpretation": "The witness requires differential curve-level errors, NOT a single common additive calibration offset; no physical attainability or statistical confidence established.",
+    "max_abs_curve_Yc_shift_over_original_fit_residual_sigma": 0.3333147924868314,
+    "one_common_Yc_offset_per_j_D0_D2_exact_consistency_possible": false,
+    "root_configs": 16,
+    "seven_points_per_config": 7
+  }
+}
