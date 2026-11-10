@@ -1,0 +1,99 @@
+{
+  "artifact_id": "IW_MECH_S8_ROT010_SOURCE_EVIDENCE_MANIFEST_001_20261110",
+  "owner": "IW_MECH_LINEAGE_001_SUCCESSOR_07 / Mech-S8",
+  "origin_work_date": "2026-11-08",
+  "record_created_date": "2026-11-10",
+  "scientific_claim_ceiling": "VERIFIED_SOURCE_BYTES_AND_REVIEW050_ARITHMETIC_ONLY/NO_PBH_BOUND/NO_CANON/NO_EXEC_SIGN",
+  "hash_method": "Wolfram FileHash[filename,\"SHA256\",\"HexString\"] over actual file bytes; prior Hash[Import[filename,\"Byte\"]] is NOT a file hash",
+  "sources": {
+    "v2": {
+      "url": "https://arxiv.org/src/2509.05618v2",
+      "archive_size_bytes": 1199747,
+      "archive_sha256": "9994c81d520fbaff551e91bed88b8631b6a0bb029c28c72ee1650747716054aa",
+      "main_tex_size_bytes": 69825,
+      "main_tex_sha256": "1eae342f580c70519ba858c13900b0f3c89a9e35b241f15fbc48b870e85e21b3",
+      "fig_Y_P_pdf_size_bytes": 111995,
+      "fig_Y_P_pdf_sha256": "453c2842636a2e4ca3b36cb6ee22b854fac943f0069f85debf2ec988b96f7fa9"
+    },
+    "v3": {
+      "url": "https://arxiv.org/src/2509.05618v3",
+      "archive_size_bytes": 1200271,
+      "archive_sha256": "60627ec16d199b8dc1a81d82341d916d6f281e9e913d2f71506b5e7dbdbcb7e6",
+      "main_tex_size_bytes": 71695,
+      "main_tex_sha256": "2d5db9ce9e08718fa1f26d25f15e56b32b94f9d14b3e40a834915df8b2bccd70",
+      "fig_Y_P_pdf_size_bytes": 111995,
+      "fig_Y_P_pdf_sha256": "453c2842636a2e4ca3b36cb6ee22b854fac943f0069f85debf2ec988b96f7fa9"
+    },
+    "github_author_v2": {
+      "commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+      "file": "arXiv-2509.05618/plots/Y_P.pdf",
+      "blob_sha1": "302bad83d5581597e9c0e68d2d49f9ac5a31f5dd",
+      "file_size_bytes": 111995,
+      "file_sha256": "95f5249c880ef8411361f9cb1d06300c3042996f5a6c78b72f55b72ca74169b4"
+    }
+  },
+  "arxiv_figure_compare": {
+    "same_pdf_count": 7,
+    "total_pdf_count": 7,
+    "names": [
+      "energy_density_evolution.pdf",
+      "hadron_evol.pdf",
+      "mBH-hadron.pdf",
+      "photon.pdf",
+      "rate-compare.pdf",
+      "X_n_evolution.pdf",
+      "Y_P.pdf"
+    ],
+    "v2_v3_exact_same_bytes": true,
+    "v2_v3_fig_Y_P_exact_same_bytes": true,
+    "author_git_fig_Y_P_vs_arxiv_exact_same_bytes": false,
+    "pdf_content_difference": "UNDETERMINED; differences may be metadata or visuals"
+  },
+  "appendix_b": {
+    "v3_main_tex_plus_mass_term_present": true,
+    "v3_main_tex_GF2_over_16_present": true,
+    "v2_main_tex_32GF2_over_16_present": true,
+    "v3_print_sign_and_factor32_inconsistency": "SOURCE_VERIFIED; physics effect NOT established"
+  },
+  "badacz_review050": {
+    "source_commit": "11eeb1c37c21f19b2510e3bba5ae50169cbd5d79",
+    "csv_files": [
+      "kernel_w1.csv",
+      "kernel_w2.csv",
+      "kernel_w3.csv",
+      "kernel_w4.csv"
+    ],
+    "fit_groups": 24,
+    "points_per_group": 7,
+    "total_points": 168,
+    "max_abs_root_diff": 1.0658141036401503e-14,
+    "j22": {
+      "s_eff_C": 0.33149064037703413,
+      "s_eff_D_comb": 0.07657119271096934,
+      "s_num_C": 0.07897695110485249,
+      "s_num_D": 0.014274164747901889,
+      "s_eff_CplusD": 0.4080618330880035,
+      "s_num_CplusD": 0.09325111585275438,
+      "D2_delta_dex": -0.03251764775235699
+    },
+    "strict_json_issue": {
+      "nonstandard_literal": "Infinity",
+      "count": 4,
+      "location": "configs.A2_{22,28,34,62}.hi_g",
+      "original_json_preserved": true
+    }
+  },
+  "correction": {
+    "withdraw_file_sha256_identifiers_from_earlier_intermediate_ROT010_outputs": true,
+    "example_invalid": "bce944f27f462d226c56e961dd306157936a151eb7bac324e2ae7f2f625760e0",
+    "correct_arxiv_v2v3_fig_sha256": "453c2842636a2e4ca3b36cb6ee22b854fac943f0069f85debf2ec988b96f7fa9"
+  },
+  "outstanding": [
+    "HISTORICAL_JCAP_FIG5_PRODUCER_UNVERIFIED",
+    "VISUAL_OR_METADATA_SOURCE_OF_GIT_PDF_DIFFERENCE_UNVERIFIED",
+    "E4_HADRON_PHYSICAL_SOURCE_BLOCK",
+    "MECH_S7_ROT035_STRICT_ODE_CERTIFICATE_OPEN",
+    "BW_INGEST_UNVERIFIED",
+    "REC_AUD_CURRENT_REPORT_ACCEPTANCE_NOT_INFERRED"
+  ]
+}
