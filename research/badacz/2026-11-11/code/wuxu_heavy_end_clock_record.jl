@@ -8,8 +8,18 @@ js = parse.(Int, split(ARGS[3], ",")); lbs = parse.(Float64, split(ARGS[4], ",")
 full = read(joinpath(src_dir, "main-scan.jl"), String)
 marker = "@info \"Loading `main-scan-parameters.jl`\""
 occursin(marker, full) || error("scan marker missing")
+prefix = split(full, marker)[1]
+# POST HOC diagnostic addition (11 XI, after the PREREG_056 default-tolerance run): env BADACZ_TOL="<reltol>:<abstol>" switches
+# the solver tolerance exactly as in research/badacz/2026-11-08/code/wuxu_band_kernel.jl; default path unchanged.
+solve_call = "solve(evolution_problem, AutoTsit5(Rosenbrock23()))"
+count(solve_call, prefix) == 1 || error("expected exactly one solve() call in magic()")
+tolmode = get(ENV, "BADACZ_TOL", "default")
+if tolmode != "default"
+    tp = split(tolmode, ":")
+    prefix = replace(prefix, solve_call => "solve(evolution_problem, AutoTsit5(Rosenbrock23()); reltol=$(parse(Float64, tp[1])), abstol=$(parse(Float64, tp[2])), saveat=log.(geomspace(a_f, a_end, num_points)), dense=false)")
+end
 prefix_file = joinpath(src_dir, "_badacz_clock_prefix_$(getpid()).jl")
-write(prefix_file, split(full, marker)[1])
+write(prefix_file, prefix)
 cd(src_dir) do
     include(prefix_file)
     include(joinpath(src_dir, "main-scan-parameters.jl"))
