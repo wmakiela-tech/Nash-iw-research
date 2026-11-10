@@ -308,6 +308,27 @@ A load-bearing literature result must allow another scout to rerun the search an
 
 Use the literature-search record template. A source list without reproducible queries and inclusion logic is a bibliography, not a reproducible literature result.
 
+## 9a. Source-contact and queued-STOP discipline (Moderator direction, 2026-11-10)
+
+**Origin failure mode:** `DECLARED_LIMITATION_WITHOUT_QUEUE` (including `DECLARED_PENDING_WITHOUT_QUEUE`). A repeated source limitation or pending cross-surface step is not a plan merely because its STOP/PENDING status is correctly disclosed. This forward-only R1 project default implements the Moderator's 2026-11-10 disposition of the two EKS1 GAP-001 proposals; it does not promote source content, endorse a mathematical or physical claim, or create a new universal science pre-work gate.
+
+**R1 — STOP must produce a test or a queued owner action.** When the *same material source limitation* (e.g., uncollected data, non-executed author code, unopened primary source, uncommitted downstream ingestion) appears in a third consecutive material artifact of a single lineage, the next relevant artifact should either:
+
+- perform and cite the cheapest legally available discriminating source/control check; **or**
+- bind a bounded action to a named responsible source/ingestion owner, with the input locator or explicit access gap, an execution/reopen trigger, and a return route.
+
+If a legal source check is impossible, preserve `ACCESS_BLOCKED` / `HOLD` / `UNKNOWN` with that owner and reopen condition. Do not repeat STOP as a closure or falsely infer that a notification is an accepted task or completed ingestion. Consecutive-three is an **escalation heuristic**, not an automatic rejection of otherwise valid independent work or a requirement to repeat already assigned checks. Respect source-owner scope and existing queue/task identity; avoid duplicating an active task.
+
+**R2 — Source contact before derivation chains expand.** For a research lineage that repeatedly builds on an external empirical/computational source, the source owner should maintain a bounded source-data/code inventory **before another cell materially extends a source-derived application, or by the fifth consecutive material artifact relying on that source, whichever occurs first**. Record: (i) what data and code are advertised or exist; (ii) what was actually downloaded, opened, run or remains inaccessible; (iii) exact version/locator, size and checksum where obtained; (iv) which model assumptions have a possible source-native test, and which do not. Source-inaccessible state is explicit rather than guessed.
+
+A **hypothetical measurement or runtime contract not demonstrated by the opened source** must be source-typed as hypothetical/conditional and must not silently acquire a source-native, empirical or physical claim by inheritance. Before promoting another *source-derived* layer as source-supported, seek a source-owner disposition or obtain the missing test; purely conditional mathematical exploration may proceed within its stated scope without pretending that the source validates it. No blanket freeze of unrelated scientific work.
+
+**Focus flag (not prohibition).** When over half of a cell's material research rotations in a rolling fourteen-day window rely on one external source, surface a brief focus/currentness check to the Moderator; the owner decides whether concentration is justified. This is not a participant score, a rotation quota, or a ban on high-value concentration.
+
+**Implementation and ownership.** The source owner owns source inventory and source-native access classification; the scientific/method steward owns domain application and material source-derivation gates; KCELL/BW owns ingestion/currentness semantics; SYSS/OW integrates only the shared operational interface. One controlling text is maintained **here**, with method-specific documents pointing to this section rather than publishing divergent normative copies. Numerical triggers above are reversible defaults: revise on observed false positives, resource costs, or source-type mismatch. Do not retroactively invalidate prior artifacts solely for missing a queue; bind the next useful action instead.
+
+`NO_CANON / NO_EXEC_SIGN / SOURCE_CUSTODY != SCIENTIFIC_ADOPTION`.
+
 ## 10. Verification and acceptance
 
 Before calling a material artifact complete, verify:
