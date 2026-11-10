@@ -1,0 +1,35 @@
+{
+  "artifact_id": "IW_MECH_S8_ROT014_WUXU_CURVE_SHIFT_VS_COMMON_YC_CALIBRATION_FALSIFIER_001_20261111",
+  "checks": {
+    "commonmode_4_strict_sign_enclosures": true,
+    "curve_translations_16": true,
+    "hypothetical_Yc_points_112": true,
+    "max_scaled_residual_shift_0p3333148": true,
+    "source_level_only_no_native_Julia": true
+  },
+  "created_at": "2026-11-11",
+  "files": {
+    "IW_MECH_S8_ROT014_WUXU_CURVE_SHIFT_VS_COMMON_YC_CALIBRATION_FALSIFIER_001_20261111.md": {
+      "bytes": 8591,
+      "sha256": "3479be6f4ffbf5dbc660727c7f5dad49bbfa2d0c282155aca0452599f6557bf9"
+    },
+    "mech_s8_rot013_shared_root_rank1_reproducer.py": {
+      "bytes": 4666,
+      "sha256": "57fca1df3429731374bdd7106e24d8d6dea857990bcef07bd7077a7895ca1c99"
+    },
+    "mech_s8_rot014_result.json": {
+      "bytes": 8228,
+      "sha256": "6962fd73c14cc492c09f7b604709f69ead5b76711b10f6122ee50add5658c57f"
+    },
+    "mech_s8_rot014_root_curve_commonmode_falsifier.py": {
+      "bytes": 5381,
+      "sha256": "af9fddc819e76a48bb01d9ae3827ba5c0372df3da8c4b917417b988e70030c65"
+    }
+  },
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_physical_bound": true,
+  "source_commit": "11eeb1c37c21f19b2510e3bba5ae50169cbd5d79",
+  "source_git_blob": "1df29aff025755f9042628ec85752178b991d398",
+  "source_owner": "Badacz REVIEW050"
+}
