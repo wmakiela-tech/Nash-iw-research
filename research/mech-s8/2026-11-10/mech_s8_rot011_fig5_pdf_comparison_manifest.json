@@ -1,0 +1,57 @@
+{
+  "artifact_id": "IW_MECH_S8_ROT011_WUXU_Y_P_PDF_RENDER_EQUIVALENCE_METADATA_BYTE_GATE_001_20261110",
+  "owner": "IW_MECH_LINEAGE_001_SUCCESSOR_07 / Mech-S8",
+  "created_at": "2026-11-10",
+  "exposure": "PUBLIC_SAFE",
+  "source_git_v2": {
+    "commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+    "path": "arXiv-2509.05618/plots/Y_P.pdf",
+    "bytes": 111995,
+    "sha256": "95f5249c880ef8411361f9cb1d06300c3042996f5a6c78b72f55b72ca74169b4",
+    "creation_date": "+08 2025-12-30 23:22:45"
+  },
+  "source_arxiv_v3": {
+    "url": "https://arxiv.org/src/2509.05618v3",
+    "path": "fig/Y_P.pdf",
+    "bytes": 111995,
+    "sha256": "453c2842636a2e4ca3b36cb6ee22b854fac943f0069f85debf2ec988b96f7fa9",
+    "creation_date": "+08 2025-12-19 18:41:00",
+    "byte_identical_to_arxiv_v2_fig": true
+  },
+  "checks": {
+    "page_count_each": 1,
+    "raw_bytes_different": 257,
+    "difference_1_based_range": [
+      111376,
+      111648
+    ],
+    "difference_contiguous_runs": 9,
+    "600x500_different_pixel_channels": 0,
+    "1800x1500_different_pixel_channels": 0,
+    "page_graphics_exact": true,
+    "page_objects_exact": true,
+    "page_text_exact": true,
+    "producer_both": "cairo 1.18.4",
+    "creation_date_different": true,
+    "github_code_fetch_readback_pass": true,
+    "reproducer_clean_execution_check_count": 13,
+    "reproducer_exec_result": "PASS"
+  },
+  "reproducibility": {
+    "script": "research/mech-s8/2026-11-10/mech_s8_rot011_wuxu_pdf_visual_metadata_gate.wl",
+    "corrected_script_commit": "85022a31fe10165762bbdde4d0bab48fb37425e0",
+    "corrected_script_blob": "4aa9976c5d042bd24737d8229a332f42440d39bc",
+    "earlier_invalid_script_commit": "8b8ca4d7baa5e0bb591f2f1755e203c6b28ea45c",
+    "initial_error": "Wolfram Association => instead of ->",
+    "report_commit": "f919ba8844243ab2c3a0ff83ce92cb4f7948c149"
+  },
+  "status": "VISIBLE_FIGURE_AND_PARSED_PAGE_GRAPHICS_IDENTICAL / RAW_PDF_BYTES_DIFFER",
+  "limits": [
+    "Metadata date differs, but it was not proven to be the only differing decompressed field",
+    "Historical Julia scan->JLD2->JCAP Fig5 producer remains OPEN",
+    "Wu-Xu physical hadron emission E4 SOURCE_BLOCK",
+    "Mech-S7 ROT035 strict epsilon ODE OPEN",
+    "BW ingest and referee acceptance unverified"
+  ],
+  "claim_ceiling": "PDF_ARTIFACT_COMPARISON_ONLY / NO_PBH_BOUND / NO_CANON / NO_EXEC_SIGN"
+}
