@@ -37,3 +37,14 @@ ZIP CRC PASS; all THIRTEEN members independently extracted, byte-compared and SH
 **Negative knowledge:** after-outcome predictor q_k=X_k makes e-process invalid (expected one-step factor cosh(lambda/2)>1); individual reference response marginal does not guarantee conditionally independent science pair readouts (Z score .09125 iid vs .1825 shared-latch detector at same q=.5); unconstrained drift can make p0=p1=.5 during science and source A/B observationally identical. Hidden-Xi-conditioned source-survival, private axis and B's nonanticipating independent increments remain mandatory. The drift derivative bound is NOT measured or inferred; no hardware demonstration, independent scientific referee, BW ingestion or three-qubit single-copy LOCC closure. NO_CANON / NO_EXEC / NO_NOVELTY.
 
 **External mature math:** Howard et al. (2021) DOI `10.1214/20-AOS1991`; Waudby-Smith and Ramdas (2024) DOI `10.1093/jrsssb/qkad009`. R35: source-independent paired-readout correlation calibration with conditional confidence sequences and independent physical drift-rate constraints.
+
+
+## Complete standalone GitHub scripts — full readback of each exact source PASS
+
+The full current Python scripts are ALSO persisted individually in GitHub, with content SHA-1 matched to the exact bytes of the corresponding ZIP members (not merely cited by filename):
+
+- [Full adaptive empirical-Bernstein nonstationary detector reproducibility](IW_PRF12_R34_ADAPTIVE_EMPIRICAL_BERNSTEIN_DRIFT_REPRO_001_20261110.py) — Git blob `a608d04eb500f56ca05fcad0860f1b27199776d2`.
+- [Independent 200000-factor plus A 2x2 / B 4x4 and readout correlation falsifier](IW_PRF12_R34_INDEPENDENT_EVALUE_AND_QUANTUM_FALSIFIERS_001_20261110.py) — Git blob `440ef2ecc550d665d58f87dba8a8178451a42180`.
+- [70-digit independent stopped endpoint audit](IW_PRF12_R34_HIGH_PRECISION_ENDPOINT_RECHECK_001_20261110.py) — Git blob `a4fb9db9bba71fedef806ecf1705a78bb462b7ba`.
+
+Every file was fetched independently after the initial write, and the exact blob SHA matched the previously computed local Git content SHA. The three source files in the ZIP remain unchanged; no silent post-validation modification of the archive.
