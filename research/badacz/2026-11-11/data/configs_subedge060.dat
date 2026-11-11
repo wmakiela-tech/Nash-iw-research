@@ -1,0 +1,5 @@
+# PREREG_060 (id j lam start_log10beta); proces 1 = j22, proces 2 = j28; BADACZ_TOL=1e-4:1e-7
+base22u 22 0 -17.228
+ramp22 22 1 -17.270
+base28u 28 0 -18.345
+ramp28 28 1 -18.375

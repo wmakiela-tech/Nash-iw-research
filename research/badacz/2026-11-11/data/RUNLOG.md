@@ -27,3 +27,6 @@ document_type: RUNLOG
 | 00:40:41–01:09 | PREREG_058 ukończony (3 konfiguracje, po 15 punktów, ok. 35–40 s każdy) | `kernel_a1tol058.csv` | log kończy się `DONE` |
 | — | kontener sesji odzyskany przez platformę po bezczynności; pliki danych zachowane, procesy już zakończone | — | żaden przebieg nie został przerwany przez odzyskanie |
 | 21:3x | analizy r2 (056) i 058 | `heavy_end_clock_analysis.json`, `a1tol058_analysis.json` | `code/wuxu_a1tol058_analysis.py` |
+| ~21:45 | PREREG_060: przewidywanie z jądra pasm policzone przed przebiegiem | `subedge_ramp060_prediction.json` | `code/wuxu_subedge_ramp_prediction.py` |
+| ~21:47–21:52 | kontrola tożsamości λ = 0, j = 22, log10 β = −17.828, `1e−4` (tylko λ = 0) | brak pliku w repo (scratchpad) | nowy sterownik = stary sterownik = powtórzenie w procesie: `Y_C = 0.24718420969015406`; ten sam punkt w 058 (inna maszyna, przed odzyskaniem kontenera): `0.24715182815744363`. Determinizm jest w obrębie maszyny, nie między maszynami |
+| po commicie PREREG_060 | produkcja PREREG_060: proces 1 `configs_subedge060_p1.dat` (j = 22), proces 2 `configs_subedge060_p2.dat` (j = 28), `BADACZ_TOL = 1e−4:1e−7` | `subedge060_p1.csv`, `subedge060_p2.csv` | podział pliku `configs_subedge060.dat` na dwa procesy |
