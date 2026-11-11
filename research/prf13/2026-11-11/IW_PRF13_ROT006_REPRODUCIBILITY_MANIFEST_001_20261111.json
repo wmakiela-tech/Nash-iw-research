@@ -1,0 +1,156 @@
+{
+  "$schema": "../../../schemas/research-reproduction-manifest.schema.json",
+  "manifest_id": "IW_PRF13_ROT006_REPRODUCIBILITY_MANIFEST_001_20261111",
+  "artifact_id": "IW_PRF13_ROT006_ONE_SHOT_A_TO_BC_QUANTITATIVE_LOCC_RESTRICTION_001_20261111",
+  "title": "ROT006: exact rational octagon eigenvalue-isolation proof of one-shot first-party to joint-BC gap",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_12 / PRF13",
+  "created_at": "2026-11-11T21:56:00+01:00",
+  "as_of": "2026-11-11: R04/R08/R09/R12 original GitHub bodies, Cohen 2022/2023 primary literature, Abel October 2026 currentness scout",
+  "task_id": "PRF13_ROT006_20261111",
+  "exposure": "PUBLIC",
+  "status": "DRAFT",
+  "claim": {
+    "question": "Does exact n=3 Cauchy versus Levy endpoint discrimination have a positive quantitative gap under arbitrary first single-qubit POVM and subsequent globally optimal BC measurement?",
+    "object": "Original PRF12 R04 equal ideal exposure κ=0 D(q) on three separated qubits; first party quantum involvement ends after its own POVM",
+    "statement": "For x=e^{-q} in [7/10,3/4], TV_{first party→joint BC} <= (12/25)(1-x²), hence Helstrom minus this restricted class >=(1-x²)/50>0. Proof uses rational trace-norm affine majorant checked with exact real-root isolation at 16 vertices.",
+    "claim_ceiling": "NO_FULL_MULTIRound_LOCC_GAP / NO_ASYMPTOTIC_LOCC_CLOSURE_GAP / NO_HARDWARE / NO_GENUINE_PROCESS_TENSOR_CLAIM / NO_NOVELTY / REFEREE_PENDING / NO_CANON / NO_EXEC_SIGN"
+  },
+  "code": {
+    "repository": "https://github.com/wmakiela-tech/Nash-iw-research",
+    "commit": "d52633d91d0027cc0d6434e252ffac5124e09f8d",
+    "entrypoint": "research/prf13/2026-11-11/IW_PRF13_ROT006_EXACT_OCTAGON_CHARPOLY_REPRO_001_20261111.py",
+    "license": "NOT_APPLICABLE"
+  },
+  "environment": {
+    "os": "Linux x86_64 (author execution)",
+    "architecture": "x86_64",
+    "runtime": "Python 3.13.5; SymPy 1.14.0; NumPy 2.3.5",
+    "dependency_lock": "NOT_AVAILABLE_WITH_REASON: exact local versions pinned in runtime description, no lockfile",
+    "hardware": "NOT_MATERIAL"
+  },
+  "execution": {
+    "clean_start": "Python with SymPy and NumPy, no quantum device or external input; exact program reconstructs frozen source D(q) directly",
+    "commands": [
+      "python IW_PRF13_ROT006_EXACT_OCTAGON_CHARPOLY_REPRO_001_20261111.py > rot006_exact_stdout.txt",
+      "python IW_PRF13_ROT006_INDEPENDENT_8X8_AND_LOCC_FIXTURE_AUDIT_001_20261111.py > rot006_independent_stdout.txt",
+      "python -m py_compile IW_PRF13_ROT006_EXACT_OCTAGON_CHARPOLY_REPRO_001_20261111.py IW_PRF13_ROT006_INDEPENDENT_8X8_AND_LOCC_FIXTURE_AUDIT_001_20261111.py"
+    ],
+    "parameters": {
+      "x_endpoints": [
+        "7/10",
+        "3/4"
+      ],
+      "octagon": "|nx|<=1,|ny|<=1,|nx|+|ny|<=17/12",
+      "affine_slope": "11/100",
+      "affine_upper": "12/25",
+      "root_eps": "1/10000000",
+      "numerical_random_seed": 2026111106,
+      "diagnostic_counts_per_x": [
+        2500,
+        2500
+      ]
+    },
+    "seeds": [
+      2026111106
+    ],
+    "tolerances": {
+      "exact_proof": "Pure QQ root isolation; no floating numerical tolerance",
+      "independent_8x8_vs_4x4": "3e-15 numerical control",
+      "characteristic_root_interval": "1e-7 rational"
+    },
+    "stop_rule": "16 predetermined exact vertices, two x endpoints, fixed independent random diagnostic batches; no optional stopping",
+    "expected_runtime": "seconds on ordinary modern CPU"
+  },
+  "inputs": [
+    {
+      "path": "research/prf13/2026-11-11/IW_PRF13_ROT006_EXACT_OCTAGON_CHARPOLY_REPRO_001_20261111.py",
+      "sha256": "158b6cbe914dc61f131c8c84daa03b95ea3ee1f651015d188a1b43a2003a0609",
+      "source": "Original PRF13 mathematical code; source-normalized R04/R12 source matrix",
+      "schema": "UTF-8 Python3 source",
+      "units_or_conventions": "Pauli qubit conventions; x=e^{-q}, b=1-x^2; trace norm",
+      "exposure": "PUBLIC"
+    },
+    {
+      "path": "research/prf13/2026-11-11/IW_PRF13_ROT006_INDEPENDENT_8X8_AND_LOCC_FIXTURE_AUDIT_001_20261111.py",
+      "sha256": "27e5180494798c6592958facc608fd0abd167df92daf2152aa569ff904c291c6",
+      "source": "Independent author same-cell 8D matrix reconstruction and direct partial contraction",
+      "schema": "UTF-8 Python3 source",
+      "units_or_conventions": "Double precision fixture only; no mathematical proof via sampling",
+      "exposure": "PUBLIC"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/prf13/2026-11-11/IW_PRF13_ROT006_ONE_SHOT_A_TO_BC_QUANTITATIVE_LOCC_RESTRICTION_001_20261111.md",
+      "sha256": "a8f05b424b4551a58cab4968a0dca50faa4cd5e9c67de72542c5b49926efd2c3",
+      "role": "OTHER",
+      "derived_from": [
+        "research/prf13/2026-11-11/IW_PRF13_ROT006_EXACT_OCTAGON_CHARPOLY_REPRO_001_20261111.py",
+        "research/prf13/2026-11-11/IW_PRF13_ROT006_INDEPENDENT_8X8_AND_LOCC_FIXTURE_AUDIT_001_20261111.py"
+      ],
+      "expected": "Quantitative restricted one-round theorem and no full-LOCC overreach"
+    },
+    {
+      "path": "LOCAL_ZIP_ONLY/rot006_exact_stdout.txt",
+      "sha256": "dc55ed26575c7d78af115ae6d78afef1a597601c67ef783458293705ea4cda2b",
+      "role": "LOG",
+      "derived_from": [
+        "research/prf13/2026-11-11/IW_PRF13_ROT006_EXACT_OCTAGON_CHARPOLY_REPRO_001_20261111.py"
+      ],
+      "expected": "Exact rational 16-vertex PASS; maximal rational bound 244884636201/513477478400"
+    },
+    {
+      "path": "LOCAL_ZIP_ONLY/rot006_independent_stdout.txt",
+      "sha256": "ca7fc0bdbc83c12c69b0ada3ee535cb54e15e8cc0d3276c9a788bd9682a9e080",
+      "role": "LOG",
+      "derived_from": [
+        "research/prf13/2026-11-11/IW_PRF13_ROT006_INDEPENDENT_8X8_AND_LOCC_FIXTURE_AUDIT_001_20261111.py"
+      ],
+      "expected": "Independent 8D→4D Pauli contraction PASS; 3 fixed x diagnostic groups PASS"
+    }
+  ],
+  "verification": {
+    "tests": [
+      "SymPy exact charpoly root isolation for each of 16 cases and rational strict comparison",
+      "Independent exact 8x8 source D(q) via characteristic function equals Pauli decomposition",
+      "NumPy 8D direct partial trace versus independent 4D Pauli contraction",
+      "2500 randomized projective and 2500 randomized finite POVM fixtures per each x, fixed seed",
+      "Python bytecode compile; local ZIP CRC and byte-for-byte archive verification"
+    ],
+    "controls": [
+      "Any positive POVM effect refined into rank-one before BobCharlie optimal discrimination; barycentre cancellation",
+      "Outer rational octagon rigorously contains Bloch disk",
+      "Convexity twice: in Bloch coordinates and in source x on fixed endpoints",
+      "R09 negative knowledge: cannot infer full LOCC closure from binary coarse-grained criterion"
+    ],
+    "warnings": [
+      "No unrestricted/multiround/asymptotic LOCC performance gap proved",
+      "No independent external referee",
+      "One-party POVM class allows BobCharlie joint measurement but no return quantum role to first party",
+      "Only q satisfying e^{-q}∈[7/10,3/4], ideal equal-time SWAP, κ=0",
+      "A numerical sampling audit is not a proof",
+      "Local ZIP carries author stdout logs; no genuine physical observations"
+    ],
+    "known_failures": [
+      "R07 full asymptotic LOCC claim was withdrawn in R09 for coarse-graining error",
+      "Mature host LOCC methods are not evidence of original priority"
+    ],
+    "reproduction_status": "AUTHOR_REPRODUCED",
+    "independent_reproducer": "SAME_CELL_SEPARATE_NUMERICAL_RECONSTRUCTION; EXTERNAL_REFEREE_PENDING",
+    "platform_deviations": []
+  },
+  "provenance": {
+    "primary_location": "https://github.com/wmakiela-tech/Nash-iw-research/blob/d52633d91d0027cc0d6434e252ffac5124e09f8d/research/prf13/2026-11-11/IW_PRF13_ROT006_ONE_SHOT_A_TO_BC_QUANTITATIVE_LOCC_RESTRICTION_001_20261111.md",
+    "content_sha256": "a8f05b424b4551a58cab4968a0dca50faa4cd5e9c67de72542c5b49926efd2c3",
+    "narrative_artifact": "IW_PRF13_ROT006_ONE_SHOT_A_TO_BC_QUANTITATIVE_LOCC_RESTRICTION_001_20261111",
+    "derived_from": [
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf12/2026-10-26/IW_PRF12_R04_THREE_PROBE_FINITE_SWAP_EXACT_X_READOUT_GAP_AND_SECTOR_DECOMPOSITION_001_20261026.md",
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf12/2026-10-26/IW_PRF12_R09_COARSE_GRAINING_COHEN_THEOREM_AUDIT_AND_CORRECTED_CLAIM_CEILING_001_20261026.md",
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf12/2026-10-27/IW_PRF12_R12_RANKONE_RIGIDITY_PRODUCT_EFFECT_MINIMALITY_AND_EQUATORIAL_LOCC_001_20261027.md"
+    ],
+    "supersedes": [],
+    "stale_if": "Source D(q) differs, octagon/root isolation check fails, first measured party re-enters quantum interaction, or outside x validity interval",
+    "readback_state": "VERIFIED",
+    "delivery_state": "NOT_ROUTED"
+  }
+}
