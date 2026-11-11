@@ -8,7 +8,7 @@ origin_cell: BADACZ (wątek Claude)
 document_type: MANIFEST
 ---
 
-# SHA-256 — research/badacz/2026-11-11 (PREREG_056 / REVIEW_057 r2; PREREG_058 / REVIEW_059; PREREG_060)
+# SHA-256 — research/badacz/2026-11-11 (PREREG_056 / REVIEW_057 r2; PREREG_058 / REVIEW_059; PREREG_060 / REVIEW_061)
 
 Sprawdzenie: `grep -E '^[0-9a-f]{64}  ' data/MANIFEST_SHA256.md | sha256sum -c` z katalogu `research/badacz/2026-11-11`. Sterownik w wersji użytej do przebiegu produkcyjnego to commit `bdc8906`; wersja poniżej dodaje tylko przełącznik `BADACZ_TOL` (ścieżka domyślna bez zmian).
 
@@ -28,4 +28,10 @@ b4f06d08707c7cd033b84a645a2cb624a30b06cfe0d93fa181e94f404238517e  code/wuxu_sube
 39df639d3c10a7209904fb315d1e9fe3194d05041fc2ce6487889c3c417bc5fa  data/configs_subedge060.dat
 59384b9c29ae399b6c9b1af896d0ea404187042aa19293c6c122fee9401e87ad  data/configs_subedge060_p1.dat
 e3b838be42cb5edc9303f2e5fa94b4f15d2981787d0916b1dfed870a742b8db7  data/configs_subedge060_p2.dat
+ed82654decb13601a9acb2186646df20ed3bd9e6dae36cc836c87a10d2df9ee8  code/wuxu_subedge060_analysis.py
+fed3110e901025d322d55d37347c700b71fea6221d826663a8c07bd70aff41ca  code/wuxu_subedge060_posthoc_cmap.py
+0f6e443ce4f5742c5bda44515c18df44b11c7b4e07b4cce1814d59d2491f7e9b  data/subedge060_p1.csv
+5ae0f363873f74b84225d6497ccfddeb631fcb8f0bf2ff0e2cede03ba2aea391  data/subedge060_p2.csv
+d85f88dcf13deaa3a82775e2aef0acbf36eb896e4a697c9d41f88135698a7f11  data/subedge060_analysis.json
+55fffb9fac50f9d82b3d884caab89d1c9884c3413c705d6e46998d633765d9f0  data/subedge060_posthoc_cmap.json
 ```
