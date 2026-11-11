@@ -1,0 +1,115 @@
+{
+  "status": "MATHEMATICAL_PROOF_ANALYTIC_NUMERIC_CHECK_PASS",
+  "type": "ERFC_NORMALIZED_POINT_SOURCE_DEFICIENCY_ONLY",
+  "not_physical_bound": true,
+  "description": "Positive Yukawa mixture (nonnegative coefficients, rates); signed mixtures excluded",
+  "model": "f(r)=erfc(r/(2ell)); sup relative error on compact [a,b]",
+  "formula": "inf_error=(D-1)/(D+1); D=max(f/h), h=geometric endpoint chord",
+  "examples": [
+    {
+      "ell_um": 40.0,
+      "a_um": 52.0,
+      "b_um": 108.0,
+      "r_worst_um": 80.24289752659078,
+      "point_source_f_endpoint_a": 0.35797067264432814,
+      "point_source_f_endpoint_b": 0.056237803877275935,
+      "D_max": 1.1086437410344492,
+      "three_radius_midpoint_lower_bound": 0.05151916548641618,
+      "sharp_continuous_interval_relative_error": 0.05152304247523157,
+      "optimal_single_exp_mass_per_um": 0.033051104740018204,
+      "optimal_single_exp_decay_length_um": 30.25617472898575,
+      "optimal_single_exp_prefactor": 2.099276707466293,
+      "equioscillation_relative_residuals": [
+        0.05152304247523154,
+        -0.05152304247523187,
+        0.05152304247523154
+      ],
+      "dense_grid_nodes_checked": 3001,
+      "positive_mixture_tests": 61
+    },
+    {
+      "ell_um": 40.0,
+      "a_um": 52.0,
+      "b_um": 148.0,
+      "r_worst_um": 100.54989441717925,
+      "point_source_f_endpoint_a": 0.35797067264432814,
+      "point_source_f_endpoint_b": 0.008888969943914289,
+      "D_max": 1.366853881744694,
+      "three_radius_midpoint_lower_bound": 0.15497633346374692,
+      "sharp_continuous_interval_relative_error": 0.1549964214412225,
+      "optimal_single_exp_mass_per_um": 0.03849624882365333,
+      "optimal_single_exp_decay_length_um": 25.976556951844305,
+      "optimal_single_exp_prefactor": 3.0605601921973165,
+      "equioscillation_relative_residuals": [
+        0.1549964214412225,
+        -0.15499642144122228,
+        0.15499642144122294
+      ],
+      "dense_grid_nodes_checked": 3001,
+      "positive_mixture_tests": 61
+    },
+    {
+      "ell_um": 30.0,
+      "a_um": 52.0,
+      "b_um": 108.0,
+      "r_worst_um": 80.22690723110759,
+      "point_source_f_endpoint_a": 0.2203297530976841,
+      "point_source_f_endpoint_b": 0.010909498364269285,
+      "D_max": 1.2104898652743148,
+      "three_radius_midpoint_lower_bound": 0.09521694795158592,
+      "sharp_continuous_interval_relative_error": 0.09522317590367857,
+      "optimal_single_exp_mass_per_um": 0.053669490759445035,
+      "optimal_single_exp_decay_length_um": 18.632559874327015,
+      "optimal_single_exp_prefactor": 3.93197442717758,
+      "equioscillation_relative_residuals": [
+        0.09522317590367835,
+        -0.09522317590367901,
+        0.09522317590367835
+      ],
+      "dense_grid_nodes_checked": 3001,
+      "positive_mixture_tests": 61
+    },
+    {
+      "ell_um": 50.0,
+      "a_um": 52.0,
+      "b_um": 108.0,
+      "r_worst_um": 80.24309181002931,
+      "point_source_f_endpoint_a": 0.46210136952114556,
+      "point_source_f_endpoint_b": 0.1266738416121104,
+      "D_max": 1.0659570660815878,
+      "three_radius_midpoint_lower_bound": 0.031923263135683916,
+      "sharp_continuous_interval_relative_error": 0.03192567123705321,
+      "optimal_single_exp_mass_per_um": 0.023110154907278448,
+      "optimal_single_exp_decay_length_um": 43.271021073296836,
+      "optimal_single_exp_prefactor": 1.585950160758356,
+      "equioscillation_relative_residuals": [
+        0.031925671237053255,
+        -0.031925671237053366,
+        0.03192567123705348
+      ],
+      "dense_grid_nodes_checked": 3001,
+      "positive_mixture_tests": 61
+    },
+    {
+      "ell_um": 40.0,
+      "a_um": 0.0,
+      "b_um": 200.0,
+      "r_worst_um": 102.52205033449786,
+      "point_source_f_endpoint_a": 1.0,
+      "point_source_f_endpoint_b": 0.0004069520174449589,
+      "D_max": 3.8252409848343687,
+      "three_radius_midpoint_lower_bound": 0.585227809835805,
+      "sharp_continuous_interval_relative_error": 0.5855129295539937,
+      "optimal_single_exp_mass_per_um": 0.03903407636363632,
+      "optimal_single_exp_decay_length_um": 25.618641278562134,
+      "optimal_single_exp_prefactor": 1.5855129295539936,
+      "equioscillation_relative_residuals": [
+        0.5855129295539936,
+        -0.5855129295539938,
+        0.5855129295539925
+      ],
+      "dense_grid_nodes_checked": 3001,
+      "positive_mixture_tests": 61
+    }
+  ]
+}
