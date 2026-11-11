@@ -14,6 +14,7 @@ def bw(s,mass):
     b=m.sqrt(1-4*mass**2/s)
     return 2*m.pi*a*a/s*((3-b**4)*2*m.atanh(b)-2*b*(2-b**2))
 def piborn(s):
+    if s<=4*mp**2: return m.mpf('0')
     b=m.sqrt(1-4*mp**2/s)
     return 2*m.pi*a*a*b/s*(2-b*b-(1-b**4)*m.atanh(b)/b)
 def integral(fn,mass):
