@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "host": "pointwise_positive_Yukawa_exponential_cone",
+  "not": "real_EotWash_transfer_or_bound",
+  "cases": [
+    {
+      "ell_um": 40.0,
+      "xyz_um": [
+        52.0,
+        80.0,
+        108.0
+      ],
+      "f_values": [
+        0.35797067264432814,
+        0.15729920705028513,
+        0.056237803877275935
+      ],
+      "q": 0.9020100304827364,
+      "sharp_minimax_relative_error": 0.05151916548641618,
+      "attained_by_single_exp_mass_per_um": 0.033051104740018204,
+      "attained_by_single_exp_decay_length_um": 30.25617472898575,
+      "attained_by_single_exp_amplitude": 2.0992689673864406,
+      "relative_residuals": [
+        0.05151916548641622,
+        -0.05151916548641633,
+        0.05151916548641622
+      ],
+      "signed_negative_control_rates": [
+        0.0,
+        0.025,
+        0.05
+      ],
+      "signed_negative_control_weights": [
+        -0.04436992890986153,
+        1.503794367708334,
+        -0.10085920204617417
+      ],
+      "positive_mixture_trials": 101
+    },
+    {
+      "ell_um": 40.0,
+      "xyz_um": [
+        52.0,
+        100.0,
+        148.0
+      ],
+      "f_values": [
+        0.35797067264432814,
+        0.07709987174354177,
+        0.008888969943914289
+      ],
+      "q": 0.7316372137271827,
+      "sharp_minimax_relative_error": 0.1549763334637468,
+      "attained_by_single_exp_mass_per_um": 0.03849624882365333,
+      "attained_by_single_exp_decay_length_um": 25.976556951844305,
+      "attained_by_single_exp_amplitude": 3.0605069621932555,
+      "relative_residuals": [
+        0.15497633346374684,
+        -0.15497633346374684,
+        0.15497633346374728
+      ],
+      "signed_negative_control_rates": [
+        0.0,
+        0.025,
+        0.05
+      ],
+      "signed_negative_control_weights": [
+        -0.01817139819475362,
+        1.0660192081896964,
+        1.152737577491887
+      ],
+      "positive_mixture_trials": 101
+    },
+    {
+      "ell_um": 50.0,
+      "xyz_um": [
+        52.0,
+        80.0,
+        108.0
+      ],
+      "f_values": [
+        0.46210136952114556,
+        0.2578990352923395,
+        0.1266738416121104
+      ],
+      "q": 0.9381286103800405,
+      "sharp_minimax_relative_error": 0.03192326313568396,
+      "attained_by_single_exp_mass_per_um": 0.023110154907278448,
+      "attained_by_single_exp_decay_length_um": 43.271021073296836,
+      "attained_by_single_exp_amplitude": 1.5859464597856407,
+      "relative_residuals": [
+        0.03192326313568428,
+        -0.0319232631356835,
+        0.0319232631356845
+      ],
+      "signed_negative_control_rates": [
+        0.0,
+        0.02,
+        0.04
+      ],
+      "signed_negative_control_weights": [
+        -0.06460699588696135,
+        1.7402021820584008,
+        -0.7073888840823024
+      ],
+      "positive_mixture_trials": 101
+    },
+    {
+      "ell_um": 30.0,
+      "xyz_um": [
+        52.0,
+        80.0,
+        108.0
+      ],
+      "f_values": [
+        0.2203297530976841,
+        0.059346438791919885,
+        0.010909498364269285
+      ],
+      "q": 0.8261222160053809,
+      "sharp_minimax_relative_error": 0.0952169479515859,
+      "attained_by_single_exp_mass_per_um": 0.053669490759445035,
+      "attained_by_single_exp_decay_length_um": 18.632559874327015,
+      "attained_by_single_exp_amplitude": 3.9319520681288482,
+      "relative_residuals": [
+        0.09521694795158564,
+        -0.09521694795158653,
+        0.09521694795158586
+      ],
+      "signed_negative_control_rates": [
+        0.0,
+        0.03333333333333333,
+        0.06666666666666667
+      ],
+      "signed_negative_control_weights": [
+        -0.016000009728058748,
+        0.9203290737915888,
+        2.361003785627162
+      ],
+      "positive_mixture_trials": 101
+    }
+  ]
+}
