@@ -160,5 +160,78 @@
   "P4_feedback": false
  },
  "note_t_evap": "t_evap_s is the first SAVED point with M <= 1e-3 M0; magic() saves 10000 points geometric in a, so dln a ~ 0.0045 and the resolution of t_evap is ~0.9% (biased high); t(T0), t(T1), M(T0), M(T1) are interpolated in log T and are not affected at this level",
- "posthoc_tol1e-6": []
+ "posthoc_tol1e-4": [
+  {
+   "tau_eff_rel_dev": null,
+   "j": 62,
+   "log10beta": -30.0,
+   "t_T0_s": 214.854185,
+   "dt_vs_MT14_s": -0.1133173217929766,
+   "M_T0_g": 4.443609,
+   "t_evap_s": 10.169482,
+   "tau_formula_s": 10.139494783158577,
+   "rel_dev_native_t": null,
+   "Yc": 0.244793918223
+  },
+  {
+   "tau_eff_rel_dev": null,
+   "j": 62,
+   "log10beta": -19.2,
+   "t_T0_s": 215.000453,
+   "dt_vs_MT14_s": 0.03295067820701547,
+   "M_T0_g": 4.82315,
+   "t_evap_s": 10.170288,
+   "tau_formula_s": 10.139494783158577,
+   "rel_dev_native_t": null,
+   "Yc": 0.254326449452
+  },
+  {
+   "tau_eff_rel_dev": -6.851113287598132e-05,
+   "j": 98,
+   "log10beta": -30.0,
+   "t_T0_s": 214.964421,
+   "dt_vs_MT14_s": -0.003081321792990366,
+   "M_T0_g": 2394933000.0,
+   "t_evap_s": 218.588717,
+   "tau_formula_s": 218.24388436942561,
+   "rel_dev_native_t": -0.0014992868950246153,
+   "Yc": 0.244751504641
+  },
+  {
+   "tau_eff_rel_dev": -0.00017904722053507793,
+   "j": 98,
+   "log10beta": -19.2,
+   "t_T0_s": 214.962692,
+   "dt_vs_MT14_s": -0.004810321792973582,
+   "M_T0_g": 2389532000.0,
+   "t_evap_s": 218.550334,
+   "tau_formula_s": 218.24388436942561,
+   "rel_dev_native_t": -0.003926103053566517,
+   "Yc": 0.252805077767
+  },
+  {
+   "tau_eff_rel_dev": -1.0443514798619269e-05,
+   "j": 99,
+   "log10beta": -30.0,
+   "t_T0_s": 214.962734,
+   "dt_vs_MT14_s": -0.004768321792965935,
+   "M_T0_g": 4571182000.0,
+   "t_evap_s": 238.534392,
+   "tau_formula_s": 237.6664163901,
+   "rel_dev_native_t": -3.2961817988674176e-05,
+   "Yc": 0.244752116965
+  },
+  {
+   "tau_eff_rel_dev": -3.749966911159586e-05,
+   "j": 99,
+   "log10beta": -19.2,
+   "t_T0_s": 214.961387,
+   "dt_vs_MT14_s": -0.006115321792975692,
+   "M_T0_g": 4570882000.0,
+   "t_evap_s": 238.476678,
+   "tau_formula_s": 237.6664163901,
+   "rel_dev_native_t": -0.0001183619902886148,
+   "Yc": 0.251339897583
+  }
+ ]
 }

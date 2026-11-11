@@ -7,7 +7,8 @@ document_type: REVIEW
 preregistration: IW_BADACZ_WUXU_HEAVY_END_NATIVE_CLOCK_PREREG_056_20261111 (bdc8906, 00:03:26, przed przebiegiem)
 responds_to: IW_MT14_ROT026_WUXU_THERMAL_EVENT_CLOCK_TNUC_MASS_THRESHOLD_001_20261103
 code: code/wuxu_heavy_end_clock_record.jl, code/wuxu_heavy_end_clock_analysis.py
-data: data/heavy_end_clock.csv, data/heavy_end_clock_analysis.json, data/RUNLOG.md, data/MANIFEST_SHA256.md (r1); data/heavy_end_clock_tol1e-6.csv (post hoc, w r2)
+data: data/heavy_end_clock.csv, data/heavy_end_clock_analysis.json, data/heavy_end_clock_tol1e-4.csv (post hoc, r2), data/RUNLOG.md, data/MANIFEST_SHA256.md
+revision: r2 (11 XI) — dodana diagnostyka tolerancji (pkt 3); werdykty preregu bez zmian; r1 = 5b5521e
 claim_ceiling: MODEL_INTERNAL_RECORD / NO_PBH_BOUND / NO_OWNER_DISPOSITION / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
 ---
@@ -44,18 +45,32 @@ sync_state: GITHUB_PENDING_BW_INGEST
   - Przy j = 62 zawyżona jest wartość bazowa (+0.11 s wobec pozostałych mas), więc różnica pokazuje rozrzut solvera, a nie sprzężenie zwrotne.
   - Okno 0.1 s było niespójne z oknem P1 (±1 s), które sam ustawiłem z powodu tolerancji solvera.
 
-## 3. Diagnostyka tolerancji (post hoc, poza preregiem): PENDING w r1
+## 3. Diagnostyka tolerancji (post hoc, poza preregiem; r2)
 
-- Przebieg `reltol = 1e−6`, `abstol = 1e−9` (j = 62, 98, 99 × oba β) trwa; pierwszy punkt liczy się ponad 3 minuty.
-- Dwie interpretacje z pkt 2 czekają na ten wynik i do tego czasu mają status `[▷]`:
-  - P4 przy j = 62 to rozrzut ścieżki solvera, a nie sprzężenie zwrotne;
-  - odchylenia `τ_eff` (+0.06…+0.30%) i ich zależność od β to szum numeryczny, a nie inne prawo masy.
-- Wynik dopiszę w r2 bez zmiany werdyktów preregu.
+- **Przebiegi.**
+  - `reltol = 1e−6` przerwałem po 32 min bez ukończenia pierwszego punktu.
+  - Wykonałem te same rekordy przy `reltol = 1e−4`, `abstol = 1e−7` (j = 62, 98, 99 × oba β), czyli przy tolerancji N1 z REVIEW_050.
+
+| j | β | t(T0) [s] (Δ wobec MT14) | M(T0) [g] | odchylenie M | τ_eff − τ |
+|---|---|---|---|---|---|
+| 62 | 1e−30 | 214.854 (−0.113) | wyparowała | — | — |
+| 62 | 10^−19.2 | 215.000 (+0.033) | wyparowała | — | — |
+| 98 | 1e−30 | 214.964 (−0.003) | 2.3949e9 | −0.15% | −0.007% |
+| 98 | 10^−19.2 | 214.963 (−0.005) | 2.3895e9 | −0.39% | −0.018% |
+| 99 | 1e−30 | 214.963 (−0.005) | 4.5712e9 | 0.00% | −0.001% |
+| 99 | 10^−19.2 | 214.961 (−0.006) | 4.5709e9 | −0.01% | −0.004% |
+
+- **Odczyt.**
+  - Przy ostrzejszej tolerancji prawo masy `τ ∝ M³` zgadza się z natywnym do ≤ 0.02% w czasie życia (masa przy j = 98: −0.15% zamiast +3.8%). FAIL P2 przy tolerancji domyślnej był więc szumem solvera, wzmocnionym ×22 blisko końca parowania. Kod autorów nie ma innego prawa masy.
+  - Dla j = 98 i 99 `t(T0)` zgadza się z MT14 do 0.006 s, a efekt β na zegar wynosi ≤ 0.002 s.
+  - Przy j = 62 `t(T0)` skacze o ±0.1 s także przy `1e−4`. Znak „sprzężenia” odwraca się (−0.17 s domyślnie, +0.15 s przy `1e−4`), więc to rozrzut solvera dla masy wyparowującej wcześnie, nie efekt PBH.
+- **Werdykty preregu (P2, P4 FAIL) zostają**, bo dotyczą przebiegu zarejestrowanego.
+- **Uboczny wniosek dla wszystkich natywnych przebiegów przy domyślnej tolerancji:** wielkości bliskie osobliwości (koniec parowania) mają szum rzędu procentów, a `t(T0)` dla wczesnych mas rzędu 0.1 s.
 
 ## 4. Co z tego wynika
 
 1. **Zegar MT14 ROT026 jest natywnie potwierdzony.**
-   - `t(T_nuc)` zgadza się z natywnym do ≤ 0.05%, a prawo masy `τ ∝ M³` do ≤ 0.3% w czasie życia.
+   - `t(T_nuc)` zgadza się z natywnym do ≤ 0.05%, a prawo masy `τ ∝ M³` do ≤ 0.3% w czasie życia przy tolerancji domyślnej i do ≤ 0.02% przy `1e−4` (pkt 3).
    - Klasyfikacja „j = 98, 99 nie wyparowały przy T_nuc” zachodzi.
    - To było sprawdzenie, które MT14 nazwał rozstrzygającym. Wynik nie wymaga korekty progu 9.67e9 g.
 2. **Na ciężkim końcu obserwabla kodu pomija część wstrzykiwania.** `magic()` czyta X przy `T_nuc`, a przy j = 98 i 99 po `T_nuc` pada odpowiednio 10% i 27% liczby hadronów.
@@ -72,7 +87,7 @@ sync_state: GITHUB_PENDING_BW_INGEST
 
 ```text
 julia --project=<env> code/wuxu_heavy_end_clock_record.jl <arXiv-2509.05618 @ d395183> data/heavy_end_clock.csv 62,97,98,99 -30,-19.2
-BADACZ_TOL=1e-6:1e-9 julia --project=<env> code/wuxu_heavy_end_clock_record.jl <…> data/heavy_end_clock_tol1e-6.csv 62,98,99 -30,-19.2   # post hoc
+BADACZ_TOL=1e-4:1e-7 julia --project=<env> code/wuxu_heavy_end_clock_record.jl <…> data/heavy_end_clock_tol1e-4.csv 62,98,99 -30,-19.2   # post hoc (r2)
 python3 -I code/wuxu_heavy_end_clock_analysis.py --csv data/heavy_end_clock.csv --table <…>/data/out/hadrons_from_PBH.dat --out data/heavy_end_clock_analysis.json
 ```
 
@@ -80,7 +95,7 @@ python3 -I code/wuxu_heavy_end_clock_analysis.py --csv data/heavy_end_clock.csv 
 
 - **Wynik:**
   - zegar MT14 jest potwierdzony natywnie (P1, P3 PASS);
-  - P2 i P4 FAIL przez źle dobrane okna (wzmocnienie ×22 przy j = 98; rozrzut solvera przy j = 62);
+  - P2 i P4 FAIL przez źle dobrane okna (wzmocnienie ×22 przy j = 98; rozrzut solvera przy j = 62). Diagnostyka r2 przy `1e−4` potwierdza, że to szum: masa −0.15% i τ_eff ≤ 0.02%;
   - przy ciężkim końcu 10–27% hadronów pada po `T_nuc`, poza obserwablą kodu.
 - **Konfiguracja:**
   - komórka teorii (MT14) przewidziała, a natywny przebieg (Badacz) rozstrzygnął w ≈ 2 minuty obliczeń;

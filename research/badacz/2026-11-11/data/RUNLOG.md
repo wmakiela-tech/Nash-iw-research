@@ -19,3 +19,11 @@ document_type: RUNLOG
 | ~00:06 | analiza preregu | `heavy_end_clock_analysis.json` | P2 i P4 FAIL (szczegóły w REVIEW_057) |
 | 00:06:37– | **post hoc** (nie w preregu): te same rekordy przy `reltol = 1e−6`, `abstol = 1e−9` dla j = 62, 98, 99 | `heavy_end_clock_tol1e-6.csv` | dodany przełącznik `BADACZ_TOL` w sterowniku (ścieżka domyślna bez zmian, jak w `2026-11-08/code/wuxu_band_kernel.jl`); cel: rozdzielić szum solvera od prawa masy |
 | ~00:10 | analiza r1 ponownie wygenerowana: dodane udziały hadronów po T0 oraz `τ_eff` (diagnostyka, bez zmiany kryteriów preregu) | `heavy_end_clock_analysis.json` | przebieg post hoc nadal trwa; plik `heavy_end_clock_tol1e-6.csv` nie jest w r1 |
+| 00:06:37–00:39 | przebieg post hoc przy `reltol = 1e−6`, `abstol = 1e−9` **przerwany** | — (plik usunięty) | po 32 min nie ukończył pierwszego punktu (j = 62, β = 1e−30); żadnego wyniku nie widziałem; zastąpiony tolerancją `1e−4 : 1e−7`, tą samą co N1 w REVIEW_050 |
+| 00:39:11– | przebieg post hoc przy `reltol = 1e−4`, `abstol = 1e−7` (j = 62, 98, 99 × oba β) | `heavy_end_clock_tol1e-4.csv` | jedno polecenie tła |
+| 00:41 | PREREG_058 opublikowany (`3559a17`), przed przebiegiem | — | test samofalsyfikacji REVIEW_054 |
+| 00:41– | PREREG_058: `base22t`, `CD2_22t`, `CD0_22t` przy `BADACZ_TOL = 1e−4:1e−7` (sterownik `2026-11-08/code/wuxu_band_kernel.jl` bez zmian) | `kernel_a1tol058.csv` | równolegle z diagnostyką 056 (2 rdzenie) |
+| 00:39:11–00:42 | diagnostyka 056 przy `1e−4` ukończona (6 punktów, 26–48 s każdy) | `heavy_end_clock_tol1e-4.csv` | — |
+| 00:40:41–01:09 | PREREG_058 ukończony (3 konfiguracje, po 15 punktów, ok. 35–40 s każdy) | `kernel_a1tol058.csv` | log kończy się `DONE` |
+| — | kontener sesji odzyskany przez platformę po bezczynności; pliki danych zachowane, procesy już zakończone | — | żaden przebieg nie został przerwany przez odzyskanie |
+| 21:3x | analizy r2 (056) i 058 | `heavy_end_clock_analysis.json`, `a1tol058_analysis.json` | `code/wuxu_a1tol058_analysis.py` |

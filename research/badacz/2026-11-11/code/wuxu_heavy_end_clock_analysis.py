@@ -51,15 +51,15 @@ for d in res["rows"]:
         d["dt_T0_feedback_s"] = d["t_T0_s"] - base[d["j"]]; P4 &= abs(d["dt_T0_feedback_s"]) <= 0.1
 res["verdicts"] = {"P1_clock": P1, "P2_mass_law": P2, "P3_classification": P3, "P4_feedback": P4}
 import os
-tolf = a.csv.replace(".csv", "_tol1e-6.csv")
-if os.path.exists(tolf):          # POST HOC diagnostic (not in PREREG_056): same records at reltol 1e-6, abstol 1e-9
-    tr = list(csv.DictReader(l for l in open(tolf) if not l.startswith("#"))); res["posthoc_tol1e-6"] = []
+tolf = a.csv.replace(".csv", "_tol1e-4.csv")
+if os.path.exists(tolf):          # POST HOC diagnostic (not in PREREG_056): same records at reltol 1e-4, abstol 1e-7 (1e-6 run abandoned: >32 min for one point)
+    tr = list(csv.DictReader(l for l in open(tolf) if not l.startswith("#"))); res["posthoc_tol1e-4"] = []
     for r in tr:
         j, m0, lb = int(r["j"]), float(r["m0_g"]), float(r["log10beta"]); tT0 = float(r["t_T0_s"]); MT0 = float(r["M_T0_g"])
         tau = TAU1*(m0/1e9)**3; f_nat = 1 - tT0/tau; pred = m0*f_nat**(1/3) if f_nat > 0 else 0.0
         e = {"tau_eff_rel_dev": ((tT0/(1 - (MT0/m0)**3))/tau - 1) if (pred > 0 and MT0 > 1e-3*m0) else None, "j": j, "log10beta": lb, "t_T0_s": tT0, "dt_vs_MT14_s": tT0 - T_MT14, "M_T0_g": MT0, "t_evap_s": float(r["t_evap_s"]), "tau_formula_s": tau,
              "rel_dev_native_t": ((MT0 - pred)/pred) if (pred > 0 and MT0 > 1e-3*m0) else None, "Yc": float(r["Yc"])}
-        res["posthoc_tol1e-6"].append(e)
+        res["posthoc_tol1e-4"].append(e)
 json.dump(res, open(a.out, "w"), indent=1, allow_nan=False, default=str)
 print(json.dumps(res["verdicts"]))
 for d in res["rows"]:
@@ -67,6 +67,6 @@ for d in res["rows"]:
         d["j"], d["log10beta"], d["t_T0_s"], d["t_T1_s"], d["M_T0_g"], d["M_T0_pred_native_t"], d["M_T0_pred_MT14"],
         ("%+.4f" % d["rel_dev_native_t"]) if "rel_dev_native_t" in d else "-", d["evaporated_at_T0"], d["t_evap_s"], d["tau_formula_s"],
         d["hadron_fraction_after_T1"], ("%+.4f" % d["dt_T0_feedback_s"]) if "dt_T0_feedback_s" in d else "-"), "fracN_after_T0=%.4f" % d["hadron_fraction_after_T0"], ("tau_eff %+.5f amp %.2f" % (d["tau_eff_rel_dev"], d["amplification_dM_over_dtau"])) if "tau_eff_rel_dev" in d else "")
-for e in res.get("posthoc_tol1e-6", []):
-    print("TOL1e-6 j%d lb%+.1f t_T0=%.4f (dMT14 %+.4f) M_T0=%.4e dev %s tau_eff %s t_ev=%.2f Yc=%.6f" % (e["j"], e["log10beta"], e["t_T0_s"], e["dt_vs_MT14_s"], e["M_T0_g"],
+for e in res.get("posthoc_tol1e-4", []):
+    print("TOL1e-4 j%d lb%+.1f t_T0=%.4f (dMT14 %+.4f) M_T0=%.4e dev %s tau_eff %s t_ev=%.2f Yc=%.6f" % (e["j"], e["log10beta"], e["t_T0_s"], e["dt_vs_MT14_s"], e["M_T0_g"],
           ("%+.4f" % e["rel_dev_native_t"]) if e["rel_dev_native_t"] is not None else "-", ("%+.5f" % e["tau_eff_rel_dev"]) if e["tau_eff_rel_dev"] is not None else "-", e["t_evap_s"], e["Yc"]))
