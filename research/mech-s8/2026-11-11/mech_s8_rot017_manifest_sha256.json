@@ -1,0 +1,48 @@
+{
+  "artifact_id": "IW_MECH_S8_ROT017_WUXU_RATE_TABLE_LOO_FLAT_JET_E4_SOURCE_GATE_001_20261111",
+  "claim_ceiling": "SOURCE_TABLE_SELF_CONSISTENCY_AND_CINFINITY_FLAT_MULTIPLIER_ONLY/NO_PHYSICAL_BBN_BOUND/NO_CANON/NO_EXEC_SIGN",
+  "date": "2026-11-11",
+  "files": {
+    "IW_MECH_S8_ROT017_WUXU_RATE_TABLE_LOO_FLAT_JET_E4_SOURCE_GATE_001_20261111.md": {
+      "bytes": 10337,
+      "sha256": "6a587a8c9fce9e8dd28e16be757c73ee0490e94ce828f3a0ac963b752a942bbe"
+    },
+    "hadrons_from_PBH_FIRST12_PINNED_AUTHOR_EXCERPT.dat": {
+      "bytes": 1529,
+      "sha256": "0a81af204bbfe2ced214b3edaaf31bcd52354d4b1934adb67571e726d9d26ac3"
+    },
+    "mech_s8_rot017_author_table_edge_loo.py": {
+      "bytes": 8338,
+      "sha256": "96635ae236503c98c178e8c605dda0c35acfca08981e2b94473504bcaec36864"
+    },
+    "mech_s8_rot017_cross_method_results.json": {
+      "bytes": 10813,
+      "sha256": "57caa74f1b7c125ce63c1b11fe4fdfe54451721f051301e36ffb73f88a2fea77"
+    },
+    "mech_s8_rot017_first12_offline_result.json": {
+      "bytes": 8292,
+      "sha256": "f3f05b7dc5315f939cd819dce97958ac887be86f0a4ef459003f8c3d22a15d96"
+    },
+    "mech_s8_rot017_full100_wolfram_source_check.wl": {
+      "bytes": 2473,
+      "sha256": "077b038c49a967e2f78d575ea3267a68ca744fb5c94589c01e9e20a81d82f0bf"
+    },
+    "mech_s8_rot017_public_reproducer_compact.py": {
+      "bytes": 2244,
+      "sha256": "2a9cad2f8d7c888a2a3b815e2eb38e31fc7df9715b5b1525fea7827cae4bbb0c"
+    }
+  },
+  "original_first12_exact_bytes_sha256": "0a81af204bbfe2ced214b3edaaf31bcd52354d4b1934adb67571e726d9d26ac3",
+  "original_full100_raw_sha256": "25411c26cb24b08058be6dffe01e3c6cc668c91de963438a91c4aac0a38199df",
+  "original_source_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+  "original_source_git_blob": "06d0883a27b108692720422294ba2baacd381a64",
+  "owner": "IW_MECH_LINEAGE_001_SUCCESSOR_07 / Mech-S8",
+  "source_execution_evidence": {
+    "BlackHawk_runtime": "NOT_RUN; official_v23_archive_source_reconstruction_still_OPEN",
+    "Julia_10D_BBN": "NOT_RUN",
+    "full100_LOO": "WOLFRAM_LANGUAGE_ACTUAL_PINNED_SOURCE_SHA256_VERIFIED_100_ROWS_5x98_LOO",
+    "python_12rows": "OFFLINE_VERIFIED_EXACT_FIRST12_BYTES",
+    "python_full100": "NOT_RUN_LOCALLY; ONLINE_OR_INPUT_OPTION_TO_REPRODUCE",
+    "second_full100_LOO": "WOLFRAM_GEOMETRIC_MIDPOINT_INDEPENDENT_FORMULA_PASS"
+  }
+}
