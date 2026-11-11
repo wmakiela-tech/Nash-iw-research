@@ -1,0 +1,118 @@
+{
+  "$schema": "../../../schemas/research-reproduction-manifest.schema.json",
+  "manifest_id": "IW_PRF13_ROT003_REPRODUCIBILITY_MANIFEST_001_20261111",
+  "artifact_id": "IW_PRF13_ROT003_MINIMAL_PAIRED_REFERENCE_AND_FOUR_CORNER_B_GATE_001_20261111",
+  "title": "PRF13 ROT003: paired-reference scalar identifiability, four-corner source B gate",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_12 / PRF13",
+  "created_at": "2026-11-11T13:23:44Z",
+  "as_of": "PRF12 R31/R34 and PRF13 ROT001/ROT002 original public sources read 2026-11-11; no actual paired-reference measurements",
+  "task_id": "PRF13_ROT003_20261111",
+  "exposure": "PUBLIC",
+  "status": "DRAFT",
+  "claim": {
+    "question": "Does one source-independent paired reference identify latch-mixing theta, and can source-B score be bounded exactly over detector-response intervals?",
+    "object": "R31 source B actual ideal two-shot probability and fixed 3-axis score; conditional classical independent/latch mixture detector",
+    "statement": "Prepared ideal (--) reference identifies scalar theta when its restricted model and 0<p1<1 hold; B score is convex in common per-shot p0,p1, making four rectangle corners sufficient; exact-binomial fixed-design resource examples.",
+    "claim_ceiling": "NO_CANON / NO_EXEC_SIGN / NO_NOVELTY / NO_HARDWARE / NO_ARBITRARY_COPULA_IDENTIFIABILITY / NO_3Q_LOCC_CLOSURE / REFEREE_PENDING"
+  },
+  "code": {
+    "repository": "https://github.com/wmakiela-tech/Nash-iw-research",
+    "commit": "ac75f6efcb0a640ae35d462a380ad2e1957e2786",
+    "entrypoint": "research/prf13/2026-11-11/IW_PRF13_ROT003_JOINT_CALIBRATION_CORNER_GATE_REPRO_001_20261111.py",
+    "license": "NOT_APPLICABLE"
+  },
+  "environment": {
+    "os": "Linux, tested container",
+    "architecture": "x86_64",
+    "runtime": "Python 3.13.5, SciPy 1.17.0, stdlib decimal",
+    "dependency_lock": "NOT_AVAILABLE: no dependency lock file; tested version explicitly stated",
+    "hardware": "NOT_MATERIAL"
+  },
+  "execution": {
+    "clean_start": "Python3 with SciPy installed. No external input files; 30-digit quantum m_B source-B fixture transcribed from ROT002.",
+    "commands": [
+      "python research/prf13/2026-11-11/IW_PRF13_ROT003_JOINT_CALIBRATION_CORNER_GATE_REPRO_001_20261111.py",
+      "python -m py_compile research/prf13/2026-11-11/IW_PRF13_ROT003_JOINT_CALIBRATION_CORNER_GATE_REPRO_001_20261111.py"
+    ],
+    "parameters": {
+      "p0": "0.99",
+      "p1": "247/4600",
+      "B_ceiling": "0.2828",
+      "binomial_alpha": "0.005",
+      "reference_pairs": [
+        137,
+        971,
+        34898,
+        3053998
+      ],
+      "rectangle_halfwidth": [
+        "0",
+        "0.0001",
+        "0.001",
+        "0.002",
+        "0.005",
+        "0.009398133420642572"
+      ]
+    },
+    "seeds": [],
+    "tolerances": {
+      "parent_fixture": "1e-40 Decimal relative to truncated m_B fixture",
+      "tail": "SciPy float64 binomial CDF; no directed interval numerical certification"
+    },
+    "stop_rule": "Fixed predeclared numerical checks and binomial sample sizes, no experimental or optional stop performed",
+    "expected_runtime": "seconds on modern x86_64 CPU"
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "STDOUT (author local rot003_stdout_001_20261111.log)",
+      "sha256": "848ef0b93018dfc64e001140c6a736f52ad22c2fa5f273f3f8444feecb5a394a",
+      "role": "LOG",
+      "derived_from": [
+        "research/prf13/2026-11-11/IW_PRF13_ROT003_JOINT_CALIBRATION_CORNER_GATE_REPRO_001_20261111.py"
+      ],
+      "expected": "Includes all convex four-corner fixture numbers, exact-binomial size/power and PASS ROT003"
+    }
+  ],
+  "verification": {
+    "tests": [
+      "python research/prf13/2026-11-11/IW_PRF13_ROT003_JOINT_CALIBRATION_CORNER_GATE_REPRO_001_20261111.py",
+      "python -m py_compile research/prf13/2026-11-11/IW_PRF13_ROT003_JOINT_CALIBRATION_CORNER_GATE_REPRO_001_20261111.py",
+      "git blob SHA1 readback of report and code, byte-identity after only newline normalization: PASS"
+    ],
+    "controls": [
+      "Grid interior convexity diagnostic (proof in report)",
+      "Predictable one-step null e-factor expectation <=1 at null boundary and above",
+      "Out-of-family indistinguishable singleton and prepared-minus references proved analytically"
+    ],
+    "warnings": [
+      "No real source-independent prepared-minus reference has been demonstrated",
+      "Quantum source-B m_j is taken from ROT002, not independently solved in this script",
+      "Original global-Xi source A certificate inherited conditionally",
+      "Model restricts identical p0,p1 within each science pair or needs 2*S*eps_pair correction",
+      "Source reference confidence and exogenous theta drift are not supplied",
+      "Fixed-n examples are not optional-stopping-valid; refereeing outstanding"
+    ],
+    "known_failures": [
+      "Singleton references alone do not identify theta",
+      "One paired-minus reference does not identify arbitrary 4x4 correlated Q",
+      "No unconditional physical validity or novelty"
+    ],
+    "reproduction_status": "AUTHOR_REPRODUCED",
+    "independent_reproducer": "NOT_PERFORMED",
+    "platform_deviations": []
+  },
+  "provenance": {
+    "primary_location": "https://github.com/wmakiela-tech/Nash-iw-research/blob/fc11985fc92680468caef333c67957916d258c64/research/prf13/2026-11-11/IW_PRF13_ROT003_MINIMAL_PAIRED_REFERENCE_AND_FOUR_CORNER_B_GATE_001_20261111.md",
+    "content_sha256": "dc1ba9b52d03040d494e1eb285c6585b55f6e012cc3bbbe4103301139d7f30f4",
+    "narrative_artifact": "IW_PRF13_ROT003_MINIMAL_PAIRED_REFERENCE_AND_FOUR_CORNER_B_GATE_001_20261111",
+    "derived_from": [
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/f959f57db8059b4bd42866e4784caf214a05c69c/research/prf12/2026-11-10/IW_PRF12_R34_VARIANCE_ADAPTIVE_NONSTATIONARY_REFERENCE_ANYTIME_CERTIFICATE_001_20261110.md",
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/05b438578fcc00ec89877071d3ed255a2296ddde/research/prf13/2026-11-11/IW_PRF13_ROT002_SOURCE_B_SHARED_LATCH_SHARP_MIXTURE_THRESHOLD_001_20261111.md"
+    ],
+    "supersedes": [],
+    "stale_if": "Source-B physical model, detector classical latch family, paired ideal reference preparation, or exogenous time-transfer contract is invalid",
+    "readback_state": "VERIFIED",
+    "delivery_state": "NOT_ROUTED"
+  }
+}
