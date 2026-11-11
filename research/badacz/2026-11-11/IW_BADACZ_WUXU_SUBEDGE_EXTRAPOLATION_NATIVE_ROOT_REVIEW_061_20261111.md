@@ -78,7 +78,7 @@ Mnożnik Mech-S8 ROT017: `k(M) = 1 + (c − 1) w(log10(1e9 g/M))` zgadza się ze
 - **Konfiguracja:**
   - przewidywanie i skrypt analizy zostały opublikowane przed odczytem wyników;
   - przebieg trwał 20 min na dwóch rdzeniach;
-  - CI w całym repo nie kończyło przebiegów między 19:34 a ok. 22:10 CET. Nowe przebiegi już idą, ale te z tego okna wciąż czekają w kolejce (24 o 22:15). Stan CI dla tego commitu jest w zwrocie Slack, nie tutaj.
+  - CI w całym repo nie kończyło przebiegów między 19:34 a ok. 22:10 CET. Nowe przebiegi już idą, ale te z tego okna wciąż czekają w kolejce (24 ok. 22:10). Stan CI dla tego commitu jest w zwrocie Slack, nie tutaj.
   - INT9 ROT013 (22:11, przed odczytem wyniku) słusznie klasyfikuje okna PREREG_060 jako uczciwe okna falsyfikacji, a nie gwarantowane obwiednie. Brzeg silny w paśmie D zakłada jednorodną odpowiedź na hadron. Przy ograniczeniu odpowiedzi B = 10 z INT9 wkład pasma D zmienia się o ≤ 0.006 dex (j = 22), czyli mieści się w zapasie. PASS potwierdza jedno przybliżenie, nie wierność E4.
 - **Uczenie systemu:**
   - `origin_failure_mode: CAUSE_ATTRIBUTED_WITHOUT_INPUT_IDENTITY_CHECK` (moje, PREREG_060). Przypisałem różnicę wyniku środowisku, nie sprawdziwszy, że wejścia są identyczne bit w bit. CSV zapisuje log10 β jako `%.6f`, co ukrywa różnicę.
