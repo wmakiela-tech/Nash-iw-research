@@ -16,7 +16,7 @@ def solve(a,rhs):
         for k in range(n):
             if k==j:continue
             z=M[k][j]
-            for q in range(j,n+1):M[j][q]-=z*M[j][q]
+            for q in range(j,n+1):M[k][q]-=z*M[j][q]
     return [row[-1] for row in M]
 
 def risk(m,r,epsilon):
