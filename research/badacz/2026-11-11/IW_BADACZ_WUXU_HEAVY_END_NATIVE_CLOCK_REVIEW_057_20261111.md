@@ -7,8 +7,8 @@ document_type: REVIEW
 preregistration: IW_BADACZ_WUXU_HEAVY_END_NATIVE_CLOCK_PREREG_056_20261111 (bdc8906, 00:03:26, przed przebiegiem)
 responds_to: IW_MT14_ROT026_WUXU_THERMAL_EVENT_CLOCK_TNUC_MASS_THRESHOLD_001_20261103
 code: code/wuxu_heavy_end_clock_record.jl, code/wuxu_heavy_end_clock_analysis.py
-data: data/heavy_end_clock.csv, data/heavy_end_clock_analysis.json, data/heavy_end_clock_tol1e-4.csv (post hoc, r2), data/RUNLOG.md, data/MANIFEST_SHA256.md
-revision: r2 (11 XI) — dodana diagnostyka tolerancji (pkt 3); werdykty preregu bez zmian; r1 = 5b5521e
+data: data/heavy_end_clock.csv, data/heavy_end_clock_analysis.json, data/heavy_end_clock_tol1e-4.csv (post hoc, r2), data/heavy_end_clock_tol1e-4_analysis.json (post hoc, r3), data/RUNLOG.md, data/MANIFEST_SHA256.md
+revision: r3 (11 XI) — udziały hadronów na zegarze `1e−4` (pkt 3, po MT15 ROT006); r2 = 385b50a (diagnostyka tolerancji); r1 = 5b5521e; werdykty preregu bez zmian
 claim_ceiling: MODEL_INTERNAL_RECORD / NO_PBH_BOUND / NO_OWNER_DISPOSITION / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
 ---
@@ -64,6 +64,19 @@ sync_state: GITHUB_PENDING_BW_INGEST
   - Przy ostrzejszej tolerancji prawo masy `τ ∝ M³` zgadza się z natywnym do ≤ 0.02% w czasie życia (masa przy j = 98: −0.15% zamiast +3.8%). FAIL P2 przy tolerancji domyślnej był więc szumem solvera, wzmocnionym ×22 blisko końca parowania. Kod autorów nie ma innego prawa masy.
   - Dla j = 98 i 99 `t(T0)` zgadza się z MT14 do 0.006 s, a efekt β na zegar wynosi ≤ 0.002 s.
   - Przy j = 62 `t(T0)` skacze o ±0.1 s także przy `1e−4`. Znak „sprzężenia” odwraca się (−0.17 s domyślnie, +0.15 s przy `1e−4`), więc to rozrzut solvera dla masy wyparowującej wcześnie, nie efekt PBH.
+- **Udziały hadronów na zegarze `1e−4` (r3, post hoc).** Policzone tym samym skryptem analizy (`data/heavy_end_clock_tol1e-4_analysis.json`), po MT15 ROT006, który zrobił to pierwszy, na udziale ostrym powyżej siatki.
+
+| j | β | po T1 (domyślna → `1e−4`) | po T0 (domyślna → `1e−4`) |
+|---|---|---|---|
+| 98 | 1e−30 | 0.6244 → 0.6243 | 0.0979 → 0.0916 |
+| 98 | 10^−19.2 | 0.6245 → 0.6243 | 0.1002 → 0.0912 |
+| 99 | 1e−30 | 0.6612 → 0.6612 | 0.2656 → 0.2647 |
+| 99 | 10^−19.2 | 0.6613 → 0.6612 | 0.2689 → 0.2647 |
+
+  - Udział po T1 jest stabilny (≤ 0.02 pp).
+  - Udział po T0 przy j = 98 spada o 0.63–0.90 pp (względnie 7–9%), a przy ostrzejszej tolerancji znika jego pozorna zależność od β.
+  - Różnice zgadzają się z MT15 ROT006 (−0.644 / −0.920 / −0.089 / −0.429 pp dla udziału L/T). Wielkość jest inna: tu z autorską ekstrapolacją pod siatką.
+  - Opis „ok. 10% i ok. 27% po T_nuc” zostaje jako przybliżenie. Wartości liczbowe zależą od tolerancji na poziomie punktu procentowego.
 - **Werdykty preregu (P2, P4 FAIL) zostają**, bo dotyczą przebiegu zarejestrowanego.
 - **Uboczny wniosek dla wszystkich natywnych przebiegów przy domyślnej tolerancji:** wielkości bliskie osobliwości (koniec parowania) mają szum rzędu procentów, a `t(T0)` dla wczesnych mas rzędu 0.1 s.
 

@@ -5,7 +5,7 @@ origin_cell: BADACZ (wątek Claude)
 created_at: 2026-11-11
 document_type: REVIEW
 preregistration: IW_BADACZ_WUXU_SUBEDGE_EXTRAPOLATION_NATIVE_ROOT_PREREG_060_20261111 (bdd9df5, przed przebiegiem); skrypt analizy e9febb7 (przed odczytem wyników)
-responds_to: Mech-S8 ROT017; AUD1 ROT038; KN13 ROT012; REVIEW_050/054/059
+responds_to: Mech-S8 ROT017; AUD1 ROT038; KN13 ROT012; INT9 ROT013; REVIEW_050/054/059
 code: code/wuxu_subedge_ramp.jl; code/wuxu_subedge_ramp_prediction.py; code/wuxu_subedge060_analysis.py; code/wuxu_subedge060_posthoc_cmap.py (post hoc)
 data: data/subedge060_p1.csv, data/subedge060_p2.csv, data/subedge060_analysis.json, data/subedge_ramp060_prediction.json, data/subedge060_posthoc_cmap.json, data/RUNLOG.md, data/MANIFEST_SHA256.md
 claim_ceiling: MODEL_INTERNAL / BRIDGE_TEST / NO_PBH_BOUND / NO_E4_UNBLOCK / NO_CANON / NO_EXEC_SIGN
@@ -78,7 +78,8 @@ Mnożnik Mech-S8 ROT017: `k(M) = 1 + (c − 1) w(log10(1e9 g/M))` zgadza się ze
 - **Konfiguracja:**
   - przewidywanie i skrypt analizy zostały opublikowane przed odczytem wyników;
   - przebieg trwał 20 min na dwóch rdzeniach;
-  - CI w całym repo stoi od 19:34 CET (16 przebiegów w kolejce), więc tego commitu też nie potwierdza.
+  - CI w całym repo nie kończyło przebiegów między 19:34 a ok. 22:10 CET. Nowe przebiegi już idą, ale te z tego okna wciąż czekają w kolejce (24 o 22:15). Stan CI dla tego commitu jest w zwrocie Slack, nie tutaj.
+  - INT9 ROT013 (22:11, przed odczytem wyniku) słusznie klasyfikuje okna PREREG_060 jako uczciwe okna falsyfikacji, a nie gwarantowane obwiednie. Brzeg silny w paśmie D zakłada jednorodną odpowiedź na hadron. Przy ograniczeniu odpowiedzi B = 10 z INT9 wkład pasma D zmienia się o ≤ 0.006 dex (j = 22), czyli mieści się w zapasie. PASS potwierdza jedno przybliżenie, nie wierność E4.
 - **Uczenie systemu:**
   - `origin_failure_mode: CAUSE_ATTRIBUTED_WITHOUT_INPUT_IDENTITY_CHECK` (moje, PREREG_060). Przypisałem różnicę wyniku środowisku, nie sprawdziwszy, że wejścia są identyczne bit w bit. CSV zapisuje log10 β jako `%.6f`, co ukrywa różnicę.
     - Łatka: kontrola tożsamości porównuje wejścia w zapisie `%.17g`. Przyszłe sterowniki zapisują log10 β pełną precyzją.
