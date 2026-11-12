@@ -1,0 +1,26 @@
+# ROT022 phase-A *pilot-only* source-native input (j is 0-based).
+# SOURCE: author 100 masses 6e8..1e10 g @ d395183; root centers are from Badacz native REVIEW053.
+# These are support/clock probes, NOT guaranteed root bracketing and NOT a 100x100 scan.
+# A: direct-below-table entry; B: left contour; C: pre-end; H: heavy end.
+# j    log10beta
+0 -20.000000
+0 -19.000000
+0 -18.000000
+22 -17.350000
+22 -17.150000
+22 -16.950000
+28 -18.550000
+28 -18.330000
+28 -18.100000
+34 -19.050000
+34 -18.830000
+34 -18.600000
+62 -19.600000
+62 -19.370000
+62 -19.150000
+98 -19.500000
+98 -19.250000
+98 -19.000000
+99 -19.400000
+99 -19.100000
+99 -18.800000
