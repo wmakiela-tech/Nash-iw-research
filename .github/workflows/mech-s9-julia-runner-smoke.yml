@@ -1,0 +1,30 @@
+name: Mech-S9 Julia 1.12.3 runner capability smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-julia-runner-smoke.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  julia-native-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Julia 1.12.3
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - name: Verify real native Julia execution and frozen source location
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --version
+          julia -e 'using SHA; @assert VERSION >= v"1.12.3"; @assert 1+1 == 2; println("MECH_S9_NATIVE_JULIA_RUNNER_PASS version=", VERSION)'
+          test -f research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl
+          test -f research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl
+          echo "MECH_S9_PREEXISTING_SOURCE_LOCATORS_PASS"
