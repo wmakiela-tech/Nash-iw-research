@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../schemas/research-reproduction-manifest.schema.json",
+  "manifest_id": "IW_PRF13_ROT008_REPRODUCIBILITY_MANIFEST_001_20261112",
+  "artifact_id": "IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112",
+  "title": "ROT008 bounded local-instrument event depth explicit LOCC gap for 3Q Cauchy-Lévy endpoint",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_12 / PRF13",
+  "created_at": "2026-11-12T14:16:00+01:00",
+  "as_of": "R04, R07, R08, R09 original public GitHub research, 2026-11-12; external Chitambar et al 2014, Kretschmann et al 2008, Cohen 2022 reviewed 2026-11-12",
+  "task_id": "PRF13_ROT008_20261112",
+  "exposure": "PUBLIC",
+  "status": "DRAFT",
+  "claim": {
+    "question": "Can one prove a source-native explicit positive Helstrom gap for every fixed upper bound on the number of local LOCC instrument events per branch, despite arbitrary adaptive revisiting?",
+    "object": "Original R04 ideal equal-time 3-qubit static-Cauchy versus independent Cauchy-Lévy endpoint D(q), with no preshared entanglement or quantum communication",
+    "statement": "Exact 2-event optimum V2=b/4; every fixed finite R-event local instrument protocol obeys TV<=b/2-d_R, where d_2=b/4 and d_R is a positive trace-norm/information-loss recursion. No bound uniform in R.",
+    "claim_ceiling": "NO_FULL_LOCC_CLOSURE_GAP / NO_ASYMPTOTIC_UNBOUNDED_LOCC / NO_NOVELTY / NO_DEVICE / NO_FINITE_SWAP / PARENT_ROT007_REFEREE_PENDING / NO_CANON / NO_EXEC_SIGN"
+  },
+  "code": {
+    "repository": "https://github.com/wmakiela-tech/Nash-iw-research",
+    "commit": "aec37ac33b4bae938839c3e28a9b3d603b80556e",
+    "entrypoint": "research/prf13/2026-11-12/IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py",
+    "license": "NOT_APPLICABLE"
+  },
+  "environment": {
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "architecture": "x86_64",
+    "runtime": "Python 3.13.5; sympy 1.14.0; numpy 2.3.5; mpmath 1.3.0; jsonschema locally for manifest schema check",
+    "dependency_lock": "NOT_AVAILABLE_WITH_REASON: exact author runtime versions documented, no environment lock used",
+    "hardware": "NOT_MATERIAL"
+  },
+  "execution": {
+    "clean_start": "Python3, NumPy, SymPy, mpmath installed; no external data or physical device. 8D source rebuilt from exact R04 characteristic function.",
+    "commands": [
+      "python IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py | tee ROT008_author_stdout_20261112.log",
+      "python -m py_compile IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py",
+      "python -m json.tool IW_PRF13_ROT008_RECURSION_DIAGNOSTICS_001_20261112.json > /dev/null"
+    ],
+    "parameters": {
+      "q": "1/3",
+      "counted_resource": "number of local quantum instrument events per root-to-leaf path, not broadcasts",
+      "max_R_table": 10,
+      "precision_dps": 120,
+      "random_valid_POVM_cases": 3000
+    },
+    "seeds": [
+      2026111208
+    ],
+    "tolerances": {
+      "exact_sympy_source": "symbolic equalities exact",
+      "random_matrix": "2e-12 for trace norm loss comparisons; independent diagnostics only",
+      "high_precision": "120 decimal digits mpmath, no formal directed interval"
+    },
+    "stop_rule": "All symbolic checks, 3000 fixed-seed randomized valid 2m-label POVM controls, R=2..10 high-precision recursion",
+    "expected_runtime": "seconds to minute on CPU"
+  },
+  "inputs": [
+    {
+      "path": "research/prf13/2026-11-12/IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py",
+      "sha256": "93dc7bf1c41773b8b28c5c8b619c6d28fa00a3680494276ccdb3cb027a7a949a",
+      "source": "Author code reproducing source-derived algebra",
+      "schema": "Python 3 UTF-8",
+      "units_or_conventions": "q=gamma*T/3, x=e^-q, b=1-x², TV=||D||1/2; 3-qubit computational order 000..111",
+      "exposure": "PUBLIC"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/prf13/2026-11-12/IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112.md",
+      "sha256": "c5408b19005704dbf566fc942b450174b593c1e51d0d0d6d62a93a911c2a01e8",
+      "role": "OTHER",
+      "derived_from": [
+        "research/prf13/2026-11-12/IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py"
+      ],
+      "expected": "Full conditional mathematical proof, sharp scope and no asymptotic overclaim"
+    },
+    {
+      "path": "IW_PRF13_ROT008_RECURSION_DIAGNOSTICS_001_20261112.json",
+      "sha256": "76c06b9f12fda444c6d925bfda394dbfecc574dd2f34be1559d098c328a884ac",
+      "role": "DERIVED",
+      "derived_from": [
+        "research/prf13/2026-11-12/IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py"
+      ],
+      "expected": "120-digit source fixtures, R2..10 explicit positive gap and fixed random test metadata"
+    },
+    {
+      "path": "ROT008_author_stdout_20261112.log",
+      "sha256": "0120f4f9ea211d411068f0b2b55eaa51d14b9106f1f46accbf5fa5bee0a6da01",
+      "role": "LOG",
+      "derived_from": [
+        "research/prf13/2026-11-12/IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py"
+      ],
+      "expected": "EXACT, 3000 random, inherited ROT007 and high precision recurrence PASS lines"
+    }
+  ],
+  "verification": {
+    "tests": [
+      "python IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py",
+      "python -m py_compile IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py",
+      "SymPy exact 8x8-to-4x4 source partial trace and X parity V2",
+      "3000 valid POVM flagged Lüders-vs-free coin ||difference||1 controls",
+      "3000 inherited ROT007 global information-loss controls",
+      "120dps recursion closed floor and quadratic equation checks",
+      "ZIP CRC+byte-identity upon extract; GitHub blob SHA readback report and code"
+    ],
+    "controls": [
+      "R08 3-event constructible witness consistency",
+      "R09 coarse-graining counterexample explicitly retained",
+      "No finite-R bound transferred to R→∞",
+      "Count local events, not broadcast rounds; source-independent isometries only free"
+    ],
+    "warnings": [
+      "Inherited ROT007 constant C(x) awaits external referee",
+      "Normal/measurable infinite-outcome extension conditional on direct-integral standard instrument representation; frozen core finite/countable",
+      "No exact optimality of R>=3",
+      "Double-exponential gap bound is likely very weak",
+      "No physical data, no BW acceptance, no Living Theory write"
+    ],
+    "known_failures": [
+      "Original R07 unrestricted LOCC closure claim WITHDRAWN in R09",
+      "First measurement can be arbitrarily weak: ROT007 does not alone prove asymptotic LOCC gap",
+      "R finite local-event count cannot be replaced by number of communication rounds"
+    ],
+    "reproduction_status": "AUTHOR_REPRODUCED",
+    "independent_reproducer": "NOT_PERFORMED_EXTERNAL_REFEREE_PENDING",
+    "platform_deviations": []
+  },
+  "provenance": {
+    "primary_location": "https://github.com/wmakiela-tech/Nash-iw-research/blob/926d4c4fbba17b941432de51d11f2c1cebe61522/research/prf13/2026-11-12/IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112.md",
+    "content_sha256": "c5408b19005704dbf566fc942b450174b593c1e51d0d0d6d62a93a911c2a01e8",
+    "narrative_artifact": "IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112",
+    "derived_from": [
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/b0ad92550ea735ca2c5d3e9215f611a68034c9da/research/prf13/2026-11-12/IW_PRF13_ROT007_FIRST_LOCAL_INSTRUMENT_QUADRATIC_HELSTROM_LOSS_001_20261112.md",
+      "https://github.com/wmakiela-tech/Nash-iw-research/blob/main/research/prf12/2026-10-26/IW_PRF12_R09_COARSE_GRAINING_COHEN_THEOREM_AUDIT_AND_CORRECTED_CLAIM_CEILING_001_20261026.md"
+    ],
+    "supersedes": [],
+    "stale_if": "R04 exact 3-qubit source differs; any local instrument allowed not counted as event; first-step R07 theorem invalid; nonlocal entanglement or quantum communication admitted",
+    "readback_state": "VERIFIED",
+    "delivery_state": "NOT_ROUTED"
+  }
+}
