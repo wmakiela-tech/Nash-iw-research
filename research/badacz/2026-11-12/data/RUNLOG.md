@@ -14,4 +14,7 @@ document_type: RUNLOG
 
 | czas | przebieg | plik | uwagi |
 |---|---|---|---|
-| ~11:25 | PREREG_062 zapisany przed przebiegiem | — | — |
+| ~11:10 | PREREG_062 opublikowany (`d2838c2`, 11:10:44 push), przed przebiegiem | — | — |
+| 11:11– | przebiegi A (4 warianty ROT022 + kontrola REVIEW_053) i B (p12 przy tolerancji domyślnej), dwie sekwencje na 2 rdzeniach | `rot022_smoke_*.csv`, `xcheck062a.csv`, `p12_default062b.csv` | skrypt analizy `code/wuxu_062_analysis.py` zatwierdzony w trakcie przebiegu, przed odczytem wyników |
+| 11:11:18–11:11:20 | **S1 FAIL** we wszystkich 4 wariantach ROT022 (kod wyjścia 1, po ~2 s): bramka blobów autorów przeszła (linie 53–56), potem `ArgumentError: invalid base 10 digit '#' in "#"` w linii 66 sterownika — parser punktów pomija tylko puste linie, a plik punktów właściciela (`phaseA_smoke_v001.dat`, blob `6d5f3262`) ma 3 linie komentarza `#` | `ROT022_SMOKE_S1FAIL_STDERR_RECORD.md` (dosłowne stderr, 4 identyczne) | defekt interfejsu między dwoma plikami właściciela; Julia i model nie były jeszcze wywołane |
+| ~11:13– | **odstępstwo D1 (post hoc, poza preregiem):** te same 4 punkty w pliku bez linii komentarza (`rot022_smoke_points_D1_nocomments.dat`, różnica wobec źródła = tylko usunięte komentarze), sterownik bez zmian; 4 warianty sekwencyjnie na trzecim procesie (chwilowo 3 procesy na 2 rdzeniach) | `rot022_smoke_<wariant>.csv` | wejście doprowadzone do udokumentowanego kontraktu sterownika („j log10beta” w linii) |
