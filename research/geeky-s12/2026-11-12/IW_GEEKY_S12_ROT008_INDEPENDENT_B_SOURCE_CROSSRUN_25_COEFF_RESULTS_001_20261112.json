@@ -1,0 +1,242 @@
+{
+  "return_id": "IW_GEEKY_S12_ROT008_M13_SOURCE_FOURIER_MASK_INDEPENDENT_25_COEFF_CROSSRUN_001_20261112",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "date": "2026-11-12",
+  "proof_class": "INDEPENDENT_CROSS_IMPLEMENTATION_FLOAT64_FUNCTIONAL_CHECK_NOT_DIRECTED_INTERVAL_PROOF",
+  "source_readback": {
+    "source_original_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "code_public_git_blob": "9b8d6fa1bbb87b74f5b0ad26aa76c58fb184e21c",
+    "source_path": "research/m13/2026-10-26/direct_B.json",
+    "code_path": "research/geeky-s12/2026-11-12/iw_geeky_s12_rot008_independent_complex_fourier_mask_25_coeff_reproducer.js",
+    "code_math_body_actually_reexecuted": true
+  },
+  "verification": {
+    "artifact_id": "IW_GEEKY_S12_ROT008_M13_INDEPENDENT_SOURCE_B_FOURIER_MASK_25_COEFFICIENT_REPLAY_001_20261112",
+    "N": 41,
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "channel": "B",
+    "quartic_coefficients_checked": 25,
+    "independent_method": "Float64 complex sparse Fourier Lie/filter/TT + direct finite position sums for masked modal inner products",
+    "input_M13_source_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "mode_count": 41,
+    "max_relative_error_float64": 6.236254620051561e-13,
+    "max_absolute_error_float64": 7.108583389127582e-26,
+    "relative_tolerance_predeclared": 1e-10,
+    "within_tolerance": true,
+    "results": [
+      {
+        "mask": 2,
+        "power": 0,
+        "value_float64": 2.687517026777085e-14,
+        "source_mid_float64": 2.6875170267771738e-14,
+        "relative_error": 3.299252241507504e-14
+      },
+      {
+        "mask": 2,
+        "power": 1,
+        "value_float64": -5.125610338652769e-14,
+        "source_mid_float64": -5.12561033865315e-14,
+        "relative_error": 7.43672585737281e-14
+      },
+      {
+        "mask": 2,
+        "power": 2,
+        "value_float64": 1.4852826593328833e-11,
+        "source_mid_float64": 1.4852826593328904e-11,
+        "relative_error": 4.786013856999029e-15
+      },
+      {
+        "mask": 2,
+        "power": 3,
+        "value_float64": -1.3922238238070746e-12,
+        "source_mid_float64": -1.3922238238071067e-12,
+        "relative_error": 2.306367247639119e-14
+      },
+      {
+        "mask": 2,
+        "power": 4,
+        "value_float64": 3.2630036058787987e-14,
+        "source_mid_float64": 3.26300360587893e-14,
+        "relative_error": 4.0228718838151004e-14
+      },
+      {
+        "mask": 3,
+        "power": 0,
+        "value_float64": 2.819256028822309e-14,
+        "source_mid_float64": 2.8192560288223936e-14,
+        "relative_error": 2.9995817398328215e-14
+      },
+      {
+        "mask": 3,
+        "power": 1,
+        "value_float64": -2.5174118330489842e-14,
+        "source_mid_float64": -2.517411833049214e-14,
+        "relative_error": 9.125097951180871e-14
+      },
+      {
+        "mask": 3,
+        "power": 2,
+        "value_float64": 1.4855506339616757e-11,
+        "source_mid_float64": 1.4855506339616715e-11,
+        "relative_error": 2.8275889438509847e-15
+      },
+      {
+        "mask": 3,
+        "power": 3,
+        "value_float64": -1.3926475619883744e-12,
+        "source_mid_float64": -1.3926475619884014e-12,
+        "relative_error": 1.943139472707953e-14
+      },
+      {
+        "mask": 3,
+        "power": 4,
+        "value_float64": 3.2641317949695043e-14,
+        "source_mid_float64": 3.264131794969635e-14,
+        "relative_error": 4.002147404278289e-14
+      },
+      {
+        "mask": 4,
+        "power": 0,
+        "value_float64": 2.992065812084861e-14,
+        "source_mid_float64": 2.9920658120849586e-14,
+        "relative_error": 3.269271412825058e-14
+      },
+      {
+        "mask": 4,
+        "power": 1,
+        "value_float64": -6.283950695999736e-15,
+        "source_mid_float64": -6.28395069600127e-15,
+        "relative_error": 2.441671704444191e-13
+      },
+      {
+        "mask": 4,
+        "power": 2,
+        "value_float64": 1.4802416953996288e-11,
+        "source_mid_float64": 1.4802416953996288e-11,
+        "relative_error": 0
+      },
+      {
+        "mask": 4,
+        "power": 3,
+        "value_float64": -1.3877953309904292e-12,
+        "source_mid_float64": -1.3877953309904593e-12,
+        "relative_error": 2.1682095116485975e-14
+      },
+      {
+        "mask": 4,
+        "power": 4,
+        "value_float64": 3.2528567132664437e-14,
+        "source_mid_float64": 3.2528567132665894e-14,
+        "relative_error": 4.481645154865922e-14
+      },
+      {
+        "mask": 5,
+        "power": 0,
+        "value_float64": 3.186518233224201e-14,
+        "source_mid_float64": 3.1865182332243036e-14,
+        "relative_error": 3.2282088006988334e-14
+      },
+      {
+        "mask": 5,
+        "power": 1,
+        "value_float64": 1.7285670529216978e-15,
+        "source_mid_float64": 1.7285670529206198e-15,
+        "relative_error": 6.236254620051561e-13
+      },
+      {
+        "mask": 5,
+        "power": 2,
+        "value_float64": 1.4652897461816856e-11,
+        "source_mid_float64": 1.465289746181685e-11,
+        "relative_error": 4.4102871479244254e-16
+      },
+      {
+        "mask": 5,
+        "power": 3,
+        "value_float64": -1.373830515937146e-12,
+        "source_mid_float64": -1.3738305159371753e-12,
+        "relative_error": 2.1314504563780584e-14
+      },
+      {
+        "mask": 5,
+        "power": 4,
+        "value_float64": 3.2201665813840086e-14,
+        "source_mid_float64": 3.2201665813841594e-14,
+        "relative_error": 4.6839255444177814e-14
+      },
+      {
+        "mask": 6,
+        "power": 0,
+        "value_float64": 3.34781061910224e-14,
+        "source_mid_float64": 3.347810619102348e-14,
+        "relative_error": 3.223484961140666e-14
+      },
+      {
+        "mask": 6,
+        "power": 1,
+        "value_float64": -2.4312129950865153e-15,
+        "source_mid_float64": -2.4312129950878473e-15,
+        "relative_error": 5.478712236060377e-13
+      },
+      {
+        "mask": 6,
+        "power": 2,
+        "value_float64": 1.4442780633690435e-11,
+        "source_mid_float64": 1.4442780633690477e-11,
+        "relative_error": 2.9083918496430893e-15
+      },
+      {
+        "mask": 6,
+        "power": 3,
+        "value_float64": -1.3541039148320339e-12,
+        "source_mid_float64": -1.3541039148320607e-12,
+        "relative_error": 1.9835358133719115e-14
+      },
+      {
+        "mask": 6,
+        "power": 4,
+        "value_float64": 3.173908452539741e-14,
+        "source_mid_float64": 3.173908452539883e-14,
+        "relative_error": 4.473820372044831e-14
+      }
+    ],
+    "source_scope": "FUNCTIONALLY_MATCHED_AUXILIARY_N41_NOT_HISTORIC_PRODUCER",
+    "mathematical_status": "INDEPENDENT_FLOAT64_CROSS_IMPLEMENTATION_SANITY_CHECK_NOT_INTERVAL_PROOF"
+  },
+  "negative_controls": {
+    "shifted_mask_by_1": {
+      "max_relative_error_float64": 6.160842363030505,
+      "sensitivity_detected": true
+    },
+    "perturbed_one_C1_sine_mode_amplitude_by_1_percent": {
+      "max_relative_error_float64": 0.026869889032955025,
+      "sensitivity_detected": true
+    }
+  },
+  "provenance_gap": {
+    "published_snapshot_script": "research/m13/2026-10-26/source_snapshot_ch.py",
+    "python_dependency": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "code_import": "from verify_m13_rot33_interval import tensor_polys,quartic",
+    "condition": "Default Python import search path when executing snapshot script directly in published directory does not contain the separate 2026-10-24 dependency; requires PYTHONPATH or explicit copy.",
+    "safe_fix": "Run source_snapshot_ch.py from a temporary staging copy; with repository root cwd set PYTHONPATH=\"$PWD/research/m13/2026-10-24\". Preserve frozen direct_B.json; do not overwrite published original.",
+    "error_scope": "REPRODUCER_DEPENDENCY_PATH_ONLY not evidence of a coefficient mathematical error"
+  },
+  "claim_ceiling": [
+    "MODEL_FUNCTIONAL_ALIGNMENT_ONLY",
+    "NOT_ORIGINAL_HISTORIC_PRODUCER",
+    "NOT_SOURCE_INTERVAL_REGENERATION",
+    "NOT_PHYSICAL_PREDICTION",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "REFEREE_PENDING",
+    "M14_ADOPTION_PENDING",
+    "GITHUB_PENDING_BW_INGEST"
+  ]
+}
