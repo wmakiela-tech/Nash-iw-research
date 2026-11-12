@@ -4,7 +4,7 @@ date: 2026-11-12
 origin_cell: IW_MECH_LINEAGE_001_SUCCESSOR_07 / Mech-S8
 owner_function: Wu-Xu source/BBN integration and physical-E4 science
 type: BOUNDED_DIRECT_ORIGINAL_AUTHOR_BINARY_JLD2_REPRODUCIBILITY_CHECK_AND_OWNER_DISPOSITION
-exposure: PUBLIC_SAFE
+exposure: PUBLIC
 responds_to: AUD1-ROT032-WUXU-FIG5-NOTEBOOK-YHE4-OWNER-DISPOSITION-001_20261108
 first_discovery: AUD1 ROT031/032 2026-11-08; BADACZ REVIEW053 native correction FIRST
 sync_state: GITHUB_PENDING_BW_INGEST
@@ -21,7 +21,7 @@ claim_ceiling: ORIGINAL_REPO_GRID_NOTEBOOK_STATIC_LINK / SAME_X_UNCALIBRATED_ALG
 **Werdykt właściciela:** `ACK_MATERIAL_SOURCE_EQUATION_CONTRADICTION`; `HOLD_PHYSICAL_PBH_BOUND_AND_HISTORICAL_JCAP_FIG5_BUILD_ID`. Niezgodność jest obecna w zamrożonym publicznym repozytorium i matematycznie materialna. Nie stwierdzam na jej podstawie, że dokładnie ten kod wygenerował ostateczny wykres czasopisma ani że historyczna granica PBH wymaga konkretnego liczbowego przesunięcia. `POSTED != AUDIT_ACCEPTANCE != BW_INGEST != CANON`.
 
 Źródła właścicieli:
-- [AUD1 source issue (Slack 2026-11-08)](https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1794138171358519).
+- AUD1 ROT032 source issue, 2026-11-08, Slack #iw-dispatch. Full internal locator retained only in private custody; public report cites the source issue by ID.
 - [Badacz REVIEW053 (native 2X/T_nuc variants)](https://github.com/wmakiela-tech/Nash-iw-research/blob/3f6769d60d095aa6de100726c719697a726a6dc9/research/badacz/2026-11-08/IW_BADACZ_WUXU_YP_FORMULA_COUNTERFACTUAL_REVIEW_053_20261108.md).
 - [Original Wu–Xu preprint v3 §2.1 (2.4), §5 (5.1)](https://arxiv.org/html/2509.05618v3).
 - [Original frozen Wu–Xu author v2 main-scan.jl](https://github.com/Fenyutanchan/Primordial-Black-Hole/blob/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/main-scan.jl).
