@@ -1,0 +1,77 @@
+{
+  "artifact_id": "IW_XH_S6_ROT009_AUTHOR_NATIVE_PAIRED_NOISY_MICROSTIM_SOURCE_CONTROL_001_20261112",
+  "author_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "design": "72 shown directions x fixed finite seeds per source unit, common random numbers paired, source noise and random onset",
+  "elapsed_s": 14.707503863,
+  "execution": "actual author DotsTasks + original vendored PsychRNN classes on original trained NPZ",
+  "group_summaries": [
+    {
+      "changed_fraction_in_bounded_sample": 0.9976851851851852,
+      "module": "MT",
+      "n_changed": 862,
+      "n_invariance_certified": 0,
+      "n_paired_trials": 864,
+      "n_unchanged": 2,
+      "paired_rng_digest_pass": true,
+      "sham_bitwise_repeat_pass": true,
+      "strength": 11,
+      "unit": 37
+    },
+    {
+      "changed_fraction_in_bounded_sample": 0.7129629629629629,
+      "module": "DLPFC",
+      "n_changed": 616,
+      "n_invariance_certified": 2,
+      "n_paired_trials": 864,
+      "n_unchanged": 248,
+      "paired_rng_digest_pass": true,
+      "sham_bitwise_repeat_pass": true,
+      "strength": 45,
+      "unit": 53
+    }
+  ],
+  "margin_theorem_control": "PASS",
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_monkey_data": true,
+  "no_novelty": true,
+  "original_author_noisy_18000_per_condition_replayed": false,
+  "pairing_author_protocol": false,
+  "per_module_paired_trials": 864,
+  "per_module_seed_count": 12,
+  "rng_and_trial_condition_pairing_check": "PASS",
+  "sham_source_replay_exact": "PASS",
+  "source_git_blobs": {
+    "DLPFCcombined_m4.npz": "47142e3dee920a759406136449f0b12f9ce752ee",
+    "DotsTasks.py": "ac9e789c69a8ea46ac38303f9d0db524886ba0a9",
+    "MTbroadsharp_m10.npz": "c5e701740f8ab1d19ca07415c0de2d6e7f88c37f",
+    "circledots_fxns.py": "909a65d84174a7eebb0e19273d06ae400dc9094f",
+    "generate_microstim_testdata.py": "e7a6666e0b600ea49bab9755d302c78110ba9bc4",
+    "psychrnn/backend/simulation.py": "d187595af592a888192bfc2dde6f562776b88423",
+    "psychrnn/tasks/task.py": "b3bc5a5ca3fb2b0d2b4b79a4cd5ce8930e142865"
+  },
+  "source_noise": {
+    "DLPFC_input": 0.2,
+    "DLPFC_recurrent": 0.2,
+    "MT_input": 0.4,
+    "MT_recurrent": 0.2
+  },
+  "status": "PASS",
+  "stimulations": [
+    {
+      "module": "MT",
+      "preferred_deg": 110,
+      "reward_deg": 290,
+      "strength": 11,
+      "unit": 37
+    },
+    {
+      "module": "DLPFC",
+      "preferred_deg": 295,
+      "reward_deg": 115,
+      "strength": 45,
+      "unit": 53
+    }
+  ],
+  "total_paired_trials": 1728
+}
