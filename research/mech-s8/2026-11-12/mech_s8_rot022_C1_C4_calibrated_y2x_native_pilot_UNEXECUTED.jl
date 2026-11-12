@@ -38,7 +38,16 @@ const ROT022_EXPECTED_AUTHOR_BLOBS = Dict(
   "main-scan.jl" => "b368ba55d5a493f7bc185909730f7fe5691f10d6",
   "main-scan-parameters.jl" => "53faee65beda383348580c28d0424188da69b660",
   "tool_script-parameters.jl" => "0d7198ff3557bdbd5753000bb07a7a7405cc24f5",
-  "tool_script-hadrons_from_PBH.jl" => "cc73432910f872d526113ce59b6204f38d0766a9"
+  "tool_script-hadrons_from_PBH.jl" => "cc73432910f872d526113ce59b6204f38d0766a9",
+  "tool_script-ArbNumerics_compat.jl" => "3f5b592c919c1e80c4b85ad44d437eec000fd65f",
+  "tool_script-N_relativistic_species.jl" => "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc",
+  "tool_script-directories.jl" => "8c54632fdc06e0981dcefb55f0a58e89659c7be3",
+  "tool_script-geomspace.jl" => "85062aaa54093f11878a85c117fe18034ae6eae3",
+  "Project.toml" => "6297eb1682da77bbbfa87307795b655c677f98c4",
+  "data/out/hadrons_from_PBH.dat" => "06d0883a27b108692720422294ba2baacd381a64",
+  "data/ext/N_around_m_e.csv" => "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+  "data/ext/N_rho_OVER_N_s_from_PDG2024.csv" => "28b0c13563d7b3bdeaee191a3a981197345d05b8",
+  "data/ext/N_s_from_PDG2024.csv" => "33aceb876fc36cb2486d36c690e6401d85d76b46"
 )
 src_dir = abspath(ARGS[1]); variant = ARGS[2]; out_file = abspath(ARGS[3]); pts_file = abspath(ARGS[4])
 for (rel, expected) in ROT022_EXPECTED_AUTHOR_BLOBS
