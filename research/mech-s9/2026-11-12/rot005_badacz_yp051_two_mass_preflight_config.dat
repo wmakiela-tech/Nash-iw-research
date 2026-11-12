@@ -1,0 +1,4 @@
+# MECH-S9 ROT005 / NOT FULL L1; two preregistered beta centers, 2 masses, plus driver's immutable j22+j62 SBBN calibration.
+# 0-based author mass grid; centers copied verbatim from original frozen Badacz configs_a.dat / configs_b.dat.
+scan probe22 22 -17.219678 -17.219678 0.1
+scan probe62 62 -19.394162 -19.394162 0.1
