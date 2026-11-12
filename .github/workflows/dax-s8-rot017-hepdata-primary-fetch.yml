@@ -97,16 +97,16 @@ jobs:
             if [ -f usr/share/Rivet/BELLE_2007_I749358.yoda.gz ]; then
               cp usr/share/Rivet/BELLE_2007_I749358.yoda.gz /tmp/dax-s8-rot017/BELLE_2007_I749358.yoda.gz
               python3 - <<'PY'
-              import gzip,hashlib,json,pathlib,re
-              p=pathlib.Path('/tmp/dax-s8-rot017/BELLE_2007_I749358.yoda.gz')
-              raw=p.read_bytes()
-              body=gzip.decompress(raw)
-              head=body[:650].decode('utf8','replace')
-              names=re.findall(r'(?m)^BEGIN YODA_\\w+\\s+(\\S+)',body.decode('utf8','replace'))
-              out={'status':'RIVET_PACKAGED_REFERENCE_BYTES_READ','filename':p.name,'compressed_bytes':len(raw),'uncompressed_bytes':len(body),'sha256':hashlib.sha256(raw).hexdigest(),'objects':len(names),'first_objects':names[:8],'first_text':head}
-              pathlib.Path('/tmp/dax-s8-rot017/rivet_reference_receipt.json').write_text(json.dumps(out,indent=2)+'\\n')
-              print('RIVET_REFERENCE_RECEIPT '+json.dumps(out,sort_keys=True),flush=True)
-              PY
+          import gzip,hashlib,json,pathlib,re
+          p=pathlib.Path('/tmp/dax-s8-rot017/BELLE_2007_I749358.yoda.gz')
+          raw=p.read_bytes()
+          body=gzip.decompress(raw)
+          head=body[:650].decode('utf8','replace')
+          names=re.findall(r'(?m)^BEGIN YODA_\w+\s+(\S+)',body.decode('utf8','replace'))
+          out={'status':'RIVET_PACKAGED_REFERENCE_BYTES_READ','filename':p.name,'compressed_bytes':len(raw),'uncompressed_bytes':len(body),'sha256':hashlib.sha256(raw).hexdigest(),'objects':len(names),'first_objects':names[:8],'first_text':head}
+          pathlib.Path('/tmp/dax-s8-rot017/rivet_reference_receipt.json').write_text(json.dumps(out,indent=2)+'\n')
+          print('RIVET_REFERENCE_RECEIPT '+json.dumps(out,sort_keys=True),flush=True)
+          PY
             else
               echo 'RIVET_RPM_TARGET_YODA_NOT_FOUND_IN_PACKAGED_BYTES'
             fi
