@@ -1,0 +1,88 @@
+{
+  "artifact_id": "IW_MECH_S8_ROT020_WUXU_HELIUM_FRACTION_JLD2_NUMERIC_AND_OWNER_ACK_001_20261112",
+  "date": "2026-11-12",
+  "cell": "IW_MECH_LINEAGE_001_SUCCESSOR_07 / Mech-S8",
+  "responds_to": "AUD1-ROT032-WUXU-FIG5-NOTEBOOK-YHE4-OWNER-DISPOSITION-001_20261108",
+  "discovery_credit": [
+    "AUD1 ROT031/032 FIRST source equation mismatch",
+    "Badacz PREREG051/REVIEW053 FIRST native helium convention counterfactual"
+  ],
+  "owner_disposition": "ACK_MATERIAL_SOURCE_EQUATION_CONTRADICTION / HOLD_PHYSICAL_PBH_BOUND",
+  "original_author": {
+    "repository": "Fenyutanchan/Primordial-Black-Hole",
+    "commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+    "code_path": "arXiv-2509.05618/main-scan.jl",
+    "code_git_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "code_y_definition": "2X/(1-X)",
+    "paper_v3": "https://arxiv.org/html/2509.05618v3",
+    "paper_x_definition": "X=n/(n+p)",
+    "paper_y_definition": "Y≈2X",
+    "original_binary": {
+      "path": "arXiv-2509.05618/data/out/scanning.jld2",
+      "git_blob_sha1": "10cc9b3f078fcadb91b5e520e75845859ca00b74",
+      "file_bytes": 151089,
+      "file_sha256": "51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786"
+    },
+    "original_notebook": {
+      "path": "arXiv-2509.05618/main.ipynb",
+      "git_blob_sha1": "171c4a29e414860d724c817641896628f35982b0",
+      "file_bytes": 2526919,
+      "file_sha256": "61d427c4de71b3920387234f6808ea7dee759d9166c77e1a9090695c5f5202d1",
+      "jld2_to_heatmap_contour_save_route": "STATIC_NOTEBOOK_SOURCE_CHECK_PASS"
+    }
+  },
+  "original_scan": {
+    "mass_grid_points": 100,
+    "beta_grid_points": 100,
+    "number_of_Y_and_chi2_cells": 10000,
+    "mass_range_g": [
+      600000000,
+      10000000000
+    ],
+    "beta_range": [
+      1e-20,
+      1e-17
+    ],
+    "chi2_formula": "((Y_code-0.245)/0.003)^2",
+    "max_absolute_chi2_residual": 4.3655745685100555e-11,
+    "Y_code_range": [
+      0.24457984107485917,
+      1.2891415044418126
+    ],
+    "chi2_le4_grid_cells": 4469
+  },
+  "same_X_uncalibrated": {
+    "algebraic_identity": "Y_correct_same_X=2Y_code/(2+Y_code)",
+    "first_original_Y": 0.24494317949740632,
+    "first_same_X_Y": 0.2182177096814038,
+    "corrected_Y_range": [
+      0.21792928600636238,
+      0.7838771926965713
+    ],
+    "source_observation_band_sameX_image": [
+      0.2134881643590889,
+      0.223011994669036
+    ],
+    "conditional_grid_cells_chi2_le4": 513,
+    "MUST_NOT_INFER": "513 is not a recalibrated physical PBH-allowed region; re-evaluate standard BBN calibration and independent physical source."
+  },
+  "verification": {
+    "github_script_commit": "3d94221e94117a752bf6019053841cac4104c570",
+    "github_script_blob": "c212d39a735c582c632762a59d5438169871d1ee",
+    "github_report_commit": "1e1c4134659a15b2892979005316643025543ae3",
+    "github_report_blob": "e4bf73b2f8eb2606efad355bc09d003c96edfe17",
+    "github_exact_readback": "PASS",
+    "wolfram_executed_from_pinned_github_source": "PASS",
+    "wolfram_source_type_checks": 8,
+    "slack_link": "https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1794473641204769"
+  },
+  "open": [
+    "HISTORICAL_JCAP_FIG5_RELEASE_PRODUCER_ID",
+    "PHYSICAL_SBBN_RECALIBRATION_WITH_2X",
+    "END_TO_END_NATIVE_JULIA_TOLERANCE_REPLAY",
+    "E4_BLACKHAWK_PYTHIA_BELOW_1e9g_PHYSICAL_SOURCE_VALIDATION",
+    "INDEPENDENT_REFEREE_ACCEPTANCE",
+    "BW_INGEST_UNVERIFIED"
+  ],
+  "claim_ceiling": "PUBLIC_AUTHOR_REPO_SOURCE_JLD2_INTERNAL_IDENTITY / SAME_X_ALGEBRA_ONLY / NO_PHYSICAL_PBH_BOUND / NO_CANON / NO_EXEC_SIGN"
+}
