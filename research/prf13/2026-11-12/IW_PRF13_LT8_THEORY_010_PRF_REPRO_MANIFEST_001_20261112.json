@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../schemas/research-reproduction-manifest.schema.json",
+  "manifest_id": "IW_PRF13_LT8_THEORY_010_PRF_REPRO_MANIFEST_001_20261112",
+  "artifact_id": "IW_PRF13_LT8_THEORY_010_PRF_TWO_TIME_CAUSAL_COMB_INTERVENTION_FALSIFIER_001_20261112",
+  "title": "LT8 theory-010 PRF13 two-time legal quantum comb intervention falsifier",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_12 / PRF13",
+  "created_at": "2026-11-12T13:16:00Z",
+  "as_of": "2026-11-12; LT8 ROT010 task dispatch; original Pollock 2018 PRA/PRL publisher sources; Chiribella et al 2009 PRA",
+  "task_id": "LT8-THEORY-010-PRF",
+  "exposure": "PUBLIC",
+  "status": "DRAFT",
+  "claim": {
+    "question": "Does equality of single-step marginal and overall CPTP channels guarantee same distributions under every two-time legal CP instrument?",
+    "object": "Qubit, two Pauli-noise steps, 4-state classical latent environment; independent vs correlated label law; one two-outcome CP measure-and-prepare intervention and final Pauli-Y measurement",
+    "statement": "No: both combs yield identical unconditional one-step and endpoint complete depolarizing channels, yet an explicitly physical intermediate CP instrument separates joint histories with total variation 1/2; both Choi combs PSD and causally normalized.",
+    "claim_ceiling": "NO_NOVELTY / PRIOR_ART_POLLOCK2018_CHIRIBELLA2009 / NO_MINIMAL_MEMORY_PROOF / NO_FULL_LOCC / NO_NCDG_PHYSICAL_BRIDGE / NO_HARDWARE / NO_CANON / NO_EXEC_SIGN / REFEREE_PENDING"
+  },
+  "code": {
+    "repository": "https://github.com/wmakiela-tech/Nash-iw-research",
+    "commit": "71e3350da3b87685fc8c195788c337fc1b1f4550",
+    "entrypoint": "research/prf13/2026-11-12/IW_PRF13_LT8_THEORY_010_PRF_EXACT_TWO_TIME_COMB_FALSIFIER_REPRO_001_20261112.py",
+    "license": "NOT_APPLICABLE"
+  },
+  "environment": {
+    "os": "Linux 6.18.57 (author container)",
+    "architecture": "x86_64",
+    "runtime": "Python 3.13.5, SymPy 1.14.0, exact rationals and Gaussian rational matrices",
+    "dependency_lock": "NOT_AVAILABLE_WITH_REASON: author runtime versions explicitly documented; no lockfile",
+    "hardware": "NOT_MATERIAL"
+  },
+  "execution": {
+    "clean_start": "No downloaded private data or external randomness. All circuits and classical noise laws constructed internally from rational/symbolic 2x2 matrices.",
+    "commands": [
+      "python IW_PRF13_LT8_THEORY_010_PRF_EXACT_TWO_TIME_COMB_FALSIFIER_REPRO_001_20261112.py",
+      "python -m py_compile IW_PRF13_LT8_THEORY_010_PRF_EXACT_TWO_TIME_COMB_FALSIFIER_REPRO_001_20261112.py"
+    ],
+    "parameters": {
+      "noise_labels": "(x,z) in GF(2)^2; F(x,z)=(z,x xor z)",
+      "p_corr": "1/4 for w=F(v), else 0",
+      "p_ind": "1/16 for all 16 pairs",
+      "initial_state": "|0><0|",
+      "intermediate_instrument": "K_a=|Y+><a|, a in {0,1}",
+      "final_POVM": "{(I+Y)/2,(I-Y)/2}",
+      "Choi_order": "(S1_in,S0,S2,S1_out)"
+    },
+    "seeds": [],
+    "tolerances": {
+      "all_proof_checks": "exact equality; no float, no tolerance"
+    },
+    "stop_rule": "Fixed two distributions, four labelled outcomes, PSD and exact trace identities; no data-dependent stopping",
+    "expected_runtime": "seconds"
+  },
+  "inputs": [
+    {
+      "path": "research/prf13/2026-11-12/IW_PRF13_LT8_THEORY_010_PRF_EXACT_TWO_TIME_COMB_FALSIFIER_REPRO_001_20261112.py",
+      "sha256": "2955fec63133c3060e5cd84c1c3c7887591316fcdb015dc71e6cd66090902f7a",
+      "source": "Author-written exact SymPy source, reproduced locally and Git blob readback verified",
+      "schema": "UTF-8 Python3; no external input files",
+      "units_or_conventions": "unnormalized Choi, output-first; qubit Pauli X^x Z^z; TV=1/2 L1",
+      "exposure": "PUBLIC"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/prf13/2026-11-12/IW_PRF13_LT8_THEORY_010_PRF_TWO_TIME_CAUSAL_COMB_INTERVENTION_FALSIFIER_001_20261112.md",
+      "sha256": "e4346faa4d8690e4d7e6f80e09f98668cf820cc864901fa30d3ae54162b8b0a7",
+      "role": "OTHER",
+      "derived_from": [
+        "research/prf13/2026-11-12/IW_PRF13_LT8_THEORY_010_PRF_EXACT_TWO_TIME_COMB_FALSIFIER_REPRO_001_20261112.py"
+      ],
+      "expected": "Full report with causal comb construction, all four distribution probabilities and prior-art subtraction"
+    },
+    {
+      "path": "LOCAL_ZIP_ONLY/IW_PRF13_LT8_THEORY_010_PRF_EXACT_TEST_STDOUT_001_20261112.txt",
+      "sha256": "92d64ddbdde9fc4609e7502c83ab17df18a9ee4e6751c4ec70476ce20e24914b",
+      "role": "LOG",
+      "derived_from": [
+        "research/prf13/2026-11-12/IW_PRF13_LT8_THEORY_010_PRF_EXACT_TWO_TIME_COMB_FALSIFIER_REPRO_001_20261112.py"
+      ],
+      "expected": "All symbolic exact checks PASS; TV=1/2; Choi Frobenius difference squared=3"
+    }
+  ],
+  "verification": {
+    "tests": [
+      "All single-step and end-to-end CPTP maps equal depolarizing on Pauli basis {I,X,Y,Z}",
+      "CP instrument Kraus completeness exact",
+      "All four intermediate and terminal joint probabilities exact",
+      "Two 16x16 comb Choi matrices PSD by exact SymPy eigenvalues",
+      "Both recursive comb trace identities exact",
+      "TV=1/2; Tr[(Wc-Wi)†(Wc-Wi)]=3",
+      "Python py_compile author pass",
+      "Git blob readback byte identity PASS for full report and exact code"
+    ],
+    "controls": [
+      "Independent-noise Markov model with same isolated and endpoint CPTP maps",
+      "Correlated model uses classical memory only; no quantum coherence required",
+      "Different process W but same CPTP endpoint falsifies endpoint-only reduction"
+    ],
+    "warnings": [
+      "Does not prove smallest classical environment or tester cardinality",
+      "No hardware implementation or original NASH physical bridge",
+      "LT8 owner adoption and external referee pending",
+      "All process-tensor/comb principles are mature prior art; no novelty"
+    ],
+    "known_failures": [
+      "Single CPTP endpoint quotient cannot preserve this legal intervention history",
+      "Unconditional second-step marginal channel must not be misrepresented as a history-conditioned CPTP map",
+      "Bare abstract quotient does not imply CP/causality-legal implementation"
+    ],
+    "reproduction_status": "AUTHOR_REPRODUCED",
+    "independent_reproducer": "NO_EXTERNAL_REFEREE; EXACT_COMBINATORIAL_AND_MATRIX_CONSISTENCY_AUTHOR_ONLY",
+    "platform_deviations": []
+  },
+  "provenance": {
+    "primary_location": "https://github.com/wmakiela-tech/Nash-iw-research/blob/4d8041e24962978d0aeba05029dae8a2f96abaf4/research/prf13/2026-11-12/IW_PRF13_LT8_THEORY_010_PRF_TWO_TIME_CAUSAL_COMB_INTERVENTION_FALSIFIER_001_20261112.md",
+    "content_sha256": "e4346faa4d8690e4d7e6f80e09f98668cf820cc864901fa30d3ae54162b8b0a7",
+    "narrative_artifact": "IW_PRF13_LT8_THEORY_010_PRF_TWO_TIME_CAUSAL_COMB_INTERVENTION_FALSIFIER_001_20261112",
+    "derived_from": [
+      "https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1794489956143239",
+      "https://doi.org/10.1103/PhysRevA.97.012127",
+      "https://doi.org/10.1103/PhysRevLett.120.040405",
+      "https://doi.org/10.1103/PhysRevA.80.022339"
+    ],
+    "supersedes": [],
+    "stale_if": "Any CP instrument invalidity, incorrect Pauli map, failed Choi causal normalization, or unsupported reinterpretation as NASH source-native physical theory",
+    "readback_state": "VERIFIED",
+    "delivery_state": "DELIVERED"
+  }
+}
