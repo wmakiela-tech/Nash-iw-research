@@ -1,0 +1,117 @@
+name: Mech-S9 ROT006 full L1 Wu-Xu native Badacz REVIEW053 53 source points
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-wuxu-yp051-full-l1-rot006.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  rot006-native-full-L1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s9_rot006_native_full_L1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Freeze original review source and all 53 config points
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          julia --version | tee "$OUTDIR/JULIA_VERSION"
+          git rev-parse HEAD | tee "$OUTDIR/IW_REPO_COMMIT"
+          test "$(git hash-object research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl)" = "86bdee90f252d9fe395da3d1d5199de08ea7a572"
+          test "$(git hash-object research/badacz/2026-11-08/data/yp051/configs_a.dat)" = "763cac74f13823330e653659bcca943f85b49eb1"
+          test "$(git hash-object research/badacz/2026-11-08/data/yp051/configs_b.dat)" = "46bb25055cdff739062579c32615afabc58a99db"
+          test "$(git hash-object research/badacz/2026-11-08/data/yp051/yp_a.csv)" = "df78f479277d85c7a558e132428d8846c64f9512"
+          test "$(git hash-object research/badacz/2026-11-08/data/yp051/yp_b.csv)" = "a8f3fea64b46d5c42c69e155a3690b99581cc1aa"
+          cat research/badacz/2026-11-08/data/yp051/configs_a.dat \
+              research/badacz/2026-11-08/data/yp051/configs_b.dat \
+              > "$OUTDIR/merged_original_configs_53.dat"
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('mech_s9_rot006_native_full_L1/merged_original_configs_53.dat')
+          lines=[x.strip().split() for x in p.read_text().splitlines() if x.strip() and not x.startswith('#')]
+          n=0
+          for row in lines:
+            if row[0]=='grid':
+              a,b,st=map(float,row[-3:]); n+=round((b-a)/st)+1
+            elif row[0]=='scan':
+              a,b,st=map(float,row[-3:]); n+=round((b-a)/st)+1
+            else: raise ValueError('unknown config type')
+          assert n==53,(n,lines)
+          print('PREDECLARED_ORIGINAL_53_POINT_SOURCE_CONFIG_PASS')
+          PY
+          sha256sum research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl \
+            research/badacz/2026-11-08/data/yp051/configs_a.dat \
+            research/badacz/2026-11-08/data/yp051/configs_b.dat \
+            research/badacz/2026-11-08/data/yp051/yp_a.csv \
+            research/badacz/2026-11-08/data/yp051/yp_b.csv \
+            research/mech-s9/2026-11-12/mech_s9_rot006_l1_owner_compare_stdlib.py \
+            "$OUTDIR/merged_original_configs_53.dat" > "$OUTDIR/INPUT_SHA256SUMS"
+      - name: Clone unchanged original Wu-Xu source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/AUTHOR_SOURCE_COMMIT"
+          echo "AUTHOR_NATIVE_SOURCE_LOCK_PASS"
+      - name: Rebuild the pinned Mech-S6 Julia environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" > "$OUTDIR/SETUP_STDOUT" 2> "$OUTDIR/SETUP_STDERR"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' > "$OUTDIR/PKG_STATUS" 2>&1
+          echo "PINNED_NATIVE_ENV_PASS"
+      - name: Execute unchanged Badacz native REVIEW053 driver on exact 53 original config points
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" \
+            research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl \
+            "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" \
+            "$GITHUB_WORKSPACE/$OUTDIR/replica_full53_raw.csv" \
+            "$GITHUB_WORKSPACE/$OUTDIR/merged_original_configs_53.dat" \
+            > "$OUTDIR/NATIVE_STDOUT" 2> "$OUTDIR/NATIVE_STDERR"
+          test -s "$OUTDIR/replica_full53_raw.csv"
+          echo "NATIVE_FULL53_COMPLETED"
+      - name: Independently compare original reference CSVs and compute linear-bracket contour roots
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-12/mech_s9_rot006_l1_owner_compare_stdlib.py \
+            --actual "$OUTDIR/replica_full53_raw.csv" \
+            --owner-a research/badacz/2026-11-08/data/yp051/yp_a.csv \
+            --owner-b research/badacz/2026-11-08/data/yp051/yp_b.csv \
+            --out-dir "$OUTDIR" \
+            > "$OUTDIR/L1_COMPARISON_STDOUT" 2> "$OUTDIR/L1_COMPARISON_STDERR"
+          test -s "$OUTDIR/L1_COMPARISON_AND_LINEAR_ROOTS.json"
+          echo "FULL_L1_SOURCE_COMPARISON_SCRIPT_PASS"
+      - name: Record native outputs and clean hashes without Git push
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - name: Preserve primary source stdout stderr raw CSV full comparison and hashes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot006-wuxu-review053-full-L1-original53
+          path: mech_s9_rot006_native_full_L1/
+          if-no-files-found: error
