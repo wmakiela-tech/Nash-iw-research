@@ -1,0 +1,74 @@
+name: DAX-S8 ROT017 primary Belle HEPData native source fetch
+on:
+  push:
+    paths:
+      - '.github/workflows/dax-s8-rot017-hepdata-primary-fetch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  belle-original-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Fetch bounded original HEPData Belle 2007 numeric payloads
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dax-s8-rot017
+          python3 - <<'PY'
+          import hashlib, json, pathlib, time, urllib.error, urllib.request, zipfile
+          out=pathlib.Path('/tmp/dax-s8-rot017')
+          base='https://www.hepdata.net'
+          endpoints={
+            'table1_csv':base+'/download/table/ins749358/Table%201/csv',
+            'table2_csv':base+'/download/table/ins749358/Table%202/csv',
+            'table71_csv':base+'/download/table/ins749358/Table%2071/csv',
+            'submission_csv_zip':base+'/download/submission/ins749358/1/csv',
+            'submission_yoda_zip':base+'/download/submission/ins749358/1/yoda',
+            'record_json':base+'/record/ins749358?format=json'
+          }
+          receipt={'source':'Belle 2007 HEPData ins749358 DOI:10.17182/hepdata.51842.v1','requests':{},'has_original_numeric_bytes':False}
+          for name,url in endpoints.items():
+            item={'url':url,'status':'NOT_FETCHED'}
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'NASH-DAX-S8-scientific-source-verification/1.0','Accept':'application/json,text/csv,application/zip,*/*'})
+              with urllib.request.urlopen(req,timeout=22) as r:
+                mime=r.headers.get('Content-Type','')
+                buf=r.read(12000001)
+                status=r.status
+              item.update(http_status=status,content_type=mime,bytes=len(buf),sha256=hashlib.sha256(buf).hexdigest())
+              if len(buf)>12000000: item['status']='REJECT_OVERSIZE'
+              elif buf.lstrip().lower().startswith((b'<!doctype html',b'<html')): item['status']='REJECT_HTML_RESPONSE'
+              elif status!=200: item['status']='REJECT_NON_200'
+              else:
+                ext='.zip' if buf.startswith(b'PK') else '.json' if 'json' in mime else '.csv' if 'csv' in mime else '.bin'
+                path=out/(name+ext)
+                path.write_bytes(buf)
+                item.update(status='DOWNLOADED_ORIGINAL',stored_as=path.name)
+                if name in ('table1_csv','table2_csv','table71_csv','submission_csv_zip','submission_yoda_zip'):
+                  receipt['has_original_numeric_bytes']=True
+                if ext=='.zip':
+                  try:
+                    with zipfile.ZipFile(path) as z:
+                      members=z.namelist()
+                      item['zip_member_count']=len(members)
+                      item['zip_first_members']=members[:5]
+                  except Exception as e:item['zip_verify_error']=repr(e)
+                else:
+                  item['first_text_lines']=buf[:300].decode('utf-8','replace').splitlines()[:4]
+            except Exception as e:item.update(status='ACCESS_BLOCKED',error=repr(e))
+            receipt['requests'][name]=item
+            print('SOURCE_RECEIPT '+name+' '+json.dumps(item,ensure_ascii=True,sort_keys=True),flush=True)
+          receipt['status']='ORIGINAL_SOURCE_BYTES_PRESENT' if receipt['has_original_numeric_bytes'] else 'ACCESS_BLOCKED_ALL_NUMERIC_SOURCE_PATHS'
+          (out/'receipt.json').write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n')
+          print('FINAL_RECEIPT '+json.dumps({'status':receipt['status'],'downloaded':[k for k,v in receipt['requests'].items() if v['status']=='DOWNLOADED_ORIGINAL']},sort_keys=True),flush=True)
+          PY
+      - name: Save source bytes, hashes and typed access receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dax-s8-rot017-belle-hepdata-original-receipts
+          path: /tmp/dax-s8-rot017/
+          if-no-files-found: warn
+          retention-days: 30
