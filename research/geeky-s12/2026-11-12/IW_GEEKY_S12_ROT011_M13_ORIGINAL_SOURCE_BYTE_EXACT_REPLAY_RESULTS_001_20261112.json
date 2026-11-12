@@ -1,0 +1,112 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT011_M13_ORIGINAL_SOURCE_BYTE_EXACT_REPLAY_RESULTS_001_20261112",
+  "date": "2026-11-12",
+  "role": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source_scope": "M13 original public Fourier source model, auxiliary functionally matched N41 B, five masks k2..6; not missing historic runtime",
+  "runtime": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "iv_dps": 45
+  },
+  "original_public_source": {
+    "M13_rot33_code": {
+      "path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+      "git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+      "sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+      "bytes": 8970,
+      "actual_unmodified_exec": true,
+      "pre_import_git_blob_verified": true
+    },
+    "M13_exporter": {
+      "path": "research/m13/2026-10-26/source_snapshot_ch.py",
+      "git_blob_sha1": "c8ea76abd77f2186f868d5e16035b5fb0e0f6231",
+      "bytes": 585,
+      "actual_unmodified_exec": true
+    },
+    "M13_frozen_B": {
+      "path": "research/m13/2026-10-26/direct_B.json",
+      "git_blob_sha1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+      "bytes": 7501
+    },
+    "ROT010_public_safe_replayer": {
+      "path": "research/geeky-s12/2026-11-12/geeky_s12_rot010_replay_original_M13_snapshot_safely.py",
+      "commit": "4d5561d785e19d4c328586e9f32b53af3a3d9eab",
+      "git_blob_sha1": "d2eaa88a21a5adf0411b42cce4d3d7f982c38ee9",
+      "exact_published_bytes_verified": true,
+      "actually_run": true
+    }
+  },
+  "checks": {
+    "original_M13_direct_snapshot_run": {
+      "actual_execution": true,
+      "source_math_not_input_from_frozen_B": true,
+      "mask_k": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "coeffs": 25,
+      "raw_bytes": 7502,
+      "raw_git_blob": "ea650d8f398376fc9903ed27cb563a577ce8cc4b",
+      "canonical_bytes": 7501,
+      "canonical_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+      "canonical_exact_byte_identity": true,
+      "only_canonical_normalization": "remove single final newline appended by M13 exporter"
+    },
+    "original_ROT010_public_wrapper_replay": {
+      "actual_execution": true,
+      "all_25_directed_intervals_byte_exact": true,
+      "source_intervals": 25,
+      "original_snapshot_added_last_newline": true,
+      "source_module_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+      "snapshot_script_blob": "c8ea76abd77f2186f868d5e16035b5fb0e0f6231",
+      "immutable_original_source_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0"
+    },
+    "negative_fail_closed": [
+      {
+        "control": "tamper_original_ROT33_code",
+        "exit_code": 1,
+        "git_blob_mismatch": true,
+        "pass": true
+      },
+      {
+        "control": "tamper_frozen_B_data",
+        "exit_code": 1,
+        "git_blob_mismatch": true,
+        "pass": true
+      },
+      {
+        "control": "tamper_original_snapshot_exporter",
+        "exit_code": 1,
+        "git_blob_mismatch": true,
+        "pass": true
+      }
+    ],
+    "negative_controls_count_pass": "3/3"
+  },
+  "local_user_reproducer": {
+    "filename": "Geeky_S12_ROT011_original_M13_byte_exact_source_replay.zip",
+    "sha256": "831a6a536ecfc1ec7eebf7cc3404fdc4a99b3708a71dd464f3cfbb1dff0024a1",
+    "bytes": 15095,
+    "members": 11,
+    "CRC": "PASS",
+    "all_sha256_and_byte_readback": "PASS",
+    "contents": "actual original public M13 module, original exporter, frozen source B, actual published ROT010 wrapper, executed results and 3 failclosed negative controls, manifest, README"
+  },
+  "status": [
+    "ORIGINAL_M13_SOURCE_UNMODIFIED_ACTUALLY_EXECUTED_PASS",
+    "PUBLIC_ROT010_REPLAYER_ACTUALLY_EXECUTED_PASS",
+    "25_DIRECTED_SOURCE_COEFFICIENT_CANONICAL_BYTES_IDENTICAL_PASS",
+    "NEGATIVE_SOURCE_HASH_GATES_3_OF_3_PASS",
+    "UNAVAILABLE_HISTORICAL_RUNTIME_DTC0A_HOLD",
+    "INDEPENDENT_ROT007_MATH_REFEREE_PENDING",
+    "M14_OWNER_ADOPTION_PENDING",
+    "BW_SOURCE_INGEST_PENDING",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
