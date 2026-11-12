@@ -1,0 +1,84 @@
+name: Mech-S9 Wu-Xu native Badacz-driver two-mass preflight (not full L1)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-wuxu-yp051-l1-preflight.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  native-two-mass-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s9_rot005_native_preflight"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - name: Preserve version and original inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          julia --version | tee "$OUTDIR/julia_version.txt"
+          git rev-parse HEAD > "$OUTDIR/iwnash_checkout_commit.txt"
+          sha256sum research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl \
+            research/mech-s9/2026-11-12/rot005_badacz_yp051_two_mass_preflight_config.dat \
+            > "$OUTDIR/INPUT_SHA256SUMS"
+          test "$(git hash-object research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl)" = "86bdee90f252d9fe395da3d1d5199de08ea7a572"
+          echo "BADACZ_DRIVER_GIT_BLOB_PASS" | tee "$OUTDIR/preflight.txt"
+      - name: Clone exact original Wu-Xu source and validate immutable identities
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          echo "WUXU_EXACT_SOURCE_LOCK_PASS" | tee -a "$OUTDIR/preflight.txt"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/wuxu_author_commit.txt"
+      - name: Rebuild pinned original Mech-S6 Julia environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" \
+            > "$OUTDIR/setup.stdout.log" 2> "$OUTDIR/setup.stderr.log"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' \
+            > "$OUTDIR/pkg_status.txt" 2>&1
+          echo "PINNED_ENV_SETUP_PASS" | tee -a "$OUTDIR/preflight.txt"
+      - name: Run unchanged Badacz REVIEW053 driver at j22 and j62 (four magic calls only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" \
+            research/badacz/2026-11-08/code/wuxu_yp_formula_counterfactual.jl \
+            "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" \
+            "$GITHUB_WORKSPACE/$OUTDIR/native_two_mass.csv" \
+            "$GITHUB_WORKSPACE/research/mech-s9/2026-11-12/rot005_badacz_yp051_two_mass_preflight_config.dat" \
+            > "$OUTDIR/driver.stdout.log" 2> "$OUTDIR/driver.stderr.log"
+          test -s "$OUTDIR/native_two_mass.csv"
+          grep -q "SBBN j=22" "$OUTDIR/native_two_mass.csv"
+          grep -q "SBBN j=62" "$OUTDIR/native_two_mass.csv"
+          grep -q "probe22" "$OUTDIR/native_two_mass.csv"
+          grep -q "probe62" "$OUTDIR/native_two_mass.csv"
+          echo "TWO_MASS_NATIVE_SOURCE_DRIVER_PASS" | tee -a "$OUTDIR/preflight.txt"
+      - name: Record result checksums (no Git push)
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -maxdepth 1 -type f -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - name: Upload immutable output and logs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot005-wuxu-badacz-two-mass-native
+          path: mech_s9_rot005_native_preflight/
+          if-no-files-found: error
