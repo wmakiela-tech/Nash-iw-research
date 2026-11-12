@@ -28,7 +28,23 @@
 # Boundary: authors' observable Y_C = 2X/(1-X) at their T_nuc crosses 0.251 (chi2 = 4); bisection in log10(beta) on [-21,-15]
 # to 0.005 dex.  Usage: julia --project=<env> wuxu_subedge_variant_boundary.jl <author arXiv-2509.05618 dir> <variant[_sym|_nsym]> <out.csv> [j1,j2,...]
 using Printf, SHA
+# Fail closed on any original-author source drift, before applying conditional variants.
+function rot022_gitblob(path)
+    raw = read(path)
+    head = Vector{UInt8}(codeunits("blob $(length(raw))\0"))
+    return bytes2hex(sha1(vcat(head,raw)))
+end
+const ROT022_EXPECTED_AUTHOR_BLOBS = Dict(
+  "main-scan.jl" => "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+  "main-scan-parameters.jl" => "53faee65beda383348580c28d0424188da69b660",
+  "tool_script-parameters.jl" => "0d7198ff3557bdbd5753000bb07a7a7405cc24f5",
+  "tool_script-hadrons_from_PBH.jl" => "cc73432910f872d526113ce59b6204f38d0766a9"
+)
 src_dir = abspath(ARGS[1]); variant = ARGS[2]; out_file = abspath(ARGS[3]); pts_file = abspath(ARGS[4])
+for (rel, expected) in ROT022_EXPECTED_AUTHOR_BLOBS
+    actual = rot022_gitblob(joinpath(src_dir,rel))
+    actual == expected || error("FAIL original author source SHA1 for " * rel)
+end
 tolmode = length(ARGS) >= 5 ? ARGS[5] : "default"
 # E5 (PREREG_037): suffix "_sym" applies the Mech-S6 charge-pair source-map patch (B_sym) to main-scan.jl, unchanged:
 # research/mech-s6/2026-10-17/apply_wuxu_charge_pair_source_map.py (it refuses to run on any other source contract)
