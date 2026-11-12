@@ -1,0 +1,127 @@
+{
+  "artifact_id": "IW_MT15_ROT010_WUXU_ORIGINAL_THERMO_TWO_RUNTIME_NULL_AUDIT_001_20261112",
+  "source_first": "Wu-Xu original public author repository Fenyutanchan/Primordial-Black-Hole commit d395183674cace6c9906a8911bdeb7234ba4040d",
+  "owner_first": "Mech-S9 ROT002 first identified entropy/EOS null and Mech-S9 ROT003 first identified neutrino and baryon comoving interfaces",
+  "original_author_thermodynamic_table_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+  "original_author_main_scan_git_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+  "original_author_thermal_interpolation_git_blob": "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc",
+  "source_rows": 1000,
+  "t_initial_MeV": 1,
+  "source_t_reference_MeV": 0.07818527068831994,
+  "methods": [
+    "EXECUTED CONNECTED JS: author 1000x3 original data and per-knot Gaussian2/4/8 quadrature",
+    "EXECUTED NATIVE WOLFRAM LANGUAGE: separately implemented per-knot composite Simpson 4/16 interval quadrature on same original source numbers",
+    "EXECUTED LOCAL SYMPY: exact algebra f_code-f_adia=4(qrho-qs)/(3+qs) and comoving baryon log derivative"
+  ],
+  "error_checks": {
+    "max_abs_ln_a_gauss4_vs_gauss8_JS": 6.661338147750939e-16,
+    "max_abs_ln_a_gauss2_vs_gauss4_JS": 4.769518113789672e-13,
+    "max_abs_Wolfram_simpson4_vs_simpson16_ln_a": 3.8058445284150366e-13,
+    "max_abs_baryon_factorization_residual_JS": 1.5543122344752192e-15
+  },
+  "source_equations": {
+    "q_rho": "d ln(g_rho)/d ln T; author g_rho(T) linear in ln T within each row cell",
+    "q_s": "d ln(g_s)/d ln T; author g_s(T) linear in ln T within each row cell",
+    "f_code": "d ln rho/d ln a = -4+q_rho/(3+q_s), n_PBH=0 frozen v2",
+    "f_adia": "-3(4+q_rho)/(3+q_s) by article entropy g_s a^3 T^3 constant",
+    "source_entropy_difference": "f_code-f_adia=4(q_rho-q_s)/(3+q_s)",
+    "R_nu": "exp[L-L_adiab], L=ln(a/a_i); Tnu ratio from article Appendix A.1/A.3 under first branch",
+    "R_B": "exp(3L)*(T/T_i)^3 with constant code eta_B, as no-PBH physical baryon proxy",
+    "factorization": "R_B=(g_s(T_i)/g_s(T))*(R_nu)^3",
+    "conserved_normalization_ratio_at_T": "R_B(Tref)/R_B(T) with matched code baryon density at late reference"
+  },
+  "data": [
+    {
+      "T_MeV": 1,
+      "ln_a_over_ai": 0,
+      "R_nu": 1,
+      "R_B": 1,
+      "R_B_adiab": 1,
+      "R_B_entropy": 1,
+      "gs": 1,
+      "nB_conserved_over_nB_code_normalized_at_ref": 2.854223330828976
+    },
+    {
+      "T_MeV": 0.8,
+      "ln_a_over_ai": 0.22654713548205696,
+      "R_nu": 1.0001013064769164,
+      "R_B": 1.010263060118666,
+      "R_B_adiab": 1.0099560837440176,
+      "R_B_entropy": 1.0003039502207958,
+      "gs": 10.45645002542788,
+      "nB_conserved_over_nB_code_normalized_at_ref": 2.82522784758033
+    },
+    {
+      "T_MeV": 0.6,
+      "ln_a_over_ai": 0.5215204302682026,
+      "R_nu": 1.0004055465151958,
+      "R_B": 1.0326046736028094,
+      "R_B_adiab": 1.0313493842160277,
+      "R_B_entropy": 1.0012171330162147,
+      "gs": 10.239551677798984,
+      "nB_conserved_over_nB_code_normalized_at_ref": 2.7641007287623904
+    },
+    {
+      "T_MeV": 0.5,
+      "ln_a_over_ai": 0.7110633043354565,
+      "R_nu": 1.0007941189167657,
+      "R_B": 1.0552190453770265,
+      "R_B_adiab": 1.0527091245672138,
+      "R_B_entropy": 1.0023842491256503,
+      "gs": 10.031788526472395,
+      "nB_conserved_over_nB_code_normalized_at_ref": 2.704863358307915
+    },
+    {
+      "T_MeV": 0.3,
+      "ln_a_over_ai": 1.2615331099632296,
+      "R_nu": 1.0038932545843775,
+      "R_B": 1.1884868185310422,
+      "R_B_adiab": 1.1747129624372465,
+      "R_B_entropy": 1.0117252950586475,
+      "gs": 8.989902772193444,
+      "nB_conserved_over_nB_code_normalized_at_ref": 2.4015607799140484
+    },
+    {
+      "T_MeV": 0.2,
+      "ln_a_over_ai": 1.7322671897280535,
+      "R_nu": 1.0109491560338217,
+      "R_B": 1.445547050934415,
+      "R_B_adiab": 1.399085610479952,
+      "R_B_entropy": 1.0332084327838416,
+      "gs": 7.548183784066945,
+      "nB_conserved_over_nB_code_normalized_at_ref": 1.9744935517553577
+    },
+    {
+      "T_MeV": 0.15,
+      "ln_a_over_ai": 2.0888865508486316,
+      "R_nu": 1.0200578315325468,
+      "R_B": 1.777663208997962,
+      "R_B_adiab": 1.6748468496946682,
+      "R_B_entropy": 1.0613885140137063,
+      "gs": 6.305385665245399,
+      "nB_conserved_over_nB_code_normalized_at_ref": 1.6056040966487979
+    },
+    {
+      "T_MeV": 0.1,
+      "ln_a_over_ai": 2.6035365719152477,
+      "R_nu": 1.0375175647666643,
+      "R_B": 2.4666339224305966,
+      "R_B_adiab": 2.208606399444886,
+      "R_B_entropy": 1.116828205809129,
+      "gs": 4.7815470063839705,
+      "nB_conserved_over_nB_code_normalized_at_ref": 1.1571329271335296
+    },
+    {
+      "T_MeV": 0.07818527068831994,
+      "ln_a_over_ai": 2.898273926161201,
+      "R_nu": 1.0466380217044864,
+      "R_B": 2.854223330828976,
+      "R_B_adiab": 2.4894214613038206,
+      "R_B_entropy": 1.1465408229163783,
+      "gs": 4.242172521488243,
+      "nB_conserved_over_nB_code_normalized_at_ref": 1
+    }
+  ],
+  "distinct_scope": "Conditional source model no-PBH inverse temperature integration only; real physical time trajectories, helium, PBH limits and actual author full Julia not executed",
+  "status": "ORIGINAL_SOURCE_TWO_RUNTIME_ARITHMETIC_PASS / NONINDEPENDENT_NEUTRINO_ENTROPY_NULL / DISTINCT_FIXED_ETA_BARYON_PROXY_NULL / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN"
+}
