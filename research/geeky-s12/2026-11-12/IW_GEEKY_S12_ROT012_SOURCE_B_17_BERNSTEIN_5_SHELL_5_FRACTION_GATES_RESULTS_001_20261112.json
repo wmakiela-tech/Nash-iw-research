@@ -1,0 +1,109 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT012_SOURCE_B_17_BERNSTEIN_5_SHELL_5_FRACTION_GATES_RESULTS_001_20261112",
+  "date": "2026-11-12",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "source": {
+    "original_M13_direct_B_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "source_sha256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f",
+    "scope": "N41 five nested masks B, auxiliary source Fourier TT, one common positive gain"
+  },
+  "positive_audit": {
+    "implementation": "Independently authored Python sparse 2D polynomial and mpmath.iv 70 dps, not the prior BigInt JS source",
+    "signs_strict": 17,
+    "signs_pass": 17,
+    "shell_positive_strict": 5,
+    "shell_positive_pass": 5,
+    "all_decisions_interval_not_float": true,
+    "bounds": {
+      "P_rectangles": [
+        6817.9921478471815,
+        14508.510376279692,
+        1317636.7138938764,
+        2776.2777890533757,
+        179369.80345567147
+      ],
+      "P_small": 310.21019948274386,
+      "derivative_beta_P_small": 38348.39646897166,
+      "F0_subdivisions": [
+        1.0372508111102976,
+        0.7341345112667048,
+        2.7138745452810373,
+        7.654278560167522,
+        32.440423812103816,
+        269.38736547190854,
+        2967.9821869606,
+        1145626.1474003564
+      ],
+      "P_shifted_line": [
+        1687.9594888238569,
+        3234.134838870772
+      ],
+      "shell_lower_bounds": [
+        0.009861818352395727,
+        0.013090462972866413,
+        0.018239007511768848,
+        0.024583138646238557,
+        0.033356545541269086
+      ]
+    },
+    "H_minus_alpha_minus_beta_P_coefficients_include_zero": true,
+    "H_polynomial_coefficient_max_abs_interval_endpoint_approx": 3.6206575134865497e-26,
+    "caveat": "zero-inclusion is a consistency check, not itself formal proof of universal symbolic identity"
+  },
+  "negative_audit": {
+    "method": "Independently authored Python fractions.Fraction exact rational source directed intervals; strict comparisons not float",
+    "alpha": "1541/50000",
+    "delta": "1257/50000",
+    "betas": {
+      "zero": "0",
+      "witness": "1/1000000",
+      "nearest_left": "71/12500",
+      "nearest_right": "1399/25000"
+    },
+    "D2_times_10pow24_display_only": {
+      "zero": 0.28632718240805416,
+      "witness": 0.28632991635915184,
+      "left": 0.28635263194909905,
+      "right": 0.48950199921011717
+    },
+    "strict_comparisons": {
+      "witness_better_than_left": true,
+      "witness_better_than_right": true,
+      "zero_better_than_witness": true,
+      "zero_better_than_left": true,
+      "zero_better_than_right": true
+    },
+    "strict_rational_lower_gaps_times_10pow24_display_only": {
+      "left_minus_witness": 0.000022715589947220624,
+      "right_minus_witness": 0.20317208285096536,
+      "witness_minus_zero": 0.000002733951097639832,
+      "left_minus_zero": 0.000025449541044860457,
+      "right_minus_zero": 0.20317481680206298
+    },
+    "conditional_global_minimizer": "beta=0, IF ROT007 previously proved three-candidate reduction is valid for all alpha,delta"
+  },
+  "offline_reproduction": {
+    "archive_filename": "Geeky_S12_ROT012_independent_sign_and_witness_audit.zip",
+    "archive_sha256": "dcf9553a7490054f4e638cd9f78536ef394c6ca6194d7df67715a8028d1ba28c",
+    "bytes": 13036,
+    "members": 9,
+    "crc_and_member_byte_comparison": "PASS",
+    "original_executed_python_scripts_sha256": [
+      "1996e9dff662e498ff7b2688f953298d7a083a02ec731ab0261a1d28c777fbf9",
+      "ead662993d43f259ae577a8770a62edea80f21f6fd99ada60220c16533c00d9b"
+    ]
+  },
+  "statuses": [
+    "SAME_CELL_TWO_INDEPENDENT_IMPLEMENTATION_PATHS_PASS",
+    "INDEPENDENT_EXTERNAL_REC11_AUD1_REFEREE_PENDING",
+    "M14_OWNER_ADOPTION_PENDING",
+    "GITHUB_PENDING_BW_INGEST",
+    "SOURCE_M13_AUXILIARY_ONLY",
+    "HISTORIC_PRODUCER_MISSING",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
