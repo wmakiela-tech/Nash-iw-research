@@ -1,0 +1,24 @@
+{
+  "artifact_id": "IW_XH_S6_ROT007_ORIGINAL_NPZ_PYTHON_360_CROSS_RUNTIME_REPLAY_001_20261112",
+  "author_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "author_git_blobs": {
+    "DLPFCcombined_m4.npz": "47142e3dee920a759406136449f0b12f9ce752ee",
+    "MTbroadsharp_m10.npz": "c5e701740f8ab1d19ca07415c0de2d6e7f88c37f"
+  },
+  "compared": 360,
+  "elapsed_s": 1.5858028429999997,
+  "failed": 0,
+  "failures": [],
+  "full_python_cross_runtime_weight_replay": "PASS",
+  "max_margin_abs_error": 4.884981308350689e-15,
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_novelty": true,
+  "passed": 360,
+  "prior_reference_csv_blobs": {
+    "motion_dots": "88bd42f4ce793c823faf5bc8e804b466ce643624",
+    "reward_ring": "f8a4e12e7fd706112bbe273bd437675ec55ebc3a"
+  },
+  "scope": "Python NumPy independent implementation of author source mathematical recurrence, original author frozen NPZ; no noise; no original PsychRNN module runtime; no experimental data",
+  "source_numpy": "2.1.3"
+}
