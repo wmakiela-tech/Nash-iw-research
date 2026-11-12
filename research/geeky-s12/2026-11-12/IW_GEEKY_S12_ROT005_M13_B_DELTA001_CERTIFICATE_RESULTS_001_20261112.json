@@ -1,0 +1,130 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT005_M13_B_DELTA001_CERTIFICATE_RESULTS_001_20261112",
+  "origin_cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "generated_at": "2026-11-12",
+  "exposure": "PUBLIC",
+  "source": {
+    "repo": "wmakiela-tech/Nash-iw-research",
+    "path": "research/m13/2026-10-26/direct_B.json",
+    "git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "kind": "M13_FUNCTIONALLY_MATCHED_FOURIER_STENCIL_DIRECTED_INTERVALS"
+  },
+  "domain": {
+    "N": 41,
+    "channel": "B",
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "alpha_domain": [
+      "0",
+      "1/5"
+    ],
+    "beta_domain": [
+      "0",
+      "1/5"
+    ],
+    "delta": "1/100",
+    "cut": "7/250",
+    "common_positive_energy_gain": true
+  },
+  "certificate": {
+    "method": "Original decimal interval endpoints interpreted as exact rationals; exact BigInt rational interval arithmetic; source-typed formal Q/R polynomial factorization; multivariate Bernstein lower coefficient tests.",
+    "shell_energy_min_Bernstein_lower_scaled_1e12": [
+      0.009861818352395727,
+      0.01309046297286641,
+      0.01823900751176885,
+      0.024583138646238557,
+      0.03335654554126909
+    ],
+    "P_big_rectangles": [
+      {
+        "alpha": [
+          "0",
+          "1/10"
+        ],
+        "beta": [
+          "1/100",
+          "21/200"
+        ],
+        "bernstein_min_lower_approx": 2150.933367322344
+      },
+      {
+        "alpha": [
+          "0",
+          "1/10"
+        ],
+        "beta": [
+          "21/200",
+          "1/5"
+        ],
+        "bernstein_min_lower_approx": 1317636.7138938769
+      },
+      {
+        "alpha": [
+          "1/10",
+          "1/5"
+        ],
+        "beta": [
+          "1/100",
+          "1/5"
+        ],
+        "bernstein_min_lower_approx": 30311.10008238848
+      }
+    ],
+    "P_small": {
+      "alpha": [
+        "0",
+        "7/250"
+      ],
+      "beta": [
+        "0",
+        "1/100"
+      ],
+      "min_lower_approx": 310.2101994827438
+    },
+    "derivative_beta_P_small": {
+      "alpha": [
+        "7/250",
+        "1/5"
+      ],
+      "beta": [
+        "0",
+        "1/100"
+      ],
+      "min_lower_approx": 38348.39646897167
+    },
+    "F0": {
+      "definition": "N(alpha,0)q(alpha-1/100)-N(alpha,alpha-1/100)q(0)",
+      "alpha": [
+        "7/250",
+        "1/5"
+      ],
+      "min_lower_approx": 244.72700581121606
+    },
+    "verdict": "PASS_EXACT_RATIONAL_INTERVAL_BERNSTEIN"
+  },
+  "conclusion": "For every alpha in [0,1/5], the global minimum over legal beta with |beta-alpha|>=1/100 lies among the nearest legal endpoints alpha±1/100.",
+  "important_countercontrol": "Geeky-S12 ROT004 disproves the ALL-delta extension at alpha=39/1000 delta=7/200; no contradiction with fixed delta 1/100.",
+  "interpretation_ceiling": [
+    "NO_HISTORIC_RUNTIME_BYTE_IDENTITY",
+    "NO_PHYSICAL_INFERENCE",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "REFEREE_PENDING",
+    "OWNER_ADOPTION_PENDING",
+    "GITHUB_PENDING_BW_INGEST"
+  ],
+  "note": "All numerical values are approximations to exact rational STRICT interval lower bounds, not tolerances or physical error bars."
+}
