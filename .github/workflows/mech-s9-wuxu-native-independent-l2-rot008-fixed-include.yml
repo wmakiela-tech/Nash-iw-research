@@ -1,0 +1,94 @@
+name: Mech-S9 ROT008 fixed-include independent native Julia GPT L2 roots
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-wuxu-native-independent-l2-rot008-fixed-include.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  independent-native-L2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 95
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s9_rot008_native_L2"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify independent operator and historical source pins
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          git rev-parse HEAD > "$OUTDIR/REPO_COMMIT"
+          julia --version > "$OUTDIR/JULIA_VERSION"
+          test "$(git hash-object research/mech-s9/2026-11-12/mech_s9_rot008_independent_native_L2_FIXED_INCLUDE.jl)" = "5ca59bd911bbd12e4bb2b3deca9fbd3fa4ed0506"
+          test "$(git hash-object research/badacz/2026-11-08/data/yp051/yp051_analysis.json)" = "26870ac53e285363f1829e64f72659aa7a28b5c6"
+          sha256sum research/mech-s9/2026-11-12/mech_s9_rot008_independent_native_L2_FIXED_INCLUDE.jl \
+            research/mech-s9/2026-11-12/mech_s9_rot007_L2_referee_comparison_stdlib.py \
+            research/badacz/2026-11-08/data/yp051/yp051_analysis.json > "$OUTDIR/INPUT_SHA256SUMS"
+          echo "INDEPENDENT_OPERATOR_PIN_PASS"
+      - name: Obtain exact original Wu-Xu Julia model
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/AUTHOR_COMMIT"
+          echo "EXACT_ORIGINAL_WUXU_PASS"
+      - name: Install pinned Mech-S6 native Julia 1.12.3 dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" > "$OUTDIR/SETUP_STDOUT" 2> "$OUTDIR/SETUP_STDERR"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' > "$OUTDIR/PKG_STATUS" 2>&1
+          echo "JULIA_PINNED_ENV_PASS"
+      - name: Independent GPT observation operator and native adaptive root searches
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" \
+            research/mech-s9/2026-11-12/mech_s9_rot008_independent_native_L2_FIXED_INCLUDE.jl \
+            "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" \
+            "$GITHUB_WORKSPACE/$OUTDIR" \
+            > "$OUTDIR/NATIVE_L2_STDOUT" 2> "$OUTDIR/NATIVE_L2_STDERR"
+          test -s "$OUTDIR/independent_L2_roots.csv"
+          test -s "$OUTDIR/independent_L2_raw_calls.csv"
+          echo "AUTHOR_NATIVE_JULIA_WITH_INDEPENDENT_L2_OPERATOR_PASS"
+      - name: Referee-neutral post-run comparison with original Badacz reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-12/mech_s9_rot007_L2_referee_comparison_stdlib.py \
+            "$OUTDIR/independent_L2_roots.csv" \
+            research/badacz/2026-11-08/data/yp051/yp051_analysis.json \
+            "$OUTDIR/independent_L2_vs_badacz_REFERENCE.json" \
+            > "$OUTDIR/L2_REFERENCE_COMPARISON_STDOUT" \
+            2> "$OUTDIR/L2_REFERENCE_COMPARISON_STDERR"
+          test -s "$OUTDIR/independent_L2_vs_badacz_REFERENCE.json"
+          echo "L2_REFEREE_COMPARATOR_RAN_RESULTS_REPORT_IN_ARTIFACT"
+      - name: Record all existing raw inputs and outputs (no bot Git push)
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - name: Upload source-native logs, all evaluated beta points and contour roots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot008-wuxu-native-independent-gpt-L2-FIXED
+          path: mech_s9_rot008_native_L2/
+          if-no-files-found: error
