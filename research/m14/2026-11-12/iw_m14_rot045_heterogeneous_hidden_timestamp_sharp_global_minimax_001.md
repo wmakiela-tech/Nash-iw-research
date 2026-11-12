@@ -1,0 +1,22 @@
+# M14 ROT045 — heterogeneous hidden timestamp tolerances and exact tetrahedral global minimax
+
+artifact_id: IW_M14_ROT045_HETEROGENEOUS_HIDDEN_TIMESTAMP_MINIMAX_001_20261112
+return_id: M14-ROT045-HETEROGENEOUS_HIDDEN_JITTER_EXACT_PARTITION_DISCREPANCY_MINIMAX_001_20261112
+date: 2026-11-12 | origin: IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_09 / M14
+exposure: PUBLIC | claim ceiling: EXACT_CLASSICAL_CONDITIONAL_GAUSSIAN_MINIMAX / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / BW_PENDING / REFEREE_PENDING
+
+SOURCE FIRST: XH-S5 ROT007 owns Schall, Lindner, Rottstaedt et al., *Laser-enhanced quantum sensing boosts sensitivity and dynamic range*, Nature Communications **17** (2026) 10825, DOI https://doi.org/10.1038/s41467-026-78386-z, published Oct 22. Their 127 fT/sqrtHz is a photon-shot-noise LIMIT, NOT measured technical-noise device sensitivity. No author-native timestamped data, Lipschitz H, jitter eps_i or Gaussian centroid errors validated. Own ROT044 first proved equal-epsilon global minmax; ROT045 gives unequal epsilon_i for the SAME four-axis model.
+
+FROZEN HYPOTHETICAL MODEL: static vector field z in R3; four tetrahedral axis rows A=(+++,+--,-+-,--+), A^TA=4I, A^T1=0, AA^T=4I-11^T. Four nominally simultaneous sensor channels i with H-Lipschitz ONE common unknown scalar function h, but UNOBSERVED actual timestamps delta_i in [-eps_i,+eps_i]. Unknown eps_i tolerances are pre-certified nonnegative bounds, generally UNEQUAL. Unit observations Y_i=a_i.z+h(delta_i)+independent N(0,sigma²), total N equally costly shots, repeat allocation can depend on previous observations but no new timestamps or observed true delta_i. h and hidden delta are adversarial, not distribution-known jitter.
+
+NEW R45.1 EXACT geometric bias: define d(eps)=min_{s_i in +/-1}|sum_i s_i eps_i| and B²=H²/16*[4sum eps_i²-d(eps)²]. Since h(delta_i)-h(0) in [-H eps_i,H eps_i], four-axis projector A^T/4 sends allowed nuisance into image of rectangular box. Convex quadratic norm max lies at one of 16 vertices. Identity ||A^T v/4||²=(4sum v_i²-(sum v_i)²)/16 yields B². EVERY allowed box vector is legal with a single h(t)=Ht+c and delta_i=v_i/H, so B² is SHARP.
+
+NEW R45.2 ALL-ESTIMATOR/ADAPTIVE Gaussian GLOBAL MINIMAX (N divisible 4):
+**R45*=3sigma²/N+B².**
+UPPER: equal N/4 shots per channel, zhat=A^T Ybar/4; Cov=sigma² I3/N and squared worst bias B². LOWER: choose sign vertex s reaching B²; alpha_i=H s_i eps_i, v=A^T alpha/4, c=sum alpha_i/4, so a_i.v=alpha_i-c. Construct two full worlds indexed S=+/-1: z_S=u+S v, delta_i,S=-S s_i eps_i, h_S(t)=Ht+S c, giving ALL FOUR channel means exactly a_i.u. Thus S remains invisible even to adaptive measurement histories. Proper u~N(0,tau² I3) yields posterior precision Q=tau^-2 I3+sigma^-2 sum a_i a_i^T with pathwise trace 3tau^-2+3N/sigma². Any estimator risk at least 3/(tau^-2+N/sigma²)+||v||². Let tau→infinity. Same result for biased estimators; for indivisible integer N formula a lower bound, not automatically attained.
+
+EXACT heterogeneous examples H1: eps=(1,1,1,1)->B²=1 (ROT044 control), (1,1,1,0)->11/16, (1,1,0,0)->1/2, (1,0,0,0)->3/16, (2,1,1,0)->3/2. For eps=(1/20,1/30,1/50,1/100), H3/5,sigma²7/10,N80: d=1/150, B²=369/1,000,000, R=26619/1,000,000=0.026619.
+
+Independent reproducibility LOCAL full Polish proof + 3 scripts + JSON/manifest: ZIP IW_M14_ROT045_HETEROGENEOUS_JITTER_GLOBAL_MINIMAX_REPRO_001_20261112.zip (11048 bytes), SHA256 **c28faeffdedb9efd73145a1c7c9dec4c96c90d0fe5c56e7593e51f28ccc7b9f5**. CRC PASS, 8/8 payload SHA PASS, exact Fraction 428 checks, independent mpmath90/NumPy 12036 checks incl 12000 legal random smooth h and 150000 Gaussian MC; empirical risk 0.02656518 vs theory 0.026619 (0.202% relative). Two full scripts rerun after CLEAN extraction, JSON byte identical 2/2, pure stdlib third script PASS. Monte Carlo is a check, not global proof. Full ZIP LOCAL ONLY, public shortened note and exact stdlib code separately pinned.
+
+STOP: no original time-varying NV source counts, no measured H/eps/sigma, physical gain in fT, generalized new math, NASH J3/K GR/GW/PBH physics, REC11/AUD1 independent return, BW custody or LT adoption. NO_NOVELTY / NO_NASH_PHYSICS / NO_CANON / NO_EXEC_SIGN / BW_PENDING / REFEREE_PENDING / NO_NEW_TASK_CASCADE. POSTED != ACK.
