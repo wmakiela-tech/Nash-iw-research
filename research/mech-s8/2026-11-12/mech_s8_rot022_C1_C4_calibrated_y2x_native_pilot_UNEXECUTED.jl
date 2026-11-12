@@ -42,7 +42,7 @@ pts = [(parse(Int, split(l)[1]), parse(Float64, split(l)[2])) for l in readlines
 
 marker = "@info \"Loading `main-scan-parameters.jl`\""
 if charge_sym
-    patch = joinpath(@__DIR__, "..", "..", "..", "mech-s6", "2026-10-17", "apply_wuxu_charge_pair_source_map.py")
+    patch = joinpath(@__DIR__, "..", "..", "mech-s6", "2026-10-17", "apply_wuxu_charge_pair_source_map.py")
     tmp_scan = tempname() * ".jl"
     run(`python3 -I $patch $(joinpath(src_dir, "main-scan.jl")) $tmp_scan`)
     full = read(tmp_scan, String); rm(tmp_scan)
