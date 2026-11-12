@@ -1,0 +1,89 @@
+{
+  "artifact_id": "IW_MT15_ROT011_REAL_PYTHON_SOURCE_BLOB_REPLAY_AND_OVERFLOW_REPAIR_001_20261112",
+  "created_at": "2026-11-12",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "scope": "Author source 100x5 hadron NUMBER rate table and two native Badacz event clocks; frozen mass-only source clock; no physical BBN/PBH",
+  "original_source_blobs": {
+    "author": "06d0883a27b108692720422294ba2baacd381a64",
+    "default_clock": "357f2f7656cb6c6bf4cfa419c7e33c4ca2d5f58e",
+    "posthoc_clock": "e0759b4a22c3282d3f11c58412c4b6543e6dc4c7"
+  },
+  "local_execution": {
+    "original_ROT007": "DIRECT_PINNED_SOURCE_REPLAY_PASS",
+    "original_ROT008": "OVERFLOW_ERROR_IN_FLATSTEP_ON_REAL_INPUT_NOT_THEOREM_FAIL",
+    "patched_ROT008": "PINNED_ORIGINAL_SOURCE_REPLAY_PASS",
+    "patched_ROT008_synthetic": "SYNTHETIC_SELFTEST_PASS",
+    "original_rate_grid_rows": 100,
+    "channels": 5,
+    "native_clock_cases": 8,
+    "rot007_random_monotone_step_checks": 1600,
+    "rot008_exact_smooth_bump_target_checks": 16,
+    "three_tampered_source_blob_locks": "REJECT_PASS_3_OF_3",
+    "independent_clean_zip_extract_replay": "PASS",
+    "max_reference_difference": 1.1102230246251565e-16
+  },
+  "source_run_local_sha256": {
+    "rot007": "a52c4f64f4f87a983269640e40960274e4a614a5fb0548071be122a1a34c4173",
+    "rot008_fixed": "bc1467ef748bcca8310717e15cbf17d99bf73e9eaf6e099da1f90a7413a4e5ec",
+    "rot008_fixed_code": "0a412cfcdef3e37e353cb51bbe98c7c5c71fece1c7441166545f2ef9b20996f9",
+    "clean_zip": "bad2d27bd32a5375d873897edf9b4438abb9fcc2f00f259f2de73b013a03d18c"
+  },
+  "patched_code_git_blob": "ac9ebde50f4ad8c09f226bdc6995b2b102a68857",
+  "patched_code_identical_to_locally_executed": true,
+  "original_8": {
+    "ordered_cases": [
+      "DEFAULT j98 beta -30",
+      "DEFAULT j98 beta -19.2",
+      "DEFAULT j99 beta -30",
+      "DEFAULT j99 beta -19.2",
+      "POSTHOC j98 beta -30",
+      "POSTHOC j98 beta -19.2",
+      "POSTHOC j99 beta -30",
+      "POSTHOC j99 beta -19.2"
+    ],
+    "rot007_lower": [
+      0.07222391761949264,
+      0.07449636815991842,
+      0.23225058693607803,
+      0.2355990022953427,
+      0.06630529157881941,
+      0.06597953333073807,
+      0.23136945985774476,
+      0.2313396677164533
+    ],
+    "rot007_upper": [
+      0.08825020889783335,
+      0.090918357146969,
+      0.2730531961386209,
+      0.27649142307639785,
+      0.08107111610413598,
+      0.08067567025003688,
+      0.2721480153116601,
+      0.2721174068191367
+    ],
+    "rot007_author_5_channel_loglog": [
+      0.07986575027148587,
+      0.08225696033743583,
+      0.2516383331655924,
+      0.2550081455797033,
+      0.07342442178903677,
+      0.07306020931817923,
+      0.25074621764347693,
+      0.25071601442815517
+    ],
+    "rot008_positive_smooth_flatstep_baseline": [
+      0.07986361904754416,
+      0.08224427534178325,
+      0.2514634485420437,
+      0.2548953912708576,
+      0.07348969928851304,
+      0.07312155235942373,
+      0.25055813757451495,
+      0.25052752202169226
+    ],
+    "rot008_early_bump_target": 0.01,
+    "rot008_late_bump_target": 0.99
+  },
+  "result_file_provenance": "Numeric rows transcribed directly from locally executed original Python result files; this JSON is an independently curated summary and NOT byte-identical to those original local result JSON files (SHA256 above).",
+  "claim_ceiling": "NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_PBH_BBN_BOUND / E4_SOURCE_HOLD / GITHUB_PENDING_BW_INGEST"
+}
