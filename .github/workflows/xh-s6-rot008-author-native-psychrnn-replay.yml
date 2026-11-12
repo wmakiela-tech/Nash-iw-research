@@ -1,0 +1,51 @@
+name: XH-S6 ROT008 author-native task PsychRNN original weight source control
+on:
+  push:
+    paths:
+      - '.github/workflows/xh-s6-rot008-author-native-psychrnn-replay.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  author-native-task-and-simulator:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out public scientific repository
+        uses: actions/checkout@v4
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned NumPy
+        run: python -m pip install --disable-pip-version-check numpy==2.1.3
+      - name: Fetch frozen original author code and ROT006 reference data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/solkm/formattingRNN.git /tmp/xh-s6-formattingRNN
+          git -C /tmp/xh-s6-formattingRNN checkout --quiet --detach 7889a81e298c01532a313e02971c11dbc9db8eb0
+          test "$(git -C /tmp/xh-s6-formattingRNN rev-parse HEAD)" = '7889a81e298c01532a313e02971c11dbc9db8eb0'
+          mkdir -p /tmp/xh-s6-reference /tmp/xh-s6-native-results
+          curl --retry 2 --fail --location --silent --show-error https://raw.githubusercontent.com/wmakiela-tech/Nash-iw-research/f5e0d00624dc5b6996cb05c6816563dba3a05754/research/xh-s6/2026-11-12/xh_s6_rot006_original_weight_18x10_dots_onset_grid.csv -o /tmp/xh-s6-reference/dots.csv
+          curl --retry 2 --fail --location --silent --show-error https://raw.githubusercontent.com/wmakiela-tech/Nash-iw-research/ebdd2ceec848076bc17656b558c0c44adb875b35/research/xh-s6/2026-11-12/xh_s6_rot006_original_weight_18x10_ring_onset_grid.csv -o /tmp/xh-s6-reference/ring.csv
+      - name: Actually execute original DotsTasks and vendored PsychRNN 360 cases
+        shell: bash
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          python research/xh-s6/2026-11-12/xh_s6_rot008_author_native_task_psychrnn_replay.py \
+            --author-python-data-dir /tmp/xh-s6-formattingRNN/python_code_data \
+            --motion-csv /tmp/xh-s6-reference/dots.csv \
+            --reward-csv /tmp/xh-s6-reference/ring.csv \
+            --output-dir /tmp/xh-s6-native-results | tee /tmp/xh-s6-native-results/xh_s6_rot008_stdout.json
+      - name: Preserve every bounded result even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xh-s6-rot008-author-native-psychrnn-360
+          path: /tmp/xh-s6-native-results/*
+          if-no-files-found: warn
+          retention-days: 30
