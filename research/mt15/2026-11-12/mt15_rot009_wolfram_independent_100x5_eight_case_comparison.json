@@ -1,0 +1,112 @@
+{
+  "artifact_id": "IW_MT15_ROT009_INDEPENDENT_WOLFRAM_ORIGINAL_100X5_MONOTONE_INTEGRAL_AUDIT_DATA_001_20261112",
+  "created_at": "2026-11-12",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "source_author_git_blob": "06d0883a27b108692720422294ba2baacd381a64",
+  "source_clock_default_git_blob": "357f2f7656cb6c6bf4cfa419c7e33c4ca2d5f58e",
+  "source_clock_posthoc_git_blob": "e0759b4a22c3282d3f11c58412c4b6543e6dc4c7",
+  "previous_rot007_result_git_blob": "bd8af5686fe18709a2e3c60a4efac7d07943c01a",
+  "first_execution": "WOLFRAM_LANGUAGE_EVALUATOR_ACTUALLY_EXECUTED_WITH_LIVE_GITHUB_100X5_MATRIX_AND_CLOCK_NUMBERS",
+  "original_fixture_python_native": "NOT_EXECUTED",
+  "witness_scope": "fixed source-table values; assumed positive nonincreasing between-node interpolation; source clock x^2; number only",
+  "cases": [
+    {
+      "j": 98,
+      "log10beta": -30,
+      "clock": "DEFAULT",
+      "wolfram_inf": 0.07222391761949262,
+      "wolfram_sup": 0.08825020889783333,
+      "rot007_js_inf": 0.07222391761949264,
+      "rot007_js_sup": 0.08825020889783335,
+      "abs_delta_inf": 1.3877787807814457e-17,
+      "abs_delta_sup": 1.3877787807814457e-17
+    },
+    {
+      "j": 98,
+      "log10beta": -19.2,
+      "clock": "DEFAULT",
+      "wolfram_inf": 0.07449636815991842,
+      "wolfram_sup": 0.09091835714696904,
+      "rot007_js_inf": 0.07449636815991842,
+      "rot007_js_sup": 0.09091835714696901,
+      "abs_delta_inf": 0,
+      "abs_delta_sup": 2.7755575615628914e-17
+    },
+    {
+      "j": 99,
+      "log10beta": -30,
+      "clock": "DEFAULT",
+      "wolfram_inf": 0.232250586936078,
+      "wolfram_sup": 0.27305319613862095,
+      "rot007_js_inf": 0.23225058693607797,
+      "rot007_js_sup": 0.27305319613862095,
+      "abs_delta_inf": 2.7755575615628914e-17,
+      "abs_delta_sup": 0
+    },
+    {
+      "j": 99,
+      "log10beta": -19.2,
+      "clock": "DEFAULT",
+      "wolfram_inf": 0.23559900229534267,
+      "wolfram_sup": 0.2764914230763979,
+      "rot007_js_inf": 0.23559900229534267,
+      "rot007_js_sup": 0.2764914230763979,
+      "abs_delta_inf": 0,
+      "abs_delta_sup": 0
+    },
+    {
+      "j": 98,
+      "log10beta": -30,
+      "clock": "POSTHOC_1e-4",
+      "wolfram_inf": 0.06630529157881941,
+      "wolfram_sup": 0.08107111610413599,
+      "rot007_js_inf": 0.06630529157881943,
+      "rot007_js_sup": 0.08107111610413598,
+      "abs_delta_inf": 1.3877787807814457e-17,
+      "abs_delta_sup": 1.3877787807814457e-17
+    },
+    {
+      "j": 98,
+      "log10beta": -19.2,
+      "clock": "POSTHOC_1e-4",
+      "wolfram_inf": 0.06597953333073808,
+      "wolfram_sup": 0.08067567025003687,
+      "rot007_js_inf": 0.06597953333073808,
+      "rot007_js_sup": 0.08067567025003687,
+      "abs_delta_inf": 0,
+      "abs_delta_sup": 0
+    },
+    {
+      "j": 99,
+      "log10beta": -30,
+      "clock": "POSTHOC_1e-4",
+      "wolfram_inf": 0.23136945985774476,
+      "wolfram_sup": 0.27214801531166016,
+      "rot007_js_inf": 0.23136945985774476,
+      "rot007_js_sup": 0.27214801531166016,
+      "abs_delta_inf": 0,
+      "abs_delta_sup": 0
+    },
+    {
+      "j": 99,
+      "log10beta": -19.2,
+      "clock": "POSTHOC_1e-4",
+      "wolfram_inf": 0.23133966771645326,
+      "wolfram_sup": 0.2721174068191367,
+      "rot007_js_inf": 0.2313396677164533,
+      "rot007_js_sup": 0.27211740681913676,
+      "abs_delta_inf": 5.551115123125783e-17,
+      "abs_delta_sup": 5.551115123125783e-17
+    }
+  ],
+  "max_abs_double_difference": 5.551115123125783e-17,
+  "status": "NUMERIC_SOURCE_CROSS_LANGUAGE_PASS_8_CASES",
+  "negative_claims": [
+    "NOT independent original Julia/BlackHawk/PYTHIA execution",
+    "NOT physical PBH or BBN bound",
+    "NOT a proof of physical inter-node monotonicity",
+    "NOT proof of high-precision author generator source",
+    "NO_NOVELTY / NO_CANON / NO_EXEC_SIGN"
+  ]
+}
