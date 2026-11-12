@@ -159,10 +159,15 @@ function Y_at(m, lb)
     return 2 * Float64(interp(xquery))
 end
 
+# Fail closed if a shared T1 is not a correct SAME-RUNTIME SBBN calibration.
+# β=1e-30 as in Badacz REVIEW053; this is a control, not a physical beta=0 certificate.
+const ROT022_SBBN_J22 = Y_at(m_PBH_f_list[23], -30.0)
+abs(ROT022_SBBN_J22 - 0.245) <= 5e-5 ||
+    error("FAIL: T1 is not the measured SBBN calibration in this solver/source/variant")
 open(out_file, "w") do io
     println(io, "# variant=", variant, " charge_map=", charge_sym ? "B_sym(Mech-S6 patch)" : (charge_nsym ? "B_nsym(nucleons halved, Badacz patch)" : "B_exec(authors)"),
             " tolmode=", tolmode, " logm1_GeV=", @sprintf("%.12g", _logm1))
-    println(io, "# ROT022 calibrated_Yp=2Xn(T1); T1_MeV=", ROT022_T1_MeV, " source_gate=MODEL_INTERNAL_E4_BLOCK")
+    println(io, "# ROT022 calibrated_Yp=2Xn(T1); T1_MeV=", ROT022_T1_MeV, " SBBN_j22_Yp=", ROT022_SBBN_J22, " source_gate=MODEL_INTERNAL_E4_BLOCK")
     println(io, "j,m_g,log10beta,Yp,seconds")
     for (j, lb) in pts
         m = m_PBH_f_list[j + 1]; t0 = time()
