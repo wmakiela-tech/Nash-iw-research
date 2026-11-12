@@ -1,0 +1,104 @@
+{
+  "ROT009_first12_regression": "PASS",
+  "artifact_id": "IW_XH_S6_ROT010_FOUR_ARM_NOISE_TIMING_ATTRIBUTION_SOURCE_CONTROL_001_20261112",
+  "design": "4 arms: base sham/base stimulated identical RNG; alternative sham/alternative stimulated identical RNG. Cross-seed sham and stimulated introduce independent noise AND independent original random onset draws.",
+  "full_author_250_per_direction": "NOT_RUN",
+  "margin_theorem_violations": 0,
+  "module_summaries": {
+    "DLPFC": {
+      "directions_per_block": 72,
+      "first12_ROT009_regression": "PASS",
+      "first12_paired_stim_changes": 616,
+      "frequencies": {
+        "different_onsets": 0.9909722222222223,
+        "paired_alt_stim_flip": 0.7060185185185185,
+        "paired_stim_flip": 0.7099537037037037,
+        "sham_random_flip": 0.5567129629629629,
+        "unpaired_stim_flip": 0.7831018518518519
+      },
+      "n_per_arm": 4320,
+      "observed_counts": {
+        "different_onsets": 4281,
+        "paired_alt_stim_flip": 3050,
+        "paired_stim_flip": 3067,
+        "sham_random_flip": 2405,
+        "unpaired_stim_flip": 3383
+      },
+      "per_seed_block_mean_rate": {
+        "paired_alt_stim_flip": 0.7060185185185185,
+        "paired_stim_flip": 0.7099537037037037,
+        "sham_random_flip": 0.5567129629629629,
+        "unpaired_stim_flip": 0.7831018518518519
+      },
+      "per_seed_block_rate_stddev": {
+        "paired_alt_stim_flip": 0.03316091103672185,
+        "paired_stim_flip": 0.02837075031419734,
+        "sham_random_flip": 0.0481323387174447,
+        "unpaired_stim_flip": 0.03580849467842548
+      },
+      "seed_blocks": 60,
+      "source_stim_strength": 45,
+      "source_unit": 53
+    },
+    "MT": {
+      "directions_per_block": 72,
+      "first12_ROT009_regression": "PASS",
+      "first12_paired_stim_changes": 862,
+      "frequencies": {
+        "different_onsets": 0.9884259259259259,
+        "paired_alt_stim_flip": 0.9965277777777778,
+        "paired_stim_flip": 0.9969907407407408,
+        "sham_random_flip": 0.5157407407407407,
+        "unpaired_stim_flip": 0.99375
+      },
+      "n_per_arm": 4320,
+      "observed_counts": {
+        "different_onsets": 4270,
+        "paired_alt_stim_flip": 4305,
+        "paired_stim_flip": 4307,
+        "sham_random_flip": 2228,
+        "unpaired_stim_flip": 4293
+      },
+      "per_seed_block_mean_rate": {
+        "paired_alt_stim_flip": 0.9965277777777778,
+        "paired_stim_flip": 0.9969907407407408,
+        "sham_random_flip": 0.5157407407407407,
+        "unpaired_stim_flip": 0.99375
+      },
+      "per_seed_block_rate_stddev": {
+        "paired_alt_stim_flip": 0.006581872071570518,
+        "paired_stim_flip": 0.005770141689674772,
+        "sham_random_flip": 0.051618162302629424,
+        "unpaired_stim_flip": 0.008643399764527424
+      },
+      "seed_blocks": 60,
+      "source_stim_strength": 11,
+      "source_unit": 37
+    }
+  },
+  "n_4arm_cases_per_module": 4320,
+  "n_directions_per_block": 72,
+  "n_seed_blocks_per_module": 60,
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_novelty": true,
+  "observations": 8640,
+  "original_author_classes_executed": true,
+  "original_rot009_script_git_blob": "054299b6b0f0c0def7cfa6b3600d6f56665375ce",
+  "original_source_nonzero_noise": true,
+  "run_seconds": 140.609011333,
+  "source_author_repo_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "source_monkey_experimental_data": "NOT_ACCESSED",
+  "source_original_git_sha": {
+    "DLPFCcombined_m4.npz": "47142e3dee920a759406136449f0b12f9ce752ee",
+    "DotsTasks.py": "ac9e789c69a8ea46ac38303f9d0db524886ba0a9",
+    "MTbroadsharp_m10.npz": "c5e701740f8ab1d19ca07415c0de2d6e7f88c37f",
+    "circledots_fxns.py": "909a65d84174a7eebb0e19273d06ae400dc9094f",
+    "generate_microstim_testdata.py": "e7a6666e0b600ea49bab9755d302c78110ba9bc4",
+    "psychrnn/backend/simulation.py": "d187595af592a888192bfc2dde6f562776b88423",
+    "psychrnn/tasks/task.py": "b3bc5a5ca3fb2b0d2b4b79a4cd5ce8930e142865"
+  },
+  "source_sham_pairing": "PASS",
+  "status": "PASS",
+  "total_model_arm_trials": 34560
+}
