@@ -1,0 +1,143 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT007_M13_B_DELTA_THRESHOLD_0025_TO_002514_CERTIFICATE_RESULTS_001_20261112",
+  "produced_at": "2026-11-12",
+  "source_lineage": "Geeky-S12 / MGPT-BUD-01-SUCCESSOR-12",
+  "exposure": "PUBLIC",
+  "source_lock": {
+    "repo": "wmakiela-tech/Nash-iw-research",
+    "original_M13_direct_B_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "kind": "functionally matched auxiliary N41 5 masks, interval coefficients"
+  },
+  "positive": {
+    "artifact_id": "IW_GEEKY_S12_ROT007_M13_B_ALL_SMALL_DELTA_UP_TO_0025_GLOBAL_NEAREST_ENDPOINT_CERTIFICATE_001_20261112",
+    "immutable_M13_B_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "exact_source_interval_calculation": true,
+    "n": 41,
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "weights": [
+      "7778",
+      "6938",
+      "6146",
+      "5402",
+      "24389"
+    ],
+    "polynomial_sign_gates": 17,
+    "shell_positive_gates": 5,
+    "delta_uniform_range": "0 < delta <= 1/40",
+    "critical_alpha_cut": "7/250",
+    "exceptional_beta_cut": "1/125",
+    "critical_alpha_line_upper": "33/1000",
+    "shell_positivity_lower_bounds_in_scale_1e12": [
+      0.009861818352395727,
+      0.01309046297286641,
+      0.01823900751176885,
+      0.024583138646238557,
+      0.03335654554126909
+    ],
+    "P_big_domain_five_rectangles_Bernstein_lower": [
+      6817.992147847181,
+      14508.510376279697,
+      1317636.7138938769,
+      2776.2777890533757,
+      179369.8034556715
+    ],
+    "P_small_alpha_le_0p028_beta_le_0p008_Bernstein_lower": 310.2101994827438,
+    "derivative_beta_P_alpha_ge_0p028_beta_le_0p008_Bernstein_lower": 38348.39646897167,
+    "F0_at_delta_0p025_alpha_ge_0p028_subdivision_Bernstein_lower": [
+      1.0372508111102978,
+      0.734134511266705,
+      2.7138745452810364,
+      7.654278560167521,
+      32.440423812103816,
+      269.38736547190854,
+      2967.982186960598,
+      1145626.1474003564
+    ],
+    "P_along_beta_alpha_minus_0p025_alpha_0p028_to_0p033_Bernstein_lower": [
+      1687.9594888238569,
+      3234.1348388707725
+    ],
+    "sign_decisions": "ALL 17 EXACT RATIONAL INTERVAL BERNSTEIN GATES PASS",
+    "conclusion": "For every alpha in [0,0.2] and EVERY real delta with 0 < delta <= 0.025, the global D_B² minimizer over beta in [0,0.2] with |beta-alpha| >= delta is among the closest legal endpoints alpha-delta and alpha+delta.",
+    "limits": "Functionally matched M13 auxiliary coefficients ONLY, not byte-identical historic producer, not physical K/J3/TPE, no scientific canon or EXEC."
+  },
+  "negative": {
+    "artifact_id": "IW_GEEKY_S12_ROT007_M13_SOURCE_B_DELTA002514_INTERIOR_FALSIFIER_001_20261112",
+    "source_blob_sha": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "source_type": "M13 original outward interval direct_B.json N41 auxiliary matched generator, NOT historic runtime bytes",
+    "N": 41,
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "weights": [
+      "7778",
+      "6938",
+      "6146",
+      "5402",
+      "24389"
+    ],
+    "true_alpha": "1541/50000",
+    "separation_delta": "1257/50000",
+    "witness_beta": "1/1000000",
+    "witness_interior": true,
+    "nearest_allowed_beta": [
+      "71/12500",
+      "1399/25000"
+    ],
+    "D2_x1e24_approx_not_proof": {
+      "zero": 0.28632718240805416,
+      "interior_witness": 0.28632991635915184,
+      "left_nearest": 0.28635263194909905,
+      "right_nearest": 0.48950199921011717
+    },
+    "exact_upper_witness_less_than_lower_of_both_nearest": [
+      true,
+      true
+    ],
+    "certified_lower_gap_D2_x1e24_approx": [
+      0.000022715589947220627,
+      0.20317208285096533
+    ],
+    "verdict": "EXACT_FRACTION_INTERVAL_COUNTEREXAMPLE_PASS"
+  },
+  "all_delta_three_candidate_reduction": {
+    "scope": "For every alpha∈[0,.2] and every delta∈(0,.2] with nonempty alternative set.",
+    "identity": "minimum D_B² over beta∈[0,.2] separated by delta equals minimum of D_B²(alpha,beta) over legal candidates beta∈{0,alpha-delta,alpha+delta}; beta=0 is included only if alpha>=delta.",
+    "proof_inputs": "positive P on beta>=.008 all alpha; positive P on all beta for alpha<=.028; dP/dbeta>0 on alpha>=.028, beta<=.008 implies D has no low-beta interior minimum.",
+    "status": "EXACT_DERIVED_FROM_CERTIFIED_M13_SOURCE_INTERVAL_GATES"
+  },
+  "first_failure_inf_bracket": {
+    "definition": "delta_first=inf{delta>0 : exists alpha for which nearest-delta endpoints do not contain the global minimizer}",
+    "rigorous_lower": "1/40",
+    "rigorous_upper": "1257/50000",
+    "sharp_value_known": false,
+    "monotonic_failure_asserted": false
+  },
+  "code_reproducer_git_pins": {
+    "positive": "cb939cbd3a939cdbb4633f283b6185d622c80f24",
+    "negative": "e555d8aeff0f1354364f10d494bf320e1cd0f2cf",
+    "published_source_reexecution": true
+  },
+  "status": [
+    "AUTHOR_EXACT_INTERVAL_MATHEMATICAL_PASS",
+    "SOURCE_M13_COEFFICIENT_IDENTITY_FIRST",
+    "INDEPENDENT_REFEREE_PENDING",
+    "M14_OWNER_ADOPTION_PENDING",
+    "GITHUB_PENDING_BW_INGEST",
+    "HISTORIC_RUNTIME_MISSING",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
