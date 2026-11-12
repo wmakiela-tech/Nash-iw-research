@@ -1,0 +1,131 @@
+{
+  "artifact_id": "IW_MT15_ROT008_SOURCE_JET_INVISIBLE_BUMP_NUMERIC_WITNESSES_001_20261112",
+  "created_at": "2026-11-12",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "source_author_git_blob": "06d0883a27b108692720422294ba2baacd381a64",
+  "source_badacz_default_git_blob": "357f2f7656cb6c6bf4cfa419c7e33c4ca2d5f58e",
+  "source_badacz_posthoc_git_blob": "e0759b4a22c3282d3f11c58412c4b6543e6dc4c7",
+  "source_rows": 100,
+  "source_hadron_number_channels": 5,
+  "baseline": "EXPLICIT_CINFINITY_LOG_RATE_FLATSTEP_BETWEEN_EACH_AUTHOR_GRID_NODE",
+  "mass_unit": "x=M/(10^9 g)",
+  "rate_integrals_unit": "(Mstar^3/K) omitted",
+  "late_cell_mass_x": [
+    1,
+    1.0873877705847255
+  ],
+  "early_cell_mass_x": [
+    5.341815539497499,
+    5.808624890369027
+  ],
+  "support_bump_formula": "phi(u)=exp(-1/(1-u^2)) when |u|<1; zero otherwise",
+  "J_late": 0.010566811367696419,
+  "J_early": 1.6106850071997894,
+  "constructive_targets": [
+    0.01,
+    0.99
+  ],
+  "source_js_calculation": "ACTUALLY_EXECUTED",
+  "numeric_baseline_convergence_max_abs_128_vs_512": 1.728742149431639e-12,
+  "local_Python_original_source_execution": "NOT_EXECUTED; local synthetic selftest PASS",
+  "status": "EXACT_CLASSICAL_CINFINITY_POSITIVE_NODE_AND_JET_PRESERVING_NONIDENTIFICATION",
+  "claim_ceiling": "NO_PHYSICAL_HAWKING_OR_BBN_OR_PBH_BOUND / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN",
+  "cases": [
+    {
+      "j": 98,
+      "beta": -30,
+      "clock": "default",
+      "L": 1439012.3511247067,
+      "T": 18018371.42226222,
+      "A_early": 125882863.69020844,
+      "A_late": 1639917535.6914892,
+      "baseline": 0.07986361904754417,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.9900000000000001
+    },
+    {
+      "j": 98,
+      "beta": -19.2,
+      "clock": "default",
+      "L": 1481907.9004630637,
+      "T": 18018371.422262356,
+      "A_early": 130172418.62404402,
+      "A_late": 1635627980.7576668,
+      "baseline": 0.08224427534178325,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.99
+    },
+    {
+      "j": 99,
+      "beta": -30,
+      "clock": "default",
+      "L": 4761922.330453866,
+      "T": 18936836.9759619,
+      "A_early": 457255396.0694247,
+      "A_late": 1398554627.5748417,
+      "baseline": 0.2514634485420437,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.99
+    },
+    {
+      "j": 99,
+      "beta": -19.2,
+      "clock": "default",
+      "L": 4826912.470420152,
+      "T": 18936836.975961506,
+      "A_early": 463754410.0660537,
+      "A_late": 1392055613.5781739,
+      "baseline": 0.2548953912708576,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.99
+    },
+    {
+      "j": 98,
+      "beta": -30,
+      "clock": "posthoc1e-4",
+      "L": 1324164.697490797,
+      "T": 18018371.42226235,
+      "A_early": 114398098.32681733,
+      "A_late": 1651402301.0548925,
+      "baseline": 0.07348969928851304,
+      "early_bump_result": 0.010000000000000002,
+      "late_bump_result": 0.9899999999999999
+    },
+    {
+      "j": 98,
+      "beta": -19.2,
+      "clock": "posthoc1e-4",
+      "L": 1317531.2893845001,
+      "T": 18018371.422262345,
+      "A_early": 113734757.51618767,
+      "A_late": 1652065641.865522,
+      "baseline": 0.07312155235942372,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.99
+    },
+    {
+      "j": 99,
+      "beta": -30,
+      "clock": "posthoc1e-4",
+      "L": 4744778.604249246,
+      "T": 18936836.97596199,
+      "A_early": 455541023.4489626,
+      "A_late": 1400269000.1953125,
+      "baseline": 0.25055813757451495,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.99
+    },
+    {
+      "j": 99,
+      "beta": -19.2,
+      "clock": "posthoc1e-4",
+      "L": 4744198.842516514,
+      "T": 18936836.97596199,
+      "A_early": 455483047.27568936,
+      "A_late": 1400326976.3685858,
+      "baseline": 0.25052752202169226,
+      "early_bump_result": 0.01,
+      "late_bump_result": 0.99
+    }
+  ]
+}
