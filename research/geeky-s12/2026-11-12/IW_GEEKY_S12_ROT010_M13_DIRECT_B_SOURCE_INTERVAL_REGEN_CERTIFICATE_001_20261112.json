@@ -1,0 +1,72 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT010_M13_DIRECT_B_SOURCE_INTERVAL_REGEN_CERTIFICATE_001_20261112",
+  "date": "2026-11-12",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "original_source": {
+    "original_rot33_code_path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "original_rot33_code_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_snapshot_path": "research/m13/2026-10-26/source_snapshot_ch.py",
+    "original_snapshot_git_blob": "c8ea76abd77f2186f868d5e16035b5fb0e0f6231",
+    "original_data_path": "research/m13/2026-10-26/direct_B.json",
+    "original_data_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0"
+  },
+  "execution": {
+    "status": "PASS_ACTUALLY_RUN",
+    "engine": "Python 3.13.5 + mpmath 1.3.0 mpmath.iv.dps=45",
+    "formula_source": "faithful locally transcribed functional source from publicly verified M13 ROT33, NOT byte-identical original code module",
+    "snapshot_script": "original snapshot script body transcribed and checked byte-identical modulo its trailing newline; original snapshot Git blob after LF removal c8ea76abd77f2186f868d5e16035b5fb0e0f6231; executed using local transcribed source module with corrected PYTHONPATH",
+    "inputs": "N41 source Fourier C1,C2,h, centered2 stencil, E_lin, flat Fourier TT, 5 nested interior masks; no coefficients loaded from M13 direct_B",
+    "n": 41,
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source_polynomial_coefficients": 25,
+    "precision_dps": 45,
+    "source_modes": [
+      41,
+      41,
+      41
+    ],
+    "elapsed_wall_seconds_approx": 7.2,
+    "raw_generated_bytes": 7502,
+    "raw_generated_git_blob": "ea650d8f398376fc9903ed27cb563a577ce8cc4b",
+    "published_original_bytes": 7501,
+    "reconciliation": "original source_snapshot_ch.py writes terminal LF; original Git-published direct_B.json has no terminal LF; remove this one terminal LF from generated source JSON",
+    "normalized_regenerated_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "canonical_all_bytes_equal_original": true,
+    "local_runner_sha256": "dcb3e67db8886a1ad4cb9567ef46aca729a5c2543096153e659758ba6e7933a9",
+    "local_canonical_json_sha256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f",
+    "local_zip_sha256": "57842de5dfb8a73f0987afbe3a3670aeaa694ed388718978855991f6d2be044f",
+    "local_zip_crc": "PASS",
+    "files_sha": "4/4 PASS"
+  },
+  "extra_public_reproducer": {
+    "path": "research/geeky-s12/2026-11-12/geeky_s12_rot010_replay_original_M13_snapshot_safely.py",
+    "pinned_commit": "4d5561d785e19d4c328586e9f32b53af3a3d9eab",
+    "source_git_blob": "d2eaa88a21a5adf0411b42cce4d3d7f982c38ee9",
+    "published_byte_readback": "PASS",
+    "scope": "Executes unmodified published M13 source ROT33 and snapshot through staged clone with explicit PYTHONPATH; WRAPPER_NOT_EXECUTED_LOCALLY"
+  },
+  "implications": [
+    "Closes upstream M13 source interval reproducibility gap from Geeky ROT008-009 to all 25 45-digit coefficient enclosures",
+    "Conditional exact rational coefficient certifiers ROT004-007 now additionally supported by genuinely regenerated upstream interval source",
+    "No new independent referee proof of ROT007 global three-candidate reduction or Bernstein positivity",
+    "Does NOT recover or certify byte-identical historical dtc0a_runtime_v0_3_1.py",
+    "Does not establish novel physical insight, empirical noise model, or K/J3/TPE inference"
+  ],
+  "audit_status": [
+    "AUTHOR_MATH_AND_SOURCE_REGEN_PASS",
+    "REFEREE_PENDING",
+    "M14_OWNER_ADOPTION_PENDING",
+    "GITHUB_PENDING_BW_INGEST",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
