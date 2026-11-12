@@ -1,0 +1,7 @@
+# ROT022 minimal smoke: SAME-RUNTIME C1/C2/C3/C4; 2 masses, two beta points each.
+# Exact machine inputs are text decimal labels; runner records log10beta.
+# j0-based, first mass near left wall, second heavy end, no physical bound.
+22 -17.150000
+22 -16.950000
+99 -19.100000
+99 -18.800000
