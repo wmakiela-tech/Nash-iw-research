@@ -1,0 +1,160 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT006_M13_B_UNIFORM_DELTA_LE002_AND_DELTA0026_FALSIFIER_RESULTS_001_20261112",
+  "date": "2026-11-12",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "source": {
+    "file": "research/m13/2026-10-26/direct_B.json",
+    "git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "description": "M13 N41 functionally matched source directed interval quartic coefficients, NOT historic runtime producer"
+  },
+  "positive": {
+    "quantifier": "all alpha in [0,1/5], all delta in (0,1/50]",
+    "beta_domain": "[0,1/5]",
+    "claim": "global profiled squared W-shell distance minimized among the closest admissible beta=alpha+-delta",
+    "method": "Exact source decimal endpoints => BigInt rational interval polynomial/derivative/Gram-wedge; Bernstein positivity",
+    "alpha_cut": "7/250",
+    "exception_beta_cut": "1/125",
+    "shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "shell_min_positive_scaled_1e12": [
+      0.009861818352395727,
+      0.01309046297286641,
+      0.01823900751176885,
+      0.024583138646238557,
+      0.03335654554126909
+    ],
+    "P_large_beta_five_rectangles": [
+      {
+        "alpha": [
+          "0",
+          "1/10"
+        ],
+        "beta": [
+          "1/125",
+          "1/50"
+        ],
+        "bernstein_lower_approx": 6817.992147847181
+      },
+      {
+        "alpha": [
+          "0",
+          "1/10"
+        ],
+        "beta": [
+          "1/50",
+          "21/200"
+        ],
+        "bernstein_lower_approx": 14508.510376279697
+      },
+      {
+        "alpha": [
+          "0",
+          "1/10"
+        ],
+        "beta": [
+          "21/200",
+          "1/5"
+        ],
+        "bernstein_lower_approx": 1317636.7138938769
+      },
+      {
+        "alpha": [
+          "1/10",
+          "1/5"
+        ],
+        "beta": [
+          "1/125",
+          "1/50"
+        ],
+        "bernstein_lower_approx": 2776.2777890533757
+      },
+      {
+        "alpha": [
+          "1/10",
+          "1/5"
+        ],
+        "beta": [
+          "1/50",
+          "1/5"
+        ],
+        "bernstein_lower_approx": 179369.8034556715
+      }
+    ],
+    "P_small_beta": {
+      "alpha": [
+        "0",
+        "7/250"
+      ],
+      "beta": [
+        "0",
+        "1/125"
+      ],
+      "bernstein_lower_approx": 310.2101994827438
+    },
+    "dP_dbeta_small_beta": {
+      "alpha": [
+        "7/250",
+        "1/5"
+      ],
+      "beta": [
+        "0",
+        "1/125"
+      ],
+      "bernstein_lower_approx": 38348.39646897167
+    },
+    "F0_delta_max": {
+      "formula": "N(alpha,0)*q(alpha-1/50)-N(alpha,alpha-1/50)*q(0)",
+      "alpha": [
+        "7/250",
+        "1/5"
+      ],
+      "bernstein_lower_approx": 33.31376488799724
+    },
+    "verified_gates": "8/8 P,dP,F exact rational interval Bernstein positivity + 5/5 shell positivity",
+    "status": "PASS_EXACT_RATIONAL_INTERVAL_CERTIFICATE"
+  },
+  "negative": {
+    "alpha": "4/125",
+    "delta": "13/500",
+    "witness_beta": "1/2000",
+    "nearest_beta": [
+      "3/500",
+      "29/500"
+    ],
+    "absolute_separation_witness": "63/2000",
+    "metrics_normalized_D2_x1e24": {
+      "beta_0": 0.33568804365671784,
+      "witness": 0.3377408984759037,
+      "left_nearest": 0.33927416520511705,
+      "right_nearest": 0.5268633042516114
+    },
+    "strict_gap_lower_approx_x1e24": [
+      0.0015332667292133335,
+      0.18912240577570763
+    ],
+    "status": "PASS_EXACT_RATIONAL_INTERVAL_NON_NEAREST_WITNESS"
+  },
+  "frontier": {
+    "uniform_delta_success_up_to": ".020",
+    "failure_at": ".026",
+    "transition_open_interval": "(.020,.026]",
+    "not_proved_sharp_transition": true
+  },
+  "guard": [
+    "NO_NOVELTY",
+    "NO_HISTORIC_PRODUCER_IDENTITY",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "REFEREE_PENDING",
+    "M14_ADOPTION_PENDING",
+    "GITHUB_PENDING_BW_INGEST"
+  ],
+  "numeric_values": "readability only; strict comparisons use exact rational integer cross-products"
+}
