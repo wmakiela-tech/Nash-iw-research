@@ -85,6 +85,6 @@ function verifyCSV(csv){
 const file=process.argv[2];
 if(!file)throw Error('Usage: node verify_rec11_rot021_wuxu_eos.mjs ORIGINAL_N_around_m_e.csv');
 const raw=readFileSync(file);
-const sha=createHash('sha1').update(Buffer.from('blob '+raw.length+'\\0'.replace('\\0','\\0'))).update(raw).digest('hex');
+const sha=createHash('sha1').update(Buffer.from('blob '+raw.length+String.fromCharCode(0))).update(raw).digest('hex');
 if(sha!=='93f2494f026c5d0587ea40fe08bb938dd9d01fa8')throw Error('FAIL original Git blob '+sha);
 console.log(JSON.stringify({...verifyCSV(raw.toString('utf8')),original_git_blob:sha},null,2));
