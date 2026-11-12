@@ -1,0 +1,5 @@
+# PREREG_062 B: REVIEW_061 configs at the DEFAULT solver tolerance (BADACZ_TOL unset); driver 2026-11-11/code/wuxu_subedge_ramp.jl unchanged
+base22d 22 0 -17.220
+ramp22d 22 1 -17.260
+base28d 28 0 -18.360
+ramp28d 28 1 -18.390

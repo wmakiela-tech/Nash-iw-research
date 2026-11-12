@@ -1,0 +1,5 @@
+# PREREG_062 A: REVIEW_053 driver (2026-11-08/code/wuxu_yp_formula_counterfactual.jl, unchanged) on the ROT022 smoke points; SBBN calibration (j22, j62) runs first
+grid x22a 22 -17.15 0 0 1
+grid x22b 22 -16.95 0 0 1
+grid x99a 99 -19.10 0 0 1
+grid x99b 99 -18.80 0 0 1
