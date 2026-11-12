@@ -5,7 +5,7 @@ Checks are algebraic negative controls, not an independent proof or sensor repla
 The full all-estimator diffuse Gaussian Bayes minimax proof is in the science report.
 """
 from fractions import Fraction as F
-import hashlib
+from pathlib import Path
 import json
 
 A = ((1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1))
@@ -77,7 +77,7 @@ report={
  'limit_fixed_kappa':'sigma2 * kappa',
  'cases':out,
 }
-with open('/mnt/data/m15_rot003/m15_rot003_results.json','w',encoding='utf-8') as f:
+with Path(__file__).with_name('m15_rot003_results.json').open('w',encoding='utf-8') as f:
     json.dump(report,f,ensure_ascii=False,indent=2,sort_keys=True)
     f.write('\n')
 print(json.dumps({'exact_assertions_passed':checks,'m4_kappa_half_risk':'5/8','m4_kappa0_risk':'1/4','m4_kappa1_risk':'1','status':'PASS'},sort_keys=True))
