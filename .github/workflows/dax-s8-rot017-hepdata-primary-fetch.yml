@@ -64,6 +64,54 @@ jobs:
           (out/'receipt.json').write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n')
           print('FINAL_RECEIPT '+json.dumps({'status':receipt['status'],'downloaded':[k for k,v in receipt['requests'].items() if v['status']=='DOWNLOADED_ORIGINAL']},sort_keys=True),flush=True)
           PY
+      - name: Obtain independently packaged Rivet Belle reference with official RPM checksum
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dax-s8-rot017
+          expected='8bed5d37a841e90ffaf1af8fd6f28fc2823c38af87e884d2b78a99a378fc489b'
+          got=0
+          for url in \
+            'https://download.opensuse.org/slowroll/repo/oss/noarch/Rivet-data-4.1.2-2.1.noarch.rpm' \
+            'https://mirror.freedif.org/opensuse/tumbleweed/repo/oss/noarch/Rivet-data-4.1.2-2.1.noarch.rpm'; do
+            echo "RIVET_RPM_ATTEMPT $url"
+            if curl --fail --location --silent --show-error --max-time 135 --max-filesize 55000000 "$url" -o /tmp/dax-s8-rot017/rivet-source.rpm; then
+              if echo "$expected  /tmp/dax-s8-rot017/rivet-source.rpm" | sha256sum --check -; then
+                got=1
+                break
+              else
+                echo 'RIVET_RPM_CHECKSUM_MISMATCH; rejecting bytes'
+              fi
+            fi
+          done
+          if [ "$got" -ne 1 ]; then
+            echo 'RIVET_REFERENCE_SOURCE_ACCESS_BLOCKED_OR_SHA_MISMATCH'
+            rm -f /tmp/dax-s8-rot017/rivet-source.rpm
+          else
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq --no-install-recommends rpm2cpio cpio
+            mkdir -p /tmp/dax-s8-rpm-extract
+            cd /tmp/dax-s8-rpm-extract
+            rpm2cpio /tmp/dax-s8-rot017/rivet-source.rpm | cpio --quiet -id './usr/share/Rivet/BELLE_2007_I749358.yoda.gz'
+            if [ -f usr/share/Rivet/BELLE_2007_I749358.yoda.gz ]; then
+              cp usr/share/Rivet/BELLE_2007_I749358.yoda.gz /tmp/dax-s8-rot017/BELLE_2007_I749358.yoda.gz
+              python3 - <<'PY'
+              import gzip,hashlib,json,pathlib,re
+              p=pathlib.Path('/tmp/dax-s8-rot017/BELLE_2007_I749358.yoda.gz')
+              raw=p.read_bytes()
+              body=gzip.decompress(raw)
+              head=body[:650].decode('utf8','replace')
+              names=re.findall(r'(?m)^BEGIN YODA_\\w+\\s+(\\S+)',body.decode('utf8','replace'))
+              out={'status':'RIVET_PACKAGED_REFERENCE_BYTES_READ','filename':p.name,'compressed_bytes':len(raw),'uncompressed_bytes':len(body),'sha256':hashlib.sha256(raw).hexdigest(),'objects':len(names),'first_objects':names[:8],'first_text':head}
+              pathlib.Path('/tmp/dax-s8-rot017/rivet_reference_receipt.json').write_text(json.dumps(out,indent=2)+'\\n')
+              print('RIVET_REFERENCE_RECEIPT '+json.dumps(out,sort_keys=True),flush=True)
+              PY
+            else
+              echo 'RIVET_RPM_TARGET_YODA_NOT_FOUND_IN_PACKAGED_BYTES'
+            fi
+            rm -f /tmp/dax-s8-rot017/rivet-source.rpm
+          fi
       - name: Save source bytes, hashes and typed access receipt
         if: always()
         uses: actions/upload-artifact@v4
