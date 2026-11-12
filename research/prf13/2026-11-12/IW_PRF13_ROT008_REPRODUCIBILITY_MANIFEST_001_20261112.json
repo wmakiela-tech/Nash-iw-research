@@ -66,7 +66,7 @@
   "outputs": [
     {
       "path": "research/prf13/2026-11-12/IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112.md",
-      "sha256": "c5408b19005704dbf566fc942b450174b593c1e51d0d0d6d62a93a911c2a01e8",
+      "sha256": "8346e2474abf0415b5954402e10974649661ce4607111a89077aefd3d321450c",
       "role": "OTHER",
       "derived_from": [
         "research/prf13/2026-11-12/IW_PRF13_ROT008_BOUNDED_DEPTH_LOCC_RECURSION_REPRO_001_20261112.py"
@@ -125,8 +125,8 @@
     "platform_deviations": []
   },
   "provenance": {
-    "primary_location": "https://github.com/wmakiela-tech/Nash-iw-research/blob/926d4c4fbba17b941432de51d11f2c1cebe61522/research/prf13/2026-11-12/IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112.md",
-    "content_sha256": "c5408b19005704dbf566fc942b450174b593c1e51d0d0d6d62a93a911c2a01e8",
+    "primary_location": "https://github.com/wmakiela-tech/Nash-iw-research/blob/dc5786d1f606dd63d24359c39909fb318f2d6aa6/research/prf13/2026-11-12/IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112.md",
+    "content_sha256": "8346e2474abf0415b5954402e10974649661ce4607111a89077aefd3d321450c",
     "narrative_artifact": "IW_PRF13_ROT008_FINITE_LOCAL_INSTRUMENT_DEPTH_EXPLICIT_GAP_001_20261112",
     "derived_from": [
       "https://github.com/wmakiela-tech/Nash-iw-research/blob/b0ad92550ea735ca2c5d3e9215f611a68034c9da/research/prf13/2026-11-12/IW_PRF13_ROT007_FIRST_LOCAL_INSTRUMENT_QUADRATIC_HELSTROM_LOSS_001_20261112.md",
