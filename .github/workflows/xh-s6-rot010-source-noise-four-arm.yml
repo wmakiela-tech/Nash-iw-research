@@ -1,0 +1,49 @@
+name: XH-S6 ROT010 author source 4-arm noise attribution
+on:
+  push:
+    paths:
+      - '.github/workflows/xh-s6-rot010-source-noise-four-arm.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-author-four-arm:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout frozen scientific host
+        uses: actions/checkout@v4
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install bounded NumPy 2.1.3
+        run: python -m pip install --disable-pip-version-check numpy==2.1.3
+      - name: Clone exact original author source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/solkm/formattingRNN.git /tmp/formattingRNN-rot010
+          git -C /tmp/formattingRNN-rot010 checkout --quiet --detach 7889a81e298c01532a313e02971c11dbc9db8eb0
+          test "$(git -C /tmp/formattingRNN-rot010 rev-parse HEAD)" = 7889a81e298c01532a313e02971c11dbc9db8eb0
+          mkdir -p /tmp/xh-s6-rot010-results
+      - name: Run original author native four-arm 60-seed control
+        shell: bash
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          python research/xh-s6/2026-11-12/xh_s6_rot010_four_arm_source_noise_attribution.py \
+            --author-python-data-dir /tmp/formattingRNN-rot010/python_code_data \
+            --rot009-source research/xh-s6/2026-11-12/xh_s6_rot009_author_native_paired_noisy_microstim.py \
+            --output-dir /tmp/xh-s6-rot010-results \
+            --seed-blocks 60 | tee /tmp/xh-s6-rot010-results/runner_stdout.txt
+      - name: Preserve results even if scientific check fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xh-s6-rot010-original-source-four-arm-noise-60-seeds
+          path: /tmp/xh-s6-rot010-results/*
+          if-no-files-found: warn
+          retention-days: 30
