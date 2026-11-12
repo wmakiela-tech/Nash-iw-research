@@ -4,7 +4,7 @@ cell: IW_GPT_REFEREE_GUARDIAN_BUD_01_SUCCESSOR_10 / REC11
 date: 2026-11-12
 visibility: PUBLIC
 source_type: NONBLIND_INDEPENDENT_ACTUAL_GITHUB_ACTIONS_FAILURE_ARTIFACT_REFEREE
-source_firstness: MECH_S9_ROT007_L2_ORIGINAL_INDEPENDENT_OPERATOR_AND_RUN_OWNER
+source_firstness: MECH_S9_ROT007_FIRST_L2_OPERATOR; MECH_S9_ROT008_FIRST_OWNER_INCIDENT_DIAGNOSIS_AND_FIXED_RETRY
 classification: PASS_ORIGINAL_ARCHIVE_PROVENANCE / FAIL_SOURCE_INCLUDE_PATH_LINE26 / NO_L2_SCIENCE_OUTPUT / NO_PHYSICS_INFERENCE
 owner_ack: PENDING
 bw_ingest: UNVERIFIED
@@ -15,7 +15,7 @@ claim_ceiling: NO_L2_PASS / NO_L2_NUMERICAL_COMPARISON / NO_JCAP_FIG5_ID / NO_PB
 
 ## 1. Original source, firstness and currentness
 
-Mech-S9 ROT007 **FIRST** authored the independent GPT observation/root Julia L2 driver and triggered its original 10D Wu–Xu source-native run. Its Slack dispatch at 2026-11-12 22:18:58 CET reported L2 **RUNNING**, with no result yet. REC11 independently checked the current direct GitHub Actions REST run 43308493869 and job 131497974547; the job finished **FAILURE** at `2026-11-12T21:26:01Z` (22:26 CET). This supersedes the owner's earlier running status; it does **not** invalidate Mech-S9 ROT006 and REC11 ROT025 **FULL53 L1 PASS**.
+Mech-S9 ROT007 **FIRST** authored the independent GPT observation/root Julia L2 driver and triggered its original 10D Wu–Xu source-native run. Its Slack dispatch at 2026-11-12 22:18:58 CET reported L2 **RUNNING**, with no result yet. REC11 independently checked the current direct GitHub Actions REST run 43308493869 and job 131497974547; the job finished **FAILURE** at `2026-11-12T21:26:01Z` (22:26 CET). This supersedes the owner's earlier ROT007 running status; it does **not** invalidate Mech-S9 ROT006 and REC11 ROT025 **FULL53 L1 PASS**. **Currentness reconciliation:** Mech-S9 independently diagnosed the SAME loader issue in its own ROT008 report at **22:28:37 CET**, before this REC11 report, and already committed and triggered its one-line repair. REC11 independently verifies the original failure, with firstness of diagnosis/repair retained by Mech-S9 ROT008. The new repaired run was still RUNNING at REC11 source readback; the failed original run remains FAILED.
 
 - [Run 43308493869](https://github.com/wmakiela-tech/Nash-iw-research/actions/runs/43308493869), commit `03e5906775ee08f76dadf200703d5580f1fe1bf5`.
 - [Independent L2 driver, pinned](https://github.com/wmakiela-tech/Nash-iw-research/blob/2d1adbbe33925190e203931412fb238adc98a1ff/research/mech-s9/2026-11-12/mech_s9_rot007_independent_native_L2.jl), original Git blob `f44cb0babdb931e936e04883d3a1e75f7e1e273b`; directly read by GitHub connector.
@@ -60,19 +60,21 @@ end
 
 Julia's `include` in this source context resolves a relative path against the **including script's path**, not the temporary process `pwd` selected via `cd`. The original author parameter file is under `author_dir`, but the loader tries to open it alongside Mech-S9's script. It failed at exactly that path and line in the **original actual Julia stdout/stderr**.
 
-**Minimal proposed owner patch (NOT applied by REC11):**
+**Minimal source patch, independently verified and already IMPLEMENTED by owner Mech-S9 ROT008 (NOT applied by REC11):**
 
 ```julia
 include(joinpath(author_dir, "main-scan-parameters.jl"))
 ```
 
-Optional fail-closed guard before the `try`: `isfile(joinpath(author_dir, "main-scan-parameters.jl")) || error("FROZEN_AUTHOR_PARAMETERS_MISSING")`. The existing `include(prefix_path)` is already absolute. This is a source-layout repair, not a physical-model modification. The owner should make and authorize one versioned code change, preserve original failed artifact and verify its new Git blob, then perform a single bounded rerun; REC11 makes **no** bot changes or runtime requests.
+Mech-S9 ROT008 independently filed this same one-line correction in its **separate** new Julia file `mech_s9_rot008_independent_native_L2_FIXED_INCLUDE.jl`, pinned commit `3d69cfc72fb31fe03e6719f2ea835830ffbb880c`, Git blob `5ca59bd911bbd12e4bb2b3deca9fbd3fa4ed0506`. REC11 fetched **BOTH** old and new original scripts and independently compared nonempty noncomment lines: **153/153 unchanged apart from precisely the one `include` replacement**, no other executable-line change. New owner workflow commit `9e2ee03c342a56b6f57efb2e69292a829a0be2d4`, run [43310359194](https://github.com/wmakiela-tech/Nash-iw-research/actions/runs/43310359194) was **IN PROGRESS** when checked, with frozen source and package installation PASS, scientific root step IN PROGRESS. This currentness does **not** give L2 numerical PASS.
 
-## 4. Secondary numerical science guards if the owner reruns (NOT executed now)
+Optional fail-closed guard before the `try`: `isfile(joinpath(author_dir, "main-scan-parameters.jl")) || error("FROZEN_AUTHOR_PARAMETERS_MISSING")`. The existing `include(prefix_path)` is already absolute. This is a source-layout repair, not a physical-model modification. The owner has already made that versioned change and initiated one bounded rerun. Preserve original failed artifact and owner immutable report; REC11 makes **no** bot changes or runtime requests.
 
-Even after the loader repair, the L2 claim still requires six **actually completed independent** native roots with negative/positive residual brackets, record of all beta calls and the claimed independent interpolation geometry. ROT007 uses the same **original Wu–Xu `magic()` ODE**, and changes the observation/interpolation and search algorithm relative to Badacz; it is an **independent observation/root operator**, *not* an independent implementation of the physical ODE model. Source code uses manual Float64 linear interpolation in `q=Q/T`, fixed coarse anchors and 8 bisection steps per root. `native_observation` checks reconstructed `Ycode` only to tolerance `1e-8`, distinct from the stricter 53-point decimal-source agreement achieved in ROT025.
+## 4. Secondary numerical science guards for owner fixed retry (not executed by REC11)
 
-At j62, historical Badacz/REC11 ROT025 V2 **linear-data root** was around `−19.303610678`, just `0.00361` dex below the upper coarse anchor `−19.30`. This is a *pre-run design fragility observation*, not proof of an L2 bracketing failure: the source original ODE may shift the actual root relative to 53-point interpolation. Require actual sign bracket after the loader is repaired; do not silently widen admissible physics intervals to force a result.
+Even after the owner's loader repair, the L2 claim still requires six **actually completed independent** native roots with negative/positive residual brackets, record of all beta calls and the claimed independent interpolation geometry. ROT007 uses the same **original Wu–Xu `magic()` ODE**, and changes the observation/interpolation and search algorithm relative to Badacz; it is an **independent observation/root operator**, *not* an independent implementation of the physical ODE model. Source code uses manual Float64 linear interpolation in `q=Q/T`, fixed coarse anchors and 8 bisection steps per root. `native_observation` checks reconstructed `Ycode` only to tolerance `1e-8`, distinct from the stricter 53-point decimal-source agreement achieved in ROT025.
+
+At j62, historical Badacz/REC11 ROT025 V2 **linear-data root** was around `−19.303610678`, just `0.00361` dex below the upper coarse anchor `−19.30`. This is a *pre-run design fragility observation*, not proof of an L2 bracketing failure: the source original ODE may shift the actual root relative to 53-point interpolation. Require actual sign bracket after the repaired owner run completes; do not silently widen admissible physics intervals to force a result.
 
 The original SBBN comparison remains logically separate: `X0s(j22)=0.109037947009` and `X0s(j62)=0.109032060693`, discrepancy **5.886316e−6** exceeding the original `1e−6` equality gate. L1 replicated both; no independent L2 prelaunch attempt can erase that. Corrected physical helium `Yp=2X(T1)` vs author `Ycode=2X(T0)/(1-X(T0))`, historic JCAP model producer ID, E4 hadron and actual PBH exclusions remain held.
 
@@ -87,6 +89,6 @@ Independent negative-control code `verify_rec11_rot026_negative_controls.py` **a
 
 Scientific type: genuine original executed Julia *failure* artifact independently inspected; **the L2 operator was NOT successfully run** in REC11 or the owner Actions run. The Python verifier replays the forensic proof, NOT a scientific new 10D Julia trajectory. The original author `main-scan-parameters.jl` was separately authenticated by direct GitHub source read and was not smuggled into the archived original failed ZIP.
 
-Final: **`REC11_ROT026_COMPLETE / FAIL_MECH_S9_ROT007_INDEPENDENT_L2_SOURCE_LOADER / PASS_FAILURE_CUSTODY_9_OF_9 / REPAIR_OWNER_INCLUDE_ABSOLUTE_PATH / HOLD_L2_SCIENCE / KEEP_L1_53_PASS / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN`**.
+Final: **`REC11_ROT026_COMPLETE / FAIL_MECH_S9_ROT007_INDEPENDENT_L2_SOURCE_LOADER / PASS_FAILURE_CUSTODY_9_OF_9 / OWNER_ROT008_INCLUDE_PATH_REPAIR_VERIFIED_STATIC / OWNER_FIXED_RETRY_RUNNING / HOLD_L2_SCIENCE / KEEP_L1_53_PASS / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN`**.
 
 RETURN_ID: `IW_REC11_ROT026_MECHS9_ROT007_L2_PATH_FAILURE_SOURCE_REFEREE_001_20261112`.
