@@ -1,0 +1,38 @@
+{
+  "artifact_id": "IW_XH_S6_ROT008_AUTHOR_NATIVE_TASK_PSYCHRNN_ORIGINAL_NPZ_REPLAY_001_20261112",
+  "author_source_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "compared": 360,
+  "elapsed_s": 6.568502909999999,
+  "execution_class": "SOURCE_AUTHOR_NATIVE_TASK_CLASSES_AND_VENDORED_PSYCHRNN_SIMULATOR_CLASSES",
+  "expected_total": 360,
+  "failed": 0,
+  "failures": [],
+  "max_author_target_tie_difference": 0,
+  "max_margin_abs_error": 1.5973260492074814e-9,
+  "native_simulator_classes": [
+    "BasicSimulator_linOut",
+    "BasicSimulator"
+  ],
+  "native_task_classes": [
+    "MT_broadInSharpOut_withR",
+    "DLPFC_combined"
+  ],
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_monkey_data": true,
+  "no_novelty": true,
+  "noise": "source input/recurrent set zero, no microstimulation",
+  "passed": 360,
+  "source_pins": {
+    "DLPFCcombined_m4.npz": "47142e3dee920a759406136449f0b12f9ce752ee",
+    "DotsTasks.py": "ac9e789c69a8ea46ac38303f9d0db524886ba0a9",
+    "MTbroadsharp_m10.npz": "c5e701740f8ab1d19ca07415c0de2d6e7f88c37f",
+    "circledots_fxns.py": "909a65d84174a7eebb0e19273d06ae400dc9094f",
+    "motion": "88bd42f4ce793c823faf5bc8e804b466ce643624",
+    "psychrnn/backend/simulation.py": "d187595af592a888192bfc2dde6f562776b88423",
+    "psychrnn/tasks/task.py": "b3bc5a5ca3fb2b0d2b4b79a4cd5ce8930e142865",
+    "reward": "f8a4e12e7fd706112bbe273bd437675ec55ebc3a"
+  },
+  "status": "PASS",
+  "trained_weights": "original public pinned author NPZ"
+}
