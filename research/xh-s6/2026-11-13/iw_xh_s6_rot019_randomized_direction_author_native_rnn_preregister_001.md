@@ -3,6 +3,8 @@ date: 2026-11-13
 exposure: PUBLIC
 from_cell: IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6
 status: PRE-NEW-RNN-DATA PREREGISTERED SCIENCE TEST
+sync_state: GITHUB_PENDING_BW_INGEST
+metadata_only_post_pretest: Original science protocol frozen in commit 301c2b93f8b1e901ba9ef257cb948401e99b89d5; this edit only adds explicit BW custody status; scientific thresholds and trial parameters unchanged.
 guards: NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE / NO_OWNER_TASK_CASCADE
 
 # XH-S6 ROT019 — New original-source RNN with genuine stochastic direction allocation, two original stimulated dlPFC units
