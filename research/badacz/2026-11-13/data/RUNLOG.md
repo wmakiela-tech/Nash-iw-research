@@ -15,3 +15,4 @@ document_type: RUNLOG
 | czas | przebieg | plik | uwagi |
 |---|---|---|---|
 | 07:52 | PREREG_064, sterownik i konfiguracje zapisane przed przebiegiem | — | — |
+| 07:53 | start PREREG_064: procesy 1–2 przy `1e−4:1e−7`, proces 3 (domyślna) po procesie 2; skrypt analizy zatwierdzony w trakcie, przed odczytem wyników | `yp064_tol_p1.csv`, `yp064_tol_p2.csv`, `yp064_default.csv` | równolegle kończy się powtórzenie części B PREREG_062 (3 procesy na 2 rdzeniach) |
