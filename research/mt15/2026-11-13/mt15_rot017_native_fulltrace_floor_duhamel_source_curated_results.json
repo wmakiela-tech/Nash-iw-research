@@ -1,0 +1,100 @@
+{
+  "artifact_id": "IW_MT15_ROT017_NATIVE_WUXU_10D_FLOOR_FULLTRACE_CURATED_SOURCE_RESULTS_001_20261113",
+  "date": "2026-11-13",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "original_authors": "Quan-feng Wu and Xun-Jie Xu, JCAP 02 (2026) 063",
+  "original_author_git_ref": "Fenyutanchan/Primordial-Black-Hole@d395183674cace6c9906a8911bdeb7234ba4040d",
+  "original_author_main_scan_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+  "original_author_parameters_blob": "0d7198ff3557bdbd5753000bb07a7a7405cc24f5",
+  "native_trajectory_owner": "IW_MECH_LINEAGE_001_SUCCESSOR_08 / Mech-S9 ROT013 — FIRST actual native one point",
+  "native_original_github_actions": {
+    "run": 43436800793,
+    "artifact_id": 14045176436,
+    "zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+    "csv_sha256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+    "manifest_sha256_members": "16/16 PASS",
+    "zip_crc": "PASS",
+    "source_magic_calls": 1,
+    "native_samples": 10000,
+    "one_based_first_observed_zero_PBH_sample": 8545,
+    "postev_samples": 1456,
+    "six_postev_floor_flags": "8736/8736",
+    "preev_floor_flags": "0/51264",
+    "original_source_mass_index": 22,
+    "log10beta": -16.9974609375,
+    "original_code_y_helium": 0.25239220435845267
+  },
+  "source_rhs_formula": {
+    "n_eff_per_species": "exp(max(ell_h,-100)) GeV^3",
+    "n_floor_per_species_GeV3": 3.720075976020836e-44,
+    "n_floor_per_species_cm_minus3": 0.004841638935561141,
+    "one_mb_in_GeV_minus2": 2.5681894611475,
+    "one_mb_n_floor_rate_s_inverse": 1.4514868372403778e-19,
+    "A_T": "1.5 Fc_pi(T) + 31 Fc_K(T) + 7 + 28",
+    "B_constant": 62.7,
+    "signed_source": "f_floor(T,X) = k0 * [(1-X)*A(T) - X*B]",
+    "source_weak_kappa": "Gamma_n(T)*(1+exp(-Q/T)) + 1/878.4 s^-1",
+    "source_signed_snapshot_components": "36/36 PASS",
+    "max_abs_snapshot_component_error_s_minus1": 2.465190328815662e-32,
+    "max_rel_snapshot_component_error": 1.4536029594495646e-14
+  },
+  "postev_source_rectangle": {
+    "T_MeV": [
+      0.00810973699892033,
+      1.48260941885709
+    ],
+    "Xn": [
+      1.68560917680474e-11,
+      0.472697125696049
+    ],
+    "min_A": 75.87504105706506,
+    "B": 62.7,
+    "A_over_A_plus_B_at_maxT": 0.5475375686579793,
+    "analytic_rectangle_lower_signed_floor_rate_s_minus1": 1.5053395326433183e-18,
+    "observed_max_signed_floor_rate_s_minus1": 3.558211844838787e-17,
+    "positive_all_1456_samples": true,
+    "native_consequence": "Below-source-floor log densities decrease continuously after cutoff because no injection and positive collision/decay loss, so floor stays active after first postev sample; T/X domain inclusion rigor holds for sampled states, continuum source state scope stated conditionally."
+  },
+  "scalar_comparator": {
+    "definition": "With native Xc(t) and identical frozen T(t) define W'(t)=Gamma_n exp(-Q/T)-kappa(T)W, W(tfirst)=Xc(tfirst), no postev hadrons. Then delta=Xc-W obeys delta'=-kappa delta + f_floor(T,Xc).",
+    "source_numeric_method": "DOP853 SciPy with both linear and PCHIP interpolations of native 1456 time-T-X rows, not another original 10D Julia run",
+    "interpolation_PCHIP": {
+      "T1": {
+        "target_T_MeV": 0.0996888512474581,
+        "t_s": 123.42773687045347,
+        "delta_X": 1.2223991939725277e-15,
+        "undamped_force_integral": 1.352906064701678e-15
+      },
+      "T0": {
+        "target_T_MeV": 0.07818527068831994,
+        "t_s": 214.8591830242949,
+        "delta_X": 2.204222016560413e-15,
+        "undamped_force_integral": 2.5333136123860324e-15,
+        "native_X_interpolated": 0.11205518634474068,
+        "delta_X_over_native_X": 1.967086119315412e-14
+      },
+      "final": {
+        "T_MeV": 0.00810973699892033,
+        "t_s": 20075.8047745077,
+        "delta_X": 3.0952864265192953e-14,
+        "undamped_force_integral": 5.917728409372177e-13,
+        "native_X": 1.68560917680474e-11,
+        "delta_X_over_native_X": 0.0018363013616161938
+      }
+    },
+    "T0_linear_vs_pchip_relative": 0.000002669635730244321,
+    "limitation": "No native 10D no-floor second run, source Yp mapping uncorrected, raw source ODE numerical tolerance uncertainty not certified, response is a scalar same-background model comparison only."
+  },
+  "reproduction": {
+    "original_executed_local_python_sha256": "90970afdd35d638b2948fbeb03435b0835b2311baa0e6a43baff1a8f3c976131",
+    "original_full_locally_executed_JSON_sha256": "fa5a8542d44065e4584b7daceb50df26d162e8c106f1786a22538074559df693",
+    "original_native_zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+    "standalone_offline_bundle_sha256": "524516f6106c8ec50ffae6a0b11531d8c0703324231f08fecf5464ee84fc8942",
+    "standalone_bundle_size_bytes": 724417,
+    "manifest_sha256_payload_files": "5/5 PASS",
+    "clean_new_directory_python_replay": "PASS - source result JSON byte-identical",
+    "github_curated_summary_not_original_full_JSON": true
+  },
+  "claim_ceiling": "NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_PBH_BBN_BOUND / E4_SOURCE_HOLD / NATIVE_COUNTERFACTUAL_NOT_EXECUTED / BW_PENDING"
+}
