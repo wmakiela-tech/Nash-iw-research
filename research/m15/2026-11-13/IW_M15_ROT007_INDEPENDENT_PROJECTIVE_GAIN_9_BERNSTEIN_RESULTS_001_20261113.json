@@ -1,0 +1,77 @@
+{
+  "artifact_id": "IW_M15_ROT007_PROJECTIVE_M13_B25_GAIN_SHARP_THRESHOLD_INDEPENDENT_REFEREE_001_20261113",
+  "source_git_blob_expected": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_coefficient_count": 25,
+  "epsilon": "1/10000000",
+  "source_scale": "10^12",
+  "sign_method": "independent exact rational coefficient convolution + 9 Bernstein coefficient lower signs (not owner code)",
+  "shell_global_positivity": 5,
+  "H_gate_bernstein_positive_count": 9,
+  "H_nine_lower_scaled_1e24": [
+    "6.435003940397e-4",
+    "9.004537210595e-3",
+    "1.666433858830e-2",
+    "2.362878902447e-2",
+    "2.925993319227e-2",
+    "3.230615782397e-2",
+    "3.093152463642e-2",
+    "2.274427287127e-2",
+    "4.824509674401e-3"
+  ],
+  "H_smallest_lower_scaled_1e24": "6.435003940397e-4",
+  "pair_alpha": "1/20",
+  "pair_beta": "3/40",
+  "ratio_intervals_strict_order": true,
+  "pair_ratio_intervals": [
+    {
+      "low": "5.324459410479e-1",
+      "high": "5.324494378276e-1"
+    },
+    {
+      "low": "5.367734469035e-1",
+      "high": "5.367765324343e-1"
+    },
+    {
+      "low": "5.477271459491e-1",
+      "high": "5.477298398648e-1"
+    },
+    {
+      "low": "5.688454944430e-1",
+      "high": "5.688478817402e-1"
+    },
+    {
+      "low": "6.080263284450e-1",
+      "high": "6.080265742845e-1"
+    }
+  ],
+  "pair_kappa_bound": {
+    "low": "6.626786193306e-2",
+    "high": "6.627133247008e-2",
+    "more_than_0p066": true,
+    "less_than_0p067": true
+  },
+  "midpoint_kappa": "6.626959720165e-2",
+  "midpoint_c": "5.702370703999e-1",
+  "midpoint_eta": [
+    "-6.626959720165e-2",
+    "-5.868099860575e-2",
+    "-3.947231539820e-2",
+    "-2.438253108495e-3",
+    "6.626959720165e-2"
+  ],
+  "midpoint_exact_zero_residuals": 5,
+  "global_lower_projective": "kappa_crit(alpha,beta)>tanh(abs(alpha-beta)/16) for alpha!=beta, conditional on source 9-sign gate",
+  "strict_positive_all": true,
+  "status": "INDEPENDENT_I1_BOUNDED_EXACT_MATH_PASS_NOT_HISTORIC_PRODUCER_NOT_REAL_PHYSICS_NOT_EXTERNAL_I3",
+  "pinned_published_source_reexecuted": true,
+  "execution_substrate": "connected V8 using exact public code after stripping only Node hashbang",
+  "original_m13_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "independent_code_blob": "a7a7dfb93fc3c6813fb3ef7b47820c831fac4fbe",
+  "tamper_negative_control": {
+    "original_source_mutation": "mask6 coefficient0 changed to [0,0]",
+    "rejected": true,
+    "reason": "Error: global shell positivity failed"
+  },
+  "no_node_cli_claim": true,
+  "source_firstness": "M13 original, Geeky-S12 ROT015 first"
+}
