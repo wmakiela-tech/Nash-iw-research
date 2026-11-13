@@ -1,0 +1,155 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT018_REENTRY_FALSIFIER_AND_SOURCE_QUADRATIC_CLOSURE_RESULTS_001_20261113",
+  "date": "2026-11-13",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source_class": "Original M13 N41 B five-shell source coefficient family, all 25 directed quartic coeffs independently widened epsilon=1e-7",
+  "source_original_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_original_sha256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f",
+  "theory": {
+    "profile": "Dmin²=min_{c>0,eta_i in [-k,k]} sum_i A_i[r_i-c(1+eta_i)]²",
+    "positive_ratio": "r_i=s_i(alpha)/s_i(beta)",
+    "positive_weight": "A_i=w_i*s_i(beta)^2",
+    "clipped_profile": "sum_i A_i max(r_i-(1+k)c,(1-k)c-r_i,0)^2",
+    "strict_decreasing_loss_for_k_below_critical": true,
+    "strict_derivative": "dDmin²/dk=-2*cstar*sum_{active} A_i*absolute_clipped_residual_i <0",
+    "universal_near_critical_unique_extrema": {
+      "kcritical": "(R-m)/(R+m)",
+      "exact_risk_when_only_two_extremes_active": "A_m*A_M*((1-k)*R-(1+k)*m)^2/(A_m*(1-k)^2+A_M*(1+k)^2)",
+      "quadratic_coefficient": "C=A_m*A_M*(R+m)^4/[4*(A_m*m^2+A_M*R^2)]",
+      "min_max_unique_and_interiors_strict": true
+    }
+  },
+  "generic_negative": {
+    "model": "Synthetic 3 independent positive weighted shells, NOT sourced from M13",
+    "ratios": [
+      "1",
+      "2",
+      "100"
+    ],
+    "A_weights": [
+      "100",
+      "10",
+      "1"
+    ],
+    "exact_rational_cases": [
+      {
+        "kappa": "0/1",
+        "global_cstar": "220/111",
+        "low_active": [
+          1
+        ],
+        "high_active": [
+          2,
+          3
+        ],
+        "inactive": [],
+        "global_loss_display": 9703.963963963964
+      },
+      {
+        "kappa": "1/101",
+        "global_cstar": "5050/2501",
+        "low_active": [
+          1
+        ],
+        "high_active": [
+          3
+        ],
+        "inactive": [
+          2
+        ],
+        "global_loss_display": 9696.161535385845
+      },
+      {
+        "kappa": "1/41",
+        "global_cstar": "92250/44441",
+        "low_active": [
+          1,
+          2
+        ],
+        "high_active": [
+          3
+        ],
+        "inactive": [],
+        "global_loss_display": 9684.33968632569
+      }
+    ],
+    "rigorous_result": "ACTIVE SUPPORT cardinality 3→2→3; shell2 HIGH→INACTIVE→LOW while global risk strictly decreases",
+    "active_set_nested_under_growing_kappa": false,
+    "source_claim": "NONE; pure rational counterexample"
+  },
+  "M13_uniform_continuous_tube": {
+    "alpha": "1/20",
+    "beta": "3/40",
+    "coefficient_box_epsilon": "1/10000000",
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "r_i_strict_increasing_all_real_25D_source_box": true,
+    "strict_fraction_gates_source_box": 16,
+    "all_16_strict_positive": true,
+    "fixed_kappa_start": "33/500",
+    "variable_kappa_end": "kcritical for each actual source coefficients",
+    "kcritical_rigorous_conservative_display": "0.06626784 < kcritical < 0.06627136",
+    "active_low": [
+      1
+    ],
+    "active_high": [
+      5
+    ],
+    "inactive": [
+      2,
+      3,
+      4
+    ],
+    "active_set_guarantee": "UNIFORMLY for all epsilon 1e-7 source coefficient choices and all real 0.066 <= k < kcritical",
+    "cutoffs": {
+      "t": "(1+k)/(1-k)",
+      "z": "(A1*r1+t*A5*r5)/(A1+t^2*A5)",
+      "strict_signs": "dz/dt<0;d(t*z)/dt>0 across certified tube, so the clipping acceptance interval expands",
+      "source_gates": "r5<2*r1, t_upper*r1<2*r5, and all intermediate ratios inside the clipping interval at k0"
+    },
+    "exact_risk": "A1*A5*(r1+r5)^2*(kcritical-k)^2/(A1*(1-k)^2+A5*(1+k)^2)",
+    "quadratic_coefficient_scaled_1e24_conservative_display": "59.9771354 < 1e24*C < 59.9785346",
+    "source_midpoint_scaled_1e24_C_display": 59.97783497216416,
+    "source_midpoint_kcritical_display": 0.06626959720164886,
+    "source_midpoint_single_point_diagnostic_k": "kcritical-1/100000",
+    "source_midpoint_exact_fraction_profile_and_two_extreme_formula_agree": true,
+    "source_midpoint_loss_scaled_1e24_at_single_diagnostic_display": 5.9978654151534396e-9,
+    "source_midpoint_ratio_to_quadratic_approx_display": 1.000013658035016
+  },
+  "numeric_diagnostics": {
+    "separate_SciPy_scalar_minimizer_source": "rot018_independent_numeric_control.py",
+    "synthetic_three_strict_active_set_categories_matched": true,
+    "M13_midpoint_two_cases_matched": true,
+    "proof_method": "Fraction exact and analytic; SciPy is diagnostic only"
+  },
+  "custody": {
+    "user_zip": "Geeky_S12_ROT018_reentry_and_uniform_quadratic_closure.zip",
+    "zip_sha256": "b4b69a1a3544d33298af34c4e431f53c7bd6194b3f1b4c09f23decbedb1a0831",
+    "zip_bytes": 26273,
+    "zip_members": 8,
+    "zip_crc_pass": true,
+    "zip_full_member_byte_pass": true,
+    "actual_executed_fraction_python_sha256": "4b12ae2d637b6ec03aa6aa9cf58a1512d69f20631f8d120adbff7fe971725c43",
+    "actual_full_exact_rational_results_json_sha256": "0d0ea689a4222c559127df585b6fb7e2f5c079804fd726e7d75143952bb369e1",
+    "clean_independent_folder_byte_replay_pass": true,
+    "source_one_byte_tamper_fail_closed_pass": true,
+    "actual_exact_python_source_published_on_github": false,
+    "M15_ROT008_independent_review_of_ROT016": "I1_PASS_SCOPE_ONLY_ROT016",
+    "ROT018_independent_review": "PENDING",
+    "BW_native_ingest": "PENDING"
+  },
+  "claim_ceiling": [
+    "M13_AUXILIARY_SOURCE_ONLY",
+    "NO_HISTORIC_DTC0A_RUNTIME_BYTE_IDENTITY",
+    "COEFFICIENT_BOX_NOT_PHYSICALLY_VERIFIED_REALIZABLE",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
