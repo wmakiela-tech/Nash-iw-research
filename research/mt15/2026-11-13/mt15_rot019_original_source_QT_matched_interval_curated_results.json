@@ -1,0 +1,97 @@
+{
+  "artifact_id": "IW_MT15_ROT019_ORIGINAL_QT_MATCHED_NATIVE_SOURCE_DUHAMEL_CURATED_RESULTS_001_20261113",
+  "created_at": "2026-11-13",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "source_author": "Wu–Xu original JCAP 02 (2026) 063, original source v2 commit d395183674cace6c9906a8911bdeb7234ba4040d",
+  "source_main_scan_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+  "original_author_source_readout": "LinearInterpolation(Xn_list versus Q/T_list) then code Y=2X/(1−X), original lines206–211",
+  "origin_firstness": "Mech-S9 FIRST Julia 10D original j22, MT15 ROT017 FIRST same-source scalar weak comparator, MT15 ROT018 nodewise bounded D, INT9 ROT025 FIRST exact Q/T matched point output and PCHIP mismatch; ROT019 adds conservative source matched intervals",
+  "source_native_run": 43436800793,
+  "source_native_artifact_id": 14045176436,
+  "source_native_unmodified_zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+  "source_native_10000row_csv_sha256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+  "original_internal_sha256_manifest": "16/16 PASS",
+  "source_model_math": "source Xc native - same original T(t) weak-only auxiliary W initialized at first native nPBH zero; sample node D_i lower L_i and upper U_i from MT15 ROT018 source monotone Duhamel; same Q/T source interpolation makes event difference d_Q=(1-theta)D_i+theta D_(i+1); code-Y delta exactly 2d_Q/[(1-x_Q)(1-x_Q+d_Q)].",
+  "cases": [
+    {
+      "target": "T0",
+      "target_T_MeV": 0.07818527068831994,
+      "native_sample_indices_1based": [
+        9401,
+        9402
+      ],
+      "source_theta_Q_over_T": 0.9007198835246876,
+      "source_native_QT_X": 0.11205517576826313,
+      "source_native_QT_Ycode": 0.25239220435845194,
+      "actual_Julia_Ycode_original_report": 0.25239220435845267,
+      "d_qt_interval": [
+        2.202762365163523e-15,
+        2.2056827742579078e-15
+      ],
+      "formal_code_Y_delta_interval": [
+        5.587604819523828e-15,
+        5.595012832384787e-15
+      ],
+      "manuscript_like_2X_interval": [
+        4.405524730327046e-15,
+        4.4113655485158155e-15
+      ],
+      "relative_D_width": 0.001324915702486514,
+      "previous_ROT018_unknown_time_D_interval": [
+        2.1875501714924986e-15,
+        2.207361985495441e-15
+      ],
+      "INT9_ROT025_matched_point_d": 2.204224813545911e-15
+    },
+    {
+      "target": "T1_BADACZ",
+      "target_T_MeV": 0.0996888512474581,
+      "native_sample_indices_1based": [
+        9326,
+        9327
+      ],
+      "source_theta_Q_over_T": 0.26317486326243933,
+      "source_native_QT_X": 0.12588190883956388,
+      "source_native_QT_Ycode": 0.28802037187549623,
+      "d_qt_interval": [
+        1.2216118477080871e-15,
+        1.2231916290604223e-15
+      ],
+      "formal_code_Y_delta_interval": [
+        3.197591746865649e-15,
+        3.2017268539567897e-15
+      ],
+      "manuscript_like_2X_interval": [
+        2.4432236954161742e-15,
+        2.4463832581208445e-15
+      ],
+      "relative_D_width": 0.00129235856161597,
+      "previous_ROT018_unknown_time_D_interval": [
+        1.2190680782154764e-15,
+        1.230322496202776e-15
+      ],
+      "INT9_ROT025_matched_point_d": 1.2224031939080372e-15,
+      "not_original_magic_output_endpoint": true
+    }
+  ],
+  "checks": {
+    "source_zip_sha256_pass": true,
+    "source_native_all_16_member_sha256_PASS": true,
+    "source_code_Ycode_numeric_replay_pass": true,
+    "mpmath70_vs_binary64_max_relative": 1.8832591139837284e-13,
+    "independent_mpmath65_4000_random_source_node_interval_falsifiers": "4000/4000 PASS",
+    "source_one_byte_tamper_reject": "PASS",
+    "complete_clean_temp_reexecution_json_byte_identical": "PASS"
+  },
+  "local_exact_executed_artifacts": {
+    "native_source_inner_zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+    "producer_code_sha256": "97ebf11367e4debf147cd61f322615f8ae8a9dc4db284025f24af18fb2eb16d6",
+    "original_full_JSON_sha256": "e35b1871d179ffb437fceafcf7b7fca34f2e8bf89bafed4afcbf7307a8a12dc4",
+    "verifier_sha256": "1cc495606565fcc224ba65c55eedb323cca1a2032c1d7f720fcabdbebc72e28f",
+    "offline_ZIP_sha256": "d9576529a8696df542d501ad4cd05bd5766462d1776f77045196e0f5c6ff8940",
+    "offline_ZIP_bytes": 722388
+  },
+  "provenance_note": "Curated JSON independently authored from actual locally executed full JSON; not byte-identical to original full JSON. Source native ZIP and original full JSON contained together in current-conversation offline package only; no claim of GitHub native raw data upload.",
+  "claim_ceiling": "NOT_SOURCE_CONTINUOUS_TIME_EVENT_BOUND / NO_NATIVE_UNCLAMPED_10D / NO_PHYSICAL_Yp_OR_PBH_BBN / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / E4_SOURCE_HOLD / GITHUB_PENDING_BW_INGEST"
+}
