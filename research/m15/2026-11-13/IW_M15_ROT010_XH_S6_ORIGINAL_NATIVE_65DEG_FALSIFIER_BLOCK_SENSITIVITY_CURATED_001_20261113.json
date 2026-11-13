@@ -1,0 +1,125 @@
+{
+  "artifact_id": "IW_M15_ROT010_INDEPENDENT_NATIVE_XHS6_ROT016_HOLDOUT_FALSIFIER_CLUSTER_GATE_001_20261113",
+  "date": "2026-11-13",
+  "from_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "class": "INDEPENDENT_I1_NONBLIND_ACTUAL_ORIGINAL_GITHUB_ACTIONS_BINARY_DATA_AUDIT_NOT_NEW_MODEL_RUN",
+  "source_firstness": {
+    "authors": "Ruff Markman Kim Cohen Nature Neuroscience 2026-11-10",
+    "owner": "XH-S6 ROT016",
+    "original_RNN_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0"
+  },
+  "source_original": {
+    "run": 43464705291,
+    "artifact_id": 14057179887,
+    "actual_provider_zip_bytes": 500513,
+    "actual_provider_zip_sha256": "b603a6bd0956d87746a1476517d0d90f7dff9eb4f03a7e8c654d77e9e1f5ea88",
+    "zip_CRC": "PASS",
+    "original_preregister_blob": "932b70a33357b3895845fa23193f404f739d2ad1",
+    "original_predata_seed_amendment_blob": "874151c6be754f98949b254ffabfc0937606dd65"
+  },
+  "source_checks": {
+    "native_paired_rows": 17280,
+    "native_model_arm_trials_by_source_owner": 34560,
+    "distinct_original_source_seed_blocks": 240,
+    "each_block_complete_72_directions": true,
+    "all_720_candidate_labels_recomputed": true,
+    "all_17280_row_circular_distance_gap_flags_seed_keys_verified": true,
+    "per_seed_block_240_summary_recomputed": true,
+    "all_20_26times1728_label_annulus_checksum_identities": true
+  },
+  "original_source_unit_primary": {
+    "DLPFC53": {
+      "preferred_deg": 295,
+      "true_gap": 0,
+      "next_wrong_label_min": 175,
+      "preregistered": "PASS"
+    },
+    "DLPFC25": {
+      "preferred_deg": 160,
+      "true_gap": 1,
+      "next_wrong_label_min": 18,
+      "preregistered": "FAIL"
+    },
+    "DLPFC54": {
+      "preferred_deg": 15,
+      "true_gap": 0,
+      "next_wrong_label_min": 176,
+      "preregistered": "PASS"
+    },
+    "DLPFC8": {
+      "preferred_deg": 140,
+      "true_gap": 0,
+      "next_wrong_label_min": 133,
+      "preregistered": "PASS"
+    },
+    "DLPFC9": {
+      "preferred_deg": 75,
+      "true_gap": 0,
+      "next_wrong_label_min": 133,
+      "preregistered": "PASS"
+    }
+  },
+  "original_native_65degree_counterexample": {
+    "original_source_unit": "DLPFC25",
+    "strength": 45,
+    "true_preferred_deg": 160,
+    "source_reward_center_deg": 340,
+    "original_seed_block": 14,
+    "original_seed_key": 202611751854,
+    "mapped_original_NumPy_seed": 748288942,
+    "original_shown_deg": 195,
+    "original_sham_choice_deg": 235,
+    "original_stimulated_choice_deg": 225,
+    "shortest_circular_distance_deg": 65,
+    "included_in_predeclared_annulus": true,
+    "source_CSV_line_number_including_header": 11417
+  },
+  "predeclared_scientific_verdict": {
+    "dlPFC_zero_annulus_5to65_inclusive": "4/5 PASS, 1/5 FAIL",
+    "dlPFC_unique_TRUE_P_ZERO_label": "4/5 PASS, 1/5 FAIL",
+    "MT_no_candidate_ZERO_annulus": "5/5 PASS",
+    "do_not_posthoc_change_65_cutoff": true
+  },
+  "new_exploratory": {
+    "true_preferred_label_strictly_smallest_annulus_count_in_5_dlPFC": "5/5 BUT_NOT_PREDECLARED_UNIQUE_ZERO_PASS",
+    "dlPFC25_leave_one_original_seed_block_out": {
+      "remove_flagged_14": "PASSES_ZERO",
+      "remove_other_23": "FAILS_ZERO",
+      "pass": 1,
+      "fail": 23
+    },
+    "conditional_empirical_cluster_resampling_24_blocks": {
+      "observed_zero_source_gap_probability": 0.36007938928552263,
+      "observed_nonzero_source_gap_probability": 0.6399206107144774,
+      "not_inferential_p_value": true
+    },
+    "CP95_one_sided_event_block_iid_ONLY": {
+      "one_event_of_24_upper": 0.18289246975564638,
+      "zero_event_of_24_upper": 0.11734615615494876,
+      "actual_independence_not_certified": true
+    }
+  },
+  "actual_independent_execution": {
+    "original_stdlib_python_source_sha256": "cf18666ed977a9ee428022d9ead2c90279b5de24f80015833303abc98c620774",
+    "original_exact_output_json_sha256": "451eb5983e51bd2b5f693357e1250911bdd87974de21bd8105837aa5b6adca51",
+    "reproducer_zip_sha256": "8b102ecae7969167b68606a613cc1b4cbbe2fb23c91911213f379db1504864ce",
+    "reproducer_zip_bytes": 511270,
+    "internal_manifest_sha_six_of_six": "PASS",
+    "offline_clean_rerun_byte_identical": "PASS",
+    "one_byte_corruption_rejected_before_science": "PASS",
+    "reproducer_zip_surface": "CONVERSATION_LOCAL_NOT_GITHUB_MIRROR"
+  },
+  "limits": [
+    "NO_NEW_RNN_SIMULATION",
+    "SAME_FROZEN_ONE_TRAINED_NETWORK",
+    "NOT_ORIGINAL_MONKEY_DATA",
+    "NO_ASSUMPTION_1728_INDEPENDENT_NETWORKS",
+    "CONDITIONAL_IID_BLOCK_DIAGNOSTIC_ONLY",
+    "NO_PHYSICS",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "GITHUB_PENDING_BW_INGEST",
+    "NO_NEW_TASK_CASCADE"
+  ]
+}
