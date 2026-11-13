@@ -1,0 +1,141 @@
+{
+  "artifact_id": "IW_XH_S6_ROT014_ENDPOINT_SELFSEALING_CONDITIONAL_CAPTURE_SOURCE_FALSIFIER_001_20261113",
+  "exposure": "PUBLIC",
+  "from_cell": "IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6",
+  "original_scientific_host": "Ruff, Markman, Kim, Cohen, Nature Neuroscience 2026-11-10, DOI 10.1038/s41593-026-02514-7",
+  "original_author_repo_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "actual_author_model_run_id": 43430223171,
+  "original_source_csv_sha256": "e6717506d9d2f1a7d65fd7b25741e01d54d3c75f53145e97541c98933274db84",
+  "original_source_runner_json_sha256": "d55f5db10890f67435ea4b46b119d4aa53db78f367f66ee05cc791fdfa71b4ef",
+  "rot014_actually_reexecuted_original_rnn_model": false,
+  "rot014_independent_full_11520_row_postprocessing": "PASS",
+  "rot014_clean_three_numerical_files_byte_identical": "PASS",
+  "rot014_source_csv_identity_negative_test": "FAIL_CLOSED_PASS",
+  "rot014_runner_json_identity_negative_test": "FAIL_CLOSED_PASS",
+  "rot014_python_stdlib_script_sha256": "a65296cf437681d4ac2d1a7bd46b68f868368d2600dd89535af21d315329928f",
+  "rot014_complete_local_zip_sha256": "9ac161ea2439f7ca780bf2840b656d177ee79a7201c4f62cc6a47ced95d67211",
+  "definitions": {
+    "old_endpoint": "stim_choice==sham_choice OR stim_choice==original_unit_preference",
+    "tautology": "With stim_choice=sham_choice for all trials, old_endpoint=100% regardless of model effect",
+    "identity": "old_endpoint_count=unchanged_choice_count + changed_and_exact_preference_count",
+    "corrected_conditional": "P(stim_choice==preference | stim_choice!=sham_choice)",
+    "caution": "Post-intervention selection: descriptive conditional distribution, NOT a biological causal effect estimator",
+    "preferred_gap": "stimulated model choice exactly preference OR >=70 degrees away in these 5 dlPFC units; 0 choices 5 to 65 degrees from preference"
+  },
+  "dlPFC_original_units": [
+    {
+      "unit": 53,
+      "strength": 45,
+      "paired": 1152,
+      "changed": 827,
+      "unchanged": 325,
+      "old_endpoint": 686,
+      "preferred_among_changed": 361,
+      "conditional_fraction": 0.4365175332527207,
+      "cluster_bootstrap_95pct": [
+        0.4198823763955343,
+        0.4533005452526
+      ],
+      "min_nonpreferred_stim_distance_deg": 70,
+      "baseline_nonpreferred_5_to_65deg": 218,
+      "stim_nonpreferred_5_to_65deg": 0
+    },
+    {
+      "unit": 25,
+      "strength": 45,
+      "paired": 1152,
+      "changed": 821,
+      "unchanged": 331,
+      "old_endpoint": 892,
+      "preferred_among_changed": 561,
+      "conditional_fraction": 0.6833130328867235,
+      "cluster_bootstrap_95pct": [
+        0.6619714162477812,
+        0.7032841939169195
+      ],
+      "min_nonpreferred_stim_distance_deg": 100,
+      "baseline_nonpreferred_5_to_65deg": 222,
+      "stim_nonpreferred_5_to_65deg": 0
+    },
+    {
+      "unit": 54,
+      "strength": 45,
+      "paired": 1152,
+      "changed": 668,
+      "unchanged": 484,
+      "old_endpoint": 954,
+      "preferred_among_changed": 470,
+      "conditional_fraction": 0.7035928143712575,
+      "cluster_bootstrap_95pct": [
+        0.6815545937922508,
+        0.72782874617737
+      ],
+      "min_nonpreferred_stim_distance_deg": 100,
+      "baseline_nonpreferred_5_to_65deg": 233,
+      "stim_nonpreferred_5_to_65deg": 0
+    },
+    {
+      "unit": 8,
+      "strength": 45,
+      "paired": 1152,
+      "changed": 646,
+      "unchanged": 506,
+      "old_endpoint": 986,
+      "preferred_among_changed": 480,
+      "conditional_fraction": 0.7430340557275542,
+      "cluster_bootstrap_95pct": [
+        0.7229832572298326,
+        0.764612954186414
+      ],
+      "min_nonpreferred_stim_distance_deg": 100,
+      "baseline_nonpreferred_5_to_65deg": 210,
+      "stim_nonpreferred_5_to_65deg": 0
+    },
+    {
+      "unit": 9,
+      "strength": 48,
+      "paired": 1152,
+      "changed": 1034,
+      "unchanged": 118,
+      "old_endpoint": 593,
+      "preferred_among_changed": 475,
+      "conditional_fraction": 0.45938104448742745,
+      "cluster_bootstrap_95pct": [
+        0.447392741332003,
+        0.47035582725467373
+      ],
+      "min_nonpreferred_stim_distance_deg": 80,
+      "baseline_nonpreferred_5_to_65deg": 184,
+      "stim_nonpreferred_5_to_65deg": 0
+    }
+  ],
+  "pooled_descriptive": {
+    "source_dlPFC_units": 5,
+    "source_dlPFC_paired_choices": 5760,
+    "source_dlPFC_changed_choices": 3996,
+    "preferred_chosen_when_changed": 2347,
+    "old_unconditional_endpoint_majority_units": 5,
+    "corrected_conditional_capture_majority_units": 3,
+    "corrected_conditional_capture_below_majority_units": [
+      53,
+      9
+    ],
+    "stim_preferred_distance_5_to_65deg_count": 0,
+    "stim_nonpreferred_distance_at_least_70deg_count": 3413,
+    "sham_nonpreferred_distance_5_to_65deg_count": 1067,
+    "adjacent_independent_seed_sham_pairs": 5400,
+    "adjacent_independent_seed_sham_choice_changed": 2903,
+    "adjacent_independent_seed_sham_change_to_exact_preference": 0,
+    "source_MT_units_with_strict_geodesic_majority_among_changed": 5,
+    "source_MT_nonpreferred_stim_5_to_65deg_count": 2236
+  },
+  "source_distinction": "This finding invalidates the XH-created unconditional dlPFC endpoint criterion as a self-standing falsifier; it does NOT contradict the original authors, whose model paper independently describes dlPFC winner-take-all outcomes.",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
