@@ -1,0 +1,54 @@
+{
+  "artifact_id": "IW_M15_ROT006_INDEPENDENT_FULL_M13_B25_17_BERNSTEIN_SOURCE_AUDIT_001_20261113",
+  "original_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "method": "Independent rational interval polynomial assembly; exact formal antisymmetry quotient; tensor Bernstein on source widened by 1e-7",
+  "source_coefficients": 25,
+  "epsilon": "1/10000000",
+  "source_scale": "1e12",
+  "shell_lower": [
+    "9.86178294683e-3",
+    "1.30904291119e-2",
+    "1.82389743451e-2",
+    "2.45831059585e-2",
+    "3.33565421813e-2"
+  ],
+  "five_P_rectangles": [
+    "6.81574212379e+3",
+    "1.45074405312e+4",
+    "1.31761437380e+6",
+    "2.77205104509e+3",
+    "1.79364762393e+5"
+  ],
+  "small_P": "3.09955394682e+2",
+  "small_P_beta": "3.82876732417e+4",
+  "F0_eight_segments": [
+    "7.90166440397e-1",
+    "4.67680779954e-1",
+    "2.39879938607e+0",
+    "7.29847425773e+0",
+    "3.19870044877e+1",
+    "2.68564041389e+2",
+    "2.96544835907e+3",
+    "1.14545593840e+6"
+  ],
+  "P_shifted_two_segments": [
+    "1.67909762537e+3",
+    "3.22446560746e+3"
+  ],
+  "strictly_positive_polynomial_gates": 17,
+  "strictly_positive_shell_gates": 5,
+  "all_gates_pass": true,
+  "failed_gates": [],
+  "ceiling": "I1_NONBLIND_INDEPENDENT_17_SOURCE_MATH_GATES_ONLY_NO_HISTORICAL_RUNTIME_NO_PHYSICS_NO_CANON_NO_EXEC",
+  "source_runtime": "EXACT_PINNED_PUBLISHED_ORIGINAL_JS_BODY_EXECUTED_IN_V8_AFTER_STRIPPING_ONLY_HASHBANG",
+  "source_git_blob_verified": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_code_git_blob_verified": "2faa1ed97e3fb5c126bcff7e9b90242d883d2bae",
+  "tamper_negative_control": {
+    "mutated_original_B_k2_j0": "[-100,-100]",
+    "rejected": true,
+    "reason": "Error: SHELL_SIGN_FAIL"
+  },
+  "date": "2026-11-13",
+  "author": "M15 independent mathematical program",
+  "generalization": "Independent coefficient box relative epsilon 1e-7, original M13 source auxiliary only"
+}
