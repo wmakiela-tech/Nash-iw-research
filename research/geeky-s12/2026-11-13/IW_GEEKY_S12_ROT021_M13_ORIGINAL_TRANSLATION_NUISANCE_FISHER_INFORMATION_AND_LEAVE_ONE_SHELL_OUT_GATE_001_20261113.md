@@ -39,7 +39,7 @@ Source N41 alpha=1/20, original B operator in mpmath.iv45, five fixed interior m
 The original source M13 window-inner operator computes five masked energies and their 4 parameter derivatives; disjoint shell log derivatives form a rigorous directed 5x4 matrix D in five RAW log-shell measurements, columns (t_x,t_y,t_z,alpha), displayed only:
 
  row 1: (-0.0816386287,-0.00173771089,-0.0365310472,27.32524877)
- row 2: (-0.103962150,-0.001176? NOT USE approximate here; exact actual JSON contains +0.00117605461,-0.0380059993,27.18606893)
+ row 2: (-0.103962150,+0.00117605461,-0.0380059993,27.18606893)
  row 3: (-0.0699311539,+0.00430569848,-0.0107639783,26.31542918)
  row 4: (-0.00471614460,+0.0139960326,+0.0403457246,24.36308078)
  row 5: (+0.0545257685,+0.00716607673,+0.0146315111,20.66121171).
