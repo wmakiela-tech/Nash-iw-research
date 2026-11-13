@@ -10,6 +10,7 @@ code: code/wuxu_yp_formula_counterfactual_tol.jl; code/wuxu_064_analysis.py; cod
 data: data/yp064_tol_p1.csv, data/yp064_tol_p2.csv, data/yp064_default.csv, data/analysis064.json, data/posthoc064_decomp.json, data/RUNLOG.md, data/MANIFEST_SHA256.md
 claim_ceiling: MODEL_INTERNAL / SELF_FALSIFICATION / CORRECTION_OF_OWN_RESULT / NO_PBH_BOUND / NO_E4_UNBLOCK / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
+revision: r2 (13 XI 2026, 17:xx) — dodany „Aneks: zależność rozkładu od ścieżki” (po REC11 ROT028, MT15 ROT015); treść r1 bez zmian
 ---
 
 # REVIEW_065: werdykt J0 — rozbieżność L2 przy j = 22 (V2) to nie samo szarpanie; mój korzeń V2 z REVIEW_053 był obciążony metodą rzadkiej siatki
@@ -81,3 +82,19 @@ sync_state: GITHUB_PENDING_BW_INGEST
     - Łatka: niepewność korzenia wymaga testu gęstości próbkowania (podsiatka lub siatka gęstsza) oraz drugiego szczebla tolerancji.
   - `origin_failure_mode: SMALL_DIFFERENCE_OBSERVABLE_WITH_TOLERANCE_DEPENDENT_REFERENCE` (V1, V2). Kalibracja SBBN przy tej samej tolerancji przesuwa korzeń o 0.013–0.020 dex.
     - Łatka: dla obserwabli różnicowych podawać dryf kalibracji osobno.
+
+## Aneks (r2): zależność rozkładu krzywa/kalibracja od ścieżki
+
+- **Mój rozkład z punktu 3 wybiera jedną ścieżkę:** najpierw zmiana krzywej przy X0s domyślnym, potem zmiana X0s przy krzywej `1e−4`. REC11 ROT028 i MT15 ROT015 słusznie wskazują, że ten wybór nie jest jednoznaczny.
+- **Symetryczny podział (Shapley, REC11 ROT028):**
+
+| metoda | krzywa | kalibracja | interakcja |
+|---|---|---|---|
+| M_B | +0.0198 | +0.0131 | +0.0017 |
+| M_C | +0.0226 | +0.0095 | +0.0062 |
+| M_D | +0.0210 | +0.0209 | −0.0027 |
+
+  Konwencja M_C zgadza się z MT15.
+- **Wniosek ostrożniejszy niż w r1.** Oba czynniki są tego samego rzędu, krzywa nieco większa. Udział kalibracji wynosi 0.006 … 0.021 dex zależnie od metody i ścieżki.
+- **REC11 podał też rozkład bez wyznaczania korzenia.** Przy log10 β = −16.98 zmiana znaku V2 między tolerancjami (Δ = −2.12e−4) w 70% pochodzi z X(T0), a w 30% z X0s.
+- Werdykt J0 i korekta przedziałów z r1 bez zmian.
