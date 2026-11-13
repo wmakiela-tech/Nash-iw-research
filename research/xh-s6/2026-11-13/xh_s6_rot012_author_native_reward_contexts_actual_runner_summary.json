@@ -1,0 +1,219 @@
+{
+  "artifact_id": "IW_XH_S6_ROT012_REWARD_ALIGNMENT_FOUR_CONTEXTS_SOURCE_MODEL_GATE_001_20261113",
+  "cross_context_stream_identity_checks": 144,
+  "elapsed_s": 139.962540156,
+  "first_block_180deg_sham_repeat_bitwise": "PASS",
+  "monkey_behavior": "NOT_ACCESSED",
+  "n_blocks": 24,
+  "n_reward_contexts": 4,
+  "n_shown_per_block": 72,
+  "n_units": 2,
+  "newly_intervened_reward_offsets_deg": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_novelty": true,
+  "numeric_groups": {
+    "DLPFC": {
+      "0": {
+        "counts": {
+          "antipodal": 0,
+          "argmax_invariance_cert": 5,
+          "baseline_preferred": 10,
+          "closer": 1005,
+          "exact_endpoint": 1199,
+          "exactly_preferred": 927,
+          "farther": 440,
+          "flipped": 1446,
+          "unique_short_arc_interior": 88
+        },
+        "mean_baseline_reward_distance": 65.57291666666667,
+        "mean_baseline_source_target": 5.674307596484594,
+        "mean_preference_distance_delta_deg": -20.92303240740741,
+        "mean_source_training_target_change": -1.8353765112026048,
+        "mean_stim_reward_distance": 44.64988425925926,
+        "mean_stim_source_target": 3.8389310852819807,
+        "n": 1728,
+        "reward_center_deg": 295,
+        "strict_short_arc_eligible_n": 1728,
+        "strict_short_arc_interior_fraction": 0.05092592592592592
+      },
+      "90": {
+        "counts": {
+          "antipodal": 63,
+          "argmax_invariance_cert": 2,
+          "baseline_preferred": 39,
+          "closer": 861,
+          "exact_endpoint": 1134,
+          "exactly_preferred": 795,
+          "farther": 489,
+          "flipped": 1350,
+          "unique_short_arc_interior": 103
+        },
+        "mean_baseline_reward_distance": 66.01273148148148,
+        "mean_baseline_source_target": 5.676456739446585,
+        "mean_preference_distance_delta_deg": -15.619212962962964,
+        "mean_source_training_target_change": -1.1753680001782554,
+        "mean_stim_reward_distance": 71.97916666666667,
+        "mean_stim_source_target": 4.501088739268321,
+        "n": 1728,
+        "reward_center_deg": 25,
+        "strict_short_arc_eligible_n": 1665,
+        "strict_short_arc_interior_fraction": 0.061861861861861864
+      },
+      "180": {
+        "counts": {
+          "antipodal": 44,
+          "argmax_invariance_cert": 3,
+          "baseline_preferred": 0,
+          "closer": 695,
+          "exact_endpoint": 1056,
+          "exactly_preferred": 541,
+          "farther": 518,
+          "flipped": 1213,
+          "unique_short_arc_interior": 151
+        },
+        "mean_baseline_reward_distance": 66.30208333333333,
+        "mean_baseline_source_target": 5.677448975343463,
+        "mean_preference_distance_delta_deg": -16.72164351851852,
+        "mean_source_training_target_change": -0.862982898753117,
+        "mean_stim_reward_distance": 83.02372685185185,
+        "mean_stim_source_target": 4.814466076590354,
+        "n": 1728,
+        "reward_center_deg": 115,
+        "strict_short_arc_eligible_n": 1684,
+        "strict_short_arc_interior_fraction": 0.08966745843230403
+      },
+      "270": {
+        "counts": {
+          "antipodal": 4,
+          "argmax_invariance_cert": 4,
+          "baseline_preferred": 24,
+          "closer": 805,
+          "exact_endpoint": 1257,
+          "exactly_preferred": 744,
+          "farther": 386,
+          "flipped": 1191,
+          "unique_short_arc_interior": 82
+        },
+        "mean_baseline_reward_distance": 66.23263888888889,
+        "mean_baseline_source_target": 5.667189982793092,
+        "mean_preference_distance_delta_deg": -22.59548611111111,
+        "mean_source_training_target_change": -0.8779826875157458,
+        "mean_stim_reward_distance": 59.5630787037037,
+        "mean_stim_source_target": 4.789207295277343,
+        "n": 1728,
+        "reward_center_deg": 205,
+        "strict_short_arc_eligible_n": 1724,
+        "strict_short_arc_interior_fraction": 0.04756380510440835
+      }
+    },
+    "MT": {
+      "0": {
+        "counts": {
+          "antipodal": 0,
+          "argmax_invariance_cert": 0,
+          "baseline_preferred": 20,
+          "closer": 1497,
+          "exact_endpoint": 116,
+          "exactly_preferred": 0,
+          "farther": 96,
+          "flipped": 1612,
+          "unique_short_arc_interior": 1434
+        },
+        "mean_baseline_reward_distance": 65.8738425925926,
+        "mean_baseline_source_target": 5.679470566374594,
+        "mean_preference_distance_delta_deg": -32.265625,
+        "mean_source_training_target_change": -2.501022025865265,
+        "mean_stim_reward_distance": 33.608217592592595,
+        "mean_stim_source_target": 3.1784485405093412,
+        "n": 1728,
+        "reward_center_deg": 110,
+        "strict_short_arc_eligible_n": 1728,
+        "strict_short_arc_interior_fraction": 0.8298611111111112
+      },
+      "90": {
+        "counts": {
+          "antipodal": 7,
+          "argmax_invariance_cert": 0,
+          "baseline_preferred": 62,
+          "closer": 1507,
+          "exact_endpoint": 113,
+          "exactly_preferred": 51,
+          "farther": 147,
+          "flipped": 1666,
+          "unique_short_arc_interior": 1278
+        },
+        "mean_baseline_reward_distance": 66.3425925925926,
+        "mean_baseline_source_target": 5.670257091053255,
+        "mean_preference_distance_delta_deg": -46.44675925925926,
+        "mean_source_training_target_change": -2.8981200962399876,
+        "mean_stim_reward_distance": 72.14120370370371,
+        "mean_stim_source_target": 2.772136994813286,
+        "n": 1728,
+        "reward_center_deg": 200,
+        "strict_short_arc_eligible_n": 1721,
+        "strict_short_arc_interior_fraction": 0.7425915165601394
+      },
+      "180": {
+        "counts": {
+          "antipodal": 32,
+          "argmax_invariance_cert": 0,
+          "baseline_preferred": 0,
+          "closer": 1720,
+          "exact_endpoint": 6,
+          "exactly_preferred": 0,
+          "farther": 1,
+          "flipped": 1722,
+          "unique_short_arc_interior": 1478
+        },
+        "mean_baseline_reward_distance": 65.43981481481481,
+        "mean_baseline_source_target": 5.676963413250024,
+        "mean_preference_distance_delta_deg": -39.233217592592595,
+        "mean_source_training_target_change": -2.2592940062752285,
+        "mean_stim_reward_distance": 104.6730324074074,
+        "mean_stim_source_target": 3.4176694069748152,
+        "n": 1728,
+        "reward_center_deg": 290,
+        "strict_short_arc_eligible_n": 1696,
+        "strict_short_arc_interior_fraction": 0.8714622641509434
+      },
+      "270": {
+        "counts": {
+          "antipodal": 11,
+          "argmax_invariance_cert": 0,
+          "baseline_preferred": 2,
+          "closer": 1346,
+          "exact_endpoint": 96,
+          "exactly_preferred": 0,
+          "farther": 253,
+          "flipped": 1632,
+          "unique_short_arc_interior": 1190
+        },
+        "mean_baseline_reward_distance": 65.72627314814815,
+        "mean_baseline_source_target": 5.681422854264128,
+        "mean_preference_distance_delta_deg": -41.070601851851855,
+        "mean_source_training_target_change": -2.3897428509968934,
+        "mean_stim_reward_distance": 59.68460648148148,
+        "mean_stim_source_target": 3.291680003267243,
+        "n": 1728,
+        "reward_center_deg": 20,
+        "strict_short_arc_eligible_n": 1717,
+        "strict_short_arc_interior_fraction": 0.693069306930693
+      }
+    }
+  },
+  "original_noisy_source_generator_250per_direction": "NOT_RUN",
+  "original_paper_180deg_only": true,
+  "paired_condition_rows": 13824,
+  "source_author_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "source_author_original_task_class_rerun": true,
+  "source_model_arm_trials": 27648,
+  "source_rot009_wrapper_git_blob": "054299b6b0f0c0def7cfa6b3600d6f56665375ce",
+  "status": "PASS",
+  "within_context_stochastic_pair_checks": 192
+}
