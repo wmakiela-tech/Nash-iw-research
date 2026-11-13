@@ -1,0 +1,98 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT016_TWO_ACTIVE_RISK_FLOOR_SOURCE_RESULTS_001_20261113",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "date": "2026-11-13",
+  "exposure": "PUBLIC",
+  "M13_source": {
+    "original_path": "research/m13/2026-10-26/direct_B.json",
+    "original_git_blob_sha1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "N": 41,
+    "mask_k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "independent_coefficient_box_relative_epsilon": "1/10000000"
+  },
+  "parameters": {
+    "alpha": "1/20",
+    "beta": "3/40",
+    "relative_gain_limit_kappa": "33/500",
+    "model": "min_{c>0,|eta_i|<=kappa} sum_i w_i (s_i(alpha)-c(1+eta_i)s_i(beta))^2"
+  },
+  "exact_mathematics": {
+    "ratio": "r_i=s_i(alpha)/s_i(beta)",
+    "strength": "A_i=w_i*s_i(beta)^2",
+    "profile": "Phi(c)=sum_i A_i*max(r_i-(1+kappa)*c,(1-kappa)*c-r_i,0)^2",
+    "convex": true,
+    "all25box_source_robust_minimum_active_shell_indices_1_based": [
+      1,
+      5
+    ],
+    "middle_shell_indices_zero_residual": [
+      2,
+      3,
+      4
+    ],
+    "all_source_box_active_signs_strict": true,
+    "cstar": "(A1*(1-kappa)*r1+A5*(1+kappa)*r5)/(A1*(1-kappa)^2+A5*(1+kappa)^2)",
+    "minimum": "A1*A5*((1-kappa)*r5-(1+kappa)*r1)^2/(A1*(1-kappa)^2+A5*(1+kappa)^2)",
+    "positive_strict_lower_all_coefficient_box": true,
+    "source_box_D2_scaled_1e24_outward_conservative_display_lower": 0.0000043,
+    "source_box_D2_scaled_1e24_outward_conservative_display_upper": 0.00000442,
+    "machine_exact_rational_bounds": "See source-verified, independently executed full output inside user ZIP; GitHub summary only carries conservative numeric displays."
+  },
+  "midpoint_example": {
+    "cstar_display": 0.5703420558923364,
+    "D2_scaled_1e24_display": 0.0000043609535308512106,
+    "unrestricted_one_common_gain_only_D2_scaled_1e24_display": 0.5777405816626439,
+    "D2_ratio_to_common_gain_display": 0.0000075482901310153644,
+    "exact_pointwise_identity_five_shell_clipped_equals_2active": true,
+    "kappa_zero_reproduces_common_gain_exact": true,
+    "kappa_0p067_exact_zero_gain_constructive": true
+  },
+  "external_peer_context": {
+    "AUD2_ROT005": {
+      "status": "INDEPENDENT_I1_PASS_FULL_17_BERNSTEIN_AND_5_SHELLS_EPS1E7",
+      "report": "https://github.com/wmakiela-tech/Nash-Priv/blob/24cd7664b7dd6d628268da509e98c1b0643d0e9b/audits/aud2/2026-11-13/IW_AUD2_ROT005_GEEKY_S12_M13_B_GLOBAL_17_BERNSTEIN_25_COEFFICIENT_INDEPENDENT_EXACT_REFEREE_001_20261113.md"
+    },
+    "M15_ROT006": {
+      "status": "INDEPENDENT_I1_PASS_FULL_17_BERNSTEIN_AND_5_SHELLS_EPS1E7",
+      "report": "https://github.com/wmakiela-tech/Nash-iw-research/blob/c88fc8cfc92f1c6734336f8169825cb8f31749ad/research/m15/2026-11-13/IW_M15_ROT006_INDEPENDENT_GLOBAL_BERNSTEIN_17_5_SOURCE_REFEREE_001_20261113.md"
+    },
+    "REC11_ROT029": "Independent negative witness eps1e-7 PASS, not current two-active model",
+    "ROT016": "AUTHOR_SOURCE_ALGORITHM_ONLY_REFEREE_PENDING"
+  },
+  "local_execution": {
+    "archive": "Geeky_S12_ROT016_two_active_exact_risk_robust_source.zip",
+    "archive_sha256": "5ec201787a9542459f1d7becbc0f87b70ac3029f919fbaf5a9d8088b3b7d0d35",
+    "zip_bytes": 11753,
+    "members": 7,
+    "zip_crc": "PASS",
+    "members_byte_readback": "PASS",
+    "actually_executed_python_sha256": "3a6b447236ee2ff8266df70977cddd5bc97520fd23540bdc2a0a2a54879189c9",
+    "actually_executed_full_result_json_sha256": "904b81ae7ece1e7c5469eed7781a7f592c424ac06541eb4b3a90eb2589241be2",
+    "clean_replay_byte_identical": "PASS",
+    "modified_source_git_blob_rejected_before_science": "PASS",
+    "actual_executed_script_published_as_Github_code": "NO; source and exact rational endpoints in user ZIP"
+  },
+  "limits": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NOT_ORIGINAL_HISTORIC_DTC0A_PRODUCER_IDENTITY",
+    "NOT_PHYSICAL_CALIBRATION_MEASUREMENT",
+    "BW_INGEST_PENDING",
+    "M15_GLOBAL_OWNER_ADOPTION_PENDING"
+  ]
+}
