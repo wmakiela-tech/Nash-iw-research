@@ -1,0 +1,200 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT022_M13_B_ENERGY_TRANSLATION_STABILIZER_MACHINE_SUMMARY_001_20261113",
+  "date": "2026-11-13",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "source": {
+    "operator": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "operator_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_B25": "research/m13/2026-10-26/direct_B.json",
+    "original_B25_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "N": 41,
+    "alpha_domain": "0<=alpha<=1/5",
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shell_occupancies": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "translation_class": "hypothetical common input-field shift C1,C2,h against fixed observer masks"
+  },
+  "period_group_definition": "G_alpha={u modulo 2piZ^3: for ALL t in T^3 and ALL five shell energies S_i(alpha,t+u)=S_i(alpha,t)}; not pointwise collisions or projective ratios",
+  "alpha0": {
+    "symbolic_algebra": "Independent SymPy source reconstruction, independent d1,d2,d3,d4 source centered stencil variables, original E_lin(alpha=0)=1",
+    "original_candidate_modes": 41,
+    "exact_zero_tensor_modes": 33,
+    "nonzero_tensor_modes": 8,
+    "nonzero_support": "m=(±2,±1,±1)",
+    "all_nonzero_tensor_entries": "rational multiples of d1*(2d1-d2); positive nonzero for centered theta=2pi/41",
+    "source_original_369_tensor_component_iv45_differences_include_zero": true,
+    "tensor_mode_lattice_HNF": [
+      [
+        4,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tensor_stabilizer_order": 8,
+    "energy_difference_lattice_HNF": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "energy_period_group_order": 16,
+    "energy_periods": "{(a*pi/2,b*pi,c*pi), a=0,1,2,3; b,c=0,1}",
+    "strict_nonzero_original_M13_mask6_frequency_generators": [
+      {
+        "d": [
+          4,
+          0,
+          0
+        ],
+        "strict_positive_real_lower_scaled_1e16_display": 3.8728432378766406
+      },
+      {
+        "d": [
+          0,
+          2,
+          0
+        ],
+        "strict_positive_real_lower_scaled_1e16_display": 16.47001243704962
+      },
+      {
+        "d": [
+          0,
+          0,
+          2
+        ],
+        "strict_positive_real_lower_scaled_1e16_display": 16.47001243704962
+      }
+    ],
+    "mask6_three_frequency_integer_determinant": 16
+  },
+  "positive_alpha": {
+    "domain": "for all real 0<alpha<=1/5; not just alpha=.05",
+    "source_all_B_modes_even_integer_sum_parity": true,
+    "tensor_and_all_five_energies_period_group_order": 2,
+    "periods": "{(0,0,0),(pi,pi,pi)}",
+    "three_innermost_mask6_frequencies_have_exact_factor": "C_d(alpha)=alpha*q_d(alpha); at alpha=0 their constant terms zero BY symbolic eight-mode source support",
+    "strict_all_q_real_cubic_Bernstein_bounds_on_0_to_1_over_5_scaled_1e16_DISPLAY_ONLY": [
+      {
+        "d": [
+          -2,
+          0,
+          0
+        ],
+        "bounds": [
+          646.822306618676,
+          917.9860240804702,
+          1184.0082057412537,
+          1444.9614260848207
+        ]
+      },
+      {
+        "d": [
+          -1,
+          1,
+          -2
+        ],
+        "bounds": [
+          1.1550289035432877,
+          0.8942261626180719,
+          0.6382122873264195,
+          0.3869204054552744
+        ]
+      },
+      {
+        "d": [
+          -3,
+          0,
+          1
+        ],
+        "bounds": [
+          2.8574865376889993,
+          6.199358708915106,
+          9.478315177445339,
+          12.695241935224683
+        ]
+      }
+    ],
+    "sign_gate_count": 12,
+    "sign_pass_count": 12,
+    "all_sign_decisions_directed_original_mpmath_iv45": true,
+    "three_frequency_integer_determinant": -2
+  },
+  "extra_alias_split": {
+    "u": "(pi/2,0,0)",
+    "alpha0_all_five_fixed_masks_exactly_invariant": true,
+    "alpha_positive_all_torus_energy_function_difference_nonzero": true,
+    "rigorous_conservative_Haar_L2_lower": "||g6(alpha,t+u)-g6(alpha,t)||_L2(T^3)>1.82948e-13*alpha for all 0<alpha<=1/5",
+    "local_upper": "O(alpha) as alpha->0+ by polynomiality; hence Theta(alpha) L2",
+    "m13_directed_original_mask6_shift_difference_alpha0": "contains zero within approximately +/- 5.8e-55",
+    "m13_directed_original_mask6_shift_difference_alpha_1_over_20_display": -1.8325778429169983e-14,
+    "independent_numpy_fft_mask6_shift_difference_alpha_1_over_20_display": -1.8325778429169993e-14,
+    "independent_fft_all_five_mask_energies_alpha0_quarter_shift_relative_change_display": 0,
+    "independent_fft_mask6_relative_change_alpha_1_over_20_display": -0.2644624938336384
+  },
+  "reproduction": {
+    "archive": "Geeky_S12_ROT022_exact_mask_energy_symmetry_transition.zip",
+    "archive_bytes": 19182,
+    "archive_sha256": "5495d8f5fb5e3ad28f9a2ef111a33f11581cdaa9455b4cd5ca8502c54344c6ba",
+    "members": 10,
+    "CRC": "PASS",
+    "all_members_sha256_and_full_byte_readback": "PASS",
+    "actual_executed_main_python_sha256": "f0ba423d460839c8276ebfe34c863cbbce31d14ff59f440b3ac40097d7be7d94",
+    "actual_full_source_intervals_json_sha256": "eadc03105b4f2158386dbb750511cff9fe0a553991f883c53f044b2162d32e8c",
+    "independent_spatial_fft_python_sha256": "b75dc6c3c9bb098dc8fcc3427e6c98c034397183a3d632f14c47809a0312b9aa",
+    "actual_independent_spatial_fft_json_sha256": "8647398a8d8a5733b08ba6e1677f0833bf60e6450dcdefda0d4a06e2001f048f",
+    "clean_isolated_standalone_python_full_JSON_byte_identical": "PASS",
+    "one_byte_tamper_each_of_original_M13_operator_and_B25_rejected_before_import": "2/2 PASS",
+    "full_exact_executed_source_mirrored_to_public_GitHub": "NO; user local ZIP canonical"
+  },
+  "external_review": {
+    "M15_ROT013": "DIFFERENT_CELL_I1 PASS original ROT020 local rank4 and full tensor 2 periods at alpha=.05; M15 owns its own original lattice review",
+    "ROT022": "AUTHOR_ONLY new energy stabilizer 16->2 and all positive alpha Bernstein pending independent referee",
+    "KN14_BW_ingest": "UNVERIFIED",
+    "M15_CANON_owner_acceptance": "UNVERIFIED"
+  },
+  "claim_ceiling": [
+    "M13_PUBLIC_AUXILIARY_ONLY",
+    "ORIGINAL_HISTORIC_DTC0A_RUNTIME_BYTES_MISSING",
+    "HYPOTHETICAL_TRANSLATION_NOT_NATIVE_PARAMETER",
+    "FIVE_ENERGY_ALL_T_PERIODS_NOT_ALL_POINTWISE_ALIASES",
+    "NO_MEASURED_PHYSICAL_CALIBRATION",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
