@@ -4,6 +4,7 @@ exposure: PUBLIC
 claim_ceiling: TASK_MESSAGE_ONLY / NO_RESULT / MODEL_INTERNAL_TARGETS / NO_PBH_BOUND / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
 created_at: 2026-11-13
+revision: 2 (2026-11-13, przed ogłoszeniem; dodana uwaga o nieregularności odpowiedzi)
 supersedes: IW_EKS1_FRONTB_WUXU_GROK_INDEPENDENT_REPLICA_TASK_001_20261112
 origin_cell: EKSPLORATOR / EKS1 (wątek Claude; solver DECLARED_ONLY)
 document_type: PACKET
@@ -55,6 +56,11 @@ Masy: `m_j = 6e8·(1e10/6e8)^(j/99)` g; obowiązkowo `j = 22` (1.121174e9 g) i `
 Korzenie leżą w przedziale `log10 β ∈ [−20, −16.5]`. Metodę ich wyznaczenia wybierz sam i opisz.
 
 **Uwaga o uwarunkowaniu.** Przy j = 22 odpowiedź `X(T0)` rośnie z `β` coraz wolniej (bliskie nasycenie), więc korzeń V2 jest tam kilkakrotnie bardziej wrażliwy na drobne różnice numeryczne niż przy j = 62. Dlatego podstawą porównania są wartości Q0, a korzenie są wielkością pochodną. Dla każdego korzenia podaj też lokalne nachylenie `d ln(X − X0s) / d ln β`.
+
+**Uwaga o nieregularności.** Kod autorów uruchamiany z ich domyślnymi ustawieniami solvera daje `X(T0)` jako funkcję `β`, która w drobnej skali nie jest gładka ani monotoniczna: sąsiednie wartości `β` potrafią dać wyniki różniące się o około `1e-4` w `Y` w przypadkowym kierunku. Bisekcja na takiej funkcji trafia w przypadkową zmianę znaku, nie w „korzeń". Dlatego:
+- korzenie wyznaczaj z gładkiego dopasowania do co najmniej siedmiu równo rozłożonych punktów i podaj pasmo niepewności (na przykład rozrzut po kolejnym usuwaniu jednego punktu);
+- podaj tolerancje solvera, których użyłeś (`reltol`, `abstol`), a w gałęzi P policz każdy punkt Q0 dla dwóch tolerancji różniących się co najmniej dziesięciokrotnie i podaj obie wartości;
+- w gałęzi N nie zmieniaj ustawień solvera autorów dla wielkości Q0; ewentualny przebieg z ostrzejszą tolerancją zgłoś osobno.
 
 ## 3. Model (opis pomocniczy — w razie różnicy wygrywa kod autorów; różnicę zgłoś)
 
