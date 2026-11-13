@@ -1,0 +1,50 @@
+name: XH-S6 ROT017 source native 250 repetitions per angle two units
+on:
+  push:
+    paths:
+      - '.github/workflows/xh-s6-rot017-author-250-per-angle.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-author-250-per-direction-dlpfc25-53:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout public source scientific host
+        uses: actions/checkout@v4
+      - name: Setup Python3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned numpy
+        run: python -m pip install --disable-pip-version-check numpy==2.1.3
+      - name: Fetch exact original author trained model source and source weights
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/solkm/formattingRNN.git /tmp/xh-s6-rot017-author
+          git -C /tmp/xh-s6-rot017-author checkout --quiet --detach 7889a81e298c01532a313e02971c11dbc9db8eb0
+          test "$(git -C /tmp/xh-s6-rot017-author rev-parse HEAD)" = 7889a81e298c01532a313e02971c11dbc9db8eb0
+          mkdir -p /tmp/xh-s6-rot017-results
+      - name: Execute original-source 250 seed batches per 72 directions for two selected original units
+        shell: bash
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          python research/xh-s6/2026-11-13/xh_s6_rot017_author_native_250_per_angle_2units.py \
+            --source-root /tmp/xh-s6-rot017-author/python_code_data \
+            --rot009 research/xh-s6/2026-11-12/xh_s6_rot009_author_native_paired_noisy_microstim.py \
+            --rot013 research/xh-s6/2026-11-13/xh_s6_rot013_source_native_all_ten_original_units_falsifier.py \
+            --prereg research/xh-s6/2026-11-13/iw_xh_s6_rot017_dlpfc25_53_full250perdirection_source_preregister_001.md \
+            --out /tmp/xh-s6-rot017-results | tee /tmp/xh-s6-rot017-results/actual_stdout.log
+      - name: Preserve source-output evidence even on execution failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xh-s6-rot017-original-model-2units-250x72-matched
+          path: /tmp/xh-s6-rot017-results/*
+          if-no-files-found: warn
+          retention-days: 30
