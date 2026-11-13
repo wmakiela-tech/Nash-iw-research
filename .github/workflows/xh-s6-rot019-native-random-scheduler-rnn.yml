@@ -25,7 +25,9 @@ jobs:
           set -euo pipefail
           git clone --quiet https://github.com/solkm/formattingRNN.git /tmp/xh-s6-rot019-author
           git -C /tmp/xh-s6-rot019-author checkout --quiet --detach 7889a81e298c01532a313e02971c11dbc9db8eb0
-          test "$(git -C /tmp/xh-s6-rot019-author rev-parse HEAD)" = 7889a81e298c01532a313e02971c11dbc9eb8eb0
+          ACTUAL_HEAD="$(git -C /tmp/xh-s6-rot019-author rev-parse HEAD)"
+          echo "Original author frozen HEAD: $ACTUAL_HEAD"
+          test "$ACTUAL_HEAD" = 7889a81e298c01532a313e02971c11dbc9db8eb0
           mkdir -p /tmp/xh-s6-rot019-actual-results
       - name: Run original frozen MT plus dlPFC RNN with source Task random shown directions
         shell: bash
