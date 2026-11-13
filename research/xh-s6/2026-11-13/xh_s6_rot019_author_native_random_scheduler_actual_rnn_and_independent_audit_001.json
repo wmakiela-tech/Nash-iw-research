@@ -1,0 +1,196 @@
+{
+  "artifact_id": "IW_XH_S6_ROT019_ORIGINAL_AUTHOR_RANDOM_DIRECTION_NATIVE_RNN_ACTUAL_SUMMARY_AUDIT_001_20261113",
+  "date": "2026-11-13",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "claim_ceiling": "ACTUAL_FROZEN_ORIGINAL_AUTHOR_TWO_UNIT_TRAINED_RNN_RANDOM_SHOWN_DIRECTION_250_BATCHES_OF72 / NOT_ORIGINAL_SINGLE_NBATCH18000 / NO_MONKEY_DATA / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN",
+  "source_original_firstness": "Ruff, Markman, Kim and Cohen, Nature Neuroscience 2026-11-10, DOI 10.1038/s41593-026-02514-7",
+  "source_repository": "solkm/formattingRNN",
+  "source_original_immutable_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "source_prereg_frozen_commit": "301c2b93f8b1e901ba9ef257cb948401e99b89d5",
+  "source_prereg_frozen_blob": "143b2a5de2481abbc96c1f89a4a1478350c17674",
+  "source_predata_engineering_SHA_typo_note_commit": "ee1c6cf21faef53a7482a268d69c4f4084ef728b",
+  "original_source_git_HEAD_workflow_fixed_commit": "8a855544b8356856f6d6270318530eb51ff49ca8",
+  "original_python_runner_git_commit": "d244d20c4400f4ea1d12c5b483106b75d40b4a12",
+  "native_source_model_actual_github_actions_run": 43519685618,
+  "native_source_model_actual_job": 132210545363,
+  "native_actual_source_artifact_id": 14082757371,
+  "native_model_execution_summary_from_actual_runner_stdout": {
+    "artifact_id": "IW_XH_S6_ROT019_ORIGINAL_AUTHOR_RANDOM_DIRECTION_RNN_TWO_UNIT_SOURCE_GATE_001_20261113",
+    "author_frozen_source_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+    "bitwise_source_sham_repeat_checks": 2,
+    "bw": "GITHUB_PENDING_BW_INGEST",
+    "elapsed_seconds": 373.686425676,
+    "matched_original_source_rng_and_onset_blocks": 500,
+    "no_canon": true,
+    "no_exec_sign": true,
+    "no_novelty": true,
+    "original_author_one_single_18000_batch": "NOT_EXECUTED",
+    "original_rot009_wrapper_blob": "054299b6b0f0c0def7cfa6b3600d6f56665375ce",
+    "original_rot013_parser_blob": "0cd2658ed6687380935ab5d8d6f2d9c4b591b0c8",
+    "original_source_model_RNN_executed": true,
+    "source_arm_simulations": 72000,
+    "source_firstness": "Ruff Markman Kim Cohen Nature Neuroscience 2026-11-10 DOI 10.1038/s41593-026-02514-7",
+    "source_pair_rows": 36000,
+    "source_preregister_git_blob": "143b2a5de2481abbc96c1f89a4a1478350c17674",
+    "source_scheduler": "N_batch=72; original MT Task test1ofEach=False, fix_shown=(pref+np.arange(0,360,5))%360, random rng.choice shown",
+    "unit_reports": [
+      {
+        "N_source_paired_trials": 18000,
+        "counts": {
+          "argmax_preserve_cert": 52,
+          "choice_changed": 12713,
+          "exact_pref_sham": 0,
+          "exact_pref_stim": 5584,
+          "gap5_60": 0,
+          "gap5_65": 0,
+          "gap_at_5": 0,
+          "gap_at_65": 0,
+          "sham_gap5_65": 3359
+        },
+        "min_wrong_label_gap_count": 1863,
+        "number_source_angle_counts_not_250": 71,
+        "original_source_random_test1ofEach": false,
+        "reward_deg": 115,
+        "source_angle_counts_max": 309,
+        "source_angle_counts_min": 215,
+        "source_angle_counts_population_sd": 16.452794426614723,
+        "source_original_pref_deg": 295,
+        "source_rng_seed_blocks": 250,
+        "source_true_pref_unique_global_minimum": true,
+        "strength": 45,
+        "true_pref_gap_count": 0,
+        "unit": 53
+      },
+      {
+        "N_source_paired_trials": 18000,
+        "counts": {
+          "argmax_preserve_cert": 6,
+          "choice_changed": 12827,
+          "exact_pref_sham": 0,
+          "exact_pref_stim": 8698,
+          "gap5_60": 0,
+          "gap5_65": 13,
+          "gap_at_5": 0,
+          "gap_at_65": 13,
+          "sham_gap5_65": 3475
+        },
+        "min_wrong_label_gap_count": 325,
+        "number_source_angle_counts_not_250": 69,
+        "original_source_random_test1ofEach": false,
+        "reward_deg": 340,
+        "source_angle_counts_max": 283,
+        "source_angle_counts_min": 214,
+        "source_angle_counts_population_sd": 15.879756505270056,
+        "source_original_pref_deg": 160,
+        "source_rng_seed_blocks": 250,
+        "source_true_pref_unique_global_minimum": true,
+        "strength": 45,
+        "true_pref_gap_count": 13,
+        "unit": 25
+      }
+    ]
+  },
+  "source_actual_model_original_csv_bytes": 4377248,
+  "source_actual_model_original_csv_sha256": "0e1f904444cd35a656b52b56044f5d04b11165d60001b888b0e8195383f0630a",
+  "source_actual_model_original_full_json_bytes": 21409,
+  "source_actual_model_original_full_json_sha256": "ecbcbad9d19ba315393938a4784a3b0ace2a0e8a247773c413e4e51c2ddb0b1e",
+  "previous_rot017_original_balanced_model_csv_sha256": "29f9b48d60b60c031fdca8a37483a969c2b470086f30f3ec5ebcbbb77c65530f",
+  "independent_full_36000_row_source_audit": {
+    "status": "PASS",
+    "actual_source_model_rows_verified": 36000,
+    "prior_model_balanced_rows_verified": 36000,
+    "source_unique_block_trial_grid": "2_ORIGINAL_UNITS_X250_SEED_BLOCKS_X72_TRIALS_PASS",
+    "source_output_geometry": "EVERY_ROW_INDEPENDENT_SHORTEST_CIRCLE_PASS",
+    "source_original_random_task_direction_sampling": "PASS",
+    "source_original_stimulation_sham_source_RNG_onset_matched_blocks": 500,
+    "original_baseline_source_bitwise_repeat": 2,
+    "independent_second_72bin_circular_histogram": "144_CANDIDATE_LABELS_SOURCE_RUNNER_COUNTS_PASS",
+    "clean_replay": "FIVE_DERIVED_ARTIFACTS_BYTE_IDENTICAL_PASS",
+    "negative_integrity_mutation_tests": "TRUNCATED_NATIVE_CSV_AND_NATIVE_JSON_AND_PRIOR_ROT017_CSV_ALL_SHA_FAIL_CLOSED_PASS",
+    "pure_python_stdlib_independent_auditor_SHA256": "dd4f8ba71c1e455b36cfc5fb2b94600c5a62b6d85dcb756a4ba7436c175a3f32",
+    "descriptive_4000_seed_block_bootstrap_model_gap_event_fractions": {
+      "DLPFC25": [
+        0.0003333333333333333,
+        0.0011666666666666668
+      ],
+      "DLPFC53": [
+        0,
+        0
+      ]
+    }
+  },
+  "new_actual_source_random_direction_RNN_vs_prior_balanced_RNN": {
+    "DLPFC25": {
+      "actual_new_original_RNN_model_gap_count": 13,
+      "new_original_model_gap_boundary65": 13,
+      "new_original_model_gap_strict_interior5to60": 0,
+      "new_actual_RNN_gap_stim_sham_choice_changed_count": 8,
+      "prior_balanced_original_RNN_model_gap_count": 17,
+      "new_direction_occupancy_conditional_projection_expected_count": "2109/125",
+      "new_direction_occupancy_projection_numeric": 16.872,
+      "original_random_scheduler_direction_count_range": [
+        214,
+        283
+      ],
+      "original_random_scheduler_number_bins_not250": 69,
+      "new_original_RNN_source_pref_true_label_gap_count": 13,
+      "minimum_wrong_71_label_gap_count": 325
+    },
+    "DLPFC53": {
+      "actual_new_original_RNN_model_gap_count": 0,
+      "new_original_model_gap_boundary65": 0,
+      "new_original_model_gap_strict_interior5to60": 0,
+      "new_actual_RNN_gap_stim_sham_choice_changed_count": 0,
+      "prior_balanced_original_RNN_model_gap_count": 2,
+      "new_direction_occupancy_conditional_projection_expected_count": "49/25",
+      "new_direction_occupancy_projection_numeric": 1.96,
+      "original_random_scheduler_direction_count_range": [
+        215,
+        309
+      ],
+      "original_random_scheduler_number_bins_not250": 71,
+      "new_original_RNN_source_pref_true_label_gap_count": 0,
+      "minimum_wrong_71_label_gap_count": 1863
+    }
+  },
+  "source_real_witness_example": {
+    "unit": 25,
+    "block": 12,
+    "source_seed": 2007513883,
+    "trial_index": 26,
+    "shown_deg": 215,
+    "pref_deg": 160,
+    "sham_choice_deg": 240,
+    "stim_choice_deg": 225,
+    "source_ring_onset_ms": 100,
+    "source_dots_onset_ms": 490,
+    "circular_pref_distance_deg": 65,
+    "genuine_stim_sham_choice_changed": true
+  },
+  "original_model_scientific_negative_knowledge": [
+    "ROT017 actual old source model dlPFC53 two 5deg exceptions remain real, despite ROT019 drawing zero in a different finite stochastic sample.",
+    "ROT016 original independent source model dlPFC25 65deg witness remains real; no absolute empty annulus theorem.",
+    "Observed change 17 to13 or2 to0 cannot be attributed solely to source angle sampling because the stochastic noise seeds also differ.",
+    "Conditional occupancy projections use prior model per-angle response probabilities and NEW actual source direction frequencies, but are NOT new original model responses.",
+    "Original author source generator N_batch18000 random source directions is not exactly one and same as this 250x72 source random-scheduled batching.",
+    "Pseudo preference labels are not physically exchangeable; no 1/72 p-value."
+  ],
+  "complete_user_local_archive": {
+    "filename": "IW_XH_S6_ROT019_ORIGINAL_AUTHOR_RANDOM_DIRECTION_RNN_REPRO_20261113.zip",
+    "bytes": 2281022,
+    "sha256": "908b259c693e9c6b9bfb18be560126264c2eda2734549369ca46e7ea7be50c38",
+    "archived_payload_sha256_checks": "15_OF_15_PASS",
+    "zip_crc": "PASS",
+    "clean_extracted_archive_independent_replay": "PASS",
+    "three_deliberately_mutated_original_inputs_sha_rejected": "PASS"
+  },
+  "custody": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
