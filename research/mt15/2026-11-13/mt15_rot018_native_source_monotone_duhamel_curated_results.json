@@ -1,0 +1,133 @@
+{
+  "artifact_id": "IW_MT15_ROT018_WUXU_ORIGINAL_NATIVE_POSTEV_FLOOR_INTERPOLATION_FREE_DUHAMEL_CURATED_RESULTS_001_20261113",
+  "created_at": "2026-11-13",
+  "cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "origin_firstness": {
+    "original_physics": "Wu-Xu JCAP 02 (2026) 063, frozen author v2 Git d395183674cace6c9906a8911bdeb7234ba4040d",
+    "first_native_julia_trace": "Mech-S9 ROT013",
+    "original_numerical_floor_source": "LT8 ROT014/015",
+    "first_fixed_T_scalar_comparator": "MT15 ROT017",
+    "this_turn": "Independent interpolation-free source-ODE conditional monotone trace bound, no novelty"
+  },
+  "authentic_source": {
+    "actions_run": 43436800793,
+    "artifact_id": 14045176436,
+    "zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+    "raw_trace_csv_sha256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+    "author_main_scan_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "original_16_internal_sha256": "16/16 PASS",
+    "native_total_rows": 10000,
+    "postev_rows": 1456,
+    "postev_all_6_hadron_floors": "8736/8736 PASS"
+  },
+  "thermodynamic_source": {
+    "author_full_1000row_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+    "separate_source_certificate_git_blob": "9ad45e57d1c27e4535c1420a76fdb2037ae54d10",
+    "thermodynamic_lookup_overlapping_cells": 723,
+    "source_qrho_bounds": [
+      -0.000789339557240243,
+      0.8291355487890821
+    ],
+    "source_qs_bounds": [
+      -0.0007639987068695956,
+      0.7110896673481276
+    ],
+    "source_dlnrho_deta_global_safe_upper": -3.723551081531564,
+    "source_dlnrho_dlnT_lower": 3.9992106604427597,
+    "temperature_strictly_decreasing_in_source_postev_model": true,
+    "thermal_proof_executable_original_thermo_csv_in_offline_zip": false
+  },
+  "neutron_native_source_ODE_endpoint_guard": {
+    "interval_count": 1455,
+    "all_conservative_Xnext_gt_source_h_upper": "PASS",
+    "minimum_Xnext_over_upper_equilibrium": 1.1993856694751603,
+    "min_ratio_native_sample_pair": [
+      8614,
+      8615
+    ],
+    "source_X_next": 0.296997422219669,
+    "conservative_h_upper": 0.24762462131937282,
+    "postev_strict_X_decrease_source_ODE_conditional": true
+  },
+  "exact_scalar_comparison": {
+    "definition": "Only freeze original native postev T(t), weak rates, start at source first-zero sample8545, compare true author source floor-ODE X to weak-only W; Ddot=f_floor(T,Xnative)-kappa(T)D.",
+    "interval_lower": "L[i+1]=exp(-kappa[i]*dt)L[i]+f[i]*(-expm1(-kappa[i]*dt))/kappa[i]",
+    "interval_upper": "U[i+1]=exp(-kappa[i+1]*dt)U[i]+f[i+1]*(-expm1(-kappa[i+1]*dt))/kappa[i+1]",
+    "conditions": "Original postev six floor active, source T decreases, source scalar ODE terminal X>local bound implies continuous X decreases, f increases and weak kappa decreases.",
+    "event_time_unknown": "For target T bracket [i-1,i], lower L[i-1], upper U[i]; comparison D nondecreasing since f/kappa increases."
+  },
+  "results": [
+    {
+      "name": "T1",
+      "target_T_MeV": 0.0996888512474581,
+      "native_event_indices": [
+        9326,
+        9327
+      ],
+      "time_seconds_bracket": [
+        123.189807266143,
+        124.095224476887
+      ],
+      "lower_D": 1.2190680782154764e-15,
+      "upper_D": 1.230322496202776e-15,
+      "relative_width_over_midpoint": 0.009189565849433898,
+      "prior_ROT017_PCHIP": 1.2223991939725277e-15
+    },
+    {
+      "name": "T0",
+      "target_T_MeV": 0.07818527068831994,
+      "native_event_indices": [
+        9401,
+        9402
+      ],
+      "time_seconds_bracket": [
+        213.442154808461,
+        215.015671032107
+      ],
+      "lower_D": 2.1875501714924986e-15,
+      "upper_D": 2.207361985495441e-15,
+      "relative_width_over_midpoint": 0.009015795217404518,
+      "prior_ROT017_PCHIP": 2.204222016560413e-15
+    },
+    {
+      "name": "NATIVE_LAST",
+      "native_index": 10000,
+      "T_MeV": 0.00810973699892033,
+      "lower_D": 3.0926952009934006e-14,
+      "upper_D": 3.097731901822072e-14,
+      "relative_width_over_midpoint": 0.0016272547095758738,
+      "prior_ROT017_PCHIP": 3.0952864265192953e-14
+    }
+  ],
+  "source_event_bracket_guard": {
+    "last_active_native_idx": 8544,
+    "first_zero_native_idx": 8545,
+    "source_Xn_last_active": 0.47097045071722,
+    "source_Xn_first_zero": 0.472697125696049,
+    "Xn_increase": 0.0017266749788290015,
+    "source_floor_comparator_may_not_extend_across_event": true
+  },
+  "negative_control": {
+    "sample_only_not_constraining_between_sample_Cinfty_bump": true,
+    "hypothetical_Tmid_MeV": 1.479780040795505,
+    "hypothetical_Xmid": 0.9,
+    "hypothetical_force_s_inv": -7.089299315769163e-18,
+    "is_native_Julia_solution": false
+  },
+  "reproducibility": {
+    "native_source_full_file_original_untouched": true,
+    "independent_mpmath_dps": 55,
+    "max_abs_relative_binary64_vs_mpmath_source_all_bounds": 1.0388743315215995e-13,
+    "independent_scipy_DOP853_synthetic_monotone_paths": 400,
+    "all_400_synthetic_brackets": "PASS",
+    "one_byte_native_zip_tamper": "REJECT_PASS",
+    "clean_extracted_full_replay_json_bytes": "EXACT_PASS",
+    "bundle_sha256": "85dc23c5d6a9517bfd1e0d84f9f4b1ff84c5f3e037f5d7907f4e4ee54894016c",
+    "bundle_size_bytes": 727295,
+    "source_script_sha256": "9a26224b64cc80b932e9da3e32c9d3befea72af84ff568943f7a7a32412d17ca",
+    "executed_full_local_json_sha256": "c23251dbd7dcd651bb0d49bd5064fc33c0df7399a08647c95b959f673301e905"
+  },
+  "epistemic_qualification": "Analytic bounds conditional on native exact source ODE and output sample values; not an original Julia solver absolute error certificate, interpolation error of physical 10D, different unclamped 10D solve, observed Yp physical correction or PBH limit.",
+  "claim_ceiling": "NO_NEW_NATIVE_JULIA / NO_PHYSICAL_Yp_OR_PBH / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / E4_SOURCE_HOLD / GITHUB_PENDING_BW_INGEST"
+}
