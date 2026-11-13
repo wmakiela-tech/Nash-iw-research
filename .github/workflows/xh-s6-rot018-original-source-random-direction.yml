@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/xh-s6-rot018-original-source-random-direction.yml'
+      - 'research/xh-s6/2026-11-13/xh_s6_rot018_original_author_native_task_direction_scheduler.py'
   workflow_dispatch:
 permissions:
   contents: read
