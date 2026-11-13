@@ -80,7 +80,7 @@ Thus kappa_crit=(rmax-rmin)/(rmax+rmin)≈0.06626959720164886 or 6.62695972% rel
 The locally executed Fraction script checked all FIVE equalities s_i(alpha)=cstar*(1+eta_i)*s_i(beta) EXACTLY, not by Float64 residual tolerance.
 
 More robust: keep ALL 25 original source coefficients separately variable in the eps=1e-7 independent coefficient box, evaluate all five shell ratio intervals at the two rational parameters with rigorous directed exact Fraction interval operations, and sandwich the possible threshold:
- 0.06626786193306027 < kappa_crit(alpha,beta) < 0.06627133247007830.
+ 0.06626786193306025 < kappa_crit(alpha,beta) < 0.06627133247007830.
 These decimals are outward-display approximations of EXACT rational endpoints recorded in the executable output JSON; the source tests themselves compare exact fractions.
 
 Hence for EVERY 25D box realization:
