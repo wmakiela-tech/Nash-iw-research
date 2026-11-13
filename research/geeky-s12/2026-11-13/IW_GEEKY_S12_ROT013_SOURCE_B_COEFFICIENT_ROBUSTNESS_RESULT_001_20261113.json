@@ -1,0 +1,101 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT013_SOURCE_B_COEFFICIENT_ROBUSTNESS_RESULT_001_20261113",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "date": "2026-11-13",
+  "exposure": "PUBLIC",
+  "science_class": "SOURCE_M13_AUXILIARY_MODEL_EXACT_RATIONAL_INTERVAL_ROBUSTNESS_SUFFICIENT_CERTIFICATE",
+  "original_immutable": {
+    "source": "research/m13/2026-10-26/direct_B.json",
+    "source_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "positive_certifier": "research/geeky-s12/2026-11-12/iw_geeky_s12_rot007_exact_B_uniform_delta_le_0025_rational_bernstein.js",
+    "positive_git_blob": "798313672194929ee44c3db7fe591d3cee5e6684",
+    "negative_certifier": "research/geeky-s12/2026-11-12/iw_geeky_s12_rot007_exact_B_delta_002514_interior_falsifier.js",
+    "negative_git_blob": "0851b2c0eb807314849852a5c2d065d59ce9bb08",
+    "robustness_reproducer": "research/geeky-s12/2026-11-13/geeky_s12_rot013_source_coefficient_robustness.js",
+    "robustness_reproducer_git_blob": "4fe7b72d0ef243627ba4f9ea2d749221947c07b7"
+  },
+  "perturbation_family": "For each j=0,..,4 and mask k=2,..,6 independently, the coefficient of g_k quartic may take any real value in [lo_original-epsilon*|lo_original|,hi_original+epsilon*|hi_original|]; all expanded decimal interval endpoints are constructed as exact rational numbers using BigInt. This uncertainty is not a physical model of correlated source field variations.",
+  "robust_positive_epsilon_1e_minus_7": {
+    "epsilon": "1/10000000",
+    "pass": true,
+    "scope": "For every independent choice of all 25 quartic coefficients inside expanded intervals, all alpha in [0,1/5] and all real 0<delta<=1/40, nearest legal endpoints globally minimize the source profile; for arbitrary legal delta, global minimum lies among legal {0, alpha-delta,alpha+delta}.",
+    "strict_sign_gates": 17,
+    "shell_positive_gates": 5,
+    "shell_lower_scaled_1e12": [
+      0.009861782946831208,
+      0.013090429111911581,
+      0.018238974345149234,
+      0.024583105958471456,
+      0.0333565421813024
+    ],
+    "P_five_boxes_lower": [
+      6815.742123791725,
+      14507.440531249164,
+      1317614.3738041774,
+      2772.0510450878246,
+      179364.76239311817
+    ],
+    "P_small_lower": 309.9553946824576,
+    "dP_small_lower": 38287.67324169624,
+    "F0_eight_lower": [
+      0.7901664403965454,
+      0.46768077995401613,
+      2.39879938606879,
+      7.298474257733904,
+      31.98700448767906,
+      268.56404138873415,
+      2965.448359068297,
+      1145455.9383986113
+    ],
+    "P_shifted_line_two_lower": [
+      1679.0976253722483,
+      3224.4656074580885
+    ],
+    "smallest_positive_sign_gate_lower_approx": 0.46768077995401613,
+    "all_sign_decisions_exact_rational_intervals_not_float": true
+  },
+  "robust_negative_epsilon_1e_minus_8": {
+    "epsilon": "1/100000000",
+    "pass": true,
+    "alpha": "1541/50000",
+    "delta": "1257/50000",
+    "witness_beta": "1/1000000",
+    "nearest_left": "71/12500",
+    "nearest_right": "1399/25000",
+    "strict_directed_upper_witness_below_lower_nearest_both": true,
+    "strict_gap_lower_D2_scaled_1e24_display_approx": {
+      "left_nearest_minus_witness": 0.000019661896819274873,
+      "right_nearest_minus_witness": 0.20316849802330544
+    },
+    "scope": "All 25 independently varied coefficients in epsilon 1e-8 envelope preserve strict non-nearest witness, so not only source exact center is a counterexample.",
+    "control_positive_at_same_epsilon": "17/17 signs and 5/5 shells PASS; minimum F0 0.7074891447442758"
+  },
+  "inconclusive_probes": {
+    "positive_epsilon_1e_minus_6": {
+      "result": "UNDECIDED_BY_THIS_BERNSTEIN_CERTIFICATE_NOT_A_COUNTEREXAMPLE",
+      "diagnostic": "Bernstein coefficient gate #7 lower approximately -1.4335994375851753"
+    },
+    "negative_epsilon_1e_minus_7": {
+      "result": "UNDECIDED_BY_THIS_DIRECTED_WITNESS_ENCLOSURE_NOT_A_COUNTEREXAMPLE",
+      "diagnostic": "STRICT CERTIFICATE FAIL"
+    },
+    "negative_epsilon_1e_minus_6": {
+      "result": "UNDECIDED_BY_THIS_DIRECTED_WITNESS_ENCLOSURE_NOT_A_COUNTEREXAMPLE",
+      "diagnostic": "STRICT CERTIFICATE FAIL"
+    }
+  },
+  "evidence_class": "Original ROT007 mathematical sign certificate evaluated on widened exact rational intervals. NO NEW INDEPENDENT REC11/AUD2 mathematical referee. Robustness radius is a proven sufficient open/enclosed neighborhood, NOT a sharp maximal radius.",
+  "firstness": "M13 owns original source, shell geometry and quartic intervals; Geeky-S12 ROT007 owns original source-typed three-candidate and delta<=.025 statements. ROT013 proves a NEW SUFFICIENT STABILITY ENVELOPE but makes NO mathematical novelty claim relative to general interval analysis.",
+  "evidence_ceiling": [
+    "M13_AUXILIARY_N41_FIVE_MASK_SOURCE_ONLY",
+    "SOURCE_45DIGIT_GENERATOR_FULL_REPLAY_ROT011_PASS",
+    "HISTORIC_DTC0A_RUNTIME_BYTE_IDENTITY_MISSING",
+    "INDEPENDENT_REC11_AUD2_REFEREE_PENDING",
+    "M15_OWNER_ADOPTION_PENDING",
+    "KN13_BW_INGEST_PENDING",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
