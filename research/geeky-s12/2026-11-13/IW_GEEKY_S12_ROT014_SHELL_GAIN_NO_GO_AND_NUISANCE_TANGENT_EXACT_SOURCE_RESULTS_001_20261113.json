@@ -1,0 +1,106 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT014_SHELL_GAIN_NO_GO_AND_NUISANCE_TANGENT_EXACT_SOURCE_RESULTS_001_20261113",
+  "date": "2026-11-13",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source_firstness": "M13",
+  "source_scope": "M13 auxiliary functionally matched N41 B five masks 25 quartic interval coefficients",
+  "source_input": {
+    "path": "research/m13/2026-10-26/direct_B.json",
+    "git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "sha256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f"
+  },
+  "referee_currentness": {
+    "AUD2_ROT004": "INDEPENDENT_I1_BOUNDED_PASS_NEGATIVE_EPS_1E8_AND_FIVE_SHELL_EPS_1E7",
+    "M15_ROT005": "INDEPENDENT_BOUNDED_PASS_POINTWISE_ROBUST_NEGATIVE_EPS_1E8",
+    "GLOBAL_POSITIVE_ROT007_17_BERNSTEIN": "REFEREE_PENDING",
+    "M15_GLOBAL_ADOPTION": "NOT_VERIFIED",
+    "KN13_BW": "PENDING",
+    "AUD2_report_blob": "1450d8467e1164305d0ca2e50d7537dcd87f1274",
+    "M15_report_blob": "8dfaad213f6a35b291846b6bf501d426b57640ce"
+  },
+  "exact_source_results": {
+    "interval_bernstein_shells_positive_all_five": true,
+    "interval_bernstein_derivatives_checked_all_five": true,
+    "weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "lower_shell_times_1e12": [
+      0.009861818352395729,
+      0.013090462972866413,
+      0.018239007511768848,
+      0.024583138646238557,
+      0.033356545541269086
+    ],
+    "upper_abs_derivative_times_1e12": [
+      5.5744486344003015,
+      5.760107445098132,
+      5.992179145336571,
+      6.0866733331361464,
+      5.613204221406068
+    ],
+    "individual_sup_deriv_over_inf_shell_upper": [
+      565.2556592716091,
+      440.02320292548393,
+      328.5364700612177,
+      247.59545234340786,
+      168.27894286779036
+    ],
+    "all_strict_less_than_integer_566_exact_fraction_comparison": true,
+    "integer_L": 566,
+    "model": "Five independent positive shell energy gains g_i in [1-kappa,1+kappa]",
+    "constructive_choice": "g_i=s_i(alpha)/s_i(beta)",
+    "strict_zero_loss_if": "|alpha-beta|<=kappa/566, alpha,beta in [0,1/5], kappa in (0,1)",
+    "kappa_one_percent_zero_loss_distance": "1/56600",
+    "kappa_point_one_percent_zero_loss_distance": "1/566000",
+    "full_unbounded_gain_zero_loss_for_any_alpha_beta": true,
+    "interpretation": "No unique source profile parameter identification; does not refute nearest minimizer attainment or original single-gain theorem"
+  },
+  "one_shape_nuisance": {
+    "anchor_alpha0": "1/20",
+    "h_i": "s_i'(alpha0)/s_i(alpha0)",
+    "gain_shape": "c*(1+theta*h_i), c>0",
+    "all_h_abs_less_than_28_with_original_source_directed_intervals": true,
+    "trial_choice": "theta=-t, c=1, beta=alpha0+t",
+    "all_trial_gains_positive_if": "|t|<=1/1000",
+    "source_exact_interval_rank_2_minor_nonzero": true,
+    "source_exact_interval_rank_3_minor_nonzero": true,
+    "rank_2_minor_scaled_1e24_display_approx": -0.02160368032249769,
+    "rank_3_minor_scaled_1e36_display_approx": -0.026525143186109795,
+    "baseline_one_gain_sse_order": "I*t^2+O(t^3); I>0",
+    "one_shape_two_nuisance_sse_order": "C*t^4+O(t^5); C>0 at source and midpoint",
+    "baseline_I_times_1e24_at_source_midpoint": 1527.91885837949,
+    "shape_C_times_1e24_at_source_midpoint": 6428.6649244543905,
+    "sample_exact_fraction": {
+      "t": "1/1000",
+      "common_loss_times_1e24": 0.0014992465280579854,
+      "one_shape_loss_times_1e24": 6.070507839400907e-9,
+      "ratio_shape_to_common": 0.000004049039117845549,
+      "all_five_gain_shapes_positive": true
+    },
+    "prior_art": "classical nuisance tangent efficient score projection, no novelty",
+    "caveat": "h_i is deliberately source-derivative aligned, not measured or documented historical physical distortion"
+  },
+  "reproduction": {
+    "local_archive": "Geeky_S12_ROT014_gain_nuisance_no_go_and_tangent.zip",
+    "archive_sha256": "e70ec18d9878e2fd7e6c93c01d6554a309a689d4981329265e780e4742680916",
+    "archive_bytes": 9775,
+    "members": 5,
+    "zip_crc_and_member_sha256_byte_check": "PASS",
+    "executed_local_python_script_sha256": "68bdc0b339f39df28251a7ac2da279ba46f9be6465e8c39aa9ec30957a74ff0d",
+    "local_machine_results_sha256": "191acd36bc9e090050632c17f14078191b079c6b5ccf38541e020ca1e5b2d9d8",
+    "runtime": "Python3 stdlib only; all signs and least squares exact fractions; float only human display",
+    "source_code_publication_status": "The actually executed code is delivered in user ZIP; not separately mirrored to public GitHub"
+  },
+  "claim_ceiling": [
+    "NO_HISTORIC_DTC0A_RUNTIME",
+    "NO_M13_SOURCE_FIELD_PHYSICAL_GAIN_MODEL",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
