@@ -1,0 +1,140 @@
+name: Mech-S9 ROT012 single original Wu-Xu native hadron raw-vs-RHS-floor diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-wuxu-single-native-hadron-floor-rot012.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  one-author-native-hadron-trajectory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s9_rot012_original_hadron_floor_single"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Freeze one-point prereg and GPT diagnostic code source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          julia --version > "$OUTDIR/JULIA_VERSION"
+          git rev-parse HEAD > "$OUTDIR/NASH_PUBLIC_REPO_COMMIT"
+          test "$(git hash-object research/mech-s9/2026-11-13/code/mech_s9_rot012_one_original_native_magic_hadron_floor.jl)" = "35dd6118ebfa04db419f8a5feeec859f7ff27bbe"
+          test "$(git hash-object research/mech-s9/2026-11-13/IW_MECH_S9_ROT012_ONE_POINT_NATIVE_HADRON_FLOOR_PREREG_001_20261113.md)" = "5379dc6d99bdb4bc7bfc8dcdd1e6fa6c03ad9b9a"
+          sha256sum \
+            research/mech-s9/2026-11-13/code/mech_s9_rot012_one_original_native_magic_hadron_floor.jl \
+            research/mech-s9/2026-11-13/IW_MECH_S9_ROT012_ONE_POINT_NATIVE_HADRON_FLOOR_PREREG_001_20261113.md \
+            > "$OUTDIR/FROZEN_INPUT_SHA256SUMS"
+          echo "FROZEN_PREREG_AND_DRIVER_PASS"
+      - name: Pin and authenticate exact author original PBH 10D Julia source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan-parameters.jl)" = "53faee65beda383348580c28d0424188da69b660"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/ORIGINAL_AUTHORS_PINNED_COMMIT"
+          sha256sum _wuxu/arXiv-2509.05618/main-scan.jl _wuxu/arXiv-2509.05618/main-scan-parameters.jl >> "$OUTDIR/FROZEN_INPUT_SHA256SUMS"
+          echo "AUTHOR_SOURCE_UNMODIFIED_VERIFIED_PASS"
+      - name: Rebuild already recovered exact native Julia environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" > "$OUTDIR/ENV_STDOUT" 2> "$OUTDIR/ENV_STDERR"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' > "$OUTDIR/PKG_STATUS" 2>&1
+          echo "MECH_S6_FROZEN_ENV_PASS"
+      - name: Execute ONE original magic j22 beta source with 13-return RAW hadrons
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" \
+            research/mech-s9/2026-11-13/code/mech_s9_rot012_one_original_native_magic_hadron_floor.jl \
+            "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" \
+            "$GITHUB_WORKSPACE/$OUTDIR" \
+            > "$OUTDIR/NATIVE_STDOUT" 2> "$OUTDIR/NATIVE_STDERR"
+          test -s "$OUTDIR/native_source_summary.txt"
+          test -s "$OUTDIR/author_native_raw_hadron_history_10000.csv"
+          test -s "$OUTDIR/six_species_floor_summary.csv"
+          test -s "$OUTDIR/selected_source_snapshots.csv"
+          echo "ONE_AUTHOR_10D_JULIA_HADRON_TRACE_EXECUTED_PASS"
+      - name: Independently audit raw-trace floor flags and sample identity with stdlib
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' > "$OUTDIR/INDEPENDENT_TRACE_AUDIT_STDOUT" 2> "$OUTDIR/INDEPENDENT_TRACE_AUDIT_STDERR"
+          import csv, json, math, pathlib, collections
+          root=pathlib.Path("mech_s9_rot012_original_hadron_floor_single")
+          def get(name):
+              with (root/name).open() as f:
+                  return list(csv.DictReader(f))
+          rows=get("author_native_raw_hadron_history_10000.csv")
+          species=get("six_species_floor_summary.csv")
+          samples=get("selected_source_snapshots.csv")
+          assert len(rows)==10000, len(rows)
+          assert len(species)==6,len(species)
+          assert len(samples)>=4,len(samples)
+          names=["pi_minus","pi_plus","K_minus","K0_L","pbar","nbar"]
+          discrepancy=0
+          flags_by_species={}
+          for h in names:
+              logfield="lograw_"+h;flagfield="floor_active_"+h
+              mismatches=[r for r in rows if (float(r[logfield])< -100)!=(r[flagfield]=="1")]
+              assert not mismatches,(h,len(mismatches))
+              flags_by_species[h]=sum(r[flagfield]=="1" for r in rows)
+          t=[float(r["t_seconds"]) for r in rows]
+          assert all(b>a for a,b in zip(t,t[1:])),"source time not strictly increasing"
+          starts=[int(r["index"]) for r in rows]
+          assert starts==list(range(1,10001))
+          ev=[int(r["index"]) for r in rows if r["nPBH_zero"]=="1"]
+          if ev:
+              assert ev==list(range(ev[0],10001)),"source evap flag not persistent"
+          samples_t={r["tag"]:int(r["index"]) for r in samples}
+          assert "near_T0_author_nucleosynthesis" in samples_t
+          assert "near_T1_source_calibration" in samples_t
+          report={
+            "title":"IW_MECH_S9_ROT012_ORIGINAL_NATIVE_HADRON_DUAL_TRACE_INDEPENDENT_FORMAT_AUDIT",
+            "classification":"SOURCE_NATIVE_MODEL_INTERNAL_DIAGNOSTIC_ONLY",
+            "native_points":len(rows),
+            "native_species":names,
+            "native_magic_calls":1,
+            "first_zero_PBH_index":ev[0] if ev else None,
+            "source_floor_threshold_lograw":-100,
+            "total_raw_floor_samples_by_species":flags_by_species,
+            "snapshots":samples,
+            "species_summary":species,
+            "fatal_format_check_pass":True,
+            "no_alternate_ODE_solve":True,
+            "no_physical_PBH_bound":True
+          }
+          (root/"INDEPENDENT_TRACE_AUDIT.json").write_text(json.dumps(report,indent=2,sort_keys=True)+"\n")
+          print(json.dumps({"n":len(rows),"first_evap":report["first_zero_PBH_index"],"floor_counts":flags_by_species},indent=2))
+          PY
+          echo "ONE_POINT_RAW_HADRON_TRACE_INDEPENDENT_AUDIT_PASS"
+      - name: Hash preserve ALL source, diagnostic and negative logs without bot push
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - name: Preserve authentic one-point author trajectory and provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot012-original-wuxu-one-point-hadron-dual-floor-source
+          path: mech_s9_rot012_original_hadron_floor_single/
+          if-no-files-found: error
