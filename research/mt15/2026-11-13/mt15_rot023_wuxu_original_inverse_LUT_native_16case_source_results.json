@@ -1,0 +1,206 @@
+{
+  "artifact_id": "IW_MT15_ROT023_ORIGINAL_AUTHOR_1000NODE_INVERSE_LUT_SOURCE_NATIVE_16CASE_RESULTS_001_20261113",
+  "created_at": "2026-11-13",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "original_author_public_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+  "original_author_complete_1000x3_thermo_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+  "original_author_inverse_interpolator_git_blob": "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc",
+  "original_author_main_scan_git_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+  "real_native_first_owner": "Mech-S9 ROT013, original 10D Julia Actions 43436800793",
+  "original_native_zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+  "original_native_full_csv_sha256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+  "source_native_16_samples_parent_blob": "ea584e6ecae950561e2e43945499923692fe3f72",
+  "author_inverse_global_points": 1000,
+  "necessary_prefix_nodes_reconstructed": 340,
+  "first_original_inverse_generated_T_MeV": 0.01,
+  "source_native_T_domain_MeV": [
+    0.00810973699892033,
+    1.48260941885709
+  ],
+  "numerics": "Original author full 1000-row Git SHA confirmed; connected V8 original source first340 inverse LUT pref; original table-knots & inverse-knots segmented Gauss8 and independent cell-local Simpson32; source source EOS exact relation dln a/dlnT=alpha_LUT/f_code(T).",
+  "max_abs_binary64_GL8_vs_Simpson32_S_ratio_across_16": 4.1744385725905886e-14,
+  "max_16_abs_roundtrip_T_error": 0.000005511654764811524,
+  "dense_30001_scan_near_worst_T_MeV": 0.07000128953303338,
+  "dense_30001_scan_max_relative_T_error_sample": -0.00001240053226658766,
+  "dense_grid_is_not_a_proof_of_global_supremum": true,
+  "last_source_native_S_ratio": 1.1682400717068826,
+  "last_ideal_inverse_source_EOS_S_ratio": 1.170086317111308,
+  "last_original_inverse_LUT_source_EOS_S_ratio": 1.1700836341476155,
+  "last_LUT_only_model_relative_effect": -0.000002292962197114612,
+  "last_remaining_source_native_vs_LUT_relative_residual": -0.001575581767773282,
+  "ratio_remaining_residual_abs_to_LUT_effect_abs": 687.1381350097887,
+  "records": [
+    {
+      "original_native_source_row": 8545,
+      "original_native_temperature_MeV": 1.48260941885709,
+      "native_S_ratio": 1,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 1.212918048221212e-7,
+      "original_inverse_LUT_only_relative_model_effect": 0,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": 0
+    },
+    {
+      "original_native_source_row": 8600,
+      "original_native_temperature_MeV": 1.20172359287567,
+      "native_S_ratio": 1.0000594060951027,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.000062945571957,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.000064020422236,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 4.764403969126363e-7,
+      "original_inverse_LUT_only_relative_model_effect": 0.0000010747826262313964,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.000004614031741012603
+    },
+    {
+      "original_native_source_row": 8700,
+      "original_native_temperature_MeV": 0.822024599270091,
+      "native_S_ratio": 1.0004309959155044,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.0004369022727468,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.0004376688763414,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 3.725029198431429e-7,
+      "original_inverse_LUT_only_relative_model_effect": 7.662688099596693e-7,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.000006670041567402585
+    },
+    {
+      "original_native_source_row": 8800,
+      "original_native_temperature_MeV": 0.565208534567791,
+      "native_S_ratio": 1.0018507279789017,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.0017153837011583,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.0017196759792735,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 0.0000015016304477644127,
+      "original_inverse_LUT_only_relative_model_effect": 0.000004284927819897533,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": 0.00013082701954525433
+    },
+    {
+      "original_native_source_row": 8900,
+      "original_native_temperature_MeV": 0.392344897835177,
+      "native_S_ratio": 1.005443658332413,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.005470615314753,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.0054706087620096,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 1.3764599882115647e-7,
+      "original_inverse_LUT_only_relative_model_effect": -6.517090977986584e-9,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.0000268037965126533
+    },
+    {
+      "original_native_source_row": 9000,
+      "original_native_temperature_MeV": 0.276705709098404,
+      "native_S_ratio": 1.0146156170813965,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.0148449507071802,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.0148487562185,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 0.0000012810625409365173,
+      "original_inverse_LUT_only_relative_model_effect": 0.000003749845054912271,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.00022972796259046468
+    },
+    {
+      "original_native_source_row": 9100,
+      "original_native_temperature_MeV": 0.199221185991802,
+      "native_S_ratio": 1.0334968499640322,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.033699854245599,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.0337170771128419,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 0.00000482436809989828,
+      "original_inverse_LUT_only_relative_model_effect": 0.00001666138112721427,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.00021304393018706236
+    },
+    {
+      "original_native_source_row": 9200,
+      "original_native_temperature_MeV": 0.146213868999653,
+      "native_S_ratio": 1.0650428598415813,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.064666542980817,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.0646785600887478,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 0.0000032184375375887697,
+      "original_inverse_LUT_only_relative_model_effect": 0.000011287203500520704,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": 0.0003421687695139841
+    },
+    {
+      "original_native_source_row": 9300,
+      "original_native_temperature_MeV": 0.108068423790714,
+      "native_S_ratio": 1.104606499408639,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.106038216942253,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.106031207850679,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": -0.000001400497049997007,
+      "original_inverse_LUT_only_relative_model_effect": -0.000006337115179610997,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.0012881268014205416
+    },
+    {
+      "original_native_source_row": 9400,
+      "original_native_temperature_MeV": 0.0786846844615229,
+      "native_S_ratio": 1.1443566373174452,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.1461331091634754,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1461161534722084,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": -0.00000383286482807943,
+      "original_inverse_LUT_only_relative_model_effect": -0.000014793823798875394,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.0015351988098524227
+    },
+    {
+      "original_native_source_row": 9500,
+      "original_native_temperature_MeV": 0.0552074721803674,
+      "native_S_ratio": 1.1648818832988597,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.1666591493310436,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1666366215808892,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": -0.000005511654764811524,
+      "original_inverse_LUT_only_relative_model_effect": -0.000019309624552543703,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.0015041001195827963
+    },
+    {
+      "original_native_source_row": 9600,
+      "original_native_temperature_MeV": 0.0377517024016138,
+      "native_S_ratio": 1.1681452927262255,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.1699990013748405,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1699960119908062,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": -8.734050804815041e-8,
+      "original_inverse_LUT_only_relative_model_effect": -0.000002555031269890762,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.0015818167289575191
+    },
+    {
+      "original_native_source_row": 9700,
+      "original_native_temperature_MeV": 0.0257011034167565,
+      "native_S_ratio": 1.1682573500437194,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.1700639734313345,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1700614196932937,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 3.67971513259846e-8,
+      "original_inverse_LUT_only_relative_model_effect": -0.0000021825627476435017,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.0015418589308304753
+    },
+    {
+      "original_native_source_row": 9800,
+      "original_native_temperature_MeV": 0.0174978333806322,
+      "native_S_ratio": 1.1682426001199306,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.1700848483494548,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1700819762046002,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": -5.388911583636968e-8,
+      "original_inverse_LUT_only_relative_model_effect": -0.000002454646651162129,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.001572006168863438
+    },
+    {
+      "original_native_source_row": 9900,
+      "original_native_temperature_MeV": 0.0119123163222977,
+      "native_S_ratio": 1.1682400717068855,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.170086317111356,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1700836341476593,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 1.1102230246251565e-15,
+      "original_inverse_LUT_only_relative_model_effect": -0.000002292962200778348,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.001575581767808143
+    },
+    {
+      "original_native_source_row": 10000,
+      "original_native_temperature_MeV": 0.00810973699892033,
+      "native_S_ratio": 1.1682400717068826,
+      "ideal_rho_inverse_source_EOS_S_ratio": 1.170086317111308,
+      "original_author_1000node_inverse_LUT_source_EOS_S_ratio": 1.1700836341476155,
+      "pointwise_rho_T_inverse_roundtrip_relative_error": 2.220446049250313e-16,
+      "original_inverse_LUT_only_relative_model_effect": -0.000002292962197114612,
+      "native_vs_actual_source_inverse_LUT_EOS_relative_residual": -0.001575581767773282
+    }
+  ],
+  "execution_surfaces": {
+    "complete_original_1000row_thermo_reconstruction": "EXECUTED through connected GitHub/V8 on source Git blob; 16 numeric source cases, 2 source quadratures",
+    "local_python_full_original_1000row_execution": "NOT RUN - full source table not mounted; network-enabled --fetch-thermo or --thermo needed",
+    "local_python_synthetic_constant_EOS_selftest": "PASS",
+    "offline_original_10D_source_and_16_gs_fixture_replay": "PASS",
+    "offline_zip_sha256": "635aaaba126051e7e5e3a91d29292e7ad050e2984dfa8316cfbbbcb3346e1650",
+    "offline_6_SHA256_CRC_clean_replay": "PASS",
+    "offline_1500_algebra_controls": "PASS",
+    "native_tamper_detection": "FAIL-CLOSED PASS"
+  },
+  "claim_ceiling": "SOURCE_CODE_V2_MODEL_MATH / NO_NEW_JULIA / NO_SOLVER_ACTUAL_ERROR_CERT / NO_PHYSICAL_Yp_OR_PBH_BBN / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / GITHUB_PENDING_BW_INGEST"
+}
