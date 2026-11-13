@@ -1,0 +1,158 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT017_FINITE_ACTIVE_SET_SOURCE_BOX_RESULTS_001_20261113",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "date": "2026-11-13",
+  "exposure": "PUBLIC",
+  "source": {
+    "M13_direct_B_path": "research/m13/2026-10-26/direct_B.json",
+    "M13_direct_B_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "M13_direct_B_sha256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f",
+    "N": 41,
+    "masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "coefficient_box": "All 25 independent intervals enlarged [lo-eps abs(lo), hi+eps abs(hi)] with eps=1e-7",
+    "alpha": "1/20",
+    "beta": "3/40"
+  },
+  "mathematical_result": {
+    "model": "min_{c>0, |eta_i|<=kappa} sum_i w_i*(s_i(alpha)-c*(1+eta_i)*s_i(beta))^2",
+    "r_i": "s_i(alpha)/s_i(beta)>0",
+    "A_i": "w_i*s_i(beta)^2",
+    "profile": "Phi(c)=sum_i A_i*max(r_i-(1+kappa)c,(1-kappa)c-r_i,0)^2",
+    "max_breakpoints": 10,
+    "max_regions": 11,
+    "region_candidate": "c=(sum_L A_i*(1-kappa)*r_i + sum_H A_i*(1+kappa)*r_i) / (sum_L A_i*(1-kappa)^2 + sum_H A_i*(1+kappa)^2)",
+    "global_optimum": "Compare at most 11 exact clipped stationary candidates; zero-loss plateau handled separately; no optimum at c=0 or c->infinity",
+    "original_math_novelty_claim": false
+  },
+  "four_source_robust_regimes": [
+    {
+      "kappa": "1/100",
+      "active_low": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_high": [
+        5
+      ],
+      "inactive": [],
+      "loss_scaled1e24_source_midpoint": 0.39633122626837725,
+      "loss_scaled1e24_interval_display": [
+        0.3962481084566588,
+        0.39641435398115865
+      ],
+      "min_activity_margin_display": 0.00574245773617365
+    },
+    {
+      "kappa": "1/25",
+      "active_low": [
+        1,
+        2,
+        3
+      ],
+      "active_high": [
+        5
+      ],
+      "inactive": [
+        4
+      ],
+      "loss_scaled1e24_source_midpoint": 0.06844974153629062,
+      "loss_scaled1e24_interval_display": [
+        0.06842089473545733,
+        0.06847859507500707
+      ],
+      "min_activity_margin_display": 0.006124898181438105
+    },
+    {
+      "kappa": "3/50",
+      "active_low": [
+        1,
+        2
+      ],
+      "active_high": [
+        5
+      ],
+      "inactive": [
+        3,
+        4
+      ],
+      "loss_scaled1e24_source_midpoint": 0.0025080658921018185,
+      "loss_scaled1e24_interval_display": [
+        0.0025041863008465485,
+        0.002511949462703026
+      ],
+      "min_activity_margin_display": 0.001190715244906277
+    },
+    {
+      "kappa": "33/500",
+      "active_low": [
+        1
+      ],
+      "active_high": [
+        5
+      ],
+      "inactive": [
+        2,
+        3,
+        4
+      ],
+      "loss_scaled1e24_source_midpoint": 0.0000043609535308512106,
+      "loss_scaled1e24_interval_display": [
+        0.000004249509674050934,
+        0.000004474145415645988
+      ],
+      "min_activity_margin_display": 0.00004063665567329028
+    }
+  ],
+  "controls": {
+    "whole_coefficient_box_active_inactive_signs_exact_rational_fraction": true,
+    "whole_coefficient_box_lower_risk_strict_positive_all_four": true,
+    "independent_scipy_float_crosscheck_all_four_pass": true,
+    "scipy_worst_difference_scaled1e24_display": 1.609823385706477e-15,
+    "source_1_byte_tamper_rejected_before_math": true,
+    "isolated_replay_result_byte_identical": true,
+    "kappa_0p067_original_midpoint_exact_zero_loss": true,
+    "note": "For 6.6% ROT016 has STRICTER preexisting interval bounds; preserve earlier source-first result."
+  },
+  "user_repro_archive": {
+    "name": "Geeky_S12_ROT017_universal_exact_gain_active_set_5_4_3_2.zip",
+    "bytes": 26575,
+    "sha256": "44d2e54ca138ebe274cd563dc777d5b9bb7e21c6c985cd33bf917c30c529e4d1",
+    "member_count": 9,
+    "crc_and_member_readback": "PASS",
+    "original_executed_fraction_script_sha256": "cbe8d77417efd42ead5bd8a0ebf01be86b749403ac6f1148683bb2c76bb0ffb5",
+    "original_executed_exact_full_results_sha256": "7c54a54e0d6dacaef73b63133067b32d1f87e21bade3fb1a3b5058afb4ff4a4e",
+    "full_original_executed_scripts_GitHub_mirrored": false
+  },
+  "prior_art_review": {
+    "M15_ROT007_9plus5_independent_source_math_I1": "PASS on ROT015, NOT new ROT017",
+    "AUD2_ROT005_M15_ROT006_global_17plus5_I1": "PASS on ROT007/013",
+    "REC11_ROT029_negative_eps1e7_I1": "PASS",
+    "ROT017_new_4_regimes_external_to_cell_independent_review": "PENDING"
+  },
+  "boundaries": [
+    "M13_AUXILIARY_FUNCTIONALLY_MATCHED_SOURCE_ONLY",
+    "HISTORIC_DTC0A_RUNTIME_MISSING",
+    "COEFFICIENT_BOX_NOT_PHYSICALLY_PROVEN_REALIZABLE",
+    "GAIN_CALIBRATION_NOT_MEASURED",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "BW_INGEST_PENDING"
+  ]
+}
