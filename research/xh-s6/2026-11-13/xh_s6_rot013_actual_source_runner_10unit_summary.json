@@ -1,0 +1,428 @@
+{
+  "all_five_DLPFC_exact_endpoint_majority": true,
+  "all_five_MT_strict_geodesic_majority": true,
+  "argmax_theorem_no_violation": true,
+  "artifact_id": "IW_XH_S6_ROT013_ALL_TEN_ORIGINAL_UNITS_SOURCE_GEOMETRY_FALSIFIER_001_20261113",
+  "blocks_per_unit": 16,
+  "elapsed_s": 119.702919081,
+  "matched_source_random_stream_checks": 160,
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_novelty": true,
+  "number_original_units": 10,
+  "original_author_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "original_reward_offset": 180,
+  "original_source_generator_blob": "e7a6666e0b600ea49bab9755d302c78110ba9bc4",
+  "paired_cases": 11520,
+  "scope": "10 SOURCE-selected model units at original source strength reward_rel 180, native source code/noise, 16 paired common-RNG seed blocks; no monkey data, original per-direction 250 trials NOT RUN",
+  "sham_bitwise_repeat_checks": 10,
+  "shown_angles_per_block": 72,
+  "source_model_arm_trials": 23040,
+  "source_unit_metadata_parsed_from_original_author_ast": [
+    {
+      "module": "MT",
+      "preferred_deg": 110,
+      "reward_deg": 290,
+      "strength": 11,
+      "unit": 37
+    },
+    {
+      "module": "MT",
+      "preferred_deg": 255,
+      "reward_deg": 75,
+      "strength": 10,
+      "unit": 4
+    },
+    {
+      "module": "MT",
+      "preferred_deg": 0,
+      "reward_deg": 180,
+      "strength": 10,
+      "unit": 42
+    },
+    {
+      "module": "MT",
+      "preferred_deg": 205,
+      "reward_deg": 25,
+      "strength": 11,
+      "unit": 25
+    },
+    {
+      "module": "MT",
+      "preferred_deg": 90,
+      "reward_deg": 270,
+      "strength": 12,
+      "unit": 34
+    },
+    {
+      "module": "DLPFC",
+      "preferred_deg": 295,
+      "reward_deg": 115,
+      "strength": 45,
+      "unit": 53
+    },
+    {
+      "module": "DLPFC",
+      "preferred_deg": 160,
+      "reward_deg": 340,
+      "strength": 45,
+      "unit": 25
+    },
+    {
+      "module": "DLPFC",
+      "preferred_deg": 15,
+      "reward_deg": 195,
+      "strength": 45,
+      "unit": 54
+    },
+    {
+      "module": "DLPFC",
+      "preferred_deg": 140,
+      "reward_deg": 320,
+      "strength": 45,
+      "unit": 8
+    },
+    {
+      "module": "DLPFC",
+      "preferred_deg": 75,
+      "reward_deg": 255,
+      "strength": 48,
+      "unit": 9
+    }
+  ],
+  "source_unit_results": [
+    {
+      "counts": {
+        "antipodal_sham_pref": 18,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 1150,
+        "exact_endpoint": 2,
+        "exact_pref_capture": 0,
+        "moved_closer": 1149,
+        "moved_farther": 0,
+        "near_endpoint_10deg": 58,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1134,
+        "strict_unique_arc_interior": 978
+      },
+      "exact_endpoint_fraction": 0.001736111111111111,
+      "exact_preference_capture_fraction": 0,
+      "independent_seed_sham_null_choice_mismatch_n": 558,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -38.919270833333336,
+      "mean_source_training_target_delta": -2.196949174113481,
+      "module": "MT",
+      "n": 1152,
+      "preferred_deg": 110,
+      "reward_deg": 290,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": null,
+        "MT_strict_geodesic_majority": true
+      },
+      "strength": 11,
+      "strict_unique_geodesic_interior_fraction": 0.8624338624338624,
+      "unit": 37
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 1,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 1070,
+        "exact_endpoint": 82,
+        "exact_pref_capture": 0,
+        "moved_closer": 1032,
+        "moved_farther": 37,
+        "near_endpoint_10deg": 256,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1151,
+        "strict_unique_arc_interior": 990
+      },
+      "exact_endpoint_fraction": 0.07118055555555555,
+      "exact_preference_capture_fraction": 0,
+      "independent_seed_sham_null_choice_mismatch_n": 583,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -33.224826388888886,
+      "mean_source_training_target_delta": -1.8465240421441367,
+      "module": "MT",
+      "n": 1152,
+      "preferred_deg": 255,
+      "reward_deg": 75,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": null,
+        "MT_strict_geodesic_majority": true
+      },
+      "strength": 10,
+      "strict_unique_geodesic_interior_fraction": 0.8601216333622936,
+      "unit": 4
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 2,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 1130,
+        "exact_endpoint": 22,
+        "exact_pref_capture": 0,
+        "moved_closer": 1109,
+        "moved_farther": 19,
+        "near_endpoint_10deg": 163,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1150,
+        "strict_unique_arc_interior": 1075
+      },
+      "exact_endpoint_fraction": 0.019097222222222224,
+      "exact_preference_capture_fraction": 0,
+      "independent_seed_sham_null_choice_mismatch_n": 622,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -32.86024305555556,
+      "mean_source_training_target_delta": -1.715046115790639,
+      "module": "MT",
+      "n": 1152,
+      "preferred_deg": 0,
+      "reward_deg": 180,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": null,
+        "MT_strict_geodesic_majority": true
+      },
+      "strength": 10,
+      "strict_unique_geodesic_interior_fraction": 0.9347826086956522,
+      "unit": 42
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 29,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 1121,
+        "exact_endpoint": 48,
+        "exact_pref_capture": 17,
+        "moved_closer": 1118,
+        "moved_farther": 2,
+        "near_endpoint_10deg": 107,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1123,
+        "strict_unique_arc_interior": 993
+      },
+      "exact_endpoint_fraction": 0.041666666666666664,
+      "exact_preference_capture_fraction": 0.014756944444444444,
+      "independent_seed_sham_null_choice_mismatch_n": 583,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -43.58506944444444,
+      "mean_source_training_target_delta": -3.122270173732911,
+      "module": "MT",
+      "n": 1152,
+      "preferred_deg": 205,
+      "reward_deg": 25,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": null,
+        "MT_strict_geodesic_majority": true
+      },
+      "strength": 11,
+      "strict_unique_geodesic_interior_fraction": 0.8842386464826358,
+      "unit": 25
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 31,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 1094,
+        "exact_endpoint": 58,
+        "exact_pref_capture": 0,
+        "moved_closer": 1064,
+        "moved_farther": 27,
+        "near_endpoint_10deg": 165,
+        "sham_exact_pref": 1,
+        "strict_unique_arc_eligible": 1120,
+        "strict_unique_arc_interior": 937
+      },
+      "exact_endpoint_fraction": 0.050347222222222224,
+      "exact_preference_capture_fraction": 0,
+      "independent_seed_sham_null_choice_mismatch_n": 562,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -25.31684027777778,
+      "mean_source_training_target_delta": -1.072950326344888,
+      "module": "MT",
+      "n": 1152,
+      "preferred_deg": 90,
+      "reward_deg": 270,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": null,
+        "MT_strict_geodesic_majority": true
+      },
+      "strength": 12,
+      "strict_unique_geodesic_interior_fraction": 0.8366071428571429,
+      "unit": 34
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 33,
+        "argmax_preserve_certified": 4,
+        "choice_changed": 827,
+        "exact_endpoint": 686,
+        "exact_pref_capture": 361,
+        "moved_closer": 472,
+        "moved_farther": 355,
+        "near_endpoint_10deg": 992,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1119,
+        "strict_unique_arc_interior": 108
+      },
+      "exact_endpoint_fraction": 0.5954861111111112,
+      "exact_preference_capture_fraction": 0.3133680555555556,
+      "independent_seed_sham_null_choice_mismatch_n": 602,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -17.057291666666668,
+      "mean_source_training_target_delta": -0.9017924626028277,
+      "module": "DLPFC",
+      "n": 1152,
+      "preferred_deg": 295,
+      "reward_deg": 115,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": true,
+        "MT_strict_geodesic_majority": null
+      },
+      "strength": 45,
+      "strict_unique_geodesic_interior_fraction": 0.09651474530831099,
+      "unit": 53
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 31,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 821,
+        "exact_endpoint": 892,
+        "exact_pref_capture": 561,
+        "moved_closer": 643,
+        "moved_farther": 178,
+        "near_endpoint_10deg": 1099,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1121,
+        "strict_unique_arc_interior": 74
+      },
+      "exact_endpoint_fraction": 0.7743055555555556,
+      "exact_preference_capture_fraction": 0.4869791666666667,
+      "independent_seed_sham_null_choice_mismatch_n": 560,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -37.74305555555556,
+      "mean_source_training_target_delta": -1.5065777216589311,
+      "module": "DLPFC",
+      "n": 1152,
+      "preferred_deg": 160,
+      "reward_deg": 340,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": true,
+        "MT_strict_geodesic_majority": null
+      },
+      "strength": 45,
+      "strict_unique_geodesic_interior_fraction": 0.06601248884924175,
+      "unit": 25
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 15,
+        "argmax_preserve_certified": 2,
+        "choice_changed": 668,
+        "exact_endpoint": 954,
+        "exact_pref_capture": 470,
+        "moved_closer": 561,
+        "moved_farther": 104,
+        "near_endpoint_10deg": 1112,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1137,
+        "strict_unique_arc_interior": 83
+      },
+      "exact_endpoint_fraction": 0.828125,
+      "exact_preference_capture_fraction": 0.4079861111111111,
+      "independent_seed_sham_null_choice_mismatch_n": 602,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -28.57638888888889,
+      "mean_source_training_target_delta": -1.016929156690957,
+      "module": "DLPFC",
+      "n": 1152,
+      "preferred_deg": 15,
+      "reward_deg": 195,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": true,
+        "MT_strict_geodesic_majority": null
+      },
+      "strength": 45,
+      "strict_unique_geodesic_interior_fraction": 0.07299912049252419,
+      "unit": 54
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 19,
+        "argmax_preserve_certified": 4,
+        "choice_changed": 646,
+        "exact_endpoint": 986,
+        "exact_pref_capture": 480,
+        "moved_closer": 551,
+        "moved_farther": 95,
+        "near_endpoint_10deg": 1120,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1133,
+        "strict_unique_arc_interior": 65
+      },
+      "exact_endpoint_fraction": 0.8559027777777778,
+      "exact_preference_capture_fraction": 0.4166666666666667,
+      "independent_seed_sham_null_choice_mismatch_n": 590,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -29.72222222222222,
+      "mean_source_training_target_delta": -1.0644619287735435,
+      "module": "DLPFC",
+      "n": 1152,
+      "preferred_deg": 140,
+      "reward_deg": 320,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": true,
+        "MT_strict_geodesic_majority": null
+      },
+      "strength": 45,
+      "strict_unique_geodesic_interior_fraction": 0.05736981465136805,
+      "unit": 8
+    },
+    {
+      "counts": {
+        "antipodal_sham_pref": 16,
+        "argmax_preserve_certified": 0,
+        "choice_changed": 1034,
+        "exact_endpoint": 593,
+        "exact_pref_capture": 475,
+        "moved_closer": 588,
+        "moved_farther": 414,
+        "near_endpoint_10deg": 907,
+        "sham_exact_pref": 0,
+        "strict_unique_arc_eligible": 1136,
+        "strict_unique_arc_interior": 94
+      },
+      "exact_endpoint_fraction": 0.5147569444444444,
+      "exact_preference_capture_fraction": 0.4123263888888889,
+      "independent_seed_sham_null_choice_mismatch_n": 549,
+      "independent_seed_sham_null_pairs": 1080,
+      "mean_pref_distance_delta_deg": -26.40190972222222,
+      "mean_source_training_target_delta": -1.182429946000345,
+      "module": "DLPFC",
+      "n": 1152,
+      "preferred_deg": 75,
+      "reward_deg": 255,
+      "source_unit_falsification_thresholds": {
+        "DLPFC_exact_endpoint_majority": true,
+        "MT_strict_geodesic_majority": null
+      },
+      "strength": 48,
+      "strict_unique_geodesic_interior_fraction": 0.08274647887323944,
+      "unit": 9
+    }
+  ],
+  "source_wrapper_blob": "054299b6b0f0c0def7cfa6b3600d6f56665375ce",
+  "status": "SOURCE_EXECUTED_PASS_FALSIFIERS_MAY_PASS_OR_FAIL",
+  "actual_actions_run": 43430223171,
+  "source_author_repository": "solkm/formattingRNN",
+  "source_original_model_scope": "actual original author Task/PsychRNN classes via pinned original training NPZ, 16 seed blocks per author selected unit, reward_rel180",
+  "source_csv_sha256": "e6717506d9d2f1a7d65fd7b25741e01d54d3c75f53145e97541c98933274db84",
+  "sha_certification_source": "Actual GitHub runner stdout markers, values not invented",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "GITHUB_PENDING_BW_INGEST"
+  ]
+}
