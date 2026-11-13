@@ -1,0 +1,145 @@
+{
+  "artifact_id": "IW_MT15_ROT015_BADACZ_REVIEW065_SOURCE_EXACT_JOINT_MONOTONE_DATA_CURATED_RESULTS_001_20261113",
+  "created_at": "2026-11-13",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "original_badacz_review065_git_commit": "a19619dd6b7549931b8f2465e3c3f5bc3127b99e",
+  "source_native_git_blobs": {
+    "yp064_default.csv": "38cdbe2091ef84f35b80f1a96f5506db6f47a3ee",
+    "yp064_tol_p1.csv": "ade202a0e091361b56ecbfc7e563f4247634445e",
+    "yp064_tol_p2.csv": "98ad01514d4370c654d22fd68d1652813f536eef"
+  },
+  "original_native_node_count": {
+    "default": 31,
+    "reltol_1e_minus4": 31,
+    "exact_same_log10beta_coordinates": true
+  },
+  "original_native_SBBN_X0s": {
+    "default": 0.109037947009,
+    "reltol_1e_minus4": 0.10906943155,
+    "delta": 0.000031484541
+  },
+  "observed_source_brackets": {
+    "V0": {
+      "default": [
+        -17.22,
+        -17.2
+      ],
+      "reltol_1e_minus4": [
+        -17.22,
+        -17.2
+      ],
+      "negative_adjacent_step_counts": [
+        3,
+        4
+      ]
+    },
+    "V1": {
+      "default": [
+        -17.14,
+        -17.12
+      ],
+      "reltol_1e_minus4": [
+        -17.12,
+        -17.1
+      ],
+      "negative_adjacent_step_counts": [
+        1,
+        0
+      ]
+    },
+    "V2": {
+      "default": [
+        -17,
+        -16.98
+      ],
+      "reltol_1e_minus4": [
+        -16.96,
+        -16.94
+      ],
+      "negative_adjacent_step_counts": [
+        3,
+        4
+      ]
+    }
+  },
+  "exact_classical_joint_monotone_linf_theorem": "min eps for common latent nondecreasing z_i with |z_i-a_i|<=eps and |z_i-b_i|<=eps = max(0,max_(i<=j)(max(a_i,b_i)-min(a_j,b_j)))/2. Witness z_j=max_(i<=j)(max(a_i,b_i)-eps).",
+  "sharp_epsilon_per_variant": {
+    "V0": {
+      "default_alone": 0.000030485796723517256,
+      "tol_alone": 0.0000152402509309979,
+      "joint": 0.0001412564953080231,
+      "extreme_coordinate_log10beta": -16.9,
+      "conditional_zero_outer_band_log10beta": [
+        -17.24,
+        -17.18
+      ]
+    },
+    "V1": {
+      "default_alone": 5.785610540098851e-7,
+      "tol_alone": 0,
+      "joint": 0.00012886542131601564,
+      "extreme_coordinate_log10beta": -17.06,
+      "conditional_zero_outer_band_log10beta": [
+        -17.16,
+        -17.1
+      ]
+    },
+    "V2": {
+      "default_alone": 0.000024039169228995405,
+      "tol_alone": 0.00001200868801300159,
+      "joint": 0.0001428175852179886,
+      "extreme_coordinate_log10beta": -16.9,
+      "conditional_zero_outer_band_log10beta": [
+        -17.02,
+        -16.96
+      ]
+    }
+  },
+  "v2_linear_root_2x2_source": {
+    "default_curve_default_SBBN": -16.99059169894535,
+    "default_curve_tol_SBBN": -16.9841312208366,
+    "tol_curve_default_SBBN": -16.971117356023292,
+    "tol_curve_tol_SBBN": -16.95850363396447,
+    "total_shift_dex": 0.03208806498088279,
+    "symmetric_shapley_curve_dex": 0.022550964897094516,
+    "symmetric_shapley_reference_dex": 0.009537100083788275,
+    "calibration_effect_at_default_curve_dex": 0.006460478108753165,
+    "calibration_effect_at_tol_curve_dex": 0.012613722058823384,
+    "interaction_dex": 0.00615324395007022
+  },
+  "high_precision_independent_decimal_50": {
+    "roots_as_strings": [
+      "-16.990591698945352457233646304371117600728768633792",
+      "-16.984131220836598018368166314022090599426027431424",
+      "-16.971117356023294007614325193175304987362672427164",
+      "-16.958503633964465146077985354926230913174267078454"
+    ],
+    "total_shift_dex": "0.032088064980887311155660949444886687554501555338",
+    "symmetric_curve_dex": "0.022550964897095660954751035145836149808928279799",
+    "symmetric_reference_dex": "0.009537100083791650200909914299050537745573275539",
+    "joint_isotonic_floors_exact_decimal_strings": {
+      "V0": "0.000141256495308",
+      "V1": "0.000128865421316",
+      "V2": "0.000142817585218"
+    },
+    "max_difference_versus_float_source": "4.853922014645073769086825732921546E-15"
+  },
+  "genuine_local_execution": {
+    "original_three_sha1_git_blob_and_sha256": "3/3 PASS",
+    "random_decimal_exact_isotonic_necessary_sufficient_tests": 3000,
+    "code_replay_two_independently_authored_python_source_programs": "PASS",
+    "clean_extraction_both_json_results_byte_identical": "PASS",
+    "one_byte_source_tamper_three_files": "3/3 REJECT PASS",
+    "zip_crc": "PASS",
+    "zip_members": 10,
+    "manifest_sha256_count": 9,
+    "zip_sha256": "c0063231f94b75bcff726fc34cc41e6ce8f24596de5ee7910f3e808b1fa646f6",
+    "independent_float_code_sha256": "d4d7bc7cfc00f61220db7bf7cf9c172480e169cf1058de9b68a7ad5f7ca0ff99",
+    "independent_decimal_code_sha256": "8cefdd645c21cef892784727d0e03e12887b7ddb0dcd537bbd562f489f3f9977",
+    "original_source_run_output_sha256": "37af0a3f287cf39d689166bea311ec3df669be982adecea6d4f39b4725e4e9de",
+    "independent_decimal_run_output_sha256": "96d7a4e2418da0d5dc55361ae9dc588802a906da71a565d3785bbe7ddb51aba4"
+  },
+  "science_warning": "An error tolerance reltol=1e-4 is not a guaranteed absolute ordinate error. Common monotone latent source class is HYPOTHETICAL. No single true continuous root or physical PBH bound is certified. Shapley is an attribution convention not causal determination.",
+  "claim_ceiling": "NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_PBH_BOUND / NO_NATIVE_JULIA_RERUN / E4_SOURCE_HOLD / GITHUB_PENDING_BW_INGEST"
+}
