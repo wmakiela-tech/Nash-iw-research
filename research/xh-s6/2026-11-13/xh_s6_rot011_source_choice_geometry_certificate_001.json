@@ -1,0 +1,130 @@
+{
+  "artifact_id": "IW_XH_S6_ROT011_ORIGINAL_AUTHOR_SOURCE_CHOICE_GEOMETRY_CERTIFICATE_001_20261113",
+  "exposure": "PUBLIC",
+  "from_cell": "IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6",
+  "report_date": "2026-11-13",
+  "scientific_original_firstness": "Ruff, Markman, Kim, Cohen, Nature Neuroscience, 10 November 2026, DOI:10.1038/s41593-026-02514-7",
+  "source": "Original author frozen solkm/formattingRNN@7889a81e298c01532a313e02971c11dbc9db8eb0; actual author-native ROT010 four-arm output",
+  "actual_upstream_runner": "https://github.com/wmakiela-tech/Nash-iw-research/actions/runs/43312500997",
+  "source_csv_original_sha256": "a2fe3c9ba2a8fd48cb7fbfefa538409ccaa0fe1931da7c0f14acedbb08f3cf41",
+  "source_csv_rows": 8640,
+  "rot011_new_author_model_reexecution": "NOT_RUN",
+  "rot011_downstream_pure_python_geometry_replay": "PASS",
+  "clean_isolated_rerun": "THREE_DERIVED_FILES_BYTE_IDENTICAL_PASS",
+  "operational_definitions": {
+    "d": "unsigned shortest circular distance deg = abs(((a-b+180)%360)-180)",
+    "nearer_to_pref": "d(stim,pref) < d(base,pref)",
+    "unique_short_geodesic_interior": "d(base,pref) < 180 AND 0<d(base,stim)<d(base,pref) AND d(base,stim)+d(stim,pref)=d(base,pref)",
+    "antipodal_exclusion": "baseline preference 180-degree ambiguous two shortest semicircles, exclude from unique geodesic denominator",
+    "exact_endpoint": "stim==base OR stim==preferred output bin",
+    "ten_degree_endpoint": "d(stim,base)<=10 OR d(stim,pref)<=10"
+  },
+  "MT": {
+    "unit": 37,
+    "stim_strength": 11,
+    "preferred_deg": 110,
+    "reward_deg": 290,
+    "pairs": 4320,
+    "closer_pref": 4296,
+    "farther_pref": 8,
+    "same_pref_dist": 16,
+    "mean_distance_change_deg": -38.916666666666664,
+    "alt_mean_distance_change_deg": -39.074074074074076,
+    "unique_geodesic_eligible_n": 4256,
+    "ambiguous_antipodal_n": 64,
+    "unique_geodesic_interior_n": 3655,
+    "alt_unique_geodesic_eligible_n": 4256,
+    "alt_unique_geodesic_interior_n": 3701,
+    "exact_endpoint_n": 13,
+    "alt_exact_endpoint_n": 15,
+    "within_10deg_endpoint_n": 233,
+    "exact_preferred_n": 0,
+    "median_abs_choice_shift_deg": 45,
+    "bootstrap_cluster_95pct_descriptive": {
+      "mean_distance_delta": [
+        -39.22919560185185,
+        -38.58796296296296
+      ],
+      "unique_geodesic_cond_valid": [
+        0.8521473832433701,
+        0.8655700140625301
+      ]
+    }
+  },
+  "DLPFC": {
+    "unit": 53,
+    "stim_strength": 45,
+    "preferred_deg": 295,
+    "reward_deg": 115,
+    "pairs": 4320,
+    "closer_pref": 1755,
+    "farther_pref": 1312,
+    "same_pref_dist": 1253,
+    "mean_distance_change_deg": -17.11226851851852,
+    "alt_mean_distance_change_deg": -16.53125,
+    "unique_geodesic_eligible_n": 4211,
+    "ambiguous_antipodal_n": 109,
+    "unique_geodesic_interior_n": 390,
+    "alt_unique_geodesic_eligible_n": 4199,
+    "alt_unique_geodesic_interior_n": 390,
+    "exact_endpoint_n": 2613,
+    "alt_exact_endpoint_n": 2603,
+    "within_10deg_endpoint_n": 3710,
+    "exact_preferred_n": 1360,
+    "alt_exact_preferred_n": 1333,
+    "baseline_exact_preferred_n": 0,
+    "median_abs_choice_shift_deg": 10,
+    "capture_by_shown_preference_distance": {
+      "0_to_45deg": {
+        "n": 1140,
+        "captured": 1082,
+        "alternate_captured": 1073
+      },
+      "50_to_90deg": {
+        "n": 1080,
+        "captured": 257,
+        "alternate_captured": 248
+      },
+      "95_to_135deg": {
+        "n": 1080,
+        "captured": 21,
+        "alternate_captured": 12
+      },
+      "140_to_180deg": {
+        "n": 1020,
+        "captured": 0,
+        "alternate_captured": 0
+      }
+    },
+    "bootstrap_cluster_95pct_descriptive": {
+      "mean_distance_delta": [
+        -17.574103009259257,
+        -16.645804398148147
+      ],
+      "exact_preferred_fraction": [
+        0.3106481481481482,
+        0.3189814814814815
+      ],
+      "unique_geodesic_cond_valid": [
+        0.08623539046075007,
+        0.09916968139990315
+      ]
+    }
+  },
+  "local_manifest_sha256": {
+    "analysis_script": "ff95ec8d4df28992b67c0099e8587f4c82fb416369ed38d8dd073b1cc3748675",
+    "derived_summary": "6f7fb63289e5f88aa5ac4df0f254a070abbf06c0b95509fb0dec7d33759ca862",
+    "by_shown_distance_band_csv": "266677b7680b15314baf10263ed4b3bd8f5bad320f5dc13f31e21e8e5bfe955e",
+    "by_seed_block_csv": "c2c16b3c08ad61f8f56ba6ba40883b3092582c6aeac1ab5ef98238e603c17584",
+    "repro_zip": "c6d5f719b940bb37d44c5e29c327c574c683667febe9f92eb2537e880ecd8954"
+  },
+  "confidence_ceiling": "Numerical source-model finite two-unit original-weights output geometry; NOT authors full 72x250, not live model execution in ROT011, not monkey data, no physical neural evidence, no MT-vs-dlPFC regional causal ranking",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
