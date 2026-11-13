@@ -1,0 +1,108 @@
+{
+  "artifact_id": "IW_M15_ROT009_INDEPENDENT_SOURCE_B25_FOUR_KAPPA_5_4_3_2_KKT_REFEREE_001_20261113",
+  "source_original_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_25_coeff_box_epsilon": "1/10000000",
+  "alpha": "1/20",
+  "beta": "3/40",
+  "original_source_scale": "10^12",
+  "loss_scale": "10^24",
+  "proof_type": "exact directed rational interval 25D source, global convex KKT; independent wedge formula and midpoint clipped identity",
+  "universal_breakpoints_at_most": 10,
+  "universal_convex_regions_at_most": 11,
+  "four_regimes": [
+    {
+      "kappa": "1.00000000000000e-2",
+      "active_count": 5,
+      "branch": [
+        "LOW",
+        "LOW",
+        "LOW",
+        "LOW",
+        "HIGH"
+      ],
+      "source_box_kkt_all_strict": true,
+      "min_source_scaled_loss_1e24": {
+        "lower": "3.96301716006760e-1",
+        "upper": "3.96360738165961e-1"
+      },
+      "min_source_scaled_loss_lower_strict_positive": true,
+      "midpoint_loss_scaled_1e24": "3.96331226268377e-1",
+      "midpoint_wedge_equals_quadratic_exact": true,
+      "strict_kkt_margin_rational_display": "5.74245773617365e-3"
+    },
+    {
+      "kappa": "4.00000000000000e-2",
+      "active_count": 4,
+      "branch": [
+        "LOW",
+        "LOW",
+        "LOW",
+        "INACTIVE",
+        "HIGH"
+      ],
+      "source_box_kkt_all_strict": true,
+      "min_source_scaled_loss_1e24": {
+        "lower": "6.84387756898323e-2",
+        "upper": "6.84607085445248e-2"
+      },
+      "min_source_scaled_loss_lower_strict_positive": true,
+      "midpoint_loss_scaled_1e24": "6.84497415362906e-2",
+      "midpoint_wedge_equals_quadratic_exact": true,
+      "strict_kkt_margin_rational_display": "6.12489818143811e-3"
+    },
+    {
+      "kappa": "6.00000000000000e-2",
+      "active_count": 3,
+      "branch": [
+        "LOW",
+        "LOW",
+        "INACTIVE",
+        "INACTIVE",
+        "HIGH"
+      ],
+      "source_box_kkt_all_strict": true,
+      "min_source_scaled_loss_1e24": {
+        "lower": "2.50631861290770e-3",
+        "upper": "2.50981391338024e-3"
+      },
+      "min_source_scaled_loss_lower_strict_positive": true,
+      "midpoint_loss_scaled_1e24": "2.50806589210182e-3",
+      "midpoint_wedge_equals_quadratic_exact": true,
+      "strict_kkt_margin_rational_display": "1.19071524490628e-3"
+    },
+    {
+      "kappa": "6.60000000000000e-2",
+      "active_count": 2,
+      "branch": [
+        "LOW",
+        "INACTIVE",
+        "INACTIVE",
+        "INACTIVE",
+        "HIGH"
+      ],
+      "source_box_kkt_all_strict": true,
+      "min_source_scaled_loss_1e24": {
+        "lower": "4.30499086735850e-6",
+        "upper": "4.41727764693763e-6"
+      },
+      "min_source_scaled_loss_lower_strict_positive": true,
+      "midpoint_loss_scaled_1e24": "4.36095353085121e-6",
+      "midpoint_wedge_equals_quadratic_exact": true,
+      "strict_kkt_margin_rational_display": "4.06366556732903e-5"
+    }
+  ],
+  "scope": "I1_DIFFERENT_CELL_NONBLIND_SOURCE_MATH_ONLY_NOT_HISTORIC_RUNTIME_NOT_PHYSICAL_NOT_I3_NO_NOVELTY_NO_CANON_NO_EXEC_SIGN",
+  "execution": {
+    "pinned_original_JS_source_git_blob": "1a039e7ac58021356d75d5d42611b6d9dd2c0c46",
+    "original_immutable_M13_source_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "actual_executed_source": "FETCHED_BACK_EXACT_PUBLIC_MATH_BODY_IN_V8",
+    "node_shebang_only_removed": true,
+    "node_cli_wrapper_separately_executed": false,
+    "tampered_source_negative_fixture": {
+      "original_mask6_constant_set_zero": true,
+      "rejected": true,
+      "reason": "Error: RATIO_ORDER_FAIL"
+    },
+    "scientific_ceiling": "EXACT_SOURCE_TYPED_I1_NONBLIND_MATH_NOT_EXTERNAL_I3_NOT_HISTORIC_DTC0A_NOT_PHYSICS"
+  }
+}
