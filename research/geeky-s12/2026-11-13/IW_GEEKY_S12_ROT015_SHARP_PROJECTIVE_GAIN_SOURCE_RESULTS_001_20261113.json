@@ -1,0 +1,95 @@
+{
+  "return_id": "IW_GEEKY_S12_ROT015_SHARP_PROJECTIVE_SHELL_GAIN_CALIBRATION_CERT_001_20261113",
+  "date": "2026-11-13",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source_first": "M13 / research/m13/2026-10-26/direct_B.json",
+  "source_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_sha256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f",
+  "source_box": "25 independent original directed quartic coefficient intervals each widened [lo-eps|lo|,hi+eps|hi|], eps=1/10000000",
+  "model": "D²=min_{c>0, |eta_i|<=kappa} Sum_i w_i(s_i(alpha)-c(1+eta_i)s_i(beta))²",
+  "weights": [
+    7778,
+    6938,
+    6146,
+    5402,
+    24389
+  ],
+  "exact_theorem": {
+    "r_i": "s_i(alpha)/s_i(beta)>0",
+    "rmax": "max_i r_i",
+    "rmin": "min_i r_i",
+    "sharp_zero_loss_iff": "kappa >= (rmax-rmin)/(rmax+rmin)",
+    "construction": "c=(rmax+rmin)/2, eta_i=r_i/c-1",
+    "global_identifiability": {
+      "condition": "H=s4_prime*s5-s4*s5_prime > (1/8)*s4*s5 for all t in [0,1/5] and every source 25D box member",
+      "positive_shell_gates": 5,
+      "bernstein_H_minus_eighth_shell_product_gates": 9,
+      "all_strict_rational_positive": true,
+      "min_H_gate_lower_scaled_1e24_display": 0.0006435003940397332,
+      "consequence": "log(s4/s5) strictly increases and (log(s4/s5))'>1/8; single common gain exact fit impossible unless alpha=beta; kappa_star(alpha,beta)>=tanh(|alpha-beta|/16)",
+      "scope": "whole alpha,beta∈[0,1/5] and every coefficient selection in 25D epsilon 1e-7 box"
+    }
+  },
+  "pair": {
+    "alpha": "1/20",
+    "beta": "3/40",
+    "display_kappa_star_source_midpoint": 0.06626959720164886,
+    "display_relative_shell_ratios_source_midpoint": [
+      0.5324476894350468,
+      0.5367749896668135,
+      0.5477284929053287,
+      0.5688466880904144,
+      0.6080264513647456
+    ],
+    "rigorous_conservative_kappa_lower_display": 0.06626786193306025,
+    "rigorous_conservative_kappa_upper_display": 0.0662713324700783,
+    "strict_exact_rational_comparisons": [
+      "kappa_star > 66/1000 for all source 25D realizations",
+      "kappa_star < 67/1000 for all source 25D realizations"
+    ],
+    "kappa_6p6percent_exact_zero_fit": "IMPOSSIBLE",
+    "kappa_6p7percent_exact_zero_fit": "POSSIBLE",
+    "midpoint_exact_attainment_verified": true,
+    "midpoint_optimal_global_gain_display": 0.5702370703998965,
+    "midpoint_eta_i_display": [
+      -0.06626959720164886,
+      -0.05868099860574908,
+      -0.03947231539819528,
+      -0.0024382531084954206,
+      0.06626959720164886
+    ],
+    "different_model_without_free_global_gain_midpoint_threshold": 0.46755231056495306,
+    "note": "Displayed bounds are outward conservative approximations; exact bound numerators and denominators are in the actually executed ZIP JSON."
+  },
+  "executable_reproducibility": {
+    "user_archive": "Geeky_S12_ROT015_sharp_projective_gain_robust_identifiability.zip",
+    "archive_sha256": "8df6059e1342cd37ca5661555ca1300e0a00d095aa1355fe2576c7e01e31d14e",
+    "archive_bytes": 11541,
+    "members": 6,
+    "CRC": "PASS",
+    "member_sha256_byte_readback": "PASS",
+    "executed_python_script_sha256": "e90f8a5daa4bd0746eb800c68ca343445dbc5465270ef77ce56d7b3bde71e105",
+    "executed_full_json_sha256": "11f2c522a9fa3388e6555667cca8758433181513d86803bbf0202c0324dc6024",
+    "clean_isolated_python_byte_replay": "PASS",
+    "input_source_one_byte_tamper_failclosed": "PASS",
+    "public_code_mirror": "NOT_CREATED; actual executed script and full Fraction endpoints reside in user ZIP"
+  },
+  "independent_review_context": {
+    "rec11_ROT029": "Independent shared-coefficient Lipschitz negative witness eps1e-7 PASS; original owner positive 17+5 certificate reexecuted PASS, not independently rewritten",
+    "aud2_ROT004": "Independent 5 shells eps1e-7 PASS and pointwise negative eps1e-8 PASS",
+    "m15_ROT005": "Independent pointwise negative eps1e-8 PASS",
+    "ROT015_new_sharp_projective_result": "AUTHOR_ONLY_PENDING_INDEPENDENT_REFEREE",
+    "positive_17_global_external_new_algorithm": "PENDING",
+    "M15_global_owner_adoption": "PENDING",
+    "KN13_BW_native_ingest": "PENDING"
+  },
+  "claim_ceiling": [
+    "M13_AUXILIARY_SOURCE_ONLY",
+    "NO_HISTORIC_DTC0A_RUNTIME_BYTE_IDENTITY",
+    "NO_PHYSICAL_SHELL_GAIN_MEASUREMENT",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
