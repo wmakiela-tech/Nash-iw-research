@@ -1,0 +1,124 @@
+{
+  "artifact_id": "IW_M15_ROT013_INDEPENDENT_DIRECTED_FOURIER_TRANSLATION_JACOBIAN_AND_EXACT_GLOBAL_STABILIZER_001_20261113",
+  "return_id": "IW_M15_ROT013_ORIGINAL_M13_SOURCE_FORMULA_FULL_LOCAL_PROJECTIVE_TRANSLATION_RANK_AND_EXACT_TWO_ELEMENT_TENSOR_STABILIZER_001_20261113",
+  "date": "2026-11-13",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "result_type": "I1_INTERNAL_DIFFERENT_CELL_NONBLIND_DIRECTED_INTERVAL_SOURCE_FORMULA_REVIEW",
+  "source_first": {
+    "original_operator_author": "M13",
+    "source_code_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "source_25_directed_B_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "translation_first": "Geeky-S12 ROT020",
+    "new_subclaim": "M15 exact classification of FULL tensor translation stabilizer, not five-shell observable stabilizer"
+  },
+  "source_execution": {
+    "formula_source": "independently reimplemented by M15 ROT012, not original module byte execution",
+    "dependency_source_SHA256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e",
+    "independent_checker_SHA256": "5cedc0318f9f2cf11713b8f6210196135473e7a86d9a43f0d620ef5b548bc5e1",
+    "result_json_SHA256": "debc2db8fe423836a7b4f6890291c75aadccf02a5a5ff877313468a01b4f7d1d",
+    "directed_decimal_precision": 50,
+    "N": 41,
+    "alpha": "1/20",
+    "original_model_modes": 41,
+    "mode_pairs_per_mask": 1681,
+    "fixed_mask_indices": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "projective_local_rank": {
+    "rows": "log(s_i/s5), i=1..4",
+    "columns": [
+      "t_x",
+      "t_y",
+      "t_z",
+      "alpha"
+    ],
+    "jacobian_4x4_det_directed_outer_interval_strings": [
+      "-0.00001019825589722441901272528778296285723903604026545036672",
+      "-0.000010198255897224419012725287782962857239035397291466039"
+    ],
+    "translation_3x3_minor_directed_outer_interval_strings": [
+      "-0.000007757010281111687661605171226720284419583092649983956662",
+      "-0.000007757010281111687661605171226720284419583062786514191431"
+    ],
+    "strict_upper_below_zero": true,
+    "calculation": "independent 24-term IV4 determinant, formula-analytical source shift and alpha derivatives",
+    "ceiling": "local rank in hypothetical common translation extended family, not global invertibility"
+  },
+  "exact_full_tensor_group": {
+    "all_41_support_wavevectors_even_coordinate_sum": true,
+    "nonzero_mode_witnesses": [
+      [
+        -3,
+        -1,
+        0
+      ],
+      [
+        -2,
+        -1,
+        -1
+      ],
+      [
+        -2,
+        -1,
+        1
+      ]
+    ],
+    "witness_squared_tensor_norm_cert_lower_approx": [
+      "4.0692053321344977502455915945e-15",
+      "2.057308194995375765834288577e-14",
+      "2.057308194995375765834288577e-14"
+    ],
+    "witness_mode_exact_integer_determinant": 2,
+    "integer_support_lattice": "all even coordinate-sum lattice of index2 in Z3",
+    "complete_full_B_translation_stabilizer_mod_2pi": [
+      "(0,0,0)",
+      "(pi,pi,pi)"
+    ],
+    "five_aggregated_shell_observation_global_stabilizer_not_classified": true
+  },
+  "negative_controls": {
+    "masks_comoving_with_fields": "analytic zero translation response (different observer contract)",
+    "unmasked_Parseval": "analytic zero shift response",
+    "mutated_dependency_byte": "pre-science SHA lock rejection PASS"
+  },
+  "self_correction": {
+    "source_first": "XH-S6 ROT018",
+    "M15_ROT011_protocol_equivalence_retracted": true,
+    "old_XH_ROT017_output_event_counts_retained": [
+      17,
+      2
+    ],
+    "old_XH_ROT017_trial_allocation": "exact 250 per angle, XH-specific balance",
+    "original_author_trial_allocation": "random shown direction per trial; count250 is expectation, NOT a guaranteed per-angle count",
+    "M15_this_rotation_new_author_Task_RNN_execution": false
+  },
+  "reproducer_local": {
+    "file": "IW_M15_ROT013_FOURIER_TRANSLATION_FULL_INTERVAL_AND_EXACT_STABILIZER_REPRO_001_20261113.zip",
+    "file_bytes": 17898,
+    "zip_sha256": "8c4baa8d173f654f98b862ec39d2647c9d07df5b3d53e7595670100826f4c290",
+    "original_full_json_sha256": "debc2db8fe423836a7b4f6890291c75aadccf02a5a5ff877313468a01b4f7d1d",
+    "zip_crc_pass": true,
+    "payload_manifest_sha256_pass": "7/7",
+    "isolated_script_replay_byte_exact": true,
+    "source_tamper_fail_closed": true,
+    "not_full_author_M13_or_historic_DTC0a": true
+  },
+  "claim_ceiling": [
+    "NO_EXTERNAL_BLIND_I3",
+    "NO_HISTORIC_DTC0A_BYTE_ID",
+    "NO_PHYSICAL_FIELD_TRANSLATION",
+    "NO_FULL_SHELL_OBSERVABLE_GLOBAL_INVERSE",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_BW_INGEST_RECEIPT",
+    "NO_TASK_CASCADE"
+  ]
+}
