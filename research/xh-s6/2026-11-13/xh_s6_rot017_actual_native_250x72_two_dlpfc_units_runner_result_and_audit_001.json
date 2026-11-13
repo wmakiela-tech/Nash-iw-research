@@ -1,0 +1,112 @@
+{
+  "actual_execution_status": "PASS",
+  "artifact_id": "IW_XH_S6_ROT017_ORIGINAL_AUTHOR_DLPFC25_53_250_REPS_DIRECTION_RATE_GATE_001_20261113",
+  "author_full_10unit_paper_trial_generator_not_executed": true,
+  "bitwise_sham_duplicate_checks": 2,
+  "elapsed_s": 362.983059355,
+  "identical_author_generator_Nbatch18000_rng_protocol": false,
+  "no_canon": true,
+  "no_exec_sign": true,
+  "no_monkey_data": true,
+  "no_novelty": true,
+  "original_shown_directions_per_block": 72,
+  "original_source_model_arm_trials": 72000,
+  "original_source_model_paired_rows": 36000,
+  "rot013_source_git_blob": "0cd2658ed6687380935ab5d8d6f2d9c4b591b0c8",
+  "same_72x250_nominal_count_as_author_generator": true,
+  "scientific_falsification_must_not_fail_program": true,
+  "seed_blocks_per_unit": 250,
+  "seed_formula": "1800000000 + 300071*unit + 1009*block, blocks0..249",
+  "sham_stim_identical_source_rng_onset_checks": 500,
+  "source_author_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "source_preregister_git_blob": "72a22b3b90831ff29674a8273068b24f97f5416d",
+  "source_units": [
+    {
+      "all_candidate_label_minima": [
+        295
+      ],
+      "consecutive_independent_sham_pairs": 17928,
+      "consecutive_sham_choice_mismatch": 9922,
+      "minimal_gap_count_among_all_72_labels": 2,
+      "module": "DLPFC",
+      "observed_counts": {
+        "argmax_preservation_certificate": 70,
+        "boundary65": 0,
+        "choice_changed": 12674,
+        "gap5_60": 2,
+        "gap5_65": 2,
+        "sham_exact_pref": 0,
+        "sham_gap5_65": 3291,
+        "stim_exact_pref": 5642
+      },
+      "original_P_unique_minimum": true,
+      "original_P_zero": false,
+      "original_true_P_label_gap": 2,
+      "seeded_blocks": 250,
+      "shown_directions": 72,
+      "source_model_arms": 36000,
+      "source_model_pairs": 18000,
+      "source_preference": 295,
+      "source_reward_center": 115,
+      "source_strength": 45,
+      "source_unit": 53
+    },
+    {
+      "all_candidate_label_minima": [
+        160
+      ],
+      "consecutive_independent_sham_pairs": 17928,
+      "consecutive_sham_choice_mismatch": 9507,
+      "minimal_gap_count_among_all_72_labels": 17,
+      "module": "DLPFC",
+      "observed_counts": {
+        "argmax_preservation_certificate": 7,
+        "boundary65": 17,
+        "choice_changed": 12974,
+        "gap5_60": 0,
+        "gap5_65": 17,
+        "sham_exact_pref": 0,
+        "sham_gap5_65": 3439,
+        "stim_exact_pref": 8752
+      },
+      "original_P_unique_minimum": true,
+      "original_P_zero": false,
+      "original_true_P_label_gap": 17,
+      "seeded_blocks": 250,
+      "shown_directions": 72,
+      "source_model_arms": 36000,
+      "source_model_pairs": 18000,
+      "source_preference": 160,
+      "source_reward_center": 340,
+      "source_strength": 45,
+      "source_unit": 25
+    }
+  ],
+  "actual_actions_run_id": 43467831511,
+  "actual_actions_job_id": 132031592740,
+  "actual_actions_artifact_id": 14060275350,
+  "actual_full_36000_pair_csv_sha256": "29f9b48d60b60c031fdca8a37483a969c2b470086f30f3ec5ebcbbb77c65530f",
+  "actual_source_native_full_json_sha256": "083db441c66dfb3ed4124be2742b34a5fd8ea03474d7a25d221851f5a99157f4",
+  "independent_full_36000_row_audit": "PASS",
+  "independent_72_bin_histogram_convolution": "PASS",
+  "independent_clean_replay": "FIVE_DERIVED_FILES_BYTE_IDENTICAL_PASS",
+  "source_csv_mutation_rejected": "SOURCE_ORIGINAL_CSV_SHA_IDENTITY_FAIL_PASS",
+  "source_json_mutation_rejected": "SOURCE_ORIGINAL_JSON_SHA_IDENTITY_FAIL_PASS",
+  "positive_5to65_gap_model_counts": {
+    "DLPFC25": 17,
+    "DLPFC53": 2
+  },
+  "falsifying_geometry_classes": {
+    "DLPFC25": "17/18000 all d=65, seven actual stim-induced changes, ten same-as-sham",
+    "DLPFC53": "2/18000 both d=5 and both changed choices"
+  },
+  "source_original_firstness": "Ruff Markman Kim Cohen, Nature Neuroscience 2026-11-10, DOI 10.1038/s41593-026-02514-7",
+  "custody_state": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_NEUROBIOLOGICAL_UPGRADE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
