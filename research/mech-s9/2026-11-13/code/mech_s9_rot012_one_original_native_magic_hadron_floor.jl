@@ -124,7 +124,8 @@ open(joinpath(out_dir,"six_species_floor_summary.csv"),"w") do io
     for k in 1:6
         flags = [lograw[i,k]<-100 for i in 1:n]
         first_floor = findfirst(identity,flags)
-        post_fl = post_idx<=n ? findfirst(i -> flags[i],post_idx:n) : nothing
+        post_rel = post_idx<=n ? findfirst(identity,flags[post_idx:n]) : nothing
+        post_fl = isnothing(post_rel) ? nothing : post_idx + post_rel - 1
         npost = post_idx<=n ? n-post_idx+1 : 0
         nbad = npost>0 ? count(identity,flags[post_idx:n]) : 0
         mn = npost>0 ? minimum(lograw[post_idx:n,k]) : NaN
