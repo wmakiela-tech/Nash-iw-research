@@ -1,0 +1,181 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT020_ORIGINAL_M13_TRANSLATION_PROJECTIVE_JACOBIAN_AND_GLOBAL_STABILIZER_RESULTS_001_20261113",
+  "date": "2026-11-13",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "source_first": {
+    "M13_operator": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "M13_original_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_B_table": "research/m13/2026-10-26/direct_B.json",
+    "M13_B_table_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0"
+  },
+  "source_parameters": {
+    "N": 41,
+    "alpha": "1/20",
+    "original_B_fourier_modes": 41,
+    "complex_tensor_components": 369,
+    "source_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "mask_occupancies": [
+      50653,
+      42875,
+      35937,
+      29791,
+      24389
+    ],
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "mpmath_iv_dps": 45
+  },
+  "translation_class": "HYPOTHETICAL common spatial translation of original input fields C1,C2,h; fixed original observation masks; source operator code and original disk files remain unchanged",
+  "analytical_identities": {
+    "common_translation": "B_alpha,t(m)=exp(i*m dot t)*B_alpha,0(m)",
+    "source_fourier_operator_translation_equivariant": true,
+    "global_full_domain_L2_energy_translation_invariant": true,
+    "masked_window_offdiagonal_mode_interference_makes_energies_translation_dependent": true,
+    "translation_mode_derivative": "partial_tj B(m)=i*m_j*B(m)",
+    "source_alpha_derivative": "partial_alpha B=V+2*alpha*W from U+alpha*V+alpha^2*W",
+    "nontrivial_discrete_stabilizer": "t=(pi,pi,pi), each M13 B mode sum m_x+m_y+m_z even, so exp(i*pi*sum)=1: B identical at every alpha"
+  },
+  "baseline_original_source": {
+    "full_domain_B_energy_scaled_1e12_display": 0.05678293109054794,
+    "five_mask_B_energy_scaled_1e12_display": [
+      0.0612706075415169,
+      0.06389874328372974,
+      0.066439231858211,
+      0.06841232678535038,
+      0.06929443250541954
+    ],
+    "five_disjoint_shell_B_energy_scaled_1e12_display": [
+      0.04678342318212169,
+      0.0507396862210124,
+      0.05687521119852844,
+      0.06442978765044348,
+      0.06929443250541954
+    ],
+    "all_five_shell_energies_positive_in_iv45": true
+  },
+  "projective_local": {
+    "observable": "four log ratios log(s_i/s_5) i=1..4, global positive gain eliminated",
+    "variables": [
+      "translation_x",
+      "translation_y",
+      "translation_z",
+      "alpha"
+    ],
+    "projective_jacobian_float_display": [
+      [
+        -0.136164397,
+        -0.00890378762,
+        -0.0511625583,
+        6.66403706
+      ],
+      [
+        -0.158487919,
+        -0.00599002212,
+        -0.0526375104,
+        6.52485722
+      ],
+      [
+        -0.124456922,
+        -0.00286037824,
+        -0.0253954894,
+        5.65421747
+      ],
+      [
+        -0.0592419131,
+        0.00682995586,
+        0.0257142109,
+        3.70186906
+      ]
+    ],
+    "four_by_four_directed_det_interval_string": "[-0.000010198255897224419012725287782962857289620319767331, -0.000010198255897224419012725287782962857188451094222514]",
+    "full_projective_det_strict_negative": true,
+    "four_by_four_det_display": -0.000010198255897224419,
+    "three_translation_columns_minor_rows_1_2_3_display": -0.000007757010281111686,
+    "three_translation_minor_directed_interval_strict_negative": true,
+    "translation_projective_local_rank": 3,
+    "alpha_plus_translation_local_projective_rank": 4,
+    "inverse_function_theorem_local_identifiable": true,
+    "global_translation_uniq": false,
+    "numpy_svd_condition_display": 12555.400292734177,
+    "caution": "Structural local rank only; numeric ill-conditioning may be severe; no robust statistical identifiability or full 25D coefficient box claims"
+  },
+  "actually_executed_original_source": {
+    "source_sha1_git_blob_checked_pre_import": true,
+    "source_B_table_sha1_git_blob_checked_pre_import": true,
+    "source_original_Fourier_alpha_quadratic_interpolation_369_components_zero_containing_iv_differences": true,
+    "halfturn_common_field_translations": [
+      {
+        "name": "common_x",
+        "phase": "(pi,0,0)",
+        "rel_shell1_minus_rel_shell5_display": -0.0037702672629005597,
+        "strict_signed_iv": "NEG"
+      },
+      {
+        "name": "common_y",
+        "phase": "(0,pi,0)",
+        "rel_shell1_minus_rel_shell5_display": 0.0041150426621653444,
+        "strict_signed_iv": "POS"
+      },
+      {
+        "name": "common_z",
+        "phase": "(0,0,pi)",
+        "rel_shell1_minus_rel_shell5_display": -0.005655292388254258,
+        "strict_signed_iv": "NEG"
+      },
+      {
+        "name": "common_xyz",
+        "phase": "(pi,pi,pi)",
+        "rel_shell1_minus_rel_shell5_display": 0,
+        "strict_signed_iv": "CONTAINS_ZERO",
+        "exact_original_B_unchanged_all_alpha": true
+      }
+    ],
+    "four_halfturn_recalculations_each_369_complex_source_component_phase_test": "1476/1476 PASS",
+    "four_full_domain_translation_norm_invariant": true,
+    "independent_numpy_direct_spatial_inverseFFT_6_energies_max_relerr": 2.220446049250313e-16,
+    "independent_numpy_direct_spatial_inverseFFT_15_shift_derivatives_max_relerr": 3.907363355506468e-13
+  },
+  "reproducibility": {
+    "user_archive": "Geeky_S12_ROT020_source_translation_mask_projective_rank.zip",
+    "archive_bytes": 19430,
+    "archive_sha256": "eab946aed0bb6ce391781fa756f48b082f102bcef622c916a49a31fbd95092de",
+    "archive_members": 8,
+    "archive_crc_sha256_and_each_member_byte_readback": "PASS",
+    "executed_script_sha256": "ca64b4474e494eeb898804c9e3b2698c2d4311e963408602b521ec4587ce70d1",
+    "actual_complete_45digit_interval_result_json_sha256": "697cdf854b534c0bda3cf36f8aa64e24712d9a5bfcf46467f4ba823565a04fb0",
+    "fresh_clean_python_subprocess_full_result_byte_identical": "PASS",
+    "source_M13_operator_one_byte_tamper_sha_failclosed": "PASS",
+    "source_M13_B_table_one_byte_tamper_sha_failclosed": "PASS",
+    "full_new_executed_script_separate_public_git_mirror": "NO; user ZIP only"
+  },
+  "peer_context": {
+    "REC11_ROT033": "I1 independent full 25D source coefficient continuous 5-4-3-2-0 gain active phase map PASS; DIFFERENT source-typed theorem",
+    "ROT020_new_translation_projective_rank": "AUTHOR_ONLY_INDEPENDENT_REFEREE_PENDING",
+    "M15_global_owner_CANON": "NOT_VERIFIED",
+    "KN14_BW_ingest": "NOT_VERIFIED"
+  },
+  "claim_ceiling": [
+    "ORIGINAL_M13_PUBLIC_AUXILIARY_OPERATOR_ONLY",
+    "HYPOTHETICAL_TRANSLATION_NOT_ORIGINAL_CALC_PARAMETER",
+    "NO_HISTORIC_DTC0A_RUNTIME_IDENTITY",
+    "NO_FULL_GLOBAL_PARAMETER_IDENTIFIABILITY",
+    "NO_PHYSICAL_MASK_CALIBRATION_EVIDENCE",
+    "NO_25D_ROBUSTNESS_OF_NEW_LOCAL_RANK",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
