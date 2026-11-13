@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/xh-s6-rot016-preregistered-source-holdout.yml'
+      - 'research/xh-s6/2026-11-13/xh_s6_rot016_preregistered_source_native_holdout.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -39,6 +40,7 @@ jobs:
             --rot009-source research/xh-s6/2026-11-12/xh_s6_rot009_author_native_paired_noisy_microstim.py \
             --rot013-source research/xh-s6/2026-11-13/xh_s6_rot013_source_native_all_ten_original_units_falsifier.py \
             --preregister research/xh-s6/2026-11-13/iw_xh_s6_rot016_prospective_holdout_gap_preregister_001.md \
+            --amendment research/xh-s6/2026-11-13/iw_xh_s6_rot016_pre_data_seed_range_amendment_001.md \
             --out /tmp/xh-s6-rot016-result \
             --seed-blocks 24 | tee /tmp/xh-s6-rot016-result/runner_stdout.txt
       - name: Preserve both positive and falsifying source-output evidence
