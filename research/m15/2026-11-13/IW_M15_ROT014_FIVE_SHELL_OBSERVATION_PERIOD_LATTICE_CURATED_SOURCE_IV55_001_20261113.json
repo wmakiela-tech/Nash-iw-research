@@ -1,0 +1,101 @@
+{
+  "artifact_id": "IW_M15_ROT014_FIVE_SHELL_OBSERVATION_COMPLETE_COMMON_PERIOD_SUBGROUP_001_20261113",
+  "return_id": "IW_M15_ROT014_ORIGINAL_M13_FIVE_OBSERVABLE_SHELL_UNIFORM_TRANSLATION_PERIOD_LATTICE_IV55_CERT_001_20261113",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-13",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "claim_ceiling": "I1_INTERNAL_NONBLIND_DIFFERENT_CELL / ORIGINAL_M13_FORMULA_RECONSTRUCTION_NOT_ORIGINAL_M13_MODULE_BYTE_EXECUTION / HYPOTHETICAL_COMMON_TRANSLATION_WITH_FIXED_MASKS / NOT_GLOBAL_INVERSE / NO_HISTORIC_DTC0A / NO_NOVELTY / NO_PHYSICS / NO_CANON / NO_EXEC_SIGN / NO_TASK_CASCADE",
+  "firstness": {
+    "original_operator": "M13 original sparse Fourier operator",
+    "first_translation_parity": "Geeky-S12 ROT020",
+    "prior_full_tensor_stabilizer": "M15 ROT013",
+    "current": "M15 ROT014 independent full common PERIOD GROUP of five observed shell functions, not all pointwise aliases"
+  },
+  "source": {
+    "M13_original_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "M15_independent_original_formula_SHA256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e"
+  },
+  "model": {
+    "N": 41,
+    "alpha": "1/20",
+    "B_mode_count": 41,
+    "possible_observable_difference_q_count": 221,
+    "observations": "Five disjoint-shell masked energy means, s5=g6",
+    "observation_masks": "fixed while hypothetical original input fields commonly translated",
+    "integer_parity": "all m and all q=m-n have even coordinate sum"
+  },
+  "certificate": {
+    "witness_nonzero_observed_s5_Fourier_coefficients": [
+      {
+        "q": [
+          -2,
+          0,
+          0
+        ],
+        "matching_B_pairs": 26,
+        "real_approx": 4.246160953643207e-15,
+        "imag_approx": 6.558598295131562e-16,
+        "abs_squared_strict_directed_lower_positive": true
+      },
+      {
+        "q": [
+          0,
+          1,
+          1
+        ],
+        "matching_B_pairs": 20,
+        "real_approx": -4.705535724910069e-16,
+        "imag_approx": 7.26814619605893e-17,
+        "abs_squared_strict_directed_lower_positive": true
+      },
+      {
+        "q": [
+          3,
+          0,
+          -1
+        ],
+        "matching_B_pairs": 14,
+        "real_approx": 2.676053907738622e-17,
+        "imag_approx": 1.732528064924904e-16,
+        "abs_squared_strict_directed_lower_positive": true
+      }
+    ],
+    "witness_q_exact_integer_det": 2,
+    "source_observed_energy_Fourier_lattice": "all integer q with even coordinate sum, index 2 in Z^3",
+    "unique_Fourier_characters_lemma": "A translation h is a period for every t iff exp(i q dot h)=1 for all nonzero observed gamma_q",
+    "exact_fifth_shell_period_group": [
+      "(0,0,0)",
+      "(pi,pi,pi)"
+    ],
+    "exact_common_five_shell_period_group": [
+      "(0,0,0)",
+      "(pi,pi,pi)"
+    ],
+    "group_modulo": "2pi in each torus coordinate",
+    "scope_warning": "NOT: any two observations with S(t)=S(t') must have t'-t in period group; extra isolated/global pointwise aliases remain unclassified",
+    "directed_arithmetic_precision_decimal_digits": 55,
+    "checks": {
+      "all_three_gamma_abs_squared_positive": true,
+      "selected_hermitian_conjugate_pairs": true,
+      "original_fixed_mask_g6_energy_reconstruction": true,
+      "all_41_B_source_modes_parity_even": true,
+      "exact_integer_det2": true
+    }
+  },
+  "actual_reproducer": {
+    "original_script_sha256": "6a5becf5a7caa24878e794673b9baba0cb5b929d39c86fdee485d6c2a8af69fc",
+    "original_full_computed_directed_JSON_sha256": "fd77d275c9a2eeae044355f76ac0102b61821c4f7d216baf052aa1e76a0fb206",
+    "original_complete_user_conversation_zip": "IW_M15_ROT014_FIVE_SHELL_OBSERVATION_FULL_PERIOD_STABILIZER_EXACT_IV_REPRO_001_20261113.zip",
+    "original_zip_bytes": 13200,
+    "original_zip_sha256": "59ca49769fcc698c7c41919e4f552d083facb58656bfac44dc9336df8c195530",
+    "manifest_payload_sha256": "7/7 PASS",
+    "zip_crc": "PASS",
+    "fresh_isolated_execution": "BYTE_IDENTICAL_JSON_PASS",
+    "one_byte_source_formula_dependency_corruption": "PRE_SCIENCE_SHA_MISMATCH_FAIL_CLOSED_PASS",
+    "full_source_code_and_exact_directed_intervals_in_local_zip": true,
+    "full_original_M13_code_not_executed": true
+  },
+  "formal_peer_status": "REC11_AUD2_ROT014_INDEPENDENT_REFEREE_NOT_YET_ACKNOWLEDGED"
+}
