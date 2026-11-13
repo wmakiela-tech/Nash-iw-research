@@ -1,0 +1,120 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT021_SOURCE_ALPHA_INFORMATION_FIVE_SHELL_COFAC_MACHINE_RESULTS_001_20261113",
+  "date": "2026-11-13",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "source": {
+    "original_M13_operator_path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "original_M13_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_B_table_path": "research/m13/2026-10-26/direct_B.json",
+    "original_M13_B_table_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "source_N": 41,
+    "alpha": "1/20",
+    "iv_dps": 45,
+    "mask_k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ]
+  },
+  "hypothetical_new_model": "original public M13 B input fields translated together relative to five fixed observation windows; five raw log disjoint-shell energy observations have iid N(0,sigma²) errors; nuisance one unknown common log gain and three unknown local common translations; this source's calc does NOT expose translation and historic producer identity remains unverified",
+  "score": {
+    "raw_log_shell_gradient_columns": [
+      "translation_x",
+      "translation_y",
+      "translation_z",
+      "alpha"
+    ],
+    "X_nuisance": "5x4 [ones, translation_x, translation_y, translation_z]",
+    "a_alpha": "5x1 alpha derivative",
+    "cofactor_n_i": "(-1)^i det(X deleting row i), i zero-based",
+    "cofactor_values_display": [
+      -0.000009649023239024407,
+      -0.0000033332593357871324,
+      0.000018493747494782042,
+      -0.000007757010281111686,
+      0.000002245545361141185
+    ],
+    "all_five_cofactor_signs_strict_in_original_45digit_directed_intervals": true,
+    "full_5x5_det_iv45_lo": "-0.000010198255897224419012725287782962857560485344923706",
+    "full_5x5_det_iv45_hi": "-0.000010198255897224419012725287782962856917586069258577",
+    "full_5x5_det_strict_negative": true,
+    "projected_fisher_alpha_times_sigma_squared": {
+      "lo": "0.203353417469174310463056194059344783776859685359",
+      "hi": "0.20335341746917431046305619405934480913652862836164"
+    },
+    "unknown_common_gain_only_fisher_alpha_times_sigma_squared_display": 31.001929459858978,
+    "information_retained_ratio_display": 0.006559379400320051,
+    "information_lost_percent_display": 99.344062059968,
+    "minimum_linear_Gaussian_alpha_std_multiplier_with_translations_display": 2.21755429672768,
+    "minimum_alpha_std_multiplier_without_translations_display": 0.17959971291314833,
+    "alpha_std_inflation_due_to_unknown_translations_display": 12.347204016968867,
+    "influence_weights_five_raw_log_observation_errors_display": [
+      0.9461444521754457,
+      0.32684601851325573,
+      -1.81342257746399,
+      0.7606212630164392,
+      -0.2201891562411508
+    ],
+    "first_order_linf_error_gain": 4.067223467410281,
+    "leave_out_any_one_shell": {
+      "result": "ALL 5 possible 4x4 nuisance submatrices X_{-i} invertible from strict 45dps cofactor signs; with four measurements and four nuisance parameters alpha score belongs to nuisance span",
+      "alpha_locally_identifiable_after_arbitrary_one_shell_drop": false,
+      "profiled_local_alpha_fisher_after_any_shell_drop": "ZERO exactly in this local linearized model"
+    }
+  },
+  "illustrative_if_sigma_1e_minus4": {
+    "with_unknown_common_gain_and_translations_alpha_sd_lower_bound_display": 0.000221755429672768,
+    "with_unknown_common_gain_only_alpha_sd_lower_bound_display": 0.00001795997129131483,
+    "bounded_each_raw_log_shell_error_1e_minus4_worstcase_linear_alpha_error_display": 0.0004067223467410281,
+    "not_a_finite_nonlinear_or_empirical_error_bound": true
+  },
+  "repro": {
+    "user_zip": "Geeky_S12_ROT021_source_nuisance_profiled_alpha_information.zip",
+    "bytes": 23714,
+    "SHA256": "b693accec39bebe2d95f0164105a4c2ca3f9b4ff313265a99d0aa68f4ae8da0a",
+    "member_count": 10,
+    "CRC_pass": true,
+    "all_member_byte_SHA256_pass": true,
+    "actual_executed_script_SHA256": "fa528527a6896ff658fa7f8cdcb28ab705dd5845d9c9fa8bbd968f573b8e66bc",
+    "actual_complete_iv45_results_SHA256": "91164578241f5167201bc235b5f272c1b8e124235e0bfb8ae383a27c129cdc8c",
+    "source_original_M13_operator_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "source_original_M13_B_table_SHA256": "0295116e364e28e67f0129bda1fc298d6e4bfdcb7aa8a6314f02a9ea37edca5f",
+    "clean_subprocess_byte_identical_full_result": true,
+    "tampered_original_module_fails_before_source_import": true,
+    "tampered_original_source_B_table_fails_before_source_import": true,
+    "independent_spatial_inverse_fft_source_20_log_gradient_max_abs_discrepancy_display": 3.197442310920451e-14,
+    "ROT020_pinned_log_ratio_jacobian_crosscheck_max_abs_discrepancy_display": 1.7763568394002505e-15,
+    "original_executed_script_GitHub_separate_mirror": false
+  },
+  "peer_review_currentness": {
+    "REC11_ROT035": "I1 review Geeky ROT019 scalar field source rank1, separate prior finding; NOT ROT021",
+    "M15_ROT012": "I1 review Geeky ROT019 scalar field source rank1, separate prior finding; NOT ROT021",
+    "ROT020_translation_rank_author": "AUTHOR_ONLY",
+    "ROT021_local_fisher_and_leave_shell_out": "AUTHOR_ONLY_INDEPENDENT_REFEREE_PENDING",
+    "M15_adoption": "NOT_VERIFIED",
+    "KN14_BW_source_ingest": "NOT_VERIFIED"
+  },
+  "strict_guards": [
+    "LOCAL_LINEARIZED_INFORMATION_ONLY",
+    "HYPOTHETICAL_IID_GAUSSIAN_FIVE_LOG_SHELL_ERRORS",
+    "NO_MEASURED_NOISE_COVARIANCE",
+    "NO_SOURCE_REALIZABILITY_OF_FIELD_TRANSLATION",
+    "NO_FULL_DOMAIN_GLOBAL_INJECTIVITY",
+    "NO_25D_COEFFICIENT_BOX_ROBUSTNESS_OF_TRANSLATION_RANK",
+    "MISSING_ORIGINAL_HISTORIC_DTC0A_PRODUCER_BYTES",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
