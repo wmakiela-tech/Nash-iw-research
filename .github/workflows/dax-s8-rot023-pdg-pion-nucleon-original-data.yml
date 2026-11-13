@@ -1,0 +1,55 @@
+name: DAX-S8 ROT023 original PDG pion-nucleon COMPAS cross sections
+on:
+  push:
+    paths:
+      - '.github/workflows/dax-s8-rot023-pdg-pion-nucleon-original-data.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pdg-piN-original:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - name: Fetch two original PDG/COMPAS numerical pi-p datasets with full byte hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dax-s8-rot023
+          python3 - <<'PY'
+          import urllib.request,hashlib,json,pathlib
+          out=pathlib.Path('/tmp/dax-s8-rot023')
+          requests={
+            'pimp_total':'https://pdg.lbl.gov/2024/hadronic-xsections/rpp2022-pimp_total.dat',
+            'pipp_total':'https://pdg.lbl.gov/2024/hadronic-xsections/rpp2022-pipp_total.dat',
+            'pimp_elastic':'https://pdg.lbl.gov/2024/hadronic-xsections/rpp2022-pimp_elastic.dat',
+            'pipp_elastic':'https://pdg.lbl.gov/2024/hadronic-xsections/rpp2022-pipp_elastic.dat'
+          }
+          receipts={}
+          for name,url in requests.items():
+            entry={'original_url':url,'status':'ACCESS_BLOCKED'}
+            try:
+              request=urllib.request.Request(url,headers={'User-Agent':'NASH-DAX-S8-ROT023-scientific-data-custody/1.0'})
+              with urllib.request.urlopen(request,timeout=35) as response:
+                body=response.read(3000001)
+                entry.update(http_status=response.status,content_type=response.headers.get('Content-Type',''))
+              if not body or len(body)>3000000 or body.lstrip().lower().startswith((b'<html',b'<!doctype')):
+                entry.update(status='REJECT_NON_DATA_OR_OVERSIZE',n_bytes=len(body))
+              else:
+                (out/(name+'.dat')).write_bytes(body)
+                entry.update(status='ORIGINAL_DATA_BYTES_SAVED',n_bytes=len(body),sha256=hashlib.sha256(body).hexdigest(),head_lines=body[:1400].decode('utf-8','replace').splitlines()[:12])
+            except Exception as exc:
+              entry.update(error=repr(exc))
+            receipts[name]=entry
+            print('DATA_RECEIPT '+name+' '+json.dumps(entry,sort_keys=True,ensure_ascii=True),flush=True)
+          (out/'source_receipts.json').write_text(json.dumps(receipts,indent=2,sort_keys=True)+'\n')
+          assert any(v['status']=='ORIGINAL_DATA_BYTES_SAVED' for v in receipts.values()),'No original numerical data recovered'
+          PY
+      - name: Preserve original bytes and source receipts even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dax-s8-rot023-original-pdg-pion-nucleon-datasets
+          path: /tmp/dax-s8-rot023/
+          if-no-files-found: warn
+          retention-days: 30
