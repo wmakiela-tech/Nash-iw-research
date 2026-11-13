@@ -1,0 +1,106 @@
+{
+  "artifact_id": "IW_MT15_ROT021_WUXU_ORIGINAL_NATIVE_DEFAULT_LOCAL_TOLERANCE_VS_TINY_SCALAR_SIGNAL_RESULTS_001_20261113",
+  "date": "2026-11-13",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "original_source": {
+    "author": "Wu-Xu JCAP 02 (2026) 063",
+    "repo_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+    "main_scan_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "parameters_blob": "0d7198ff3557bdbd5753000bb07a7a7405cc24f5",
+    "source_solver_solve_options": "NO EXPLICIT reltol OR abstol",
+    "source_Bits": 100
+  },
+  "original_native_provider": {
+    "owner": "Mech-S9",
+    "actions_run": 43436800793,
+    "artifact_id": 14045176436,
+    "source_zip_sha256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+    "source_10000csv_sha256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+    "original_sha_manifest": "16/16 PASS",
+    "diffeq_pkg_version": "7.17.0",
+    "arb_pkg_version": "1.6.3",
+    "postev_nPBHzero_rows": 1456,
+    "all_six_floor_rows": 1456
+  },
+  "external_documented_defaults": {
+    "url": "https://docs.sciml.ai/DiffEqDocs/v7.17/basics/common_solver_opts/",
+    "abstol": "1e-6",
+    "reltol": "1e-3",
+    "scale": "absTol+relTol*abs(source_u4=lnX)",
+    "type": "LOCAL error control acceptance scale only",
+    "actual_integrator_opts_verified": false,
+    "error_actual_or_global_certified": false
+  },
+  "prior_source_comparator": {
+    "source_firstness": "MT15 ROT019 conditional original Q/T-matched weak-only scalar D, NOT second actual 10D",
+    "pinned_commit": "4e0ae7dff49b614a97e84e5dd78a77525677f114"
+  },
+  "cases": [
+    {
+      "target": "author_T0",
+      "target_T_MeV": "0.07818527068831994",
+      "native_QT_pair": [
+        9401,
+        9402
+      ],
+      "source_x_QT": "0.11205517576826312439016488204836837063",
+      "u4_logx": "-2.1887638882066128402",
+      "prior_conditional_D_x": [
+        "2.202762365163523e-15",
+        "2.2056827742579078e-15"
+      ],
+      "delta_u4": [
+        "1.9657836865286707927e-14",
+        "1.9683899107163195988e-14"
+      ],
+      "documented_nominal_local_scale": "0.0021897638882066128402",
+      "ratio_nominal_scale_to_max_delta_u4": "111246449511.09979625",
+      "status": "RATIO_OF_MODEL_SCALES_NOT_MEASURED_SOLVER_ERROR"
+    },
+    {
+      "target": "Badacz_T1",
+      "target_T_MeV": "0.0996888512474581",
+      "native_QT_pair": [
+        9326,
+        9327
+      ],
+      "source_x_QT": "0.12588190883956387805855",
+      "u4_logx": "-2.0724110429386856309",
+      "prior_conditional_D_x": [
+        "1.2216118477080871e-15",
+        "1.2231916290604223e-15"
+      ],
+      "delta_u4": [
+        "9.7044274190744416523e-15",
+        "9.7169771282971437168e-15"
+      ],
+      "documented_nominal_local_scale": "0.0020734110429386856309",
+      "ratio_nominal_scale_to_max_delta_u4": "213380253505.03645121",
+      "status": "RATIO_OF_MODEL_SCALES_NOT_MEASURED_SOLVER_ERROR"
+    }
+  ],
+  "mass_source_control": {
+    "original_nominal_cutoff_g": "2.3109127923407016129",
+    "native_frozen_mass_g": "1.47268711730633",
+    "source_exact_cutoff_delta_lnM": "-0.4505538916409737325",
+    "documented_nominal_lnM_local_scale": "0.0550720232260951841",
+    "scale_ratio": "8.18117558149714844",
+    "meaning": "distinct event/cumulative violation versus nominal local scale; NOT an observed accepted one-step error",
+    "firstness": "MT15 ROT020 first original exact mass cutoff invariant undercut; KN14 ROT002 distinct M^3 clock drift"
+  },
+  "local_reproduction": {
+    "executed_source_code_sha256": "6b1dc30b70d5bf3e4321ceb94a634976bd6a0ac29a7b2e2761bbc0a84a88ed98",
+    "actual_JSON_result_sha256": "7a75464e415be376808c7f2daccfa80ea2e108a8dbf1b9798b5a2b5021d86569",
+    "independent_verifier_sha256": "6daa93346a9ecac04ba727a60269d937a8e2029fd22082549d84392ad4b50176",
+    "offline_ZIP_sha256": "d6479e40c06ce0cae4bf6d596898d3e42c12e3e72f0c3d9fdd8bbdcd623eba3b",
+    "zip_bytes": 723149,
+    "outer_crc": "PASS",
+    "native_source_manifest": "16/16 PASS",
+    "outer_payload_manifest": "5/5 SHA256 PASS",
+    "separate_log_algebra_tests": "1500/1500 PASS",
+    "negative_test_native_one_byte_modified": "FAIL_CLOSED_PASS",
+    "clean_extracted_replay": "BYTE_IDENTICAL_PASS"
+  },
+  "science_ceiling": "DOES_NOT_VERIFY_LIVE_INTEGRATOR_OPTS / NOT_NATIVE_JULIA_GLOBAL_ERROR / NOT_PHYSICAL_DELTA_Yp / SOURCE_E4_HOLD / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / BW_PENDING"
+}
