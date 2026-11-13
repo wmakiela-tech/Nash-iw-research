@@ -1,0 +1,89 @@
+name: Mech-S9 ROT016 original Wu-Xu native trace hadron RHS exposure (Python only)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-rot016-native-hadron-exposure-stdlib.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  original-source-stdlib:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify frozen independent stdlib analysis source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git hash-object research/mech-s9/2026-11-13/code/mech_s9_rot016_native_hadron_extrapolated_rhs_exposure_stdlib.py)" = "3da33daf04a8337063a98115f22493b925ebe561"
+          echo "FROZEN_CODE_BLOB_PASS"
+      - name: Download immutable original Julia source artifact, do not rerun Julia
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot016_source_audit
+          curl --fail --location --silent --show-error \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/wmakiela-tech/Nash-iw-research/actions/artifacts/14045176436/zip" \
+            -o mech_s9_rot016_source_audit/authentic_original_julia_trace.zip
+          echo "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486  mech_s9_rot016_source_audit/authentic_original_julia_trace.zip" | sha256sum -c -
+          echo "ORIGINAL_JULIA_ARTIFACT_SOURCE_VERIFIED_PASS"
+      - name: Derive both sides of original mass-node source hadron RHS integral
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-13/code/mech_s9_rot016_native_hadron_extrapolated_rhs_exposure_stdlib.py \
+            mech_s9_rot016_source_audit/authentic_original_julia_trace.zip \
+            mech_s9_rot016_source_audit/ROT016_NATIVE_HADRON_RHS_EXPOSURE.json \
+            > mech_s9_rot016_source_audit/CALC_STDOUT 2> mech_s9_rot016_source_audit/CALC_STDERR
+          cat mech_s9_rot016_source_audit/CALC_STDOUT
+      - name: Audit numeric interval and tampering fail-closed (stdlib)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, pathlib, subprocess,sys
+          output=pathlib.Path("mech_s9_rot016_source_audit")
+          r=json.loads((output/"ROT016_NATIVE_HADRON_RHS_EXPOSURE.json").read_text())
+          d=r["methods"]
+          assert 0.732 < d["trapezoid"]["fraction_below_node"] < 0.734
+          assert 0.732 < d["pchip"]["fraction_below_node"] < 0.734
+          assert abs(d["trapezoid"]["fraction_below_node"]-d["pchip"]["fraction_below_node"])<0.001
+          assert r["below_node_rhs_trapezoid_minus_native_state_change"]<0.003
+          assert r["end_PBH_jump_not_integrated"]
+          source=(output/"authentic_original_julia_trace.zip").read_bytes()
+          damaged=output/"NEGATIVE_TAMPERED.zip"
+          damaged.write_bytes(source[:-22]+bytes([source[-22]^1])+source[-21:])
+          test=subprocess.run([sys.executable,"-I",
+            "research/mech-s9/2026-11-13/code/mech_s9_rot016_native_hadron_extrapolated_rhs_exposure_stdlib.py",
+            str(damaged),str(output/"NEGATIVE_OUTPUT.json")],capture_output=True,text=True)
+          assert test.returncode!=0, "TAMPER_NEGATIVE_CONTROL_MISSED"
+          assert not (output/"NEGATIVE_OUTPUT.json").exists()
+          damaged.unlink()
+          (output/"NEGATIVE_CONTROL.txt").write_text("tampered native archive REJECTED; no output produced\n")
+          print("SIX_HADRON_SOURCE_EXPOSURE_PASS; TAMPER_REJECTED_PASS")
+          PY
+      - name: Record all archived source and scientific result checksums
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p mech_s9_rot016_source_audit
+          find mech_s9_rot016_source_audit -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > mech_s9_rot016_source_audit/ARTIFACT_SHA256SUMS
+      - name: Upload immutable source evidence and result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot016-original-wuxu-six-hadron-RHS-before-after-table-node
+          path: mech_s9_rot016_source_audit/
+          if-no-files-found: error
