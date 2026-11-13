@@ -1,0 +1,35 @@
+{
+  "artifact_id": "IW_MT15_ROT018_WUXU_ORIGINAL_1000ROW_POSTEV_TEMPERATURE_CONTINUUM_MONOTONICITY_CERTIFICATE_001_20261113",
+  "source_author": "Wu-Xu original author v2 2025/2026",
+  "author_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+  "source_table": "arXiv-2509.05618/data/ext/N_around_m_e.csv",
+  "author_table_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+  "author_table_rows": 1000,
+  "author_thermo_interpolator_blob": "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc",
+  "author_main_scan_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+  "temperature_original_native_trace_range_MeV": [
+    0.00810973699892033,
+    1.48260941885709
+  ],
+  "author_table_temperature_range_MeV": [
+    0.01400298972685787,
+    10.000000000192058
+  ],
+  "table_overlap_piecewise_logT_cells": 723,
+  "author_below_first_table_temperature_rule": "source N_rho and N_s ExtrapolationType.Constant; qR=qS=0 for T<0.0140029897 MeV",
+  "source_formula": "PBH nPBH=0: dlnrho_SM/dη=-4+qR/(3+qS); dlnrho_SM/dlnT=4+qR; source uses monotone increasing interpolated T(ρ)",
+  "qR_min": -0.000789339557240243,
+  "qR_max": 0.8291355487890821,
+  "qS_min": -0.0007639987068695956,
+  "qS_max": 0.7110896673481276,
+  "minimum_gR": 3.3654513231275924,
+  "minimum_gS": 3.9120400850273933,
+  "min_dlnrho_dlnT": 3.9992106604427597,
+  "max_source_dlnrho_deta_at_knot_endpoints": -3.776439425890139,
+  "analytic_global_safe_upper_dlnrho_deta_from_q_extrema": -3.723551081531564,
+  "constant_extrapolated_below_table_dlnrho_deta": -4,
+  "conclusion": "IN_ORIGINAL_POSTEV_SOURCE_T_RANGE_ρ_SM_STRICTLY_DECREASES_AND_SOURCE_INVERSE_T_OF_RHO_MONOTONICALLY_INCREASES; T(t) strictly decreases in source postev system",
+  "certificate_scope": "Under original ODE and piecewise linear log(T) N_rho,N_s source interpolation with constant extrapolation; extrema of q=const_slope/g are attained at cell endpoints because derivative=-const_slope²/g², so qR,qS extrema are analytic bounds for all real T in each source cell. Floating arithmetic endpoints not formally outward-rounded; strict margins >3.7.",
+  "not_numerically_verified": "Full original inverse T(rho) Julia 1000point generator not directly executed by MT15; original source recipe and monotonic analytic model interpreted",
+  "claim_ceiling": "SOURCE_THERMODYNAMICS_POSTEV_SCALAR_SIGN_ONLY / NO_FULL_NATIVE_COUNTERFACTUAL / NO_PHYSICAL_PBH_BBN / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN"
+}
