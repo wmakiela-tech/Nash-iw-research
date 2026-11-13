@@ -1,0 +1,166 @@
+{
+  "artifact_id": "IW_XH_S6_ROT015_SOURCE_PREFERENCE_PLACEBO_720_LABELS_001_20261113",
+  "exposure": "PUBLIC",
+  "scientific_original_authors": "Douglas A. Ruff, Sol K. Markman, Jason Z. Kim, Marlene R. Cohen",
+  "original_paper": "Information formatting in neuronal populations predicts differential functional contributions to behavior",
+  "original_paper_doi": "10.1038/s41593-026-02514-7",
+  "original_publication_date": "2026-11-10",
+  "original_author_repo": "solkm/formattingRNN",
+  "source_author_immutable_commit": "7889a81e298c01532a313e02971c11dbc9db8eb0",
+  "upstream_actual_original_author_model_run_id": 43430223171,
+  "upstream_artifact_id": 14039556815,
+  "new_model_execution_ROT015": false,
+  "actual_source_model_paired_rows": 11520,
+  "source_csv_sha256": "e6717506d9d2f1a7d65fd7b25741e01d54d3c75f53145e97541c98933274db84",
+  "source_original_runner_json_sha256": "d55f5db10890f67435ea4b46b119d4aa53db78f367f66ee05cc791fdfa71b4ef",
+  "placebo_definition": "For each 5deg circular pseudo-preference label, count ORIGINAL stimulated model choices with shortest angular distance in {5,10,...,65} degrees, original decisions unchanged.",
+  "candidate_labels_per_original_unit": 72,
+  "placebo_alternative_labels_per_unit": 71,
+  "original_units": 10,
+  "per_unit_original_source_rows": 1152,
+  "results": [
+    {
+      "module": "MT",
+      "unit": 37,
+      "source_true_preference_deg": 110,
+      "source_true_label_stim_5to65_gap_count": 477,
+      "source_true_label_sham_5to65_gap_count": 212,
+      "min_other_71_label_stim_gap_count": 119,
+      "first8_source_blocks_actual_unique_zero": false,
+      "second8_source_blocks_actual_unique_zero": false,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 0
+    },
+    {
+      "module": "MT",
+      "unit": 4,
+      "source_true_preference_deg": 255,
+      "source_true_label_stim_5to65_gap_count": 414,
+      "source_true_label_sham_5to65_gap_count": 210,
+      "min_other_71_label_stim_gap_count": 72,
+      "first8_source_blocks_actual_unique_zero": false,
+      "second8_source_blocks_actual_unique_zero": false,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 0
+    },
+    {
+      "module": "MT",
+      "unit": 42,
+      "source_true_preference_deg": 0,
+      "source_true_label_stim_5to65_gap_count": 451,
+      "source_true_label_sham_5to65_gap_count": 221,
+      "min_other_71_label_stim_gap_count": 166,
+      "first8_source_blocks_actual_unique_zero": false,
+      "second8_source_blocks_actual_unique_zero": false,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 0
+    },
+    {
+      "module": "MT",
+      "unit": 25,
+      "source_true_preference_deg": 205,
+      "source_true_label_stim_5to65_gap_count": 482,
+      "source_true_label_sham_5to65_gap_count": 202,
+      "min_other_71_label_stim_gap_count": 45,
+      "first8_source_blocks_actual_unique_zero": false,
+      "second8_source_blocks_actual_unique_zero": false,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 0
+    },
+    {
+      "module": "MT",
+      "unit": 34,
+      "source_true_preference_deg": 90,
+      "source_true_label_stim_5to65_gap_count": 412,
+      "source_true_label_sham_5to65_gap_count": 219,
+      "min_other_71_label_stim_gap_count": 271,
+      "first8_source_blocks_actual_unique_zero": false,
+      "second8_source_blocks_actual_unique_zero": false,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 0
+    },
+    {
+      "module": "DLPFC",
+      "unit": 53,
+      "source_true_preference_deg": 295,
+      "source_true_label_stim_5to65_gap_count": 0,
+      "source_true_label_sham_5to65_gap_count": 218,
+      "min_other_71_label_stim_gap_count": 118,
+      "first8_source_blocks_actual_unique_zero": true,
+      "second8_source_blocks_actual_unique_zero": true,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 16
+    },
+    {
+      "module": "DLPFC",
+      "unit": 25,
+      "source_true_preference_deg": 160,
+      "source_true_label_stim_5to65_gap_count": 0,
+      "source_true_label_sham_5to65_gap_count": 222,
+      "min_other_71_label_stim_gap_count": 21,
+      "first8_source_blocks_actual_unique_zero": true,
+      "second8_source_blocks_actual_unique_zero": true,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 16
+    },
+    {
+      "module": "DLPFC",
+      "unit": 54,
+      "source_true_preference_deg": 15,
+      "source_true_label_stim_5to65_gap_count": 0,
+      "source_true_label_sham_5to65_gap_count": 233,
+      "min_other_71_label_stim_gap_count": 115,
+      "first8_source_blocks_actual_unique_zero": true,
+      "second8_source_blocks_actual_unique_zero": true,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 16
+    },
+    {
+      "module": "DLPFC",
+      "unit": 8,
+      "source_true_preference_deg": 140,
+      "source_true_label_stim_5to65_gap_count": 0,
+      "source_true_label_sham_5to65_gap_count": 210,
+      "min_other_71_label_stim_gap_count": 89,
+      "first8_source_blocks_actual_unique_zero": true,
+      "second8_source_blocks_actual_unique_zero": true,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 16
+    },
+    {
+      "module": "DLPFC",
+      "unit": 9,
+      "source_true_preference_deg": 75,
+      "source_true_label_stim_5to65_gap_count": 0,
+      "source_true_label_sham_5to65_gap_count": 184,
+      "min_other_71_label_stim_gap_count": 93,
+      "first8_source_blocks_actual_unique_zero": true,
+      "second8_source_blocks_actual_unique_zero": true,
+      "leave_one_original_seed_block_out_actual_unique_zero_count": 16
+    }
+  ],
+  "all_five_dlPFC_source_true_preference_unique_zero_over_72_labels": true,
+  "all_five_MT_have_no_zero_gap_direction_label": true,
+  "all_five_dlPFC_unique_zero_in_each_of_two_8_block_halves": true,
+  "all_five_dlPFC_leave_one_source_seed_block_out_unique_zero_16_of_16": true,
+  "independent_checks": {
+    "python_standard_library_first_reanalysis": "PASS",
+    "independent_72_bin_circular_convolution": "720_LABELS_AND_2880_STIM_SHAM_EARLY_LATE_COUNTS_PASS",
+    "clean_replay": "FOUR_OUTPUT_FILES_BYTE_IDENTICAL_PASS",
+    "tampered_csv": "SOURCE_IDENTITY_FAIL_CLOSED_PASS",
+    "tampered_json": "SOURCE_IDENTITY_FAIL_CLOSED_PASS",
+    "local_zip_crc": "PASS",
+    "zip_member_sha256": "12_OF_12_PASS"
+  },
+  "local_complete_repro_archive": {
+    "filename": "IW_XH_S6_ROT015_SOURCE_PREFERENCE_PLACEBO_720_LABELS_REPRO_20261113.zip",
+    "bytes": 478494,
+    "sha256": "17def0f9fd208e32ac0cc6afaef0806501a1fc23f68ea352657764f5acef2afb"
+  },
+  "negative_controls": [
+    "Placebo labels are NOT physically exchangeable unit tuning identities; do not infer a permutation p-value.",
+    "Annulus radius 65deg was chosen posthoc in ROT014 using the SAME 16-block source dataset; later early8/late8 splits are INTERNAL consistency, not independent validation.",
+    "When showing only half the stimulus directions, multiple candidate labels may have zero gap; full original 72 direction support matters.",
+    "Original paper already reported qualitative dlPFC winner-take-all behavior; no novelty claim."
+  ],
+  "scope": "finite, frozen, single source model-pair actual source-output geometric negative-control only, not biological data, no new trained-RNN run",
+  "bw_sync": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
