@@ -1,0 +1,105 @@
+{
+  "artifact_id": "IW_M15_ROT012_RECONSTRUCTED_M13_NATIVE_OPERATOR_FIELD_SHAPE_VS_SCALAR_REFEREE_001_20261113",
+  "return_id": "IW_M15_ROT012_ORIGINAL_M13_SCALAR_FIELD_AMPLITUDE_RANK_ONE_VS_HYPOTHETICAL_SOURCE_HARMONIC_SHAPE_PROJECTIVE_RANK_001_20261113",
+  "date": "2026-11-13",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "source_original_M13_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+  "source_original_M13_B25_coefficients_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_prior_first": "M13 SOURCE, Geeky-S12 ROT019 scalar field rank ONE first",
+  "independent_reconstruction": "Python mpmath45 source-equation reimplementation, NOT author original module byte-execution",
+  "source_grid_N": 41,
+  "alpha": "1/20",
+  "native_B_Fourier_tensor_modes": 41,
+  "direct_B25_original_midpoint_concordance_count": 25,
+  "max_relative_error_vs_source_B25_FLOAT64_midpoints": "9.298022304694455639e-17",
+  "scalar_algebra": {
+    "B_lambda1_lambda2_mu": "lambda1*lambda2*mu*B",
+    "shell_energy_scale": "(lambda1*lambda2*mu)^2",
+    "field_scalar_amplitude_log_Jacobian_rank": 1,
+    "projective_scalar_amplitude_rank": 0,
+    "numerical_fixture": {
+      "whole_C1": "2",
+      "whole_C2": "1/2",
+      "whole_h": "2",
+      "B_scale": "2",
+      "all_five_shelled_energy_scale": "4",
+      "max_mode_difference": "0.0",
+      "max_energy_ratio_error": "0.0"
+    }
+  },
+  "hypothetical_nonnative_harmonic_extension": {
+    "description": "C1 conjugate x-wave pair only multiplied by 1+q, C1 y-wave pair unchanged; not a native source() knob",
+    "log_derivatives_of_five_shells": [
+      "1.902415859704262629",
+      "1.874475343205711957",
+      "1.858815108985997007",
+      "1.860825195036270872",
+      "1.892726519966329382"
+    ],
+    "shape_log_derivative_range": "0.04360075071826562205",
+    "derivative_comparison_q_1_8_vs_1_16_max_difference": "2.958491382805770041e-43",
+    "q_energy_exact_quadratic": "yes analytically for reconstructed trilinear source formula",
+    "does_not_generate_independent_five_gains": true,
+    "not_physically_admissible_mechanism_verified": true
+  },
+  "numerical_rank_minor": {
+    "alpha_derivative": "direct derivative of original B quartic polynomial",
+    "source_alpha_projective_four_coords": [
+      "-0.139179837965238456",
+      "-1.009819588135866874",
+      "-2.9621679947949358",
+      "-6.664037058510043832"
+    ],
+    "hypothetical_q_projective_four_coords": [
+      "-0.02794051649855067237",
+      "-0.04360075071826562205",
+      "-0.04159066466799175703",
+      "-0.009689339737933246997"
+    ],
+    "first_two_coords_det": "-0.02214653544273886969",
+    "model_conclusion": "rank2 in projective tangent when q added, numerical only, not directed interval",
+    "formal_directed_interval_minor_certification": false
+  },
+  "original_mask_g2_to_g6": [
+    "6.127060754151690254e-14",
+    "6.389874328372975191e-14",
+    "6.643923185821100914e-14",
+    "6.841232678535038079e-14",
+    "6.929443250541955332e-14"
+  ],
+  "original_shell_s1_to_s5": [
+    "4.678342318212169595e-14",
+    "5.073968622101240671e-14",
+    "5.687521119852844799e-14",
+    "6.442978765044348543e-14",
+    "6.929443250541955332e-14"
+  ],
+  "execution_provenance": {
+    "executed_original_independent_python_sha256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e",
+    "actual_result_json_sha256": "6c3a1ac5b34e9c62ba7fdca5f84855bfcfed5922345aec510260266cb408f613",
+    "local_complete_zip": "IW_M15_ROT012_ORIGINAL_M13_FORMULAE_SCALAR_VS_FOURIER_SHAPE_INDEPENDENT_REPRO_001_20261113.zip",
+    "zip_bytes": 9659,
+    "zip_sha256": "7990b6ef4883db2e3b7928b71b7a075d0e17617013d1a83f3e26c1675771344d",
+    "zip_crc": "PASS",
+    "payload_manifest_hashes": "5/5 PASS",
+    "clean_repeat": "BYTE_IDENTICAL_PASS",
+    "source_fixture_tamper": "FAIL_CLOSED_PASS",
+    "original_M13_program_or_historic_runtime_byte_executed": false,
+    "independent_python_not_published_on_GitHub": "available in user local conversation ZIP only"
+  },
+  "claim_ceiling": [
+    "I1_INTERNAL_NONBLIND_DIFFERENT_CELL",
+    "NO_FORMAL_DIRECTED_INTERVAL_RANK_MINOR",
+    "NO_SOURCE_NATIVE_C1X_HARMONIC_PARAMETER",
+    "NO_PHYSICAL_FOURIER_FIELD_REALIZABILITY",
+    "NO_HISTORIC_DTC0A_PRODUCER_IDENTITY",
+    "NO_FIVE_SHELL_GAIN_SOURCE_KNOBS",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "BW_PENDING",
+    "NO_TASK_CASCADE"
+  ]
+}
