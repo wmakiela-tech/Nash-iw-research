@@ -1,0 +1,3 @@
+# PREREG_064 process 1 (BADACZ_TOL=1e-4:1e-7): REVIEW_053 grid g22 (9 points, identical offsets) + dense grid even half
+grid g22t 22 -17.219678 -0.15 0.45 0.075
+grid d22t_a 22 -17.10 -0.30 0.30 0.04
