@@ -84,14 +84,14 @@ def main():
    task=new_task(dots,pref,good,n)
    if task.test1ofEach is not False:
     raise RuntimeError("SOURCE_DEFAULT_RANDOM_SCHEDULER_NOT_ACTIVE")
-   dirs=[0]*72;ring=[0]*10;dots=[0]*10;onset=[[0]*10 for _ in range(10)]
+   dirs=[0]*72;ring=[0]*10;dots_bins=[0]*10;onset=[[0]*10 for _ in range(10)]
    for i in range(n):
     p=task.generate_trial_params(1,i)
     task.generate_trial(p)  # executes exact source MT per-time noise RNG; discards arrays
     s,g,ring_ms,dots_ms,coh=native_params(p)
     if g!=good or s not in range(0,360,5) or (ring_ms-50)%10 or not 50<=ring_ms<=140 or (dots_ms-450)%10 or not 450<=dots_ms<=540 or coh!=0.6:
      raise RuntimeError("AUTHOR_SOURCE_PARAMETER_RANGE_OR_REWARD_ERROR")
-    dirs[s//5]+=1;ring[(ring_ms-50)//10]+=1;dots[(dots_ms-450)//10]+=1
+    dirs[s//5]+=1;ring[(ring_ms-50)//10]+=1;dots_bins[(dots_ms-450)//10]+=1
     onset[(ring_ms-50)//10][(dots_ms-450)//10]+=1
     w.writerow(dict(source_unit=unit,source_preference_deg=pref,source_reward_deg=good,
      source_seed=seed,trial_index=i,shown_deg=s,shown_relative_deg=(s-pref)%360,
@@ -103,7 +103,7 @@ def main():
       "native_source_task_stream_equivalence":check,
       "source_task_test1ofEach_default":task.test1ofEach,
       "source_direction_72_bin_counts":dirs,"source_ring_onset_10_bin_counts":ring,
-      "source_dots_onset_10_bin_counts":dots,"source_onset_grid_counts":onset,
+      "source_dots_onset_10_bin_counts":dots_bins,"source_onset_grid_counts":onset,
       "source_direction_count_min":min(dirs),"source_direction_count_max":max(dirs),
       "source_direction_count_mean":sum(dirs)/72,
       "source_angle_bins_not_equal250":sum(x!=250 for x in dirs),
