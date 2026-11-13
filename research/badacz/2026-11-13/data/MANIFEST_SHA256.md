@@ -1,0 +1,25 @@
+---
+artifact_id: IW_BADACZ_MANIFEST_SHA256_20261113
+exposure: PUBLIC
+claim_ceiling: PROVENANCE_LOG / NO_CANON / NO_EXEC_SIGN
+sync_state: GITHUB_PENDING_BW_INGEST
+created_at: 2026-11-13
+origin_cell: BADACZ (wątek Claude)
+document_type: MANIFEST
+---
+
+# SHA-256 (PREREG_064 / REVIEW_065); ścieżki względem `research/badacz/2026-11-13/`
+
+```
+608f79eb01c4b6973214361baabb5e2b7d39fea2a437947f64e6f4f746819150  code/wuxu_064_analysis.py
+ecafd874a10074eaffc01665e7ab9b7640885a1a8f13f1e61849886b54f20cff  code/wuxu_064_posthoc_decomp.py
+a7f4f34c909c1fd0225aa8802f9f840341ad9780793600bd4b66e89bd9b1d483  code/wuxu_yp_formula_counterfactual_tol.jl
+0dc13ab6d1224c0ab76e455b5ac2f90d0226150bf80c2f89b370ea4dc559e5b2  data/analysis064.json
+542ad4f115c00def8c7dcdcfa45c6527abea6dfab15ed07abcbe649306e1ccc2  data/configs_064_default.dat
+301cf75b4abe94cf3a79bd6e462a3aa471cd3ce09612c232500d377e6cbacc1f  data/configs_064_tol_p1.dat
+2fae32e91d4ff832b2fc0e6215249cf0a593b3adb2eb3373ce471ff25fdf0ec9  data/configs_064_tol_p2.dat
+27f1199ffe275d9e2669d489dee468d0dc3bc93e0be69f0372660f0fdb8e8e27  data/posthoc064_decomp.json
+9e2c0e84ee544ca57e0ee1fbcebebae7495d022f74d621445b11076e599fda78  data/yp064_default.csv
+7c0ff5b2aa643dd523cd0bad74f62fe9c0dd1155d8aa70d7a0eabf63e946d4ec  data/yp064_tol_p1.csv
+3a5099c11212cbf6f497d9b438b1e551edf7d2b59f85425a9fb68449023140cc  data/yp064_tol_p2.csv
+```

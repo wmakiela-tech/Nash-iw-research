@@ -16,3 +16,6 @@ document_type: RUNLOG
 |---|---|---|---|
 | 07:52 | PREREG_064, sterownik i konfiguracje zapisane przed przebiegiem | — | — |
 | 07:53 | start PREREG_064: procesy 1–2 przy `1e−4:1e−7`, proces 3 (domyślna) po procesie 2; skrypt analizy zatwierdzony w trakcie, przed odczytem wyników | `yp064_tol_p1.csv`, `yp064_tol_p2.csv`, `yp064_default.csv` | równolegle kończy się powtórzenie części B PREREG_062 (3 procesy na 2 rdzeniach) |
+| 07:52:58–08:13:42 | PREREG_064 ukończony: proces 2 (`1e−4`) 08:06:32, proces 3 (domyślna) 08:10:27, proces 1 (`1e−4`) 08:13:42; wszystkie kod 0; 25 + 15 + 31 punktów, bez braków | `yp064_tol_p1.csv`, `yp064_tol_p2.csv`, `yp064_default.csv` | kalibracja SBBN identyczna w obu procesach `1e−4` (X0s 0.10906943155, T1 0.099655548288) |
+| ~08:15 | analiza preregu (skrypt z `f7b5407`, bez zmian) | `analysis064.json` | werdykt J0 |
+| ~08:18 | post hoc: rozrzut tylko metod gęstych i zamiana kalibracji X0s między tolerancjami | `posthoc064_decomp.json` | `code/wuxu_064_posthoc_decomp.py`; poza preregiem |

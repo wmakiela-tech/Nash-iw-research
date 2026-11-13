@@ -8,6 +8,7 @@ mandate: Moderator 8 XI 10:46 („synteza i porównanie, mosty, nowe badania w k
 code: code/wuxu_kernel_p13_bridge_posthoc.py → data/kernel_p13_bridge_posthoc.json
 claim_ceiling: MODEL_INTERNAL_SYNTHESIS / POST_HOC_BRIDGE / NO_PBH_BOUND / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
+revision: r2 (13 XI 2026) — dodana sekcja „Erratum (13 XI)” na końcu; tabela r1 bez zmian
 ---
 
 # SYNTH_055: lewa ściana Wu–Xu w natywnym kodzie v2 — budżet systematyk i pierwszy most z jądra pasm
@@ -78,3 +79,12 @@ sync_state: GITHUB_PENDING_BW_INGEST
 - **Uczenie systemu:**
   - `origin_failure_mode: WEIGHT_PROXY_WITHOUT_RESPONSE_KERNEL` (powtórka klasy z REVIEW_050): ważenie liczbą hadronów było domyślnym przybliżeniem w kilku komórkach i zaniża efekt przy ścianie ≈ 2×.
   - Kandydat reguły `[▷]`: przed użyciem wag liczbowych w Front B sprawdzić je na jednym natywnym zaburzeniu.
+
+## Erratum (13 XI 2026)
+
+- **Wzór Y_P przy j = 22 (1.12e9 g), wartości z REVIEW_053 skorygowane w REVIEW_065:**
+  - V2 to **+0.22 … +0.25 dex** zamiast +0.194;
+  - V1 to **+0.07 … +0.095 dex** zamiast +0.075.
+- **Przyczyna:** metoda korzenia na rzadkiej siatce oraz zależność od tolerancji (`research/badacz/2026-11-13/`).
+- **Pozostałe masy** (j = 28, 34) w tabeli nie są ponownie sprawdzone.
+- **Odczyt bez zmian:** wybory dyskretne dominują, mapa ładunkowa pierwsza, wzór Y_P drugi.

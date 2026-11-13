@@ -10,6 +10,7 @@ code: code/wuxu_yp_formula_counterfactual.jl, code/wuxu_yp_formula_counterfactua
 data: data/yp051/ (yp_a.csv, yp_b.csv, yp_c.csv, configs_*.dat, yp051_analysis.json)
 claim_ceiling: MODEL_INTERNAL_COUNTERFACTUAL / NO_PBH_BOUND / NO_FIG5_IDENTITY / NO_OWNER_DISPOSITION / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
+revision: r2 (13 XI 2026) — dodana sekcja „Erratum (13 XI)” na końcu; treść r1 bez zmian
 ---
 
 # REVIEW_053: poprawiony wzór Y_P przesuwa natywny kontur o +0.03…+0.08 dex (V1) albo +0.09…+0.19 dex (V2) dla 1.1–3.5e9 g; przy 1e10 g warianty się rozchodzą
@@ -94,3 +95,15 @@ Około 4 minut na 2 rdzeniach.
   - `origin_failure_mode: NOMINAL_CALIBRATION_IN_PREDICTION_WINDOW`: okna przewidywań oparte na wartości nominalnej (0.245) zamiast na wielkości mierzalnej przed testem (SBBN w tym samym środowisku). Łatka: kalibrację mierzyć przed preregiem, gdy nie ujawnia wyniku testu, albo wyrażać okna jawnie jako funkcję kalibracji.
   - Mój błąd uruchomienia (`&` w poleceniu tła) powtórzył się drugi raz dziś. Procesy zginęły przed zapisem danych, bez wpływu na wynik. Łatka: zawsze jedno polecenie tła z `wait`.
   - Przy okazji zauważyłem, że w łańcuchach `cmd | tail` kod wyjścia preflightu jest maskowany. Preflight dla preregu 051 powtórzyłem z jawnym kodem wyjścia: PASS.
+
+## Erratum (13 XI 2026, po replice GPT i REVIEW_065)
+
+- **Korzeń V2 przy j = 22 był obciążony metodą.** Korzeń −17.021 i przesunięcie V2 − V0 = +0.194 policzyłem kwadratową przez 4 punkty siatki o kroku 0.075 dex.
+  - Na siatce gęstej (0.02 dex) przy tej samej, domyślnej tolerancji wychodzi −16.990 … −16.999 i +0.223 … +0.226.
+  - Zgadza się to z natywną repliką GPT (L2: −16.9975 i +0.2266).
+  - Przy `1e−4` wychodzi +0.244 … +0.253.
+  - Aktualny przedział dla j = 22: V2 − V0 = **+0.22 … +0.25 dex**, V1 − V0 = **+0.07 … +0.095 dex**.
+- **Niepewność.** Moja miara niepewności |kwadratowa − liniowa| na tych samych punktach nie mogła tego wykryć.
+- **Inne masy.** j = 28 i 34 nie są ponownie sprawdzone (OTWARTE); j = 62 przeszło w L2.
+- Szczegóły: `research/badacz/2026-11-13/IW_BADACZ_WUXU_REVIEW053_J22_ROOT_METHOD_TOLERANCE_REVIEW_065_20261113.md`.
+- `origin_failure_mode: COARSE_GRID_ROOT_ON_CURVED_JAGGED_RESPONSE`.
