@@ -1,0 +1,63 @@
+{
+  "artifact_id": "IW_M15_ROT008_ORIGINAL_M13_B25_TWO_ACTIVE_CONVEX_RISK_INDEPENDENT_REFEREE_001_20261113",
+  "original_M13_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_coefficients": 25,
+  "relative_box_epsilon": "1/10000000",
+  "alpha": "1/20",
+  "beta": "3/40",
+  "kappa": "33/500",
+  "two_active_shells": [
+    1,
+    5
+  ],
+  "three_inactive_shells": [
+    2,
+    3,
+    4
+  ],
+  "certified_full_box_active_set": true,
+  "exact_KKT_convex_profile_global_optimum": true,
+  "scaled_loss_1e24_outer_interval": {
+    "lower": "4.30499086736e-6",
+    "upper": "4.41727764694e-6"
+  },
+  "strict_simple_risk_bound_4p30eMinus6_to_4p42eMinus6": true,
+  "original_source_midpoint_scaled_risk_1e24": "4.36095353085e-6",
+  "original_source_midpoint_common_only_scaled_risk_1e24": "5.77740581663e-1",
+  "midpoint_relative_to_common": "7.54829013102e-6",
+  "original_midpoint_exact_5_hinge_terms_equal_pair_formula": true,
+  "center_gain_interval": {
+    "lower": "5.70341061329e-1",
+    "upper": "5.70343050459e-1"
+  },
+  "active_set_guard": {
+    "shell1_upper_r_minus_u_c": "-2.49113453753e-4",
+    "shell5_lower_r_minus_v_c": "4.06366556733e-5",
+    "middle_r_minus_u_c_lower": [
+      "4.07303777482e-3",
+      "1.50267368203e-2",
+      "3.61450853143e-2"
+    ],
+    "middle_r_minus_v_c_upper": [
+      "-7.12070389425e-2",
+      "-6.02537315120e-2",
+      "-3.91356896366e-2"
+    ]
+  },
+  "scope": "INTERNAL_NONBLIND_I1_MATHEMATICAL_SOURCE_AUXILIARY_ONLY_NO_HISTORIC_RUNTIME_NO_PHYSICS_NO_CANON",
+  "execution_provenance": {
+    "original_math_program_git_blob": "3651ecd0d9c602fa192b71fd82f85eec3df627e9",
+    "original_input_M13_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "executed_source": "PINNED_PUBLIC_ORIGINAL_MATH_FUNCTION_IN_CONNECTED_V8",
+    "only_change_to_run": "Node interpreter shebang stripped for V8 Function compilation",
+    "node_cli_wrapper_not_separately_executed": true,
+    "tampered_input_guard": {
+      "mask6_constant_original_bracket_mutated_to_zero": true,
+      "rejected": true,
+      "reason": "Error: RATIO_ORDER_UNDECIDED"
+    },
+    "independent_computer_program": true,
+    "M13_and_Geeky_source_first_preserved": true
+  },
+  "source_owner_referee_ceiling": "I1_NONBLIND_INTERNAL_DIFFERENT_CELL_PASS_NO_EXTERNAL_I3_NO_CANON_NO_EXEC_SIGN"
+}
