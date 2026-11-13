@@ -1,0 +1,225 @@
+{
+  "artifact_id": "IW_MT15_ROT023_ORIGINAL_WUXU_J22_INVERSE_LUT_SOURCE_RESULTS_001_20261114",
+  "created_at": "2026-11-14",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "source_original_author_git_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+  "source_1000row_thermodynamics_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+  "source_author_inverse_rho_T_code_blob": "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc",
+  "source_original_native_10D_zip_SHA256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+  "source_original_native_selected16_parent_git_blob": "ea584e6ecae950561e2e43945499923692fe3f72",
+  "lookup_global_original_nodes": 1000,
+  "lookup_needed_first_nodes_reconstructed": 340,
+  "lookup_T_domain_MeV": [
+    0.01,
+    1000000
+  ],
+  "native_postev_T_domain_MeV": [
+    0.00810973699892033,
+    1.48260941885709
+  ],
+  "math": "Source original d ln rho_SM/dln a=-4+q_rho/(3+q_s). Original approximate rho->T log-linear lookup gives alpha=d ln rho_lookup/d lnT in each LUT cell, not 4+q_rho(T). Compare ln S_com=integral [3*alpha/f+3+q_s]dlnT; split both 1000row source thermo knots and inverse LUT knots; source g_s and native a,T from authentic Mech-S9 native saved rows.",
+  "original_native_last_S_ratio": 1.1682400717068826,
+  "ideal_source_last_S_ratio": 1.1700863171112998,
+  "original_LUT_source_last_S_ratio": 1.170083634147603,
+  "original_LUT_only_relative_effect": -0.000002292962200778348,
+  "native_vs_correct_LUT_residual": -0.0015755817677627348,
+  "max_16_source_quad_Gauss8_vs_one_sided_Simpson32_abs_difference": 4.9960036108132044e-14,
+  "max_16_source_LUT_model_rel_change": 0.000019309624545549298,
+  "max_16_source_pointwise_inverse_relative_T_error": 0.000005511654764811524,
+  "pointwise_30001_logT_grid_not_global_certified_max": {
+    "T_MeV": 0.07000128953303338,
+    "relative_T_error": -0.00001240053226658766
+  },
+  "results": [
+    {
+      "native_index": 8545,
+      "native_T_MeV": 1.48260941885709,
+      "native_S_ratio": 1,
+      "ideal_inverse_continuum_S_ratio": 1,
+      "original_1000node_inverse_source_model_S_ratio": 1,
+      "source_LUT_only_model_relative_change": 0,
+      "native_vs_LUT_source_model_relative_residual": 0,
+      "pointwise_inverse_roundtrip_rel_T_error": 1.212918048221212e-7,
+      "source_integral_2method_abs_diff": 0
+    },
+    {
+      "native_index": 8600,
+      "native_T_MeV": 1.20172359287567,
+      "native_S_ratio": 1.0000594060951027,
+      "ideal_inverse_continuum_S_ratio": 1.000062945571957,
+      "original_1000node_inverse_source_model_S_ratio": 1.000064020422236,
+      "source_LUT_only_model_relative_change": 0.0000010747826262313964,
+      "native_vs_LUT_source_model_relative_residual": -0.000004614031741012603,
+      "pointwise_inverse_roundtrip_rel_T_error": 4.764403969126363e-7,
+      "source_integral_2method_abs_diff": 4.440892098500626e-16
+    },
+    {
+      "native_index": 8700,
+      "native_T_MeV": 0.822024599270091,
+      "native_S_ratio": 1.0004309959155044,
+      "ideal_inverse_continuum_S_ratio": 1.0004369022727477,
+      "original_1000node_inverse_source_model_S_ratio": 1.0004376688763421,
+      "source_LUT_only_model_relative_change": 7.662688097376247e-7,
+      "native_vs_LUT_source_model_relative_residual": -0.000006670041568068719,
+      "pointwise_inverse_roundtrip_rel_T_error": 3.725029198431429e-7,
+      "source_integral_2method_abs_diff": 1.3322676295501878e-15
+    },
+    {
+      "native_index": 8800,
+      "native_T_MeV": 0.565208534567791,
+      "native_S_ratio": 1.0018507279789017,
+      "ideal_inverse_continuum_S_ratio": 1.0017153837011583,
+      "original_1000node_inverse_source_model_S_ratio": 1.0017196759792726,
+      "source_LUT_only_model_relative_change": 0.000004284927819009354,
+      "native_vs_LUT_source_model_relative_residual": 0.0001308270195461425,
+      "pointwise_inverse_roundtrip_rel_T_error": 0.0000015016304477644127,
+      "source_integral_2method_abs_diff": 7.105427357601002e-15
+    },
+    {
+      "native_index": 8900,
+      "native_T_MeV": 0.392344897835177,
+      "native_S_ratio": 1.005443658332413,
+      "ideal_inverse_continuum_S_ratio": 1.005470615314753,
+      "original_1000node_inverse_source_model_S_ratio": 1.005470608762013,
+      "source_LUT_only_model_relative_change": -6.517087425272905e-9,
+      "native_vs_LUT_source_model_relative_residual": -0.00002680379651609499,
+      "pointwise_inverse_roundtrip_rel_T_error": 1.3764599882115647e-7,
+      "source_integral_2method_abs_diff": 1.4210854715202004e-14
+    },
+    {
+      "native_index": 9000,
+      "native_T_MeV": 0.276705709098404,
+      "native_S_ratio": 1.0146156170813965,
+      "ideal_inverse_continuum_S_ratio": 1.0148449507071802,
+      "original_1000node_inverse_source_model_S_ratio": 1.0148487562185,
+      "source_LUT_only_model_relative_change": 0.000003749845054912271,
+      "native_vs_LUT_source_model_relative_residual": -0.00022972796259046468,
+      "pointwise_inverse_roundtrip_rel_T_error": 0.0000012810625409365173,
+      "source_integral_2method_abs_diff": 3.552713678800501e-15
+    },
+    {
+      "native_index": 9100,
+      "native_T_MeV": 0.199221185991802,
+      "native_S_ratio": 1.0334968499640322,
+      "ideal_inverse_continuum_S_ratio": 1.0336998542455988,
+      "original_1000node_inverse_source_model_S_ratio": 1.033717077112839,
+      "source_LUT_only_model_relative_change": 0.00001666138112477178,
+      "native_vs_LUT_source_model_relative_residual": -0.0002130439301842868,
+      "pointwise_inverse_roundtrip_rel_T_error": 0.00000482436809989828,
+      "source_integral_2method_abs_diff": 5.551115123125783e-15
+    },
+    {
+      "native_index": 9200,
+      "native_T_MeV": 0.146213868999653,
+      "native_S_ratio": 1.0650428598415813,
+      "ideal_inverse_continuum_S_ratio": 1.064666542980817,
+      "original_1000node_inverse_source_model_S_ratio": 1.0646785600887612,
+      "source_LUT_only_model_relative_change": 0.000011287203512955202,
+      "native_vs_LUT_source_model_relative_residual": 0.0003421687695015496,
+      "pointwise_inverse_roundtrip_rel_T_error": 0.0000032184375375887697,
+      "source_integral_2method_abs_diff": 6.661338147750939e-15
+    },
+    {
+      "native_index": 9300,
+      "native_T_MeV": 0.108068423790714,
+      "native_S_ratio": 1.104606499408639,
+      "ideal_inverse_continuum_S_ratio": 1.1060382169422527,
+      "original_1000node_inverse_source_model_S_ratio": 1.1060312078506866,
+      "source_LUT_only_model_relative_change": -0.000006337115172616592,
+      "native_vs_LUT_source_model_relative_residual": -0.001288126801427425,
+      "pointwise_inverse_roundtrip_rel_T_error": -0.0000014004970504410963,
+      "source_integral_2method_abs_diff": 7.771561172376096e-15
+    },
+    {
+      "native_index": 9400,
+      "native_T_MeV": 0.0786846844615229,
+      "native_S_ratio": 1.1443566373174452,
+      "ideal_inverse_continuum_S_ratio": 1.1461331091634754,
+      "original_1000node_inverse_source_model_S_ratio": 1.1461161534722166,
+      "source_LUT_only_model_relative_change": -0.000014793823791658944,
+      "native_vs_LUT_source_model_relative_residual": -0.0015351988098596392,
+      "pointwise_inverse_roundtrip_rel_T_error": -0.00000383286482807943,
+      "source_integral_2method_abs_diff": 3.6637359812630166e-14
+    },
+    {
+      "native_index": 9500,
+      "native_T_MeV": 0.0552074721803674,
+      "native_S_ratio": 1.1648818832988597,
+      "ideal_inverse_continuum_S_ratio": 1.1666591493310439,
+      "original_1000node_inverse_source_model_S_ratio": 1.1666366215808976,
+      "source_LUT_only_model_relative_change": -0.000019309624545549298,
+      "native_vs_LUT_source_model_relative_residual": -0.0015041001195901238,
+      "pointwise_inverse_roundtrip_rel_T_error": -0.000005511654764811524,
+      "source_integral_2method_abs_diff": 3.108624468950438e-14
+    },
+    {
+      "native_index": 9600,
+      "native_T_MeV": 0.0377517024016138,
+      "native_S_ratio": 1.1681452927262255,
+      "ideal_inverse_continuum_S_ratio": 1.1699990013748323,
+      "original_1000node_inverse_source_model_S_ratio": 1.1699960119908248,
+      "source_LUT_only_model_relative_change": -0.0000025550312470201675,
+      "native_vs_LUT_source_model_relative_residual": -0.0015818167289735063,
+      "pointwise_inverse_roundtrip_rel_T_error": -8.734050804815041e-8,
+      "source_integral_2method_abs_diff": 4.374278717023117e-14
+    },
+    {
+      "native_index": 9700,
+      "native_T_MeV": 0.0257011034167565,
+      "native_S_ratio": 1.1682573500437194,
+      "ideal_inverse_continuum_S_ratio": 1.1700639734313345,
+      "original_1000node_inverse_source_model_S_ratio": 1.1700614196932875,
+      "source_LUT_only_model_relative_change": -0.000002182562752972572,
+      "native_vs_LUT_source_model_relative_residual": -0.0015418589308251462,
+      "pointwise_inverse_roundtrip_rel_T_error": 3.67971513259846e-8,
+      "source_integral_2method_abs_diff": 1.0436096431476471e-14
+    },
+    {
+      "native_index": 9800,
+      "native_T_MeV": 0.0174978333806322,
+      "native_S_ratio": 1.1682426001199306,
+      "ideal_inverse_continuum_S_ratio": 1.1700848483494528,
+      "original_1000node_inverse_source_model_S_ratio": 1.170081976204596,
+      "source_LUT_only_model_relative_change": -0.000002454646653049508,
+      "native_vs_LUT_source_model_relative_residual": -0.0015720061688598852,
+      "pointwise_inverse_roundtrip_rel_T_error": -5.388911583636968e-8,
+      "source_integral_2method_abs_diff": 8.215650382226158e-15
+    },
+    {
+      "native_index": 9900,
+      "native_T_MeV": 0.0119123163222977,
+      "native_S_ratio": 1.1682400717068855,
+      "ideal_inverse_continuum_S_ratio": 1.1700863171113538,
+      "original_1000node_inverse_source_model_S_ratio": 1.1700836341476426,
+      "source_LUT_only_model_relative_change": -0.0000022929622131018235,
+      "native_vs_LUT_source_model_relative_residual": -0.0015755817677939321,
+      "pointwise_inverse_roundtrip_rel_T_error": 2.220446049250313e-16,
+      "source_integral_2method_abs_diff": 3.730349362740526e-14
+    },
+    {
+      "native_index": 10000,
+      "native_T_MeV": 0.00810973699892033,
+      "native_S_ratio": 1.1682400717068826,
+      "ideal_inverse_continuum_S_ratio": 1.1700863171112998,
+      "original_1000node_inverse_source_model_S_ratio": 1.170083634147603,
+      "source_LUT_only_model_relative_change": -0.000002292962200778348,
+      "native_vs_LUT_source_model_relative_residual": -0.0015755817677627348,
+      "pointwise_inverse_roundtrip_rel_T_error": -9.43689570931383e-15,
+      "source_integral_2method_abs_diff": 4.9960036108132044e-14
+    }
+  ],
+  "local_source_limited_offline_ZIP": {
+    "filename": "mt15_rot023_wuxu_native_inverse_LUT_source_limited_replay_20261113.zip",
+    "bytes": 724413,
+    "SHA256": "635aaaba126051e7e5e3a91d29292e7ad050e2984dfa8316cfbbbcb3346e1650",
+    "includes_original_native_zip": true,
+    "includes_full_original_1000row_thermo_csv": false,
+    "nested_native_16_SHA256_PASS": true,
+    "outer_payload_6_SHA256_PASS": true,
+    "clean_extracted_replay": "PASS local native 16 source-derived gs fixture & 1500 algebra tests, NOT full 1000row thermo replay",
+    "tampered_native_zip": "FAIL_CLOSED_PASS",
+    "full_original_source_numeric_execution": "Connected GitHub V8 JS direct original complete 1000 source rows verified; local original thermo source Python synthetic only"
+  },
+  "claim_ceiling": "SOURCE_CODE_V2_MODEL_ONLY / NO_SOLVER_CONVERGENCE / NO_ALTERNATE_10D / NO_PHYSICAL_Yp_PBH_BBN / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / GITHUB_PENDING_BW_INGEST"
+}
