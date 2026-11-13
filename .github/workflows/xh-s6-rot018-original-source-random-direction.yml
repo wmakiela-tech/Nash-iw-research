@@ -1,0 +1,48 @@
+name: XH-S6 ROT018 original author random-direction Task scheduler
+on:
+  push:
+    paths:
+      - '.github/workflows/xh-s6-rot018-original-source-random-direction.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-author-task-stream-batch-semantics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout source research host
+        uses: actions/checkout@v4
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned original-source numerical package
+        run: python -m pip install --disable-pip-version-check numpy==2.1.3
+      - name: Freeze original author source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/solkm/formattingRNN.git /tmp/xh-s6-rot018-original-author
+          git -C /tmp/xh-s6-rot018-original-author checkout --quiet --detach 7889a81e298c01532a313e02971c11dbc9db8eb0
+          test "$(git -C /tmp/xh-s6-rot018-original-author rev-parse HEAD)" = 7889a81e298c01532a313e02971c11dbc9db8eb0
+          mkdir -p /tmp/xh-s6-rot018-results
+      - name: Execute original source MT Task stream in two 18000-trial generator configurations
+        shell: bash
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          python research/xh-s6/2026-11-13/xh_s6_rot018_original_author_native_task_direction_scheduler.py \
+            --original-source-dir /tmp/xh-s6-rot018-original-author/python_code_data \
+            --preregister research/xh-s6/2026-11-13/iw_xh_s6_rot018_original_source_random_direction_scheduler_vs_balanced_250_preregister_001.md \
+            --out /tmp/xh-s6-rot018-results | tee /tmp/xh-s6-rot018-results/actual_runner_stdout.log
+      - name: Preserve source Task output and science falsifiers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xh-s6-rot018-author-source-task-2x18000-random-scheduler
+          path: /tmp/xh-s6-rot018-results/*
+          if-no-files-found: warn
+          retention-days: 30
