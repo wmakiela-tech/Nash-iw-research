@@ -1,0 +1,122 @@
+{
+  "artifact_id": "IW_XH_S6_ROT018_ORIGINAL_SOURCE_RANDOM_DIRECTION_TASK_SCHEDULER_VS_BALANCED_250_CERTIFICATE_001_20261113",
+  "date": "2026-11-13",
+  "exposure": "PUBLIC",
+  "from_cell": "IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6",
+  "original_source_authors": "Douglas A. Ruff, Sol K. Markman, Jason Z. Kim, Marlene R. Cohen",
+  "original_paper_doi": "10.1038/s41593-026-02514-7",
+  "original_source_repository": "solkm/formattingRNN",
+  "original_source_immutable_git_commit": "7889a81e298c01532a313e02971c11dbc9eb8eb0",
+  "source_generator_git_blob": "e7a6666e0b600ea49bab9755d302c78110ba9bc4",
+  "source_DotsTasks_git_blob": "ac9e789c69a8ea46ac38303f9d0db524886ba0a9",
+  "source_Task_git_blob": "b3bc5a5ca3fb2b0d2b4b79a4cd5ce8930e142865",
+  "pre_execution_protocol": {
+    "git_commit": "7a22a264f7cb1589270e6c220a9a38256a76dda7",
+    "git_blob": "66171ec720d1ea3bd676ef21d336ae26fbfeaf4b"
+  },
+  "first_failed_run": {
+    "actions_id": 43474117898,
+    "nature": "SCRIPT_LOCAL_HISTOGRAM_VARIABLE_NAME_SHADOWED_ORIGINAL_SOURCE_MODULE_AT_RESULT_DIGEST",
+    "first_source_unit_generated_but_no_final_science_receipt": true,
+    "science_thresholds_unchanged": true,
+    "repair_note_commit": "4f60169310cb9b4c656e0b27c39d775443de625c"
+  },
+  "successful_actual_native_task_execution": {
+    "actions_run_id": 43474692921,
+    "job_id": 132055339621,
+    "artifact_id": 14063415512,
+    "status": "COMPLETED_SUCCESS",
+    "source_generated_native_trial_metadata": 36000,
+    "per_unit": 18000,
+    "source_neural_RNN_NOT_EXECUTED": true,
+    "source_mt_task_trial_function_executed_for_each_source_generated_trial": true,
+    "source_small_batch_exact_72_trial_task_equivalence": "SOURCE_PARAMS_AND_FULL_INPUT_TARGET_MASK_BITWISE_PLUS_SOURCE_RNG_STATE_PASS",
+    "source_default_test1ofEach": false,
+    "source_shown_direction_generation": "MT_broadInSharpOut_withR.generate_trial_params: rng.choice(self.fix_shown)",
+    "source_original_batch_n": 18000,
+    "source_original_source_directed_count_not_forced_250": true,
+    "source_input_csv_bytes": 1701966,
+    "source_input_csv_sha256": "7c597cdd8a2c17cafcb55f2e7ccdd10423cacc7893068322c22036f0c21078ca",
+    "source_full_native_runner_json_sha256": "f08fb5d2b0ecd8a37a2aae2b25ad2d15c1c5cc",
+    "original_source_trial_conditions": [
+      {
+        "unit": 25,
+        "pref_deg": 160,
+        "reward_deg": 340,
+        "seed": 1900000025,
+        "n": 18000,
+        "min_count": 218,
+        "max_count": 278,
+        "mean_count": 250,
+        "sd": 14.584047601555765,
+        "source_bins_not_equal250": 70
+      },
+      {
+        "unit": 53,
+        "pref_deg": 295,
+        "reward_deg": 115,
+        "seed": 1900000053,
+        "n": 18000,
+        "min_count": 222,
+        "max_count": 287,
+        "mean_count": 250,
+        "sd": 14.904324502938364,
+        "source_bins_not_equal250": 69
+      }
+    ]
+  },
+  "distinct_prior_rot017_original_RNN_execution": {
+    "actions_run_id": 43467831511,
+    "actual_RNN_paired_rows": 36000,
+    "exactly_250_per_72_direction": true,
+    "source_inputs_test1ofEach": true,
+    "source_output_CSV_sha256": "29f9b48d60b60c031fdca8a37483a969c2b470086f30f3ec5ebcbbb77c65530f",
+    "source_runner_json_sha256": "083db441c66dfb3ed4124be2742b34a5fd8ea03474d7a25d221851f5a99157f4",
+    "actual_observed_gap_events": {
+      "DLPFC25": 17,
+      "DLPFC53": 2
+    }
+  },
+  "independent_conditional_projection": {
+    "definition": "Given ACTUAL prior ROT017 source-model gap counts k(theta) out of exactly 250 per shown direction and ACTUAL new original author Task source direction occupancy n(theta), purely hypothetical expectation E=sum_theta n(theta)*k(theta)/250; NOT newly stimulated RNN response",
+    "model_neural_reexecution_this_rotation": false,
+    "units": [
+      {
+        "source_unit": 25,
+        "observed_original_model_balanced_gap_count": 17,
+        "conditional_projection_expected_gap_count": 16.5,
+        "delta": -0.5
+      },
+      {
+        "source_unit": 53,
+        "observed_original_model_balanced_gap_count": 2,
+        "conditional_projection_expected_gap_count": 2.016,
+        "delta": 0.016
+      }
+    ]
+  },
+  "independent_audit": {
+    "native_source_task_rows_verified": 36000,
+    "prior_rot017_original_RNN_rows_verified": 36000,
+    "source_native_task_72_angles_all_covered": "PASS",
+    "source_native_task_100_onset_pairs_per_unit_verified": "PASS",
+    "source_source_sha_exact": "PASS",
+    "clean_replay_numerical_files_byte_exact": 3,
+    "source_mutation_guards_failed_closed": 3,
+    "extracted_zip_clean_replay_files_exact": 3,
+    "complete_local_zip_bytes": 1403799,
+    "complete_local_zip_sha256": "73f8df7dadb36b3d4fda50f82c3d50ab00eacbe74c1dc8accb9b383b128e7bd6",
+    "ZIP_CRC": "PASS",
+    "payload_sha256": "12_OF_12_PASS"
+  },
+  "correction_to_previous_XH_claim": "Withdraw ROT017 description as matching author per-angle allocation. Equal 250 shown per direction was our balanced design; source author batch nominal 72*250 means RANDOM directions per draw, E[n(theta)]=250 but realized n(theta) varies.",
+  "inference_ceiling": "Source task protocol correction and finite numerical model input scheduler; conditional rare gap rate projection is not new full RNN and not original author single-batch model output. No monkey data, no new neuroscience, no mathematical novelty.",
+  "custody": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
