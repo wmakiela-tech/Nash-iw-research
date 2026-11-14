@@ -1,0 +1,113 @@
+{
+  "artifact_id": "IW_MT15_ROT024_ORIGINAL_WUXU_NATIVE_J22_EOS_RESIDUAL_INTERVAL_LOCALIZATION_CURATED_RESULTS_001_20261114",
+  "created_at": "2026-11-14",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "exposure": "PUBLIC",
+  "source_original_author_repository": "Fenyutanchan/Primordial-Black-Hole@d395183674cace6c9906a8911bdeb7234ba4040d",
+  "source_original_1000row_thermo_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+  "source_native_provider": "Mech-S9 original Julia 10D run 43436800793, artifact 14045176436, 1 j22 input",
+  "source_provider_native_original_unmodified_zip_SHA256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+  "source_provider_native_original_10000row_csv_SHA256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+  "source_owner_16_sha256_manifest": "16/16 PASS",
+  "source_gs16_original_thermo_attested_fixture_SHA256": "a908ac6e0263b0ef7f9bb71a9b884cf515984437ad7a28a074353ff22c3e1008",
+  "source_prior_MT15_ROT023_original_GitHub_1000row_inverted_model_16anchor_results_SHA256": "2861cfdb77a40447cee75912245c33545065df168842cac6e30a61e5de6f6171",
+  "source_math": "E_i=ln(S_native_i/S_LUT_model(T_i)), S_native_i=(a_i/a_8545)^3*(T_i/T_8545)^3*(gs(T_i)/gs(T_8545)); interval deltaE=E_j-E_i, first-reference normalization cancels exactly",
+  "source_original_native_16_anchors": [
+    8545,
+    8600,
+    8700,
+    8800,
+    8900,
+    9000,
+    9100,
+    9200,
+    9300,
+    9400,
+    9500,
+    9600,
+    9700,
+    9800,
+    9900,
+    10000
+  ],
+  "original_native_postev_nPBH_zero_rows_verified": 1456,
+  "original_native_relative_log_gap_end": "-0.00157682430204089327420",
+  "original_native_relative_gap_end": "-0.00157558176777302427458",
+  "source_total_positive_log_residual_increments": "0.000780519448181055627409",
+  "source_total_negative_log_residual_increments": "-0.00235734375022194890161",
+  "source_total_variation_abs_log_residual": "0.00313786319840300452902",
+  "source_total_variation_to_abs_net_signed_gap": "1.98998911568121389751",
+  "largest_abs_source_model_vs_native_discrepancy_window": {
+    "start_original_native_row": 9200,
+    "end_original_native_row": 9300,
+    "T_from_MeV": "0.146213868999653",
+    "T_to_MeV": "0.108068423790714",
+    "source_time_from_seconds": "48.8300292803444",
+    "source_time_to_seconds": "101.827464911178",
+    "native_minus_original_LUT_model_delta_log_S": "-0.00163106739302023160674",
+    "signed_window_gap_over_entire_signed_gap": "1.03440021244543933672",
+    "source_inverse_LUT_vs_ideal_model_delta_log_S_same_window": "-0.0000176242750598773097230",
+    "source_inverse_LUT_abs_effect_to_abs_observed_local_difference": "0.0108053628778898039504",
+    "dominant_window_also_for_ideal_inverse": true,
+    "reference_independent_direct_native_2point_formula": "PASS"
+  },
+  "source_residual_sign_flip_anchor_pairs": [
+    [
+      8700,
+      8800
+    ],
+    [
+      8800,
+      8900
+    ],
+    [
+      9100,
+      9200
+    ],
+    [
+      9200,
+      9300
+    ]
+  ],
+  "distinct_window_controls": [
+    {
+      "source_pair": [
+        9100,
+        9200
+      ],
+      "source_delta_log_residual": "+0.000555176870400527689893"
+    },
+    {
+      "source_pair": [
+        9200,
+        9300
+      ],
+      "source_delta_log_residual": "-0.00163106739302023160674"
+    },
+    {
+      "source_pair": [
+        9300,
+        9400
+      ],
+      "source_delta_log_residual": "-0.000247421285117489856556"
+    }
+  ],
+  "executed_reproducibility": {
+    "original_10000_native_zip_outer_SHA256": "PASS",
+    "original_16_member_SHA256": "PASS",
+    "original_source_gs_and_LUT_fixture_SHA256": "PASS",
+    "actual_original_native_16_anchor_entropy_68_digit_Decimal_replay": "PASS",
+    "independent_binary64_16_anchor_and_15_gap_replay": "PASS",
+    "source_reference_independence_random_telescope_trials": 3500,
+    "deliberately_corrupted_input_rejections": 3,
+    "clean_extracted_reexecution_original_JSON_byte_identical": "PASS",
+    "local_producer_SHA256": "03656d7237a8c019411594b977b76134f4a84b5970ec84e2a7b3f0842aa42cfa",
+    "local_verifier_SHA256": "280be0c0af9b00ebe320bad2fa974b74908802da73cf38ae62ee2ad515fce1d9",
+    "local_actual_full_results_JSON_SHA256": "8233173f35d8b9428893fb3fbfd73394ab9fdc7c5926fbba0c597afb3b53aa31",
+    "local_standalone_zip_sha256": "d233c5c580b19c1a8bcbbaff82172af729b651c96faf0fdb89c20f63608d22ee",
+    "local_zip_bytes": 730464,
+    "offline_source_limit": "The complete original Wu–Xu 1000-row g(T) table is NOT in ZIP; g_s16 and per-T source 1000-node inverse-LUT model ratios are byte-locked fixtures calculated in earlier original connected GitHub runs, NOT independently recomputed from full original thermo table during ROT024. The unmodified original Mech-S9 native entire 10D provider ZIP IS included."
+  },
+  "claim_ceiling": "ONE_SOURCE_NATIVE_SAVED_J22_TRAJECTORY_VERSUS_ORIGINAL_CODE_V2_FIXED_SOURCE_EOS_MODEL_ONLY / UNKNOWN_ODE_SOLVER_CAUSE / NO_NEW_JULIA / NO_PHYSICAL_ENTROPY_Yp_BBN_PBH / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / GITHUB_PENDING_BW_INGEST",
+  "source_report_first_commit": "40898e09d34362c867dda4e401decc01e37ccdb7"
+}
