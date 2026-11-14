@@ -1,0 +1,149 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT023_TWO_ZERO_FISHER_ALPHA_AND_ALPHA_ZERO_TANGENT_JUMP_SOURCE_RESULTS_001_20261114",
+  "date": "2026-11-14",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "original_source": {
+    "M13_operator_path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "M13_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_B_table_path": "research/m13/2026-10-26/direct_B.json",
+    "M13_B_table_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "prior_ROT022_symbolic_reused_sha256": "f0ba423d460839c8276ebfe34c863cbbce31d14ff59f440b3ac40097d7be7d94",
+    "N": 41,
+    "channel": "B",
+    "fixed_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "original_source_directed_mpmath_iv_dps": 45
+  },
+  "model": {
+    "hypothetical_extra_parameters": [
+      "one common log-energy gain b",
+      "translation_tx",
+      "translation_ty",
+      "translation_tz"
+    ],
+    "target_parameter": "alpha",
+    "observations": "5 raw log shell energies, original source fields translated rigidly relative to fixed M13 observation masks",
+    "nuisance_X": "5x4 [ones, partial_tx(log S), partial_ty(log S), partial_tz(log S)]",
+    "full_J": "5x5 [X, partial_alpha(log S)]",
+    "source_alpha_derivative": "B(alpha)=U+alpha V+alpha^2 T; derivative=V+2alpha T",
+    "source_translation_derivative": "partial_tj B_m=i*m_j B_m",
+    "independent_noise_assumption_for_Fisher_amounts": "five IID N(0,sigma^2) errors on raw log-shell energies, explicitly hypothetical",
+    "structural_Fisher_zero_at_rank4": "At det J=0 and nuisance X rank4, target alpha score belongs to nuisance span; efficient Fisher=0 for ANY positive definite fixed covariance"
+  },
+  "two_certified_internal_root_existence_intervals": [
+    {
+      "id": "r1",
+      "rational_decimal_open_alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "left_full5_det_strict_iv45_sign": "POS",
+      "left_det_display": 9.00175401049987e-15,
+      "right_full5_det_strict_iv45_sign": "NEG",
+      "right_det_display": -9.00145192651465e-15,
+      "nuisance_minor": "X excluding fifth row",
+      "whole_closed_interval_minor_strict_iv45_low_display": 0.00005442383478821305,
+      "whole_closed_interval_minor_strict_iv45_high_display": 0.00005442426381946906,
+      "whole_interval_rank_X_exactly_4": true,
+      "at_least_one_exact_local_alpha_Fisher_zero": true
+    },
+    {
+      "id": "r2",
+      "rational_decimal_open_alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "left_full5_det_strict_iv45_sign": "NEG",
+      "left_det_display": -4.56349305755787e-15,
+      "right_full5_det_strict_iv45_sign": "POS",
+      "right_det_display": 4.56251813358362e-15,
+      "nuisance_minor": "X excluding first row",
+      "whole_closed_interval_minor_strict_iv45_low_display": -0.000004681090043288544,
+      "whole_closed_interval_minor_strict_iv45_high_display": -0.000004681065903609091,
+      "whole_interval_rank_X_exactly_4": true,
+      "at_least_one_exact_local_alpha_Fisher_zero": true
+    }
+  ],
+  "number_of_distinct_alpha_Fisher_zero_roots_source_certified": "AT_LEAST_TWO",
+  "unique_root_inside_each_bracket": "NOT_PROVEN",
+  "additional_roots_elsewhere": "NOT_EXCLUDED",
+  "nonlinear_global_aliases": "NOT_PROVEN",
+  "alpha0": {
+    "symbolic_exact_B_nonzero_modes": 8,
+    "possible_B_mode_labels": "(±2,±1,±1)",
+    "energy_Fourier_difference_labels": 27,
+    "all_27_energy_coefficients_real_rational_after_removing_common_nonzero_factor": true,
+    "all_27_exact_y_z_swap_equalities_pass": true,
+    "whole_five_shell_energy_symmetry": "S_i(0,tx,ty,tz)=S_i(0,tx,tz,ty) for all t and i",
+    "translation_ty_score_equals_translation_tz_at_t0": true,
+    "nuisance_rank_at_alpha0": 3,
+    "alpha0_full_with_alpha_observation_rank": 4,
+    "strict_nuisance_3x3_minor_display": -0.003226363658785758,
+    "strict_reduced_with_alpha_4x4_minor_display": 0.0034548277030444262,
+    "alpha0_efficient_Fisher_times_sigma2_iv45_display": 0.06319446572410745,
+    "positive_side_extra_nuisance_direction": "v=partial_alpha(D_ty-D_tz)|alpha0, original native Fourier bilinear analytic mixed derivative",
+    "v_five_shell_components_display": [
+      1.9246774899746004,
+      2.500628680426398,
+      1.7856055798789514,
+      0.3120217749910962,
+      -1.0229100707457839
+    ],
+    "positive_side_limit_nuisance_rank": 4,
+    "positive_side_five_4x4_nuisance_minors_all_strict_nonzero": true,
+    "positive_side_limiting_full_5x5_det_strict_negative_display": -0.0013910122280815524,
+    "positive_side_efficient_Fisher_limit_times_sigma2_iv45_display": 0.003069899686580889,
+    "alpha0_info_divided_by_positive_side_limit_info_display": 20.585189151405295,
+    "meaning": "Discontinuity of profiled local Fisher information induced by rank jump in HYPOTHETICAL nuisance tangent space; source energies remain analytic; no measured physical transition"
+  },
+  "independent_review": {
+    "REC12_ROT001": "I1_NONBLIND_PASS_WITH_GUARDS for FIRST Geeky ROT022 whole-energy period group; NOT reviewer of ROT023",
+    "M15_ROT013": "different-cell I1 reviewer of original ROT020 at alpha=.05; NOT reviewer of ROT023",
+    "ROT023": "AUTHOR_DIRECTED_SOURCE_CERT_ONLY / DIFFERENT_CELL_REFEREE_PENDING",
+    "KN14_BW_INGEST": "NOT_VERIFIED",
+    "M15_OWNER_CANON": "NOT_VERIFIED"
+  },
+  "reproduction": {
+    "user_archive": "Geeky_S12_ROT023_two_internal_alpha_Fisher_zeros_and_alpha0_rank_jump.zip",
+    "zip_bytes": 25370,
+    "sha256": "c86aca88308b6f999253f318d8e2f06b6c022d518ebba5921af685b64a22ba5e",
+    "total_files": 9,
+    "manifest_payload_files": 8,
+    "crc": "PASS",
+    "all_byte_readback": "PASS",
+    "manifest_sha256": "PASS",
+    "new_executed_python_sha256": "c48f8e37bcca31229dd49041b34623c6874a037c11330bdb58fc76ba0375b9ed",
+    "new_roots_actual_full_iv45_JSON_sha256": "5e91efefdad0083c994ae9483975b4e21d2fa13f58ec66956a0c9e25ca0e184f",
+    "new_alpha0_actual_full_iv45_JSON_sha256": "2959668e6fc18e9c58d2ffdde263c9b3a56cfe808f6a7c42cb7df5d3fcac608e",
+    "fresh_directory_two_separate_Python_subprocess_results_byte_identical": "PASS",
+    "prior_ROT022_symbolic_source_one_byte_tamper_fail_closed": "PASS",
+    "original_M13_operator_one_byte_tamper_fail_closed": "PASS",
+    "original_M13_B_table_one_byte_tamper_fail_closed": "PASS",
+    "full_executed_script_published_public_as_exact_byte_copy": false
+  },
+  "report_public_commit": "46972159ffe9534c36dc1ca7c01cba96f0538035",
+  "claim_ceiling": [
+    "AUXILIARY_ORIGINAL_PUBLIC_M13_N41_B_ONLY",
+    "HYPOTHETICAL_COMMON_TRANSLATION_NOT_NATIVE_SOURCE_CALC_INPUT",
+    "HYPOTHETICAL_IID_GAUSSIAN_LOG_SHELL_NOISE",
+    "NOT_EXACT_NONLINEAR_ALPHA_ALIAS",
+    "NOT_HISTORICAL_DTC0A_PRODUCER_BYTE_ID",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
