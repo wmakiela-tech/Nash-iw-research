@@ -1,0 +1,133 @@
+{
+  "artifact_id": "IW_XH_S6_ROT022_FINITE_THIN_DISK_YUKAWA_GEOMETRY_INDEPENDENT_MATH_CERT_001_20261116",
+  "date": "2026-11-16",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "from_cell": "IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6",
+  "return_id": "IW_XH_S6_ROT022_FINITE_THIN_DISK_SOURCE_BOUNDED_GEOMETRY_AUDIT_001_20261116",
+  "original_science_first": "Zheng-Jie An, Wen-Hai Tan, Wen-Can Dong et al Nature Communications 2026-10-07",
+  "original_source_paper_doi": "10.1038/s41467-026-78187-4",
+  "original_paper_full_body_retrieved": false,
+  "original_paper_supplement_retrieved": false,
+  "original_measured_torque_or_wafer_geometry_retrieved": false,
+  "source_original_abstract_only": true,
+  "original_source_abstract_reported": {
+    "mass_each_mg": 7.6,
+    "reported_sep_endpoints_mm": [
+      0.654,
+      1.554
+    ],
+    "maximum_force_uncertainty_2sigma_aN": 50,
+    "central_G_SI": 6.67e-11,
+    "uncertainty_G_1sigma_SI": 3.5e-12,
+    "newton_consistency_reported": true
+  },
+  "strict_model_type": "INVENTED_TWO_PARALLEL_COAXIAL_ZERO_THICKNESS_UNIFORM_CIRCULAR_DISKS_NOT_REAL_AN_TORSION_BALANCE",
+  "synthetic_model": {
+    "mass_each_kg": 0.0000076,
+    "invented_radius_mm": [
+      0.02,
+      0.1,
+      0.5,
+      1,
+      2
+    ],
+    "invented_face_gaps_mm": [
+      0.654,
+      1.554
+    ],
+    "q_shape": "Q_disk(d,a,lambda)=E[(d/s³)*(1+s/lambda)*exp(-s/lambda)]/E[d/s³], s=sqrt(d²+rho²)",
+    "point_optimum_lambda_mm": 0.5199425829432219,
+    "point_max_contrast": 0.44100476601722627,
+    "lambda_optimization_domain_mm": [
+      0.02,
+      20
+    ],
+    "results": [
+      {
+        "invented_radius_mm": 0.02,
+        "lambda_opt_mm": 0.5200712454535633,
+        "peak_deltaQ": 0.44083201797828375,
+        "peak_change_percent": -0.03917146757905776,
+        "lambda_shift_percent": 0.024745522786973062
+      },
+      {
+        "invented_radius_mm": 0.1,
+        "lambda_opt_mm": 0.5230558696943336,
+        "peak_deltaQ": 0.4368621780993671,
+        "peak_change_percent": -0.939352187794118,
+        "lambda_shift_percent": 0.5987751057988655
+      },
+      {
+        "invented_radius_mm": 0.5,
+        "lambda_opt_mm": 0.5676225462635699,
+        "peak_deltaQ": 0.3870930125694595,
+        "peak_change_percent": -12.22475528658139,
+        "lambda_shift_percent": 9.170236269252573
+      },
+      {
+        "invented_radius_mm": 1,
+        "lambda_opt_mm": 0.6238471853833565,
+        "peak_deltaQ": 0.3500913540226023,
+        "peak_change_percent": -20.61506337350395,
+        "lambda_shift_percent": 19.98386088170836
+      },
+      {
+        "invented_radius_mm": 2,
+        "lambda_opt_mm": 0.7029405793002633,
+        "peak_deltaQ": 0.3288816440890492,
+        "peak_change_percent": -25.424469431651765,
+        "lambda_shift_percent": 35.1958086066255
+      }
+    ]
+  },
+  "independent_actual_numerical_tests": {
+    "original_3d_24x24x96_gauss_vs_48x48x192_max_Q_diff": 4.829470157119431e-15,
+    "independent_1d_256_gauss_disk_distance_pdf_vs_48x48x192_3d_Q_max_abs_diff": 4.851674617611934e-14,
+    "number_of_independently_crosschecked_geometry_lambda_cases": 60,
+    "independent_1d_disk_point_distance_pdf_mass_normalization_max_abs_error": 7.125411372044255e-13,
+    "independent_1d_baseline_vs_3d_newton_max_relative_error": 7.118735676673743e-13,
+    "direct_integrated_force_vs_numeric_derivative_full_potential_max_relative_error": 9.613288850530451e-8,
+    "force_potential_checks": 10,
+    "synthetic_alpha_lambda_nonidentifiable_witness_pairs": 4,
+    "point_radius_exact_limit": "PASS",
+    "long_range_yukawa_limit": "PASS",
+    "no_scientific_verdict_forced_by_program": true,
+    "clean_zip_extracted_numerical_replay_byte_identical_outputs": 3,
+    "zip_member_sha256": "8_OF_8_PASS",
+    "two_deliberately_corrupted_payloads_fail_closed": "PASS",
+    "zip_crc": "PASS"
+  },
+  "repro_source_pins": {
+    "prescientific_GitHub_prereg_commit": "1c18bd2d3b2e4c656ad5ddfe9d3be02da1d88301",
+    "public_scientific_report_commit": "a2ee315a3cdb817078a8e1a88b297934b7c68e95",
+    "public_1d_independent_Python_script_commit": "6ef97e9e6ad3f76b5772c9b2e19ddd426b939a9f",
+    "public_1d_independent_Python_script_git_blob": "33ee9f7f4746e46e709cfaef5446309e24f79530",
+    "public_1d_independent_Python_script_sha256": "f50577d790dd36aa8528b9280b60ee9fa7a2ff799665305716f429e3b9566f95",
+    "actual_GithubActions_numerical_replay_run_id": 43774399972,
+    "actual_GithubActions_numerical_replay_conclusion": "SUCCESS",
+    "report_CI_run": 43774564482,
+    "report_public_guard_run": 43774564473,
+    "local_user_archive_filename": "IW_XH_S6_ROT022_FINITE_THIN_DISK_GEOMETRY_REPRO_20261116.zip",
+    "local_user_archive_bytes": 19988,
+    "local_user_archive_sha256": "533529e3f2ef6a7335a68703b4b2bee5975bea48a10201cdc14ddfbf093941cf",
+    "local_archive_sha_manifest_sha256": "385ceda66d1d21e8bd982009780fa755566fd8552233eef216e8ebb0b2a37330"
+  },
+  "negative_claims": [
+    "Invented disk radius is NOT from authors' measurements or source geometry",
+    "Artificial face gap equal numerical source reported separation endpoints is NOT identified with actual physical wafer gap",
+    "No measured experimental alpha(lambda), no 50aN-based exclusion, no source raw torque",
+    "This toy predicts neither real torsion harmonic nor quantum gravitational entanglement",
+    "No direct NASH observable or experimental physical bridge verified",
+    "An et al original science firstness and 2020 mature Yukawa constraints preserved"
+  ],
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_EXPERIMENTAL_ALPHA_LIMIT",
+    "NO_NASH_BRIDGE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
