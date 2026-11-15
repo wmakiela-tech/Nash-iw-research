@@ -1,0 +1,138 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT024_TWO_SOURCE_WHITNEY_FOLD_CERTIFICATES_AND_LOCAL_EXACT_ALIAS_RESULTS_001_20261115",
+  "date": "2026-11-15",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "science_class": "AUTHOR_ORIGINAL_M13_N41_B_TWO_NONDEGENERATE_CORANK1_WHITNEY_FOLDS_AFTER_HYPOTHETICAL_SHIFT_AND_GAIN_NUISANCE",
+  "source_first": {
+    "M13_original_operator_path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "M13_original_operator_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_B_directed_quartics_path": "research/m13/2026-10-26/direct_B.json",
+    "M13_original_B25_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "prior_ROT023_original_roots_json_sha256": "5e91efefdad0083c994ae9483975b4e21d2fa13f58ec66956a0c9e25ca0e184f",
+    "N": 41,
+    "five_fixed_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ]
+  },
+  "model": {
+    "extra_hypothetical_nuisance": [
+      "one common positive gain c=exp(b)",
+      "common spatial translations tx,ty,tz of all original input C1,C2,h, fixed original 5 observation masks"
+    ],
+    "original_M13_source_calc_translation_knobs": false,
+    "five_outputs": "F_i=b+log S_i(alpha,t), i=1..5",
+    "original_source_B_alpha_shift": "B_m(alpha,t)=exp(i*m dot t)*(U_m+alpha V_m+alpha^2 T_m)",
+    "nuisance_score_X": "5x4 columns ones,Dtx log S,Dty log S,Dtz log S",
+    "target_score_a": "5x1 Dalpha log S",
+    "full_J": "5x5 [X,a]",
+    "left_cokernel_n": "n_i=(-1)^i det(X with row i deleted), zero-based",
+    "right_kernel_v": "solve X_selected4*v_nuis=-a_selected4 by Cramer's rule; v=(v_nuis,alpha_component=1)",
+    "Hessian_directional_Bprime": "V+2alpha T+i*(m dot v_t)*B",
+    "Hessian_directional_Bsecond": "2T+2i*(m dot v_t)*(V+2alpha T)-(m dot v_t)^2*B",
+    "Hessian_log_shell": "H_i=[2inner_shell(Bsecond,B)+2inner_shell(Bprime,Bprime)]/S_i - [2inner_shell(Bprime,B)/S_i]^2",
+    "fold_scalar": "Q=n dot H",
+    "fold_normal_form": "The classical nondegenerate fold criterion: corank1, n dot D²F[v,v] nonzero => smooth local equivalence to (z1,z2,z3,z4,u^2)",
+    "proof_consequence": "TWO DISTICT source-local fold point neighborhoods exist with arbitrarily close exact double inverse preimages, different alpha values plus nuisance adjustment, five EXACTLY equal modeled shell energies. Existence from fold theorem, not explicitly constructed exact numeric pairs."
+  },
+  "original_source_iv50_proofs": [
+    {
+      "root_id": "r1",
+      "alpha_bracket_open_rational_decimal": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "prior_full_J_endpoint_signs": [
+        "POS",
+        "NEG"
+      ],
+      "prior_whole_bracket_nuisance_minor_drop_shell": 5,
+      "new_iv50_whole_bracket_nuisance_minor_strict_sign": "POS",
+      "new_iv50_fold_scalar_strict_sign": "NEG",
+      "new_iv50_fold_scalar_outward_conservative_display_lower": -0.091992689876934,
+      "new_iv50_fold_scalar_outward_conservative_display_upper": -0.01783454119061,
+      "new_iv50_fold_scalar_midpoint_display": -0.0549136155337715,
+      "kernel_translation_components_midpoint_display": [
+        19.455636455802733,
+        69.13833940231628,
+        -37.49148735621266
+      ],
+      "independent_3dFFT_h_2e_minus5_midpoint_fold_display": -0.054913584377424066,
+      "source_rigor": "original M13 outer mpmath.iv 50 decimal digit arithmetic over whole alpha bracket, not point sample"
+    },
+    {
+      "root_id": "r2",
+      "alpha_bracket_open_rational_decimal": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "prior_full_J_endpoint_signs": [
+        "NEG",
+        "POS"
+      ],
+      "prior_whole_bracket_nuisance_minor_drop_shell": 1,
+      "new_iv50_whole_bracket_nuisance_minor_strict_sign": "NEG",
+      "new_iv50_fold_scalar_strict_sign": "NEG",
+      "new_iv50_fold_scalar_outward_conservative_display_lower": -0.433957063010988,
+      "new_iv50_fold_scalar_outward_conservative_display_upper": -0.406209007926732,
+      "new_iv50_fold_scalar_midpoint_display": -0.4200830354688599,
+      "kernel_translation_components_midpoint_display": [
+        80.78984071966191,
+        353.64848280889015,
+        -124.29724778416525
+      ],
+      "independent_3dFFT_h_2e_minus5_midpoint_fold_display": -0.42006036901606897,
+      "source_rigor": "original M13 outer mpmath.iv 50 decimal digit arithmetic over whole alpha bracket"
+    }
+  ],
+  "execution": {
+    "user_archive": "Geeky_S12_ROT024_two_certified_local_nonlinear_folds.zip",
+    "archive_bytes": 34617,
+    "archive_sha256": "344c2ca410ddd8014b755f504a70b30f23384ba30c3d74fee0337d4e5b35c0c6",
+    "archive_entries": 13,
+    "archive_manifest_payload_count": 12,
+    "zip_crc": "PASS",
+    "sha256_and_exact_bytes_manifest": "PASS",
+    "actually_executed_primary_iv50_python_sha256": "fbfbc7b0369c5d270d175ba6ffefb47576d8344620d1da0f11060b3727ae1385",
+    "actually_executed_independent_spatial_FFT_script_sha256": "b3cc57e02b06dde08fd3c581da953467f4d8b3d6c3d0ed0b654aa1b16110173d",
+    "full_actual_iv50_result_sha256": "45121308da875f70cb7a86d5968fb2f32905c09164f0a41327bbef5acc4ab25e",
+    "full_actual_spatial_FFT_diagnostic_sha256": "95aa678e05d3ed2a35970bc0154ca02c9d419d99d444076447d201d0f77c70bf",
+    "full_clean_replay_tamper_receipt_sha256": "92e6aa75942c487f205180e907ed30a19225b184dcab11a8dfca2edccaab0031",
+    "fresh_clean_source_prover_result_byte_identical": true,
+    "fresh_clean_spatial_FFT_stdout_byte_identical": true,
+    "one_byte_original_M13_operator_tamper_rejected": true,
+    "one_byte_original_B_table_tamper_rejected": true,
+    "one_byte_prior_ROT023_root_certificate_tamper_rejected": true,
+    "original_source_files_unchanged": true,
+    "extra_monolithic_reexecution_of_four_prior_ROT023_source_endpoint_gates": "TIMED_OUT / NOT_COUNTED_AS_PASS; exact earlier original ROT023 root JSON source-sha-verified and new iv50 fold independently computed",
+    "public_github_mirror_byte_identical_to_executed_code": false
+  },
+  "scientific_limit": {
+    "prior_ROT022_independent_REC12_I1": "PASS_WITH_GUARDS, separate earlier whole energy period group result",
+    "prior_ROT023_root_brackets": "AUTHOR_ONLY_SOURCE_CERT_FROM_PRIOR_ROT023, verified hash not independently rederived",
+    "new_ROT024_nonzero_Hessians": "AUTHOR_ONLY_SOURCE_IV50, external different-cell reviewer PENDING",
+    "global_inverse_fiber_count": "NOT_PROVEN",
+    "finite_nonlin_double_preimage_coordinates": "NOT_EXPLICITLY_PRODUCED; existence follows from fold theorem",
+    "historical_DTC0a_runtime_identity": "MISSING",
+    "realized_field_translation_or_instrument_calibration": "NOT_PROVEN",
+    "physical_NASH_implications": "NONE",
+    "KN14_BW_native_ingest": "PENDING_UNVERIFIED",
+    "M15_owner_adoption": "PENDING_UNVERIFIED",
+    "claim_ceiling": [
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  }
+}
