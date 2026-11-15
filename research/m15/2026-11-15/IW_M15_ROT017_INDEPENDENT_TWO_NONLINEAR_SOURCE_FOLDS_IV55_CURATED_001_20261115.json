@@ -1,0 +1,119 @@
+{
+  "artifact_id": "IW_M15_ROT017_INDEPENDENT_M13_B_TWO_SOURCE_NONLINEAR_FOLD_HESSIAN_CERT_001_20261115",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-15",
+  "exposure": "PUBLIC",
+  "result_class": "I1_INTERNAL_NONBLIND_DIFFERENT_CELL_INDEPENDENT_SOURCE_FORMULA_SECOND_ORDER_WHITNEY_FOLD_CERT",
+  "firstness": {
+    "original_source": "M13",
+    "original_two_fold_science": "Geeky-S12 ROT024",
+    "original_two_simple_source_J_roots": "Geeky-S12 ROT023; reviewed+sharpened M15 ROT015",
+    "new_output": "independent actual IV55 mathematical review of owner two Q<0 brackets"
+  },
+  "source_provenance": {
+    "original_M13_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "original_Geeky_ROT024_report_blob": "2a8835471a4e1381edca6a20020ad125a4b0dde6",
+    "M15_independent_source_formulas_SHA256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e",
+    "M15_previous_independent_Jroot_machine_JSON_SHA256": "04da5bf405ce00c674713b40e59abb2a1b4383a6c4e1e08563cdd003e43b67f0",
+    "M15_new_independent_second_order_script_SHA256": "4cc87ae216f3ebdd5cd05c8db39e0ad3964bbf8850c4860b23d88821444b15fd",
+    "M15_new_actual_result_JSON_SHA256": "9015f5d1836ad13542d9cd851782f452e243167a75b1de372ded8b50723b2d8f"
+  },
+  "model": {
+    "N": 41,
+    "source_B_modes": 41,
+    "pair_count": 1681,
+    "different_window_frequencies": 221,
+    "fixed_source_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "input_parameters": [
+      "unknown common log gain",
+      "hypothetical rigid shift tx",
+      "hypothetical rigid shift ty",
+      "hypothetical rigid shift tz",
+      "original source alpha"
+    ],
+    "observable": "five RAW log shell energies",
+    "source_B_polynomial": "B_m=U_m+alpha*V_m+alpha²W_m, original source operator mathematically reimplemented",
+    "source_type_guard": "hypothetical translations not native original M13 calc parameter; no original module byte execution",
+    "fold_condition": "J=[X,a] rank4, n^T J=0, J v=0, v_alpha=1, n^T D²F[v,v] nonzero",
+    "calculation": "independent 55dps mpmath.iv, exact original algebra for first/second B derivatives in joint null direction, five cofactor minors, four-dimensional Cramer, disjoint Fourier mask sums, NO owner program"
+  },
+  "fold_certificates": [
+    {
+      "name": "FIRST",
+      "alpha_closed_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "deleted_zero_based_X_row": 4,
+      "original_first_order_root_exists_and_simple": "M15 ROT015 independently verified from original source formulas",
+      "full_bracket_X_minor_sign": "STRICT_NONZERO",
+      "whole_bracket_Q_outer_decimals": [
+        "-0.074363135912246346534226415503762987285789561004544711",
+        "-0.035464142006140144609336122861853582716589031139133741"
+      ],
+      "Q_sign": "STRICT_NEGATIVE",
+      "null_identity_checks": "PASS",
+      "source_shell_positivity": "PASS",
+      "Whitney_fold_classification": "PASS"
+    },
+    {
+      "name": "SECOND",
+      "alpha_closed_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "deleted_zero_based_X_row": 0,
+      "original_first_order_root_exists_and_simple": "M15 ROT015 independently verified from original source formulas",
+      "full_bracket_X_minor_sign": "STRICT_NONZERO",
+      "whole_bracket_Q_outer_decimals": [
+        "-0.426364945911164151649320520508437520447852037483315628",
+        "-0.413801094656459263824624636827007716681106440271929581"
+      ],
+      "Q_sign": "STRICT_NEGATIVE",
+      "null_identity_checks": "PASS",
+      "source_shell_positivity": "PASS",
+      "Whitney_fold_classification": "PASS"
+    }
+  ],
+  "deduction": "TWO distinct local nondegenerate source folds at original alpha roots; Whitney normal form implies exact local inverse collisions with distinct source alpha after adjusting hypothetical nuisance fields, but no explicit numerical two-solution points constructed.",
+  "reproducibility": {
+    "local_zip_filename": "IW_M15_ROT017_TWO_LOCAL_NONLINEAR_SOURCE_FOLDS_INDEPENDENT_IV55_REPRO_001_20261115.zip",
+    "local_zip_bytes": 16788,
+    "local_zip_SHA256": "892cb127f969daff0d1e70aa1e6dc768c982e5baceb072cc04342499e701a5f4",
+    "member_count": 8,
+    "manifest_payload_sha256_checks": "7/7 PASS",
+    "CRC": "PASS",
+    "original_independent_script_actually_executed": true,
+    "clean_new_directory_replay": "BYTE-IDENTICAL result JSON PASS",
+    "deliberate_modified_formula_dependency": "REJECTED BEFORE SCIENCE SHA FAIL-CLOSED PASS",
+    "local_zip_not_GitHub_mirrored": true
+  },
+  "limits": [
+    "Source N41 auxiliary operator, not original M13 program byte-executed",
+    "No physical source common shift knob",
+    "No historic dtc0a_runtime_v0_3_1.py byte identity",
+    "No measured sensor noise",
+    "No global nonlinear fiber classification",
+    "No exclusion of other folds",
+    "Internal I1 nonblind only, not external blind I3",
+    "No general novelty",
+    "No CANON",
+    "No EXEC_SIGN",
+    "No BW INGEST receipt"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
