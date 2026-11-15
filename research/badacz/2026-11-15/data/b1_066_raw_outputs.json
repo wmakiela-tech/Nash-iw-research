@@ -1,0 +1,264 @@
+{
+ "note": "PREREG_066 raw outputs, run 16 XI 2026 00:30-00:44 CET; raw JSONL lines kept verbatim; logs filtered of precompile progress lines",
+ "arms": {
+  "archive": {
+   "status": 0,
+   "jsonl_sha256": "2e2ffa627f0ce4775ee142758d24ae39dd7898442973f64441b2e4c73969959b",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":false}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":86,\"beta\":\"4.0370172585965549143730959401236e-18\",\"Y\":0.24971451209005394,\"Y_big\":\"0.24971451209005393206590173092382\",\"seconds\":30.8}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":87,\"beta\":\"4.3287612810830585907760338918355e-18\",\"Y\":0.25005044196504123,\"Y_big\":\"0.25005044196504122245167455135258\",\"seconds\":4.2}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":88,\"beta\":\"4.6415888336127791592976508169006e-18\",\"Y\":0.25014979148499911,\"Y_big\":\"0.25014979148499908104791316284207\",\"seconds\":4.4}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":89,\"beta\":\"4.9770235643321110946808915061051e-18\",\"Y\":0.25040679163247043,\"Y_big\":\"0.25040679163247043188098151375728\",\"seconds\":4.2}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":90,\"beta\":\"5.3366992312063099786358305990207e-18\",\"Y\":0.25064831404337179,\"Y_big\":\"0.25064831404337176778381634614061\",\"seconds\":4.5}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":91,\"beta\":\"5.7223676593502176519323707452301e-18\",\"Y\":0.25084532683793198,\"Y_big\":\"0.25084532683793199640890321529676\",\"seconds\":4.5}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":92,\"beta\":\"6.1359072734131734906255160876922e-18\",\"Y\":0.25105275604965505,\"Y_big\":\"0.25105275604965503899161074401138\",\"seconds\":4.4}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":93,\"beta\":\"6.579332246575680343011642695947e-18\",\"Y\":0.25131901437453674,\"Y_big\":\"0.25131901437453675679498849932854\",\"seconds\":4.3}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":94,\"beta\":\"7.054802310718643695557768931501e-18\",\"Y\":0.25159137863908038,\"Y_big\":\"0.25159137863908038066109157317747\",\"seconds\":4.7}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":95,\"beta\":\"7.5646332755462892044787070245755e-18\",\"Y\":0.25162865797487866,\"Y_big\":\"0.25162865797487865395034834824094\",\"seconds\":4.7}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":96,\"beta\":\"8.1113083078968714624476561859102e-18\",\"Y\":0.25187138439307882,\"Y_big\":\"0.25187138439307884505200976548149\",\"seconds\":4.7}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":97,\"beta\":\"8.697490026177833879166868821284e-18\",\"Y\":0.252142807551125,\"Y_big\":\"0.25214280755112497826023617272684\",\"seconds\":4.7}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":98,\"beta\":\"9.3260334688321993504865754300409e-18\",\"Y\":0.25220846678806003,\"Y_big\":\"0.25220846678806000393394085364808\",\"seconds\":5.2}",
+    "{\"arm\":\"archive\",\"j\":22,\"k\":99,\"beta\":\"1.0000000000000000715424240546219e-17\",\"Y\":0.25223220669121638,\"Y_big\":\"0.2522322066912163783594612180486\",\"seconds\":5.1}"
+   ],
+   "log_sha256": "83610ede364c2a3cea0ce05f0aa5ecfb0edb5194d9803a4824c05ee932eb73f8",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2638.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2638.jl`",
+    "  5 dependencies successfully precompiled in 102 seconds. 37 already precompiled.",
+    "    SymbolicIndexingInterfacePrettyTablesExt Being precompiled by another process (pid: 2637, pidfile: /home/claude/julia066/depot/compiled/v1.12/SymbolicIndexingInterfacePrettyTablesExt/LH3bA_FwWYm.ji.pidfile)",
+    "  1 dependency successfully precompiled in 1 seconds. 40 already precompiled.",
+    "    RecursiveArrayToolsTablesExt Being precompiled by another process (pid: 2637, pidfile: /home/claude/julia066/depot/compiled/v1.12/RecursiveArrayToolsTablesExt/xBOx2_FwWYm.ji.pidfile)",
+    "  1 dependency successfully precompiled in 1 seconds. 34 already precompiled.",
+    "    REPLExt Being precompiled by another process (pid: 2637, pidfile: /home/claude/julia066/depot/compiled/v1.12/REPLExt/m7ggP_FwWYm.ji.pidfile)",
+    "  1 dependency successfully precompiled in 8 seconds. 28 already precompiled.",
+    "    DataInterpolationsSparseConnectivityTracerExt Being precompiled by another process (pid: 2637, pidfile: /home/claude/julia066/depot/compiled/v1.12/DataInterpolationsSparseConnectivityTracerExt/fwCYf_FwWYm.ji.pidfile)",
+    "  1 dependency successfully precompiled in 2 seconds. 52 already precompiled.",
+    "  7 dependencies successfully precompiled in 47 seconds. 34 already precompiled.",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE archive /home/claude/work066/out/arm_archive.jsonl"
+   ]
+  },
+  "A0u": {
+   "status": 0,
+   "jsonl_sha256": "281edb292691c91a4d832412fc530d494879f5bc99e36090ecb0c77c11743b98",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":false}",
+    "{\"first_nPBH_zero_index_1based\":8545,\"X_T0\":0.11199209652621654,\"X_T0_big\":\"0.11199209652621653657044216255549\",\"j\":22,\"M_g_at_last_live\":1.5034847925715658e8,\"seconds\":28.72434711456299,\"Y_big\":\"0.2522322066912163783594612180486\",\"beta\":\"1.0000000000000000715424240546219e-17\",\"Y\":0.2522322066912164,\"t_s_at_last_live\":0.33488730622697715,\"arm\":\"A0u\"}"
+   ],
+   "log_sha256": "ca9952308219deca3f6d9a26daba0532bf0ed0b9b3bf099c5fe17725add42c9b",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2637.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2637.jl`",
+    "    REPL Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/REPL/u0gqU_FwWYm.ji.pidfile)",
+    "    StringManipulation Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/StringManipulation/4nJQd_FwWYm.ji.pidfile)",
+    "    FindFirstFunctions Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/FindFirstFunctions/LXnki_FwWYm.ji.pidfile)",
+    "    PrettyTables Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/PrettyTables/kRdcL_FwWYm.ji.pidfile)",
+    "    DataInterpolations Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/DataInterpolations/GwjmX_FwWYm.ji.pidfile)",
+    "  5 dependencies successfully precompiled in 102 seconds. 37 already precompiled.",
+    "  1 dependency successfully precompiled in 1 seconds. 40 already precompiled.",
+    "  1 dependency successfully precompiled in 1 seconds. 34 already precompiled.",
+    "  1 dependency successfully precompiled in 8 seconds. 28 already precompiled.",
+    "  1 dependency successfully precompiled in 3 seconds. 52 already precompiled.",
+    "    Requires Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/Requires/IyxeS_FwWYm.ji.pidfile)",
+    "    Zstd_jll Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/Zstd_jll/cFDJB_FwWYm.ji.pidfile)",
+    "    FileIO Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/FileIO/6iKRU_FwWYm.ji.pidfile)",
+    "    ChunkCodecLibZstd Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/ChunkCodecLibZstd/j9Tqa_FwWYm.ji.pidfile)",
+    "    JLD2 Being precompiled by another process (pid: 2638, pidfile: /home/claude/julia066/depot/compiled/v1.12/JLD2/O1EyT_FwWYm.ji.pidfile)",
+    "  5 dependencies successfully precompiled in 47 seconds. 36 already precompiled.",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE A0u /home/claude/work066/out/arm_A0u.jsonl"
+   ]
+  },
+  "A0": {
+   "status": 0,
+   "jsonl_sha256": "64ef9958e5bbb4db2c124eb71c90aca55023a35663acf4c4db9f6f59999568ce",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":true}",
+    "{\"X_T0\":0.11199209652621654,\"stop_bracket_M_g\":[3005.4964297897313,1.7973330799007832],\"njacs\":1260,\"nreject\":91,\"naccept\":1290,\"Kclock_rel_spread\":0.0020569518715298414,\"seconds\":29.98687505722046,\"stop_logm_threshold\":55.52157711773616,\"Y_big\":\"0.2522322066912163783594612180486\",\"Y\":0.2522322066912164,\"nsolve\":3780,\"stop_bracket_t_s\":[0.33569972946518184,0.3356997294651819],\"Kclock_n\":149,\"n_saved\":1291,\"t_s_at_last_live\":0.33488730622697715,\"nf\":5775,\"first_nPBH_zero_index_1based\":8545,\"X_T0_big\":\"0.11199209652621653657044216255549\",\"j\":22,\"M_g_at_last_live\":1.5034847925715658e8,\"saved_every_step\":true,\"beta\":\"1.0000000000000000715424240546219e-17\",\"M_stop_g\":2.310912792340702,\"arm\":\"A0\",\"nw\":1260,\"retcode\":\"Success\",\"stop_first_index\":1258}"
+   ],
+   "log_sha256": "993fd0db7bd9bed8181665dbc5f3cf87e4342c5d4a054989dc56aa7957d2eeee",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2791.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2791.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE A0 /home/claude/work066/out/arm_A0.jsonl"
+   ]
+  },
+  "A1": {
+   "status": 0,
+   "jsonl_sha256": "4fe79885c2dca194fb1747f4550bb882be74726e3978b7b9464d8921fa455726",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":true}",
+    "{\"X_T0\":0.11200607808760793,\"stop_bracket_M_g\":[16082.044557708818,0.10088378036599793],\"njacs\":1251,\"nreject\":82,\"naccept\":1284,\"Kclock_rel_spread\":0.001996243909016043,\"seconds\":28.167256116867065,\"stop_logm_threshold\":55.52157711773616,\"Y_big\":\"0.25226766833356377260283615468256\",\"Y\":0.2522676683335638,\"nsolve\":3753,\"stop_bracket_t_s\":[0.3356793641657367,0.3356793641657409],\"Kclock_n\":145,\"n_saved\":1285,\"t_s_at_last_live\":0.33488443254926026,\"nf\":5699,\"first_nPBH_zero_index_1based\":8545,\"X_T0_big\":\"0.11200607808760792575631192477551\",\"j\":22,\"M_g_at_last_live\":1.4922109991153926e8,\"saved_every_step\":true,\"beta\":\"1.0000000000000000715424240546219e-17\",\"M_stop_g\":2.310912792340702,\"arm\":\"A1\",\"nw\":1251,\"retcode\":\"Success\",\"stop_first_index\":1254}"
+   ],
+   "log_sha256": "abea144b3df2227d130b35564120c0ccda21fd525a6b3af992904034f74ad8c9",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2832.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2832.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE A1 /home/claude/work066/out/arm_A1.jsonl"
+   ]
+  },
+  "A2": {
+   "status": 0,
+   "jsonl_sha256": "56f2fa0457fe026f487bd601e29aa55a6f90b0277fa18dba1b141ddbd0d70c00",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":true}",
+    "{\"X_T0\":0.11200607808760793,\"stop_bracket_M_g\":[1.4922109991153926e8,0.10088378036599793],\"njacs\":1251,\"nreject\":82,\"naccept\":1284,\"Kclock_rel_spread\":0.002005148028587867,\"seconds\":29.007870197296143,\"stop_logm_threshold\":55.52157711773616,\"Y_big\":\"0.25226766833356377260283615468256\",\"Y\":0.2522676683335638,\"nsolve\":3753,\"stop_bracket_t_s\":[0.33488443254926026,0.33746713336241363],\"Kclock_n\":908,\"n_saved\":10000,\"t_s_at_last_live\":0.33488443254926026,\"nf\":5699,\"first_nPBH_zero_index_1based\":8545,\"X_T0_big\":\"0.11200607808760792575631192477551\",\"j\":22,\"M_g_at_last_live\":1.4922109991153926e8,\"saved_every_step\":false,\"beta\":\"1.0000000000000000715424240546219e-17\",\"M_stop_g\":2.310912792340702,\"arm\":\"A2\",\"nw\":1251,\"retcode\":\"Success\",\"stop_first_index\":8545}"
+   ],
+   "log_sha256": "0604d31e2ce95fb4b2a4e02a6c767c2f74c1857ab325132e2622b9bf5535022f",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2859.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2859.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE A2 /home/claude/work066/out/arm_A2.jsonl"
+   ]
+  },
+  "rep013": {
+   "status": 0,
+   "jsonl_sha256": "0c0a66011f0aebe48b88defa53020793f991d27653124d0cc0b788ec860391b4",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":false}",
+    "{\"first_nPBH_zero_index_1based\":8545,\"X_T0\":0.1120551757682634,\"X_T0_big\":\"0.11205517576826340114019449624298\",\"j\":22,\"M_g_at_last_live\":1.4489122052651224e8,\"seconds\":29.57502317428589,\"Y_big\":\"0.25239220435845267257690798948359\",\"beta\":\"1.0058635310570254750753042983098e-17\",\"Y\":0.25239220435845267,\"t_s_at_last_live\":0.33492735181011263,\"arm\":\"rep013\"}"
+   ],
+   "log_sha256": "d9139067913f3db8152acde5c8045cf4bd49a4fc53534ce418a7ca7ca498a5e8",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2871.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2871.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE rep013 /home/claude/work066/out/arm_rep013.jsonl"
+   ]
+  },
+  "A3": {
+   "status": 0,
+   "jsonl_sha256": "5ebf6b395b0161c6cef548c3aaf230fd5220f57411047aad96eba115ebad85d6",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":true}",
+    "{\"X_T0\":0.11200149694799394,\"stop_bracket_M_g\":[4.847068768775939,1.8417544359134899],\"njacs\":11321,\"nreject\":116,\"naccept\":11395,\"Kclock_rel_spread\":0.00015082411336409565,\"seconds\":60.44100093841553,\"stop_logm_threshold\":55.52157711773616,\"Y_big\":\"0.25225604899794414110892339539025\",\"Y\":0.2522560489979441,\"nsolve\":33963,\"stop_bracket_t_s\":[0.33500663726193547,0.33500663726193547],\"Kclock_n\":1153,\"n_saved\":11396,\"t_s_at_last_live\":0.3324494025208739,\"nf\":46429,\"first_nPBH_zero_index_1based\":8544,\"X_T0_big\":\"0.11200149694799394470723333727713\",\"j\":22,\"M_g_at_last_live\":2.2017790970206383e8,\"saved_every_step\":true,\"beta\":\"1.0000000000000000715424240546219e-17\",\"M_stop_g\":2.310912792340702,\"arm\":\"A3\",\"nw\":11321,\"retcode\":\"Success\",\"stop_first_index\":11348}"
+   ],
+   "log_sha256": "08e0af5235334fa3ef8c5d39f7a29008c8545444fd7d6911889e579279bc315f",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2845.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2845.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE A3 /home/claude/work066/out/arm_A3.jsonl"
+   ]
+  },
+  "A4": {
+   "status": 0,
+   "jsonl_sha256": "599bb271603621e39ea640625d3a59060d136780de354acecae3773efe7b1535",
+   "jsonl_lines": [
+    "{\"arm\":\"header\",\"julia\":\"1.12.3\",\"BITS\":100,\"versions\":\"Dict('DifferentialEquations' => '7.17.0', 'ArbNumerics' => '1.6.3')\",\"line_changed\":true}",
+    "{\"X_T0\":0.11199752739139585,\"stop_bracket_M_g\":[2.6614135310177,2.249193616795777],\"njacs\":111733,\"nreject\":134,\"naccept\":111836,\"Kclock_rel_spread\":4.7395257314284745e-6,\"seconds\":403.7750518321991,\"stop_logm_threshold\":55.52157711773616,\"Y_big\":\"0.25224598094280275070950539883617\",\"Y\":0.25224598094280276,\"nsolve\":335199,\"stop_bracket_t_s\":[0.33495717459458185,0.33495717459458185],\"Kclock_n\":10908,\"n_saved\":111837,\"t_s_at_last_live\":0.3324328530499106,\"nf\":448359,\"first_nPBH_zero_index_1based\":8544,\"X_T0_big\":\"0.11199752739139584292308703397009\",\"j\":22,\"M_g_at_last_live\":2.1977185209644708e8,\"saved_every_step\":true,\"beta\":\"1.0000000000000000715424240546219e-17\",\"M_stop_g\":2.310912792340702,\"arm\":\"A4\",\"nw\":111733,\"retcode\":\"Success\",\"stop_first_index\":111776}"
+   ],
+   "log_sha256": "9947438b28c7437be013bc6b921c2e425ea7578bb7283b58d147ee57b0be706a",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz066_prefix_2885.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz066_prefix_2885.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "┌ Warning: Assignment to `t0` in soft scope is ambiguous because a global variable by the same name exists: `t0` will be treated as a new local. Disambiguate by using `local t0` to suppress this warning or `global t0` to assign to the existing global variable.",
+    "└ @ /home/claude/nash-iw-research/research/badacz/2026-11-15/code/b1_calibration_066.jl:45",
+    "DONE A4 /home/claude/work066/out/arm_A4.jsonl"
+   ]
+  }
+ },
+ "timeline": [
+  "START A0u 16 00:30:47",
+  "START archive 16 00:30:47",
+  "END A0u rc=0 16 00:34:13 wall=206s",
+  "START A0 16 00:34:13",
+  "END A0 rc=0 16 00:34:59 wall=46s",
+  "START A1 16 00:34:59",
+  "END archive rc=0 16 00:35:15 wall=268s",
+  "START A3 16 00:35:15",
+  "END A1 rc=0 16 00:35:44 wall=45s",
+  "START A2 16 00:35:44",
+  "END A2 rc=0 16 00:36:29 wall=45s",
+  "START rep013 16 00:36:29",
+  "END A3 rc=0 16 00:36:32 wall=77s",
+  "END rep013 rc=0 16 00:37:15 wall=46s",
+  "START A4 16 00:37:15",
+  "END A4 rc=0 16 00:44:18 wall=423s",
+  "ALL_DONE ok=8/8 16 00:44:18"
+ ],
+ "runner_sh_sha256": "e980aea6e814bbd404dd668ba850328f6baa2f7ddc07de4b86b05616f57a70f6"
+}
