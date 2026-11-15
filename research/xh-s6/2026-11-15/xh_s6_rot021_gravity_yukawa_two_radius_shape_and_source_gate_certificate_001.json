@@ -1,0 +1,100 @@
+{
+  "artifact_id": "IW_XH_S6_ROT021_ORIGINAL_7P6MG_GRAVITY_POINT_YUKAWA_SHAPE_IDENTIFIABILITY_CERT_001_20261115",
+  "date": "2026-11-15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "from_cell": "IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6",
+  "original_scientific_paper": {
+    "authors": "Zheng-Jie An; Wen-Hai Tan; Wen-Can Dong; et al.",
+    "title": "Test of the gravitational interaction between milligram masses using a miniature torsion pendulum",
+    "published": "2026-10-07",
+    "doi": "10.1038/s41467-026-78187-4"
+  },
+  "source_access": {
+    "publisher_abstract": "VERIFIED",
+    "pubmed_PMid": 42982831,
+    "full_original_article": "NOT_RETRIEVED",
+    "supplementary_pdf": "NOT_RETRIEVED",
+    "original_measured_torque_data": "NOT_RETRIEVED",
+    "original_numerical_Yukawa_exclusion": "NOT_RETRIEVED"
+  },
+  "mature_prior_art": {
+    "sub100mg_source": "Westphal et al Nature 2021 doi:10.1038/s41586-021-03250-7",
+    "Yukawa_52um_to3mm": "Lee et al PRL 124 101101 2020 doi:10.1103/PhysRevLett.124.101101; gravity-strength range limit 38.6 microns 95percent",
+    "Yukawa_40to350um": "Yang et al PRL 124 051301 2020 doi:10.1103/PhysRevLett.124.051301; alpha abs 1, lambda 48 microns 95percent"
+  },
+  "toy_model": {
+    "warning": "Artificial point radii numerically equal to reported source separation endpoints, NOT wafer geometry or measured forces",
+    "two_point_masses_kg": [
+      0.0000076,
+      0.0000076
+    ],
+    "point_radii_mm": [
+      0.654,
+      1.554
+    ],
+    "G_used_SI": 6.67e-11,
+    "Yukawa_point_force": "F=Gm1m2/r²*(1+alpha*(1+r/lambda)*exp(-r/lambda))",
+    "shape_observable": "R=(F1/F2)/((r2/r1)^2)=(1+alpha*q1)/(1+alpha*q2)",
+    "local_shape_derivative": "dR/dalpha at alpha0=q1-q2",
+    "analytical_optimum_lambda": "(r2-r1)/(2*ln(r2/r1))",
+    "point_shape_maximum_lambda_mm": 0.519942582943222,
+    "point_shape_maximum_contrast": 0.44100476601722627,
+    "point_q_at_optimum": [
+      0.6418334130221841,
+      0.2008286470049578
+    ],
+    "synthetic_ratio_at_alpha0p1_lambda_optimum": 1.043232249190531,
+    "same_synthetic_ratio_different_alpha_lambda": [
+      {
+        "lambda_mm": 0.2,
+        "alpha": 0.2728885676135491
+      },
+      {
+        "lambda_mm": 0.5,
+        "alpha": 0.09996658720773931
+      },
+      {
+        "lambda_mm": 1,
+        "alpha": 0.14568203499990737
+      },
+      {
+        "lambda_mm": 2,
+        "alpha": 0.41362278705241884
+      }
+    ],
+    "two_point_G_free_alpha_lambda_joint_identification": "NONIDENTIFIABLE; one ratio for two parameters",
+    "Fisher_after_profiled_logG": "I_alpha|g=Deltaq²/(2*epsilon²), if two equal independent relative errors epsilon, mathematical illustration only",
+    "epsilon_example_not_paper_data": 0.01,
+    "original_source_50_aN_used_in_alpha_bound": false,
+    "experimental_An_alpha_lambda_bound_computed": false,
+    "NASH_theory_forward_delta_torque_verified": false
+  },
+  "executed_tests": {
+    "analytic_vs_numeric_160iteration_optimum": "PASS",
+    "independent_decimal_55_digit_vs_math": "PASS",
+    "nonzero_derivative_sign_below_above_optimum": "PASS",
+    "independent_central_difference_ratio_alpha_slope_checks": 12,
+    "exact_factorized_force_ratio_identity_checks": 36,
+    "synthetic_alpha_lambda_nonunique_positive_witnesses": 4,
+    "newton_zero_alpha_and_long_range_limit": "PASS",
+    "clean_replay_result_files_byte_exact": 2,
+    "tampered_source_files_failed_SHA_identity": 2,
+    "complete_zip_crc": "PASS",
+    "zip_payload_sha256": "6_OF_6_PASS",
+    "local_zip_filename": "IW_XH_S6_ROT021_GRAVITY_7P6MG_TWO_RADIUS_IDENTIFIABILITY_REPRO_20261115.zip",
+    "local_zip_bytes": 14049,
+    "local_zip_sha256": "348d31a248d71e4fb479e834bc44c33169fd53da59ac471e27ec9d8aa7777406",
+    "local_math_script_sha256": "0c55d798515abf83a70f99f846addf9745581528d70747756bbd173b3c4a484e",
+    "local_source_report_sha256": "cbfc766eac9dc5f016a94c0740513f7138b0b9322b2c59a030e3be39b919b5c1"
+  },
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_EXPERIMENTAL_ALPHA_LIMIT",
+    "NO_NASH_BRIDGE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
