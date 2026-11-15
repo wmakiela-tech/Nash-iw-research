@@ -1,0 +1,105 @@
+{
+  "artifact_id": "IW_M15_ROT016_INDEPENDENT_ORIGINAL_M13_ALPHA0_REFLECTION_AND_FISHER_RANK_JUMP_001_20261115",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-15",
+  "firstness": "M13 original source; Geeky-S12 ROT022 first alpha0 period16; Geeky-S12 ROT023 first alpha0 reflection/Fisher rank jump; REC12 ROT001 independent ROT022; M15 independent different-cell algorithm only",
+  "original_source_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+  "original_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "original_code_executed_byte_identical": false,
+  "source_formula_reimplementation_sha256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e",
+  "sympy_exact": {
+    "original_B_tensor_nonzero_modes": 8,
+    "original_B_tensor_declared_mode_keys": 41,
+    "actual_B0_support": "(±2,±1,±1)",
+    "common_nonzero_tensor_factor": "x1*(2*x1-x2)=2*x1^2*(1-cos(2pi/41))>0",
+    "source_pair_frequency_count": 27,
+    "all_pair_energy_coefficients_rational_after_factor": true,
+    "all_27_yz_reflection_equalities": true,
+    "whole_function_reflection": "s_i(0,tx,ty,tz)=s_i(0,tx,tz,ty)",
+    "fifth_mask_period_basis": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "source_unwindowed_Frobenius_coefficients": [
+      "1/12960000000",
+      "-11/129600000000",
+      "-11/129600000000"
+    ],
+    "fifth_mask_window_nonzero_proof": "N41 prime, k6 L29, 41 does not divide q*29 for q2 or4; strict mpmath.iv55 mask squared modulus positivity also checked for all 3",
+    "full_five_shell_observation_period_lattice": "4Z x 2Z x 2Z",
+    "period_group_order": 16
+  },
+  "source_conditional_iv55": {
+    "alpha": 0,
+    "arithmetic": "independent mpmath.iv.dps55 original M15 source formula, Cauchy-Binet minors, NOT Geeky Schur complement",
+    "native_B_Fourier_mode_keys": 41,
+    "source_pair_q_values": 221,
+    "nuisance_columns": "ones, d_tx log shell, d_ty log shell, d_tz log shell",
+    "alpha_target": "d_alpha log shell",
+    "exact_endpoint_nuisance_rank": 3,
+    "endpoint_3x3_minor_approx": "-0.00322636365878575789315901023110824440409",
+    "endpoint_4x4_target_minor_approx": "+0.00345482770304442644788517604075831371510",
+    "analytical_v_d_alpha_dty_minus_dtz_components_approx": [
+      "1.924677489974600501",
+      "2.500628680426398564",
+      "1.785605579878951425",
+      "0.312021774991096225",
+      "-1.022910070745784083"
+    ],
+    "punctured_alpha_positive_side_nuisance_span_limit": "ones, D_tx(0), D_ty(0), v",
+    "punctured_side_nuisance_rank": 4,
+    "all_five_limiting_nuisance_4x4_minors_nonzero": true,
+    "limiting_augmented_5x5_det_approx": "-0.00139101222808155242432188473",
+    "hypothetical_noise_model": "five iid N(0,sigma^2) errors on RAW log shell energies; not observed noise",
+    "scaled_exact_endpoint_sigma2_Ieff_directed_outer_interval": [
+      "0.0631944657241074387378275614873175986736231534657016701282491",
+      "0.0631944657241074387378275614873175986736231534675314944433862"
+    ],
+    "scaled_positive_side_limit_sigma2_Ieff_directed_outer_interval": [
+      "0.00306989968658088935839839714017389525013805021339218732847054",
+      "0.00306989968658088935839839714017389525013805021885767255923311"
+    ],
+    "endpoint_to_positive_side_information_ratio_directed_outer_interval": [
+      "20.5851891514052949478552096309113011745045680416361465338336",
+      "20.5851891514052949478552096309113011745045680788809699055546"
+    ],
+    "positive_information_gap_certified": true
+  },
+  "actual_repro": {
+    "executed_independent_script_sha256": "499ea16b642856782bd23df37b85eabcbf217fa9048b5871f0109b07fc252ed0",
+    "full_directed_JSON_sha256": "079f95fd497943e3323b60b49b5ca8ce83b495d861d16e56646ede14544e49bd",
+    "user_local_zip": "IW_M15_ROT016_ALPHA0_EXACT_SYMMETRY_FISHER_JUMP_INDEPENDENT_REPRO_001_20261115.zip",
+    "zip_bytes": 16460,
+    "zip_sha256": "978a1f8520d2bde6fd5556ca20a8d15e350499a0a6371c0c1830af30f725ab82",
+    "zip_crc": "PASS",
+    "sha256_manifest": "6/6 PASS",
+    "isolation_replay_full_JSON": "BYTE-IDENTICAL PASS",
+    "source_formula_one_byte_tamper": "PRE-SCIENCE REJECTION PASS"
+  },
+  "scoped_result": "DIFFERENT_CELL_NONBLIND_I1_PASS_OWNER_ALPHA0_REFLECTION_INFORMATION_DISCONTINUITY",
+  "limits": [
+    "Source Fourier operator mathematically reimplemented, not native original M13 program byte execution",
+    "Common field translation not original source calc input",
+    "Fisher numbers hypothetical iid log observation covariance, no physical measurement",
+    "Analytic source shells smooth; discontinuity belongs nuisance-profiled Fisher tangent rank",
+    "No all-domain first-order information root count or global nonlinear alias",
+    "No historic dtc0a_runtime_v0_3_1.py producer identity",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
