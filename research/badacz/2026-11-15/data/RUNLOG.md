@@ -15,3 +15,4 @@ document_type: RUNLOG
 | ~23:47 | statyczny odczyt `scanning.jld2` autorów (deflate, bez Julii) i porównanie z siatkami natywnymi REVIEW_065, post hoc | `data/archive_vs_native_j22.json` | `code/archive_vs_native_j22.py`; ekstrakcja walidowana statystykami Mech-S8 ROT020 |
 | ~23:49 | sterownik `code/b1_calibration_066.jl` sprawdzony **tylko parserem Julii** (`Meta.parseall`, bez ładowania pakietów i bez `magic()`) | — | PARSE_OK |
 | 23:51 | PREREG_066 i skrypt analizy zapisane; **przebieg natywny nieuruchomiony** (czeka na autoryzację Moderatora) | — | — |
+| 00:05 (16 XI) | uzupełnienie r2 PREREG_066: szerszy zakres obciążenia `saveat` (od 31 X), statyczny odczyt OrdinaryDiffEqCore 3.33.1; **bez przebiegu** | — | kryteria bez zmian |

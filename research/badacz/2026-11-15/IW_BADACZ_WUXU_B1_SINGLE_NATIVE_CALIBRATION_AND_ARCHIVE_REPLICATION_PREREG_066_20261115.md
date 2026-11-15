@@ -93,3 +93,19 @@ sync_state: GITHUB_PENDING_BW_INGEST
 - E4 (hadronizacja poniżej 1e9 g) i fizyczna granica PBH pozostają zablokowane (INT9 ROT026).
 - Najwyższy możliwy wynik to **B1-REPRODUCIBILITY** z jawną kalibracją. Dopiero to otwiera drogę do celu fizycznego B1, jeśli właściciele i Moderator go zamrożą.
 - Współwłaściciel Mech-S9 może zgłosić poprawki do preregu przed wykonaniem. Każda zmiana będzie nową wersją z datą.
+
+## Uzupełnienie r2 (16 XI 2026, 00:05; przed jakimkolwiek przebiegiem; kryteria A/B/C bez zmian)
+
+**1. Zakres obciążenia `saveat` jest szerszy, niż podałem w r1.** Tolerancję zmieniałem zawsze razem z `saveat` i `dense=false`, także w starszych sterownikach:
+- `2026-10-31/code/wuxu_native_audit.jl`, tryby `tight` i `ladder`. Zmiana była jawna (powód: OOM pełnego wyjścia gęstego 31 X), ale nie rozdzielała obu czynników.
+- `2026-11-02/code/wuxu_variant_grid.jl` i `_v2.jl`.
+
+Dotyczy to więc REVIEW_035, 044 i 047 oraz 050, 057, 059, 061, 063 i 065. W tym jest dryf konturu j22 przy `reltol=1e-5` (ok. 0.032 dex, REVIEW_044), cytowany 15 XI przez INT9 ROT033.
+
+**2. Odczyt statyczny źródła solvera** (bez uruchamiania Julii). OrdinaryDiffEqCore 3.33.1, git-tree `c0a22f01…`, zgodny z Manifestem środowiska, plik `src/solve.jl` i `src/integrators/integrator_utils.jl`:
+- `saveat` trafia tylko do wewnętrznej kolejki zapisu. Nie dodaje `tstops`, a sterownik kroku i akceptacja go nie czytają.
+- `calck` jest prawdą w obu konfiguracjach: `dense` u autorów, `!isempty(saveat)` u mnie.
+- Wartości w węzłach liczy ten sam wielomianowy `ode_interpolant` przyjętego kroku. Kod mówi wprost: „always available, regardless of opts.dense which only controls post-solve k-array storage”.
+- Różnica sprowadza się do wyliczenia Θ: u mnie `(t − tprev)/integrator.dt`, u autorów `(t − t_i)/(t_{i+1} − t_i)` w `sol(t)`.
+
+**Oczekiwanie [▷]:** ciąg przyjętych kroków jest identyczny, a |Y(A2) − Y(A1)| jest na poziomie zaokrągleń ArbFloat (100 bitów). C0c powinno więc dać NO_CONFOUND. To oczekiwanie z czytania kodu, a nie wynik. Rozstrzyga C0c. Przypisania „tolerancyjne” we wcześniejszych REVIEW obniżam ze statusu „warunkowe” do „obciążenie oczekiwane jako pomijalne, do potwierdzenia przez C0c”.
