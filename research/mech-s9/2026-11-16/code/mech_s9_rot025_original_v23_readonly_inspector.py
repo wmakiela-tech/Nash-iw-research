@@ -67,6 +67,32 @@ def inspect(path):
             if "/herwig_scripts/" in name.lower() and name.lower().endswith(".cc"):
                 item["pdg_source_lines"]=[x.strip()[:180] for x in txt.splitlines()
                     if "pdgId" in x or "_ids={" in x][:8]
+            # Detailed original-source seam: context is restricted to short
+            # relevant source spans, never full redistribution of C files.
+            ll=txt.splitlines()
+            lname=name.lower()
+            if lname.endswith("/scripts/pythia_scripts/formatting.c"):
+                item["primary_parton_normalization_lines_65_77"]=[
+                  f"{i+1}: {ll[i].strip()[:180]}"
+                  for i in range(64,min(77,len(ll)))]
+                item["primary_loop_and_divisor2"]=(
+                   any("nb_initial_particles" in x for x in ll[63:77])
+                   and any("/2." in x or "/ 2." in x for x in ll[63:77]))
+            if lname.endswith("/src/hadro_pythia.c"):
+                item["hadro_pythia_header_loader_lines_8_25"]=[
+                  f"{i+1}: {ll[i].strip()[:160]}"
+                  for i in range(7,min(25,len(ll)))]
+                item["uses_precomputed_pythia_header"]="hadronization_tables_pythia.h" in txt
+            if lname.endswith("/src/hadro_herwig.c"):
+                item["uses_precomputed_herwig_header"]="hadronization_tables_herwig.h" in txt
+            if lname.endswith("/src/secondary.c"):
+                item["secondary_convolution_core_lines"]=[
+                  f"{i+1}: {ll[i].strip()[:170]}"
+                  for i in range(len(ll))
+                  if 758<=i<=784 and (
+                  "for(int i" in ll[i] or "temp +=" in ll[i]
+                  or "contribution_instantaneous" in ll[i]
+                  or "hadronization_choice" in ll[i])]
             src[name]=item
     assert len(src)>=3,"too few source files found, not a source admission"
     return {"source":"Arbey-Auffinger official BlackHawk v2.3 archive",
