@@ -1,0 +1,146 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT025_TWO_EXPLICIT_NEAR_FOLD_DOUBLE_INVERSE_PAIRS_SOURCE_RESULTS_001_20261115",
+  "date": "2026-11-15",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "result_class": "AUTHOR_NUMERIC_HIGH_PRECISION_EXPLICIT_APPROXIMATE_DOUBLE_PREIMAGE_COORDINATES / EXACT_EXISTENCE_INHERITED_PRIOR_ROT024_AUTHOR_FOLD_THEOREM",
+  "source_original": {
+    "M13_operator": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "B25_table": "research/m13/2026-10-26/direct_B.json",
+    "B25_original_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "N": 41,
+    "channel": "B",
+    "fourier_modes": 41,
+    "mode_pairs": 1681,
+    "grouped_difference_frequencies": 221,
+    "five_fixed_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "five_disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "prior_ROT023_root_cert_sha256": "5e91efefdad0083c994ae9483975b4e21d2fa13f58ec66956a0c9e25ca0e184f",
+    "prior_ROT024_fold_cert_sha256": "45121308da875f70cb7a86d5968fb2f32905c09164f0a41327bbef5acc4ab25e"
+  },
+  "mathematical_map": "F_i(b,tx,ty,tz,alpha)=b+log S_i(alpha,tx,ty,tz), i=1..5. Hypothetical common source field translation relative to five FIXED observation masks, original M13 source has no t parameter. Four log ratios to shell5 eliminate b; b matched from shell5.",
+  "numerical_precision": {
+    "mpmath_mp_dps": 68,
+    "original_M13_source_iv_dps_set_after_module_import": 62,
+    "independent_M13_native_source_iv_dps_set_after_module_import": 70,
+    "rounded_coordinate_strings_significant_digits_approx": 51
+  },
+  "four_by_four_projective_jacobian_det_at_alpha_0p05": "-0.000010198255897224419012725287782962857239",
+  "explicit_approximate_pairs": [
+    {
+      "id": "r1",
+      "strict_prior_source_fold_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "high_precision_fold_alpha_approx": "0.0186152213396600335590353409792232188802060165692153",
+      "A": {
+        "alpha": "0.0186148213396600335590353409792232188802060165692153",
+        "t": [
+          "-0.00000778225458158833577064401259866156483159837091803575",
+          "-0.0000276553357584516675383726296093774529527246833789494",
+          "0.0000149965949402857031665203038121767349605942791409882"
+        ],
+        "b": "0"
+      },
+      "B": {
+        "alpha": "0.018615621342742461469128428153460790009158731054036",
+        "t": [
+          "0.00000778231454518030711969937224756041281441669307283505",
+          "0.0000276555488696852192251752308685569326618140075196218",
+          "-0.0000149967104671544312487001119755171372928351678744433"
+        ],
+        "b": "-0.000012720403151407310913184689146072159977135101367138"
+      },
+      "ratio_positive_common_gain_cB_over_cA": "0.999987279677752577812120594306828033505737336595477",
+      "max_grouped_high_precision_four_log_ratio_plus_gain_residual": "1.16715228353351328e-52",
+      "original_native_M13_direct_iv70_approx_five_raw_log_residual_max_conservative_less_than": "2.85e-52",
+      "independent_float64_spatial_3DFFT_max_abs_log_residual": 3.552713678800501e-15
+    },
+    {
+      "id": "r2",
+      "strict_prior_source_fold_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "high_precision_fold_alpha_approx": "0.0541673990580002136582137724084941176199672741846014",
+      "A": {
+        "alpha": "0.0541669990580002136582137724084941176199672741846014",
+        "t": [
+          "-0.00003231593628662616057775743813196977028621762818121",
+          "-0.000141459393120062988150269512800088100361497414175792",
+          "0.0000497188991107618079133032352179237581320108950775773"
+        ],
+        "b": "0"
+      },
+      "B": {
+        "alpha": "0.0541677990561201137563223643106130371111032032165712",
+        "t": [
+          "0.0000323157810382344265338755476302422571669635678164134",
+          "0.00014145872004351965638526143202285285412723779504983",
+          "-0.0000497186618422671894615185116342786738376396551559406"
+        ],
+        "b": "-0.0000197337331264787386845194620160198764774816174463815"
+      },
+      "ratio_positive_common_gain_cB_over_cA": "0.999980266461582352035383486063699765361915735363338",
+      "max_grouped_high_precision_four_log_ratio_plus_gain_residual": "2.50698703885259982e-53",
+      "original_native_M13_direct_iv70_approx_five_raw_log_residual_max_conservative_less_than": "1.68e-51",
+      "independent_float64_spatial_3DFFT_max_abs_log_residual": 3.552713678800501e-15
+    }
+  ],
+  "verification": {
+    "full_user_archive": "Geeky_S12_ROT025_explicit_two_near_fold_inverse_pairs.zip",
+    "archive_bytes": 31380,
+    "archive_sha256": "c76f5b4a11740bdffe6f3b5dc854613253096cd099110e74e0783885c4618469",
+    "zip_total_entries": 14,
+    "sha_manifest_payloads": 13,
+    "all_crc_sha256_byte_comparisons": "PASS",
+    "new_original_grouped_M13_inverse_solver_script_sha256": "73053ca3e79ad6255f5237e6bd09490da3faecd356491ca689e4c196e1ea4ccd",
+    "new_original_complete_fifty_digit_pair_result_sha256": "306bd1f504f33a710e54a8c9eaa2c7548a890863b54851ec050a40fc0df312ee",
+    "separately_new_original_native_M13_direct_iv70_script_sha256": "b72482760e490641fa47c379f2a05b266d9b1e29f8c0db1ba60ae591de11eb38",
+    "complete_native_M13_direct_iv70_result_sha256": "a1e65c06ff1fc6796184d2c9d84a1a9eb2e321b421c350b8a52db3f97776f139",
+    "independent_N41_cubic_spatial_FFT_script_sha256": "bbf10f232361b327346c2770f05e4acf334bec2432186ca71fd43220d29b6288",
+    "complete_spatial_FFT_result_sha256": "4389c09b51c37493c0e229212131ff22c18adf06cd4f11d475f3f98b77f53749",
+    "all_3_fresh_clean_results_byte_identical": true,
+    "tampered_original_M13_operator_rejected": true,
+    "tampered_original_B25_table_rejected": true,
+    "tampered_prior_ROT023_root_cert_rejected": true,
+    "tampered_prior_ROT024_fold_cert_rejected": true,
+    "tampered_one_numeric_pair_alpha_coordinate_native_checker_rejected": true,
+    "original_data_on_disk_unchanged": true,
+    "public_git_exact_executed_code_byte_mirror": false
+  },
+  "prior_I1_status": {
+    "M15_ROT015": "Independent nonblind I1 source proof of EXACTLY ONE simple original ROT023 alpha Fisher-zero root INSIDE each original tiny bracket; does not review ROT024 fold Hessian",
+    "M15_ROT016": "Independent nonblind I1 review of prior ROT023 alpha0 exact reflection and conditional 20.585 Fisher jump",
+    "AUD2_ROT015": "Independent nonblind I1 review of both original ROT023 root existence and alpha0 rank jump; NOT ROT024 Hessian",
+    "ROT024_Hessian_independent_cell_referee": "NOT_YET_VERIFIED",
+    "ROT025_approximate_double_inverse_pairs_external_cell_referee": "PENDING",
+    "KN14_BW_native_source_ingest": "UNVERIFIED",
+    "M15_owner_adoption": "UNVERIFIED"
+  },
+  "strict_claim_ceiling": [
+    "NUMERIC_APPROXIMATE_PAIRS_NOT_BITWISE_EXACT_ALIASES",
+    "EXACT_LOCAL_ALIAS_EXISTENCE_FROM_PRIOR_AUTHOR_ROT024_CLASSICAL_FOLD_THEOREM",
+    "HYPOTHETICAL_COMMON_INPUT_TRANSLATIONS_AND_GAIN_NOT_NATIVE_M13_SOURCE_KNOBS",
+    "ORIGINAL_HISTORIC_DTC0A_RUNTIME_BYTE_IDENTITY_MISSING",
+    "NO_ACTUAL_PHYSICAL_FIELD_CALIBRATION_OR_SAMPLING_NOISE",
+    "NO_GLOBAL_INVERSE_PREIMAGE_COUNT",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
