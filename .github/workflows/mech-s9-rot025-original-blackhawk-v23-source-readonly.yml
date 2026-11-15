@@ -1,0 +1,80 @@
+name: Mech-S9 ROT025 exact author-pinned BlackHawk v2.3 archive source-only forensic read
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s9-rot025-original-blackhawk-v23-source-readonly.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  original-v23-source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Create strict evidence directory and compile SOURCE-ONLY inspector
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot025_source_admission
+          python3 -m py_compile research/mech-s9/2026-11-16/code/mech_s9_rot025_original_v23_readonly_inspector.py
+          echo "CODE_SYNTAX_PASS" | tee mech_s9_rot025_source_admission/STATUS.txt
+      - name: Retrieve original author-pinned BlackHawk v2.3 archive (READ ONLY)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ORIG="mech_s9_rot025_original_v23.tar.bz2"
+          URL='https://blackhawk.hepforge.org/downloader?f=blackhawk_v2.3.tar.bz2'
+          WANT='dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7'
+          good=0
+          for attempt in 1 2 3; do
+            echo "FETCH_ATTEMPT=$attempt" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+            rm -f "$ORIG"
+            if curl --fail --location --retry 2 --retry-all-errors --silent --show-error --connect-timeout 25 --max-time 280 --output "$ORIG" "$URL"; then
+              bytes=$(wc -c < "$ORIG")
+              actual=$(sha256sum "$ORIG" | cut -d' ' -f1)
+              echo "ATTEMPT=$attempt BYTES=$bytes SHA=$actual" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+              if test "$bytes" = 161495983 && test "$actual" = "$WANT"; then good=1; break; fi
+            fi
+          done
+          if test "$good" != 1; then
+            echo "ORIGINAL_V23_AUTHENTIC_SOURCE_BYTES_UNAVAILABLE_HOLD" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+            exit 1
+          fi
+          echo "$WANT  $ORIG" | sha256sum -c -
+          echo "AUTHOR_PINNED_ORIGINAL_V23_ARCHIVE_SHA_PASS" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+      - name: Inspect exact official v2.3 C source and selected BBN tables without execution
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot025_original_v23_readonly_inspector.py \
+            mech_s9_rot025_original_v23.tar.bz2 mech_s9_rot025_source_admission \
+            | tee mech_s9_rot025_source_admission/INSPECTOR_STDOUT.txt
+          echo "EXACT_SOURCE_INSPECTION_PASS" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+      - name: Fail-closed test and evidence-only manifest (no tar redistribution)
+        shell: bash
+        run: |
+          set -euo pipefail
+          head -c 1024 mech_s9_rot025_original_v23.tar.bz2 > mech_s9_rot025_source_admission/TRUNCATED_BAD_ARCHIVE
+          if python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot025_original_v23_readonly_inspector.py \
+                mech_s9_rot025_source_admission/TRUNCATED_BAD_ARCHIVE mech_s9_rot025_source_admission; then
+            echo "NEGATIVE_SOURCE_TAMPER_TEST_FAIL" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+            exit 1
+          fi
+          rm mech_s9_rot025_source_admission/TRUNCATED_BAD_ARCHIVE
+          echo "NEGATIVE_SOURCE_TAMPER_REJECT_PASS" | tee -a mech_s9_rot025_source_admission/STATUS.txt
+          (cd mech_s9_rot025_source_admission && sha256sum ORIGINAL_V23_SOURCE_ONLY_RESULT.json INSPECTOR_STDOUT.txt STATUS.txt > RESULT_SHA256SUMS.txt)
+          # Do not ship the 161MB original code archive or extracted copyrighted source.
+      - name: Upload source evidence JSON and checksums only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot025-original-blackhawk-v23-source-only-verified-evidence
+          path: mech_s9_rot025_source_admission/
+          if-no-files-found: error
