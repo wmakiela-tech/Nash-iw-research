@@ -16,3 +16,6 @@ document_type: RUNLOG
 | ~23:49 | sterownik `code/b1_calibration_066.jl` sprawdzony **tylko parserem Julii** (`Meta.parseall`, bez ładowania pakietów i bez `magic()`) | — | PARSE_OK |
 | 23:51 | PREREG_066 i skrypt analizy zapisane; **przebieg natywny nieuruchomiony** (czeka na autoryzację Moderatora) | — | — |
 | 00:05 (16 XI) | uzupełnienie r2 PREREG_066: szerszy zakres obciążenia `saveat` (od 31 X), statyczny odczyt OrdinaryDiffEqCore 3.33.1; **bez przebiegu** | — | kryteria bez zmian |
+| 00:10 (16 XI) | **Moderator autoryzował PREREG_066** („Autoryzuję”, rozmowa z Badaczem) | — | autoryzacja jednego przebiegu wg PREREG_066 r1+r2 |
+| 00:12–00:29 | kopia środowiska Julii (2.9 GB) z wycofanego katalogu roboczego do `/home/claude/julia066`; nowa ścieżka depot unieważniła cache → pełna prekompilacja (17 min). Wersje z tego samego Manifestu: DifferentialEquations 7.17.0, ArbNumerics 1.6.3 | — | kod natywny skompilowany od nowa; istotne przy interpretacji zgodności bitowej |
+| 00:31 | **odstępstwo D1** (przed przebiegiem): w linii nagłówka sterownika wersje pakietów zawierały cudzysłowy, przez co JSON był niepoprawny; poprawiono escapowanie. Bez wpływu na obliczenia. Test pomocnika `s()`: `BigFloat(x; precision=100)` rozróżnia wartości różniące się o 1e−28 | `code/b1_calibration_066.jl` | — |

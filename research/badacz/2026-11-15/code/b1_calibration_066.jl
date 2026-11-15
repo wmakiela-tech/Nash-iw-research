@@ -37,7 +37,7 @@ const KLIST = 86:99                                  # authors' beta indices (0-
 const J = 22
 io = open(out_file, "w")
 vers = try Dict(string(m) => string(pkgversion(m)) for m in (DifferentialEquations, ArbNumerics)) catch err; "unavailable: " * sprint(showerror, err)[1:min(end, 80)] end
-println(io, "{\"arm\":\"header\",\"julia\":\"$(VERSION)\",\"BITS\":$(BITS),\"versions\":\"$(vers)\",\"line_changed\":$(haskey(newline, arm))}")
+println(io, "{\"arm\":\"header\",\"julia\":\"$(VERSION)\",\"BITS\":$(BITS),\"versions\":\"$(replace(string(vers), "\"" => "'"))\",\"line_changed\":$(haskey(newline, arm))}")  # D1: quote escaping
 s(x) = string(BigFloat(x; precision=BITS))
 m22 = m_PBH_f_list[J + 1]
 if arm == "archive"
