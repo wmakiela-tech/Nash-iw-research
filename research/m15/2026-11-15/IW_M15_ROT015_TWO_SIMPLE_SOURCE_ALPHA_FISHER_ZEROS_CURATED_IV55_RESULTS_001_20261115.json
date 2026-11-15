@@ -1,0 +1,100 @@
+{
+  "artifact_id": "IW_M15_ROT015_INDEPENDENT_ORIGINAL_M13_TWO_SIMPLE_ALPHA_FISHER_ZEROS_001_20261115",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-15",
+  "exposure": "PUBLIC",
+  "source_firstness": {
+    "original_operator": "M13",
+    "two_alpha_root_existence": "Geeky-S12 ROT023",
+    "new_independent_math": "M15 independently proves monotonic determinant and EXACTLY ONE SIMPLE ZERO within each pre-specified short Geeky-S12 bracket"
+  },
+  "source_identity": {
+    "original_M13_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_B_quartic_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "independent_M15_source_formula_sha256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e"
+  },
+  "math_object": {
+    "N": 41,
+    "alpha_domain": "[0,1/5]",
+    "hypothetical_translation": true,
+    "observer": "five fixed masks k2..6",
+    "nuisance": "four independent first-order source score columns: unknown common log gain and three rigid relative field shifts",
+    "target": "alpha",
+    "noise": "any fixed positive-definite covariance for structural zero, no empirical covariance claim",
+    "source_formula": "B=U+alpha V+alpha^2 W; all mask alpha/phase and second/mixed derivatives algebraically reconstructed",
+    "arithmetic": "55 decimal directed mpmath.iv, no finite derivative differences; 120-term full Jacobian determinant; derivative 4x120-term determinant sum"
+  },
+  "certificates": [
+    {
+      "id": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "full_5x5_det_left_sign": "POSITIVE",
+      "full_5x5_det_right_sign": "NEGATIVE",
+      "whole_interval_nuisance_rank4_minor": "X first four raw shells",
+      "whole_interval_minor_strict_lower_display": "0.00005442395868775275",
+      "whole_interval_minor_strict_upper_display": "0.00005442413991992932",
+      "whole_interval_det_derivative_strict_lower_display": "-0.004501848756811985",
+      "whole_interval_det_derivative_strict_upper_display": "-0.004499754211695278",
+      "derivative_sign": "NEGATIVE throughout",
+      "number_of_5x5_roots_inside_bracket": "EXACTLY ONE",
+      "unique_root_simple": true,
+      "efficient_alpha_Fisher_at_root": "EXACT ZERO"
+    },
+    {
+      "id": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "full_5x5_det_left_sign": "NEGATIVE",
+      "full_5x5_det_right_sign": "POSITIVE",
+      "whole_interval_nuisance_rank4_minor": "X last four raw shells",
+      "whole_interval_minor_strict_lower_display": "-0.000004681082630098092",
+      "whole_interval_minor_strict_upper_display": "-0.000004681073316799543",
+      "whole_interval_det_derivative_strict_lower_display": "0.002281386555463041",
+      "whole_interval_det_derivative_strict_upper_display": "0.002281619040107706",
+      "derivative_sign": "POSITIVE throughout",
+      "number_of_5x5_roots_inside_bracket": "EXACTLY ONE",
+      "unique_root_simple": true,
+      "efficient_alpha_Fisher_at_root": "EXACT ZERO"
+    }
+  ],
+  "positive_control": {
+    "alpha": "1/20",
+    "full_5x5_det_strict_negative": true,
+    "full_det_approx": "-1.01982558972244190127e-5",
+    "previous_M15_ROT013_agreement": true
+  },
+  "secondary_owner_state": {
+    "Geeky_ROT022": "source-function period subgroup 16 at alpha0, two for all real positive alpha up to .2; REC12 ROT001 independent PASS_WITH_GUARDS",
+    "Geeky_ROT023_alpha0_symmetry_and_Fisher_jump": "not independently reviewed in M15 ROT015"
+  },
+  "provenance": {
+    "actual_new_source_python_sha256": "86b8c16b0b2725a8574b2a8cafe2f6de968e230078b377f7dbd980ffac7d65b6",
+    "actual_full_directed_result_json_sha256": "04da5bf405ce00c674713b40e59abb2a1b4383a6c4e1e08563cdd003e43b67f0",
+    "user_local_complete_zip": "IW_M15_ROT015_TWO_SIMPLE_SOURCE_ALPHA_FISHER_ZEROS_INDEPENDENT_IV55_REPRO_001_20261115.zip",
+    "zip_sha256": "382bef84ead1a9fbc5b58a1a9bfdda8d9510b6e7c644ef63264cb60ad0b804e8",
+    "zip_size_bytes": 14574,
+    "zip_crc": "PASS",
+    "sha256_payload_manifest": "6/6 PASS",
+    "clean_isolated_python_result": "BYTE-IDENTICAL PASS",
+    "one_byte_source_dependency_corruption": "PRE-SCIENCE_SHA_REJECT_FAIL-CLOSED PASS",
+    "full_original_code_in_local_user_zip_not_GitHub": true
+  },
+  "limits": [
+    "This proves exactly one simple root within each TWO specified brackets only, not all roots in entire alpha interval",
+    "Source is earlier independent mathematical reimplementation of original M13 public Fourier formulas; not direct byte execution of author module or historical DTC0a",
+    "Common relative translation not original source calc input, no physical field realizability",
+    "No nonlinear source alias proof",
+    "No physical experimental noise or inverse precision measurement",
+    "No new general mathematical novelty",
+    "No BW provider ingestion",
+    "No canon or execute signature"
+  ],
+  "result": "DIFFERENT_CELL_NONBLIND_I1_TWO_BRACKETS_PASS_AND_NEW_BOTH_UNIQUE_SIMPLE_ROOT_PASS",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "claim_ceiling": "NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_PHYSICAL_UPGRADE / NO_OWNER_OVERRIDE / NO_AUTO_CASCADE"
+}
