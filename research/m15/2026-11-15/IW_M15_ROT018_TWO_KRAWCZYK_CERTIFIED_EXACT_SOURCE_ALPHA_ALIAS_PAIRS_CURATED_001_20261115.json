@@ -1,0 +1,76 @@
+{
+  "artifact_id": "IW_M15_ROT018_TWO_KRAWCZYK_CERTIFIED_SOURCE_M13_NONLINEAR_ALPHA_ALIAS_PAIRS_001_20261115",
+  "return_id": "IW_M15_ROT018_INDEPENDENT_TWO_EXPLICIT_SOURCE_ALPHA_ALIAS_PAIRS_KRAWCZYK_EXACT_EXISTENCE_001_20261115",
+  "date": "2026-11-15",
+  "exposure": "PUBLIC",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "result_class": "I1_INTERNAL_DIFFERENT_CELL_NONBLIND_ORIGINAL_M13_SOURCE_FORMULA_68_DIGIT_INTERVAL_KRAWCZYK_EXACT_NONLINEAR_ALIAS_EXISTENCE",
+  "original_source_first": "M13 original auxiliary Fourier B N41 operator; Geeky-S12 ROT023 first two alpha singularities; Geeky-S12 ROT024 first Whitney nonlinear folds. M15 first explicit rigorously certified second inverse parameters for these two fold targets.",
+  "original_source_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+  "original_25_directed_B_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+  "source_operator": "independently reconstructed exact original public M13 Fourier equations, 41 sparse B tensor modes, 1681 mode pairs, 221 differences, fixed original five observation windows, original source scalar alpha",
+  "observation_model": "F_i(b,t,alpha)=b+log(shell_i(alpha,t)); b common free log gain, t common 3D rigid translation of source inputs relative FIXED masks; BOTH nuisance families hypothetical and nonnative to frozen M13 calc()",
+  "certificate_method": "Point construction mp80, independent original recomputed source coefficients mpmath.iv68, 5D Krawczyk T(x)=x-R(F(x)-F(A)), strict T(X) subset int X and infinity contraction <1, each unique exact root within radius 1e-25 B-box",
+  "both_source_five_shell_positive": true,
+  "both_Krawczyk_all_five_interiors": true,
+  "both_alpha_B_boxes_disjoint_from_alpha_A": true,
+  "records": [
+    {
+      "fold": "FIRST",
+      "alpha_A_exact_decimal": "0.01861322133966003355903534097922321888020601616279117881063117914",
+      "alpha_B_box_center_decimal": "0.01861722141672577299600863498675349999257594838451884301788651517",
+      "alpha_B_box_radius": "1e-25",
+      "delta_alpha_approx": "0.000004000077065739436973294007530281112369932",
+      "max_interval_contraction_infinity_norm_upper_approx": 1.269538269868039e-15,
+      "original_numerical_80digit_max_log_residual_approx": 1.686751670916884e-79,
+      "unique_exact_distinct_second_solution_in_box": true
+    },
+    {
+      "fold": "SECOND",
+      "alpha_A_exact_decimal": "0.05416539905800021365821377240849411761996727323255007395123373206",
+      "alpha_B_box_center_decimal": "0.05416939901330654632728114528927166347200500784664927847504904288",
+      "alpha_B_box_radius": "1e-25",
+      "delta_alpha_approx": "0.000003999955306332669067372880777545852037735",
+      "max_interval_contraction_infinity_norm_upper_approx": 2.3685117729856368e-17,
+      "original_numerical_80digit_max_log_residual_approx": 3.3735033418337674e-80,
+      "unique_exact_distinct_second_solution_in_box": true
+    }
+  ],
+  "source_spatial_fft_independent_check": {
+    "method": "float64 41x41x41 literal spatial inverse FFT, not same q pair window polynomial",
+    "max_absolute_five_log_difference_first": 0,
+    "max_absolute_five_log_difference_second": 3.552713678800501e-15,
+    "strictly_diagnostic_not_exact_proof": true
+  },
+  "package": {
+    "local_user_zip": "IW_M15_ROT018_TWO_EXACT_NONLINEAR_SOURCE_ALPHA_ALIAS_PAIRS_KRAWCZYK_REPRO_001_20261115.zip",
+    "zip_bytes": 28863,
+    "sha256": "5a70d1a377c65975cde1c1dad6e77455d1044a544674c3cef6e9090f4173e71a",
+    "zip_crc": "PASS",
+    "manifest_member_sha256": "12/12 PASS",
+    "source_formula_sha256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e",
+    "numerical_constructor_sha256": "1bfafef17ca4727a27dd6acf00e0fb74ed054a61517de8aae534ba3a6b55b21c",
+    "numeric_full_json_sha256": "44f8e325ebefa4667ca44373793a5e127d68314fe2b7cc7c3d9c184848b0651e",
+    "interval_Krawczyk_verifier_sha256": "4682afc107776da13bdd0727f98594ff2b7a23cbcc10805010d22598c40e5c56",
+    "interval_full_json_sha256": "d612eb3d1b76849d5a9d181796a8155e858d419992ede52eb12aa7fb84eed4db",
+    "spatial_fft_script_sha256": "1a22847411517e3daa14cf30d41d9708856e393a7dccbdd109f1d38be12f7a66",
+    "fft_json_sha256": "e240c116ec872e1e513cf73c9424255c4c46f8d29c96487cb415cf876082ff1a",
+    "three_clean_isolated_replays": "BYTE_IDENTICAL_ALL_THREE",
+    "three_mutation_controls": "FAIL_CLOSED_ALL_THREE",
+    "full_exact_original_scripts_only_in_user_local_zip": true
+  },
+  "ceilings": [
+    "This certifies exact existence of two disjoint-numeric alpha alias solutions, not physical apparatus or original native source execution",
+    "One exact finite-decimal A parameter and one rigorously existent B inside tiny box for each example, not both independently given as algebraic closed forms",
+    "No full original dtc0a_runtime_v0_3_1.py historical byte identity",
+    "No common translation/gain native physical parameter admission",
+    "No global inverse classification or count of all folds",
+    "No measured Gaussian noise, statistics or science novelty",
+    "No outside I3 blind review",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_BW_INGEST_RECEIPT",
+    "NO_TASK_CASCADE"
+  ]
+}
