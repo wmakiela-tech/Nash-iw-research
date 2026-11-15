@@ -1,0 +1,135 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT025_EXPLICIT_SOURCE_INVERSE_PAIR_NUMERIC_AND_INDEPENDENT_CHECKS_RESULTS_001_20261116",
+  "source_execution_date": "2026-11-15",
+  "publication_date": "2026-11-16",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source": {
+    "M13_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_B25_original_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "N": 41,
+    "channel": "B",
+    "five_fixed_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "five_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "prior_ROT023_root_cert_json_sha256": "5e91efefdad0083c994ae9483975b4e21d2fa13f58ec66956a0c9e25ca0e184f",
+    "prior_ROT024_fold_cert_json_sha256": "45121308da875f70cb7a86d5968fb2f32905c09164f0a41327bbef5acc4ab25e",
+    "original_calc_has_translation_parameter": false
+  },
+  "model": "Five raw log-shell source observables F_i=b+log S_i(alpha,t), fixed original spatial masks, hypothetical common field translations t and common positive gain c=exp(b)",
+  "witness_precision": "mpmath 68decimal; native B coefficient interval reconstruction 62decimal; independent native window recomputation 70decimal",
+  "numerical_witnesses": [
+    {
+      "id": "r1",
+      "source_fold_alpha_center_display": 0.018615221339660034,
+      "left": {
+        "alpha": "0.0186148213396600335590353409792232188802060161627912",
+        "t": [
+          "-0.00000778225458158833577064401259866156483159837071785189",
+          "-0.0000276553357584516675383726296093774529527246820593612",
+          "0.0000149965949402857031665203038121767349605942787794907"
+        ],
+        "b": "0"
+      },
+      "right": {
+        "alpha": "0.0186156213427424614691284281534607900091587306476119",
+        "t": [
+          "0.00000778231454518030711969937224756041281441669287265473",
+          "0.0000276555488696852192251752308685569326618140062000414",
+          "-0.0000149967104671544312487001119755171372928351675129528"
+        ],
+        "b": "-0.0000127204031514073109131846891460721599771351011337266",
+        "common_gain_c": "0.99998727967775257781212059430682803350573733659571"
+      },
+      "alpha_separation": "0.0000008000030824279100930871742",
+      "original_numeric_inverter_max_abs_log_shell_residual_display": 1.1671522835528931e-52,
+      "independent_original_native_iv70_max_abs_log_shell_residual_upper_display": 2.844267241917431e-52,
+      "independent_spatial_FFT_max_abs_log_shell_residual_display": 3.552713678800501e-15
+    },
+    {
+      "id": "r2",
+      "source_fold_alpha_center_display": 0.054167399058000214,
+      "left": {
+        "alpha": "0.0541669990580002136582137724084941176199672732325501",
+        "t": [
+          "-0.0000323159362866261605777574381319697702862176287172091",
+          "-0.000141459393120062988150269512800088100361497416362191",
+          "0.0000497188991107618079133032352179237581320108968454496"
+        ],
+        "b": "0"
+      },
+      "right": {
+        "alpha": "0.0541677990561201137563223643106130371111032022645199",
+        "t": [
+          "0.000032315781038234426533875547630242257166963568352413",
+          "0.000141458720043519656385261432022852854127237797236232",
+          "-0.0000497186618422671894615185116342786738376396569238091"
+        ],
+        "b": "-0.0000197337331264787386845194620160198764774816173757915",
+        "common_gain_c": "0.999980266461582352035383486063699765361915735363409"
+      },
+      "alpha_separation": "0.0000007999981199000981085919021",
+      "original_numeric_inverter_max_abs_log_shell_residual_display": 2.5069870388526e-53,
+      "independent_original_native_iv70_max_abs_log_shell_residual_upper_display": 1.671188350733837e-51,
+      "independent_spatial_FFT_max_abs_log_shell_residual_display": 3.552713678800501e-15
+    }
+  ],
+  "interpretation": {
+    "original_author_ROT024_source_strict_fold_theorem": "Analytically ensures mathematical exact local double-preimage existence, pending independent reviewer",
+    "new_ROT025_finite_decimal_coordinates": "Approximate, high-precision numeric output values, exact equality of printed decimal values FALSE in general",
+    "independent_source_directed_iv70_intervals_contain_zero": "NOT CLAIMED; in fact often sign-definite due to decimal truncation",
+    "all_five_native_residual_magnitudes_lt_1e_minus44": true,
+    "original_historic_DTC0a_runtime_byte_identical": false,
+    "actual_physical_noise_or_translation_evidence": false
+  },
+  "reproducibility": {
+    "user_archive": "Geeky_S12_ROT025_explicit_two_near_fold_inverse_pairs.zip",
+    "archive_bytes": 31380,
+    "archive_sha256": "c76f5b4a11740bdffe6f3b5dc854613253096cd099110e74e0783885c4618469",
+    "archive_file_count": 14,
+    "manifest_payload_count": 13,
+    "ZIP_CRC": "PASS",
+    "manifest_SHA256": "13/13 PASS",
+    "all_archive_members_byte_equal_local_source": "14/14 PASS",
+    "executed_inverse_python_sha256": "73053ca3e79ad6255f5237e6bd09490da3faecd356491ca689e4c196e1ea4ccd",
+    "complete_inverse_results_json_sha256": "306bd1f504f33a710e54a8c9eaa2c7548a890863b54851ec050a40fc0df312ee",
+    "independent_source_native_py_sha256": "b72482760e490641fa47c379f2a05b266d9b1e29f8c0db1ba60ae591de11eb38",
+    "native_iv70_result_sha256": "a1e65c06ff1fc6796184d2c9d84a1a9eb2e321b421c350b8a52db3f97776f139",
+    "spatial_fft_script_sha256": "bbf10f232361b327346c2770f05e4acf334bec2432186ca71fd43220d29b6288",
+    "spatial_fft_result_sha256": "4389c09b51c37493c0e229212131ff22c18adf06cd4f11d475f3f98b77f53749",
+    "clean_replay_receipt_sha256": "fdb4bf77e32371e573fee4df582e28649fffa6ff279d0362428f55780a48442e",
+    "all_three_complete_clean_replay_json_byte_identical": true,
+    "five_adversarial_source_and_witness_mutation_tests_pass": true,
+    "current_turn_native_iv70_reexecution_sha256_same": true
+  },
+  "peer_status": {
+    "M15_ROT015": "I1 independent ROT023 2 roots plus exactly one simple root in EACH original tiny bracket",
+    "M15_ROT016": "I1 independent prior ROT023 alpha0 reflection information jump",
+    "AUD2_ROT015": "I1 independent prior ROT023 root and alpha0 review",
+    "ROT024_new_fold_Hessian": "AUTHOR_RESULT / independent reviewer PENDING",
+    "ROT025_explicit_numeric_pairs": "AUTHOR_NUMERIC_RESULT / different-cell reviewer PENDING",
+    "KN14_BW_ingest": "NOT_VERIFIED",
+    "M15_owner_adoption": "NOT_VERIFIED"
+  },
+  "public_report_commit": "e4cbcd66865098be4ffcda27f9cd2ea55426b4fa",
+  "claim_ceiling": [
+    "ORIGINAL_M13_AUXILIARY_ONLY",
+    "HYPOTHETICAL_SOURCE_TRANSLATIONS_AND_GAIN",
+    "NUMERIC_FINITE_DECIMAL_APPROXIMATIONS_NOT_EXACT_COORDINATE_EQUALITIES",
+    "HISTORICAL_DTC0A_PRODUCER_BYTES_MISSING",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
