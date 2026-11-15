@@ -1,0 +1,78 @@
+{
+  "artifact_id": "IW_XH_S6_ROT020_ORIGINAL_7P6MG_GRAVITY_YUKAWA_POINTMASS_TOY_CERT_001_20261115",
+  "date": "2026-11-15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "from_cell": "IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_05 / XH-S6",
+  "return_id": "IW_XH_S6_ROT020_GRAVITY_7P6MG_ORIGINAL_AUTHOR_SOURCE_AND_YUKAWA_NONIDENTIFIABILITY_GATE_001_20261115",
+  "original_author_paper": "An, Tan, Dong et al., Nature Communications, 2026-10-07",
+  "original_paper_doi": "10.1038/s41467-026-78187-4",
+  "source_evidence": "ORIGINAL_PUBLISHER_PUBLISHED_ABSTRACT_AND_PUBMED_METADATA_ONLY",
+  "source_full_article_and_supplement_retrieved": false,
+  "source_raw_torque_data_retrieved": false,
+  "source_original_reported": {
+    "mass_piece_mg": 7.6,
+    "reported_separation_range_mm": [
+      0.654,
+      1.554
+    ],
+    "maximum_force_uncertainty_2sigma_aN": 50,
+    "G_m3_kgminus1_sminus2": 6.67e-11,
+    "G_one_sigma_m3_kgminus1_sminus2": 3.5e-12,
+    "relative_one_sigma_percent": 5.247376311844078,
+    "reported_consistency": "NEWTONIAN",
+    "author_says_yukawa_constraints": "YES_NO_DIGITAL_CURVE_RETRIEVED"
+  },
+  "toy_NOT_EXPERIMENTAL": {
+    "masses_kg": [
+      0.0000076,
+      0.0000076
+    ],
+    "point_radii_m": [
+      0.000654,
+      0.001554
+    ],
+    "note": "These are invented POINT RADII numerically matching published separation endpoints; not original experiment center distances, source silicon geometric force, torsion harmonic or measured force.",
+    "newton_F_short_N": 9.007360023941119e-15,
+    "newton_F_long_N": 1.595331680273765e-15,
+    "potential": "V=-G*m1*m2/r*(1+alpha*exp(-r/lambda))",
+    "force": "F=G*m1*m2/r^2*(1+alpha*(1+r/lambda)*exp(-r/lambda))",
+    "q_1mm_short": 0.8600167584123111,
+    "q_1mm_long": 0.5399173307270658,
+    "q_10mm_short": 0.997952414669579,
+    "q_10mm_long": 0.989106374375755,
+    "alpha_lambda_curve_FROM_ORIGINAL_EXPERIMENT": "NOT_COMPUTABLE_WITH_ABSTRACT_ONLY",
+    "long_range_identifiability": "lim(lambda->infinity) q(r,lambda)=1; G and alpha degenerate in point force normalization"
+  },
+  "executed_verification": {
+    "math_checks_analytic_force_vs_independent_potential_central_difference": 56,
+    "max_rel_error": 2.1897214073582287e-10,
+    "newton_inverse_square_identity": "PASS",
+    "long_range_limit": "PASS",
+    "clean_numerical_reexecution_byte_identical_files": 2,
+    "modified_payloads_sha_rejected": 3,
+    "original_author_model_or_experiment_run": false,
+    "user_repro_zip_filename": "IW_XH_S6_ROT020_GRAVITY_7P6MG_YUKAWA_SOURCE_GATES_REPRO_20261115.zip",
+    "user_repro_zip_bytes": 15688,
+    "user_repro_zip_sha256": "165ccc4a4be3de4ded9bafe76cf66a5452e3478f5d0ece93825081e213688824",
+    "zip_crc": "PASS",
+    "zip_payload_sha256": "6_OF_6_PASS",
+    "clean_zip_extracted_replay": "PASS"
+  },
+  "negative_knowledge": [
+    "50 aN is not source residual and cannot be divided by toy point force to claim experimental alpha bounds",
+    "Milligram-scale classical force is not a quantum gravity or entanglement witness",
+    "There is no verified NASH mg-scale predicted alpha(lambda) or finite-torque kernel in the consulted sources",
+    "No quantitative NASH bridge without original published source data/geometry and theory-provided, predeclared delta-torque observable"
+  ],
+  "custody": "GITHUB_PENDING_BW_INGEST",
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_EXPERIMENTAL_ALPHA_LIMIT",
+    "NO_NASH_BRIDGE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
