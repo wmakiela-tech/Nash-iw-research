@@ -1,0 +1,97 @@
+{
+  "artifact_id": "IW_MT15_ROT025_ORIGINAL_WUXU_J22_FLAT_COSMIC_TIME_A_SQUARED_SOURCE_CURATED_RESULTS_001_20261115",
+  "origin_cell": "IW_MT_SUCCESSOR_14 / MT15",
+  "created_at": "2026-11-15",
+  "exposure": "PUBLIC",
+  "original_source": {
+    "author": "Wu-Xu JCAP 02 (2026) 063",
+    "commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+    "main_scan_git_blob": "b368ba55d5a493f7bc185909730f7fe5691f10d6",
+    "thermodynamic_1000row_git_blob": "93f2494f026c5d0587ea40fe08bb938dd9d01fa8",
+    "thermodynamic_original_first_csv_literal": "0.01400298972685787,3.3654513231275924,3.9120400850273933",
+    "inverse_lookup_source_git_blob": "0437c032bdc4bafca6cb634c0db4cd2c46fb7efc"
+  },
+  "original_native": {
+    "owner": "Mech-S9",
+    "actions_run": 43436800793,
+    "artifact_id": 14045176436,
+    "source_zip_original_SHA256": "71db406d971a7ca19416b19766f32c312df2e1f6c96668b544b6efb1fd47f486",
+    "source_csv_10000x19_SHA256": "45a65a1a079abed48102907b09ac8dc90f0fb731f1c2aaf6e7b55e199b5549f1",
+    "original_16_source_member_hashes": "16/16 PASS",
+    "source_dense_output_not_integrator_accepted_steps": true
+  },
+  "mathematical_source_exact_theorem": "For original PBH-off RHS and original constant-g_rho,g_s table branch, q_rho=q_s=0 and dlnrho_SM/dlna=-4, H=sqrt(rho/(3 M_Pl^2)) so H∝a^-2, dt/dln a=1/H so t(a)=C0+C1*a². All positive-length source time-over-a² secants must match; no clock constants need fitting.",
+  "domain": {
+    "saved_row_index_1based": [
+      9860,
+      9878
+    ],
+    "sample_rows_inclusive": 19,
+    "temperature_MeV": [
+      "0.0129638469638243",
+      "0.0138928716885572"
+    ],
+    "original_inverse_T_node18_MeV": "0.013936192742241425",
+    "original_thermo_first_T_MeV": "0.01400298972685787",
+    "original_inverse_min_T_MeV": "0.01",
+    "g_rho_g_s_exactly_constant_source_branch": true,
+    "source_inverse_LUT_exact_pure_radiation_branch": true,
+    "saved_nPBH_zero_all": true,
+    "original_six_effective_floor_flags_count": 114,
+    "frozen_source_mass_g": "1.47268711730633"
+  },
+  "three_actual_native_source_rows": {
+    "9860": {
+      "a": "2.90729827061021e+16",
+      "t_seconds": "6851.11890492934",
+      "T_MeV": "0.0138928716885572"
+    },
+    "9869": {
+      "a": "3.00966834295537e+16",
+      "t_seconds": "7341.04064367485",
+      "T_MeV": "0.0134203223845773"
+    },
+    "9878": {
+      "a": "3.11564300992293e+16",
+      "t_seconds": "7865.98861017159",
+      "T_MeV": "0.0129638469638243"
+    }
+  },
+  "actual_Decimal95": {
+    "D1_s_per_a2": "8.0882502783417736921236310432824073128022623656138355904116865004838361296235165407637523122891E-30",
+    "D2_s_per_a2": "8.0869736541043260877711961648135469886946739211998437781534935841355645281717504091477356060360E-30",
+    "D1_div_D2_minus_1": "0.0001578618024555685350049218295151688222282056966847233802314361979217425826608157735458980421",
+    "printed_source_last_digit_half_step_conservative_lower": "0.0001578618022240240844452562998328525609403622410409964752097977458063142359633386917495864582",
+    "printed_source_last_digit_half_step_conservative_upper": "0.0001578618026871129855646415480178760562074641290937221201306414868761361119383451069189034455",
+    "printed_decimal_rounding_can_explain_zero": "NO",
+    "all_18_adjacent_slopes_peak_to_peak_over_median": "0.00025045580857558028470974151894951338937592467739070013325619261941688322826185795626038919072088",
+    "late_9900_10000_all_100_adjacent_slopes_peak_to_peak_over_median": "0.0000078514944954424094027739794653876138623548044968408493309561308037045610097363918206156408328695",
+    "same_source_9860_vs9878_aT_ratio_minus1_KN14_prior": "6.58419104799492792676275304634661131484537128024573084375736848455061410762532466340309E-8"
+  },
+  "source_firstness_note": "Wu-Xu exact continuum source radiation math prior art; Mech-S9 actual original native j22 Julia first; KN14 ROT006 earlier aT 19row printable negative first; MT15 only source saved cosmic clock t(a²) negative.",
+  "executed_controls": {
+    "original_provider_zip_and_16_inner_members": "PASS",
+    "original_10000csv_source_sha": "PASS",
+    "source_producer_Decimal_digits": 95,
+    "synthetic_exact_t_C0_plus_C1_a_squared_controls": 2500,
+    "source_decimal_print_box_random_tests": 2000,
+    "source_zip_one_byte_tamper": "FAIL_CLOSED_PASS",
+    "standalone_new_clean_temp_dir_original_result_JSON_byte_identical": "PASS",
+    "standalone_new_clean_temp_dir_verifier_JSON_byte_identical": "PASS",
+    "ZIP_outer_CRC": "PASS",
+    "ZIP_payload_SHA256": "6/6 PASS"
+  },
+  "local_conversation_bundle": {
+    "filename": "mt15_rot025_original_native_flat_cosmic_clock_invariant_20261115.zip",
+    "size_bytes": 724450,
+    "SHA256": "772510eb2583dd26bb79220f0111a38d142b46fd579f7c0387ff2f60b93591aa",
+    "source_code_sha256": "2f8a1c6c87ef95e8e6f72da776891addaa07b2c3867b10adc29283002ba4be67",
+    "result_JSON_sha256": "e78d34e782f23ad24c421ffa25d3fa048623b3326c5d6173204a4d4377645b19",
+    "separate_verifier_sha256": "14c10bc286ffc3541827cf6e0ad20363cac159e73f775949297da4469ee4ec40",
+    "includes_entire_original_1000row_thermo": false,
+    "full_1000row_source_first_node_verified_via_connected_GitHub": true,
+    "original_native_10000x19_ZIP_included": true,
+    "remote_GitHub_binary_zip_uploaded": false
+  },
+  "claim_ceiling": "RECORDED_NATIVE_EXACT_ODE_INVARIANT_NUMERIC_FAIL_NOT_THEOREM_FAIL / NO_ACTUAL_SOLVER_OR_DENSE_OUTPUT_ROOT_CAUSE / MUCH_LATER_THAN_T0 / NO_NATIVE_FRESH_JULIA / NO_PHYSICAL_Yp_BBN_PBH / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / BW_PENDING"
+}
