@@ -1,0 +1,105 @@
+{
+  "artifact_id": "IW_XH_S6_ROT023_16FOLD_SYNTHETIC_TORQUE_SOURCE_AND_INDEPENDENT_NUMERIC_CERT_001_20261116",
+  "date": "2026-11-16",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "original_science": "An et al Nature Communications 2026-10-07 DOI 10.1038/s41467-026-78187-4",
+  "source_evidence": "ORIGINAL_PUBLISHER_ABSTRACT_AND_PUBMED_ONLY",
+  "original_full_manuscript_SI_torque_data_access": "NOT_RETRIEVED",
+  "claim_ceiling": "ARTIFICIAL_COAXIAL_16POINT_SOURCE_RING_7P6MG_PER_SOURCE_ONE_POINT_TEST_7P6MG_NOT_AN_REAL_APPARATUS",
+  "pre_data_prereg_commit": "8bc7708f1f380aa726dba1f900c6500edbbd5be1",
+  "pre_data_fourier_sign_correction_commit": "5ca00fece0feb629ba77e866a96880fbb992b4d3",
+  "invented_ring_radii_mm": [
+    1,
+    2,
+    3
+  ],
+  "invented_axial_gaps_mm": [
+    0.654,
+    1.554
+  ],
+  "invented_source_count": 16,
+  "mass_each_source_and_test_kg": 0.0000076,
+  "ring_harmonic": "b16=(2/M) sum tau_z(psi)*sin(16psi)",
+  "tau_yukawa": "tau=G m² R² sum sin(theta)/s³ [1+alpha(1+s/lambda)exp(-s/lambda)]",
+  "toy_shape": "Q16(d,R,lambda)=b16Y/b16N; C16=Q16(d1)-Q16(d2)",
+  "numeric_optima": [
+    {
+      "R_mm": 1,
+      "lambda_opt_mm": 0.19678295643862506,
+      "shape_contrast_peak": 0.35602473505648957
+    },
+    {
+      "R_mm": 2,
+      "lambda_opt_mm": 0.26206503928207486,
+      "shape_contrast_peak": 0.3093460041305078
+    },
+    {
+      "R_mm": 3,
+      "lambda_opt_mm": 0.31591951463314744,
+      "shape_contrast_peak": 0.29383389872579857
+    }
+  ],
+  "old_point_force_toy_separate_observable_optimum_mm": 0.5199425829432219,
+  "both_toys_different_observables": true,
+  "R2_gap0p654_Newton_b16_Nm": 9.130688895997929e-19,
+  "R2_gap1p554_Newton_b16_Nm": 5.69386e-22,
+  "R2_near_gap_Newton_b32_div_b16": 0.007817942,
+  "continuum_source_mass_negative_control": {
+    "smeared_point_count": 1024,
+    "same_total_mass_as_16sources": true,
+    "b16_Nm": -8.449514984225898e-35,
+    "abs_ratio_to_discrete_16fold": 9.253973145366287e-17
+  },
+  "independent_checks": {
+    "M_phase_grids": [
+      4096,
+      8192,
+      16384
+    ],
+    "max_relative_grid_discrepancy": 3.07353868801103e-10,
+    "max_relative_signed_Fourier_vs_potential_error": 4.489315523647033e-8,
+    "naive_float64_gradient_max_relative_error": 0.13600098854959086,
+    "naive_float64_gradient_status": "FAIL_CATASTROPHIC_CANCELLATION_PRESERVED",
+    "independent_high_precision_decimal_digits": 70,
+    "direct_high_precision_potential_derivatives": 72,
+    "high_precision_potential_derivative_max_relative_error": 1.6784488401166282e-62,
+    "independent_one_source_70digit_Fourier_integrals": 12,
+    "independent_one_source_Fourier_max_relative_error": 9.111545760161283e-10,
+    "periodicity_max_abs_torque_Nm": 1.5869662741750823e-31,
+    "large_lambda_max_Q16_error": 7.038813976123492e-14,
+    "local_clean_replay_byte_exact_numeric_files": 7,
+    "tampered_input_fail_closed_tests": 2,
+    "archive_CRC": "PASS",
+    "archive_SHA256_payloads": "15_OF_15_PASS"
+  },
+  "local_user_zip": {
+    "filename": "IW_XH_S6_ROT023_16FOLD_TORSION_HARMONIC_REPRO_20261116.zip",
+    "bytes": 31900,
+    "sha256": "8f1686663764641de7fe8fe57c28e230ded6041b98ff03e4902e135531547f6b",
+    "manifest_sha256": "8e0e66c930fa5ab9b758312d55ca2bdd6d360a305fc6e344e1310e1d9e025fdf"
+  },
+  "repro_sources": {
+    "report_commit": "aba634828f54c0e86dd7a7fba0498595105a103c",
+    "report_git_blob": "bf0834ceeac6347180c1f93b7c31ff98882b377a",
+    "public_replayer_commit": "0014e69b3e6edd80da3b8ef618a247792d9247e0",
+    "public_replayer_blob": "da837bb59fdc5ab186af607996603a08ca9a404d",
+    "public_workflow_commit": "0b66e17c94d31244b5434c54c03d7500259b3b07"
+  },
+  "negative_knowledge": [
+    "16 sources and R are an invented model, not independently checked original An apparatus",
+    "No original author full main body, SI, source measured torque or covariance obtained",
+    "No experimental alpha(lambda) bound or NASH source-origin delta-torque bridge",
+    "Naive low-precision derivative fails in cancellation regime and is disclosed",
+    "Not an experimental observation of nonclassical gravitational field"
+  ],
+  "guards": [
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE",
+    "NO_EXPERIMENTAL_ALPHA_LIMIT",
+    "NO_NASH_BRIDGE",
+    "NO_OWNER_TASK_CASCADE"
+  ]
+}
