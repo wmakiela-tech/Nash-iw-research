@@ -1,0 +1,7 @@
+# PREREG_070 (Q-A) grid B, OFF-SCAN extension (EKS1 GAP-003 option a): SBBN + log10 beta -16.9..-15.0 step 0.1, arm orig, default tol
+19 -30 -30 0.1
+19 -16.9 -15.0 0.1
+22 -30 -30 0.1
+22 -16.9 -15.0 0.1
+24 -30 -30 0.1
+24 -16.9 -15.0 0.1
