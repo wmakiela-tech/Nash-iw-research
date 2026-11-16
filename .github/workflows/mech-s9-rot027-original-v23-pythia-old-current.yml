@@ -1,0 +1,76 @@
+name: Mech-S9 ROT027 official BlackHawk v2.3 PYTHIA old-current numeric table comparison
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mech-s9-rot027-original-v23-pythia-old-current.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  original-v23-five-pair-source-table-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original author BlackHawk v2.3 archive admission
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot027_evidence
+          python3 -m py_compile research/mech-s9/2026-11-16/code/mech_s9_rot027_v23_pythia_current_old_numeric_comparator.py
+          URL='https://blackhawk.hepforge.org/downloader?f=blackhawk_v2.3.tar.bz2'
+          FILE=official_blackhawk_v2.3.tar.bz2
+          for i in 1 2 3; do
+            rm -f "$FILE"
+            if curl -L --fail --silent --show-error --retry 2 --retry-all-errors --connect-timeout 30 --max-time 330 -o "$FILE" "$URL"; then
+              echo "attempt=$i bytes=$(wc -c < "$FILE") sha=$(sha256sum "$FILE" | cut -d' ' -f1)" | tee -a mech_s9_rot027_evidence/STATUS.txt
+              if test "$(wc -c < "$FILE")" = 161495983 &&
+                echo 'dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  official_blackhawk_v2.3.tar.bz2' | sha256sum -c -; then break; fi
+            fi
+          done
+          test "$(wc -c < "$FILE")" = 161495983
+          echo 'dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  official_blackhawk_v2.3.tar.bz2' | sha256sum -c -
+          echo ORIGINAL_AUTHOR_TAR_IDENTITY_PASS | tee -a mech_s9_rot027_evidence/STATUS.txt
+      - name: Compare all numeric tokens of all five original PYTHIA current-old table pairs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot027_v23_pythia_current_old_numeric_comparator.py \
+            official_blackhawk_v2.3.tar.bz2 \
+            mech_s9_rot027_evidence/ORIGINAL_V23_PYTHIA_CURRENT_OLD_COMPLETE_COMPARE.json \
+            | tee mech_s9_rot027_evidence/COMPARATOR_STDOUT.txt
+          echo FULL_ORIGINAL_BBN_5_PAIR_NUMERIC_COMPARISON_PASS | tee -a mech_s9_rot027_evidence/STATUS.txt
+      - name: Fail-closed original archive and report integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          head -c 1024 official_blackhawk_v2.3.tar.bz2 > mech_s9_rot027_evidence/truncated_original.tar.bz2
+          if python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot027_v23_pythia_current_old_numeric_comparator.py \
+            mech_s9_rot027_evidence/truncated_original.tar.bz2 \
+            mech_s9_rot027_evidence/INVALID_RESULT.json; then
+            echo 'FAIL_UNSAFE_TRUNCATED_SOURCE_ACCEPTED' | tee -a mech_s9_rot027_evidence/STATUS.txt
+            exit 1
+          fi
+          test ! -e mech_s9_rot027_evidence/INVALID_RESULT.json
+          rm mech_s9_rot027_evidence/truncated_original.tar.bz2
+          echo TRUNCATED_SOURCE_REJECT_PASS | tee -a mech_s9_rot027_evidence/STATUS.txt
+          (cd mech_s9_rot027_evidence && sha256sum ORIGINAL_V23_PYTHIA_CURRENT_OLD_COMPLETE_COMPARE.json COMPARATOR_STDOUT.txt STATUS.txt > RESULT_SHA256SUMS.txt)
+      - name: Remove original source archive and extracted data from upload
+        if: always()
+        run: |
+          rm -f official_blackhawk_v2.3.tar.bz2
+          rm -f mech_s9_rot027_evidence/truncated_original.tar.bz2
+          rm -f mech_s9_rot027_evidence/INVALID_RESULT.json
+      - name: Upload derived bounded evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot027-original-v23-five-current-old-pairs-numeric-evidence
+          path: mech_s9_rot027_evidence/
+          if-no-files-found: error
