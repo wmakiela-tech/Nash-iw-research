@@ -1,0 +1,247 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT033_M13_FACE_TWELVE_NEIGHBOR_NONMONOTONE_FISHER_MACHINE_CERTIFICATE_001_20261117",
+  "date": "2026-11-17",
+  "owner": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "original_source": {
+    "M13_original_8970B_git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_7501B_B25_git_blob_SHA1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "original_module_tensor_polys_41_and_inner_window_mode_executed": true,
+    "all_five_original_shell_energies_and_twenty_analytic_source_derivatives_recomputed": true,
+    "mpmath_outward_interval_dps": 55,
+    "prior_rot031_original_source_complete_result_SHA256": "f747d07aa1bafa4f60b0bbfe1c0fda100e0517d1aa3479a19b73778a8ec91cc3",
+    "prior_rot031_spatial_complete_result_SHA256": "e44fc1d7511c8e360afe206e8b60f2cb48497043fbe39a468be22e529bdf6dd1",
+    "prior_rot032_original_source_complete_result_SHA256": "0313b0bfe50afab9aa2f27e4d47861ce8dfb311fae18010423160f8e15daf952",
+    "prior_rot032_spatial_complete_result_SHA256": "27f5f176f24d7f58984d220e071bf7c54a550a3af540f7e064f4fe7e18876962"
+  },
+  "new_face_neighbor_exact_geometry": {
+    "N": 41,
+    "original_source_sites": 68921,
+    "six_region_order": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "six_source_region_counts": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "face_twelve_neighbors": "exactly two coordinate offsets ±1 and the third 0",
+    "E_face_12_directed_integer": [
+      [
+        186804,
+        32412,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        32412,
+        31944,
+        28980,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        28980,
+        28536,
+        25740,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        25740,
+        25320,
+        22692,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22692,
+        22296,
+        19836
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19836,
+        272832
+      ]
+    ],
+    "all_row_sums": "12 * six_region_counts",
+    "full_actual_12_periodic_shifts_vs_independent_exact_nested_cube_inclusion_exclusion": "PASS",
+    "primitive_integer_indefinite_contrast": [
+      0,
+      1,
+      -1,
+      1,
+      0,
+      0
+    ],
+    "primitive_integer_quadratic_exact": -23640,
+    "actual_executable_scaled_integer_contrast": [
+      0,
+      -2,
+      2,
+      -2,
+      0,
+      0
+    ],
+    "actual_executable_quadratic_exact": -94560,
+    "not_a_generic_positive_correlation_Fisher_sign_theorem": true
+  },
+  "declared_hypothetical_source_observer": {
+    "original_M13_has_native_free_translation_gain_sixth_sensor": false,
+    "original_five_shell_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source_extension": "common rigid translation of source C1,C2,h fields relative to 5 fixed masks and one freely fitted common energy gain; target alpha and 4 nuisance parameters",
+    "sixth_mathematical_channel": "original full-domain B unmasked k0 Fourier energy, transform old5+full raw means to old5+outer mean",
+    "site_energy_noise": "Centered Gaussian RAW SITE ENERGY density errors covariance eta²(I+theta*A_face), 0<=theta<=2/5",
+    "face_site_covariance": "A_face = (1/12)*sum of all twelve one-step face diagonals",
+    "site_periodic_Fourier_eigenvalues": "[cos kx cos ky+cos kx cos kz+cos ky cos kz]/3, bounded [-1,1]",
+    "site_covariance_positive_definite_over_full_declared_theta": true,
+    "exact_six_region_raw_mean_covariance": "eta²*(D^-1+theta/12*D^-1*E_face*D^-1)",
+    "extra_independent_random_sixth_raw_full_energy_calibration": "optional Gaussian known variance (kappa*eta)^2, any finite kappa>=0; becomes outer-only raw variance eta²*(68921/18268)^2*kappa²",
+    "historical_real_noise_sensor_status": "NOT_VERIFIED"
+  },
+  "new_exact_math": {
+    "efficient_contrast": "L(t)=L0+t*H with L_outer=1 and L^T X6=0 for all 4 old nuisance scores",
+    "minimum_variance": "V(theta,kappa)=c0+c1*theta+K²*kappa²-(b0+b1*theta)^2/(a0+a1*theta)",
+    "K": "68921*g_full/(18268*outer_mean)",
+    "information": "epsilon²*I_alpha=delta_outer²/V(theta,kappa), epsilon=eta/g_full nominal",
+    "source_strictly_positive_denominator": "a0+a1*theta>0 for all theta in [0,.4]",
+    "source_strict_second_derivative": "V''(theta)=-2*(a0*b1-a1*b0)^2/(a0+a1*theta)^3<0 for all theta in [0,.4] at both folds",
+    "derivative_is_independent_of_known_finite_random_calibration_kappa": true,
+    "calibration_type_warning": "Unrestricted deterministic unknown sixth-channel log offset makes alpha information ZERO by FIRST M15 ROT022; different model"
+  },
+  "original_source_two_folds": [
+    {
+      "fold": 1,
+      "original_alpha_root_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "strict_Vprime_at_theta0": [
+        "0.000531452477175918149223014852162173902104426",
+        "0.000532687557140021392015233332520966777202102"
+      ],
+      "strict_Vprime_at_theta0p4": [
+        "0.000499440887436203359083839209560669502481188",
+        "0.000500840016404080956271452048684938310541341"
+      ],
+      "strict_continuum_Fisher_result": "STRICTLY DECREASES over every real theta in (0,0.4] for every actual old source fold root",
+      "at_kappa0p01_epsilon2_I_theta0_interval": [
+        "14.943639605475813",
+        "14.948682632881884"
+      ],
+      "at_kappa0p01_epsilon2_I_theta0p4_interval": [
+        "14.591985323998546",
+        "14.597364395266698"
+      ],
+      "spatial_midpoint_I_theta0p2": 14.765614831582772,
+      "spatial_midpoint_I_theta0p4": 14.594674612499878
+    },
+    {
+      "fold": 2,
+      "original_alpha_root_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "strict_Vprime_at_theta0": [
+        "0.000143904130967350646175222311071042039946004",
+        "0.000158874900016566021657648620030405055704047"
+      ],
+      "strict_Vprime_at_theta0p4": [
+        "-0.000753875320689731161220650924553931337174383",
+        "-0.000738915537185787760213136503778648850115314"
+      ],
+      "source_IV55_Vprime_at_theta0p062": "STRICT_POSITIVE whole alpha bracket",
+      "source_IV55_Vprime_at_theta0p070": "STRICT_NEGATIVE whole alpha bracket",
+      "source_theta_star_unique_root_entire_source_bracket": [
+        "0.062",
+        "0.070"
+      ],
+      "strict_continuum_Fisher_result": "EXACTLY ONE STRICT INTERIOR MINIMUM for real theta in (0,0.4], decreasing then increasing",
+      "spatial_midpoint_theta_star_NUMERIC_ONLY": 0.06569057409582736,
+      "at_kappa0p01_epsilon2_I_theta0_interval": [
+        "470.3347478487656",
+        "470.6009214915404"
+      ],
+      "at_kappa0p01_epsilon2_I_theta0p4_interval": [
+        "472.0083898771055",
+        "472.344785054901"
+      ],
+      "spatial_midpoint_I_theta0p2": 470.6871099439812,
+      "spatial_midpoint_I_theta0p4": 472.17652959119664,
+      "spatial_midpoint_I_at_unique_minimum_approx": 470.39790984816835
+    }
+  ],
+  "separate_spatial_numeric_validation": {
+    "actual_original_M13_41_mode_3x3_tensor_N41_cubed_inverseFFT_four_analytic_derivative_fields": true,
+    "face_edges_independently_constructed_from_six_oriented_half_shifts_plus_transposes": true,
+    "tested_cases": 36,
+    "test_grid": "2 folds x 3 adjacency classes (axis,face,body) x 3 theta (0,.2,.4) x 2 calibration kappa (0,.01)",
+    "full_nondiagonal_GLS_six_disjoint_vs_old_five_plus_full_relative_agreement": "36/36 below 2e-8",
+    "all_float_results_in_original_source_strict_IV_intervals": "36/36 PASS",
+    "same_cell_numeric_only_not_independent_external_I1": true
+  },
+  "actual_reproducibility": {
+    "user_complete_zip": "Geeky_S12_ROT033_face_diagonal_unique_Fisher_information_minimum.zip",
+    "zip_bytes": 53338,
+    "zip_sha256": "555f4a597346d180d559d72a7509bd644fb8601d9d54c698804e2370315b0e82",
+    "zip_members": 14,
+    "manifest_SHA256_payloads": 13,
+    "zip_CRC_PASS": true,
+    "all_14_members_byte_identical": true,
+    "all_13_manifest_SHA256_PASS": true,
+    "new_actually_run_source_iv55_program_sha256": "923041c708ff1c664bdd163f40629eab2b267d7e44e0a4372b3a78df47983252",
+    "full_original_source_directed_iv55_results_sha256": "e7cc34aa760b1b6936f581cc9f73eb4987ce862076edd4e88dafe870e5884bcf",
+    "new_actually_run_spatial_FFT_program_sha256": "3e68dca002e849b2cd7a2461afbb81e4d20ebce199eae8d4eaacc92adba2d1a6",
+    "full_spatial_FFT_results_sha256": "29f284320992de655fe61111c3de59c016ab24a306d93d743f72ec1c09889506",
+    "actual_replay_controller_sha256": "9a505c7407af1f88bae9c8b0797723ae4746857469f75f38923bee2fbcf11586",
+    "actual_replay_receipt_sha256": "8adf76136418e2b53b7a24bdfc637db036132ee6d7ffe905e0b831ce4d9fb9b8",
+    "two_separate_clean_scientific_Python_full_JSON_byte_replays": "2/2 PASS",
+    "eight_deliberate_one_byte_source_or_parent_mutations_rejected_before_science": "8/8 PASS",
+    "source_runnable_scripts_byte_mirror_public_GitHub": false
+  },
+  "firstness_and_ceiling": {
+    "M13": "original public source FIRST",
+    "Geeky_ROT031": "original axial source mask Fisher monotonic decrease FIRST",
+    "Geeky_ROT032": "original body diagonal source mask Fisher monotonic increase FIRST, independent M15 ROT026 I1 reviewed",
+    "M15_ROT026": "FIRST mixed axial/body lambda source thresholds, 55% body opposite fold signs, independent I1 prior Geeky ROT031/032",
+    "Geeky_ROT033": "FIRST remaining face diagonal new source nonmonotone UNIQUE second-fold Fisher minimum, author same-cell independent different-cell I1 PENDING",
+    "KN14_BW_native_receipt": "NOT_VERIFIED",
+    "M15_CANON_EXEC_SIGN": "NOT_VERIFIED",
+    "ceilings": [
+      "NO_HISTORIC_FULL_DTC0a_RUNTIME_BYTES",
+      "NO_SOURCE_NATIVE_RIGID_SHIFT_GAIN_OR_PHYSICAL_SIXTH_SENSOR",
+      "NO_EMPIRICAL_SITE_NOISE_COVARIANCE_OR_CALIBRATION",
+      "NO_GLOBAL_ALPHA_INJECTIVITY",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "public_full_report_commit": "06b0258decbb78772206fcf63a3e3856edb83fa4"
+}
