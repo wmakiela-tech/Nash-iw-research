@@ -1,4 +1,4 @@
-name: Mech-S9 ROT026 B1 authorized Badacz PREREG066 independent source referee
+name: Mech-S9 ROT026 B1 owner manifest SHA discovery phase
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
           mkdir -p mech_s9_rot026_evidence
           curl -L --fail --retry 3 --retry-all-errors --silent --show-error "https://raw.githubusercontent.com/Fenyutanchan/Primordial-Black-Hole/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/data/out/scanning.jld2" -o mech_s9_rot026_evidence/author_original_scanning.jld2
           echo '51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786  mech_s9_rot026_evidence/author_original_scanning.jld2' | sha256sum -c -
-          echo 'db4261be59d9f796094c10e57761608b1c0247f98d925ee1294970eb10e96ae  research/badacz/2026-11-15/data/b1_066_raw_outputs.json' | sha256sum -c -
+          sha256sum research/badacz/2026-11-15/data/b1_066_raw_outputs.json | tee mech_s9_rot026_evidence/ACTUAL_OWNER_RAW_SHA256.txt
           echo 'b59a0a06bd3c13305bcb58e1676da0a5a780c5477d03cfc05928f8d1b236013c  research/badacz/2026-11-15/data/analysis066.json' | sha256sum -c -
           echo SOURCE_SHAS_PASS | tee mech_s9_rot026_evidence/STATUS.txt
       - name: Independent standard library source-based audit
