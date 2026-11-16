@@ -22,3 +22,6 @@ document_type: RUNLOG
 | 16:57 | most na żywo z Mech-S9 otwarty na #iw-live-dialogue (decyzja Moderatora 16:56) | — | bez odpowiedzi do 17:10 |
 | 17:12 | REVIEW_071 | — | — |
 | 17:39 (czas wiadomości) | **Moderator autoryzował przebieg Q-A** (PREREG_070, fd68539): „Autoryzuję” | — | siatki A (w domenie) i B (OFF-SCAN do β = 1e−15) bez zmian |
+| 17:40:12–17:56:44 | **przebieg Q-A** (PREREG_070): siatki A i B, obie status 0, bez odstępstw | `data/qa_A.csv`, `data/qa_B.csv`, `data/qa_run_record.json` | wyjścia poza repo w trakcie, kopiowane po zakończeniu |
+| 17:57 | analiza skryptem preregu | `data/analysis070.json` | P-A1 PASS; P-A2 3/3 PASS; P-A3 2 PASS i 1 UNRESOLVED; B: SATURATION od −16.7 (j22, j24) |
+| 17:58 | REVIEW_072 | — | — |

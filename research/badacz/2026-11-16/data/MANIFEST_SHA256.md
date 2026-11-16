@@ -8,7 +8,7 @@ origin_cell: BADACZ (wątek Claude)
 document_type: MANIFEST
 ---
 
-# SHA-256 (PREREG_069 / REVIEW_071 / PREREG_070); ścieżki względem `research/badacz/2026-11-16/`
+# SHA-256 (PREREG_069 / REVIEW_071 / PREREG_070 / REVIEW_072); ścieżki względem `research/badacz/2026-11-16/`
 
 ```
 1a9d5aafeca14a4c2729572157b6463dc4926c5c526f999116dcbb223487f1f7  code/b1_qa_070_analysis.py
@@ -21,7 +21,12 @@ ca353c65f6cd17d69c3eaee93d4ab5b13e97f3c0187274e4701c613390390ddd  code/cfg069_or
 c71c398d92a2e6423216b97becb21f46baceefb7127499e5cc67dd8b2998f9d7  code/cfg070_A_indomain.dat
 bec1570e16be9d2af43398423b7d06a3700665c1ba19eed584edf6f0aafc522f  code/cfg070_B_offscan.dat
 a78f99cae3130af2b926c1802354100d40cf163ac58bfaab7fe3d1660210d4ac  code/run069.sh
+fe9dcb41814ceac5f4291e4c6689c577060938e01210d57f4a2226caf70ac862  code/run070.sh
 9d9a6e8543c4f35aaf2b2effc2ae39d7d89698686c00f4bb06ad0935b1aad9a7  data/analysis069.json
+72c0925bbf0f9ba3f39b09edab4a63003db0fac9492ccb22575325a95d3f5db4  data/analysis070.json
+0d7922b78ffe07dd85bbc462324dbf1d9ae6a4fdcc3040d0cf643a08af3f9d56  data/qa_A.csv
+7b25eb8728d0f4c449631ca0035d96ef6ed820d5b4a3b8f2014497a8e6d083cd  data/qa_B.csv
+1ed1a26abb8874784fcc5c04297a03cf151ba3f4e1f8ca9714ddd50e2317cade  data/qa_run_record.json
 249a95140230972705f8d4db09835749019a7fa7a0db2f644f1b169346510220  data/t2_e5_1e-4.csv
 19cea92972c00f160a627313b017ad3a679ba177ea4389d40b614ba69bdb42b8  data/t2_e5_default.csv
 372ca15a53459ba4bc1c19c82e310a8fa2a53c1df89346d4630804a35580ec5c  data/t2_orig_1e-4.csv

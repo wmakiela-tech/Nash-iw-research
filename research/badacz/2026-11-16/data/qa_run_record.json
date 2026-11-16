@@ -1,0 +1,50 @@
+{
+ "note": "PREREG_070 (Q-A) run statuses, timeline and filtered logs; CSV outputs are separate files in data/",
+ "grids": {
+  "A": {
+   "status": 0,
+   "csv_sha256": "0d7922b78ffe07dd85bbc462324dbf1d9ae6a4fdcc3040d0cf643a08af3f9d56",
+   "log_sha256": "d91a78a9fd12e155a18813e392c7ced32286971b7afd79f5b85752369741b63d",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz069_prefix_227.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz069_prefix_227.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "DONE orig default 192"
+   ]
+  },
+  "B": {
+   "status": 0,
+   "csv_sha256": "7b25eb8728d0f4c449631ca0035d96ef6ed820d5b4a3b8f2014497a8e6d083cd",
+   "log_sha256": "6df1c961ca7eb638069e01a2200de60d1459cf832592c16b85b7981832ccc80b",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz069_prefix_230.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz069_prefix_230.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "DONE orig default 63"
+   ]
+  }
+ },
+ "timeline": [
+  "START A 16 17:40:12",
+  "START B 16 17:40:12",
+  "END B rc=0 16 17:46:31 wall=379s",
+  "END A rc=0 16 17:56:44 wall=992s",
+  "ALL_DONE ok=2/2 16 17:56:44"
+ ]
+}
