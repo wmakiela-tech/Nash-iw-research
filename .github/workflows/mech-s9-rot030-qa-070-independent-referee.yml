@@ -1,0 +1,73 @@
+name: Mech-S9 ROT030 B1 QA070 independent pure Python source referee
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/mech-s9-rot030-qa-070-independent-referee.yml
+
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify pinned Badacz original QA source and independently redo 255-sample 5-window all slopes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot030_qa_evidence
+          git rev-parse HEAD | tee mech_s9_rot030_qa_evidence/REFEREE_HEAD_COMMIT.txt
+          python3 -m py_compile research/mech-s9/2026-11-16/code/mech_s9_rot030_qa_prereg070_independent_stdlib_referee.py
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot030_qa_prereg070_independent_stdlib_referee.py \
+            research/badacz/2026-11-16 \
+            mech_s9_rot030_qa_evidence/ROT030_QA070_INDEPENDENT.json \
+            | tee mech_s9_rot030_qa_evidence/INDEPENDENT_STDOUT.txt
+          echo ROT030_ORIGINAL_OWNER_SOURCE_255_CSV_5WINDOW_REFEREE_PASS | tee mech_s9_rot030_qa_evidence/STATUS.txt
+      - name: Reproduce owner frozen Python analyzer WITHOUT running any Julia
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip -q install 'numpy==2.1.3'
+          python3 -I research/badacz/2026-11-16/code/b1_qa_070_analysis.py \
+            research/badacz/2026-11-16/data \
+            mech_s9_rot030_qa_evidence/OWNER_ANALYSIS070_COLD.json \
+            > mech_s9_rot030_qa_evidence/OWNER_COLD_STDOUT.txt
+          cmp research/badacz/2026-11-16/data/analysis070.json \
+            mech_s9_rot030_qa_evidence/OWNER_ANALYSIS070_COLD.json
+          echo OWNER_ANALYSIS070_BYTE_IDENTICAL_PASS | tee -a mech_s9_rot030_qa_evidence/STATUS.txt
+      - name: Mutation negative tests — reject changed original owner sources before any numeric acceptance
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib,subprocess,sys,tempfile,shutil
+          root=pathlib.Path("research/badacz/2026-11-16")
+          code=pathlib.Path("research/mech-s9/2026-11-16/code/mech_s9_rot030_qa_prereg070_independent_stdlib_referee.py").resolve()
+          with tempfile.TemporaryDirectory() as t:
+              d=pathlib.Path(t)/"owner"
+              shutil.copytree(root,d)
+              for p in ["data/qa_A.csv","data/qa_B.csv","data/analysis070.json"]:
+                  file=d/p
+                  good=file.read_bytes()
+                  file.write_bytes(good[:-1]+bytes([good[-1]^1]))
+                  target=d/"SHOULD_NOT_CREATE.json"
+                  r=subprocess.run([sys.executable,"-I",str(code),str(d),str(target)],
+                                   capture_output=True)
+                  assert r.returncode!=0 and not target.exists(),f"false positive on {p}"
+                  file.write_bytes(good)
+          print("THREE_INDEPENDENT_OWNER_SOURCE_MUTATIONS_REJECTED_PASS")
+          PY
+          echo THREE_OWNER_SOURCE_MUTATIONS_FAIL_CLOSED_PASS | tee -a mech_s9_rot030_qa_evidence/STATUS.txt
+          (cd mech_s9_rot030_qa_evidence && find . -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > ARTIFACT_SHA256SUMS)
+      - name: Upload only bounded source-free numerical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot030-independent-badacz-qa070-source-referee
+          path: mech_s9_rot030_qa_evidence/
+          if-no-files-found: error
