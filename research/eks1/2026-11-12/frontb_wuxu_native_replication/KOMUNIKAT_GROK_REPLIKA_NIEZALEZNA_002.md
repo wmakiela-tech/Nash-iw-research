@@ -1,6 +1,7 @@
 ---
 artifact_id: IW_EKS1_FRONTB_WUXU_GROK_INDEPENDENT_REPLICA_TASK_002_20261113
 exposure: PUBLIC
+status: HOLD_DO_NOT_PASTE (2026-11-16, errata 002)
 claim_ceiling: TASK_MESSAGE_ONLY / NO_RESULT / MODEL_INTERNAL_TARGETS / NO_PBH_BOUND / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
 created_at: 2026-11-13
@@ -10,6 +11,8 @@ origin_cell: EKSPLORATOR / EKS1 (wątek Claude; solver DECLARED_ONLY)
 document_type: PACKET
 task_id: decyzja Moderatora 2026-11-12 — replika Groka po replice GPT
 ---
+
+> **STATUS 2026-11-16: WSTRZYMANY — NIE WKLEJAĆ.** Część „Uwaga o nieregularności” zawiera błędny wniosek, a replikę w tych samych punktach β wykonał już Mech-S9 ROT011. Patrz `ERRATA_002_PRZYCZYNA_DWOCH_FAIL_TO_OBCIAZENIE_ODNIESIENIA.md`.
 
 # KOMUNIKAT DO WKLEJENIA — Grok: niezależna replika (Wu–Xu, front B), wersja 002
 
