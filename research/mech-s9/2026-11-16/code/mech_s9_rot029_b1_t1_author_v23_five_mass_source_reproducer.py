@@ -156,6 +156,7 @@ def run():
             assert p.returncode==0,("BlackHawk native process failure",j,p.returncode)
             outfile=bh/"results"/name/"instantaneous_secondary_spectra.txt"
             model,meta=parse_secondary(outfile)
+            (ev/(name+"_ORIGINAL_SECONDARY_SPECTRUM.txt")).write_bytes(outfile.read_bytes())
             original_rate=dict(zip(CHANNELS,original[1:]))
             ratios={k:model[k]["rate_GeV"]/original_rate[k] for k in CHANNELS}
             row={"j_0based":j,"mass_g":m,
