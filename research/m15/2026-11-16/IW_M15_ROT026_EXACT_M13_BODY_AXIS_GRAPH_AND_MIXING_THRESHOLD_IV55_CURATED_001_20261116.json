@@ -1,0 +1,307 @@
+{
+  "artifact_id": "IW_M15_ROT026_EXACT_M13_BODY_AXIS_GRAPH_MIXED_CORRELATION_SOURCE_IV55_001_20261116",
+  "return_id": "IW_M15_ROT026_EXACT_M13_MASK_DIAGONAL_GRAPH_AND_WHOLE_THETA_FISHER_REFEREE_PLUS_NEW_ANISOTROPY_THRESHOLD_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "result_class": "DIFFERENT_CELL_NONBLIND_I1_ORIGINAL_NATIVE_M13_IV55_SOURCE_PLUS_NEW_SOURCE_MIXTURE_BOUNDARY",
+  "firstness": {
+    "original_source": "M13 N41 sparse B Fourier auxiliary operator",
+    "original_axis_claim": "Geeky-S12 ROT031 FIRST source positive axial graph and decreasing Fisher",
+    "original_body_claim": "Geeky-S12 ROT032 FIRST indefinite body graph and increasing source Fisher for all theta",
+    "new_M15_claim": "source two strict anisotropy lambda initial-response transitions, and one lambda=.55 source opposite continuous 0<theta<=.4 Fisher directions at two folds"
+  },
+  "original_native_source": {
+    "git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "whole_file_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "bytes": 8970,
+    "actual_original_native_python_import_and_tensor_polys_dot_window_execution": true,
+    "historic_full_dtc0a_runtime_byte_executed": false
+  },
+  "geometry": {
+    "N": 41,
+    "total_sites": 68921,
+    "region_order": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "region_counts": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "body_neighbors": 8,
+    "axis_neighbors": 6,
+    "Ebody": [
+      [
+        114168,
+        31976,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        31976,
+        1680,
+        28568,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        28568,
+        1584,
+        25352,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        25352,
+        1488,
+        22328,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22328,
+        1392,
+        19496
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19496,
+        175616
+      ]
+    ],
+    "Eaxis": [
+      [
+        101394,
+        8214,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8214,
+        31104,
+        7350,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7350,
+        27744,
+        6534,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6534,
+        24576,
+        5766,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5766,
+        21600,
+        5046
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5046,
+        141288
+      ]
+    ],
+    "direct_grid_roll_and_independent_nested_cube_overlap_exact_6x6": "2/2 PASS",
+    "z": [
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    "exact_zEbodyz": -53872,
+    "axis_sylvester_all_six_integer_minors_positive": true
+  },
+  "source_model": {
+    "B_modes": 41,
+    "ordered_mode_pairs": 1681,
+    "unique_mode_frequency_differences": 221,
+    "five_original_fixed_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "hypothetical_nuisance": [
+      "b",
+      "tx",
+      "ty",
+      "tz"
+    ],
+    "target": "alpha",
+    "source_sixth_output": "unmasked full B energy, not physical sensor",
+    "site_covariance": "eta^2*(I+theta*((1-lambda)*Aaxis+lambda*Abody)), theta in [0,0.4], lambda in [0,1]",
+    "independent_random_sixth_raw_calibration": "known std kappa*eta, optional",
+    "continuous_theta_original_source_spectral_SPD": true,
+    "profiled_fisher": "(eta/G)^2 Ieff=delta_outer^2/V(theta), V(theta)=min_{L annihilating nuisance, Louter=1} L^T C(theta)L",
+    "V_concavity": "pointwise infimum of affine-in-theta quadratic contrasts",
+    "source_interval_precision_decimal": 55
+  },
+  "source_original_whole_root_bracket_certificates": [
+    {
+      "name": "FIRST",
+      "alpha_closed_interval": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "body_Vprime0_outer": [
+        "-0.002000510020965097",
+        "-0.001999841264073446"
+      ],
+      "axis_Vprime0_outer": [
+        "0.003140376318354571",
+        "0.003141125005422878"
+      ],
+      "new_lambda_star_strict_interval": [
+        "0.61077386905867246",
+        "0.61108794619140308"
+      ],
+      "new_lambda_0p55_Vprime0": [
+        "0.0003128888317287543",
+        "0.0003135935571998991"
+      ],
+      "new_lambda_0p55_Vprime_theta_0p4": [
+        "0.0002767688766917344",
+        "0.0002776779762932187"
+      ],
+      "theta0_eps2I_strict_outer": [
+        "14.94148676984933",
+        "14.95083618087434"
+      ],
+      "axis_theta_0p4_eps2I": [
+        "13.03472887907242",
+        "13.04323560833002"
+      ],
+      "body_theta_0p4_eps2I": [
+        "16.51550623297007",
+        "16.52682893987138"
+      ],
+      "mixed_lambda0p55_theta_0p4_eps2I": [
+        "14.73780736467757",
+        "14.74767165007194"
+      ],
+      "new_mixed_lambda0p55_whole_continuous_theta_information_direction": "STRICT_DECREASE"
+    },
+    {
+      "name": "SECOND",
+      "alpha_closed_interval": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "body_Vprime0_outer": [
+        "-0.014686643819108651",
+        "-0.014685010425560085"
+      ],
+      "axis_Vprime0_outer": [
+        "0.015422578309951989",
+        "0.015424125143057839"
+      ],
+      "new_lambda_star_strict_interval": [
+        "0.51219476757070257",
+        "0.51230024690967674"
+      ],
+      "new_lambda_0p55_Vprime0": [
+        "-0.001137493861031363",
+        "-0.001135899419682019"
+      ],
+      "new_lambda_0p55_Vprime_theta_0p4": [
+        "-0.002132763894012020",
+        "-0.002130752575546506"
+      ],
+      "theta0_eps2I_strict_outer": [
+        "470.4179190670223",
+        "470.5176879764323"
+      ],
+      "axis_theta_0p4_eps2I": [
+        "397.4830110106152",
+        "397.5773496069604"
+      ],
+      "body_theta_0p4_eps2I": [
+        "580.8948877884147",
+        "581.0733179281160"
+      ],
+      "mixed_lambda0p55_theta_0p4_eps2I": [
+        "479.8009364304252",
+        "479.9301085665912"
+      ],
+      "new_mixed_lambda0p55_whole_continuous_theta_information_direction": "STRICT_INCREASE"
+    }
+  ],
+  "execution": {
+    "original_source_iv55_full_real_bracket_sign_certificates": "2/2 PASS",
+    "new_lambda_star_full_bracket_interval_sign": "2/2 PASS",
+    "new_lambda0p55_Vprime_theta0_and_theta0p4_four_gates": "4/4 PASS",
+    "independent_full_41cubed_FFT_spatial_GLS_axial_body": "24/24 PASS",
+    "independent_new_mixed_source_FFT_GLS": "6/6 PASS",
+    "two_independent_full_JSON_clean_replay": "2/2 BYTE_IDENTICAL PASS",
+    "hash_negative_fixtures": "3/3 PRE_SCIENCE_REJECTED",
+    "scientific_wrong_body_graph_and_wrong_mixture_fixtures": "2/2 REJECTED",
+    "prepublication_wrong_region_order_first_result": "FAILED; immediately explicitly corrected; not counted PASS",
+    "zip_crc": "PASS",
+    "zip_payload_sha256": "9/9 PASS",
+    "archive_full_member_byte_readback": "10/10 PASS"
+  },
+  "local_full_reproducer": {
+    "name": "IW_M15_ROT026_ORIGINAL_M13_DIAGONAL_AXIAL_MIXTURE_INTERVAL_FISHER_REPRO_001_20261116.zip",
+    "bytes": 31369,
+    "sha256": "0619048fc6e5d2f624eee96e58877d49960d847812c692e14253301ba7a951a2",
+    "IV_source_script_sha256": "3a737bbdae1c4870859a73857e179e92f87e425bef3be28d1a4278f587161a97",
+    "full_IV55_JSON_sha256": "10052b42e499fa080857188c38e8ff6a2dff9deb355eaf59aee9ee066cfb1a7a",
+    "independent_spatial_script_sha256": "dad20fa93f10feb47d1ad227987a97ca975ddc4174398833da54f712c74ab421",
+    "full_spatial_JSON_sha256": "31bade17c6e675237956657385383a3c511180e7c9b16ffb4e5c660ad620351f",
+    "replay_negative_receipt_sha256": "c219aae1ae222140568a8fdf10f9a1688c2bbfd16adf46c07a8000b51189a63d"
+  },
+  "limits": [
+    "Source mathematical original public M13 auxiliary only, not historical full dtc0a producer",
+    "Four free source shifts/gain and sixth observation are not native M13 physical controls",
+    "Gaussian site covariance and random calibration synthetic, not measured",
+    "Not a global six-channel alpha inversion guarantee",
+    "Owner Geeky ROT031 ROT032 science firstness preserved",
+    "Internal nonblind I1 only, no independent REC12/AUD2 or external blind I3 approval",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "BW_NATIVE_INGEST_NOT_VERIFIED",
+    "NO_TASK_CASCADE"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
