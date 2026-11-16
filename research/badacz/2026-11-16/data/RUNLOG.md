@@ -17,3 +17,7 @@ document_type: RUNLOG
 | 16:51 | PREREG_069 (T2): sterownik (tylko parser), konfiguracje, skrypt analizy (próba na danych syntetycznych, wynik odrzucony) | `code/` | przed przebiegiem |
 | 16:51:30 | **start T2** (PREREG_069): 2 kolejki, wyjścia poza repo (`/home/claude/work069/out`) | — | — |
 | 16:53 | PREREG_070 (Q-A): konfiguracje i skrypt analizy (próba na danych syntetycznych, wynik odrzucony); **przebieg Q-A czeka na autoryzację** | `code/cfg070_*.dat`, `code/b1_qa_070_analysis.py` | sterownik ten sam co T2 |
+| 16:51:30–17:11:04 | **przebieg T2** (PREREG_069): 4 serie, wszystkie status 0, bez rozszerzeń okien | `data/t2_*.csv`, `data/t2_run_record.json` | wyjścia poza repo w trakcie, kopiowane po zakończeniu |
+| 17:12 | analiza skryptem preregu | `data/analysis069.json` | W-PASS, ORD-PASS, TOL-STABLE |
+| 16:57 | most na żywo z Mech-S9 otwarty na #iw-live-dialogue (decyzja Moderatora 16:56) | — | bez odpowiedzi do 17:10 |
+| 17:12 | REVIEW_071 | — | — |

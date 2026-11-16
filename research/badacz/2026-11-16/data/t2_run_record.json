@@ -1,0 +1,104 @@
+{
+ "note": "PREREG_069 (T2) run statuses, timeline and filtered logs; CSV outputs are separate files in data/",
+ "series": {
+  "orig_default": {
+   "status": 0,
+   "csv_sha256": "b01f364e1d7f9b77b17777c192c49a178a9eb72ea60fce75f6c14745900ea75e",
+   "log_sha256": "95338be7f66f6bc1c41dd54b5c1797b527c5a605b5666cfc7d9de5b04cb6d530",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz069_prefix_312.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz069_prefix_312.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "DONE orig default 102"
+   ]
+  },
+  "e5_default": {
+   "status": 0,
+   "csv_sha256": "19cea92972c00f160a627313b017ad3a679ba177ea4389d40b614ba69bdb42b8",
+   "log_sha256": "7ceb4cb297e6358cd3783c46a6d244ff005326cd9717c2a270adf3c8a83d51e5",
+   "log_filtered": [
+    "PASS: charge-pair source-map comparator patch applied.",
+    "Changed: pi± aggregate -> each pi charge: x0.5",
+    "Changed: K± aggregate -> K-: x0.5",
+    "Changed: p+pbar aggregate -> pbar: x0.5",
+    "Changed: n+nbar aggregate -> nbar: x0.5",
+    "Unchanged: K0L source",
+    "┌ Info: Added 1 workers for _badacz069_prefix_313.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz069_prefix_313.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "DONE e5 default 102"
+   ]
+  },
+  "orig_1e-4": {
+   "status": 0,
+   "csv_sha256": "372ca15a53459ba4bc1c19c82e310a8fa2a53c1df89346d4630804a35580ec5c",
+   "log_sha256": "30804a1171563cf7c1d5f5d18078dbd478992005bcedf032ddeb733f4cd63d15",
+   "log_filtered": [
+    "┌ Info: Added 1 workers for _badacz069_prefix_525.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz069_prefix_525.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "DONE orig 1e-4 14"
+   ]
+  },
+  "e5_1e-4": {
+   "status": 0,
+   "csv_sha256": "249a95140230972705f8d4db09835749019a7fa7a0db2f644f1b169346510220",
+   "log_sha256": "473afd9c3f5af2c08d9eaf209de58802f6c45c26a0fde6954978c3bfaa779047",
+   "log_filtered": [
+    "PASS: charge-pair source-map comparator patch applied.",
+    "Changed: pi± aggregate -> each pi charge: x0.5",
+    "Changed: K± aggregate -> K-: x0.5",
+    "Changed: p+pbar aggregate -> pbar: x0.5",
+    "Changed: n+nbar aggregate -> nbar: x0.5",
+    "Unchanged: K0L source",
+    "┌ Info: Added 1 workers for _badacz069_prefix_546.jl.",
+    "│ Please run the following command to start the workers if the number of workers is not your desired one:",
+    "└ `julia --project --procs=<number of workers> _badacz069_prefix_546.jl`",
+    "┌ Info: Scanning parameters:",
+    "│ m_PBH (min): 6.0e8 gram",
+    "│ m_PBH (max): 1.0e10 gram",
+    "│ number of m_PBH: 100",
+    "│ ",
+    "│ β_PBH (min): 1.0e-20",
+    "│ β_PBH (max): 1.0e-17",
+    "└ number of β_PBH: 100",
+    "DONE e5 1e-4 14"
+   ]
+  }
+ },
+ "timeline": [
+  "START orig default 16 16:51:30",
+  "START e5 default 16 16:51:30",
+  "END orig default rc=0 16 17:01:18 wall=588s",
+  "START orig 1e-4 16 17:01:18",
+  "END e5 default rc=0 16 17:01:21 wall=591s",
+  "START e5 1e-4 16 17:01:21",
+  "END orig 1e-4 rc=0 16 17:11:03 wall=585s",
+  "END e5 1e-4 rc=0 16 17:11:04 wall=583s",
+  "ALL_DONE ok=4/4 16 17:11:04"
+ ]
+}
