@@ -1,0 +1,182 @@
+{
+  "artifact_id": "IW_M15_ROT027_ORIGINAL_M13_MIXED_SITE_CORRELATION_FISHER_UTURN_SOURCE_CERTIFICATE_001_20261117",
+  "return_id": "IW_M15_ROT027_M13_TWO_SOURCE_FOLD_NONMONOTONE_THETA_FISHER_TWO_UNIQUE_TURNS_AND_BASELINE_CROSSINGS_001_20261117",
+  "date": "2026-11-17",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "status": "INTERNAL_NONBLIND_SOURCE_M13_IV55_NEW_TWO_NONMONOTONE_FISHER_TURNING_POINTS_PASS",
+  "firstness": {
+    "M13": "original public auxiliary N41 Fourier B Lie/TT operator",
+    "Geeky_ROT031": "first original source AXIAL positive neighbor correlation Fisher decrease",
+    "Geeky_ROT032": "first BODY diagonal positive neighbor source Fisher increase",
+    "M15_ROT026": "first two fold-dependent initial mixing lambda-star thresholds",
+    "M15_ROT027": "first TWO explicit fixed mixture ratios giving rigorously UNIQUE Fisher nonmonotonicity turn and second positive baseline crossing over continuous theta in this original source chain"
+  },
+  "source": {
+    "original_M13_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_full_code_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_source_file_bytes": 8970,
+    "original_source_native_actually_imported_executed_in_both_source_scripts": true,
+    "original_historic_full_DTC0a_byte_execution": false,
+    "N": 41,
+    "spatial_site_count": 68921,
+    "original_five_shell_site_counts": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "outer_region_site_count": 18268,
+    "source_sparse_B_fourier_modes": 41,
+    "ordered_B_mode_pairs": 1681,
+    "distinct_B_mode_differences": 221
+  },
+  "observer": {
+    "original_native_free_relative_torus_translation_and_gain": false,
+    "nuisances_hypothetical": [
+      "one common log energy gain",
+      "three common torus source-field translations relative fixed original masks"
+    ],
+    "sixth_full_energy_native_source_math": true,
+    "sixth_physical_sensor_authenticated": false,
+    "noise": "synthetic centered site RAW Gaussian energy noise covariance eta²(I+theta*((1-lambda)*A_axis+lambda*A_body))",
+    "theta_domain": [
+      "0",
+      "0.4"
+    ],
+    "lambda_domain": [
+      "0",
+      "1"
+    ],
+    "site_covariance_strictly_positive_definite_for_complete_parameter_box": true,
+    "optional_known_variance_random_full_channel_calibration_kappa": "any fixed finite >=0; changes V by additive constant independent of optimal contrast and theta",
+    "unrestricted_unknown_fixed_sixth_channel_bias": "OUT_OF_SCOPE and destroys alpha identification as M15 ROT022 showed"
+  },
+  "proof": {
+    "method": "Original unchanged native M13 mpmath.iv.dps=55: exact original 41-mode Fourier field, five original fixed cube mask windows and derivatives, source full alpha root intervals, 6x6 site covariance, 1D optimized nuisance-null contrast",
+    "formula_V": "a0+a1 theta - (b0+b1 theta)^2/(d0+d1 theta)",
+    "formula_Vsecond": "-2*(b1*d0-b0*d1)^2/(d0+d1 theta)^3",
+    "formula_positive_crossing": "theta_cross = -(a1*d0^2 - 2*d0*b0*b1 + b0^2*d1)/(d0*(a1*d1-b1^2))",
+    "certified_whole_bracket_math": [
+      "d0+d1*theta strictly positive across whole theta box",
+      "b1*d0-b0*d1 excludes zero",
+      "Vsecond strictly negative across full alpha-by-theta boxes",
+      "Vprime(0)>0, Vprime(0.4)<0",
+      "EXACTLY ONE theta_turn Fisher minimum",
+      "positive theta_cross exists uniquely after the turn and below theta=.4",
+      "V(0.4)<V(0), so Fisher(.4)>Fisher(0)"
+    ]
+  },
+  "certificates": [
+    {
+      "fold": "FIRST",
+      "source_alpha_root_full_closed_interval": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "lambda_body_fixed": "0.609",
+      "theta_turn_unique_strict_bracket": [
+        "0.09",
+        "0.13"
+      ],
+      "theta_positive_baseline_cross_unique_strict_outer_interval": [
+        "0.19137494470885",
+        "0.23239534348856"
+      ],
+      "Vprime0_strict_outer": [
+        "0.00000902810372904",
+        "0.00001082497383966"
+      ],
+      "Vprime_theta_0p4_strict_outer": [
+        "-0.000033106488051",
+        "-0.000030955798215"
+      ],
+      "Vdouble_entire_alpha_theta_box_strict_outer": [
+        "-0.000124113",
+        "-0.0000883709"
+      ],
+      "strict_V04_less_than_V0": true,
+      "FFT_Fisher_kappa0p01_theta0": 14.946160926469144,
+      "FFT_Fisher_kappa0p01_theta0p1": 14.945223240885689,
+      "FFT_Fisher_kappa0p01_theta0p4": 14.953042089267182,
+      "FFT_numeric_theta_turn": 0.10744390562745842,
+      "FFT_numeric_theta_baseline_cross": 0.21181199205995319
+    },
+    {
+      "fold": "SECOND",
+      "source_alpha_root_full_closed_interval": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "lambda_body_fixed": "0.510",
+      "theta_turn_unique_strict_bracket": [
+        "0.025",
+        "0.035"
+      ],
+      "theta_positive_baseline_cross_unique_strict_outer_interval": [
+        "0.05599553566357",
+        "0.06070598287393"
+      ],
+      "Vprime0_strict_outer": [
+        "0.0000649901513150",
+        "0.0000703508895319"
+      ],
+      "Vprime_theta_0p4_strict_outer": [
+        "-0.000837547642688",
+        "-0.000832211103503"
+      ],
+      "Vdouble_entire_alpha_theta_box_strict_outer": [
+        "-0.002326804",
+        "-0.002187843"
+      ],
+      "strict_V04_less_than_V0": true,
+      "FFT_Fisher_kappa0p01_theta0": 470.46779895173853,
+      "FFT_Fisher_kappa0p01_theta0p02": 470.45528586124556,
+      "FFT_Fisher_kappa0p01_theta0p4": 472.6647441861671,
+      "FFT_numeric_theta_turn": 0.029153352956642113,
+      "FFT_numeric_theta_baseline_cross": 0.05835053486467603
+    }
+  ],
+  "verification": {
+    "IV55_source_on_entire_original_alpha_and_theta_box": "2/2 PASS",
+    "rigorous_unique_Fisher_turn_points": "2/2 PASS",
+    "rigorous_positive_second_baseline_crossing": "2/2 PASS",
+    "independent_original_source_native_41cubed_spatial_FFT_and_two_nondiagonal_GLS_bases": "28/28 NUMERIC PASS; numerical only",
+    "independent_source_SVD_contrast_checks": "28/28 NUMERIC PASS",
+    "IV55_intervals_for_specific_theta_0_0p4_kappa_0p01_in_spatial_checker": "4/4 PASS",
+    "original_clean_separate_full_machine_JSON_replays": "2/2 BYTE IDENTICAL PASS",
+    "actual_pre_science_SHA_corruptions_rejected": "3/3 PASS",
+    "actual_scientific_false_lambda_or_geometry_fixtures_rejected": "3/3 PASS",
+    "two_detected_early_development_bugs": "KeyError missing serialized crossing and TypeError from spatial Fourier symbol shadowing; both corrected BEFORE final replay, neither counted PASS",
+    "package": {
+      "local_full_zip_name": "IW_M15_ROT027_ORIGINAL_M13_NONMONOTONE_SPATIAL_FISHER_IV55_REPRO_001_20261117.zip",
+      "zip_bytes": 38688,
+      "zip_sha256": "172b79f27a2b38589fc903bf5c2e258bad14f9e4891c8019c43434283261c5e4",
+      "zip_CRC": "PASS",
+      "manifest_member_SHA256": "10/10 PASS",
+      "all_zip_member_exact_bytes": "11/11 PASS",
+      "native_source_script_sha256": "ee05367b6926ffe2d1560b6422a1203b22d15a3341e0f81a9f1ff03b33d4b033",
+      "full_original_native_IV55_JSON_sha256": "d5cdcbc3029373bc26dbe48f4030a46ff45a8974ab0098b1043ff33c1a233b1e",
+      "independent_spatial_script_sha256": "93cafeebfe956b9f40d347900ce50c9e30184a9d68dec377bb388ee2be2554dc",
+      "independent_spatial_full_numeric_JSON_sha256": "0720dbb6b91677b14ac9bb7ab5b5cac9f53ef472df6c10cf8073575f47f3ab8a",
+      "cold_replay_and_six_negative_JSON_sha256": "52744ae2ab5346c2514e4b81095d36ccc89af3b0ef5cbd37cd5afb3b441e73f4",
+      "exact_source_executables_available_only_in_user_local_zip_not_GitHub_mirrored": true
+    }
+  },
+  "strict_limits": [
+    "Only original M13 public auxiliary N41 source model; historical complete dtc0a_runtime_v0_3_1.py producer unavailable",
+    "Artificial unknown field torus shifts, gain and sixth full measurement not native source hardware knobs",
+    "Synthetic site Gaussian spatial covariance unmeasured",
+    "Known finite stochastic calibration not free unknown deterministic offset",
+    "No global alpha inverse theory",
+    "No general mathematical novelty, no physical NASH K/J3/TPE inference",
+    "Internal different-cell source I1 nonblind only, no REC13/AUD3 blind external I3 reviewer acceptance",
+    "No native KN15 BW ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ],
+  "sync": "GITHUB_PENDING_BW_INGEST"
+}
