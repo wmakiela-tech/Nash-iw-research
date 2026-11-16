@@ -1,0 +1,193 @@
+{
+  "artifact_id": "IW_M15_ROT023_ORIGINAL_M13_SHARED_SITE_CORRELATED_FISHER_AND_COMMON_BASELINE_I1_001_20261116",
+  "return_id": "IW_M15_ROT023_INDEPENDENT_GEEKY_ROT029_SHARED_SITE_OUTER_EQUIVALENCE_AND_COMMON_RAW_BASELINE_RANK_GUARD_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "result_class": "DIFFERENT_CELL_NONBLIND_INTERNAL_I1_ACTUAL_NATIVE_M13_SOURCE_IV65_TWO_ROOT_BOXES_PLUS_NEW_COMMON_SITE_ADDITIVE_OFFSET_6X6_CERT",
+  "firstness": {
+    "M13": "original public N41 auxiliary Fourier B source",
+    "Geeky_ROT029": "FIRST shared-site raw energy Gaussian overlap covariance, exact 18268 exterior site equivalence, original source conditional two-fold Fisher",
+    "M15_ROT023": "INDEPENDENT original source different algorithm I1, NEW bounded full-rank common raw site additive unknown baseline contrast with prior sixth-only calibration failure"
+  },
+  "original_unmodified_M13_source": {
+    "git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "source_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "exact_full_bytes": 8970,
+    "original_functions_executed": [
+      "tensor_polys(41)[1]",
+      "dot",
+      "window_mode"
+    ],
+    "historical_full_DTC0a_producer_bytes_recovered": false
+  },
+  "model": {
+    "N": 41,
+    "M_site_count": 68921,
+    "old_disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "old_total_sites": 50653,
+    "exterior_additional_sites": 18268,
+    "source_B_sparse_modes": 41,
+    "ordered_source_mode_pairs": 1681,
+    "distinct_mode_differences": 221,
+    "source_alpha_root_brackets": [
+      [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      [
+        "0.05416739905600",
+        "0.05416739906000"
+      ]
+    ],
+    "hypothetical_parameters": [
+      "common source-field torus t relative fixed masks",
+      "common log gain b",
+      "per-site additive Gaussian raw-energy error eta",
+      "separate new shared site-wide additive baseline h*g_ref"
+    ],
+    "source_native_parameters_no_free_t_b_or_real_sixth_sensor": true
+  },
+  "exact_gaussian_site_covariance": {
+    "per_site_error": "independent Gaussian N(0,eta^2) on RAW ENERGY density, not Gaussian LOG reads",
+    "old_shell_raw_mean_error_variance": "eta^2/w_i",
+    "full_raw_mean_error_variance": "eta^2/68921",
+    "old_i_full_error_covariance": "eta^2/68921 for ALL i",
+    "outer_raw_mean": "(68921*g - sum_i w_i*S_i)/18268",
+    "outer_error_variance": "eta^2/18268",
+    "outer_old_error_covariance": "EXACT_ZERO for ALL i",
+    "old_five_plus_full_equivalent_to_old_five_plus_outer": true,
+    "pseudofull_from_only_old_sites_has_no_new_independent_measurement": true
+  },
+  "source_correlated_conditional_alpha_Fisher": {
+    "identity": "(eta/g)^2 Ieff=delta_o^2/((g/o)^2/w0+q_o) at original old 5x5 source Fisher root",
+    "delta_o": "source outer alpha score minus old nuisance source fit",
+    "q_o": "sum 10 old-three-plus-outer squared 4x4 weighted minors divided by sum five weighted old-four-row squared 4x4 minors; original M13 native IV65",
+    "noise_observed_physically": false
+  },
+  "two_whole_bracket_original_directed_certificates": [
+    {
+      "name": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "outer_mean_conservative": [
+        "2.0281596655039205e-14",
+        "2.0281596731127030e-14"
+      ],
+      "q_o_outer_interval": [
+        "0.00572233933573",
+        "0.00572234399646"
+      ],
+      "delta_o_outer_interval": [
+        "-0.358235495959",
+        "-0.357989372849"
+      ],
+      "scaled_eps2_Fisher_outer_interval": [
+        "21.98905478122",
+        "22.01931840220"
+      ],
+      "common_unknown_raw_site_baseline_six_by_six_det_outer_interval": [
+        "-4.62284104343e-7",
+        "-4.31551243876e-7"
+      ],
+      "original_nuisance_4x4_full_rank": true,
+      "new_augmented_6x6_full_rank": true
+    },
+    {
+      "name": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "outer_mean_conservative": [
+        "4.974143623406436e-14",
+        "4.974143641474138e-14"
+      ],
+      "q_o_outer_interval": [
+        "0.0310556482173",
+        "0.0310556818998"
+      ],
+      "delta_o_outer_interval": [
+        "-3.964625681587",
+        "-3.964512488761"
+      ],
+      "scaled_eps2_Fisher_outer_interval": [
+        "504.6862723924",
+        "504.7156377993"
+      ],
+      "common_unknown_raw_site_baseline_six_by_six_det_outer_interval": [
+        "-8.70654592202e-7",
+        "-8.68290765848e-7"
+      ],
+      "original_nuisance_4x4_full_rank": true,
+      "new_augmented_6x6_full_rank": true
+    }
+  ],
+  "new_calibration_comparison": {
+    "sixth_only_free_independent_log_bias": "6x6 rank5 at old folds, alpha information zero (M15 ROT022)",
+    "one_common_unknown_additive_raw_energy_site_baseline_across_all_68921_sites": "6x6 rank6 at BOTH original old alpha fold brackets (new M15 IV65 theorem)",
+    "g_ref": "original full source energy g at MIDPOINT of each fixed tiny source alpha bracket, treated as a fixed known parameter scaling",
+    "interpretation": "distinct mathematical nuisance structures, not claims about actual hardware"
+  },
+  "numeric_source_crosscheck": {
+    "method": "independently computed 41^3 original tensor and 4 derivative fields by spatial inverse FFT; 3 independent source Gaussian Fisher computations old+outer, whitened and old+full correlated GLS",
+    "first_three_scaled_information": [
+      22.004183982840775,
+      22.00418398284584,
+      22.004183982846172
+    ],
+    "second_three_scaled_information": [
+      504.70095497808387,
+      504.70095497811616,
+      504.7009549781235
+    ],
+    "first_shared_baseline_6x6_det": -4.4691767410941057e-7,
+    "second_shared_baseline_6x6_det": -8.694726790251487e-7,
+    "maximum_direct_information_discrepancy_first": 5.396572078097961e-12,
+    "maximum_direct_information_discrepancy_second": 3.9619862945983186e-11,
+    "FFT_SVD_only_numerical_not_directed_proof": true
+  },
+  "repro": {
+    "local_original_full_zip": "IW_M15_ROT023_NATIVE_M13_CORRELATED_SITE_NOISE_AND_COMMON_BASELINE_IV65_REPRO_001_20261116.zip",
+    "zip_bytes": 22460,
+    "zip_SHA256": "4de5c2074c3ec014524a8b5d5e615b24b00bcd46c81d06d7d4903a838b9ecdd7",
+    "main_executed_IV65_program_SHA256": "03924fd13f34427de08c73dec2f3020981be7b4430d47a9a5a8aa9c4b10c7fd2",
+    "full_directed_IV65_JSON_SHA256": "7ddfec37585f587289f6977239ef55514e0c413034e5b223af4131c0949bfa1e",
+    "independent_FFT_GLS_JSON_SHA256": "18b8114f576341730255df98fd79ddec00a61a5e1a2ceff0c71b798f7632add2",
+    "cold_replay_tamper_receipt_JSON_SHA256": "20ead52cf19d439cec2b2dbc8139cec189e01afbcddda8ca0a2e85d51e325b27",
+    "zip_crc": "PASS",
+    "manifest_SHA256": "8/8 PASS",
+    "isolated_full_JSON_byte_identical": "2/2 PASS",
+    "native_original_source_single_byte_mutation_fail_closed": "2/2 PASS",
+    "exact_site_geometry_covariance_fraction_checks": "PASS"
+  },
+  "prepublication_error_guard": {
+    "original_helper_full_energy_alpha_derivative_missing_outer_weight": "DETECTED_BY_INDEPENDENT_SPATIAL_PROGRAM_AND_CORRECTED",
+    "original_helper_gref_bracket_sum_instead_of_midpoint": "DETECTED_AND_CORRECTED",
+    "old_wrong_auxiliary_det_intervals": "WITHDRAWN BEFORE PUBLICATION",
+    "final_iv_source_bracket_det_include_both_spatial_source_FFT_results": true,
+    "owner_Geeky_029_q_delta_and_fisher_recheck_unaffected": true
+  },
+  "limits": [
+    "No measured source sensor data/noise/covariance",
+    "No physical original native source free field translations or common gain, site additive offset or sixth full-domain detector",
+    "No historical full DTC0a producer code byte identity",
+    "No global six-output injectivity or finite-sample guarantee",
+    "Original Geeky ROT029 FIRST preserved",
+    "Internal nonblind different-cell I1 only, external blind I3 not obtained",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_BW_PROVIDER_ING_RECEIPT",
+    "NO_NEW_TASK_CASCADE"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
