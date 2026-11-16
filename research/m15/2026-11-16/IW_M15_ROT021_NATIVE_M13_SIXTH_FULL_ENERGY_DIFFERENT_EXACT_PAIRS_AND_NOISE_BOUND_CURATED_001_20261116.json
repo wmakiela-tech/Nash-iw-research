@@ -1,0 +1,159 @@
+{
+  "artifact_id": "IW_M15_ROT021_NATIVE_SOURCE_SIXTH_FULL_B_ENERGY_ON_DIFFERENT_M15_EXACT_ALIAS_PAIRS_001_20261116",
+  "return_id": "IW_M15_ROT021_INDEPENDENT_GEEKY_ROT027_SIXTH_SOURCE_CHANNEL_ON_TWO_M15_ROT018_020_EXACT_ROOT_BOXES_AND_DETERMINISTIC_NOISE_GATE_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "source_priority": {
+    "original_N41_Fourier_B_first": "M13",
+    "source_five_fold_first": "Geeky-S12 ROT023/024",
+    "two_exact_M15_alias_pair_first": "M15 ROT018/020",
+    "sixth_full_energy_observable_and_owner_two_pairs_first": "Geeky-S12 ROT027",
+    "current_independent_test": "M15 two DIFFERENT earlier exact source pair boxes, strictly signed sixth source energy; independent local rank + pairwise noise threshold"
+  },
+  "source": {
+    "original_native_code_Git_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_native_whole_file_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_native_Python_source_byte_identical_actually_imported": true,
+    "actual_original_native_functions": [
+      "tensor_polys(N41) B",
+      "dot",
+      "window_mode",
+      "calc(N41,alpha) B",
+      "inner(B,B,N41,k0)"
+    ],
+    "historical_DTC0a_producer_byte_id_verified": false,
+    "original_M15_ROT018_pair_input_sha256": "44f8e325ebefa4667ca44373793a5e127d68314fe2b7cc7c3d9c184848b0651e",
+    "actual_prior_original_native_Krawczyk_box_certificate_sha256": "9b5d9a5de14839d4bbc923b26d78f48d16dbd12863c672f5c98033c8e2b2466c"
+  },
+  "observation_model": {
+    "N": 41,
+    "B_fourier_modes": 41,
+    "ordered_mode_pairs": 1681,
+    "distinct_q": 221,
+    "five_native_cube_windows": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "hypothetical_unknown_parameters": [
+      "common log energy gain b",
+      "rigid source-field common torus translation tx",
+      "ty",
+      "tz",
+      "native alpha"
+    ],
+    "sixth_channel": "F6(b,alpha) = b + log((1/6)*sum of squared Frobenius norms of all native N41 B Fourier tensor coefficients)",
+    "sixth_t_shift_invariant": true,
+    "source_sixth_channel_native_math_available": true,
+    "source_hardware_or_actual_independent_noise_reading_available": false
+  },
+  "exact_source_M15_two_distinct_pairs": [
+    {
+      "name": "FIRST",
+      "alpha_A_exact": "0.01861322133966003355903534097922321888020601616279117881063117914",
+      "alpha_B_5D_box_center": "0.01861722141672577299600863498675349999257594838451884301788651517",
+      "alpha_B_5D_box_radius": "1e-25",
+      "old_five_source_outputs_equal_exact": "PASS by reexecuted prior IV78 original-native M15 ROT020 Krawczyk certificate",
+      "new_F6_delta_B_minus_A_original_directed_strict_negative_outer_interval": [
+        "-2.730513167468893e-7",
+        "-2.730513167468892e-7"
+      ],
+      "exact_pairwise_maxnorm_measured_output_separation_equals_abs_sixth_delta": true,
+      "adversarial_bounded_log_observation_error_threshold_eps_crit_outer_interval": [
+        "1.3652565837344460e-7",
+        "1.3652565837344470e-7"
+      ],
+      "certified_true_B_inside_full_5D_box": true
+    },
+    {
+      "name": "SECOND",
+      "alpha_A_exact": "0.05416539905800021365821377240849411761996727323255007395123373206",
+      "alpha_B_5D_box_center": "0.05416939901330654632728114528927166347200500784664927847504904288",
+      "alpha_B_5D_box_radius": "1e-25",
+      "old_five_source_outputs_equal_exact": "PASS by reexecuted prior IV78 original-native M15 ROT020 Krawczyk certificate",
+      "new_F6_delta_B_minus_A_original_directed_strict_negative_outer_interval": [
+        "-3.331294076665896e-6",
+        "-3.331294076665894e-6"
+      ],
+      "exact_pairwise_maxnorm_measured_output_separation_equals_abs_sixth_delta": true,
+      "adversarial_bounded_log_observation_error_threshold_eps_crit_outer_interval": [
+        "1.6656470383329473e-6",
+        "1.6656470383329480e-6"
+      ],
+      "certified_true_B_inside_full_5D_box": true
+    }
+  ],
+  "local_source_alpha_bracket_full_rank_lift": [
+    {
+      "name": "FIRST",
+      "old_fold_alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "sixth_derivative_along_original_normalized_old_J5_null_vector_outer_interval": [
+        "-0.068299849",
+        "-0.068223181"
+      ],
+      "six_by_five_augmented_J_full_column_rank_at_old_exact_fold": true
+    },
+    {
+      "name": "SECOND",
+      "old_fold_alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "sixth_derivative_along_original_normalized_old_J5_null_vector_outer_interval": [
+        "-0.832862215",
+        "-0.832806163"
+      ],
+      "six_by_five_augmented_J_full_column_rank_at_old_exact_fold": true
+    }
+  ],
+  "exact_noise_lemma": {
+    "hypothesis": "Two fixed exact six-output source predictions u,v with five EXACTLY equal coordinates and sixth gap d>0; all six measurement errors bounded by epsilon in individual log-output absolute value",
+    "theorem": "u+[-epsilon,epsilon]^6 and v+[-epsilon,epsilon]^6 intersect iff 2epsilon>=d",
+    "status": "exact classical deterministic pairwise indistinguishability criterion, no measured instrument noise, no global minimax guarantee"
+  },
+  "checks": {
+    "strict_directed_sixth_full_5D_box_discrimination": "2/2 PASS",
+    "strict_directed_local_fold_6x5_rank_lift": "2/2 PASS",
+    "original_native_inner_vs_direct_Fourier_Parseval_overlap": "4/4 PASS",
+    "independent_full_41x41x41_spatial_inverse_FFT_max_relative_error": 2.220446049250313e-16,
+    "three_complete_clean_rerun_machine_JSON_byte_identical": "3/3 PASS",
+    "three_pre_science_original_Git_pair_or_prior_cert_tamper_fixtures_rejected": "3/3 PASS",
+    "package_zip_crc": "PASS",
+    "package_member_sha256": "14/14 PASS",
+    "pinned_GitHub_report_readback": "PASS"
+  },
+  "reproducer": {
+    "local_zip": "IW_M15_ROT021_SIXTH_NATIVE_M13_CHANNEL_ON_TWO_M15_EXACT_ALIAS_PAIRS_REPRO_001_20261116.zip",
+    "zip_size_bytes": 35480,
+    "zip_SHA256": "a6b983a271a33fd0d1ec6505de4cf42d11494156a87ad3b1b93b232f90077cf8",
+    "new_actual_main_verifier_SHA256": "18ae2b6ed0ea28ddeef5f4294038fb1c6b19f83d07b9955c8eb22e854a261f98",
+    "new_actual_directed_JSON_SHA256": "0a8b146b59377850c00a21c3589e61d0c79a7d3c549565c09c43c69401a45fcc",
+    "new_independent_spatial_verifier_SHA256": "f937e15599fa809091ac1f7fba5295a0570472fbe6de22c05fc77819c2fc0929",
+    "new_spatial_JSON_SHA256": "00363f63575ebcb86e221b927ede92bb618346d0048516d82547f4000a60d739",
+    "clean_replay_and_tamper_program_SHA256": "5812dd2201e3f51e8c55817268bf9efd3fc7f72a6cd99e173417e8ee2f901a15",
+    "clean_replay_result_SHA256": "6b8c409e3d72f8fea5a019d8b0b57bf0e94b96203c36b30c247d6ae2f3c84436",
+    "archive_original_native_M13_code_included": true,
+    "archive_original_full_directed_machine_results_and_scripts_included": true,
+    "archive_payload_count": 14
+  },
+  "strict_ceiling": [
+    "Only mathematical observer extension with hypothetical free t and b; source native original calc has neither free parameter",
+    "Extra sixth full-domain channel is not a documented experimentally available measurement",
+    "No source hardware precision, statistical covariance or physical measurement sensitivity inferred",
+    "No global six-channel map injectivity nor complete fold classification",
+    "No historical dtc0a_runtime_v0_3_1.py byte identity",
+    "No outside blind I3 review",
+    "No literature theorem novelty",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_BW_INGEST_RECEIPT",
+    "NO_NEW_TASK_CASCADE"
+  ]
+}
