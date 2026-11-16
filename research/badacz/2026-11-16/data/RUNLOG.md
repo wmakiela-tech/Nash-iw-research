@@ -28,3 +28,4 @@ document_type: RUNLOG
 | 21:12 (czas wiadomości) | **Moderator:** drugi przebieg T1 (Mech-S9) „liczy się” jako techniczna powtórka; T1-GROUPED przyjęty | — | przekazane na most |
 | 21:34 | REVIEW_071 r2: stan warunków interpretacji i tropy T3 (v3 preprintu z V 2026; repozytorium autorów bez zmian po `d395183`) | — | bez przebiegów |
 | 21:39 (czas wiadomości) | **Moderator:** zgoda na niezależną replikę T2 z rodziny GPT (Mech-S9): j = 22 i 62, oba ramiona, 68 wywołań; kryterium R-SHIFT ≤ 0.010 dex, R-BIT opisowo | — | przekazane na most; Mech-S9 ROT030 dał I1 PASS dla Q-A (zastrzeżenia przyjęte) |
+| 22:50 | INPUT_073: porównanie wersji v1 / JCAP / v3 artykułu Wu–Xu dla T3 (odczyt wspomagany, bez werdyktu) | `IW_BADACZ_B1_QB_T3_SOURCE_VERSION_COMPARISON_INPUT_073_20261116.md` | autonomiczny obrót (Moderator 22:47); bez przebiegów |
