@@ -1,0 +1,230 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT032_ORIGINAL_M13_BODY_DIAGONAL_SPATIAL_CORRELATION_REVERSES_FISHER_SIGN_CURATED_001_20261116",
+  "date": "2026-11-16",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source_first": {
+    "M13_original_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "M13_original_tensor_polys_inner_window_mode_5_masks_all_source_scores_recomputed_current_rotation": true,
+    "previous_ROT031_original_source_complete_JSON_SHA256": "f747d07aa1bafa4f60b0bbfe1c0fda100e0517d1aa3479a19b73778a8ec91cc3",
+    "previous_ROT031_independent_spatial_complete_JSON_SHA256": "e44fc1d7511c8e360afe206e8b60f2cb48497043fbe39a468be22e529bdf6dd1"
+  },
+  "original_source_geometry": {
+    "N": 41,
+    "total_sites": 68921,
+    "region_order": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "region_site_counts": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "body_neighbor_8_displacements": "all (±1,±1,±1)",
+    "original_exact_directed_body_neighbor_integer_E": [
+      [
+        114168,
+        31976,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        31976,
+        1680,
+        28568,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        28568,
+        1584,
+        25352,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        25352,
+        1488,
+        22328,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22328,
+        1392,
+        19496
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19496,
+        175616
+      ]
+    ],
+    "E_body_independent_count_two_algebraic_methods": "all actual original 41^3 region label rolls versus exact translated nested cube inclusion-exclusion, EXACT 6x6 equality",
+    "source_exact_integer_contrast_z": [
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    "source_exact_integer_z_Ebody_z": -53872,
+    "source_Ebody_indefinite": true,
+    "original_ROT031_exact_Eaxis_positive_definite": true,
+    "exact_source_negative_knowledge": "Same original mask geometry does NOT force positive semidefinite aggregate edge operator for all positive site neighbor correlations"
+  },
+  "synthetic_site_measurement_model": {
+    "original_M13_native_has_t_gain_sixth_sensor": false,
+    "source_mathematical_input": "original B N41, source-relative common torus translations of original C1,C2,h against original fixed observer masks, one freely fitted common log gain b; all HYPOTHETICAL",
+    "sixth_mathematical_observation": "original M13 full unmasked k0 B source energy, not historical sensor",
+    "site_errors": "Centered Gaussian additive RAW energy-density noise with fixed covariance eta^2*(I+theta*A_body), 0<=theta<=0.4",
+    "body_adjacency": "A_body=average over all eight body diagonal one-site shifts",
+    "site_adjacency_eigenvalues": "product of 3 periodic cosines, in [-1,1], so site covariance strictly SPD theta<=.4",
+    "original_six_region_raw_energy_covariance": "eta^2*[D^-1+(theta/8)*D^-1*Ebody*D^-1], D=diag(six region counts)",
+    "extra_sixth_random_calibration": "Known-variance independent Gaussian additive RAW full-energy-mean error std kappa*eta, all finite kappa>=0, transforms to extra OUTER-only raw variance eta^2*(68921/18268)^2*kappa^2",
+    "all_4_nuisance_parameters_remain_unknown": true,
+    "Fisher_is_exact_for_raw_Gaussian_mean_model_not_log_of_noisy_measurements": true,
+    "M15_unrestricted_unknown_fixed_sixth_calibration_countermodel": "OUT_OF_SCOPE and causes efficient Fisher ZERO; does NOT equal finite-variance stochastic calibration"
+  },
+  "original_M13_source_iv55_proofs": [
+    {
+      "fold": 1,
+      "whole_original_root_alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "theta": "0.4",
+      "kappa": "0.01",
+      "source_epsilon2_Fisher_independent_theta0_interval": [
+        "14.9434411083618278499414822482772654761734",
+        "14.9488811850761549565331149305965843055116"
+      ],
+      "source_epsilon2_Fisher_axis_theta0p4_interval": [
+        "13.036589540303211228034545809188002500217",
+        "13.0413742393153261654767033158364431813691"
+      ],
+      "source_epsilon2_Fisher_body_theta0p4_interval": [
+        "16.5182596468831093888828991792520914069529",
+        "16.5240743165177384309137792427327700943211"
+      ],
+      "source_original_body_minimum_variance_derivative_theta0_interval": [
+        "-0.00200557508210151842218342138763784273500261",
+        "-0.00199479441702024330337785917816044161590022"
+      ],
+      "strict_body_vs_baseline_sign": "INCREASE, IV55 strict across whole alpha bracket",
+      "strict_axis_vs_baseline_sign": "DECREASE, IV55 strict across whole alpha bracket",
+      "spatial_FFT_body_theta0p4_kappa0p01_epsilon2_info": 16.521166762106393,
+      "spatial_FFT_axis_theta0p4_kappa0p01_epsilon2_info": 13.038981693004787,
+      "body_percentage_increase_display": 10.537862,
+      "axis_percentage_decrease_display": 12.760328
+    },
+    {
+      "fold": 2,
+      "whole_original_root_alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "theta": "0.4",
+      "kappa": "0.01",
+      "source_epsilon2_Fisher_independent_theta0_interval": [
+        "470.433521104599412458861470009164015330732",
+        "470.502078476846998401582732450621419902795"
+      ],
+      "source_epsilon2_Fisher_axis_theta0p4_interval": [
+        "397.502042377159862562649720945491336791411",
+        "397.558309699741996857613356167351896078373"
+      ],
+      "source_epsilon2_Fisher_body_theta0p4_interval": [
+        "580.94609660756069228246748791000515590147",
+        "581.022085551283085991418600620163421775886"
+      ],
+      "source_original_body_minimum_variance_derivative_theta0_interval": [
+        "-0.0147272605626568668744826598952778876279201",
+        "-0.0146443705828196363828261845734021377826858"
+      ],
+      "strict_body_vs_baseline_sign": "INCREASE, IV55 strict across whole alpha bracket",
+      "strict_axis_vs_baseline_sign": "DECREASE, IV55 strict across whole alpha bracket",
+      "spatial_FFT_body_theta0p4_kappa0p01_epsilon2_info": 580.9840903200503,
+      "spatial_FFT_axis_theta0p4_kappa0p01_epsilon2_info": 397.53017537734223,
+      "body_percentage_increase_display": 23.490724,
+      "axis_percentage_decrease_display": 15.503212
+    }
+  ],
+  "continuum_proof": {
+    "target": "for each EXACT original old five-output fold alpha in the certified brackets and ALL REAL theta in (0,0.4], BODY-DIAGONAL positive site correlations strictly INCREASE epsilon^2 efficient alpha Fisher",
+    "minimum_variance": "V(theta)=min over linear six-output contrasts L with L*[X_old;x_outer]=0 and fixed outer coefficient L6=1 of L^T*Ctheta*L; I_alpha=delta_outer^2/V",
+    "calculus": "pointwise infimum of affine-in-theta functions is CONCAVE; unique minimizer at theta0 and envelope derivative Vprime0=L0^T*Cprime0*L0, strictly negative certified source IV55",
+    "strict_negative_Vprime0_over_both_whole_alpha_brackets": true,
+    "any_finite_random_sixth_calibration_kappa": "adding independent sixth-only random variance contributes a constant to V since outer contrast coefficient exactly 1, so monotonic strict increase holds for ALL FINITE kappa>=0",
+    "axis_opposite_sign": "prior ROT031 exact positive definite Eaxis Loewner and newly verified source IV55 show strictly decreasing Fisher with positive theta",
+    "not_a_global_claim": "only two source fold points, not every alpha or any real-world measurement"
+  },
+  "independent_spatial_numeric": {
+    "original_41_complex_3x3_Fourier_mode_tensors_and_4_parameter_derivatives_full_41_cubed_IFFT_actually_executed": true,
+    "independent_geometry_Ebody_from_4_canonical_body_shifts_and_reflection": "PASS",
+    "cases": 24,
+    "dimensions": "2 folds x 2 correlation families(axis,body) x 3 theta(0,.2,.4) x 2 kappa(0,.01)",
+    "full_nondiagonal_6x6_correlated_GLS_six_disjoint_vs_old_five_plus_full_agreement": "24/24 PASS within relative 2e-8",
+    "source_iv55_whole_alpha_bracket_interval_inclusion": "24/24 PASS",
+    "spatial_same_cell_not_external_I1": true
+  },
+  "reproducibility": {
+    "user_zip": "Geeky_S12_ROT032_body_diagonal_positive_correlations_reverse_Fisher_sign.zip",
+    "zip_bytes": 38227,
+    "zip_sha256": "01e7321d80e74b8bd2263413b66baa5349f08d9ee54afa22e64e250b815e9880",
+    "zip_members": 12,
+    "manifest_SHA256_payload_count": 11,
+    "zip_CRC": "PASS",
+    "member_exact_bytes": "12/12 PASS",
+    "manifest_SHA256": "11/11 PASS",
+    "actual_new_original_M13_source_iv55_python_SHA256": "a00c849bbabfd2167f00e6484e999b8e22f5bbceb69dd76286dc2f139272f442",
+    "actual_source_original_full_iv55_results_SHA256": "0313b0bfe50afab9aa2f27e4d47861ce8dfb311fae18010423160f8e15daf952",
+    "actual_new_spatial_python_SHA256": "f76e38fc17c10cd45c9491f17eb7fa8b24eac6bc1b7b0543fd6b9436b26869e0",
+    "actual_full_spatial_JSON_SHA256": "27f5f176f24d7f58984d220e071bf7c54a550a3af540f7e064f4fe7e18876962",
+    "actual_replay_tamper_receipt_JSON_SHA256": "740a1838f3c44239076ca39d3c4ca3ed5927cc603385999105de8d0f2d799c9b",
+    "full_clean_separate_two_scientific_program_JSON_byte_equal": "2/2 PASS",
+    "seven_onebyte_original_source_parent_cert_or_new_source_tamper_rejections_before_original_M13_import": "7/7 PASS",
+    "full_executed_python_sources_byte_identical_mirror_on_public_GitHub": false
+  },
+  "review_custody": {
+    "M13": "FIRST original source",
+    "Geeky_ROT031": "FIRST AXIAL source positive mask graph and decreasing Fisher",
+    "Geeky_ROT032": "FIRST within chain body diagonal source-specific opposite information monotonicity, new external reviewer PENDING",
+    "M15_ROT023": "I1 different-cell previous ROT029 review",
+    "M15_ROT024": "I1 different-cell previous ROT030 review and own separate M15 exact-pair distances",
+    "KN14_BW_native_ingest": "UNVERIFIED",
+    "M15_owner_CANON_or_EXEC_SIGN": "UNVERIFIED",
+    "ceilings": [
+      "missing historical dtc0a_runtime_v0_3_1.py byte identity",
+      "no native source t/b or physical sixth measurement",
+      "synthetic covariance not measured",
+      "no global inverse theorem",
+      "no K/J3/TPE/GR/GW physical claim",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "full_public_science_report_commit": "e6a38f7d9ec4cddd6296b402f73194078e5db08f"
+}
