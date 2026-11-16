@@ -1,0 +1,134 @@
+{
+  "artifact_id": "IW_M15_ROT020_ORIGINAL_UNMODIFIED_M13_NATIVE_CODE_TWO_M15_ROT018_EXACT_ALIAS_SOURCE_CUSTODY_001_20261116",
+  "return_id": "IW_M15_ROT020_DIRECT_NATIVE_M13_GIT_BLOB_TWO_ORIGINAL_M15_ROT018_NONLINEAR_ALPHA_ALIAS_KRAWCZYK_CERTIFICATES_001_20261116",
+  "date": "2026-11-16",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "result_class": "DIFFERENT_CELL_INTERNAL_I1_ACTUALLY_EXECUTED_UNMODIFIED_ORIGINAL_M13_PYTHON_SOURCE_IV78_TWICE_KRAWCZYK",
+  "priority": {
+    "source_original": "M13 original public ROT33 Fourier B helper",
+    "two_fold_first": "Geeky-S12 ROT023/024",
+    "M15_other_pair_first": "M15 ROT018",
+    "Geeky_native_different_pair_first": "Geeky-S12 ROT026",
+    "new_result": "original full Git-byte-identical M13 module source operator independently reruns M15 ROT018's two exact certified pairs"
+  },
+  "original_native_M13_source": {
+    "git_pinned_commit": "30d8549b822ecec4d6939b01dbd1e76a98495f09",
+    "repo": "wmakiela-tech/Nash-iw-research",
+    "path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "full_original_file_bytes": 8970,
+    "verified_original_Git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_entire_file_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "unchanged_original_module_actually_imported": true,
+    "native_functions_actually_executed": [
+      "tensor_polys(N=41)[B_channel]",
+      "dot",
+      "window_mode",
+      "calc(N=41,alpha)[B_channel]",
+      "inner"
+    ],
+    "native_CLI_main_run_not_executed": true,
+    "original_historical_DTC0a_producer_byte_id_not_recovered": true
+  },
+  "mathematics": {
+    "N": 41,
+    "modes": 41,
+    "original_native_B_polynomial": "B_m(alpha)=U_m+alpha*V_m+alpha^2*W_m",
+    "source_pairs": 1681,
+    "distinct_q": 221,
+    "five_fixed_cube_windows": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source_shell_volume_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "hypothetical_nuisance": [
+      "one common log gain b",
+      "one common 3D Fourier-field input translation relative fixed masks"
+    ],
+    "nuisance_source_native": false,
+    "target": "original source alpha",
+    "observation": "five log shell energies",
+    "Krawczyk_arithmetic": "actually executed unmodified original native M13 Python source at mpmath.iv.dps 78; separate hypothetical observer and Krawczyk wrapper",
+    "exact_A_literal_and_partner_B_5D_box_rad": "1e-25"
+  },
+  "two_native_78_digit_certificates": [
+    {
+      "name": "FIRST",
+      "alpha_A_exact": "0.01861322133966003355903534097922321888020601616279117881063117914",
+      "alpha_B_approx_box_center": "0.01861722141672577299600863498675349999257594838451884301788651517",
+      "max_infty_contraction_upper_less_than": "0.000000000000001269538269868038824",
+      "five_dimensional_Krawczyk_box_interior": "5/5 PASS",
+      "true_root_exists_and_is_unique_within_five_dimensional_small_box": true,
+      "true_B_alpha_strictly_disjoint_from_exact_A_alpha": true
+    },
+    {
+      "name": "SECOND",
+      "alpha_A_exact": "0.05416539905800021365821377240849411761996727323255007395123373206",
+      "alpha_B_approx_box_center": "0.05416939901330654632728114528927166347200500784664927847504904288",
+      "max_infty_contraction_upper_less_than": "0.000000000000000023685117729856367",
+      "five_dimensional_Krawczyk_box_interior": "5/5 PASS",
+      "true_root_exists_and_is_unique_within_five_dimensional_small_box": true,
+      "true_B_alpha_strictly_disjoint_from_exact_A_alpha": true
+    }
+  ],
+  "original_source_module_vs_independent_M15_source_crosscheck": {
+    "precision_decimal": 70,
+    "source_alpha_tested": [
+      "0",
+      "0.05",
+      "0.2"
+    ],
+    "Fourier_B_modes": 41,
+    "tensor_complex_3_by_3_real_imag_interval_comparisons_total": 2214,
+    "intersections_nonempty": 2214,
+    "fixed_window_mask_energy_intersections_total": 15,
+    "intersections_nonempty_mask": 15,
+    "meaning": "source-equation mathematical consistency across independent code, not historical DTC0a producer equivalence"
+  },
+  "actual_executed_reproducer": {
+    "new_verifier_script_sha256": "e8a1bfc6124768bd28be6768408897797bd80c17e86b0aacca2f8503381b699a",
+    "full_native_source_cert_json_sha256": "9b5d9a5de14839d4bbc923b26d78f48d16dbd12863c672f5c98033c8e2b2466c",
+    "crosscheck_script_sha256": "854cbc4e2ebca2bced8556d2670cef873c907d13fe34c08366a002fe5f0af0b7",
+    "full_crosscheck_json_sha256": "5fcf01ca924bda51d15540c4b96e9d21a079c2a7e9a2b7975144b689fd9b696d",
+    "input_M15_ROT018_numerical_pairs_sha256": "44f8e325ebefa4667ca44373793a5e127d68314fe2b7cc7c3d9c184848b0651e",
+    "clean_replay_results_sha256": "b9439d45efc392ea58f7b4280b7dc9e0ec32a95b27b4d0d0995741e108db67d7",
+    "two_independent_clean_rerun_JSONs_byte_exact": "2/2 PASS",
+    "three_negative_controls": [
+      "original_M13_native_source_one_byte_tamper_rejected_pre_science_PASS",
+      "M15_pair_A_exact_decimal_one_digit_change_pre_science_rejected_PASS",
+      "hypothetical_wrong_A_b_plus_1e-4_rejected_by_Krawczyk_interval_inclusion_PASS"
+    ],
+    "negative_controls_count": 3,
+    "local_full_zip": "IW_M15_ROT020_ORIGINAL_NATIVE_M13_TWO_EXACT_ALPHA_ALIAS_PAIRS_REPRO_001_20261116.zip",
+    "local_full_zip_bytes": 34021,
+    "local_zip_sha256": "e9f9e3d46c12bb1e5ab7cb37dd5870e05e9b4eaff36d8bea5bc1d0f21723264f",
+    "zip_crc": "PASS",
+    "exact_payload_sha256": "11/11 PASS",
+    "includes_unmodified_original_source_bytes": true,
+    "full_new_executable_not_asserted_published_on_GitHub": true
+  },
+  "claims_and_limits": [
+    "TWO exact source-mathematical nonlinear inverse collisions certified on FULL ORIGINAL M13 helper code, NOT original native physical experiment",
+    "hypothetical relative translations+unknown log gain NOT native M13 free parameters",
+    "native source operator byte-executed but original native CLI run not invoked",
+    "full original historic dtc0a_runtime_v0_3_1.py not recovered",
+    "no full global inverse classification",
+    "no actual sensor calibration or measured noise",
+    "no general math novelty",
+    "internal nonblind different-cell I1 only, not external blind I3",
+    "no verified native BW ING receipt",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
