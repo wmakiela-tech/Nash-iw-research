@@ -1,0 +1,189 @@
+{
+  "artifact_id": "IW_M15_ROT019_SOURCE_TWO_FOLDS_LEAVE_ONE_NUISANCE_ABLATION_INFORMATION_POSITIVITY_001_20261116",
+  "date": "2026-11-16",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "status": "I1_INTERNAL_NONBLIND_DIFFERENT_CELL_MATHEMATICAL_SOURCE_PASS",
+  "original_firstness": {
+    "M13": "source auxiliary Fourier B operator N41",
+    "Geeky_ROT023": "two source alpha singular Fisher brackets",
+    "Geeky_ROT024": "first two nonlinear Whitney folds",
+    "M15_ROT015_018": "previous independent source root/fold reviews and exact constructed aliases",
+    "M15_ROT019": "first local 8-case source-nuisance-ablation strict full-bracket positivity certificate in this project"
+  },
+  "actual_source": {
+    "original_operator_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_direct_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "original_source_only_read_not_native_byte_executed": true,
+    "independently_rewritten_operator_formula_sha256": "4e2e316e58dec6831e4f633e13081ff53737e69da6020fb158ab88574a263c9e"
+  },
+  "model": {
+    "N": 41,
+    "alpha_brackets": [
+      "[0.01861522133766,0.01861522134166]",
+      "[0.05416739905600,0.05416739906000]"
+    ],
+    "target": "alpha",
+    "nuisance": [
+      "b common log gain",
+      "tx rigid shift",
+      "ty rigid shift",
+      "tz rigid shift"
+    ],
+    "nuisance_entirely_hypothetical": true,
+    "shells": 5,
+    "fixed_source_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source_B_modes": 41,
+    "source_pair_count": 1681,
+    "difference_q_count": 221,
+    "noise_assumption_for_numeric_values": "Sigma=sigma^2 I on 5 log-shell observations; unmeasured hypothetical model",
+    "strict_structural_rank_recovery_for_any_positive_definite_covariance": true
+  },
+  "theorem": "At BOTH actual singular alpha roots, any ONE known pinned nuisance among b,tx,ty,tz restores local first-order alpha identifiability. Stronger: all 8 reduced information lower bounds are strictly positive THROUGHOUT the whole respective certified root bracket. Entire alpha0 domain/global inverse not claimed.",
+  "method": "iv65 original-source formula, all Cauchy-Binet row minors of 5x3 reduced nuisance and 5x4 augmented score, true iv square x**2, 8 rigid interval positivity gates, four normalized full-kernel nuisance coordinate intervals strict nonzero; second independent SVD projector numeric only",
+  "cases": [
+    {
+      "fold": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "fixed_known_parameter": "b",
+      "sigma2_Ieff_conservative_external_interval": [
+        "222.568099325286",
+        "222.568512163543"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "fixed_known_parameter": "tx",
+      "sigma2_Ieff_conservative_external_interval": [
+        "20.5851175862376",
+        "20.5852649935872"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "fixed_known_parameter": "ty",
+      "sigma2_Ieff_conservative_external_interval": [
+        "0.251716776845987",
+        "0.251718544706392"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "fixed_known_parameter": "tz",
+      "sigma2_Ieff_conservative_external_interval": [
+        "0.201148645268775",
+        "0.201150464500889"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "fixed_known_parameter": "b",
+      "sigma2_Ieff_conservative_external_interval": [
+        "78.3875268465782",
+        "78.3876723704250"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "fixed_known_parameter": "tx",
+      "sigma2_Ieff_conservative_external_interval": [
+        "2.46439302730201",
+        "2.46441192520173"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "fixed_known_parameter": "ty",
+      "sigma2_Ieff_conservative_external_interval": [
+        "0.366972473973119",
+        "0.366975318682925"
+      ],
+      "strict_positive": true
+    },
+    {
+      "fold": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "fixed_known_parameter": "tz",
+      "sigma2_Ieff_conservative_external_interval": [
+        "0.611119825265706",
+        "0.611127525130438"
+      ],
+      "strict_positive": true
+    }
+  ],
+  "source_claim_checks": {
+    "eight_certified_strict_positive_efficient_information": "8/8 PASS",
+    "eight_separate_SVD_midpoint_controls_within_source_interval": "8/8 PASS",
+    "full_nuisance_X_rank4_both_brackets": "2/2 PASS",
+    "four_normalized_null_nuisance_components_each_bracket_nonzero": "8/8 PASS",
+    "two_clean_machine_results_byte_identical": "2/2 PASS",
+    "pre_science_source_formula_corruption_rejected": true,
+    "synthetic_target_score_equals_common_gain_rejected": true
+  },
+  "actual_reproducing_files": {
+    "zip_name": "IW_M15_ROT019_LEAVE_ONE_NUISANCE_ABLATION_SOURCE_IV65_REPRO_001_20261116.zip",
+    "zip_bytes": 24314,
+    "zip_sha256": "08e937c4eafcd0cd5904360db92773655115d2bbec467fa0c94462d4843ba14a",
+    "zip_crc": "PASS",
+    "payload_manifest_sha256": "12/12 PASS",
+    "iv65_script_sha256": "c3cefd157cdd5d14bba7b7e7502c9bcba703e8776f980f5910d7104cb17201b6",
+    "full_directed_json_sha256": "064b820f1e9551ac453b24113390e01532e7c76c9333f0f3fff2421178740b4e",
+    "SVD_script_sha256": "b4178335c965f7687a56661b6f2cef7b05f728f6e17b8a3fdbd935d98cae4139",
+    "SVD_json_sha256": "dd086f20e3f09d798ca5dec99fc2756b50f71e0aa7fb5e4eb546d9fd82ff32b2",
+    "notes": "full exact 65-digit outward source bounds and executable Python only in locally user-visible full ZIP; not claimed Github mirrored byte-for-byte"
+  },
+  "claim_ceiling": [
+    "NOT native original M13 executable byte replay",
+    "NOT historical dtc0a_runtime_v0_3_1.py",
+    "NOT physical sensor, no calibrated gain/phase nuisance",
+    "no global inverse injectivity",
+    "no general math novelty",
+    "internal I1, not external blind I3",
+    "no BW native ingest receipt",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_AUTO_CASCADE"
+  ],
+  "BW_sync": "GITHUB_PENDING_BW_INGEST"
+}
