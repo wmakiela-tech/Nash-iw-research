@@ -1,0 +1,77 @@
+name: Mech-S9 ROT029 authorized source T1 Wu-Xu BlackHawk five-mass B1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mech-s9-rot029-authorized-T1-5mass.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  t1-one-approved-original-blackhawk-source-experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 32
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Record frozen prereg and verify source runner syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot029_T1_evidence
+          python3 -m py_compile research/mech-s9/2026-11-16/code/mech_s9_rot029_t1_blackhawk_source_repro.py
+          git rev-parse HEAD | tee mech_s9_rot029_T1_evidence/GITHUB_INPUT_COMMIT.txt
+          git hash-object research/mech-s9/2026-11-16/code/mech_s9_rot029_t1_blackhawk_source_repro.py | tee mech_s9_rot029_T1_evidence/RUNNER_GIT_BLOB.txt
+          git hash-object research/mech-s9/2026-11-16/IW_MECH_S9_ROT029_B1_T1_PREREG_001_PREEXEC_SOURCE_OUTPUT_GRID_ERRATUM_002_20261116.md | tee mech_s9_rot029_T1_evidence/PREREG_ERRATUM_GIT_BLOB.txt
+          echo T1_SOURCE_PRECHECK_PASS | tee mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Fetch exact original author pinned reference and 161MB official source tar
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot029_T1_private
+          curl -L --fail --silent --show-error --retry 3 --retry-all-errors --connect-timeout 30 --max-time 160 \
+            'https://raw.githubusercontent.com/Fenyutanchan/Primordial-Black-Hole/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/data/out/hadrons_from_PBH.dat' \
+            -o mech_s9_rot029_T1_private/hadrons_from_PBH.dat
+          echo 'Authenticating author original v2.3 tar: exact 161495983 bytes and pinned SHA-256'
+          URI='https://blackhawk.hepforge.org/downloader?f=blackhawk_v2.3.tar.bz2'
+          OK=0
+          for i in 1 2 3; do
+            rm -f mech_s9_rot029_T1_private/blackhawk_v2.3.tar.bz2
+            if curl --location --fail --silent --show-error --retry 2 --retry-all-errors --connect-timeout 30 --max-time 330 -o mech_s9_rot029_T1_private/blackhawk_v2.3.tar.bz2 "$URI"; then
+              echo "archive_fetch_attempt=$i bytes=$(wc -c < mech_s9_rot029_T1_private/blackhawk_v2.3.tar.bz2)"
+              if test "$(wc -c < mech_s9_rot029_T1_private/blackhawk_v2.3.tar.bz2)" = 161495983 &&
+                echo 'dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  mech_s9_rot029_T1_private/blackhawk_v2.3.tar.bz2' | sha256sum -c -; then
+                OK=1
+                break
+              fi
+            fi
+          done
+          test "$OK" = 1
+          echo SOURCE_ORIGINAL_TAR_SHA_PASS | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Run ONE Moderator authorized source T1 for five preregistered masses
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot029_t1_blackhawk_source_repro.py \
+            mech_s9_rot029_T1_private/blackhawk_v2.3.tar.bz2 \
+            mech_s9_rot029_T1_evidence \
+            mech_s9_rot029_T1_private/hadrons_from_PBH.dat \
+            | tee mech_s9_rot029_T1_evidence/T1_SOURCE_RUN_STDOUT.txt
+          echo T1_APPROVED_FIVE_MASS_EXECUTION_COMPLETED | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Archive hashes and do not redistribute original archive, overlays or BBN raw tables
+        if: always()
+        shell: bash
+        run: |
+          rm -rf mech_s9_rot029_T1_private
+          (cd mech_s9_rot029_T1_evidence && find . -maxdepth 1 -type f ! -name EVIDENCE_SHA256SUMS.txt -print0 | sort -z | xargs -0 -r sha256sum > EVIDENCE_SHA256SUMS.txt)
+      - name: Publish source-output-only evidence including any compile blockers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot029-authorized-T1-blackhawk-five-mass-evidence
+          path: mech_s9_rot029_T1_evidence/
+          if-no-files-found: error
