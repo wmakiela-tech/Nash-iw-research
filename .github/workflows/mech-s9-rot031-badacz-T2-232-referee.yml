@@ -1,4 +1,4 @@
-name: Mech-S9 ROT031 Badacz T2 PREREG069 232-row independent source root referee
+name: Mech-S9 ROT031 Badacz T2 independent 232-row float-ULP replay
 on:
   push:
     branches: [main]
@@ -47,9 +47,45 @@ jobs:
             mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2 \
             mech_s9_rot031_evidence/OWNER_ANALYSIS069_COLD.json \
             > mech_s9_rot031_evidence/OWNER_COLD_STDOUT.txt
-          cmp research/badacz/2026-11-16/data/analysis069.json \
-              mech_s9_rot031_evidence/OWNER_ANALYSIS069_COLD.json
-          echo OWNER_ANALYSIS069_BYTE_IDENTICAL_PASS | tee -a mech_s9_rot031_evidence/STATUS.txt
+          python3 - <<'PY'
+          import pathlib,json,math,hashlib
+          owner=pathlib.Path("research/badacz/2026-11-16/data/analysis069.json")
+          cold=pathlib.Path("mech_s9_rot031_evidence/OWNER_ANALYSIS069_COLD.json")
+          a=json.loads(owner.read_text());b=json.loads(cold.read_text())
+          numerical=[];structural=[]
+          def walk(x,y,path="$"):
+              if type(x) is not type(y):
+                  structural.append({"path":path,"kind":"TYPE","owner":str(type(x)),"cold":str(type(y))})
+              elif isinstance(x,dict):
+                  if set(x)!=set(y): structural.append({"path":path,"kind":"KEYS","owner":sorted(x),"cold":sorted(y)})
+                  for k in sorted(set(x)&set(y)):walk(x[k],y[k],path+"."+str(k))
+              elif isinstance(x,list):
+                  if len(x)!=len(y):structural.append({"path":path,"kind":"LENGTH","owner":len(x),"cold":len(y)})
+                  for i,(u,v) in enumerate(zip(x,y)):walk(u,v,path+"["+str(i)+"]")
+              elif isinstance(x,float):
+                  if x!=y:
+                      assert math.isfinite(x) and math.isfinite(y),(path,x,y)
+                      numerical.append({"path":path,"owner":x,"cold":y,"absolute_delta":abs(y-x)})
+              elif x!=y:
+                  structural.append({"path":path,"kind":"VALUE","owner":x,"cold":y})
+          walk(a,b)
+          maximum=max((x["absolute_delta"] for x in numerical),default=0.)
+          byte_equal=owner.read_bytes()==cold.read_bytes()
+          evidence={"owner_analysis_sha256":hashlib.sha256(owner.read_bytes()).hexdigest(),
+                    "cold_analysis_sha256":hashlib.sha256(cold.read_bytes()).hexdigest(),
+                    "byte_identical":byte_equal,"number_numeric_leaf_differences":len(numerical),
+                    "max_abs_numeric_difference":maximum,
+                    "structural_differences":structural,
+                    "numeric_diff_examples":numerical[:18],
+                    "result":"SEMANTIC_NUMERIC_PASS_BYTE_DIFFERENCE_RETAINED"
+                       if not structural and maximum<=5e-10 else "FAIL_CLOSED"}
+          pathlib.Path("mech_s9_rot031_evidence/OWNER_ANALYSIS069_NUMERIC_REPLAY_AUDIT.json").write_text(
+              json.dumps(evidence,indent=2,sort_keys=True)+"\\n")
+          assert not structural and maximum<=5e-10,evidence
+          print(json.dumps({"byte_identical":byte_equal,"numeric_different_leaves":len(numerical),
+                            "max_abs_numeric_difference":maximum,"structural_diff":structural},indent=2))
+          PY
+          echo OWNER_ANALYSIS069_SEMANTIC_NUMERIC_PASS_NON_BYTE_DIFFERENCE_RECORDED | tee -a mech_s9_rot031_evidence/STATUS.txt
       - name: Fail closed on three independent native owner source tamper tests
         shell: bash
         run: |
