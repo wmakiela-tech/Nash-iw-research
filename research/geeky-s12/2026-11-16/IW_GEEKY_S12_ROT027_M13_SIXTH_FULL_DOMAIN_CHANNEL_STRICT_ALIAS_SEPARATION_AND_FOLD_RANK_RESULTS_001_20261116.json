@@ -1,0 +1,177 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT027_M13_SIXTH_FULL_DOMAIN_CHANNEL_STRICT_ALIAS_SEPARATION_AND_FOLD_RANK_RESULTS_001_20261116",
+  "date": "2026-11-16",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source": {
+    "original_first": "M13 original public N41 B Fourier/TT helper source",
+    "original_M13_module_path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "M13_module_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_source_B25_path": "research/m13/2026-10-26/direct_B.json",
+    "original_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "actual_original_module_imported_and_tensor_polys_41_executed": true,
+    "N": 41,
+    "original_mode_count": 41,
+    "old_original_five_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "original_five_disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "original_N41_grid_total_sites": 68921,
+    "original_old_five_shell_interior_sites": 50653,
+    "new_complement_outer_sites": 18268,
+    "historic_full_dtc0a_producer_byte_identity": "MISSING"
+  },
+  "mathematical_extension": {
+    "parameters": [
+      "b common energy log gain",
+      "tx common C1/C2/h rigid Fourier torus translation",
+      "ty common translation",
+      "tz common translation",
+      "alpha original source parameter"
+    ],
+    "original_source_calc_has_native_free_b_or_t": false,
+    "five_original_output_equations": "F_i=b+ln S_i(alpha,t), i=1..5, original disjoint source shell energies with observation masks FIXED",
+    "sixth_added_output": "F6=b+ln(g_full(alpha)), g_full=(1/6)sum over all original source B Fourier modes of Frobenius mode tensor norm squared",
+    "g_full_is_exactly_translation_invariant": "B_m(alpha,t)=exp(i*m dot t)B_m(alpha), modulus of each phase=1",
+    "original_native_implementation_for_gfull": "M13 original inner(B,B,41,0,cache) or M13 original quartic((U,V,T),41,0,{})",
+    "sixth_channel_is_historically_measured": "NOT_VERIFIED",
+    "all_four_nuisance_parameters_still_free": true
+  },
+  "rigorous_exact_prior_alias_pair_box_discriminations": {
+    "prior_rot025_exact_input_json_sha256": "306bd1f504f33a710e54a8c9eaa2c7548a890863b54851ec050a40fc0df312ee",
+    "prior_rot026_rigorous_5D_krawczyk_B_boxes_results_sha256": "63365d9b3f1752ca9edbb12ace6ca2a6b75cb5358a5bcf66524d23faad70b3a0",
+    "original_ROT026_B_box_component_radius": "1e-31",
+    "main_original_M13_interval_decimal_digits": 82,
+    "input_A_each_coordinate_exact_finite_decimal": true,
+    "source_certified_unique_exact_B_inside_each_box": true,
+    "records": [
+      {
+        "id": "r1",
+        "original_A_alpha_exact": "0.0186148213396600335590353409792232188802060161627912",
+        "original_B_alpha_center_exact": "0.0186156213427424614691284281534607900091587306476119",
+        "source_signed_delta_F6_BminusA_approx": -5.460942257500191e-8,
+        "entire_box_delta_F6_strict_sign": "NEG",
+        "conservative_interval_display": [
+          "-5.460943e-8",
+          "-5.460941e-8"
+        ],
+        "rigorous_entire_BOX_discrimination_pass": true
+      },
+      {
+        "id": "r2",
+        "original_A_alpha_exact": "0.0541669990580002136582137724084941176199672732325501",
+        "original_B_alpha_center_exact": "0.0541677990561201137563223643106130371111032022645199",
+        "source_signed_delta_F6_BminusA_approx": -6.662657417961175e-7,
+        "entire_box_delta_F6_strict_sign": "NEG",
+        "conservative_interval_display": [
+          "-6.662658e-7",
+          "-6.662656e-7"
+        ],
+        "rigorous_entire_BOX_discrimination_pass": true
+      }
+    ],
+    "exact_long_directed_endpoints": "Full strings in original executed source rot027_results.json in user ZIP"
+  },
+  "whole_fold_root_bracket_local_rank_theorems": {
+    "source_old_J5_at_fold_rank": 4,
+    "source_old_X5x4_nuisance_rank": 4,
+    "source_kernel_right_tangent": "v=(vb,vtx,vty,vtz,1) from 4-row original X source-directed Cramer, normalized valpha=1",
+    "source_sixth_gradient": "dF6[v]=vb+g_full'(alpha)/g_full(alpha)",
+    "full_six_by_five_rank_at_old_fold_proved_by": "nonzero source extra row on 1D kernel of old 5x5 J",
+    "records": [
+      {
+        "fold": "r1",
+        "strict_whole_root_bracket_open": [
+          "0.01861522133766",
+          "0.01861522134166"
+        ],
+        "sixth_tangent_source_iv82_strict_sign": "NEG",
+        "source_iv82_conservative_enclosure": [
+          "-0.068267039404",
+          "-0.068255991105"
+        ],
+        "midpoint_approx": -0.06826151525444962,
+        "augmented_J6x5_full_column_rank_at_each_exact_old_fold": true,
+        "source_negative_duplicate_fifth_shell_new_row_no_rank_lift": "PASS"
+      },
+      {
+        "fold": "r2",
+        "strict_whole_root_bracket_open": [
+          "0.05416739905600",
+          "0.05416739906000"
+        ],
+        "sixth_tangent_source_iv82_strict_sign": "NEG",
+        "source_iv82_conservative_enclosure": [
+          "-0.832839532293",
+          "-0.832828845849"
+        ],
+        "midpoint_approx": -0.83283418907084,
+        "augmented_J6x5_full_column_rank_at_each_exact_old_fold": true,
+        "source_negative_duplicate_fifth_shell_new_row_no_rank_lift": "PASS"
+      }
+    ],
+    "local_invertibility_by_classical_full_column_rank": "ONLY IN NEIGHBORHOOD OF BOTH OLD FOLD SINGULARITIES; not global injectivity nor uniform source whole alpha interval"
+  },
+  "independent_original_native_and_spatial_check": {
+    "independently_authored_check_imports_original_M13_inner_and_window_mode_not_main_script": true,
+    "source_outward_mpmath_iv_decimal_digits": 76,
+    "source_native_root1_sixth_derivative_sign": "NEG",
+    "native_root1_midpoint_display": -0.06826151582906355,
+    "source_native_root2_sixth_derivative_sign": "NEG",
+    "native_root2_midpoint_display": -0.8328341893919033,
+    "original_direct_source_inner_native_exact_decimal_A_B_center_delta_F6_both_sign": "NEG",
+    "full_41cubed_spatial_inverseFFT_Frobenius_energy_control": "4/4 original ROT025 A/B field points PASS",
+    "maximum_FFT_vs_source_full_domain_global_energy_relative_difference": 4.440892098500626e-16,
+    "FFT_binary64_only_diagnostic": true
+  },
+  "reproducibility": {
+    "user_local_archive": "Geeky_S12_ROT027_sixth_global_energy_anti_fold_source_certificate.zip",
+    "archive_bytes": 32435,
+    "archive_sha256": "1ef90a19460f01b99e92b3676e605c052eab471bf0844047121c9f86cb15edd4",
+    "archive_members": 14,
+    "manifest_payload_files": 13,
+    "CRC": "PASS",
+    "member_exact_byte_readback": "14/14 PASS",
+    "manifest_SHA256": "13/13 PASS",
+    "full_main_original_source_directed_json_sha256": "bb279334e39cbaabfdeae07085434ab10df6b1a5a9facc0b1eb370e34592e362",
+    "full_independent_original_native_inner_spatial_fft_json_sha256": "54a5199cd9db1463b6fe43c5d0ae75e518ad82af70e371d7ccc551e7d1a02872",
+    "primary_clean_separate_subprocess_full_JSON_byte_identical": true,
+    "secondary_clean_separate_subprocess_full_JSON_byte_identical": true,
+    "eight_one_byte_tamper_source_or_prior_proof_mutations_fail_closed_before_science": true,
+    "duplicate_existing_fifth_shell_as_sixth_rank_null_controls": "2/2 PASS",
+    "earlier_monolithic_two_replays_attempt": "TIMED_OUT / NOT_COUNTED_PASS",
+    "actual_full_executable_source_GitHub_byte_identical_mirror": false
+  },
+  "priority_review_and_transfer": {
+    "M13": "ORIGINAL PUBLIC SOURCE FIRST",
+    "Geeky_ROT023_024": "TWO ORIGINAL INTERNAL_SOURCE_FOLDS_FIRST",
+    "M15_ROT017_AUD2_ROT016": "I1 DIFFERENT CELL PRIOR FOLD REVIEW PASS",
+    "M15_ROT018": "FIRST CONSTRUCTIVE EXACT KRAWCZYK FOR TWO OTHER PAIRS",
+    "Geeky_ROT025_026": "ORIGINAL TWO NUMERIC PAIRS AND ACTUAL ORIGINAL MODULE IV77 KRAWCZYK ROOT BOX CERTIFICATE SAME CELL",
+    "M15_ROT019": "FIRST EIGHT SINGLE-NUISANCE PINNING SOURCE INFORMATION RESTORATION; DIFFERENT FROM SIXTH OBSERVATION",
+    "Geeky_ROT027": "AUTHOR ORIGINAL M13 SIXTH FULL DOMAIN K0 OBSERVATION 2 EXACT ROOT BOX SEPARATIONS AND 2 OLD FOLD RANK LIFTS, external I1 PENDING",
+    "KN14_BW_native_ingest": "UNVERIFIED",
+    "M15_CANON": "UNVERIFIED"
+  },
+  "strict_ceilings": [
+    "source mathematical alternative measurement, not physical sensor observation",
+    "hypothetical rigid source translations and free common gain not original M13 native producer inputs",
+    "no measured variance/covariance or hardware resolution even though sixth differences are tiny",
+    "no historic dtc0a_runtime_v0_3_1.py byte-identical full producer",
+    "no proof of global six-channel injectivity, any other folds or symmetries",
+    "no full coefficient-box eps uncertainty robustness of new theorem",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
