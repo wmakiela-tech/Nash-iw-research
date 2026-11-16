@@ -1,0 +1,60 @@
+name: Mech-S9 ROT032 original Wu-Xu published source first-node slope audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mech-s9-rot032-paper-code-firstnode.yml'
+permissions:
+  contents: read
+jobs:
+  paper-code-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Admit exact original 100-node Wu-Xu hadron table by full Git blob
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot032_evidence
+          curl -fsSL --retry 3 --retry-all-errors --connect-timeout 20 \
+            'https://raw.githubusercontent.com/Fenyutanchan/Primordial-Black-Hole/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/data/out/hadrons_from_PBH.dat' \
+            -o author_hadrons_from_PBH.dat
+          test "$(git hash-object author_hadrons_from_PBH.dat)" = '06d0883a27b108692720422294ba2baacd381a64'
+          test "$(wc -l < author_hadrons_from_PBH.dat)" = 101
+          echo AUTHOR_ORIGINAL_HADRON_TABLE_BLOB_AND_100_ROWS_PASS | tee mech_s9_rot032_evidence/STATUS.txt
+      - name: Cross-check actual original first two numeric rows and paper-vs-code slopes with pure stdlib
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib,math
+          s=pathlib.Path("author_hadrons_from_PBH.dat").read_text().splitlines()
+          r0=[float(x) for x in s[1].split()];r1=[float(x) for x in s[2].split()]
+          assert len(r0)==len(r1)==6
+          assert r0[0]==5.609588603804452e32 and r1[0]==6.099798045788406e32
+          expected=(-1.2004856256108531,-1.1966513505022407,-1.1968048413492571,-1.2042914285384587,-1.204763063983033)
+          for i,(a,b,k) in enumerate(zip(r0[1:],r1[1:],expected)):
+              measured=math.log(b/a)/math.log(r1[0]/r0[0])
+              assert abs(measured-k)<2e-12,(i,measured,k)
+              assert .78<(.1**(measured+1.3))<.81
+          print("EXACT_5_ORIGINAL_NODE_SLOPES_AND_SOURCE_VS_PAPER_M1E8_RATIOS_PASS")
+          PY
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot032_firstnode_analytic_vs_code_slope_minimal_stdlib.py \
+            | tee mech_s9_rot032_evidence/ORIGINAL_SOURCE_ANALYTIC_SLOPE_STDOUT.txt
+          echo FIVE_SOURCE_CHANNEL_PAPER_CODE_INPUT_FUNCTION_MISMATCH_PASS | tee -a mech_s9_rot032_evidence/STATUS.txt
+          (cd mech_s9_rot032_evidence && sha256sum STATUS.txt ORIGINAL_SOURCE_ANALYTIC_SLOPE_STDOUT.txt > EVIDENCE_SHA256SUMS.txt)
+      - name: Do not redistribute 100-row original source table
+        if: always()
+        shell: bash
+        run: rm -f author_hadrons_from_PBH.dat
+      - name: Upload bounded derived numeric audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot032-paper-code-5channel-original-source-slope
+          path: mech_s9_rot032_evidence/
+          if-no-files-found: error
