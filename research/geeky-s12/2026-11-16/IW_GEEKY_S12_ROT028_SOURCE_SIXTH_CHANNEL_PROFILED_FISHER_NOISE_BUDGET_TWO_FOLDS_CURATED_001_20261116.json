@@ -1,0 +1,144 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT028_SOURCE_SIXTH_CHANNEL_PROFILED_FISHER_NOISE_BUDGET_TWO_FOLDS_CURATED_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "original_source": {
+    "M13_public_operator": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "Git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_B25_source_coefficients": "research/m13/2026-10-26/direct_B.json",
+    "B25_Git_blob_SHA1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "M13_original_tensor_polys_41_actually_executed": true,
+    "M13_original_native_inner_window_mode_actually_executed": true,
+    "N": 41,
+    "channel": "B",
+    "fixed_masks_k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "previous_original_ROT027_exact_directed_results_SHA256": "bb279334e39cbaabfdeae07085434ab10df6b1a5a9facc0b1eb370e34592e362"
+  },
+  "model": {
+    "source_augmentation": "Hypothetical rigid common translations of all source C1,C2,h fields relative to original five fixed windows plus one free common positive energy amplitude c=exp(b)",
+    "original_M13_calc_has_native_free_translation_or_gain": false,
+    "old_five_raw_log_shell_observables": "F_i=b+log S_i(alpha,t), i=1..5",
+    "sixth_original_helper_source_mathematical_observable": "F6=b+log g_full(alpha), g_full=(1/6)*sum_m Frobenius(B_m(alpha)) squared, independent of t by Fourier Parseval",
+    "original_historical_physical_sixth_channel": "NOT_VERIFIED",
+    "hypothetical_observation_errors": "Five old raw log shell errors IID Gaussian variance sigma^2, independent sixth raw log full energy error Gaussian variance tau^2. NOT a historical noise or covariance fact.",
+    "old_local_nuisance_matrix": "X=[ones,Dtx log S,Dty log S,Dtz log S], shape 5x4, full rank at each original old fold",
+    "old_local_target_score": "a=Dalpha log S, at old fold a belongs to range(X)",
+    "q": "e1^T inverse(X^T X) e1=det(T^TT)/det(X^TX) with T=X[:,1:4], both determinants source strict positive",
+    "q_robust_source_algorithm": "Cauchy-Binet 10 squared 3x3 T minors / 5 squared 4x4 X minors with outward native mpmath.iv75; alternate direct Gram ratio zero-containing difference",
+    "delta": "a6 + v_b where v=(v_b,v_tx,v_ty,v_tz,1) source old fold alpha-normalized right null direction, a6=g_full_prime/g_full",
+    "exact_general_linear_rank_one_update": "I6=I5+(a6-x6^T beta)^2/(tau^2+sigma^2*q), beta=inv(X^TX)X^T a, x6=(1,0,0,0)",
+    "at_old_fold_I5": 0,
+    "at_old_fold_I6": "delta^2/(tau^2+q*sigma^2)",
+    "perfect_sixth_noise_limit": "lim_tau_to_0 sigma^2*I6=delta^2/q finite for sigma>0, q>0",
+    "very_noisy_sixth_limit": "lim_tau_over_sigma_to_infinity sigma^2*I6=0"
+  },
+  "two_original_full_bracket_source_interval_certificates": [
+    {
+      "fold_id": 1,
+      "alpha_strict_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "delta_iv75_lo": "-0.06840750007732440410906203091692691911148559482786929426417",
+      "delta_iv75_hi": "-0.06811553158080270236306950100128448886490468758029071114362",
+      "q_iv75_lo": "1.135937432925325563481679095444852146600105292522541422129",
+      "q_iv75_hi": "1.135941093459421412205409134834984553732422233478509464701",
+      "sigma2_I6_tau_equal_sigma_iv75_lo": "0.002172216104996004073858627381484446097218462668303771219612",
+      "sigma2_I6_tau_equal_sigma_iv75_hi": "0.002190881621668147994266084527801578311143521608858908205595",
+      "sigma2_I6_tau_zero_limit_iv75_lo": "0.004084477328314095905699934299935707617814888566405217483469",
+      "sigma2_I6_tau_zero_limit_iv75_hi": "0.0041195808247801318216991280874533874613171415100251699663",
+      "source_q_positive": true,
+      "two_source_CauchyBinet_Gram_implementations_compatible": true,
+      "source_sigma2_I6_equal_noise_human_mid_display": 0.002181548863332076,
+      "source_sigma2_I6_tau10_sigma_human_mid_display": 0.000046073195038183226,
+      "conditional_local_CRLB_SD_multiplier_at_tau_equal_sigma_display": 21.410042407769932,
+      "independent_spatial_fft_q": 1.1359392631907914,
+      "independent_spatial_fft_delta": -0.06826151525368829,
+      "independent_spatial_fft_direct_I6sigma2": 0.002181538841029252
+    },
+    {
+      "fold_id": 2,
+      "alpha_strict_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "delta_iv75_lo": "-0.8329589358993011177357232525138831288116488695791435931696",
+      "delta_iv75_hi": "-0.8327094428845056918577367011775954997486033497935378675024",
+      "q_iv75_lo": "7.762330597807685052041995304398880984768976843676584472749",
+      "q_iv75_hi": "7.762368826802307070419716038534199066331452023238416310667",
+      "sigma2_I6_tau_equal_sigma_iv75_lo": "0.07913442471721102356431383118181812179265649189328082001962",
+      "sigma2_I6_tau_equal_sigma_iv75_hi": "0.07918219715061747873118531155150191972750928031048778964339",
+      "sigma2_I6_tau_zero_limit_iv75_lo": "0.08932904783843809077116765831219152816060831909243952419328",
+      "sigma2_I6_tau_zero_limit_iv75_hi": "0.08938302487276846593958910263148118106984757046798385980826",
+      "source_q_positive": true,
+      "two_source_CauchyBinet_Gram_implementations_compatible": true,
+      "source_sigma2_I6_equal_noise_human_mid_display": 0.07915831093391425,
+      "source_sigma2_I6_tau10_sigma_human_mid_display": 0.006436504070952315,
+      "conditional_local_CRLB_SD_multiplier_at_tau_equal_sigma_display": 3.55428084174103,
+      "independent_spatial_fft_q": 7.762349712283262,
+      "independent_spatial_fft_delta": -0.8328341890702973,
+      "independent_spatial_fft_direct_I6sigma2": 0.07915830904491049
+    }
+  ],
+  "source_original_exact_alias_box_6th_log_separations_from_prior_ROT027": {
+    "r1_approx_abs_log_delta": 5.460942257500191e-8,
+    "r2_approx_abs_log_delta": 6.662657417961175e-7,
+    "rigorous_full_prior_ROT026_exact_B_box_signs": "Both negative; original outward source 82dps, exact endpoints in pinned ROT027 original JSON, prior byte lock verified",
+    "interpretation": "For fixed two exact mean predictions, sixth-channel discrimination depends on unknown sixth noise tau via signal-to-noise ratio abs(Delta6)/tau; different from continuous nuisance-profiled alpha Fisher"
+  },
+  "reproducibility": {
+    "user_local_zip": "Geeky_S12_ROT028_sixth_channel_conditional_Fisher_noise_budget.zip",
+    "zip_bytes": 36873,
+    "zip_SHA256": "2a56026ff2b92d8098df0db60904a6ed01f9bf582d3efe9211f1ef576ac0df48",
+    "zip_members": 15,
+    "manifest_SHA256_payloads": 14,
+    "CRC": "PASS",
+    "all_archive_member_byte_readback": "15/15 PASS",
+    "all_payload_SHA256": "14/14 PASS",
+    "actually_executed_original_native_iv75_source_script_SHA256": "b229e0732953f6793d1480004a9575bf4a4da67192bd1c72f561c0e8dfc96136",
+    "actual_original_native_iv75_full_result_JSON_SHA256": "fbd42c3c75d1c1a6b0c3c7c2eaca60ed68a25be12ee1efd90f842498028d015e",
+    "independent_spatial_FFT_full_result_JSON_SHA256": "23fde17e1f8b2c098a2e6d8cbe2ad184c354a8decab903d238c13c1649231834",
+    "cold_output_original_native_byte_identical": true,
+    "cold_output_independent_spatial_byte_identical": true,
+    "six_single_byte_fail_closed_source_or_input_guards": "6/6 PASS",
+    "combined_original_controller": "TIMED_OUT AFTER OUTPUTS_GENERATED / NOT_COUNTED_AS_PASS",
+    "separate_source_output_comparison_and_fast_tamper_receipt_SHA256": "d95c84cebf2d3394c05c92863c616ae19bfb1fed8ee9a6717f5d9489bdd77bbe",
+    "full_executable_GitHub_byte_mirror": false
+  },
+  "science_custody": {
+    "M13": "original public B N41 source FIRST",
+    "Geeky_ROT027": "original sixth math full domain rank lift and exact box discrimination FIRST, independent external referee PENDING",
+    "M15_ROT019": "first independent eight nuisance fixing controls; DIFFERENT intervention",
+    "M15_ROT020": "independent native original M13 revalidation of separate M15 ROT018 exact pair class; NOT ROT027/028 review",
+    "Geeky_ROT028": "new conditional statistical source score calculation author only, I1 PENDING",
+    "KN14_BW_native_ingest": "UNVERIFIED",
+    "M15_CANON_owner": "UNVERIFIED",
+    "claim_ceiling": [
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "strict_limits": [
+    "hypothetical independent Gaussian log errors, actual covariance may be correlated due overlapping mask or derived full energy",
+    "no physical sixth sensor evidence or empirical noise floor",
+    "not global injectivity or uniform all-alpha rank",
+    "not original historical dtc0a_runtime_v0_3_1.py byte identity",
+    "no physical NASH K/J3/TPE/GR/GW upgrade"
+  ]
+}
