@@ -1,0 +1,115 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT026_NATIVE_ORIGINAL_M13_KRAWCZYK_TWO_EXACT_LOCAL_ALIAS_BOXES_CURATED_001_20261116",
+  "date": "2026-11-16",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "scope": "Original public M13 auxiliary Fourier B channel N41, five FIXED cubic observation masks, hypothetical common rigid source-field translations plus one freely fitted positive common gain.",
+  "original_public_source": {
+    "M13_actual_executed_module": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "M13_original_code_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_B25_data_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "N": 41,
+    "mask_k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "sparse_fourier_tensor_modes": 41,
+    "ordered_tensor_pair_correlations": 1681,
+    "frequency_differences": 221,
+    "hermitian_half_lattice_frequency_count": 111,
+    "actual_native_source_interval_decimal_digits": 77,
+    "source_point_inverse_precision_decimal_digits": 82,
+    "native_original_calc_has_translation_gain_knobs": false,
+    "historical_DTC0a_runtime_byte_identical_producer": "MISSING"
+  },
+  "method": {
+    "first_input": "Exact finite terminating-decimal vector A=(b,tx,ty,tz,alpha) from ORIGINAL Geeky-S12 ROT025 output, one for each witness",
+    "root_equation": "H(x_B)=F(x_B)-F(x_A)=0 with F_i=b+log(disjoint_shell_energy_i(alpha,t)) for i=1..5",
+    "box": "All FIVE coordinates of B separately center on original 50-decimal ROT025 witness and radius 1e-31",
+    "source_coefficients": "From actually executed original immutable M13 tensor_polys(41); original window_mode kernel, not M15 reconstructed code",
+    "krawczyk": "K(X)=c-RH(c)+(I-RJ(X))(X-c); source-directed interval strict containment in int(X), infinity contraction <1, all shell energies positive, alpha_B box > alpha_A",
+    "fixed_point_theorem": "Unique exact second solution B in its own tiny 5D box; exact same five source observables as exact decimal A"
+  },
+  "two_exact_existence_certificates": [
+    {
+      "id": "r1",
+      "A_alpha_exact_decimal": "0.0186148213396600335590353409792232188802060161627912",
+      "B_alpha_center_exact_decimal": "0.0186156213427424614691284281534607900091587306476119",
+      "full_5D_radius": "1e-31",
+      "source_interval_max_infinity_contraction_upper_display": "6.156914429828699570719537e-22",
+      "max_preconditioned_H_center_abs_upper_display": "2.6865579550556885764799e-48",
+      "five_of_five_K_components_strictly_inside_box": true,
+      "all_five_shells_positive_everywhere_in_box": true,
+      "entire_B_alpha_box_above_A_alpha": true,
+      "unique_exact_B_root_in_box": true
+    },
+    {
+      "id": "r2",
+      "A_alpha_exact_decimal": "0.0541669990580002136582137724084941176199672732325501",
+      "B_alpha_center_exact_decimal": "0.0541677990561201137563223643106130371111032022645199",
+      "full_5D_radius": "1e-31",
+      "source_interval_max_infinity_contraction_upper_display": "1.116193836896010670639195e-23",
+      "max_preconditioned_H_center_abs_upper_display": "2.9016188700708891657611e-49",
+      "five_of_five_K_components_strictly_inside_box": true,
+      "all_five_shells_positive_everywhere_in_box": true,
+      "entire_B_alpha_box_above_A_alpha": true,
+      "unique_exact_B_root_in_box": true
+    }
+  ],
+  "independent_consistency": {
+    "previous_original_M13_native_window_inner_iv70_witness_source_sha256": "a1e65c06ff1fc6796184d2c9d84a1a9eb2e321b421c350b8a52db3f97776f139",
+    "r1_finite_center_residual_upper": "2.844267241917431e-52",
+    "r2_finite_center_residual_upper": "1.671188350733837e-51",
+    "finite_printed_center_residuals_exactly_zero": false,
+    "new_exact_B_exists_within_certified_box": true,
+    "tiny_radius_1e_minus50_must_fail": "PASS: source exact Krawczyk fails inclusion",
+    "four_independent_single_byte_source_or_input_tamper_failclosed": "4/4 PASS",
+    "isolated_new_Krawczyk_full_JSON_byte_identical": true,
+    "isolated_independent_original_window_iv70_full_JSON_byte_identical": true
+  },
+  "execution_custody": {
+    "user_local_zip": "Geeky_S12_ROT026_exact_native_Krawczyk_ROT025_pairs.zip",
+    "bytes": 25223,
+    "sha256": "c3afcaf463db380f1674a70ecb177fb04e76759ad699be28702d944e46ee93dd",
+    "zip_entries": 12,
+    "manifest_payloads": 11,
+    "zip_crc": "PASS",
+    "manifest_all_payload_SHA256": "11/11 PASS",
+    "zip_all_member_byte_comparisons": "12/12 PASS",
+    "actually_executed_new_verifier_sha256": "568fc4ac2c8c25863261ce86c2fd183fec57fec6c954c3f27c7f37981b871557",
+    "actual_full_iv77_results_sha256": "63365d9b3f1752ca9edbb12ace6ca2a6b75cb5358a5bcf66524d23faad70b3a0",
+    "clean_replay_and_negative_control_script_sha256": "ef8e8748d124d8b53d26c33366b629f784482de594ce2bf75c72c8c6fac2fbef",
+    "actual_negative_test_receipt_sha256": "3936f3aa079953d7ec34ca9978c947bfc19e99600ca49e42ff96296f6c1f0966",
+    "actual_full_exact_machine_intervals": "In actual source-produced rot026_native_krawczyk_results.json INSIDE user ZIP, not falsely claimed separately GitHub-published as exact-byte-executable artifact"
+  },
+  "review_and_firstness": {
+    "M13": "Original source FIRST",
+    "Geeky_ROT023_024": "Original two first-order zero and second-order fold theorem FIRST",
+    "M15_ROT017": "INDEPENDENT I1 prior Geeky ROT024 nondegenerate folds PASS",
+    "AUD2_ROT016": "INDEPENDENT CORRECTED I1 prior Geeky ROT024 nondegenerate folds PASS_WITH_GUARDS",
+    "M15_ROT018": "FIRST independently rigorous Krawczyk for TWO OTHER parameter-pairs, exact first A and exact B inside 1e-25 box",
+    "Geeky_ROT025": "FIRST its own two 50-digit numerical near-fold pairs",
+    "Geeky_ROT026": "FIRST actual ORIGINAL M13 Python module directed iv77 two 1e-31 exact local B roots for exact A from ORIGINAL Geeky ROT025; author same cell pending external I1",
+    "KN14_BW_native_ingest": "NOT_VERIFIED",
+    "M15_owner_CANON_adoption": "NOT_VERIFIED"
+  },
+  "strict_ceilings": [
+    "No original native M13 calc translation or gain input",
+    "No historical byte-exact full DTC0a runtime",
+    "Local exact roots only, no global inverse classification",
+    "No physical origin or realizability of nuisance transformations",
+    "No mathematical novelty or empirical physical validation",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_PHYSICAL_UPGRADE"
+  ]
+}
