@@ -1,0 +1,141 @@
+{
+  "artifact_id": "IW_M15_ROT025_WITHIN_SHELL_SPATIAL_CORRELATION_NEGATIVE_SOURCE_THEOREM_001_20261116",
+  "return_id": "IW_M15_ROT025_ORIGINAL_M13_SOURCE_TINY_CORRELATED_SITE_NOISE_BREAKS_INDEPENDENT_HETEROGENEITY_FISHER_FLOOR_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "result_class": "ORIGINAL_M13_SOURCE_CONDITIONAL_POSITIVE_DEFINITE_GAUSSIAN_CORRELATION_COUNTERMODEL_DIRECTED_IV70",
+  "firstness": {
+    "M13": "Original N41 B auxiliary Fourier source",
+    "Geeky_S12_ROT030": "FIRST calibrated sixth source and bounded independent but heterogeneous Gaussian site error source Fisher guarantees",
+    "M15_ROT023_ROT024": "Earlier independent original native M13 source score IV65 and stochastic IV70 I1 review",
+    "M15_ROT025": "NEW explicit original-source tiny spatial correlation countermodel falsifying any extension of independent-site Fisher lower bound to correlated site errors; not refutation of original theorem"
+  },
+  "source_provenance": {
+    "original_M13_unchanged_Git_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_whole_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_native_source_actually_executed": true,
+    "original_source_N": 41,
+    "original_B_modes": 41,
+    "old_shell_counts": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "unobserved_outer_count": 18268,
+    "total_sites": 68921,
+    "locked_prior_original_M15_ROT023_IV65_score_JSON_sha256": "7ddfec37585f587289f6977239ef55514e0c413034e5b223af4131c0949bfa1e",
+    "locked_prior_original_M15_ROT024_IV70_calibration_JSON_sha256": "0debe136d5f8c77a991d426c826d994081bf17f9122feda8f4dc2e02c7d44265",
+    "whole_old_source_IV65_score_not_freshly_recomputed_in_ROT025": true,
+    "new_native_full_B_quartic_actually_recomputed_and_source_IV65_G_overlap": true
+  },
+  "gaussian_site_countermodel": {
+    "formula": "xi_x=eta*(sqrt(1-rho)*epsilon_x+sqrt(rho)*Z_region(x)), six region Z independent, all site epsilon independent",
+    "rho_domain": "0<=rho<1",
+    "marginal_variance_all_68921_sites": "EXACT eta^2; h_x=1 for all sites, inside [0.5,2]",
+    "site_covariance_within_same_region": "rho*eta^2 if x!=y",
+    "site_covariance_across_disjoint_regions": "0",
+    "full_site_covariance": "STRICT_POSITIVE_DEFINITE for rho<1, eigenvalues eta^2*(1-rho), eta^2*(1+rho*(w_region-1))",
+    "old_and_full_correlated": true,
+    "old_and_new_outer_independent_region_means": true,
+    "region_mean_noise_variance": "eta^2*((1-rho)/w_region+rho)",
+    "separate_sixth_raw_full_stochastic_calibration_variance": "eta^2*kappa^2, independent",
+    "no_real_sensor_claim": true
+  },
+  "strict_inequality": {
+    "source_at_original_exact_old_fold": "(eta/G)^2 Ialpha(rho,kappa)=delta_o^2/(f0*n0+q(rho)+K^2*kappa^2)",
+    "f_i": "1+rho*(w_i-1)",
+    "q_ratio_Loewner": "fmin*q0<=q(rho)<=fmax*q0",
+    "correlated_Fisher_lower": "delta_o^2/(f0*n0+fmax*q0+K^2*kappa^2)",
+    "correlated_Fisher_upper": "delta_o^2/(f0*n0+fmin*q0+K^2*kappa^2)",
+    "independent_site_variance_h_half_to_two_lower_guarantee": "delta_o^2/(2*(n0+q0)+K^2*kappa^2)",
+    "rho_star_exact_source_formula": "(n0+q0)/((18268-1)*n0+(5402-1)*q0)",
+    "source_conditional_theorem": "For rho>rho_star and any fixed finite kappa, even the correlated Fisher UPPER is strictly below previous independent-site heterogeneous Fisher LOWER; both source formulas apply at exact prior old Jacobian root.",
+    "threshold_independent_of_kappa": true,
+    "threshold_independent_of_delta_o": true
+  },
+  "iv70_root_certificates": [
+    {
+      "name": "FIRST",
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "rho_star_strict_enclosure": [
+        "0.0001774728507232451387393038258367",
+        "0.0001774731287881181562652030181384"
+      ],
+      "at_rho": "0.001",
+      "at_kappa": "0.01",
+      "new_correlated_source_Fisher_strict_upper_less_than": "3.098305629854074",
+      "old_iid_site_h_in_half_to_two_source_Fisher_strict_lower_greater_than": "8.894422421538686",
+      "numeric_original_spatial_source_CORRECT_GLS": 2.5047636107914646,
+      "numeric_WRONG_IID_assumption_GLS": 14.94616092646674,
+      "wrong_independence_overestimation_factor": 5.967094404467173,
+      "pass_strict_disjoint_directed": true
+    },
+    {
+      "name": "SECOND",
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "rho_star_strict_enclosure": [
+        "0.0001839246315017551374049976302221",
+        "0.0001839250280475069550358106072486"
+      ],
+      "at_rho": "0.001",
+      "at_kappa": "0.01",
+      "new_correlated_source_Fisher_strict_upper_less_than": "77.53204753028450",
+      "old_iid_site_h_in_half_to_two_source_Fisher_strict_lower_greater_than": "243.48467201505927",
+      "numeric_original_spatial_source_CORRECT_GLS": 59.22680561866265,
+      "numeric_WRONG_IID_assumption_GLS": 470.46779895159614,
+      "wrong_independence_overestimation_factor": 7.943494403205657,
+      "pass_strict_disjoint_directed": true
+    }
+  ],
+  "execution": {
+    "original_directed_source_math": "mpmath.iv dps70 with original native M13 full quartic and frozen earlier M15 original IV65 source score; entire original short alpha brackets used",
+    "new_strict_scenarios": "2 folds x 4 rho x 2 kappa=16, all PASS",
+    "independent_original_FFT": "Actual original native M13 tensor_polys 41 Fourier tensor modes 9 entries and 4 source derivatives inverse FFT over 41^3 full spatial grid",
+    "GLS_representations": "original overlapping old+full nondiagnonal covariance versus transformed old+outer independent 6x6 diagonal covariance; all 16 agree <1e-9 relative",
+    "independent_source_GLs_cases": "16/16 within original strict IV70 Loewner interval",
+    "exact_fraction_site_and_covariance_transformation": "PASS",
+    "two_scientific_false_iid_source_claim_controls": "2/2 FAIL as desired",
+    "full_clean_replay_JSON": "2/2 BYTE IDENTICAL PASS",
+    "five_source_data_corruptions": "5/5 PRE-SCIENCE SHA REJECT PASS",
+    "originals_unchanged": true
+  },
+  "reproducibility": {
+    "local_zip_name": "IW_M15_ROT025_ORIGINAL_M13_CORRELATED_SITE_NOISE_FISHER_FALSIFIER_IV70_REPRO_001_20261116.zip",
+    "local_zip_bytes": 50354,
+    "local_zip_SHA256": "fab54c3afe64659b2898a0d6c8db69917a1c25b6898ec6eb2d1f55f5de767375",
+    "zip_CRC": "PASS",
+    "manifest_SHA256_payloads": "11/11 PASS",
+    "new_IV70_script_SHA256": "c4d95dae18c3835a09ebf24084697663f4a55dddfb2c39bd27b3270e01ef3a1d",
+    "full_original_directed_IV70_JSON_SHA256": "5211ebea5e49de7f29892701d64caee15ff6911007225ad1be7f41b23f197eb5",
+    "new_spatial_FFT_script_SHA256": "4752223b421b9d98545826b232690725642f5ced5f3e0a7be1574b70070ed1af",
+    "full_original_spatial_GLs_JSON_SHA256": "a0e1a203bc6907a9d97946d2a3cb18bba388f699a28c00aefcdb9440e89bda13",
+    "cold_replay_negative_receipt_SHA256": "7973f669d8410b8b723927f3fa0d471acd9a72f0c470fe145fd08a98e0e07598",
+    "original_entire_native_M13_file_and_two_parent_certificates_in_user_local_ZIP": true,
+    "new_exact_executable_not_claimed_byte_mirrored_to_GitHub": true
+  },
+  "limits": [
+    "Source N41 auxiliary math only",
+    "Correlated hypothetical Gaussian site noise is not empirically observed",
+    "Native original M13 has no freely fitted common field translation, gain, physical sixth detector",
+    "Valid original Geeky ROT030 independence theorem is NOT refuted, only its unauthorized extension",
+    "No historical complete dtc0a runtime",
+    "No external blind I3",
+    "No physical NASH J3/K/TPE bridge",
+    "No global six-channel injectivity or general theorem novelty",
+    "No BW native ingress receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
