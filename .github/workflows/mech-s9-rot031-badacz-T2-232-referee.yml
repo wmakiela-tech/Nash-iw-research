@@ -1,4 +1,4 @@
-name: Mech-S9 ROT031 Badacz T2 independent 232-row float-ULP replay
+name: Mech-S9 ROT031 Badacz T2 independent source referee valid JSON
 on:
   push:
     branches: [main]
@@ -80,8 +80,9 @@ jobs:
                     "result":"SEMANTIC_NUMERIC_PASS_BYTE_DIFFERENCE_RETAINED"
                        if not structural and maximum<=5e-10 else "FAIL_CLOSED"}
           pathlib.Path("mech_s9_rot031_evidence/OWNER_ANALYSIS069_NUMERIC_REPLAY_AUDIT.json").write_text(
-              json.dumps(evidence,indent=2,sort_keys=True)+"\\n")
+              json.dumps(evidence,indent=2,sort_keys=True)+chr(10))
           assert not structural and maximum<=5e-10,evidence
+          assert json.loads(pathlib.Path("mech_s9_rot031_evidence/OWNER_ANALYSIS069_NUMERIC_REPLAY_AUDIT.json").read_text())==evidence,"Derived audit JSON invalid"
           print(json.dumps({"byte_identical":byte_equal,"numeric_different_leaves":len(numerical),
                             "max_abs_numeric_difference":maximum,"structural_diff":structural},indent=2))
           PY
