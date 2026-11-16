@@ -1,0 +1,124 @@
+name: Mech-S9 ROT029 B1 T1 ONE authorized Wu-Xu exact BlackHawk v2.3 five-mass generator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mech-s9-rot029-t1-five-mass-original-blackhawk.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  authorized-preregistered-t1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Freeze/source gate and original published rate reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot029_T1_evidence
+          echo 'T1_PREREG_COMMIT=c896351e537d79c401eee9a36a80cfac3a47f19d' | tee mech_s9_rot029_T1_evidence/STATUS.txt
+          python3 -m py_compile research/mech-s9/2026-11-16/code/mech_s9_rot029_b1_t1_author_v23_five_mass_source_reproducer.py
+          SOURCE='https://raw.githubusercontent.com/Fenyutanchan/Primordial-Black-Hole/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618'
+          curl -L --fail --retry 3 --retry-all-errors --silent --show-error -o reference_hadrons_from_PBH.dat "$SOURCE/data/out/hadrons_from_PBH.dat"
+          test "$(git hash-object reference_hadrons_from_PBH.dat)" = 06d0883a27b108692720422294ba2baacd381a64
+          sha256sum reference_hadrons_from_PBH.dat | tee mech_s9_rot029_T1_evidence/REFERENCE_SOURCE_SHA256.txt
+          git hash-object reference_hadrons_from_PBH.dat | tee mech_s9_rot029_T1_evidence/REFERENCE_SOURCE_GIT_BLOB.txt
+          echo 'ORIGINAL_WUXU_REF_BLOB_PASS' | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Retrieve official author-pinned BlackHawk v2.3 tar — exact bytes fail-closed
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://blackhawk.hepforge.org/downloader?f=blackhawk_v2.3.tar.bz2'
+          FILE=original_blackhawk_v2.3.tar.bz2
+          for attempt in 1 2 3; do
+            rm -f "$FILE"
+            if curl -L --fail --retry 2 --retry-all-errors --silent --show-error --connect-timeout 30 --max-time 400 -o "$FILE" "$URL"; then
+              BYTES=$(wc -c < "$FILE")
+              ACTUAL=$(sha256sum "$FILE" | cut -d' ' -f1)
+              echo "ATTEMPT=$attempt BYTES=$BYTES SHA=$ACTUAL" | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+              if test "$BYTES" = 161495983 && test "$ACTUAL" = dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7; then break; fi
+            fi
+          done
+          test "$(wc -c < "$FILE")" = 161495983
+          echo 'dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  original_blackhawk_v2.3.tar.bz2' | sha256sum -c -
+          tar -xjf "$FILE"
+          test -f blackhawk_v2.3/BlackHawk_inst.c
+          test -f blackhawk_v2.3/src/hadro_pythia.c
+          echo 'OFFICIAL_AUTHOR_TAR_AND_DECOMPRESSION_PASS' | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Apply exact original three Wu-Xu source overlays by Git blob identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE='https://raw.githubusercontent.com/Fenyutanchan/Primordial-Black-Hole/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/external_code/BlackHawk_v2.3-hack'
+          for f in BlackHawk_inst.c BlackHawk_tot.c src/include.h; do
+            curl -L --fail --retry 3 --retry-all-errors --silent --show-error -o "blackhawk_v2.3/$f" "$SOURCE/$f"
+          done
+          test "$(git hash-object blackhawk_v2.3/BlackHawk_inst.c)" = f517b0a71a3c994e396600ce73cb9658e440d646
+          test "$(git hash-object blackhawk_v2.3/BlackHawk_tot.c)" = 76758e05a71688b94979b326723d02dbdf630dc5
+          test "$(git hash-object blackhawk_v2.3/src/include.h)" = 3a1eaefd6d884c864056ea45233513493794ee7e
+          test "$(sha256sum blackhawk_v2.3/src/hadro_pythia.c | cut -d' ' -f1)" = 64bdaa88564f15a615b385a10c17ca5294fe19343e51593a8345951e5e34c62a
+          grep -F '//#define HARDTABLES' blackhawk_v2.3/src/include.h > /dev/null
+          if grep -Eq '^[[:space:]]*#define[[:space:]]+HARDTABLES' blackhawk_v2.3/src/include.h; then exit 1; fi
+          chmod -R a+r blackhawk_v2.3/src/tables
+          {
+            echo 'SOURCE_OVERLAY_BLOBS_ALL_MATCH'
+            echo 'HARDTABLES_ORIGINAL_COMMENTED'
+            echo 'PYTHIA_SOURCE_LOADER_ORIGINAL_SHA_PASS'
+          } | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+          sha256sum blackhawk_v2.3/BlackHawk_inst.c blackhawk_v2.3/BlackHawk_tot.c blackhawk_v2.3/src/include.h blackhawk_v2.3/src/hadro_pythia.c | tee mech_s9_rot029_T1_evidence/OVERLAY_AND_LOADER_SHA256.txt
+          sha256sum blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/pipm.txt blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/old/pipm.txt | tee mech_s9_rot029_T1_evidence/ORIGINAL_PYTHIA_TABLE_SELECTION_CANDIDATES_SHA256.txt
+      - name: Compile exact original Wu-Xu overlay once — no physical source changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          gcc --version | head -1 | tee mech_s9_rot029_T1_evidence/COMPILER_VERSION.txt
+          (cd blackhawk_v2.3 && make BlackHawk_inst.c BlackHawk_tot.c) > mech_s9_rot029_T1_evidence/ORIGINAL_BLACKHAWK_BUILD_LOG.txt 2>&1 || {
+              echo 'ORIGINAL_BLACKHAWK_BUILD_FAILED_T1_NOREPRO' | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+              tail -n 100 mech_s9_rot029_T1_evidence/ORIGINAL_BLACKHAWK_BUILD_LOG.txt
+              exit 1
+            }
+          test -x blackhawk_v2.3/BlackHawk_inst.x
+          sha256sum blackhawk_v2.3/BlackHawk_inst.x | tee mech_s9_rot029_T1_evidence/ORIGINAL_EXECUTABLE_SHA256.txt
+          echo 'ORIGINAL_WU_XU_V23_BLACKHAWK_BUILD_PASS' | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Run ONLY five preregistered author generator masses and original output operator
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot029_b1_t1_author_v23_five_mass_source_reproducer.py \
+            blackhawk_v2.3 reference_hadrons_from_PBH.dat mech_s9_rot029_T1_evidence \
+            | tee mech_s9_rot029_T1_evidence/T1_STDOUT.txt
+          test -f mech_s9_rot029_T1_evidence/T1_SOURCE_COMPARE_RESULT.json
+          python3 - <<'PY'
+          import json,pathlib
+          p=pathlib.Path("mech_s9_rot029_T1_evidence/T1_SOURCE_COMPARE_RESULT.json")
+          r=json.loads(p.read_text())
+          assert r["verdict"] in ("T1-GROUPED","T1-PERSTATE","T1-NOREPRO")
+          assert r["native_julia_runs"]==0
+          assert r["generator_original_author_BBN_PYTHIA_runs"]<=5
+          assert [row["j_0based"] for row in r["results"]]==[0,22,49,74,99][:len(r["results"])]
+          print("T1_VERDICT",r["verdict"],"FIVE_RUNS",len(r["results"]),
+                "GLOBAL_GROUP_ERROR",r.get("max_grouped_rel_mismatch"),
+                "GLOBAL_PERSTATE_ERROR",r.get("max_perstate_rel_mismatch"))
+          PY
+          echo 'T1_SOURCE_RESULT_FROZEN_NO_ADAPTIVE_SWEEP' | tee -a mech_s9_rot029_T1_evidence/STATUS.txt
+      - name: Evidence manifest and synthetic negative detection
+        if: always()
+        shell: bash
+        run: |
+          rm -f original_blackhawk_v2.3.tar.bz2 reference_hadrons_from_PBH.dat
+          (cd mech_s9_rot029_T1_evidence && find . -maxdepth 1 -type f ! -name RESULT_SHA256SUMS.txt -print0 | sort -z | xargs -0 -r sha256sum > RESULT_SHA256SUMS.txt)
+          echo 'DERIVED_EVIDENCE_ONLY_NO_ORIGINAL_TABLE_REDISTRIBUTION'
+      - name: Upload pre-registered T1 source evidence and fail-closed logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot029-original-author-blackhawk-v23-t1-five-mass-result
+          path: mech_s9_rot029_T1_evidence/
+          if-no-files-found: error
