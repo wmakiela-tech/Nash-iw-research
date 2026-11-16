@@ -1,0 +1,88 @@
+name: Mech-S9 ROT031 Badacz T2 PREREG069 232-row independent source root referee
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mech-s9-rot031-badacz-T2-232-referee.yml'
+permissions:
+  contents: read
+jobs:
+  t2-source-readonly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch and verify original Wu-Xu source archive only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mech_s9_rot031_evidence
+          curl --location --fail --silent --show-error --retry 2 --retry-all-errors \
+            --max-time 120 \
+            'https://raw.githubusercontent.com/Fenyutanchan/Primordial-Black-Hole/d395183674cace6c9906a8911bdeb7234ba4040d/arXiv-2509.05618/data/out/scanning.jld2' \
+            -o mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2
+          echo '51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786  mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2' | sha256sum -c -
+          python3 -m py_compile research/mech-s9/2026-11-16/code/mech_s9_rot031_badacz_T2_069_232_source_independent_ols7_referee_stdlib.py
+          echo ORIGINAL_SOURCE_SCAN_SHA_AND_SCRIPT_SYNTAX_PASS | tee mech_s9_rot031_evidence/STATUS.txt
+      - name: Independently recompute all 232 owner raw observations, 3 root estimators and prereg gates with stdlib
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s9/2026-11-16/code/mech_s9_rot031_badacz_T2_069_232_source_independent_ols7_referee_stdlib.py \
+            research/badacz/2026-11-16 \
+            mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2 \
+            mech_s9_rot031_evidence/ROT031_T2_SOURCE_REFEREE.json \
+            | tee mech_s9_rot031_evidence/INDEPENDENT_STDOUT.txt
+          echo INDEPENDENT_BADACZ_T2_232_SOURCE_ROOTS_AND_GATES_PASS | tee -a mech_s9_rot031_evidence/STATUS.txt
+      - name: Byte-identical cold replay original frozen Badacz numerical analyzer
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip -q install 'numpy==2.1.3'
+          python3 -I research/badacz/2026-11-16/code/b1_t2_069_analysis.py \
+            research/badacz/2026-11-16/data \
+            mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2 \
+            mech_s9_rot031_evidence/OWNER_ANALYSIS069_COLD.json \
+            > mech_s9_rot031_evidence/OWNER_COLD_STDOUT.txt
+          cmp research/badacz/2026-11-16/data/analysis069.json \
+              mech_s9_rot031_evidence/OWNER_ANALYSIS069_COLD.json
+          echo OWNER_ANALYSIS069_BYTE_IDENTICAL_PASS | tee -a mech_s9_rot031_evidence/STATUS.txt
+      - name: Fail closed on three independent native owner source tamper tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib,subprocess,sys,tempfile,shutil
+          original=pathlib.Path("research/badacz/2026-11-16")
+          code=pathlib.Path("research/mech-s9/2026-11-16/code/mech_s9_rot031_badacz_T2_069_232_source_independent_ols7_referee_stdlib.py").resolve()
+          scan=pathlib.Path("mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2").resolve()
+          with tempfile.TemporaryDirectory() as td:
+              cloned=pathlib.Path(td)/"badacz"
+              shutil.copytree(original,cloned)
+              for f in ("data/t2_orig_default.csv","data/t2_e5_default.csv","data/analysis069.json"):
+                  p=cloned/f
+                  orig=p.read_bytes()
+                  p.write_bytes(orig[:-1]+bytes([orig[-1]^1]))
+                  out=cloned/"DO_NOT_CREATE.json"
+                  result=subprocess.run([sys.executable,"-I",str(code),str(cloned),str(scan),str(out)],capture_output=True)
+                  assert result.returncode!=0 and not out.exists(),f
+                  p.write_bytes(orig)
+          print("THREE_ADVERSARIAL_INPUT_MUTATIONS_REJECTED_PASS")
+          PY
+          echo THREE_SOURCE_MUTATIONS_REJECT_PASS | tee -a mech_s9_rot031_evidence/STATUS.txt
+      - name: Never redistribute original JLD2; evidence manifest
+        if: always()
+        shell: bash
+        run: |
+          rm -f mech_s9_rot031_evidence/ORIGINAL_AUTHOR_SCAN.jld2
+          (cd mech_s9_rot031_evidence && find . -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > ARTIFACT_SHA256SUMS)
+      - name: Preserve derived audit only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s9-rot031-badacz-T2-232-source-referee
+          path: mech_s9_rot031_evidence/
+          if-no-files-found: error
