@@ -1,0 +1,186 @@
+{
+  "artifact_id": "IW_M15_ROT022_M13_SIXTH_SOURCE_NOISE_BUDGET_AND_UNCALIBRATED_CHANNEL_COUNTEREXAMPLE_001_20261116",
+  "return_id": "IW_M15_ROT022_DIFFERENT_CELL_GEEKY_ROT028_SIXTH_CHANNEL_FISHER_I1_AND_EXACT_CALIBRATION_ALIAS_FALSIFIER_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "original_priority": {
+    "M13": "Original auxiliary Fourier operator source first; unchanged original native Python actually executed",
+    "Geeky_ROT027": "First full-domain sixth energy channel and two owner pairs",
+    "Geeky_ROT028": "First original six-channel rank-one conditional Fisher noise budget and finite ideal-sixth information ceiling",
+    "M15_ROT018_020": "First two DIFFERENT exact five-channel original-M13 Krawczyk alias pairs",
+    "M15_ROT022": "Independent original-M13-source IV67 Cauchy–Binet first-owner audit plus NEW explicitly nonnative sixth-channel calibration falsifier"
+  },
+  "source_provenance": {
+    "original_native_M13_git_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_full_source_bytes": 8970,
+    "original_full_source_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_native_module_actually_executed": true,
+    "original_historical_dtc0a_runtime_byte_identity": false,
+    "source_N": 41,
+    "source_B_fourier_modes": 41,
+    "ordered_pair_count": 1681,
+    "different_q_count": 221,
+    "five_fixed_windows": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source_missing_physical_translations_gain_and_new_calibration": true
+  },
+  "observation_model": {
+    "five_old_log_shells": "F_i=b+log(s_i(alpha,t)), i=1..5; b log gain and t common translation relative to FIXED original M13 observation masks are hypothetical",
+    "calibrated_sixth": "F6=b+log(gfull(alpha)) with gfull=(1/6)sum original Fourier ||B_m||^2; translation-independent by Parseval",
+    "uncalibrated_sixth": "F6_cal=b+log(gfull(alpha))+c, c independent freely fitted unknown relative log calibration",
+    "target": "original source alpha",
+    "original_four_nuisances": [
+      "b",
+      "tx",
+      "ty",
+      "tz"
+    ],
+    "new_added_calibration_nuisance": "c",
+    "with_only_calibrated_sixth_at_each_old_fold": "six-by-five original augmented local Jacobian rank5, source first Geeky ROT027",
+    "with_extra_free_uncalibrated_log_bias_at_each_old_fold": "six-by-six Jacobian rank5; alpha-normalized null (v_b,v_tx,v_ty,v_tz,1,-delta)",
+    "conditional_uncalibrated_alpha_efficient_Fisher": "EXACT_ZERO for any positive-definite covariance (structural)",
+    "hypothetical_noise_with_calibrated_new_channel": "five iid old sigma² log-shell noises, one independent sixth tau²; I_alpha=delta²/(tau²+sigma²*q) at exact old folds",
+    "q_calculation": "independent source Cauchy-Binet q = positive sum ten 3x3 translation minors squared / positive sum five 4x4 nuisance minors squared; no owner Gram inverse",
+    "finite_tau_zero_ceiling": "sigma² I_alpha -> delta²/q positive FINITE for sigma fixed>0"
+  },
+  "original_source_full_alpha_bracket_directed_IV67": [
+    {
+      "name": "FIRST",
+      "alpha_interval": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "q_original_directed_enclosed": [
+        "1.13593879355784204917433345079961407004248504651892970200334057527093772",
+        "1.13593973282399047067268217323582865957305024373774621735207715331475242"
+      ],
+      "delta_original_directed_enclosed": [
+        "-0.0682998489195885988066488595914549710791220033499037249229107286294728027",
+        "-0.0682231816595673110897799692543536997661760660210118643789489791016850269"
+      ],
+      "sigma2_Ieff_sixth_tau_equal_sigma": [
+        "0.00217908887794347797505061662069655896087834790764913277426698400981789362",
+        "0.00218399018572453369318817418170640867234921984482688483510535835718810506"
+      ],
+      "sigma2_Ieff_sixth_tau_towards_zero": [
+        "0.004097402688946618126701049860695554081882575591779108407370424165168702",
+        "0.00410662034688323420803451038014008535430370397010505694898655312767460039"
+      ],
+      "strict_original_source_q_positive": true,
+      "strict_delta_negative": true,
+      "strict_Fisher_finite": true
+    },
+    {
+      "name": "SECOND",
+      "alpha_interval": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "q_original_directed_enclosed": [
+        "7.76234565324300943580009576570854646332943286064080247759386227764645343",
+        "7.76235377132504762492042617227500897710274687975861730892188258451551711"
+      ],
+      "delta_original_directed_enclosed": [
+        "-0.832862214228620604120823453493290794852260459485525298832968393146406397",
+        "-0.832806163943625061680341793120178659706807665504643528892745071976217288"
+      ],
+      "sigma2_Ieff_sixth_tau_equal_sigma": [
+        "0.0791529450650809185354055136285050154481133364133846663219639269450645711",
+        "0.0791636732149538271035621502176459201031531442514282009727093368673197286"
+      ],
+      "sigma2_Ieff_sixth_tau_towards_zero": [
+        "0.0893499738783617862695647811458257221638404938155139096033961679988894969",
+        "0.0893620947683511883477921643109658483997560815633703511559836693822201047"
+      ],
+      "strict_original_source_q_positive": true,
+      "strict_delta_negative": true,
+      "strict_Fisher_finite": true
+    }
+  ],
+  "exact_source_M15_prior_two_alias_pairs_with_new_uncalibrated_sixth": [
+    {
+      "name": "FIRST",
+      "old_source_alpha_A_exact": "0.01861322133966003355903534097922321888020601616279117881063117914",
+      "old_source_alpha_B_center": "0.01861722141672577299600863498675349999257594838451884301788651517",
+      "old_true_exact_B_within_full_5D_box_rad": "1e-25",
+      "sixth_delta_B_minus_A_strict_negative_outer_interval": [
+        "-0.000000273051316746889225746106739991422316641802683242880425866048827351159163",
+        "-0.000000273051316746889220838730648673553458045763837721831504874125661431153855"
+      ],
+      "individual_candidate_bias_magnitude_required": "abs(delta6)/2 in [1.3652565837344461e-7,1.3652565837344470e-7]",
+      "sufficient_known_individual_bias_bound_eta": "2e-7",
+      "exact_calibrated_six_output_alias_if_c_free": "c_A=delta6/2; c_B=-delta6/2; all six source outputs equal for true exact B",
+      "strictly_proved_source_native": true
+    },
+    {
+      "name": "SECOND",
+      "old_source_alpha_A_exact": "0.05416539905800021365821377240849411761996727323255007395123373206",
+      "old_source_alpha_B_center": "0.05416939901330654632728114528927166347200500784664927847504904288",
+      "old_true_exact_B_within_full_5D_box_rad": "1e-25",
+      "sixth_delta_B_minus_A_strict_negative_outer_interval": [
+        "-0.00000333129407666589482768582670564493984826186701744187599335662289124354257",
+        "-0.0000033312940766658948219575846354627803835936791799257064948352168025273775"
+      ],
+      "individual_candidate_bias_magnitude_required": "abs(delta6)/2 in [1.6656470383329474e-6,1.6656470383329480e-6]",
+      "sufficient_known_individual_bias_bound_eta": "2e-6",
+      "exact_calibrated_six_output_alias_if_c_free": "c_A=delta6/2; c_B=-delta6/2; all six source outputs equal for true exact B",
+      "strictly_proved_source_native": true
+    }
+  ],
+  "bounded_calibration_and_measurement_error_theorem": "For these fixed exact pairs with first five source means equal, six-vector observation max-norm prediction balls overlap iff 2(eta+epsilon)>=abs(delta6), where eta bound on unknown sixth per-candidate log calibration and epsilon bound on per-channel log readout error. No physical noise values known.",
+  "source_fft_svd_numeric_diagnostics": [
+    {
+      "name": "FIRST",
+      "original_source_spatial_fft_q": 1.1359392631907057,
+      "delta": -0.06826151525362789,
+      "equal_noise_direct_6x5_info": 0.002181538841026242,
+      "free_independent_sixth_calibration_svd_profile_info": 1.2811101100789234e-27
+    },
+    {
+      "name": "SECOND",
+      "original_source_spatial_fft_q": 7.762349712284167,
+      "delta": -0.832834189070784,
+      "equal_noise_direct_6x5_info": 0.07915830904499004,
+      "free_independent_sixth_calibration_svd_profile_info": 3.622449276774887e-26
+    }
+  ],
+  "actual_reproduction": {
+    "zip_local_filename": "IW_M15_ROT022_ORIGINAL_M13_SIXTH_CHANNEL_CALIBRATION_FALSIFIER_IV67_REPRO_001_20261116.zip",
+    "zip_bytes": 37732,
+    "zip_sha256": "7cd73f404062bb7ccf33a56ce03e55c9ccff3de2764e622b8b1020ee377cec84",
+    "exact_original_native_M13_file_included": true,
+    "main_new_original_source_iv67_executable_sha256": "aa440aeadba423e8313fcd7929fea747c87044270a00406e78313b1e2088a0b7",
+    "main_actual_full_directed_source_JSON_sha256": "1b658982fa0ddb36877d16b0a5b974631d60fcb84ff0902609e22a5fec057253",
+    "independent_spatial_fft_svd_code_sha256": "159966df9ec85b7ac12f6301f0337a33bce1951ee77ede4331fe58dea2136c8d",
+    "independent_actual_fft_svd_JSON_sha256": "e48a82270a5a86fc1d8ea4f14db9b58544e08e624c7b26dd11b8081266678b07",
+    "clean_replay_and_tamper_JSON_sha256": "4ff14f00fcb62ea5edcdca568dfad8e22d1be0bcbe710485fa41b4afcd06dd6f",
+    "two_clean_isolated_full_JSON_byte_exact": "2/2 PASS",
+    "three_source_prior_root_data_mutations": "3/3 FAIL_CLOSED_PASS",
+    "independent_numeric_wrong_calibration_scientific_falsifier": "2/2 PASS",
+    "zip_crc": "PASS",
+    "sha256_manifest": "11/11 PASS",
+    "full_source_code_only_in_user_local_zip": true
+  },
+  "limits": [
+    "Entire result is for auxiliary mathematical original M13 source B and explicitly hypothetical field shifts/gain and offset c",
+    "Original source has NO native translation, gain or sixth independent physical detector",
+    "c unknown free is an adversarial calibration scenario, NOT a source-documented real instrument failure",
+    "No measured old/new noise or empirical covariance",
+    "No global six-parameter injectivity",
+    "Historical complete dtc0a_runtime_v0_3_1.py remains unavailable",
+    "No physical NASH or Wu-Xu extrapolation",
+    "No mathematics literature novelty",
+    "Internal nonblind I1, external I3 not performed",
+    "No verified BW native ingest receipt",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
