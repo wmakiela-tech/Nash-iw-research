@@ -25,3 +25,5 @@ document_type: RUNLOG
 | 17:40:12–17:56:44 | **przebieg Q-A** (PREREG_070): siatki A i B, obie status 0, bez odstępstw | `data/qa_A.csv`, `data/qa_B.csv`, `data/qa_run_record.json` | wyjścia poza repo w trakcie, kopiowane po zakończeniu |
 | 17:57 | analiza skryptem preregu | `data/analysis070.json` | P-A1 PASS; P-A2 3/3 PASS; P-A3 2 PASS i 1 UNRESOLVED; B: SATURATION od −16.7 (j22, j24) |
 | 17:58 | REVIEW_072 | — | — |
+| 21:12 (czas wiadomości) | **Moderator:** drugi przebieg T1 (Mech-S9) „liczy się” jako techniczna powtórka; T1-GROUPED przyjęty | — | przekazane na most |
+| 21:34 | REVIEW_071 r2: stan warunków interpretacji i tropy T3 (v3 preprintu z V 2026; repozytorium autorów bez zmian po `d395183`) | — | bez przebiegów |

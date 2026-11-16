@@ -68,3 +68,22 @@ sync_state: GITHUB_PENDING_BW_INGEST
   - most na żywo z Mech-S9 otwarty (sesja `B1-BADACZ-MECHS9-LIVE-001`), na razie bez odpowiedzi;
   - T1 po stronie Mech-S9.
 - **Uczenie:** różnica ramion na tej samej siatce i w tym samym środowisku znosi szum numeryczny konturu, tu z 0.023 do 0.003 dex. Dla wielkości różnicowych lepiej projektować testy jako pary ramion niż jako bezwzględne korzenie. To obserwacja do wykorzystania w Q-A (origin_observation, nie failure mode).
+
+## Uzupełnienie r2 (16 XI 2026, ok. 21:20): stan warunków interpretacji
+
+- **Warunek T1 spełniony.** Mech-S9 ROT029 (`a74006b`): 25/25 komórek tabeli autorów odtworzonych z oficjalnego BlackHawk v2.3 jako sumy grup (maks. błąd względny 7.7e−11); hipoteza „per stan” odrzucona (błąd 0.50). Drugi przebieg T1 Moderator uznał 16 XI o 21:12 za techniczną powtórkę („tak liczy się”).
+- **Otwarte:**
+  - T3, czyli odjęcie stanu wiedzy;
+  - niezależna replika T2 z rodziny GPT;
+  - recenzja REC12/AUD2.
+- **Tropy dla T3** (fakty sprawdzone przez Badacza; ocena należy do wykonawcy T3):
+  1. Repozytorium autorów: `origin/master` = `d395183` („2509.05618: update to v2”, 2025-12-30); po pobraniu 16 XI brak nowszych commitów. Issues nie były dostępne z tego kontenera.
+  2. Najnowsza wersja preprintu to **v3 z 6 V 2026**, nowsza od kodu v2. Zmiany v2 → v3 nie są sprawdzone.
+  3. Tekst artykułu (odczyt wspomagany, do weryfikacji przez T3):
+     - multiplicities obejmują cząstki i antycząstki;
+     - jest jedna wartość na grupę (π±, K±, p/p̄, n/n̄);
+     - nie wspomniano czynnika ½ przy podziale na stany;
+     - w równaniu równowagi występuje jedna gęstość n_j na grupę.
+     
+     Pytanie definicyjne dla T3: czy formalizm artykułu zamierza użyć gęstości grupowej w każdym kanale ładunkowym (wtedy kod jest zgodny z tekstem), czy połowy na stan (wtedy kod liczy podwójnie). To claim definicyjny; nie rozstrzyga go liczba.
+- Bez zmiany sufitu: NO_PAPER_ERROR_CLAIM.
