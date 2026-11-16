@@ -1,0 +1,147 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT029_SOURCE_M13_CORRELATED_SITE_NOISE_OUTER_SHELL_FISHER_RESULTS_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "scope": "Original public M13 B N41 auxiliary Fourier-TT source, five fixed source interior masks, hypothetical common field translation t and common gain b, new hypothetical IID per-site additive Gaussian errors on original spatial energy densities",
+  "source_first": {
+    "original_M13_helper_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_B25_source_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "actual_original_tensor_polys_and_inner_window_mode_executed": true,
+    "source_mpmath_iv_precision_decimal_digits": 57,
+    "prior_ROT027_source_results_SHA256": "bb279334e39cbaabfdeae07085434ab10df6b1a5a9facc0b1eb370e34592e362",
+    "prior_ROT028_source_results_SHA256": "fbd42c3c75d1c1a6b0c3c7c2eaca60ed68a25be12ee1efd90f842498028d015e"
+  },
+  "exact_original_source_geometry": {
+    "cube_side_N": 41,
+    "total_grid_sites_M": 68921,
+    "five_original_fixed_masks_k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "five_disjoint_shell_weights": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "old_union_sites": 50653,
+    "complement_outer_sites": 18268,
+    "identity": "68921*G=sum_i(w_i*S_i)+18268*O",
+    "global_log_source_error_correlations_from_shared_site_noise": [
+      0.3359372667007052,
+      0.31727902529164925,
+      0.2986211013640649,
+      0.27996355839277554,
+      0.5948688278851081
+    ],
+    "correlation_vector_norm_squared_exact": "50653/68921",
+    "correlation_vector_norm_display": 0.8572881112237556,
+    "global_log_error_conditional_variance_after_old_five": "eta^2 * 18268/(68921^2*G^2), STRICT_POSITIVE",
+    "new_observable_reduces_to": "Six old+global raw ENERGY means equivalent to five old disjoint shell raw means plus one independent outer-complement mean",
+    "derived_inner_only_global_mean_adds_new_information": false
+  },
+  "statistical_model": {
+    "per_site_measurement": "Hypothetical independent centered Gaussian additive energy-density errors with one FIXED variance eta^2, independent of alpha,b,t",
+    "no_Gaussian_log_observation_assumption": true,
+    "noise_model_applies_to_real_DTC0a_sensor": false,
+    "eta_normalization": "epsilon=eta/G at the nominal alpha,b=0 point ONLY",
+    "exact_energy_mean_fisher_metric_with_log_tangent_coordinates": true,
+    "old_shell_log_tangent_noise_variance": "eta^2/(w_i*S_i^2)",
+    "global_log_tangent_noise_variance": "eta^2/(68921*G^2)",
+    "cross_covariance": "eta^2/(68921*S_i*G)",
+    "old_nuisance_X": "5x4 [ones, Dtx log S, Dty log S, Dtz log S] full column rank4 at actual old five-output fold",
+    "outer_nuisance_xO": "1x4 [1,Dtx log O,Dty log O,Dtz log O]",
+    "outer_delta_at_actual_fold": "aO - xO*beta, aold=X*beta",
+    "W": "diag(w_i*(S_i/G)^2)",
+    "epsilon2_Fisher_at_actual_old_fold": "deltaO^2 / [ (G/O)^2/18268 + xO*(X^T*W*X)^(-1)*xO^T ]",
+    "source_outer_fold_direction_identity": "deltaO=(68921*G/(18268*O))*delta_global exactly AT actual old fold"
+  },
+  "source_interval_certificates": [
+    {
+      "fold": "r1",
+      "alpha_open_interval": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "outer_O_strict_positive_iv_lo": "2.02815966429900440805218247171098605202049e-14",
+      "outer_O_strict_positive_iv_hi": "2.02815967431761913201011281003715290847942e-14",
+      "outer_delta_strict_negative_iv_lo": "-0.358520542489388750139516274100738955216913",
+      "outer_delta_strict_negative_iv_hi": "-0.357704326954578416400198924056711133453485",
+      "old_weighted_nuisance_qO_strict_positive_iv_lo": "0.00572113231401006263062079079175254987819076",
+      "old_weighted_nuisance_qO_strict_positive_iv_hi": "0.00572355151972803071692590518827749772304369",
+      "outer_noise_variance_times_epsilon2_inv_display": 0.00010584608898,
+      "epsilon2_Fisher_iv_lo": "21.9495038937091882839350000931521807015348",
+      "epsilon2_Fisher_iv_hi": "22.0589421324619206218235798878165321223213",
+      "source_original_weighted_Gram_determinant_strictly_positive": true,
+      "independent_spatial_GLS_direct_epsilon2_Fisher": 22.00418398286927,
+      "independent_spatial_outer_basis_epsilon2_Fisher": 22.004183982862532,
+      "independent_relative_Fisher_difference": 3.062825621677856e-13
+    },
+    {
+      "fold": "r2",
+      "alpha_open_interval": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "outer_O_strict_positive_iv_lo": "4.97414362141373532289483895871665586703789e-14",
+      "outer_O_strict_positive_iv_hi": "4.97414364346683854203614339144889776578781e-14",
+      "outer_delta_strict_negative_iv_lo": "-3.96478613645810260320998481637341183502904",
+      "outer_delta_strict_negative_iv_hi": "-3.96435203477924308282701499460345606790147",
+      "old_weighted_nuisance_qO_strict_positive_iv_lo": "0.0310521620563976512197746909148672652081879",
+      "old_weighted_nuisance_qO_strict_positive_iv_hi": "0.0310591688487297223495529315556895862873933",
+      "outer_noise_variance_times_epsilon2_inv_display": 0.0000871490690555,
+      "epsilon2_Fisher_iv_lo": "504.58892434551369080159950572146540693043",
+      "epsilon2_Fisher_iv_hi": "504.813001312705626752372846469642954548989",
+      "source_original_weighted_Gram_determinant_strictly_positive": true,
+      "independent_spatial_GLS_direct_epsilon2_Fisher": 504.70095497813816,
+      "independent_spatial_outer_basis_epsilon2_Fisher": 504.7009549780999,
+      "independent_relative_Fisher_difference": 7.579859026615254e-14
+    }
+  ],
+  "negative_controls": {
+    "derived_inner_only_sixth_channel_source_fold_tangent_directed_interval_contains_zero_both_brackets": true,
+    "added_inner_only_mean_source_rank_restoration": false,
+    "seven_one_byte_source_data_prior_certificate_tampers_fail_closed_before_source_import": true
+  },
+  "reproducibility": {
+    "user_zip": "Geeky_S12_ROT029_correlated_pixel_noise_outer_shell_Fisher.zip",
+    "zip_bytes": 33384,
+    "zip_sha256": "211f6ba8ebebfe0ae29e497bb75a6aaa2e5bbbf0bb4412f58c09ee2fe0d5ae09",
+    "zip_members": 12,
+    "manifest_payload_members": 11,
+    "CRC_PASS": true,
+    "all_12_exact_zip_member_byte_comparisons_PASS": true,
+    "all_11_payload_SHA256_PASS": true,
+    "actually_executed_source_iv57_python_sha256": "10223675b25a1436bc03b6d32d1e23cd03676760380362666eda3e105b624590",
+    "original_full_source_result_JSON_sha256": "d7595642433b0ecd4cc3771b5878e465fb635cb74652182f3b9e907d4e98aa42",
+    "separate_original_fields_spatial_FFT_GLS_python_sha256": "fe2bbc32f26825384591e7bd530b9ff92d6bca69105da7ef9d26986a9ca34a97",
+    "independent_spatial_GLS_full_result_JSON_sha256": "298706eb4d4237b7b9e8b2ed551f58fc2fb46026558db7219c92ba5a9942b33d",
+    "separate_clean_source_and_spatial_full_result_byte_identical": "2/2 PASS",
+    "seven_one_byte_tampers_fail_closed": "7/7 PASS",
+    "clean_replay_actual_receipt_sha256": "f31554b00187c11b32f9326007e8d1b78c93585fa84ff2b0aad4703eb49be2d4",
+    "full_new_actual_executable_byte_identical_GitHub_mirror": false
+  },
+  "status": {
+    "M13_original_source_first": "PASS",
+    "M15_ROT021_independent_prior_Geeky_ROT027_sixth_channel_on_two_other_exact_pairs": "I1 PASS",
+    "Geeky_ROT028_sixth_independent_log_noise_model": "AUTHOR_ONLY, independent external I1 PENDING",
+    "Geeky_ROT029_correlated_site_energy_noise_result": "AUTHOR_ONLY, external I1 PENDING",
+    "KN14_BW_native_ingest": "UNVERIFIED",
+    "M15_CANON_owner_decision": "UNVERIFIED",
+    "ceilings": [
+      "NO_ORIGINAL_HISTORIC_DTC0A_PRODUCER_BYTE_IDENTITY",
+      "NO_NATIVE_SOURCE_TRANSLATION_OR_FREE_GAIN_INPUT",
+      "NO_REAL_PIXEL_ERROR_DISTRIBUTION_OR_COVARIANCE",
+      "NO_REAL_SIXTH_SENSOR",
+      "NO_GLOBAL_INVERSE_UNIQUENESS",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  }
+}
