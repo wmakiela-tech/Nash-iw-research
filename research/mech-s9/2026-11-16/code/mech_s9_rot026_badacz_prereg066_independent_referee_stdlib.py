@@ -10,7 +10,7 @@ from decimal import Decimal,localcontext
 
 D=Path(sys.argv[1]); original=Path(sys.argv[2]); outfile=Path(sys.argv[3])
 INPUT_SHAS={
- "data/b1_066_raw_outputs.json":"db4261be59d9f796094c10e57761608b1c0247f98d925ee1294970eb10e96ae",
+ "data/b1_066_raw_outputs.json":"db4261be59d9f796094c10e57761608b1c0247f98d925ee1294970eb10e96ae0",
  "data/analysis066.json":"b59a0a06bd3c13305bcb58e1676da0a5a780c5477d03cfc05928f8d1b236013c",
  "code/b1_066_analysis.py":"4bc59f6382bf0271fda78df5f47096415d13a8325d3b5659a10e5b41cee6e5d9",
  "code/b1_calibration_066.jl":"6382b7e4dc809fd512f259073c772c21cf0cdec11342b2ccab0a96eaba6fab76"
