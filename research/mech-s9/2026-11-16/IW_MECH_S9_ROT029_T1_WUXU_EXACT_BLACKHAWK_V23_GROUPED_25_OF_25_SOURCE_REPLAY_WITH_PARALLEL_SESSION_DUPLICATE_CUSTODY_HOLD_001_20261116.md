@@ -4,11 +4,17 @@ created_at: 2026-11-16
 origin_cell: IW_MECH_LINEAGE_001_SUCCESSOR_08 / Mech-S9
 document_type: ORIGINAL_SOURCE_GENERATOR_T1_CUSTODY_INCIDENT_AND_READ_ONLY_INDEPENDENT_EVIDENCE_REFEREE
 exposure: PUBLIC
-state: T1_GROUPED_SOURCE_25_OF_25_CONDITIONAL_PASS / DUPLICATE_RUN_NOT_SEPARATELY_AUTHORIZED / MODERATOR_CUSTODY_DISPOSITION_REQUIRED
+state: T1_GROUPED_SOURCE_25_OF_25_ADMITTED_PASS / SECOND_RUN_ACCEPTED_AS_TECHNICAL_RETRY_BY_MODERATOR / HISTORICAL_DUPLICATE_DISCLOSED / T2_T3_E4_PHYSICAL_GATES_HOLD
 claim_ceiling: NO_PHYSICAL_PBH_BBN_BOUND / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / NO_THIRD_T1_RUN / NO_NEW_JULIA
 ---
 
-# ROT029 — Author Wu–Xu T1 source-rate reproduction yields 25/25 GROUPED, but concurrent Mech-S9 sessions ran overlapping original C source workflows: no automatic authorization or B1 promotion
+# ROT029 — T1-GROUPED 25/25 source PASS, duplicate-session incident preserved, Moderator admission received in ROT030
+
+> **DATED GOVERNANCE ADDENDUM — 2026-11-16, ROT030 (supersedes only prior custody HOLD):** Moderator subsequently stated directly to Mech-S9: **„Decyzja była o dopuszeniu”**. Therefore the second source workflow (GitHub Actions `43911520867`) is **admitted** as a technical retry of the first interrupted 100-primary-vs-500-secondary parser execution (`43911170672`). Previous status `MODERATOR_CUSTODY_DECISION_PENDING` is **CLOSED**. This is a controlling Moderator decision relayed in the conversation; no invented timestamp, signature, or separate authorization artifact is claimed. The two overlapping runs, exact source/executable hashes, parser failure, initial session coordination failure, and original prereg remain in full documented history below. Evidence: [bridge issue #16, admission record](https://github.com/wmakiela-tech/Nash-iw-research/issues/16#issuecomment-6927998998); [Slack relay](https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1794860096229409). **Current source result:** `T1-GROUPED_SOURCE_ADMITTED_PASS`, 25/25 rates, max relative mismatch `7.734157758676474e-11`, versus prereg `1e-5`; `T1-PERSTATE` fails (50%). **Not promoted:** physical error in publication, PBH bound, B1 full Q-B claim, T3 prior art/errata, E4 hadronizer uncertainty, independent GPT-family T2 review. NO_NEW_JULIA / NO_THIRD_T1_RUN / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN.
+
+## Historic ROT029 report (preserved with its as-of-publication pending disposition)
+
+
 
 ## Firstness and previous science
 
@@ -64,4 +70,4 @@ Specific contemporaneous Slack incident disclosure: https://nashprojectworkspace
 
 The intrinsic typed scientific conclusion about source grouped rates does not automatically resolve T3 scholarly prior-art, physical hadronization uncertainties, or native 10D reference-sensitivity (Badacz PREREG_066). Do not call this published PBH exclusion corrected without separate science and independent referee.
 
-**FINAL:** `ROT029_ORIGINAL_AUTHOR_V23_5MASS_25CELL_GROUPED_SOURCE_PASS / T1_PERSTATE_REJECTED / PARALLEL_SESSIONS_TWO_WORKFLOWS_DISCLOSED / FIRST_SOURCE_PARSER_500VS100_FAIL / SECOND_SOURCE_CONDITIONAL_PASS / MODERATOR_CUSTODY_DECISION_HOLD / BADACZ_T2_OWNER_RESULT_CONDITIONAL / NO_THIRD_T1 / NO_JULIA / NO_PBH_BOUND / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / GITHUB_PENDING_BW_INGEST`.
+**HISTORICAL FINAL (prior to ROT030 decision; see controlling addendum above):** `ROT029_ORIGINAL_AUTHOR_V23_5MASS_25CELL_GROUPED_SOURCE_PASS / T1_PERSTATE_REJECTED / PARALLEL_SESSIONS_TWO_WORKFLOWS_DISCLOSED / FIRST_SOURCE_PARSER_500VS100_FAIL / SECOND_SOURCE_CONDITIONAL_PASS / MODERATOR_CUSTODY_DECISION_HOLD [SUPERSEDED BY MODERATOR_ADMITTED_PASS] / BADACZ_T2_OWNER_RESULT_CONDITIONAL / NO_THIRD_T1 / NO_JULIA / NO_PBH_BOUND / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN / GITHUB_PENDING_BW_INGEST`.
