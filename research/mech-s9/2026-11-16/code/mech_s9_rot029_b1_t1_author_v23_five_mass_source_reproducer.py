@@ -72,7 +72,7 @@ def write_original_julia_params(name,mass,path):
      ("E_number",ENERGY_COUNT),("Emin",ENERGY_MIN),("Emax",ENERGY_MAX),
      ("grav",1),("add_DM",0),("m_DM",1.0),("spin_DM",0.0),("dof_DM",1.0),
      ("primary_only",0),("hadronization_choice",0)]
-    assert len(v)==45 and len({k for k,_ in v})==len(v)
+    assert len(v)==44 and len({k for k,_ in v})==len(v)
     path.write_text("".join(f"{k} = {value}\n" for k,value in v),encoding="ascii")
     return {k:value for k,value in v}
 
