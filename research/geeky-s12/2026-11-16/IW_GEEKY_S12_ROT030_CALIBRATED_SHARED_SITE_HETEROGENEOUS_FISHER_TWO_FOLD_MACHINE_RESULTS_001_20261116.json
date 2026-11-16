@@ -1,0 +1,166 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT030_CALIBRATED_SHARED_SITE_HETEROGENEOUS_FISHER_TWO_FOLD_MACHINE_RESULTS_001_20261116",
+  "date": "2026-11-16",
+  "origin_cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "scope": "Original public M13 B N41 auxiliary 5 fixed shell + mathematical unmasked full energy, HYPOTHETICAL common field shifts and gain, independent Gaussian per-site raw energy measurement errors with bounded heterogeneous fixed variance + independent random raw full-energy calibration with known finite variance.",
+  "prior_source_first": "M13 original native Fourier operator; Geeky ROT027 sixth full energy; M15 ROT022 independent ROT028 I1 and first unrestricted fixed-sixth-calibration falsifier; Geeky ROT029 shared-site correlated Gaussian mean model",
+  "source_integrity": {
+    "original_M13_helper_Git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_B25_table_Git_blob_sha1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "previous_full_original_ROT029_IV57_exact_results_SHA256": "d7595642433b0ecd4cc3771b5878e465fb635cb74652182f3b9e907d4e98aa42",
+    "new_original_M13_actual_native_k0_quartic_executed": true,
+    "new_original_M13_full_20_old_scores_rederived_fresh": false,
+    "original_source_mathematical_cert_composition": "Prior source M13 original iv57 G, O, delta, q directed endpoints HASH-VERIFIED before import, transformed via NEW original source native k0 check and mpmath.iv65",
+    "N": 41,
+    "total_site_count": 68921,
+    "five_old_original_shell_counts": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "outer_site_count": 18268
+  },
+  "measurement_law": {
+    "old_site_errors": "Independent centered Gaussian errors at each original site, parameter-independent fixed variance eta^2*h_x, eta>0, 0.5<=h_x<=2 (heterogeneous arbitrary site pattern)",
+    "sixth_only_calibration_error": "Independent centered Gaussian ADDITIVE raw full-domain ENERGY-MEAN error with known constant variance (kappa*eta)^2; kappa>=0; NOT a freely fitted unknown deterministic offset.",
+    "old_global_errors_remain_correlated_due_shared_sites": true,
+    "original_native_M13_calc_has_translation_or_gain_knobs": false,
+    "epsilon": "eta/G at nominal b=0 fold, only relative normalization",
+    "conditional_observation_formula": "epsilon^2 I_alpha(kappa,h)=deltaOuter^2/[Qsite(h)+K^2*kappa^2], with K=68921*G/(18268*O)",
+    "site_variance_term": "Qsite(h)=(G/O)^2*hbar_outer/18268+xOuter*(X^T W(h) X)^(-1)*xOuter^T; W(h)=diag[w_i*(S_i/G)^2/hbar_i]",
+    "homogeneous_site_noise_term": "Q0=qO+(G/O)^2/18268",
+    "half_information_kappa": "kappa50=sqrt(Q0)/K for homogeneous sites",
+    "hetero_loewner_theorem": "deltaOuter^2/(2*Q0+K^2*kappa^2) <= epsilon^2 I_alpha(kappa,h) <= deltaOuter^2/(0.5*Q0+K^2*kappa^2) for ANY independent site variances h_x in [0.5,2]",
+    "fixed_unrestricted_sixth_calibration_offset": "Separate M15 ROT022 mathematical countermodel: efficient alpha information EXACTLY ZERO at both folds; does NOT equal finite-known-variance random calibration"
+  },
+  "two_original_fold_source_iv65_certificates": [
+    {
+      "fold": 1,
+      "alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "K_strict_interval": [
+        "5.2461834773904080783724189784600095879134975247",
+        "5.2461835038453591881468485006302155552916586022"
+      ],
+      "K_squared_interval": [
+        "27.52244107844411434924182946229468725006802662",
+        "27.522441356019169863645571647877342701535284927"
+      ],
+      "kappa_half_homoskedastic_interval": [
+        "0.014550510366539318499892323638560882810380162329",
+        "0.014553530619354201389856108094747263996210486108"
+      ],
+      "epsilon2_Fisher_no_calibration_interval": [
+        "21.949503893709188283935000093152180701534779459",
+        "22.058942132461920621823579887816532122321381527"
+      ],
+      "epsilon2_Fisher_kappa_0p01_interval": [
+        "14.910012480876504505539798617286640895377064298",
+        "14.98235757757290021625586070054821602922322417"
+      ],
+      "epsilon2_Fisher_kappa_0p01_arbitrary_hetero_h_0p5_2_outer_interval": [
+        "8.8787756648348040252852297125649067869651867609",
+        "22.686733097913474770722756763276869318596510685"
+      ],
+      "hetero_kappa_half_possible_envelope": [
+        "0.010288764549905109302039342175650746862986182684",
+        "0.020581800382302821503878584187656439892094337626"
+      ],
+      "direct_FFT_correlated_GLS_kappa0_homogeneous": 22.00418398286927,
+      "direct_FFT_correlated_GLS_kappa0p01_homogeneous": 14.946160926483204,
+      "incorrect_diagonal_covariance_no_calibration_information": 19.291473185028586,
+      "incorrect_diagonal_covariance_relative_information_error": -0.12328159044446224
+    },
+    {
+      "fold": 2,
+      "alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "K_strict_interval": [
+        "4.7603342035830906905128163054190952054205283089",
+        "4.7603342251985546892752897107054937852311796072"
+      ],
+      "K_squared_interval": [
+        "22.660781729803058324338088890447939238356426302",
+        "22.660781935596723990822228077956628769585410646"
+      ],
+      "kappa_half_homoskedastic_interval": [
+        "0.037069527854251333733645707388647990788646424589",
+        "0.037073698376623470268564100123171102625278176828"
+      ],
+      "epsilon2_Fisher_no_calibration_interval": [
+        "504.58892434551369080159950572146540693043071001",
+        "504.81300131270562675237284646964295454898830669"
+      ],
+      "epsilon2_Fisher_kappa_0p01_interval": [
+        "470.36695611710182145984009134682910715240018266",
+        "470.56865488389161031051609194466222632683306713"
+      ],
+      "epsilon2_Fisher_kappa_0p01_arbitrary_hetero_h_0p5_2_outer_interval": [
+        "243.43866342155231388008353903979062107026771713",
+        "881.35029043153295550984135907290413325738553632"
+      ],
+      "hetero_kappa_half_possible_envelope": [
+        "0.026212114521124726413273657974029388155631222672",
+        "0.052430127051550308726392554331581364228800126005"
+      ],
+      "direct_FFT_correlated_GLS_kappa0_homogeneous": 504.70095497813816,
+      "direct_FFT_correlated_GLS_kappa0p01_homogeneous": 470.46779895157897,
+      "incorrect_diagonal_covariance_no_calibration_information": 492.5436826501279,
+      "incorrect_diagonal_covariance_relative_information_error": -0.02408807078349371
+    }
+  ],
+  "independent_spatial_falsification": {
+    "source_original_Fourier_modes_reconstructed_and_3d_FFT_executed": true,
+    "full_different_raw_energy_correlated_six_by_six_GLS_versus_six_disjoint_areas_test_cases": 28,
+    "all_28_cases_match_relative_below_4e_minus9": true,
+    "homogeneous_all_interval_inclusions_pass": true,
+    "heterogeneous_pattern": "1+0.5*cos(2pi*x/41)*cos(2pi*y/41), fixed independent site noise variance multiplier",
+    "heterogeneous_pattern_range": "[0.5,1.5], strictly within rigorously certified [0.5,2] Loewner envelope",
+    "heterogeneous_all_14_interval_envelope_inclusions_pass": true,
+    "negative_control": "Discarding old/full shared-site covariances in 6x6 Gaussian model changes calculated information by about -12.33% at first fold and -2.41% at second at kappa0",
+    "FFT_is_binary64_diagnostic_not_directed_source_proof": true
+  },
+  "actual_reproducibility": {
+    "user_local_zip": "Geeky_S12_ROT030_calibration_heterogeneous_site_noise_Fisher.zip",
+    "zip_bytes": 45230,
+    "zip_SHA256": "62370bf945ebaa59bbf97c9a502423cd92aebb8d9aae86556ab9595bb6a254a7",
+    "ZIP_entries": 14,
+    "manifest_SHA256_payload_entries": 13,
+    "ZIP_CRC_PASS": true,
+    "all_14_member_bytes_PASS": true,
+    "all_13_SHA256_manifest_checks_PASS": true,
+    "actual_new_source_python_SHA256": "253e63320c9798797058635a2cdf78caa52cb068d842ec71df62c374630bc854",
+    "actual_new_source_IV65_full_result_JSON_SHA256": "791ac46d6cbf53d468123c5dbfb710576152db983ed6930e75086555c9de8b6e",
+    "independent_actual_spatial_python_SHA256": "e810505dd529768a652b49abf1d94cc0433658b0084b3d1aedee2ed0a037b641",
+    "independent_full_spatial_JSON_SHA256": "667dbfa86a6c3601e75e096cf24f7ca28e055d8558fd375addceabd250a9c94f",
+    "actual_clean_replay_and_tamper_python_SHA256": "5e4f279fcb000f1fc04b31da9f50dabf862804d1279acc3e7ae468a7b43cab22",
+    "actual_clean_replay_and_tamper_receipt_JSON_SHA256": "4936018e67f086902a004a91615b40f595cd776435b8a0fc609b43b7ae8e336d",
+    "two_distinct_clean_fresh_Python_processes_full_result_byte_identical": "PASS",
+    "six_1byte_tamper_controls_rejected_pre_original_source_import": "6/6 PASS",
+    "actual_full_executed_script_byte_mirror_public_GitHub": false
+  },
+  "science_status": {
+    "ROT029_external_different_cell_I1": "NOT_VERIFIED",
+    "ROT030_external_different_cell_I1": "PENDING",
+    "prior_M15_ROT022_ROT028_I1": "PASS",
+    "prior_M15_ROT022_unrestricted_calibration_counterexample": "M15 FIRST, PASS",
+    "KN14_BW_ingest": "NOT_VERIFIED",
+    "M15_CANON_owner_approval": "NOT_VERIFIED",
+    "ceilings": [
+      "NO_ORIGINAL_DTC0A_FULL_RUNTIME_BYTES",
+      "NO_REAL_SIXTH_SENSOR_OR_CALIBRATION_DISTRIBUTION",
+      "NO_REAL_NOISE_COVARIANCE",
+      "NO_PHYSICAL_NASH_K_J3_GW_GR_INTERPRETATION",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  }
+}
