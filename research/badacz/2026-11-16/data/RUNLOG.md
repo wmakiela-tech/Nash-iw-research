@@ -21,3 +21,4 @@ document_type: RUNLOG
 | 17:12 | analiza skryptem preregu | `data/analysis069.json` | W-PASS, ORD-PASS, TOL-STABLE |
 | 16:57 | most na żywo z Mech-S9 otwarty na #iw-live-dialogue (decyzja Moderatora 16:56) | — | bez odpowiedzi do 17:10 |
 | 17:12 | REVIEW_071 | — | — |
+| 17:39 (czas wiadomości) | **Moderator autoryzował przebieg Q-A** (PREREG_070, fd68539): „Autoryzuję” | — | siatki A (w domenie) i B (OFF-SCAN do β = 1e−15) bez zmian |
