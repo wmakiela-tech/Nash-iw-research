@@ -1,0 +1,168 @@
+{
+  "artifact_id": "IW_M15_ROT024_INDEPENDENT_ORIGINAL_M13_STOCHASTIC_CALIBRATION_AND_TWO_OTHER_EXACT_PAIR_NOISE_GATES_001_20261116",
+  "return_id": "IW_M15_ROT024_GEEKY_ROT030_STOCHASTIC_CALIBRATION_HETEROGENEOUS_SITE_I1_AND_NEW_M15_TWO_EXACT_ALIAS_GAUSSIAN_PAIR_DISTANCE_001_20261116",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-16",
+  "exposure": "PUBLIC",
+  "status": "DIFFERENT_CELL_INTERNAL_NONBLIND_I1_ORIGINAL_M13_SOURCE_IV70_GEEKY_ROT030_MATH_REVIEW_AND_NEW_SOURCE_PAIRWISE_GAUSSIAN_NOISE_GATES",
+  "priority": {
+    "native_source": "M13 original original N41 public Fourier B operator",
+    "sixth_source": "Geeky-S12 ROT027",
+    "shared_site_raw_noise": "Geeky-S12 ROT029",
+    "stochastic_sixth_calibration_and_heterogeneous_Loewner": "Geeky-S12 ROT030 FIRST",
+    "M15_ROT024_new": "two other M15 ROT018/020 exact source pairs Gaussian two-simple-hypothesis Mahalanobis distances"
+  },
+  "source": {
+    "original_M13_Git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_full_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_source_native_tensor_polys_dot_actually_executed": true,
+    "independent_prior_M15_ROT023_native_original_five_shell_iv65_source_JSON_sha256": "7ddfec37585f587289f6977239ef55514e0c413034e5b223af4131c0949bfa1e",
+    "prior_IV65_scores_SHA_LOCKED_REUSED_not_freshly_computed": true,
+    "original_full_native_B_quartic_newly_reconstructed_IV70": true
+  },
+  "model": {
+    "N": 41,
+    "total_sites": 68921,
+    "five_old_disjoint_site_counts": [
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "exterior_sites": 18268,
+    "free_common_source_gain_and_three_translations_non_native": true,
+    "sixth_full_raw_energy_sensor_hypothetical": true,
+    "per_site_error": "Gaussian RAW energy independent site errors variance eta^2*h_x",
+    "heterogeneous_site_bounds": "1/2<=h_x<=2; independent sites only",
+    "sixth_random_calibration": "zero-mean independent Gaussian additive RAW full energy with KNOWN std kappa*eta",
+    "not_equivalent_to": "unrestricted fixed unknown deterministic sixth-only log calibration c",
+    "normalized_epsilon": "eta/G_fold_ref"
+  },
+  "strict_iv70_source_folds": [
+    {
+      "name": "FIRST",
+      "source_alpha_bracket": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "kappa_half_information_IV70": [
+        "0.0145520173204750817399",
+        "0.0145520231959712101319"
+      ],
+      "homogeneous_sigma_normalized_Fisher_at_kappa_0p01": [
+        "14.9358864382247621630",
+        "14.9564389561988945529"
+      ],
+      "all_site_h_between_half_and_two_at_kappa_0p01_outer_info_guarantee": [
+        "8.8944224215386865",
+        "22.6482601664869732"
+      ],
+      "exact_positive_fisher": true
+    },
+    {
+      "name": "SECOND",
+      "source_alpha_bracket": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "kappa_half_information_IV70": [
+        "0.0370716028463173615947",
+        "0.0370716230327826432037"
+      ],
+      "homogeneous_sigma_normalized_Fisher_at_kappa_0p01": [
+        "470.4541294021090783",
+        "470.4814687195476166"
+      ],
+      "all_site_h_between_half_and_two_at_kappa_0p01_outer_info_guarantee": [
+        "243.4846720150592779",
+        "881.1928366116955227"
+      ],
+      "exact_positive_fisher": true
+    }
+  ],
+  "math_identities": {
+    "outer_partition": "68921G=sum(wi Si)+18268O",
+    "covariance_correct": "Var(full | five old shell sample means)=eta^2*(18268/68921^2+kappa^2)",
+    "info": "epsilon^2 I_alpha=delta_o^2/(Q0+K^2*kappa^2)",
+    "K": "68921 G/(18268 O)",
+    "Q0": "q_o+(G/O)^2/18268",
+    "kappa50": "sqrt(Q0)/K",
+    "heterogeneous_Loewner": "delta_o^2/(2Q0+K^2*kappa^2) <= epsilon^2 I <= delta_o^2/(.5Q0+K^2*kappa^2) for site h in [.5,2]"
+  },
+  "new_exact_pair_simple_hypothesis_source_results": [
+    {
+      "name": "FIRST",
+      "alpha_A_exact": "0.01861322133966003355903534097922321888020601616279117881063117914",
+      "alpha_B_actual_exact_exists_within_radius_1e_minus_25_about": "0.01861722141672577299600863498675349999257594838451884301788651517",
+      "original_five_raw_source_means_equal_exact": true,
+      "source_native_raw_full_delta_B_minus_A_outer": [
+        "-7.7006844449376687764e-21",
+        "-7.7006844449376686379e-21"
+      ],
+      "epsilon_times_Mahalanobis_D_when_kappa_zero": [
+        "0.0001392356172932255265424450",
+        "0.0001392356172932255290448371"
+      ],
+      "epsilon_times_Mahalanobis_D_when_kappa_0p01": [
+        "0.000026794754734350272772378",
+        "0.000026794754734350273253944"
+      ],
+      "D_if_epsilon_1e_minus_4_and_kappa_0p01_illustration": "0.2679475473"
+    },
+    {
+      "name": "SECOND",
+      "alpha_A_exact": "0.05416539905800021365821377240849411761996727323255007395123373206",
+      "alpha_B_actual_exact_exists_within_radius_1e_minus_25_about": "0.05416939901330654632728114528927166347200500784664927847504904288",
+      "original_five_raw_source_means_equal_exact": true,
+      "source_native_raw_full_delta_B_minus_A_outer": [
+        "-2.0907792045327237685e-19",
+        "-2.0907792045327237648e-19"
+      ],
+      "epsilon_times_Mahalanobis_D_when_kappa_zero": [
+        "0.00169870920913722124948500456",
+        "0.00169870920913722125240597195"
+      ],
+      "epsilon_times_Mahalanobis_D_when_kappa_0p01": [
+        "0.0003269026812870571462031748",
+        "0.0003269026812870571467652912"
+      ],
+      "D_if_epsilon_1e_minus_4_and_kappa_0p01_illustration": "3.2690268129"
+    }
+  ],
+  "source_prior_cert_SHA256": {
+    "M15_original_exact_pair_decimal_inputs": "44f8e325ebefa4667ca44373793a5e127d68314fe2b7cc7c3d9c184848b0651e",
+    "M15_original_native_5D_Krawczyk_partner_exist_proof": "9b5d9a5de14839d4bbc923b26d78f48d16dbd12863c672f5c98033c8e2b2466c",
+    "M15_original_native_sixth_strict_log_gap": "0a8b146b59377850c00a21c3589e61d0c79a7d3c549565c09c43c69401a45fcc"
+  },
+  "repro": {
+    "zip_filename": "IW_M15_ROT024_ORIGINAL_M13_STOCHASTIC_CALIBRATION_AND_TWO_EXACT_PAIR_GAUSSIAN_NOISE_REPRO_001_20261116.zip",
+    "zip_bytes": 48611,
+    "zip_sha256": "c8e731d28b7808cb84467eeee76acf3885d66f95605ab5a0092fb0caada4b459",
+    "zip_CRC": "PASS",
+    "manifest_payload_sha256": "12/12 PASS",
+    "main_new_native_iv70_Python_sha256": "48014b3bd9638d184e01e2c53cc8ec33303061b45f80db6c1c0f414b8cfe813b",
+    "main_directed_JSON_sha256": "0debe136d5f8c77a991d426c826d994081bf17f9122feda8f4dc2e02c7d44265",
+    "independent_full_spatial_FFT_GLS_script_sha256": "8ccd30ae3973aa433f4ce4543c337d71cbea071ce78c573a5269a61a408ff22f",
+    "independent_spatial_GLs_JSON_sha256": "c9e4c65b775276410b2845e54a739b65ba3beae8a74a14c22667bf3871a75bef",
+    "clean_replay_attack_receipt_sha256": "581ff931e30903a958bd4861bb1129601deb648c8345718653dda5d02887b13c",
+    "clean_two_machine_JSON_replays": "2/2 BYTE IDENTICAL PASS",
+    "original_source_and_parent_input_one_byte_mutation_rejections": "5/5 PRE-SCIENCE FAIL CLOSED PASS",
+    "source_spatial_two_folds_times_two_site_patterns_times_seven_kappas": "28/28 source IV70 or Loewner envelope PASS",
+    "two_pair_correlated_GLS_spatial_float64": "4/4 within RELATIVE 1e-7 diagnostic tolerance",
+    "scientific_wrong_covariance_negative": "2/2 PASS"
+  },
+  "limits": [
+    "Source mathematical auxiliary M13, not missing historical full DTC0a producer",
+    "Original source t and b nuisance hypothetical",
+    "Sixth physical sensor and all error laws unmeasured hypothetical",
+    "Gaussian Mahalanobis D only two fixed exact simple source hypotheses with same covariance; NOT continuous alpha Fisher or global error guarantee",
+    "Any unknown deterministic free calibration nuisance requires separate model and may restore zero information",
+    "No outside blind I3 nor official native BW receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
