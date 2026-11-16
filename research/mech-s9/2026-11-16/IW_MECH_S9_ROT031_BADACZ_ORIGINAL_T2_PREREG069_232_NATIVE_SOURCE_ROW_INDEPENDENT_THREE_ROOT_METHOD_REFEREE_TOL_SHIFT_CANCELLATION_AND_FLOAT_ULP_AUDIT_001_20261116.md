@@ -41,7 +41,7 @@ New pure stdlib CPython implementation does **not** import `numpy.polyfit` or ow
 - M_D: seven nearest source `log10β` grid points to M_C, independent centered OLS and root (x_0=\bar x-\bar y/b); OLS residual-based conditional standard-error calculation and number of sign changes;
 - original Wu–Xu JLD2 archive 100×100 recovery, linear archive roots at every original j, numerical method spread, W, ORD and TOL gates as frozen by Badacz's **PREREG_069**.
 
-All 232 source rows passed 64-bit-literal input checks, strictly defined 0.02/0.04 logβ grid spacing and native source run status0. All 28 contour objects (6 orig default +6 E5 default+2 orig tight+2 E5 tight = **16** roots, with 3 methods and conditional SE each) matched Badacz to **max absolute root difference `1.0658141036401503e-14 dex`**. Correction: 6+6+2+2=16 series-by-mass instances, not 28; audit includes 232 underlying rows. No missing first brackets and all owner records have one sign change. (Distinct roots M_B, M_C, M_D make 48 derived roots.)
+All 232 source rows passed finite Float64 input checks, strictly defined 0.02/0.04 logβ grid spacing and native source run status0. All **16 arm-by-mass contour objects** (6 orig default +6 E5 default+2 orig tight+2 E5 tight, with three methods and conditional SE each) matched Badacz to **max absolute root difference `1.0658141036401503e-14 dex`**. Correction: 6+6+2+2=16 series-by-mass instances, not 28; audit includes 232 underlying rows. No missing first brackets and all owner records have one sign change. (Distinct roots M_B, M_C, M_D make 48 derived roots.)
 
 | j (original author mass index) | Independently derived `D_j=M_D(E5)-M_D(orig)` dex | Difference from `log10(2)` dex | Spread across original three root methods |
 |---:|---:|---:|---:|
