@@ -1,0 +1,302 @@
+{
+  "artifact_id": "IW_M15_ROT028_ORIGINAL_M13_FACE12_SECOND_FOLD_BASELINE_RECROSS_001_20261117",
+  "return_id": "IW_M15_ROT028_GEEKY_ROT033_FACE12_SOURCE_I1_AND_NEW_STRICT_SECOND_FOLD_FISHER_RETURN_THETA_001_20261117",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-17",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "class": "ACTUALLY_EXECUTED_ORIGINAL_M13_NATIVE_MATHEMATICAL_SOURCE_DIFFERENT_CELL_NONBLIND_I1_IV55",
+  "original_firstness": {
+    "M13": "N41 Fourier auxiliary B Lie/TT source",
+    "Geeky_ROT031": "first axial spatial correlations source Fisher decrease",
+    "Geeky_ROT032": "first body-diagonal site correlations source Fisher increase",
+    "Geeky_ROT033": "FIRST twelve face-diagonal Eface exact integer graph, first original-source fold1 monotone Fisher decrease and fold2 unique interior Fisher minimum",
+    "M15_ROT028": "independent source I1 face12 review and NEW rigorous original-source exact second-fold Fisher no-correlation baseline return interval"
+  },
+  "original_M13_source": {
+    "repo": "wmakiela-tech/Nash-iw-research",
+    "path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "full_original_UTF8_bytes": 8970,
+    "sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "native_unchanged_source_functions_actually_executed": [
+      "tensor_polys(41)[B]",
+      "dot",
+      "window_mode"
+    ],
+    "complete_historical_DTC0a_runtime_byte_identity": false
+  },
+  "geometry": {
+    "N": 41,
+    "sites": 68921,
+    "six_region_order": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "region_weights": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "face_diagonal_shifts": "all 12 permutations of exactly TWO ±1 coordinates and ONE zero coordinate",
+    "Eface": [
+      [
+        186804,
+        32412,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        32412,
+        31944,
+        28980,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        28980,
+        28536,
+        25740,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        25740,
+        25320,
+        22692,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22692,
+        22296,
+        19836
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19836,
+        272832
+      ]
+    ],
+    "independent_exact_integer_methods": [
+      "all original 68921 site region labels rolled over all 12 signed face shifts",
+      "nested original cube exact integer translated interval overlaps followed by shell inclusion/exclusion"
+    ],
+    "methods_agree_all_36_matrix_entries": true,
+    "each_row_sum_equals_12_region_weight": true,
+    "z": [
+      0,
+      1,
+      -1,
+      1,
+      0,
+      0
+    ],
+    "exact_zT_Eface_z": -23640,
+    "independent_spatial_face_graph_method": "six signed half directions plus transpose",
+    "spatial_graph_agrees_exact": true
+  },
+  "mathematical_model": {
+    "source_fourier_tensor_modes": 41,
+    "original_mode_pairs": 1681,
+    "source_pair_differences": 221,
+    "original_five_fixed_cubic_masks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "hypothetical_free_nuisance": [
+      "b common log gain",
+      "tx torus relative translation",
+      "ty torus relative translation",
+      "tz torus relative translation"
+    ],
+    "target": "original alpha",
+    "additional_sixth_mathematical_observer": "full unmasked B energy, equivalently outer shell mean",
+    "hypothetical_site_covariance": "eta^2*(I+theta*Aface)",
+    "Aface": "mean of 12 torus face-diagonal shifts",
+    "theta_range": [
+      "0",
+      "0.4"
+    ],
+    "site_covariance_strictly_positive_definite_full_range": true,
+    "extra_known_finite_variance_random_full_calibration": "kappa*eta; adds constant to optimized V, does not shift turning or recrossing",
+    "free_unknown_deterministic_sixth_offset_not_allowed": true,
+    "original_M13_source_has_no_hardware_translation_gain_or_sixth_sensor": true
+  },
+  "theorem": {
+    "source_arithmetic": "mpmath.iv outward 55 decimal digits over two ENTIRE prior exact old alpha fold-root brackets",
+    "optimized_source_variance": "V(theta,kappa)=a0+a1*theta+K^2*kappa^2-(b0+b1*theta)^2/(d0+d1*theta)",
+    "variance_second_derivative": "-2*(b1*d0-b0*d1)^2/(d0+d1*theta)^3 <0 throughout",
+    "scaled_source_alpha_fisher_at_exact_fold": "(eta/G)^2 I_alpha=delta_outer^2/V",
+    "unique_face_second_fisher_minimum": "Vprime(.062)>0, Vprime(.070)<0, Vsecond<0 => unique theta_min in (.062,.070)",
+    "new_unique_face_second_baseline_recrossing": "V(theta_cross)=V(0), exactly one positive theta_cross strictly above theta_turn and below .4; source IV55 range below",
+    "exact_crossing_formula": "theta_cross=-(a1*d0^2-2*d0*b0*b1+b0^2*d1)/(d0*(a1*d1-b1^2))",
+    "second_exact_positive_crossing_source_outer_iv55": [
+      "0.12923602414075345514703991676803358035202176943122465437716",
+      "0.133988251027093043011595057024250000892048078741089988047636"
+    ],
+    "second_crossing_independent_original_spatial_numeric_midpoint": 0.13161191591858545,
+    "second_minimum_independent_original_spatial_numeric_midpoint": 0.06569057409581028,
+    "finite_known_stochastic_calibration_independence_of_theta_turn_and_cross": true,
+    "no_global_domain_theorem": true
+  },
+  "two_source_fold_iv55_certifications": [
+    {
+      "fold": "FIRST",
+      "alpha_whole_interval": [
+        "0.01861522133766",
+        "0.01861522134166"
+      ],
+      "Vprime_zero_conservative": [
+        "0.00053131419",
+        "0.00053282583"
+      ],
+      "Vprime_point4_conservative": [
+        "0.00049929617",
+        "0.00050098470"
+      ],
+      "Vsecond_entire_theta": [
+        "-0.00008780180",
+        "-0.00007249896"
+      ],
+      "source_decision": "STRICT_FISHER_DECREASE_FOR_ALL_REAL_THETA_IN_0_TO_0P4",
+      "Fisher_kappa0p01_theta0": [
+        "14.9414867698",
+        "14.9508361809"
+      ],
+      "Fisher_kappa0p01_theta0p2": [
+        "14.7608379414",
+        "14.7703929373"
+      ],
+      "Fisher_kappa0p01_theta0p4": [
+        "14.5898028812",
+        "14.5995476767"
+      ],
+      "numeric_FFT_Fisher_theta0": 14.946160926468076,
+      "numeric_FFT_Fisher_theta04": 14.594674612497899
+    },
+    {
+      "fold": "SECOND",
+      "alpha_whole_interval": [
+        "0.05416739905600",
+        "0.05416739906000"
+      ],
+      "Vprime_zero_conservative": [
+        "0.00014870835",
+        "0.00015407034"
+      ],
+      "Vprime_point4_conservative": [
+        "-0.00074906425",
+        "-0.00074372705"
+      ],
+      "Vprime_point062": [
+        "0.00000578385",
+        "0.00001114237"
+      ],
+      "Vprime_point070": [
+        "-0.00001255492",
+        "-0.00000719686"
+      ],
+      "Vsecond_entire_theta": [
+        "-0.002317109",
+        "-0.002173844"
+      ],
+      "theta_turn_source_bracket": [
+        "0.062",
+        "0.070"
+      ],
+      "new_theta_baseline_return_iv55": [
+        "0.129236024140753455",
+        "0.13398825102709305"
+      ],
+      "source_decision": "STRICT_UNIQUE_FISHER_MINIMUM_AND_UNIQUE_POSITIVE_BASELINE_CROSSING",
+      "Fisher_kappa0p01_theta0": [
+        "470.417919067",
+        "470.517687977"
+      ],
+      "Fisher_kappa0p01_theta0p2": [
+        "470.630824320",
+        "470.743407450"
+      ],
+      "Fisher_kappa0p01_theta0p4": [
+        "472.113681819",
+        "472.239392380"
+      ],
+      "numeric_FFT_Fisher_theta0": 470.46779895170835,
+      "numeric_FFT_Fisher_theta04": 472.17652959118857,
+      "numeric_FFT_theta_min": 0.06569057409581028,
+      "numeric_FFT_theta_cross": 0.13161191591858545
+    }
+  ],
+  "controls": {
+    "new_original_IV55_whole_source_fold_six_region_graph": "2/2 PASS",
+    "face_Eface_grid_vs_analytic_exact": "1/1 PASS",
+    "face_6_half_neighbor_spatial_exact": "1/1 PASS",
+    "source_second_unique_turn_and_cross_IV55": "2/2 PASS",
+    "spatial_GLs_inherited_M15_ROT027_scenarios": 28,
+    "spatial_GLs_new_FACE_scenarios": 12,
+    "numeric_dual_basis_spatial_GLs_total": "40/40 PASS",
+    "independent_spatial_source_Fisher_IV55_points": "6/6 at theta0,.2,.4 kappa=.01",
+    "separate_full_JSON_cold_replays": "2/2 BYTE_IDENTICAL",
+    "actual_negative_fixtures": "6/6 REJECTED",
+    "negative_classes": [
+      "native M13 one-byte source tamper (two programs)",
+      "IV55 output one-byte tamper",
+      "false face count",
+      "false second-fold global Fisher sign",
+      "false face crossing before theta=.10"
+    ],
+    "original_native_file_never_modified": true,
+    "prepublication_failed_key_mismatch": "0.2 vs .2 source JSON key corrected before PASS"
+  },
+  "reproducer": {
+    "zip": "IW_M15_ROT028_ORIGINAL_M13_FACE12_SECOND_FOLD_BASELINE_RECROSS_IV55_REPRO_001_20261117.zip",
+    "zip_bytes": 45780,
+    "sha256": "31354e17df863fabe7073d4907d7ad33657a5edf441739db941f6e127bf2d689",
+    "zip_member_count": 12,
+    "zip_CRC": "PASS",
+    "payload_SHA256": "11/11 PASS",
+    "all_zip_member_byte_reread": "12/12 PASS",
+    "new_native_source_script_sha256": "b71d1f8187638c9cea3795c66a21a7ba72c7c63469005c6a17da232632621868",
+    "actual_full_native_IV55_JSON_sha256": "280cb051bd739d2e6b52bf1c35de51480428928e08ad9e92bef9d45e48e748c0",
+    "independent_spatial_source_script_sha256": "fafe7a2d606a2dcd1dfa852c6e27bbfbbc61fa0aa1479a3e0beb3efd7b905adc",
+    "actual_full_spatial_JSON_sha256": "4354dbd03a6e98de9a958ea2228180b8d6eb6abeb65923a157fdd110a66a95c8",
+    "actual_cold_replay_six_negative_receipt_SHA256": "73d7f7bff547d9c749699645874b6f9c44250426acac9342a950c72e4c3f6854",
+    "full_runnable_source_archive_only_in_verified_user_local_ZIP_not_claimed_separately_public_GitHub_mirrored": true
+  },
+  "limits": [
+    "Source auxiliary original M13 public B N41, NOT historical dtc0a runtime byte replay",
+    "Common translations/gain and measured sixth output NOT M13 native physical controls",
+    "Synthetic site Gaussian error covariance, NOT physically observed",
+    "Known finite random calibration variance is not unrestricted fixed unknown sixth log offset c",
+    "No complete global alpha inverse injectivity or physical experimental NASH mechanism",
+    "First source Geeky ROT033 face graph and Fisher minimum retained",
+    "Internal nonblind different-cell I1 only; no outside blind I3",
+    "No verified REC13/AUD3 independent acceptance or native KN15 BW ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
