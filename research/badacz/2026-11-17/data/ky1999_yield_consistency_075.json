@@ -1,0 +1,12 @@
+{
+ "Nch_91p2_eq11": 20.82461855454813,
+ "sum_labelled_charged_yields": 33.083999999999996,
+ "ratio_sum_charged_over_Nch": 1.5886965666784996,
+ "pi_plus_plus_pi_minus": 28.2,
+ "ratio_pipm_over_Nch": 1.3541664605348112,
+ "sum_f_charged": 1.5886965666784998,
+ "if_values_are_group_totals_assigned_per_state": {
+  "sum_groups_charged": 16.541999999999998,
+  "ratio_over_Nch": 0.7943482833392498
+ }
+}
