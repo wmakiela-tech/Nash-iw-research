@@ -1,0 +1,167 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT035_M13_EXACT_TWO_COVARIANCE_GAUSSIAN_TESTING_LOWER_BOUND_CURATED_001_20261117",
+  "date": "2026-11-17",
+  "owner": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "science": "EXACT_RATIONAL_TWO_DISTINCT_SOURCE_ADMISSIBLE_COVARIANCE_GAUSSIAN_MODELS / SAME_KNOWN_RAW_CALIBRATION / SIX_MEANS_KL_SMALLER_THAN_1E_MINUS17 / ONE_SITE_KL_GREATER_THAN_1E_MINUS6 / NONASYMPTOTIC_PINSKER",
+  "source_original": {
+    "M13_public_native_Python_Git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_B25_data_Git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "actual_original_tensor_polys_41_and_inner_five_masks_and_unmasked_k0_executed": true,
+    "source_interval_dps": 40,
+    "source_alpha": "1/20",
+    "original_six_fixed_region_occupancies": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "source_M13_original_five_shell_and_outer_energies_strict_positive": true,
+    "prior_original_ROT034_full_exact_result_SHA256": "48b331fd062f93d0e69f4acd84ef0664cc08cf605bb0bae8afeb201bc4b1010c",
+    "prior_independent_ROT034_full_spectral_result_SHA256": "d3d3c56b280bfbc91aa8d78916ae540eabf9c5b835fd168ebb762ea6eac013e9",
+    "original_M13_native_free_translation_gain_sixth_physical_sensor": false,
+    "historical_full_dtc0a_runtime_source_byte_identity": false
+  },
+  "synthetic_noise_hypothesis": {
+    "source_original_mask_six_raw_region_means": "Mathematical 5 original disjoint shell energy means plus one outer complement mean, equivalent to old 5+mathematical unmasked full M13 energy",
+    "site_noise": "Gaussian centered additive RAW energy-density covariance beta0 I + beta_axis Aaxis + beta_face Aface + beta_body Abody; canonical 6/12/8 original periodic shifts",
+    "legal_cone": "beta0>0; all theta_kind=beta_kind/beta0>=0; theta_axis+theta_face+theta_body<=0.4; beta_cal_raw>=0",
+    "independent_random_full_sixth_calibration": "beta_cal_raw times (68921/18268)^2 added to OUTER-only covariance",
+    "six_region_covariance": "C=beta0 diag(1/w)+sum_kind beta_kind diag(1/w) E_kind diag(1/w)/neighbor_count_kind + beta_cal_raw (68921/18268)^2 e_outer e_outer^T",
+    "real_IID_measurements_or_covariance": "NONE_AUTHENTICATED"
+  },
+  "two_distinct_exact_rational_legal_source_models": {
+    "A": {
+      "beta0": "1",
+      "theta_axis": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25",
+      "beta_cal_raw": "1/2500"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_axis": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425",
+      "beta_cal_raw": "1/2500"
+    },
+    "generator": {
+      "h": "1/100",
+      "u0": "-220280312783/1000000000000",
+      "v": [
+        "701212604663/1000000000000",
+        "-666908205953/1000000000000",
+        "252060167211/1000000000000"
+      ],
+      "delta": "h*(u0*C_A+v_axis*G_axis+v_face*G_face+v_body*G_body-u0*beta_cal_raw*K)"
+    },
+    "exact_both_covariances_different": true,
+    "raw_calibration_exactly_identical_and_known": true,
+    "same_original_source_M13_mean_vector": true,
+    "both_positive_site_covariance_cone": true,
+    "both_satisfy_previous_source_16_linear_covariance_family_constraints": true
+  },
+  "rigorous_exact_rational_information_theorem": {
+    "trace_Q": "Q=tr((C_A^-1 (C_B-C_A))^2) exact positive rational held in executable original source JSON",
+    "Q_decimal": "3.4197801132572657e-17",
+    "strict_Q_smaller_than": "1e-16",
+    "relative_whitened_eigenvalue_modulus_strict_less_than": "1e-8",
+    "KL_formula": "D_KL(P_A||P_B)=0.5*sum_i[1/(1+lambda_i)-1+log(1+lambda_i)]",
+    "KL_upper_proof": "D_KL<=Q/(4*(1-1e-8)^2)",
+    "KL_upper_decimal": "8.549450454132173148100569165960523888784320246267312565e-18",
+    "KL_strict_upper_bound": "1e-17",
+    "Pinsker_test": "TV(P_A^n,P_B^n)<=sqrt(n KL_upper/2); every equal-prior binary hypothesis test success<=0.5+TV/2",
+    "finite_IID_sixvariate_test_bounds": [
+      {
+        "n": 1000000,
+        "TV_upper": "2.0675408646665455e-6",
+        "equal_prior_success_upper": "0.50000103377043233327"
+      },
+      {
+        "n": 1000000000,
+        "TV_upper": "6.5381382878202313e-5",
+        "equal_prior_success_upper": "0.50003269069143910116"
+      },
+      {
+        "n": 1000000000000,
+        "TV_upper": "0.00206754086466654549",
+        "equal_prior_success_upper": "0.50103377043233327275"
+      }
+    ],
+    "absolute_raw_calibration_fixed_across_two_models": true,
+    "precision_source": "EXACT_RATIONAL_SYMPY not float eigen for inequalities"
+  },
+  "site_resolution_negative_knowledge": {
+    "exact_single_site_zero_mean_noise_variances": [
+      "1",
+      "99779719687217/100000000000000"
+    ],
+    "single_site_rational_KL_lower": "(beta0_B-1)^2/4",
+    "single_site_KL_lower_decimal": "1.213085404994407830127225e-6",
+    "single_site_KL_strict_greater_than": "1e-6",
+    "full_site_KL_lower_by_one_site_marginal": "1e-6",
+    "one_site_KL_lower_over_six_region_KL_upper_strictly_greater_than": "1e11",
+    "independent_full_41cubed_Fourier_KL_numeric": "0.3385900354578718",
+    "independent_full_site_vs_six_KL_ratio_numeric": "3.960372002790155e16",
+    "full_spatial_Fourier_numeric_not_directed_exact_KL_proof": true,
+    "all_original_raw_site_readings_available_historically": false
+  },
+  "Gaussian_covariance_Fisher_mature_diagnostic": {
+    "per_six_variate_sample_exact_rational_Fisher_formula": "0.5 tr(C^-1 C_i C^-1 C_j)",
+    "full_5_parameter_exact_rational_rank": 5,
+    "three_correlations_after_profiling_unknown_beta0_and_relative_calibration_exact_rank": 3,
+    "smallest_profiled_eigen_numeric": "1.709888789005535300846e-13",
+    "stronger_known_absolute_beta_calibration_1over2500": {
+      "remaining_nuisance": "log_beta0",
+      "correct_beta0_derivative": "C_A-beta_cal_raw*K",
+      "exact_rank": 3,
+      "weakest_profiled_theta_eigen_numeric": "1.70989005654791038129e-13",
+      "condition_number_numeric": "6.9313034773699866e12"
+    },
+    "eigen_diagnostics_are_not_rigorous_interval_certificates": true
+  },
+  "crosscheck_and_provenance": {
+    "actual_source_primary_Python_SHA256": "2d549d8d29ecbbb63f7d4f5593cb734686003e12bb6a2e62453f1b3fe157ab01",
+    "actual_full_exact_rational_source_result_JSON_SHA256": "8f4c00e6518285c475ea66e93546aedf6222252e7fefa62bf3312822f0277e56",
+    "independently_programmed_full_site_fft_Python_SHA256": "1a6c210240445ed877fffa8941a15a61ac0eb2ddbca2f58a809a7afab0d8973f",
+    "independent_full_fft_result_JSON_SHA256": "a8b048401af4b2547eb4175258ce421a9f61e8848bea1fc447cb0f857c32b325",
+    "independent_Fourier_trace_Q_rel_error": "1.16e-12",
+    "independent_Fourier_six_region_KL_numeric": "8.54945028445128e-18",
+    "actual_original_M13_full_41cubed_B_Fourier_spatial_inverseFFT_k0_relative_error": "1.111405684871136e-16",
+    "two_separate_fresh_Python_I_complete_science_JSON_byte_replays": "2/2 PASS",
+    "eight_deliberate_1byte_source_mutations_rejected_before_M13_import": "8/8 PASS",
+    "replay_tamper_actual_receipt_SHA256": "b991fcb841bbaa950862d98ce055c73e00e9ee79dfef4a6a5bc204ad1564dcb8",
+    "prepublication_raw_beta_cal_vs_relative_kappa_squared_correction": "earlier exact assertion failure corrected before final science; preliminary failure NOT counted PASS",
+    "user_zip": "Geeky_S12_ROT035_exact_covariance_pair_statistical_indistinguishability.zip",
+    "user_zip_bytes": 43158,
+    "user_zip_SHA256": "6432f2432babc4e01f43451094c7f68bb3613c4257c76c9b430c9a4b9d8f7e89",
+    "zip_entries": 14,
+    "manifest_payload_SHA256_entries": 13,
+    "zip_CRC": "PASS",
+    "zip_member_byte_readback": "14/14 PASS",
+    "manifest_SHA256": "13/13 PASS"
+  },
+  "science_guards": {
+    "M13_original_source_first": true,
+    "Geeky_ROT034_first_five_parameter_exact_tomography": true,
+    "M15_ROT028_independent_previous_Geeky_ROT033_source_I1": "PASS",
+    "AUD3_ROT002_previous_FACE12_geometry_I1": "PASS",
+    "AUD3_ROT002_previous_full_IV55_source_Fisher": "HOLD without own original full proof replay",
+    "ROT034_new_external_I1": "NOT_VERIFIED",
+    "ROT035_new_external_I1": "PENDING",
+    "KN15_native_BW_INGEST": "NOT_VERIFIED",
+    "M15_CANON_EXEC_SIGN": "NOT_VERIFIED",
+    "ceilings": [
+      "NO_HISTORIC_FULL_DTC0A_RUNTIME_BYTES",
+      "NO_REAL_SIXTH_SENSOR_OR_REPEATED_MEASUREMENTS",
+      "NO_MEASURED_COVARIANCE_NOISE_OR_SPATIAL_GRID",
+      "NO_GLOBAL_ALPHA_INVERSE",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "public_full_report_commit": "cb1017143615b420eadef93e7a42eb332ba1df03"
+}
