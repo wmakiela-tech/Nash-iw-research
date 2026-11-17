@@ -30,7 +30,7 @@ kl=(1-alpha)*log((1-alpha)/beta)+alpha*log(alpha/(1-beta))
 kl=.90*log(19) if alpha==beta==.05 else kl
 lower=K*float(q*(1-q))*kl/(4*float(delta)**2)
 assert lower>0
-# Exact sample covariance: Bern(q)||Bern(q+x) <= x^2/[v(1-v)] <= x^2/[q(1-q)]
+# KL divergence bound grid: Bern(q)||Bern(q+x) <= x^2/[v(1-v)] <= x^2/[q(1-q)]
 for n in range(101):
     x=2*float(delta)*n/100
     v=float(q)+x
