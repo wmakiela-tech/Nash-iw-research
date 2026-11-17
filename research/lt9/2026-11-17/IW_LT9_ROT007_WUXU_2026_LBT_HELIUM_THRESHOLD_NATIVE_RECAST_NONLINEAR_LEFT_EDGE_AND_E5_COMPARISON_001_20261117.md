@@ -85,6 +85,27 @@ This identifies a distinct ***near-edge source-vs-observation sensitivity crosso
 
 **Hard negative knowledge about E5 NEW threshold:** every one of the 102 existing E5-default native samples has Y >=0.24899 (first in each mass), so ALL are above U_2026=0.2484. Their 17-point beta windows were optimized around the OLD 0.251 crossings, and NONE brackets the new target. **Therefore there is no measured E5 2026 root** in existing T2 E5 data. Extrapolating E5 2026 shift as log10(2) or importing the old E5 shift is not an independently supported result. In j22 E5 at beta=10^-17.1 already yields Y_code≈0.249969 > new threshold, and beta=-17.1 is within the author's β range [-20,-17]; low-beta crossing is plausible but not located by a source E5 native bracket. Owner alone controls any further native action.
 
+## D.1. Critical independent same-observable baseline gate: current 2026 full BBN versus Wu–Xu proxy
+
+A **separate new comparison** to the primary 2026 Bianco et al. study *prevents the above source-only recast from being promoted to physical limits*. Bianco et al. §3.5 Eq(3.74) directly reports its **FULL-NETWORK standard-BBN physical** helium prediction \(\mathcal{Y}_{p,\mathrm{SBBN}}=0.2472\pm0.0008\) after estimating theoretical nuclear and interconversion-rate uncertainties (primary source https://arxiv.org/html/2605.26824v1 lines442–452). In contrast, the exact Wu–Xu **CODE PROXY** \(Y_\mathrm{code}=2X/(1-X)\) native low-beta baseline at the same six mass indices is:
+
+| j | Wu–Xu proxy source baseline Y_code at beta=1e-30 | Bianco 2026 full-network SBBN 0.2472 minus code baseline | difference / 0.0026 threshold tightening |
+|---:|---:|---:|---:|
+|22|0.2447491600|0.00245084|0.943|
+|28|0.2447883402|0.00241166|0.928|
+|38|0.2448040830|0.00239592|0.922|
+|51|0.2447834219|0.00241658|0.929|
+|62|0.2447041194|0.00249588|0.960|
+|90|0.2447495026|0.00245050|0.943|
+
+**Inference guard:** This **0.00240..0.00250 cross-pipeline CENTRAL VALUE difference is nearly as large as the 0.0026 observational bound tightening itself**. The codes implement DIFFERENT physical/nuclear pipelines, background assumptions and outputs; the difference is NOT an independently measured Wu–Xu error and must not be applied as an additive offset to PBH Y_code. Both standard baseline values are individually compatible with LBT Yp=0.2458±0.0013 when treated with their appropriate theories and uncertainties; no theory inconsistency proven.
+
+Nevertheless it is a high-value scientific design discriminator: naive use of the *same* observed upper bound leaves a nominal margin only 0.2484−0.2472=0.0012 in the Bianco central full-network baseline, compared with ~0.00365 in the original Wu–Xu numerical proxy. That is a >3-fold change in residual *baseline-relative* allowance before any PBH response is added. **You cannot transfer either root table to a new physical Yp bound without independently calibrating and propagating the model-to-observable relation** and theories at matched cosmological parameters. This supports the SOURCE→STATE→TARGET separation championed by Living Theory and gives the Badacz/Mech owner an explicit priority gate: verify target equivalence with a modern full nuclear network BEFORE astrophysical novelty promotion.
+
+The 2026 paper also estimates hadron interconversion rates uncertainty ±20% and includes nuclear rate errors (§3.5); these values belong to *that paper's* model, not transferable confidence intervals for the unchanged Wu–Xu ODE. Do not use its 0.0008 as a plug-in σ for author native Y_code.
+
+This material cross-source baseline audit was added after the initial source-only root readback, with dated Git history preserved. It strengthens the original NO_PHYSICAL_BOUND decision, without changing the six numeric source-root calculations or requesting additional native runs.
+
 ## E. Scientific interpretation, nulls, next high-value experimental decision
 
 1. This is a **concrete data-driven partial answer** using real existing six mass ×192 native original source outputs and 2026 updated primary helium observations; it does not merely repeat pion split algebra.
