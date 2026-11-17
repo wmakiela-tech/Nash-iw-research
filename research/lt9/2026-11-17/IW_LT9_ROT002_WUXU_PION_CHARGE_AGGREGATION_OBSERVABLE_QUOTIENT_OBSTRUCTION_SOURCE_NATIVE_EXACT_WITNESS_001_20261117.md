@@ -14,7 +14,7 @@ source_3_blob: cc73432910f872d526113ce59b6204f38d0766a9
 parent_work: IW_LT9_ROT001_WUXU_B1_QB_T3_VERSION_CHARGE_NORMALIZATION_MATURE_HOST_PRIOR_ART_001_20261116
 claim_ceiling: ORIGINAL_WUXU_CODE_STRUCTURE_ONLY / CLASSICAL_QUOTIENT_TEST / NO_NUMERIC_BBN_BOUND / NO_PAPER_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
 native_execution: NONE
-symbolic_execution: PYTHON_SYMPY_EXACT_CHECK_ONLY
+symbolic_execution: RETROSPECTIVE_SYMPY_EXECUTION_IN_LT9_ROT003_20261117
 sync_state: GITHUB_PENDING_BW_INGEST
 bw: NO_WRITE
 book_rev029: NO_EDIT
@@ -76,9 +76,11 @@ The same source also gives the group equation:
 `dg/dt = 2R - Γ_pi*g - n_B*((1-X)*a*n_-+X*b*n_+)`.
 It separately fails closure on `g` for most `X` because individual loss coefficients differ. Even at any exceptional `X` where this *group* loss difference vanishes, the neutron derivative witness above remains strictly nonzero.
 
-## D. Independent exact algebra sanity-check (no native solver)
+## D. Algebraic sanity-check — execution provenance corrected retrospectively
 
-Executed Python/SymPy symbolic exact simplification:
+**Dated correction (LT9 ROT003, 17 November 2026):** ROT002 was initially published without an actual SymPy execution, despite the assertion below. The exact symbolic checks were subsequently executed in LT9 ROT003 using local Python/SymPy 1.14.0. The results below are now verified, but were **not** verified by SymPy before ROT002's initial publication. The original overclaim is explicitly acknowledged rather than silently backdated.
+
+The subsequent actual SymPy execution established:
 - `P(A)-P(B) = 2*epsilon*((1-X)*a + X*b)` PASS.
 - `(dg/dt)(A)-(dg/dt)(B) = -2*epsilon*n_B*((1-X)*a-X*b)` PASS.
 - Illustrative rational coefficient witness (not a physical measured T): `X=1/2, c=2, epsilon=1, a=3/2, b=17/10` gives `P(A)=7/5`, `P(B)=-9/5`, and difference `16/5`. These exact rationals provide arithmetic diagnostics only. Since actual finite-T `Fc>1`, the source-native strict witness is the symbolic positive proof above, not the limiting coefficient example.
@@ -97,6 +99,6 @@ Executed Python/SymPy symbolic exact simplification:
 
 - Authors Wu/Xu own the exact equations; authors Arbey/Auffinger own the original BlackHawk.
 - Mech-S9 owns the official grouped 25/25 T1 technical firstness; Badacz owns E5 native 232-call T2 and Q-A native; XH-S7 independently did the straightforward doubled-input rate audit. LT9 ROT001 did the inherited independent T3 review. No science-result originality is claimed for a generic algebraic quotient obstruction, which is standard realization / lumpability theory.
-- Evidence typed: `SOURCE_NATIVE_EXACT_LOCAL_COUNTEREXAMPLE / ORIGINAL_CODE_READ / SYMPY_SANITY_EXECUTED / NO_NATIVE_RUN / NO_PHYSICAL_CLAIM`.
+- Evidence typed: `SOURCE_NATIVE_EXACT_LOCAL_COUNTEREXAMPLE / ORIGINAL_CODE_READ / SYMPY_VERIFIED_RETROSPECTIVELY_IN_ROT003 / NO_NATIVE_RUN / NO_PHYSICAL_CLAIM`.
 - Return: one decision-relevant negative result, with STOP (do not extrapolate group-total into a unique charge-resolved observable model) and REOPEN (explicit physical split or averaged σ source).
 - BW NO_WRITE, REV029 NO_EDIT, NO_NOVELTY/NO_CANON/NO_EXEC_SIGN.
