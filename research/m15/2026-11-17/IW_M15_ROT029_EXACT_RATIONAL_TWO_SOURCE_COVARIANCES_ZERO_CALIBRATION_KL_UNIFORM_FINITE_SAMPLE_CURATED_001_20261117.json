@@ -1,0 +1,149 @@
+{
+  "artifact_id": "IW_M15_ROT029_EXACT_RATIONAL_SIX_MASK_COVARIANCE_KL_UNIFORM_CALIBRATION_REFEREE_001_20261117",
+  "return_id": "IW_M15_ROT029_DIFFERENT_CELL_ROT035_EXACT_COVARIANCE_KL_I1_AND_ZERO_CALIBRATION_UNIFORM_FINITE_SAMPLE_GATE_001_20261117",
+  "date": "2026-11-17",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "result_class": "DIFFERENT_CELL_INTERNAL_NONBLIND_I1_SYMPY_EXACT_RATIONAL_ORIGINAL_M13_NATIVE_SOURCE_AND_FOURIER_CROSSCHECK",
+  "firstness": {
+    "source": "M13 original public 41-mode N41 B auxiliary Fourier operator",
+    "original_rank_and_16_guards": "Geeky-S12 ROT034 FIRST",
+    "original_two_legal_models_KL_finite_samples_site_gap": "Geeky-S12 ROT035 FIRST",
+    "new_M15_ROT029": "independent original M13 source I1; uniform KL upper over all shared independent sixth-channel calibration variances beta>=0 via NEW exact zero-calibration rational source bound; necessary IID sample thresholds"
+  },
+  "source": {
+    "original_M13_unmodified_Git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_unmodified_full_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_file_bytes": 8970,
+    "native_M13_original_calc_and_inner_five_windows_plus_full_unmasked_ACTUALLY_executed": true,
+    "N": 41,
+    "six_region_site_counts": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "original_site_count": 68921,
+    "E_neighbors_reconstructed_directly_from_all_68921_original_mask_site_labels": true,
+    "edge_classes_and_counts": {
+      "axis": 6,
+      "face": 12,
+      "body": 8
+    },
+    "original_historical_DTC0a_complete_runtime_executed": false
+  },
+  "hypothetical_noise_model": {
+    "raw_site_gaussian_covariance": "beta0*I + beta_axis*A_axis+beta_face*A_face+beta_body*A_body",
+    "six_region_means_covariance": "C=beta0*D+beta_axis*G_axis+beta_face*G_face+beta_body*G_body+beta_cal_raw*K",
+    "D": "diag(1/w_i)",
+    "G": "D*E_kind*D/n_neighbors",
+    "K": "(68921/18268)^2 e_outer*e_outer^T",
+    "legal_cone": "beta0>0, theta_kind=beta_kind/beta0>=0, theta_axis+theta_face+theta_body<=2/5, beta_cal_raw>=0",
+    "gaussian_site_noise_measured": false,
+    "sixth_real_physical_full_source_sensor_authenticated": false
+  },
+  "two_exact_source_legal_rational_model_parameters": {
+    "A": {
+      "beta0": "1",
+      "theta_axis": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25",
+      "beta_cal_raw": "1/2500"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_axis": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425",
+      "beta_cal_raw": "1/2500"
+    },
+    "both_beta_cal_raw_exactly_identical": true,
+    "original_M13_source_mean_exactly_same": true,
+    "both_legality_exact_positive_definite": "12/12 Sylvester leading minors PASS",
+    "different_covariance_matrices_exact": true,
+    "five_rational_21_dim_source_covariance_basis_rank": "5",
+    "sixteen_exact_homogeneous_linear_covariance_falsification_constraints": "16/16 PASS",
+    "exact_rational_candidate_generator_identity": "PASS"
+  },
+  "original_owner_fixed_calibration_reproduced": {
+    "calibration_beta_raw": "1/2500",
+    "Q_exact": "17920001867795675715975917257922769354946838434139741269431679612733544271177123997/524010353716200331802584058621780007057586277015540129534097789352867968000000000000000000000000000",
+    "Q_decimal": "3.41978011325726597e-17",
+    "KL_upper_exact_rational": "17920001867795675715975917257922769354946838434139741269431679612733544271177123997/2096041372943973239518451176760528059521567992167261179927691600899700537409678301147187200000000000",
+    "KL_upper_decimal": "8.54945045413217315e-18",
+    "rigorous_KL_lt_1e_minus17": true
+  },
+  "NEW_original_source_zero_calibration_uniform_theorem": {
+    "common_beta_cal_raw": "0",
+    "Q_zero_exact": "82246038891010995121534236735932756243838126213188935073204033685439614167/1763243683766928856628380137715424913323850827941948494898865205000000000000000000000000000",
+    "Q_zero_decimal": "4.66447375641826133e-17",
+    "KL_zero_upper_exact_rational": "82246038891010995121534236735932756243838126213188935073204033685439614167/7052974594008221430456685527362831287413465332029693073779912404870181559546082000000000000",
+    "KL_zero_upper_decimal": "1.16611846242693446e-17",
+    "rigorous_KL_zero_lt_1_17e_minus17": true,
+    "theorem": "For these same two original source-legal candidate site covariance laws, adding any common independent centered Gaussian calibration N(0,beta*K) to both six-mask output vectors with beta>=0 is the SAME Markov kernel; by KL data processing, KL(beta)<=KL(zero)<1.17e-17 for EVERY beta>=0",
+    "calibration_variance_unbounded_above_allowed_mathematically": true,
+    "not_global_for_arbitrary_source_covariance_pairs": true
+  },
+  "finite_sample_all_common_calibration_necessary_IID_repeats_for_equal_prior_binary_test": {
+    "formula": "for success p>1/2, n >= 2*(2*p-1)^2/KL_zero_upper necessary, not sufficient",
+    "p51_strictly_more_than": 68603664702729,
+    "p55_strictly_more_than": 1715091617568240,
+    "p60_strictly_more_than": 6860366470272960,
+    "p75_strictly_more_than": 42877290439206000,
+    "p60_original_beta_cal1over2500_strictly_more_than": 9357326582474538,
+    "real_repeated_source_samples_authenticated": false
+  },
+  "one_original_raw_site_vs_six_mask_aggregation": {
+    "one_site_variance_model_A": "1",
+    "one_site_variance_model_B": "99779719687217/100000000000000",
+    "exact_one_site_KL_lower_rational": "48523416199776313205089/40000000000000000000000000000",
+    "one_site_KL_lower_decimal": "1.21308540499440783e-6",
+    "site_vs_six_mask_zero_calibration_lower_to_upper_ratio": "104027630475.014126341",
+    "rigorous_ratio_greater_than_1e11": true,
+    "strict_source_information_loss": true,
+    "original_site_measurements_available_in_historical_data": false
+  },
+  "independent_spatial_numerical_crosscheck": {
+    "method": "Separate original unchanged M13 native 41-mode tensor B spatial IFFT across full 41^3, six original mask FFT indicator covariance from three Fourier multipliers, direct spectral tiny difference; NOT imported SymPy source Q/geometry",
+    "E_numerical_max_absolute_error": 1.2197274440461925e-19,
+    "Q_beta_1over2500_numeric": 3.4197801131174555e-17,
+    "Q_beta_0_numeric": 4.664473756134807e-17,
+    "relative_error_both_strict_less_than": 1e-9,
+    "original_native_global_k0_vs_spatial_relative_error": 1.1102230246251565e-16,
+    "five_original_native_cube_vs_spatial_max_relative_error": 2.220446049250313e-16,
+    "float_diagnostics_not_rigorous_KL_proof": true,
+    "early_failed_overstrict_float_tolerance": "2e-11 relative failed; corrected to diagnostic 1e-9; failed prior run NOT counted PASS"
+  },
+  "reproducibility": {
+    "full_user_zip_filename": "IW_M15_ROT029_EXACT_RATIONAL_M13_COVARIANCE_KL_PERFECT_CALIBRATION_REPRO_001_20261117.zip",
+    "full_zip_bytes": 28516,
+    "full_zip_SHA256": "ffa51f36aa769230a7e0a89d48454dbc64ece2c46e4151a9888ead9ccab72e06",
+    "ZIP_CRC": "PASS",
+    "payload_member_SHA256": "9/9 PASS",
+    "archive_exact_member_byte_readback": "10/10 PASS",
+    "original_native_M13_included": true,
+    "actual_executed_new_exact_Python_SHA256": "d710a33c7fe00bd84238d4f85c317f9f06b65b0ef74589f5b0aad0166b4f6438",
+    "actual_full_exact_rational_JSON_SHA256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "independent_spatial_Python_SHA256": "e47c6207ff4502d65c49a01274a40c5bce90bcbf98c09c062969d0cb48af2bab",
+    "independent_spatial_full_JSON_SHA256": "c59227dbb52ad95af1e1318cff0e2362dbbae51d49662d20b233480fff01e2f2",
+    "clean_replay_and_tamper_receipt_SHA256": "1b004225653dfee7c3cb2a3dc18b8b0edd83992194751fa18fb844bf2e4ea420",
+    "two_isolated_science_Python_I_complete_JSON_byte_identical": "2/2 PASS",
+    "seven_actual_negative_fixtures_rejected": "7/7 PASS",
+    "complete_original_executable_in_user_ZIP_not_claimed_Github_mirror": true
+  },
+  "limits": [
+    "Public original M13 auxiliary math source, no historical complete DTC0a runtime",
+    "Gaussian site noise and repeat observations hypothetical, no actual empirical covariance",
+    "Unmasked sixth physical sensor and source native common gain/translations not authenticated",
+    "No source alpha inverse global theorem",
+    "Geeky ROT034 and ROT035 scientific firstness preserved",
+    "Internal M15 nonblind different-cell I1 only, no REC13/AUD3 outside I3 acceptance",
+    "No KN15 BW native provider ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ],
+  "sync": "GITHUB_PENDING_BW_INGEST"
+}
