@@ -63,3 +63,30 @@ W żadnym wariancie nie ma twierdzenia o błędzie w artykule przed T3 i recenzj
 - `PARALLEL_SESSIONS_SAME_CELL_DUPLICATE_AUTHORIZED_RUN` (T1): jedna sesja uruchamia jeden przebieg; przed startem odczytać deltę mostu.
 - `PARALLEL_BRIDGE_SURFACES_OPENED_WITHOUT_CHECK`: jeden most, bo zamknąłem swój wątek na rzecz issue #16.
 - `CUSTODY_CLAIM_WITHOUT_RAW_BYTE_RECHECK` (zarzut manifestu, wycofany przez Mech-S9).
+
+## Uzupełnienie r2 (17 XI 2026, ok. 02:00): zwroty komórek-następców
+
+**Zamknięte od r1:**
+- **T3:** LT9 ROT001 (`0c1e2d1`). Wynik: T3_PASS_WITH_GUARDS, T3_NOT_FOUND_BOUNDED, AUTHOR_INTENT_UNRESOLVED.
+  - W sprawdzonym zakresie (JCAP, arXiv v2 i v3, repozytorium autorów: issues = 0, head `d395183`) nie ma jawnej normalizacji grupa → stan ani korekty.
+  - Dojrzałe schematy n↔p dla poszczególnych gatunków są znane (Kohri–Yokoyama, Kawasaki–Kohri–Moroi).
+  - Uzupełnienia: XH-S7 ROT001, PRF14 ROT001. Według PRF14 poprawka w v3 dotyczy słabych stawek n↔p (B.6), nie grupowania, więc punkt 3 INPUT_073 jest rozstrzygnięty.
+- **Recenzja:** AUD3 ROT001 (issue #16, komentarz `6932357720`) daje PASS_WITH_GUARDS_SOURCE_INPUT dla T1, T2 i T3. To niezależne przeliczenie 25 stawek T1 i 232 wierszy T2; NO_PAPER_ERROR_CLAIM, NO_I3.
+- **Arytmetyka T2:** Mech-S9 ROT031 (`3cd83c6`) daje I1 PASS, zgodność korzeni do 1e−14 dex, z zastrzeżeniem, że TOL-STABLE dotyczy różnicy D, a nie korzeni bezwzględnych.
+- **Formalizacje warunkowe:**
+  - INT10 ROT002: przeszkoda w podniesieniu 5 grup do 6 stanów przy dosłownej semantyce stanów;
+  - LT9 ROT002: suma grupy pionów nie wystarcza do opisu obserwabli;
+  - SCOPE12 ROT003/004 i REC13 ROT003: lokalne odwrócenia i granice obserwowalności.
+
+  Żadna z nich nie orzeka o błędzie w artykule.
+
+**Otwarte:**
+1. **T2R (natywna replika GPT):** po zgodzie z 16 XI 21:39 nie wystartowała; jedyne przebiegi Actions to audyty źródłowe ROT031/032. Badacz zgodził się przenieść ten sam zakres 68 wywołań na jedną sesję Mech-S10. **Czeka na potwierdzenie Moderatora** (zgoda wskazywała Mech-S9).
+2. **Zamiar autorów** (czy n_j w 4.7–4.8 to gęstość stanu, czy grupy, i czy ⟨σv⟩ jest uśrednione po grupie): nie da się go rozstrzygnąć obliczeniem. Możliwe drogi to dalsza lektura definicji przekrojów w źródłach cytowanych przez autorów albo pytanie do autorów. To drugie wymaga decyzji Moderatora.
+3. E4 (fizyczna hadronizacja poniżej 1e9 g): HOLD, poza Q-B.
+
+**Doprecyzowania do r1:**
+- Q-A P-A1 („brak nasycenia w domenie”) dotyczy **6 natywnie badanych mas**, nie wszystkich 100 (zastrzeżenie KN15).
+- TOL-STABLE w T2 to stabilność różnicy D, a nie certyfikat numeryczny korzeni (Mech-S9 ROT031).
+
+**Ścieżka etykiety Q-B:** T1 PASS (przyjęte), T2 PASS (dwa niezależne I1 arytmetyki), T3 NOT_FOUND_BOUNDED i AUD3 PASS_WITH_GUARDS dają materialne wsparcie hipotezy jako **wyniku źródłowego warunkowego od semantyki autorów**. Brakuje natywnej repliki T2R i rozstrzygnięcia zamiaru autorów. Etykietę nadaje Moderator przy G2 (27 XI).

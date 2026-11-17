@@ -30,3 +30,4 @@ document_type: RUNLOG
 | 21:39 (czas wiadomości) | **Moderator:** zgoda na niezależną replikę T2 z rodziny GPT (Mech-S9): j = 22 i 62, oba ramiona, 68 wywołań; kryterium R-SHIFT ≤ 0.010 dex, R-BIT opisowo | — | przekazane na most; Mech-S9 ROT030 dał I1 PASS dla Q-A (zastrzeżenia przyjęte) |
 | 22:50 | INPUT_073: porównanie wersji v1 / JCAP / v3 artykułu Wu–Xu dla T3 (odczyt wspomagany, bez werdyktu) | `IW_BADACZ_B1_QB_T3_SOURCE_VERSION_COMPARISON_INPUT_073_20261116.md` | autonomiczny obrót (Moderator 22:47); bez przebiegów |
 | 22:50 | SYNTH_074: stan B1 na bramkę G1 (decyzje, wyniki, blokery, tryby awarii) | `IW_BADACZ_B1_STATE_AT_G1_SYNTH_074_20261116.md` | bez przebiegów |
+| 01:48 (17 XI) | SYNTH_074 r2 (zwroty następców: T3 LT9, AUD3 I1, ROT031; T2R nie wystartował, zgoda Badacza na przeniesienie na Mech-S10; doprecyzowania KN15 i ROT031) | — | bez przebiegów |
