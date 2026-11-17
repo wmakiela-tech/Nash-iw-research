@@ -60,6 +60,13 @@ for j in range(3):
         assert Rstar[i][j]*fourier(ps,j,i)==Rold[i][j]*fourier(po,j,i)==target
 TV=sum(abs(ps[z]-po[z]) for z in ps)/2
 assert TV>0
+# A second, independently KNOWN common gate W=V_star breaks the alias.
+# Source-vs-source Bloch coordinate (input Y, output X): delta T = 1/9.
+second_gate_delta = Rstar[0][1]*(cstar[1,0]-cold[1,0])
+assert second_gate_delta==Q(1,9)
+second_gate_binary_tv=abs(second_gate_delta)/2
+assert second_gate_binary_tv==Q(1,18)
+print('Independently known second gate, (input Y, output X) binary TV:',second_gate_binary_tv)
 print('Exact rational source law positivity:',min(ps.values()),min(po.values()))
 print('All 10 ordinary Fourier coordinates identical: YES')
 print('All 9 interposed qubit Bloch transfer entries equal: diag 0, offdiag 1/30')
