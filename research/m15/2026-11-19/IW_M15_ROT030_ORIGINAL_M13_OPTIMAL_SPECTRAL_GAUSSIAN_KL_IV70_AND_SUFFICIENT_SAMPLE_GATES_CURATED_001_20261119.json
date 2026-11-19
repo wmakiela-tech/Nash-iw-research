@@ -1,0 +1,165 @@
+{
+  "artifact_id": "IW_M15_ROT030_ORIGINAL_M13_GLOBAL_OPTIMAL_SINGLE_LINEAR_SPATIAL_FOURIER_GAUSSIAN_CONTRAST_001_20261119",
+  "return_id": "IW_M15_ROT030_SOURCE_OPTIMAL_SINGLE_SPATIAL_FOURIER_NOISE_CONTRAST_AND_TWO_QUADRATURE_FINITE_SAMPLE_GATE_001_20261119",
+  "date": "2026-11-19",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "status": "NEW_ORIGINAL_M13_NATIVE_SOURCE_IV70_GLOBAL_SINGLE_LINEAR_SPATIAL_GAUSSIAN_KL_OPTIMALITY",
+  "firstness": {
+    "original_native_source": "M13 N41 auxiliary sparse Fourier B",
+    "exact_legal_covariance_models_and_six_region_KL_source_witness": "Geeky-S12 ROT035 FIRST",
+    "rank5_16_constraints": "Geeky-S12 ROT034 FIRST",
+    "zero_calibration_uniform_prior_six_mask_KL": "M15 ROT029 FIRST",
+    "new": "M15 ROT030 original-source globally optimal single real full-site linear Fourier noise contrast and two-quadrature sufficient Gaussian hypothesis-testing snapshots"
+  },
+  "source": {
+    "original_M13_Git_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_native_M13_full_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_M13_source_actually_imported_and_native_calc_tensor_polys_inner_executed": true,
+    "source_M13_N": 41,
+    "site_count": 68921,
+    "B_mode_count": 41,
+    "B_mode_coordinate_integer_ranges": [
+      [
+        -3,
+        3
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "B_energy_unique_Fourier_q_support_count": 221,
+    "frequency": [
+      20,
+      20,
+      20
+    ],
+    "original_source_B_energy_q202020_EXACTLY_ABSENT": true,
+    "original_source_mean_of_cos_and_sin_weighted_energy_EXACT_ZERO_for_all_alpha_and_common_source_translations": true,
+    "historical_full_dtc0a_runtime_byte_executed": false
+  },
+  "hypothetical_noise": {
+    "A": {
+      "beta0": "1",
+      "theta_ax": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_ax": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425"
+    },
+    "site_stationary_covariance": "beta0*(I+theta_ax*Aaxis+theta_face*Aface+theta_body*Abody)",
+    "axis_directions": 6,
+    "face_directions": 12,
+    "body_directions": 8,
+    "strict_positive_definite_both_all_spatial_modes": true,
+    "raw_site_spatial_data_authenticated": false,
+    "original_six_mask_source_means_same_under_both_models": true,
+    "added_independent_full_sixth_noise_calibration_not_used_in_new_raw_site_projections": true
+  },
+  "new_mathematical_theorem": {
+    "one_real_statistic": "sqrt(2/68921)*sum_sites Eraw(x,y,z)*cos(2*pi*20*(x+y+z)/41)",
+    "second_independent_real_statistic": "sqrt(2/68921)*sum_sites Eraw(x,y,z)*sin(2*pi*20*(x+y+z)/41)",
+    "source_original_B_noise_free_mean_zero": true,
+    "both_quadratures_are_centered_independent_Gaussian_with_same_model_eigenvariance": true,
+    "variance_formula": "beta0*[1+theta_ax*(c1+c2+c3)/3+theta_face*(c1*c2+c1*c3+c2*c3)/3+theta_body*c1*c2*c3]",
+    "cstar": "-cos(pi/41)",
+    "source_KL_optimum_frequency_variants": "8 wavevectors each coordinate +20 or -20 modulo41",
+    "exact_extremal_ratio_proof": "ratio vB/vA fractional linear coordinatewise on c_i in [cstar,1], extrema among 8 cube corners (4 permutation classes), strict IV70 KL maximum at all-three-cstar",
+    "global_every_nonzero_real_single_linear_spatial_projection": "Spectral covariance matrices simultaneously diagonal; every ratio VarB(u)/VarA(u) is a convex combination of Fourier ratios with positive VarA weights; scalar Gaussian KL cannot exceed optimal mode",
+    "gaussian_scalar_KL_formula": "(1/r -1+ln r)/2, r=vB/vA",
+    "source_IV70_precision_digits": 70,
+    "one_real_scalar_optimal_KL_interval": [
+      "0.0001038204467881385829919792523818824030081018827160934670445405306230362937526746468902",
+      "0.0001038204467881385829919792523818824030081031663273820770820527634925178620547558391614"
+    ],
+    "two_cos_sin_quadratures_KL_interval": [
+      "0.0002076408935762771659839585047637648060162037654321869340890810612460725875053492937805",
+      "0.0002076408935762771659839585047637648060162063326547641541641055269850357241095116783229"
+    ],
+    "rigorously_certified_previous_SIX_REGION_M15_ROT029_KL_upper_used": "1.16611846242693446e-17; EXACT rational sourced from prior SHA-locked native proof, not recomputed ROT030",
+    "prior_M15_ROT029_original_exact_JSON_SHA256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "two_quadrature_KL_over_six_region_PRIOR_UPPER_rigorous_lower_greater_than": "17806157801852.59",
+    "global_one_linear_optimum_certified_over_68921_site_dimensions": true,
+    "not_a_physical_sensor_claim": true
+  },
+  "finite_snapshot_guarantees": {
+    "model": "TWO FULLY SPECIFIED source Gaussian covariance hypotheses with equal priors, n INDEPENDENT FULL 68921-site RAW energy observations each yielding cos+sin pair",
+    "pair_Hellinger_affinity_interval": [
+      "0.9999484428195441607013431563997327797813104993942538400104450649806377377735299607902",
+      "0.9999484428195441607013431563997327797813105010582957663961653367025666179303053666855"
+    ],
+    "classical_Bhattacharyya": "P_optimal_binary_error<=H^n/2",
+    "sufficient_75pct_success": {
+      "n": 14000,
+      "error_IV70_upper_less_than": "0.242933797"
+    },
+    "sufficient_90pct_success": {
+      "n": 32000,
+      "error_IV70_upper_less_than": "0.096037217"
+    },
+    "sufficient_95pct_success": {
+      "n": 46000,
+      "error_IV70_upper_less_than": "0.046661372"
+    },
+    "sufficient_99pct_success": {
+      "n": 76000,
+      "error_IV70_upper_less_than": "0.009935969"
+    },
+    "these_are_SUFFICIENT_optimal_binary_two_known_model_bounds_not_physical_sample_counts": true,
+    "prior_six_mask_M15_ROT029_NECESSARY_n75_greater_than": "42877290439206001; DIFFERENT OBSERVER, not same data"
+  },
+  "independent_actual_source_spatial_validation": {
+    "actual_unchanged_original_M13_native_calc_recomputed": true,
+    "FFT_full_grid": "41^3 sites 9 original complex 3x3 B Fourier tensor components source inverse FFT",
+    "native_original_k0_vs_spatial_average_relative_error_smaller_than": "2e-13",
+    "source_forbidden_energy_mode_k202020_complex_FFT_magnitude_per_site_numeric": "5.550310371903014e-32",
+    "quadrature_covariance": "direct 6+12+8 raw 41^3 site rolls, NOT original IV70 spectral formula",
+    "independent_float_scalar_KL": 0.0001038204467881873,
+    "all_68921_site_fourier_frequencies_scanned": true,
+    "number_of_degenerate_maximum_modes": 8,
+    "ten_independent_random_real_spatial_projections_lower_KL": "10/10 PASS",
+    "numeric_diagnostic_subordinate_to_source_rigorous_IV70": true
+  },
+  "reproducibility": {
+    "full_local_original_source_and_executable_zip": "IW_M15_ROT030_ORIGINAL_M13_OPTIMAL_FOURIER_LINEAR_CONTRAST_IV70_REPRO_001_20261119.zip",
+    "full_ZIP_bytes": 30590,
+    "full_ZIP_SHA256": "2639bf8964d154024cae054a6ca0384692872949e4516503c58da4ed658797a0",
+    "zip_CRC": "PASS",
+    "SHA256_members": "10/10 PASS",
+    "zip_entry_exact_reread": "11/11 PASS",
+    "original_native_source_and_prior_SHA_locked_exact_kl_proof_in_archive": true,
+    "new_executed_iv70_python_SHA256": "d4d3f7284e6ec5479c4c4580d119b9fc88a7a95217bbffd5850d0eb387e8cd47",
+    "new_full_IV70_machine_JSON_SHA256": "48738b3c1b5cf23163cd9144f96fbd2ae7723c4b5a64d8e5ad2dd57f50b9456f",
+    "independent_original_spatial_python_SHA256": "44ef2c17cd428752549042dc29938a7a0d4f854c996f06afdee7f9a6e7a7d98c",
+    "independent_original_spatial_full_JSON_SHA256": "420f627267d1d725b6f7e91ed0628217f538a596c4c54e1032d68b7d976b1998",
+    "two_independent_full_JSON_cold_replays": "2/2 BYTE IDENTICAL PASS",
+    "four_identity_tamper_fixtures": "4/4 PRE-SCIENCE FAIL-CLOSED PASS",
+    "two_substantive_false_source_spectral_assertions": "2/2 REJECTED PASS",
+    "all_six_adversarial_fixtures": "6/6 REJECTED PASS",
+    "new_executable_full_bytes_in_verified_user_ZIP_not_GitHub_code_mirror": true
+  },
+  "strict_limits": [
+    "ORIGINAL PUBLIC M13 AUXILIARY tensor source only, no historic complete DTC0a runtime",
+    "Existing five-mask/sixth observer does NOT contain new high frequency raw site information",
+    "No real 68921 raw-site measurement or spectral sensor authenticated",
+    "No actual Gaussian noise samples or independent experimental snapshots",
+    "The optimum is among SINGLE REAL LINEAR source raw-site summaries for TWO FIXED legal A/B noise models, not unknown-nuisance global estimator",
+    "No NASH physical mechanism K/J3/TPE/GR/GW",
+    "No external blind I3 or REC13/AUD3 acceptance",
+    "No KN15 native BW ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
