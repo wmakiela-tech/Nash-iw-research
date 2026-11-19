@@ -1,0 +1,163 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT036_ORIGINAL_M13_TWO_SITE_INDEPENDENT_GAUSSIAN_PROBE_AND_40M_TEST_MACHINE_001_20261119",
+  "date": "2026-11-19",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "scope": "Original public M13 B N41 fixed six-region mathematical source; TWO synthetic Gaussian error models from ROT035 with SAME M13 deterministic mean and SAME KNOWN raw sixth calibration variance; one additional HYPOTHETICAL antisymmetric two-point RAW energy readout.",
+  "source_provenance": {
+    "M13_original_unchanged_8970B_public_Git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "B25_original_unchanged_7501B_public_Git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "previous_ROT034_exact_full_original_result_SHA256": "48b331fd062f93d0e69f4acd84ef0664cc08cf605bb0bae8afeb201bc4b1010c",
+    "previous_ROT035_exact_full_original_result_SHA256": "8f4c00e6518285c475ea66e93546aedf6222252e7fefa62bf3312822f0277e56",
+    "native_original_M13_tensor_polys_41_original_five_inner_windows_and_global_inner_k0_actually_executed": true,
+    "native_mpmath_iv_dps": 40,
+    "missing_historic_original_full_dtc0a_runtime": true
+  },
+  "original_mask_exact": {
+    "N": 41,
+    "sites": 68921,
+    "six_region_labels": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "six_region_site_weights": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "probe_site_a": [
+      9,
+      19,
+      20
+    ],
+    "probe_site_b": [
+      19,
+      9,
+      20
+    ],
+    "permutation": "swap coordinate axes 0 and 1",
+    "probe_sites_both_original_region_label": 5,
+    "periodic_short_coordinate_separation": [
+      10,
+      10,
+      0
+    ],
+    "probe_sites_not_direct_neighbors_under_any_axis_face_body_one_step_shift": true,
+    "new_mathematical_observation": "Z=RAW_energy(a)-RAW_energy(b)",
+    "exact_four_covariance_generator_probe_cross_moments_with_each_six_region_means": "ALL 6*4=24 EXACT ZERO",
+    "original_region_neighbor_counts_a_b_exact_equal_for_identity_axis_face_body_all_labels": "PASS",
+    "original_full_6x6_integer_edge_graphs_for_axis6_face12_body8_independently_recomputed": "PASS",
+    "source_signal_at_swapped_sites_symmetry": "NOT_ASSUMED. Original M13 source deterministic signal readouts differ. Only site-noise covariance and original masks are invariant."
+  },
+  "synthetic_noise_models": {
+    "site_noise": "RAW SITE energy density additive Gaussian centered covariance beta0 I+beta_axis A_axis+beta_face A_face+beta_body A_body, all cubic-symmetric periodic normalized shift generators; source mean SAME under two hypotheses",
+    "A": {
+      "beta0": "1",
+      "theta_axis": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25",
+      "beta_cal_raw": "1/2500"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_axis": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425",
+      "beta_cal_raw": "1/2500"
+    },
+    "both_source_noise_cone_legal": true,
+    "extra_sixth_random_raw_calibration_identical_between_A_B_and_independent_of_site_noise": true,
+    "any_real_site_detector_or_IID_noise_replications": "NOT_AUTHENTICATED"
+  },
+  "exact_mathematics": {
+    "six_region_mean_error_covariance_with_Z": "EXACT ZERO in both models, so jointly Gaussian => statistical independence",
+    "variance_Z_A_exact": "2",
+    "variance_Z_B_exact": "2*(99779719687217/100000000000000)",
+    "delta_q_exact": "1-99779719687217/100000000000000",
+    "KL_additivity": "KL(six means plus Z)=KL(six means)+KL(Z) since product independence in EACH model",
+    "single_added_contrast_exact_KL_lower": "(1-q)^2/4",
+    "single_added_contrast_KL_lower_decimal": "1.213085404994407830127225e-6",
+    "six_old_region_single_snapshot_KL_upper": "8.549450454132173148100569165960523888784320246267312565e-18",
+    "new_additional_one_contrast_KL_lower_over_six_old_KL_upper": "greater than 1e11",
+    "q_exact": "99779719687217/100000000000000",
+    "Hellinger_affinity_fourth_power": "rho^4=4q/(1+q)^2=1-z",
+    "z_exact": "(1-q)^2/(1+q)^2",
+    "z_decimal": "0.0000012157620145395766",
+    "strict_rational_z_lower": "1/1000000",
+    "all_source_exact_arithmetic_verified": true
+  },
+  "finite_sample_binary_test": {
+    "total_independent_synthetic_snapshots": 40000000,
+    "one_new_two_site_differential_readout_per_snapshot": true,
+    "unknown_but_stable_M13_deterministic_energy_difference_canceled_by_differencing_consecutive_snapshots": true,
+    "independent_paired_differences": 20000000,
+    "paired_difference_observation_Yi": "Z_(2i)-Z_(2i-1), zero mean under both models",
+    "paired_difference_variance_A": "4",
+    "paired_difference_variance_B": "4q",
+    "explicit_log_likelihood_ratio": "log pA/pB=(m/2)*log(q)+(sum Yi^2/8)*(1/q-1); choose A iff >0",
+    "Bayes_equal_priors_error_strict_upper": "exp(-5)/2",
+    "Bayes_equal_priors_success_strict_lower": 0.9966310265004573,
+    "six_original_mask_only_any_equal_prior_test_Pinsker_success_upper": 0.5000065381382878,
+    "same_total_hypothetical_snapshots_on_both_sides": true,
+    "required_unknown_stable_mean_condition": "Fixed M13 source state across all snapshots and independent Gaussian site errors; temporal correlation or drift invalidates proof as written.",
+    "not_a_real_sampling_proposal": true
+  },
+  "different_observer_implementation": {
+    "actual_original_six_mask_41cubed_FFTs_and_two_site_signed_delta_FFT_executed": true,
+    "spectral_site_Aaxis_Aface_Abody_implemented_directly_not_using_primary_integer_graphs": true,
+    "A_probe_six_cross_covariance_max_abs": 4.231986981951e-20,
+    "B_probe_six_cross_covariance_max_abs": 2.931401255209785e-20,
+    "A_B_probe_variances_match_exact_2beta0_binary64": true,
+    "source_M13_41_mode_nine_tensor_components_3d_inverseFFT_executed": true,
+    "source_original_B_energy_readout_a_minus_b_nonzero_numeric": 1.2673002388394167e-13,
+    "source_original_global_native_inner_vs_full_41cubed_IFFT_relative_error": "below 5e-12",
+    "new_contrast_KL_scalar_high_precision_numeric": "1.216657173011501680703e-6",
+    "same_cell_diagnostic_not_new_independent_external_I1": true
+  },
+  "reproducibility": {
+    "user_zip": "Geeky_S12_ROT036_symmetry_odd_two_site_probe_finite_sample_escape.zip",
+    "zip_bytes": 47570,
+    "zip_sha256": "ea0b80241c89c22a70da654deb3fee178fb6dc36834c84dcc536615a47a2c319",
+    "zip_members": 16,
+    "sha256_manifest_payload_members": 15,
+    "ZIP_CRC": "PASS",
+    "all_exact_member_byte_readback": "16/16 PASS",
+    "all_payload_sha256": "15/15 PASS",
+    "primary_actual_python_SHA256": "833a6daa8d0cc92ee96b25dca6ea83dd6c873aeecaf07aa4296b0740ccc6ce9f",
+    "primary_actual_full_JSON_SHA256": "ef6b0f5bfb8e3fed2472022b537dbba8c1ce54aeefd0c16cdf4ce3a22376553f",
+    "spatial_actual_python_SHA256": "52bbfdff9ffc5a345f6b47de38519f10409ced1dbf8874760c4daa18225e04ea",
+    "spatial_actual_full_JSON_SHA256": "3458a8415f754d4234b7183b0d2b0fd38f8656446000859c844db4963b4935",
+    "clean_replay_and_tamper_receipt_SHA256": "10c584af6601f2d5b125cc04db3d2b0fd38f8656446000859c844db4963b4935",
+    "two_separately_reexecuted_new_Python_I_processes_result_JSON_full_byte_identical": "2/2 PASS",
+    "eight_deliberate_onebyte_source_mutations_failclosed_before_original_M13_import": "8/8 PASS",
+    "complete_executed_python_public_GitHub_byte_exact_mirror": false
+  },
+  "scientific_guards": {
+    "M13": "FIRST original public B N41 source",
+    "ROT034": "FIRST exact original six mask covariance tomography 5 parameter family",
+    "ROT035": "FIRST legal exact rational two synthetic covariance near-indistinguishability",
+    "ROT036": "NEW author-only exact seventh symmetry-odd two-site readout statistical escape; different-cell REC13 AUD3 M15 I1 PENDING",
+    "ROT034_035_external_I1": "NOT_VERIFIED",
+    "M15_ROT028": "DIFFERENT-CELL prior ROT033 original native Fisher I1 PASS, separate different source question",
+    "KN15_native_BW_ingest": "UNVERIFIED",
+    "M15_CANON_or_EXEC_SIGN": "UNVERIFIED",
+    "ceilings": [
+      "no historical full DTC0a runtime",
+      "no authenticated raw two-site sensor",
+      "no actual 40M independent readings",
+      "no empirical site Gaussian error covariance",
+      "no physical experiment or alpha inverse",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "public_science_report_commit": "efe4c9962811518cf068401946e09a4205d1ed91"
+}
