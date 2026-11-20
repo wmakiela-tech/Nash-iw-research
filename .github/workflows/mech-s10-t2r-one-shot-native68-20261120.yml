@@ -1,0 +1,110 @@
+name: Mech-S10 T2R single authorized 68 original Wu-Xu native calls
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-t2r-one-shot-native68-20261120.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mech-s10-t2r-one-native68-20261120
+  cancel-in-progress: false
+
+jobs:
+  original-source-independent-t2r:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s10_t2r_native68_20261120"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Authenticate frozen prereg, runner, E5 patch and owner raw records BEFORE any native call
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          git rev-parse HEAD > "$OUTDIR/NASH_PUBLIC_REPO_COMMIT"
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/AUTHORIZED_NATIVE_RUN_ID"
+          julia --version > "$OUTDIR/JULIA_VERSION"
+          test "$(git hash-object research/mech-s10/2026-11-20/IW_MECH_S10_T2R_68_NATIVE_ONE_SHOT_PREREG_001_20261120.md)" = "3c87cdd95fb498d02f4c2c1169680e54357603aa"
+          test "$(git hash-object research/mech-s10/2026-11-20/code/mech_s10_t2r_original_68_native.jl)" = "8d1afc10ca96dd9fa1714aa1e8fc648abcfab722"
+          test "$(git hash-object research/mech-s10/2026-11-20/code/mech_s10_t2r_independent_ols7_referee.py)" = "a144f840fb2ccfa72fdc48e12637b66d8baff126"
+          test "$(git hash-object research/mech-s6/2026-10-17/apply_wuxu_charge_pair_source_map.py)" = "4d1f2be94510c576e4f48752911f88ede8b50474"
+          test "$(git hash-object research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl)" = "db9b5c8a462933d329136de572d5d3478de8612b"
+          test "$(git hash-object research/badacz/2026-11-16/code/cfg069_orig_default.dat)" = "985dbd074f2a4d8e48d6a47fb94e6a30a7550bc3"
+          test "$(git hash-object research/badacz/2026-11-16/code/cfg069_e5_default.dat)" = "e10df7d3a5c3019010da7e5906fd16a6c823baea"
+          test "$(git hash-object research/badacz/2026-11-16/data/t2_orig_default.csv)" = "84945f4b387a59b4f97aa16017a016941c63e83a"
+          test "$(git hash-object research/badacz/2026-11-16/data/t2_e5_default.csv)" = "7e61b28a85f26f5dfd28a56ec887d9ebbba73e5c"
+          python3 -m py_compile research/mech-s10/2026-11-20/code/mech_s10_t2r_independent_ols7_referee.py
+          echo "FROZEN_PRE_EXECUTION_HASH_GATE_PASS" > "$OUTDIR/FROZEN_HASH_GATE"
+
+      - name: Fetch and authenticate exact original Wu-Xu 10D Julia code
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan-parameters.jl)" = "53faee65beda383348580c28d0424188da69b660"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/tool_script-parameters.jl)" = "0d7198ff3557bdbd5753000bb07a7a7405cc24f5"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/WUXU_PINNED_COMMIT"
+          echo "ORIGINAL_AUTHOR_SOURCE_AUTHENTICATED_PASS" > "$OUTDIR/AUTHOR_SOURCE_GATE"
+
+      - name: Recover previously proven original-source native Julia environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" > "$OUTDIR/ENV_STDOUT" 2> "$OUTDIR/ENV_STDERR"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' > "$OUTDIR/PACKAGE_STATUS" 2>&1
+          echo "FROZEN_NATIVE_ENV_READY" > "$OUTDIR/ENV_STATUS"
+
+      - name: One original arm exactly 34 native magic calls
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" research/mech-s10/2026-11-20/code/mech_s10_t2r_original_68_native.jl "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" orig "$GITHUB_WORKSPACE/$OUTDIR/mech_s10_t2r_orig.csv" > "$OUTDIR/ORIG_NATIVE_STDOUT" 2> "$OUTDIR/ORIG_NATIVE_STDERR"
+          test "$(grep -c '^orig,default,' "$OUTDIR/mech_s10_t2r_orig.csv")" -eq 34
+          echo "ORIG_EXACT_34_NATIVE_CALLS_PASS" > "$OUTDIR/ORIG_STATUS"
+
+      - name: One E5 arm exactly 34 native magic calls
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" research/mech-s10/2026-11-20/code/mech_s10_t2r_original_68_native.jl "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" e5 "$GITHUB_WORKSPACE/$OUTDIR/mech_s10_t2r_e5.csv" > "$OUTDIR/E5_NATIVE_STDOUT" 2> "$OUTDIR/E5_NATIVE_STDERR"
+          test "$(grep -c '^e5,default,' "$OUTDIR/mech_s10_t2r_e5.csv")" -eq 34
+          echo "E5_EXACT_34_NATIVE_CALLS_PASS" > "$OUTDIR/E5_STATUS"
+
+      - name: Independently analyze native outputs with frozen centered 7-point OLS and R-SHIFT
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s10/2026-11-20/code/mech_s10_t2r_independent_ols7_referee.py "$OUTDIR/mech_s10_t2r_orig.csv" "$OUTDIR/mech_s10_t2r_e5.csv" research/badacz/2026-11-16/data/t2_orig_default.csv research/badacz/2026-11-16/data/t2_e5_default.csv "$OUTDIR/mech_s10_t2r_analysis.json" > "$OUTDIR/OLS7_RSHIFT_STDOUT" 2> "$OUTDIR/OLS7_RSHIFT_STDERR"
+          echo "T2R_NATIVE68_INDEPENDENT_RSHIFT_GATE_PASS" > "$OUTDIR/R_SHIFT_RESULT"
+
+      - name: Hash and preserve all logs including partial-run failures
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+
+      - name: Upload independent authentic original Wu-Xu native T2R outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-t2r-native68-one-shot-20261120
+          path: mech_s10_t2r_native68_20261120/
+          if-no-files-found: error
