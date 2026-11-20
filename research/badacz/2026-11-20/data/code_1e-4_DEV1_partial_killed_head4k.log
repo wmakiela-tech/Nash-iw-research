@@ -1,0 +1,56 @@
+
+[546] signal 15: Terminated
+in expression starting at /home/claude/nash-iw-research/research/badacz/2026-11-20/code/code_gain_077_dev1.jl:79
+unknown function (ip: 0x7f0139098e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-9/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1216
+wait at ./task.jl:1228
+#wait#398 at ./condition.jl:141
+wait at ./condition.jl:136 [inlined]
+_trywait at ./asyncevent.jl:185
+profile_printing_listener at ./Base.jl:332
+#start_profile_listener##0 at ./Base.jl:352
+jfptr_YY.start_profile_listenerYY.YY.0_18868.1 at /home/claude/julia066/julia-1.12.3/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-9/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-9/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+^ at ./math.jl:1137
+jfptr_POW._5917 at /home/claude/julia066/depot/compiled/v1.12/LinearSolve/WR6RC_DQHYZ.so (unknown line)
+convert at /tmp/claude-0/-home-claude/09c60af5-4c2c-50c4-a859-538b4733bcb7/scratchpad/julia/depot/packages/NaturalUnits/WnBi2/src/EnergyUnits.jl:43
+unknown function (ip: 0x7f0138328403) at (unknown file)
+convert at /tmp/claude-0/-home-claude/09c60af5-4c2c-50c4-a859-538b4733bcb7/scratchpad/julia/depot/packages/NaturalUnits/WnBi2/src/EnergyUnits.jl:60
+EUval at /tmp/claude-0/-home-claude/09c60af5-4c2c-50c4-a859-538b4733bcb7/scratchpad/julia/depot/packages/NaturalUnits/WnBi2/src/EnergyUnits.jl:123
+unknown function (ip: 0x7f0138328303) at (unknown file)
+call_composed at ./operators.jl:1100 [inlined]
+call_composed at ./operators.jl:1099 [inlined]
+#_#54 at ./operators.jl:1096
+ComposedFunction at ./operators.jl:1096 [inlined]
+Nₛ at /home/claude/fenyutanchan/primordial-black-hole/arXiv-2509.05618/tool_script-N_relativistic_species.jl:44
+call_composed at ./operators.jl:1099 [inlined]
+#_#54 at ./operators.jl:1096 [inlined]
+ComposedFunction at ./operators.jl:1096 [inlined]
+Nₛ at /home/claude/fenyutanchan/primordial-black-hole/arXiv-2509.05618/tool_script-N_relativistic_species.jl:42
+unknown function (ip: 0x7f01383d9b33) at (unknown file)
+call_composed at ./operators.jl:1100
+unknown function (ip: 0x7f01383d9a53) at (unknown file)
+call_composed at ./operators.jl:1099
+unknown function (ip: 0x7f01383d9963) at (unknown file)
+#_#54 at ./operators.jl:1096 [inlined]
+ComposedFunction at ./operators.jl:1096 [inlined]
+#evolution_system!##2 at /home/claude/fenyutanchan/primordial-black-hole/arXiv-2509.05618/_badacz077_prefix_546.jl:78 [inlined]
+derivative at /home/claude/julia066/depot/packages/ForwardDiff/9ocoj/src/derivative.jl:14
+unknown function (ip: 0x7f01383d9833) at (unknown file)
+evolution_system! at /home/claude/fenyutanchan/primordial-black-hole/arXiv-2509.05618/_badacz077_prefix_546.jl:78
+ODEFunction at /home/claude/julia066/depot/packages/SciMLBase/S0d2P/src/scimlfunctions.jl:2662 [inlined]
+perform_step! at /home/claude/julia066/depot/packages/OrdinaryDiffEqRosenbrock/wpJPr/src/rosenbrock_perform_step.jl:87
+perform_step! at /home/claude/julia066/depot/packages/OrdinaryDiffEqCore/rnOL4/src/perform_step/composite_perform_step.jl:165 [inlined]
+perform_step! at /home/claude/julia066/depot/packages/OrdinaryDiffEqCore/rnOL4/src/perform_step/composite_perform_step.jl:162 [inlined]
+solve! at /home/claude/julia066/depot/packages/OrdinaryDiffEqCore/rnOL4/src/solve.jl:889
+unknown function (ip: 0x7f00d7d234c3) at (unknown file)
+#__solve#58 at /home/claude/julia066/depot/packages/OrdinaryDiffEqCore/rnOL4/src/solve.jl:10
+__solve at /home/claude/julia066/depot/packages/OrdinaryDiffEqCore/rnOL4/src/solve.jl:1 [inlined]
+#solve_call#22 at /home/claude/julia066/depot/packages/DiffEqBase/CJTzr/src/solve.jl:172
+solve_call at /home/claude/julia066/depot/packages/DiffEqBase/CJTzr/src/solve.jl:137
+unknown function 

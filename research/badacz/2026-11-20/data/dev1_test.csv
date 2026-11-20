@@ -1,0 +1,2 @@
+# code_gain_077 tol=1e-4 julia=1.12.3 BITS=100 DiffEq=7.17.0 ArbNumerics=1.6.3 j=22 log10beta=-30 nruns=1
+run_id,tol,T_MeV,sign,A,Y,n_kicks,eta_kick,X_before,X_after,seconds

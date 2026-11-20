@@ -1,0 +1,43 @@
+---
+artifact_id: IW_BADACZ_B1_RESPONSE_GAIN_MANIFEST_SHA256_077_20261120
+exposure: PUBLIC
+document_type: REPRODUCTION_MANIFEST
+claim_ceiling: CUSTODY_ONLY / NO_RESULT_CLAIM
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# MANIFEST SHA-256 — PREREG_077 / REVIEW_078
+
+```
+f5f56e9490a48d4adeed7238cbd662fc1ae9ebe1ee3508b7e3053d59360565fe  code/analysis_077.py
+b38e2a0c92f6d613620b2d63fd754dcd6e899e5d46737d8d3610f6bf56bec051  code/net_gain_077.py
+7d9e5f07146b73b25c923d17e310fffd0065fc2cb92cdc8b500dc06ce8d571fa  code/prym_kick_patch_077.py
+8f1ecbfcb6ef2128c4c3eda7abc4fb319bdc6c14c3a2fba2c84c95a0640001c5  code/run_net_077.py
+43b177135b4996c1dbb985dd8b6c780c295721bb18b0cb3d99674656ba08222d  code/smoke_default_077.py
+63ff1866cf630ad6307485843ecd8aacc4594a934721b3364d9e756740fbc9a9  code/code_gain_077.jl
+89ab403b0c5713984e73914ee11b33ff9493c30a25849068245725f253f653f7  code/code_gain_077_dev1.jl
+d75a3b70ffd839a789ebe496dda55a09d26f83d9702667e64cb4f8937ec7e9b7  code/run077.sh
+15b3753bd3431451b98768178dfff4da71823a682c8e60799814cfe33675d682  code/cfg077_code_1e-4.dat
+943e11ab1f2ba3e05899758f8607a229d3c9d9a3e290afe1e720a6f4f36d86a9  code/cfg077_code_default.dat
+6e9e229ee1d52f359d1a28a05c1c97a9ec4b0f2f09a8862c53f702c2d6d27530  data/analysis077.json
+00ad61bc1ae7a324c83b0cf39106119d1d8ed4c17f126a4f82f562241bebfa47  data/code_1e-4.csv
+97c4bb1eac9236ae7d27a5c731430d4549054127a6120520b18c812b99e2f995  data/code_1e-4.log
+4e39f76685ad400c57871237aad796b54a42e7da5489ec2366c162450731f061  data/code_1e-4_DEV1_partial_killed.csv
+59de46ac0dbe200aa026d5a79731089cb716eafb0f48ea8556f917c793f141d8  data/code_1e-4_DEV1_partial_killed_head4k.log
+8899f205746ae8921b5766ece930a46912158f5dd221dfc2fe4a0b040719a54e  data/code_1e-4_FROZEN_DRIVER_FAILED.csv
+b534d7a6b9e18ae7a729cc03348282d79e9f69f79ba124b066a6649b4f381d16  data/code_1e-4_FROZEN_DRIVER_FAILED_head4k.log
+d2c83253e871770c8350a8076f6a15a917c5c83ead11c72044c1e959a92c8574  data/code_default.csv
+ab30b997a06a13a201f2deef8ee73dba212b6641f00593071e90ef2bfe2b2c6d  data/code_default.log
+64fe6a2d01ebf71cc7e79c5e49fb0adeadcb785fd3c64e299b4235c015fd94f5  data/dev1_test.csv
+1b2fd69281db07e9e1e863f640264cf9fd28c6f0243ca7c20c5cfb2cd4192a03  data/dev1_test_head4k.log
+64fe6a2d01ebf71cc7e79c5e49fb0adeadcb785fd3c64e299b4235c015fd94f5  data/dev1b_test.csv
+ba37db62ef858cb2f9ffc6bf8696b5dc47f2df357cfc8e0ba01fbfad0b453f35  data/dev1b_test_head4k.log
+db7d10e18cea1a829beed2cfe386b231dbd1b266ba81de94976feafc8735d24b  data/dev1c_test.csv
+875525e8ef77b29303656a6ef1e0bff46f7a2099a0c5204ffc8ee60a9a96a38e  data/full_failure_logs_sha256.log
+bc03658a4197973fea5259755dc238d2d16d15418f67d7ea688b21b05aec82cf  data/net_raw.jsonl
+a6ebd28e9e77e769edea0dc61b476e8560f9d0ef43fe82056e9520079e77f6aa  data/net_status.log
+ef0e9cb3bbbdeca1afdfa9b0c9b8785256ca65313ce3e3c892289286dc5b114a  data/patch.log
+e8ef615ccd305ca238b66fc87072063c5179b75e5f9af2ad9b97bdc3d173668c  data/timeline.log
+```
+
+Reprodukcja: `bash code/run077.sh` (NET + CODE default), ramię tol=1e-4: `code/code_gain_077_dev1.jl` z `cfg077_code_1e-4.dat` (DEV-1), analiza: `python3 -I code/analysis_077.py <out> ../2026-11-16/data/qa_A.csv data/analysis077.json`. Źródła: PRyMordial @725d8a8 (PRyM_main.py sha256 98f0724f…), Wu–Xu d395183.
