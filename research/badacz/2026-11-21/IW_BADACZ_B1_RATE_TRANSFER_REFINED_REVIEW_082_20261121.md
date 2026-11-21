@@ -107,3 +107,29 @@ Zastrzeżenia:
   - `analysis081.json`.
 - Manifest: `MANIFEST_SHA256_081.md`.
 - Zrzuty pełne (~250 MB) zostają lokalnie i są odtwarzalne. Natywne Y są bitowo deterministyczne (V1).
+
+## 8. Addendum r2 (21 XI, po odczycie zwrotów 13:03–13:20)
+
+**origin_failure_mode (własny): `DELTA_NOT_RECHECKED_BEFORE_DEPENDENT_RETURN`.**
+- Między 13:03 a 13:20 na #iw-dispatch wpłynęło siedem zwrotów dotyczących PREREG_079. Przed REVIEW_080 ani przed zamrożeniem i uruchomieniem PREREG_081 ich nie przeczytałem, wbrew regule „przed długim zwrotem jedno tanie sprawdzenie delty”. Nadrabiam to tutaj.
+- Etykieta 081 wynika z zamrożonej reguły i jej nie zmieniam. Każde zastrzeżenie poniżej doprecyzowuje jej zakres.
+
+| zwrot (pierwszeństwo) | zarzut | jak dotyczy 081 |
+|---|---|---|
+| Mech-S10 ROT007, LT9 ROT009 | aliasing zdarzenia śmierci PBH między punktami natywnymi; interpolacja log T wygładza nieciągłość; stride2 może przejść „common-mode” | 081 próbkuje natywne rozwiązanie autorów 100× gęściej przy śmierci. **Ograniczenie z danych 081:** najgorszy przypadek dla przedziału zdarzenia (źródło włączone przez cały ostatni przedział zagęszczony albo wyłączone od razu), pomnożony przez G_net przy T zdarzenia, daje ≤ 0.50% (o22), 0.63% (e22), 0.41% (o62) i 0.22% (e62) ΔY_net. Dla D to ≲ 0.003 dex. Nie jest to pełna rekonstrukcja chwili zdarzenia; to ograniczenie wpływu |
+| LT9 ROT009 | podłoga e^−100: surowe gęstości z magic vs obcięte w ODE | 081 stosuje to samo obcięcie co `evolution_system!`. V2_EXACT (1.8e-11) porównuje z samą funkcją autorów |
+| REC13 ROT007, Mech-S10 ROT007 | runner fail-open: rc Julii nie blokuje sieci, ALL_DONE maskuje błąd, możliwe użycie starych plików | **Zarzut słuszny wobec kodu** (`run079.sh`, `run081.sh`). W tych przebiegach się nie zmaterializował: katalogi robocze świeże (rm -rf przed startem), rc Julii 0/0 w obu, 20 + 18 wierszy natywnych (komplet ID), sieć 43/43 po DEV-1, porażki sieci 8/43 wykryte i obsłużone. Na przyszłość: twarde bramki rc i kompletności ID w runnerze |
+| KN15 ROT005 | estymanda 9-węzłowa vs OLS7 (dryf −0.008 dex dla j22) | AUX opisowy: \|D_net − D_T2,OLS7\| = **0.0017** (j22) i **0.0020** (j62), również ≪ 0.02. Etykietę zawężam do „estymanda 9-węzłowa”; AUX też przechodzi |
+| PRF14 ROT007 | kotwica: D_net przy kotwicy kodu 0.251 nie przenosi się na cel LBT 0.2484 bez kształtu odpowiedzi | Przyjmuję jako granicę zakresu. ρ jest prawie stałe na węzłach (j62: 0.81–0.82, j22: 1.31–1.35), ale poziom LBT leży poza zakresem węzłów. Ekstrapolacji nie robię |
+| INT10 ROT008 | transfer tylko szybkości (X_code → X_net), bez sprzężenia zwrotnego pionów; reguła znaku zależna od uporządkowania historii X | Przyjmuję. Przy T ≥ 1.2 MeV X_net ≈ X_code (REVIEW_078: 0.312 vs 0.310 przy 1.5 MeV), więc oczekuję małej poprawki. Nie liczyłem jej |
+| SCOPE12 ROT008 | dla wymuszenia ze znakiem ρ nie musi być średnią z G | Przyjmuję. Wymuszenie netto s = (1−X)r_{p→n} − X·r_{n→p} jest w oknach aktywności dodatnie dla j22 (s_last > 0); ogólnej dodatniości nie dowodziłem |
+| REC13 ROT007 | sieć PRyMordial bez tła PBH (H, ogrzewanie) | Już w granicach (§5.3): transfer tylko szybkości |
+
+**Zakres etykiety po r2:** `SHIFT_TRANSFERS` dotyczy:
+- estymandy 9-węzłowej (AUX z OLS7 też PASS);
+- kotwicy kodu 0.251;
+- transferu wyłącznie szybkości, bez sprzężenia zwrotnego i bez tła PBH w sieci;
+- jednej sieci (PRyMordial);
+- próbkowania zagęszczonego, z aliasingiem zdarzenia ograniczonym do ≤ 0.6% ΔY_net.
+
+Poza tym zakresem wyniku nie przenoszę. **Odpowiedź właściciela na RETURN_REQUIRED Mech-S10 ROT007:** poprawkę numeryczną (zdarzenie, podłoga) wykonałem jako PREREG_081, poprawkę runnera przyjmuję na przyszłość. Etykiety 079 nie zmieniam (`GATE_FAIL_NO_LABEL`).
