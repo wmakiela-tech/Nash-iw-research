@@ -1,0 +1,34 @@
+---
+artifact_id: IW_BADACZ_B1_NETWORK_THRESHOLD_MANIFEST_SHA256_083_20261121
+exposure: PUBLIC
+document_type: REPRODUCTION_MANIFEST
+claim_ceiling: CUSTODY_ONLY / NO_RESULT_CLAIM
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# MANIFEST SHA-256 — PREREG_083 / REVIEW_084
+
+```
+0dc7f3eca3dd839ad2267cafb07ee49e45c228a7cd1c9e804f74692acb6be2f6  code/gen_cfg_083.py
+c7847ba01ce345f31df2b9ff35efb0e9014837270deece1e6aaa8f1bd43d8a30  code/cfg083_orig.dat
+9e96bb8b94b7c47bd97d17b1fc3e5d42c696c832429d89fdc3ec252ceb72a646  code/cfg083_e5.dat
+dd27037afb98ee29dcd30724fa90002dea93d6b6b9ad53125e47d4933b6d6b24  code/grid083.json
+29d65a1e31ca2de47dec4f0c2dbf3850e955c4ca344abe04de04186ff561db05  code/run083.sh
+cef93454e94ae75a53f227ffe3ef1a2f5aa36838315182fbfb710c44c4f91421  code/run_net_083.py
+2a5b0b390de107c7e1efb0724ec605c16918c57720474ea2d934e6edf2ea661b  code/analysis_083.py
+fbbce938b7b798a18500d16d9795acfb958dc66e40ed73e7715fb57a03d0e0ee  code/rate_dump_081.jl
+10a24000e3026f437e24b10c272953b80ae559fa9fb30807ef6c3c2266a8b6de  code/dedupe_rates_081.py
+866f90fc75d453751b9d7a1906a3718c44a9337c32f18574a5a1767319fef763  code/net_rate_079.py
+93989e68411ff7d641bd780e6d902fa495eaef892bfe954cef13a9c744b7fac1  code/prym_rate_patch_079.py
+fd3e84ff44126f839fd5b22f56a5f8cdbccf4017f13f8e6a9aa1def157357e56  data/analysis083.json
+ad19aee7607e85dad8f88907b30494c6b8e42133cd759ed29a2e9e0e496ccd88  data/dedup_rate_dumps_083_sha256.log
+f46b617b263b12ec98d1c0b6afe9da2f92b16ae00b6abe8422de2dc097e1c69d  data/dedupe_log_083.csv
+0fb13969be105183824c6ef1781ab79f214890961e0a56afa2114573ef2dc08c  data/full_rate_dumps_083_sha256.log
+67f2c0402a035770589cfdeaa042944c0734e9f568ac67a354648786efa7243f  data/net083_raw.jsonl
+87a934259a3bd5055e54595fa6811b69b02425267b79b01b921312390bf00f5d  data/patch_083.log
+4516d8cfb6e89d33a1c6e9b974aac4363f39aa588622d195041e0a76ff4d7558  data/summary_e5_083.csv
+87691951f5ca5d19dbe85eea459c76b1081b62e6a3f64a08ec71718e96ea639d  data/summary_orig_083.csv
+b5507802b5cae26c691c18129a11922b0f78570a0025089509f361b81891c412  data/timeline_083.log
+```
+
+Reprodukcja: `bash code/run083.sh` (świeży katalog), następnie `python3 -I code/analysis_083.py /home/claude/work083/dump_dedup /home/claude/work083/out ../2026-11-16/data code data/analysis083.json`.
