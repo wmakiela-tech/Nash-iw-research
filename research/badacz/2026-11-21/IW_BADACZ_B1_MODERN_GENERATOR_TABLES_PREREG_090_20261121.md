@@ -132,7 +132,7 @@ GAP-005 (REVIEW_086) zmierzyło Δ = +0.33…+0.37 dex między tablicami BBN Bla
 - Wynik numeryczny w modelach; nie jest granicą na PBH.
 - Przed zamrożeniem przetestowałem budowę tablic na atrapie (wartości BH jako „MC”: P83 = autorzy do 0.04%) i analizę (dmod = dgenBH, drepro = 0).
 
-## 8. r2 (22 XI ok. 00:40): kontrola odporności po przebiegu, zadeklarowana przed jej wykonaniem (odpowiedź na AUD3 ROT006)
+## 8. r2 (22 XI ok. 00:27): kontrola odporności po przebiegu, zadeklarowana przed jej wykonaniem (odpowiedź na AUD3 ROT006)
 
 AUD3 ROT006 (23:43, audyt kodu przed wykonaniem; przeczytany po przebiegu) wskazuje trzy problemy. Przyjmuję je:
 

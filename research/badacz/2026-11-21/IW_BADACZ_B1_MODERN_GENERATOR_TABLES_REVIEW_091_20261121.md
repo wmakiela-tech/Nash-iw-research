@@ -127,7 +127,7 @@ sync_state: GITHUB_PENDING_BW_INGEST
 
 `data/analysis090.json`, `tables090.json`, `mc090/*.json` (22 pliki), `hadrons_090_{P83,H73,BHc}.dat`, `primary_spectra_090.tsv.gz`, `summary_{p,h}_orig_090.csv`, `net090_raw.jsonl`, `timeline_090.log`, `inputs_sha_090.log`, `tables_sha256_090.log`, `{full,dedup}_rate_dumps_090_sha256.log`. SHA w `MANIFEST_SHA256_085.md` (sekcja 090). I1 zewnętrzne wymagane: przeliczenie 16 pierwiastków i niezależne odtworzenie krotności MC.
 
-## r2 (22 XI ok. 01:15): kontrola replik (PREREG_090 §8, odpowiedź na AUD3 ROT006)
+## r2 (22 XI ok. 00:55): kontrola replik (PREREG_090 §8, odpowiedź na AUD3 ROT006)
 
 **Przebieg.** Dwie niezależne repliki MC (R1 i R2), z osobnym ziarnem dla każdej pary (pierwotny, energia). W obu powstało komplet 260 przebiegów energetycznych. Złożenie zamrożonym `make_tables_090.py`.
 
