@@ -126,3 +126,30 @@ sync_state: GITHUB_PENDING_BW_INGEST
 ## 7. Dane
 
 `data/analysis090.json`, `tables090.json`, `mc090/*.json` (22 pliki), `hadrons_090_{P83,H73,BHc}.dat`, `primary_spectra_090.tsv.gz`, `summary_{p,h}_orig_090.csv`, `net090_raw.jsonl`, `timeline_090.log`, `inputs_sha_090.log`, `tables_sha256_090.log`, `{full,dedup}_rate_dumps_090_sha256.log`. SHA w `MANIFEST_SHA256_085.md` (sekcja 090). I1 zewnętrzne wymagane: przeliczenie 16 pierwiastków i niezależne odtworzenie krotności MC.
+
+## r2 (22 XI ok. 01:15): kontrola replik (PREREG_090 §8, odpowiedź na AUD3 ROT006)
+
+**Przebieg.** Dwie niezależne repliki MC (R1 i R2), z osobnym ziarnem dla każdej pary (pierwotny, energia). W obu powstało komplet 260 przebiegów energetycznych. Złożenie zamrożonym `make_tables_090.py`.
+
+**Rozrzut** (wiersze 0–28, 5 gatunków):
+
+| porównanie | R1 | R2 |
+|---|---|---|
+| max \|log₁₀(Y_rep/Y_orig)\|, P83 | 0.0041 | 0.0047 |
+| max \|log₁₀(Y_rep/Y_orig)\|, H73 | 0.0088 | 0.0050 |
+| przesunięcie log₁₀(H73/P83) | 0.0112 | 0.0058 |
+
+- S = 0.0112 dex przekracza zadeklarowane 0.01. Werdykt `SPREAD_REPORTED_AS_MC_UNCERTAINTY`; ponowny przebieg natywny niepotrzebny, bo S ≤ 0.02.
+- Przeniesienie na próg: elastyczność ≤ 2 (j22), ~1 (j62), więc ≤ ±0.022 dex na dmod.
+- Etykieta `MOD_INTERMEDIATE` jest odporna: przedział dmod ± 0.022 to 0.11…0.24, wewnątrz (0.10, 0.27).
+- Zgodnie z F1 diagonalne G_STAT (≤ 0.68%) zaniżało niepewność. Zmierzony rozrzut log-ilorazu H73/P83 sięga 0.011 dex (≈ 2.6%).
+
+**Zachowanie energii zdarzeniowo (F2 potwierdzone częściowo).**
+
+- Wszystkie przebiegi PYTHIA i Herwig mieszczą się w 1e-3 na zdarzenie, z jednym wyjątkiem: Herwig W± przy E ≥ 25.6 TeV.
+- Tam pojedyncze zdarzenia gubią do 7–33% energii w stanie końcowym (status 1). W R1 średnia przy 100 TeV wynosi 0.99896, co oblewa bramkę G_MC dla R1. R2 przechodzi.
+- Udział W w wydajnościach Herwig to ~1.5% (REVIEW_091 §4), a krotność rozpadów W nie zależy od energii. Wpływ na tablice jest pomijalny, ale to realna wada przepisu W→VV w Herwig przy multi-TeV. Bramka średniej jej nie widziała.
+
+**F3 przyjęte.** ALL_DONE oznacza koniec potoku, nie PASS etykiet. Etykiety pochodzą z osobnego, bitowo powtórzonego przebiegu analizy (SHA 79d95f84…).
+
+**Dane:** `data/mc090r{1,2}/`, `hadrons_090r{1,2}_{P83,H73}.dat`, `tables090r{1,2}.json`, `replicates090_compare.json`.
