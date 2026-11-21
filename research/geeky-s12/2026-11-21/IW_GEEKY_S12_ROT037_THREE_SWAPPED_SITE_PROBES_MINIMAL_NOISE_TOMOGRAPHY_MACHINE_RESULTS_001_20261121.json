@@ -1,0 +1,304 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT037_THREE_SWAPPED_SITE_PROBES_MINIMAL_NOISE_TOMOGRAPHY_MACHINE_RESULTS_001_20261121",
+  "date": "2026-11-21",
+  "owner": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "original_source": {
+    "original_M13_Python_Git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_B25_Git_blob_SHA1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "original_M13_tensor_polys_41_original_five_fixed_inner_and_global_k0_actually_executed": true,
+    "original_source_iv_decimal_digits": 40,
+    "actual_source_alpha": "1/20",
+    "prior_ROT034_full_source_JSON_SHA256": "48b331fd062f93d0e69f4acd84ef0664cc08cf605bb0bae8afeb201bc4b1010c",
+    "prior_ROT035_full_source_JSON_SHA256": "8f4c00e6518285c475ea66e93546aedf6222252e7fefa62bf3312822f0277e56",
+    "prior_ROT036_full_source_JSON_SHA256": "ef6b0f5bfb8e3fed2472022b537dbba8c1ce54aeefd0c16cdf4ce3a22376553f"
+  },
+  "source_mask_geometric_setup": {
+    "N": 41,
+    "N_cubed": 68921,
+    "six_original_region_order": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "six_original_region_site_counts": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "swap_operation": "P(x,y,z)=(y,x,z)",
+    "probes": [
+      {
+        "probe": "Z0",
+        "positive_site": [
+          9,
+          19,
+          20
+        ],
+        "negative_swapped_site": [
+          19,
+          9,
+          20
+        ]
+      },
+      {
+        "probe": "Z1",
+        "positive_site": [
+          10,
+          19,
+          20
+        ],
+        "negative_swapped_site": [
+          19,
+          10,
+          20
+        ]
+      },
+      {
+        "probe": "Z2",
+        "positive_site": [
+          9,
+          20,
+          21
+        ],
+        "negative_swapped_site": [
+          20,
+          9,
+          21
+        ]
+      }
+    ],
+    "all_six_sites_original_innermost_region_label_5": true,
+    "positive_endpoint_pairs_neighborhood": {
+      "Z0_Z1": "AXIAL 1-step",
+      "Z0_Z2": "FACE 2-coordinate 1-step",
+      "Z1_Z2": "BODY 3-coordinate 1-step"
+    },
+    "all_nine_cross_branch_site_pairs_neither_equal_nor_direct_nearest_any_class": true,
+    "each_probe_anti_invariant_under_P": true,
+    "all_original_six_region_indicators_P_invariant": true,
+    "site_covariance_all_four_generators_commute_P": true,
+    "all_three_probes_against_six_old_regions_four_generator_exact_zero_cross_covariances": "72/72 source exact PASS",
+    "all_three_probe_vector_independent_old_six_region_means": "EXACT for joint centered Gaussian raw-site error model; source deterministic signal not necessarily symmetric"
+  },
+  "model_and_exact_covariance": {
+    "source_status": "HYPOTHETICAL additional 6 physical point readings and stationary Gaussian raw site energy errors NOT historically authenticated",
+    "site_noise": "Centered Gaussian RAW energy-density covariance beta0*I+beta_axis*A_axis6+beta_face*A_face12+beta_body*A_body8, all original N41 torus normalized one-step neighbor shifts",
+    "legal_cone": "beta0>0, beta_axis,beta_face,beta_body>=0, sum(beta_kind/beta0)<=0.4",
+    "extra_independent_global_raw_calibration": "beta_cal*K for OLD outer/global reading only, absent from new 3 probes; known raw beta_cal source comparison 1/2500",
+    "new_three_covariance_exact": [
+      [
+        "2*beta0",
+        "beta_axis/3",
+        "beta_face/6"
+      ],
+      [
+        "beta_axis/3",
+        "2*beta0",
+        "beta_body/4"
+      ],
+      [
+        "beta_face/6",
+        "beta_body/4",
+        "2*beta0"
+      ]
+    ],
+    "full_old_six_plus_new_three_9by9_error_covariance": "EXACT block diagonal under Gaussian site noise; old6 and new3 statistically independent",
+    "exact_recovery": {
+      "beta0": "C00/2",
+      "beta_axis": "3*C01",
+      "beta_face": "6*C02",
+      "beta_body": "4*C12"
+    },
+    "six_upper_triangle_entries_by_four_beta_source_design": [
+      [
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/3",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/6",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/4"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "source_exact_design_rank": 4,
+    "selected_4by4_raw_coordinate_condition_number_exact": "12",
+    "new_only_minimality": "2 scalar probe Gaussian covariance 2x2 has 3 independent entries <4 continuous site covariance coefficients, 3 probes attain rank4; not globally minimal when original six ideal covariances included",
+    "cannot_recover_beta_cal_from_three_probes_alone": true
+  },
+  "original_ROT035_exact_rational_source_model_A": {
+    "beta0": "1",
+    "beta_axis": "3/25",
+    "beta_face": "1/10",
+    "beta_body": "2/25",
+    "beta_cal_raw": "1/2500",
+    "Sigma_Z_exact": [
+      [
+        "2",
+        "1/25",
+        "1/60"
+      ],
+      [
+        "1/25",
+        "2",
+        "1/50"
+      ],
+      [
+        "1/60",
+        "1/50",
+        "2"
+      ]
+    ],
+    "all_four_beta_recovered_exact": true
+  },
+  "original_ROT035_exact_rational_source_model_B": {
+    "beta0": "99779719687217/100000000000000",
+    "beta_axis": "158434737089113/1250000000000000",
+    "beta_face": "93110637627687/9977971968721700",
+    "beta_body": "205860943554709/2494492992180425",
+    "beta_cal_raw": "1/2500",
+    "actual_exact_B_coefficients_in_full_original_source_JSON": true,
+    "all_four_beta_recovered_exact": true
+  },
+  "negative_controls": {
+    "same_beta0_A_vs_Aprime_theta_A": [
+      0.12,
+      0.1,
+      0.08
+    ],
+    "same_beta0_A_vs_Aprime_theta_Aprime": [
+      0.13,
+      0.09,
+      0.08
+    ],
+    "both_original_source_site_noise_cones_legal": true,
+    "single_ROT036_probe_Z0_marginal_identical_under_A_Aprime": true,
+    "new_three_probe_covariance_different_axis_and_face_crosscov": true
+  },
+  "Wishart_information_exact_rational_and_numeric": {
+    "parameters": [
+      "log(beta0) nuisance",
+      "theta_axis",
+      "theta_face",
+      "theta_body"
+    ],
+    "raw_beta_cal_fixed": "1/2500",
+    "source_exact_new_three_full_Fisher_rank": 4,
+    "source_exact_new_three_profiled_three_theta_rank": 3,
+    "source_exact_old_six_profiled_three_theta_rank": 3,
+    "new_three_profiled_eigenvalues_numeric": [
+      "0.00694310654171957046853602041558",
+      "0.0156385772543673376777997763236",
+      "0.0278113949108228125637367311919"
+    ],
+    "new_three_profiled_condition_number_numeric": "4.00561258043649139539514770557",
+    "old_six_profiled_weak_theta_eigen_numeric": "1.7098900565479103812899400137256359e-13",
+    "weak_eigen_ratio_new_three_over_old_six_numeric": "40605572943.89428844726529749012228148348",
+    "joint_old_six_plus_new_three_profiled_theta_weak_eigen_numeric": "0.011861479102294667831774647914355679",
+    "exact_rational_Fisher_matrices_and_positive_determinant_verified": true,
+    "decimal_eigenspectra_not_outward_interval_certificates": true,
+    "not_actual_empirical_measurement_comparison": true
+  },
+  "hypothetical_finite_sample_source_mean_unknown": {
+    "assumed_independent_snapshot_count": 40000000,
+    "assumed_same_M13_signal_state_fixed_over_snapshots": true,
+    "three_source_site_probe_observations_per_snapshot": 3,
+    "actual_point_measurements_needed_per_snapshot": 6,
+    "adjacent_time_pair_centered_independent_three_vectors": 20000000,
+    "centered_Y": "Y_i=(Z_2i-Z_(2i-1))/sqrt(2), Gaussian with covariance Sigma_Z",
+    "nine_chi_square_variance_projection_guards": true,
+    "union_bound": "prob>=0.95, t=log(360), r=2 sqrt(t/m)+2t/m",
+    "r_numeric": "0.001085586677816184759702038130591871809504",
+    "four_simultaneous_normalized_absolute_beta_error_bounds": {
+      "beta0_over_beta0_true": "0.0010855866778161847597020381305918718",
+      "beta_axis_over_beta0_true": "0.0065135200668971085582122287835512309",
+      "beta_face_over_beta0_true": "0.013027040133794217116424457567102462",
+      "beta_body_over_beta0_true": "0.0086846934225294780776163050447349745"
+    },
+    "independent_time_noise_and_stable_source_mean_are_hypothetical_not_recorded": true
+  },
+  "independent_full_41cubed_Fourier_9by9_crosscheck": {
+    "actual_original_source_41_complex_3x3_B_mode_tensor_spatial_IFFT_executed": true,
+    "source_original_native_k0_vs_spatial_full_energy_relative_error": "1.111405684871136e-16",
+    "actual_direct_six_source_mask_indicator_FFTs_plus_three_signed_site_delta_FFTs": true,
+    "correct_full_nine_by_nine_Gaussian_covariance_reconstructed_for_both_original_ROT035_A_B": true,
+    "all_6x3_old_new_cross_block_numerically_zero": true,
+    "both_three_probe_covariance_matches_exact_rational_within_binary64": true,
+    "both_four_beta_recovered_independently_from_full_FFT": true,
+    "independent_observation_algorithm_same_cell_not_external_I1": true
+  },
+  "local_provenance": {
+    "user_zip_filename": "Geeky_S12_ROT037_minimal_three_symmetry_odd_noise_covariance_tomography.zip",
+    "user_zip_bytes": 42393,
+    "user_zip_SHA256": "56ff15232edd00129eeeda579e9ad8f55fce7fcbd451f44993a2e895a9ffa936",
+    "archive_members": 13,
+    "manifest_payload_SHA256_entries": 12,
+    "ZIP_CRC_PASS": true,
+    "all_13_member_bytes_PASS": true,
+    "all_12_payload_SHA256_PASS": true,
+    "new_original_source_primary_Python_SHA256": "6997a239cd6aeadc8231346d8930cf77e2e26a494518a99242450f20be16748c",
+    "new_original_source_primary_complete_JSON_SHA256": "5a24ace3355edbd40beb4f55194b4d5c0359e7f760c42bc39664274e95d95329",
+    "new_independent_spatial_full_Fourier_Python_SHA256": "63969e7d85bb633987fa5e46369ee0dc29fd39caafa90e250ed7b8810712051c",
+    "new_independent_spatial_complete_JSON_SHA256": "3df2894cfa7ee48337a388248f3233d0c8df02c879398def66e407ebedd6eb49",
+    "new_actual_clean_replay_and_tamper_controller_SHA256": "509d392f1ede63c27041caaa998aad4856875789777e61e27e0e6316d6f995a3",
+    "full_replay_and_tamper_receipt_SHA256": "2b52977e7cba38e0782a842fd9d8fdc9f9ceda7be11c10cdb5ed733863aea2d9",
+    "two_separate_clean_Python_I_complete_JSON_byte_replays": "2/2 PASS",
+    "eight_disposable_onebyte_source_attack_rejections_before_scientific_import": "8/8 PASS",
+    "actual_ZIP_extraction_fresh_three_Python_I_programs_complete_JSON_byte_replays": "3/3 PASS",
+    "full_actual_executable_python_byte_identity_GitHub_mirror": false
+  },
+  "review_status": {
+    "M13_original_source": "FIRST",
+    "Geeky_ROT034_source_covariance_rank5": "FIRST",
+    "Geeky_ROT035_two_exact_rational_source_covariance_KL": "FIRST; M15 ROT029 independent source-native I1 PASS",
+    "Geeky_ROT036_single_symmetry_odd_source_probe": "FIRST; separate I1 not verified",
+    "M15_ROT030_optimal_single_real_full_site_Fourier_gaussian_kl": "M15 FIRST; NOT ROT037",
+    "Geeky_ROT037_three_probe_mechanism_tomography": "NEW AUTHOR SAME-CELL; DIFFERENT-CELL I1 PENDING",
+    "KN15_BW_native_ingest": "UNVERIFIED",
+    "M15_CANON_EXEC_SIGN": "UNVERIFIED",
+    "strict_claim_ceilings": [
+      "NO_HISTORIC_FULL_DTC0A_RUNTIME_IDENTITY",
+      "NO_REAL_SITE_READOUT_HARDWARE",
+      "NO_40M_ACTUAL_IID_SNAPSHOTS",
+      "NO_MEASURED_GAUSSIAN_NOISE_COVARIANCE",
+      "NO_GLOBAL_ALPHA_INVERSE_OR_K_J3_GW_GR_PHYSICS",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "public_science_report_commit": "f8ccf30c120188baba0268e69d98749624882ba4"
+}
