@@ -1,0 +1,48 @@
+---
+artifact_id: IW_BADACZ_B1_GAP005_MANIFEST_SHA256_085_20261121
+exposure: PUBLIC
+document_type: REPRODUCTION_MANIFEST
+claim_ceiling: CUSTODY_ONLY / NO_RESULT_CLAIM
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# MANIFEST SHA-256 — PREREG_085 (zamrożenie; wyniki dopisze REVIEW_086)
+
+Kod i konfiguracje (ścieżki względem research/badacz/2026-11-21/):
+
+```
+1e6b9ecda1a0a8730eb89a4022ce67ef0dd4ca3db171c247b39259e320ee1172  code/gen_hadron_table_085.jl
+ca0c9beed2ad43168df50beaff670c2833329ea3af7896f7a6bc9c8f22f4fe34  code/combine_tables_085.py
+6d523f047a795e08ead8c3e2591b758ebd797cf41cc7925ce4c4ed7984a41ae0  code/table_scale_085.py
+f937d5d5c870a34bf26803846cf37e157d48d1a5026cd3ceeb258ec5a6e7d98b  code/gen_cfg_085.py
+a5f3cd4e0c1a8f003b000e45260186cc77b7b79e72436973b81afc305b3a75e3  code/cfg085_her_orig.dat
+87b32fb660e494b1134874a734f01fb890e9e12e2172fbfd9782c83fc70397d3  code/cfg085_her_e5.dat
+b858c20cea51bc9fd1db8d62152d28b69ed53c2570eaf29af1ba3b6e93429f23  code/cfg085_inj_orig.dat
+a8a3931a3d9d921d8a5b51d11f468025b97654865d3d2090072706327c707651  code/cfg085_inj_e5.dat
+02b380a7eca89176a9a48a6889e596d6ada0cb8263940b9a439a925bbb5b1a21  code/cfg085_x2_orig.dat
+47ddda8cbcee17c249691469bb081fab708c32c331690a365188770243f9487b  code/grid085.json
+8b04714b8bef3b78ff6003d0468e617ed636b62c5ef6953c79de1991e6e449dc  code/check_inj_085.py
+61e5a4c283b0430f447f81181d6b58d21cefc88ed7df293e54459e21ee96d6cd  code/run_net_085.py
+bac3349c6fc68ea822475979f639d6f8eec9d216941f193d2b48d0a681225c2e  code/analysis_085.py
+e9703ec78d2708888896b14a208862c0e4de810d959c19b50c1a4ad07fd565bb  code/run085.sh
+fbbce938b7b798a18500d16d9795acfb958dc66e40ed73e7715fb57a03d0e0ee  code/rate_dump_081.jl
+10a24000e3026f437e24b10c272953b80ae559fa9fb30807ef6c3c2266a8b6de  code/dedupe_rates_081.py
+866f90fc75d453751b9d7a1906a3718c44a9337c32f18574a5a1767319fef763  code/net_rate_079.py
+93989e68411ff7d641bd780e6d902fa495eaef892bfe954cef13a9c744b7fac1  code/prym_rate_patch_079.py
+629ad085ea59d84908dde54de2a9554f68847ce922bd857337bed2ebae3fd942  data/hadrons_from_PBH_G0_regen_085.dat
+```
+
+Wejścia zewnętrzne i lokalne (nie w repozytorium; do odtworzenia):
+
+```
+dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  external: blackhawk_v2.3.tar.bz2
+01b87dd2c2ef7e8ac9854e1ec900c8e75906eb331c7ec7c9e81bd82e5d68920b  local build: BlackHawk_v2.3/BlackHawk_inst.x
+25411c26cb24b08058be6dffe01e3c6cc668c91de963438a91c4aac0a38199df  wu-xu d395183: data/out/hadrons_from_PBH.dat
+46d8d64613c1e31376a4578193768ee772024701acc090ebfc871a4572d82214  wu-xu d395183: external_code/BlackHawk_v2.3-hack/BlackHawk_inst.c
+9276c41bee2a0178b7a61bf9d0a6b4152db5ee69dbdf78bb81fca9f947f2ebf5  wu-xu d395183: valid_hadrons_from_BlackHawk.ipynb
+2a0050195bd6cc2c3e55dfdf5b8b427dde6f8bb9ed25b833c4ba31c9245bfd26  wu-xu d395183: tool_script-BlackHawk_extension.jl
+```
+
+- BlackHawk v2.3: https://blackhawk.hepforge.org/downloader?f=blackhawk_v2.3.tar.bz2 (SHA256 = wpis w Artifacts.toml autorów Wu–Xu).
+- Budowa: rozpakowanie, nałożenie `external_code/BlackHawk_v2.3-hack` autorów (BlackHawk_inst.c, BlackHawk_tot.c, src/include.h), `make BlackHawk_inst.c` (gcc 13.3.0, -O3 z Makefile BlackHawk).
+- Julia 1.12.3, środowisko wuxu_env offline (jak 077–083); PRyMordial @725d8a8 z łatkami 077/079 (jak 083).

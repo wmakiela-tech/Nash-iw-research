@@ -1,0 +1,5 @@
+IW085_TABLE_DONE G0 rows=100 hchoice=0 E=[5.0,100000.0]x100
+
+real	4m9.891s
+user	3m55.200s
+sys	0m12.609s
