@@ -1,0 +1,200 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT040_M13_UNIFORM_CALIBRATION_EXACT_Q_ENDPOINTS_RANK_LOSS_AND_FFT_CURATED_001_20261121",
+  "date": "2026-11-21",
+  "origin": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "source": {
+    "M13_original_8970B_python_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_7501B_B25_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "unmodified_M13_tensor_polys41_B_original_five_fixed_inner_and_full_k0_actually_run": true,
+    "mpmath_iv_dps": 40,
+    "actual_alpha": "1/20",
+    "site_count": 68921,
+    "six_original_region_counts": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ]
+  },
+  "hypothesis": "Two FIXED original ROT038 legal anisotropic additive Gaussian RAW SITE ENERGY noise covariance shapes A/B with the SAME original M13 deterministic energy means and the SAME independent RAW full-sixth measurement calibration variance c>=0. Additional site pair sensors and repeated noise snapshots are HYPOTHETICAL.",
+  "source_site_noise_parameters": {
+    "names": [
+      "beta0",
+      "beta_x",
+      "beta_y",
+      "beta_z",
+      "beta_xy",
+      "beta_xz",
+      "beta_yz",
+      "beta_body"
+    ],
+    "A": [
+      "1",
+      "1/25",
+      "1/25",
+      "1/25",
+      "1/30",
+      "1/30",
+      "1/30",
+      "2/25"
+    ],
+    "B": [
+      "1",
+      "1/20",
+      "3/100",
+      "1/25",
+      "1/30",
+      "13/300",
+      "7/300",
+      "2/25"
+    ],
+    "common_sixth_raw_full_energy_calibration": "c>=0 under both hypotheses; historical ROT039 baseline c=1/2500",
+    "positive_site_covariance_eigenvalue_lower": "7/10"
+  },
+  "exact_custody": {
+    "frozen_previous_original_source_results_SHA256": {
+      "ROT034": "48b331fd062f93d0e69f4acd84ef0664cc08cf605bb0bae8afeb201bc4b1010c",
+      "ROT035": "8f4c00e6518285c475ea66e93546aedf6222252e7fefa62bf3312822f0277e56",
+      "ROT036": "ef6b0f5bfb8e3fed2472022b537dbba8c1ce54aeefd0c16cdf4ce3a22376553f",
+      "ROT037": "5a24ace3355edbd40beb4f55194b4d5c0359e7f760c42bc39664274e95d95329",
+      "ROT038": "c58420e4b885d92d38caf03b560088f659f02911274e40903871c7f8593d3373",
+      "ROT039": "8b632aad6d2487f3b750b839a865684178b9df8234566f339920203d85d9ebe2"
+    },
+    "original_source_firstness": "M13 ORIGINAL FIRST",
+    "ROT039_previous_source_pair_firstness": "Geeky ROT039 FIRST calibration-fixed restricted 21846-pair Pareto",
+    "M15_ROT030_ROT033_firstness": "M15 FIRST full-lattice Fourier and spectral-color calibration, different theorem"
+  },
+  "source_exact_opt_domain": {
+    "pairs": "x<y swapped original site coordinates (x,y,z),(y,x,z) both outside original innermost fixed region label5",
+    "pairs_count": 21846,
+    "distinct_integer_source_pattern_classes": 78,
+    "two_reflection_equivalent_maximal_classes_each_task": true,
+    "all78_comparisons": "EXACT_SYMPY_RATIONAL_SOURCE_PASS",
+    "global_any_linear_or_all_pair_optimum_claim": false
+  },
+  "exact_source_Sherman_Morrison": {
+    "source_six_covariance_without_sixth_calibration": "S0",
+    "outer_unit_vector": "e=(1,0,0,0,0,0)",
+    "K_exact": "4750104241/333719824",
+    "b_exact": "91108692757569119273455031016212800/6259647991109277946391018045107",
+    "all_c_nonnegative_identity": "q(c)=q_inf+(q0-q_inf)/(1+c*K*b), b=e.T*S0^-1*e>0",
+    "Gaussian_KL_for_full_old9_plus_pair": "KL(B||A)=-log(1-q(c))/2",
+    "same_convex_interpolation_weight_for_every_pair": "1/(1+c*K*b)",
+    "uniform_two_endpoint_exact_rational_dominance_for_all_78_classes": true
+  },
+  "two_uniform_source_optima": {
+    "fixed_two_model_KL_unconstrained": {
+      "probe_positive": [
+        4,
+        5,
+        6
+      ],
+      "probe_negative": [
+        5,
+        4,
+        6
+      ],
+      "q_zero_exact": "21966267171384456723861796/110192028245858591068125909373925",
+      "q_inf_exact": "8095418276554362601436/40610167790596720714818655375",
+      "q_original_cal_1over2500_exact": "4864764760265660663553064591322/24403792105816105715558350784778638875",
+      "q_zero_numeric": 1.993453385064634e-7,
+      "q_inf_numeric": 1.9934461532633352e-7,
+      "original_ten_output_nine_covariance_parameter_rank": 8,
+      "calibration_free_old_five_plus_previous_three_plus_new_covariance_parameter_rank": 7
+    },
+    "fullrank_nine_covariance_constrained": {
+      "probe_positive": [
+        4,
+        5,
+        5
+      ],
+      "probe_negative": [
+        5,
+        4,
+        5
+      ],
+      "q_zero_exact": "133846010794483689355965233/881536225966868728545007274991400",
+      "q_inf_exact": "98654760927825937193789/649762684649547531437098486000",
+      "q_original_cal_1over2500_exact": "474275392234174015049306298853399/3123685389544461531591468900451665776000",
+      "q_zero_numeric": 1.5183268350393814e-7,
+      "q_inf_numeric": 1.5183198921470204e-7,
+      "original_ten_output_nine_covariance_parameter_rank": 9,
+      "calibration_free_old_five_plus_previous_three_plus_new_covariance_parameter_rank": 8
+    }
+  },
+  "rigorous_uniform_q_loss": "for BOTH winners and ALL c>=0, 0<=(q_zero-q(c))/q_zero<1/200000 = 5 ppm",
+  "five_original_shell_only_negative_and_positive": {
+    "exact_q_inf_identity_all78": "q_inf=(h_shells.T*inverse(S0_shells5)*h_shells)/v, from exact five original shell covariance only, all78/78 PASS",
+    "sixth_only_calibration_distribution_completely_irrelevant_when_sixth_not_observed": true,
+    "site_noise_must_remain_declared_Gaussian_A_B": true,
+    "beta_calibration_parameter_missing_from_reduced_observation_covariance": true,
+    "cannot_claim_full_nine_parameter_tomography_without_sixth": true,
+    "if_A_B_have_different_sixth_calibration_laws_full_ten_q_formula_invalid": true,
+    "if_sixth_noise_correlated_with_original_site_errors_rank_one_derivation_not_licensed": true
+  },
+  "hypothetical_binary_test": {
+    "n_IID_source_stable_snapshots": 400000000,
+    "m_mean_canceled_pairs": 200000000,
+    "strict_source_q_inf_lower_unconstrained": "199/1e9",
+    "strict_source_q_inf_lower_full_rank": "151/1e9",
+    "equal_prior_success_lower_unconstrained": "1-exp(-4.975)/2",
+    "equal_prior_success_lower_full_rank": "1-exp(-3.775)/2",
+    "actual_measured_snapshots": 0
+  },
+  "independent_full_site_Fourier": {
+    "N41_cubed_original_site_fields_and_8_anisotropic_spectra_executed": true,
+    "candidate_cases": [
+      "unconstrained KL winner",
+      "full rank9 winner",
+      "prior ROT038 comparison"
+    ],
+    "calibration_variance_cases": [
+      0,
+      0.0004,
+      2.3333333333333335,
+      1000
+    ],
+    "all_12_gaussian_GLS_q_cases_agree_with_exact_source_formula": true,
+    "q_inf_using_five_source_masks_agrees_original_exact": true,
+    "actual_original_M13_complex_3x3_41_tensor_modes_3D_IFFT_executed": true,
+    "source_k0_FFT_energy_rel_diff": "~1.11e-16",
+    "same_cell_numeric_not_independent_different_cell_I1": true
+  },
+  "complete_executable_repro": {
+    "local_zip": "Geeky_S12_ROT040_unknown_sixth_calibration_uniform_local_pareto.zip",
+    "zip_bytes": 57325,
+    "zip_SHA256": "241ab7232492c200c8126e5c344c0ae21801d283f33496f2ccbf4a9adfcb5bbd",
+    "zip_CRC": "PASS",
+    "zip_entries": 16,
+    "all_exact_archive_member_byte_readbacks": "16/16 PASS",
+    "all_manifest_sha256_payloads": "15/15 PASS",
+    "source_exact_primary_python_SHA256": "22cb9e0c49e309870a258e4b8d38d767438aa1ae5ee5f46b13518f37c3e031cd",
+    "source_exact_full_results_JSON_SHA256": "219a6c4fcf8475c9edabf2e656dac8f6c76d1a65a7ba5e62f86daa364c25523c",
+    "independently_written_full_41cubed_site_FFT_python_SHA256": "e9d0f83bde594667194e35801ebb4cc1a7d9cba7c3fc9be122cf80f89cc16ae2",
+    "independent_full_FFT_results_JSON_SHA256": "50bddcf2a69aa08d482af58d13f28498efdc7c0641525d42fe8759b58b51c3ea",
+    "replay_tamper_controller_SHA256": "a676d6d13cbbc9f7fef819290b56f6a7836ad071fd2309b480017564c0b6ef16",
+    "replay_tamper_receipt_SHA256": "07aa648542b98885f2b2b63354c90102958f8a3273d1a177a6ed2062c62bb5c9",
+    "two_full_cold_science_complete_JSON_byte_replays": "2/2 PASS",
+    "eleven_named_one_byte_source_mutations_rejected_before_M13_import": "11/11 PASS",
+    "all_three_python_programs_rerun_from_actual_extracted_ZIP_complete_JSON_byte_replays": "3/3 PASS"
+  },
+  "scientific_ceiling": {
+    "M13_full_historical_DTC0a_runtime_available": false,
+    "actual_historical_raw_site_two_point_sensors_documented": false,
+    "actual_independent_full_sixth_sensor_documented": false,
+    "actual_400m_IID_snapshots_observed": false,
+    "general_global_sensor_optimization": false,
+    "external_ROT040_independent_referee": "PENDING",
+    "KN15_native_BW_ingest": "NOT_VERIFIED",
+    "owner_CANON_EXEC_SIGN": "NOT_GRANTED_OR_VERIFIED",
+    "flags": [
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "public_full_science_report_commit": "33bf90fc42b782eab11afa6ab36042a887ec591d"
+}
