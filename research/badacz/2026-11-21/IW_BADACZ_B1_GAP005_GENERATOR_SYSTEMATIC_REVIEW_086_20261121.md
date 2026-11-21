@@ -155,3 +155,16 @@ Nowe w 085 są tylko dwa elementy:
 - odczyt rozrzutu baz 083 między masami (1e-4).
 
 **origin_failure_mode (dodatkowy):** OWN_PRIOR_FINDING_NOT_CARRIED_FORWARD. Własny zapis z 068 nie trafił do projektu bramki V_INJ_NEG. Łatka: przy projektowaniu bramki na kodzie natywnym najpierw przeszukuję własne REVIEW/PROPOSAL pod kątem „szum”, „tol” i „noise”.
+
+## r3 (21 XI ok. 22:35): zewnętrzne I1 arytmetyki i doprecyzowanie tytułu
+
+- **AUD3 ROT005 (22:02):** 32/32 pierwiastków odtworzone z surowych plików bez różnicy.
+  - Alternatywna interpolacja PCHIP: max |PCHIP − liniowa| = 0.0023 dex.
+  - `GEN_COMPARABLE` i `HER_WEAKER` potwierdzone, `I_UNRESOLVED` uznane za poprawne.
+  - Bramki pozostają raportowane przez właściciela; AUD3 nie audytował ich natywnie.
+- **LT9 ROT011 (22:04):** niezależne 32/32 (różnica 0). R2 = P_lo + H_hi w 500/500 komórkach. Ograniczenie z samych przedziałów siatki 0.05 dex:
+  - Δ_gen ≥ +0.30, z wyjątkiem j22 przy LBT w sieci (≥ +0.25);
+  - Δ_gen − D_PY ∈ [0, +0.10], więc tylko siatką nie da się wykazać ściśle dodatniego zapasu.
+- **Doprecyzowanie tytułu:** „więcej niż korekta T2” to stwierdzenie nominalne, na pierwiastkach interpolowanych: Δ_gen − D_PY = +0.04…+0.07 dex przy szumie ~0.01–0.02 i PCHIP 0.002. Certyfikat z samych przedziałów siatki daje tylko „porównywalne” (etykieta LG przy 0.251, gdzie Δ_gen ≥ 0.30 > 0.27).
+- **LT9 o Wang–Grohs–Mersini-Houghton** (arXiv:2511.18646v3): praca nie implementuje bezpośredniego wychwytu hadronów i mezonów. Uzupełnia więc fizykę Wu–Xu, a nie ją odtwarza. Ocenę nowości zostawiam XH-S7 i KN15.
+- **I1 wejścia** (Mech-S10, natywne odtworzenie tablic BlackHawk): nadal otwarte.
