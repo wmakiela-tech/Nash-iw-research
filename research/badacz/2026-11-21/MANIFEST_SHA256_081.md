@@ -1,0 +1,34 @@
+---
+artifact_id: IW_BADACZ_B1_RATE_TRANSFER_MANIFEST_SHA256_081_20261121
+exposure: PUBLIC
+document_type: REPRODUCTION_MANIFEST
+claim_ceiling: CUSTODY_ONLY / NO_RESULT_CLAIM
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# MANIFEST SHA-256 — PREREG_081 / REVIEW_082
+
+```
+fbbce938b7b798a18500d16d9795acfb958dc66e40ed73e7715fb57a03d0e0ee  code/rate_dump_081.jl
+a11b1bab3b4170201ae66cf536983043a69c28a799c97ec3e97ef0cd1a34ba0d  code/analysis_081.py
+14ad33e93fe1acb1a8e8e1e950ed5f8251b91bf018653dd6996010ef3cc9e29f  code/run081.sh
+10a24000e3026f437e24b10c272953b80ae559fa9fb30807ef6c3c2266a8b6de  code/dedupe_rates_081.py
+eb76ab846dbe8ee9b3b748f979fa37882f697a27c433fa813269e110d76d806b  code/run_net_079.py
+866f90fc75d453751b9d7a1906a3718c44a9337c32f18574a5a1767319fef763  code/net_rate_079.py
+93989e68411ff7d641bd780e6d902fa495eaef892bfe954cef13a9c744b7fac1  code/prym_rate_patch_079.py
+50478cee99699f41449c16fdf0f2d151bfafcd2a27b223a6a56d07ecd469d1f2  code/cfg079_orig.dat
+d0fe761f4851fdecb780320f74a432c6dc3546d5af40253157151f00678f871e  code/cfg079_e5.dat
+c9e9ebd5165e350a4190edbf9f4ef1ab94344dba956cd4c4b1e57fc5757e768d  data/analysis081.json
+88eef4716847eb107a00f3408f1ef2d0f2335cb75ae2f6f4a0913ba524464ed4  data/dedup_rate_dumps_081_sha256.log
+44ca497f462f9e6dc3770f492e367e07aa4832c12a550888e90f6fb581607f8b  data/dedupe_log_081.csv
+89678b39ebafd43558864c218fad8f93c48105ed73e207abb04534d45ccbbb22  data/full_rate_dumps_081_sha256.log
+23a86f5251505e0db7afff90a2448c5a72b8f9682d1ede69fe033097bba4ed61  data/net081_raw.jsonl
+79316d4ca1a098230ff827b25225aea21334c91c04d90a54c1a4dae37c69555a  data/net081_raw_PREDEDUPE_8failed.jsonl
+d868d83421df0e34454a61e34c949d6fd7caea6386e311ac5e64f77fdeaceefe  data/rates_o22_n08_081_Tle12MeV.csv.gz
+e1c8f913e2826dc85af4294edc9bf2a36d2979195a0f2910481643702ce347af  data/rates_o62_n08_081_Tle12MeV.csv.gz
+eb7727f20847cd6acde4f8cfb02bcec03b56caeac5871c570a62983c0400628a  data/summary_e5_081.csv
+37f3f0e56ba50a40255afc7c19189797d7ef899e4b94a02ddbba3c2acbaad93f  data/summary_orig_081.csv
+62a0e1ff17fbe74a1a3a74109f6e8d26a8682cbcbd8cdd142a4339ebe1388817  data/timeline_081.log
+```
+
+Reprodukcja: `bash code/run081.sh` → `python3 -I code/dedupe_rates_081.py <dump> <dump_dedup>` → `python3 -I code/run_net_079.py <prym079> <dump_dedup> <out>` → `python3 -I code/analysis_081.py <dump_dedup> <out> ../2026-11-16/data ../2026-11-20/data/analysis077.json data/analysis081.json`.
