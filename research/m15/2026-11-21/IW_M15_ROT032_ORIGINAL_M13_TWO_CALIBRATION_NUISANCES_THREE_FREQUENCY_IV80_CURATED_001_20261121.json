@@ -1,0 +1,182 @@
+{
+  "artifact_id": "IW_M15_ROT032_SOURCE_M13_TWO_PARAMETER_SPECTRAL_CALIBRATION_THREE_FREQUENCY_RECOVERY_001_20261121",
+  "return_id": "IW_M15_ROT032_SOURCE_2NUISANCE_COLORED_FOURIER_CALIBRATION_TWO_MODE_NO_GO_AND_THREE_MODE_CURVATURE_RECOVERY_001_20261121",
+  "date": "2026-11-21",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "class": "ORIGINAL_PUBLIC_M13_NATIVE_IV80_STRICT_WITH_TWO_INDEPENDENT_EXECUTED_CODE_PATHS",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "priority": {
+    "original_public_B_N41_source": "M13 FIRST",
+    "legal_two_exact_rational_noise_laws": "Geeky-S12 ROT035 FIRST",
+    "two_site_noise_probes": "Geeky-S12 ROT036/037 FIRST, different tomography task",
+    "single_KNOWN_scale_optimal_real_spatial_Fourier": "M15 ROT030 FIRST",
+    "two_frequency_one_common_unknown_scale_invariant_test": "M15 ROT031 FIRST",
+    "new_M15_ROT032": "unknown log-affine SPECTRAL tilt + global unknown scale invalidates prior specified two frequencies; three original mean-free frequencies certify positive curvature and scale/tilt invariant conservative binary test"
+  },
+  "source": {
+    "native_original_public_M13_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_public_M13_Git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "native_unmodified_M13_tensor_polys_calc_inner_actually_executed": true,
+    "original_full_historical_dtc0a_producer_source_available": false,
+    "N": 41,
+    "total_sites": 68921,
+    "original_B_modes": 41,
+    "original_B_energy_differences_q": 221,
+    "three_original_source_energy_mean_zero_modes": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ]
+    ],
+    "source_mean_zero_exact_for_all_alpha_and_source_common_translation": true,
+    "original_parent_source_IV80_ROT031_sha256": "465b835e8db83d5d4d57040cb76b52be1189949f6d88bb9d630585ae893394c1",
+    "original_parent_exact_rational_source_ROT029_sha256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90"
+  },
+  "hypothetical_site_noise": {
+    "variance_at_Fourier_mode": "s*exp(gamma*a(k))*v_X(k)",
+    "a": "(cos(2*pi*kx/41)+cos(2*pi*ky/41)+cos(2*pi*kz/41))/3",
+    "v_X": "beta0*(1+theta_axis*a+theta_face*(cx*cy+cx*cz+cy*cz)/3+theta_body*cx*cy*cz)",
+    "nuisance": "s>0 and gamma any REAL, ONE COMMON s and gamma across ALL observed mode frequencies within each candidate",
+    "candidate_A": {
+      "beta0": "1",
+      "axis": "3/25",
+      "face": "1/10",
+      "body": "2/25"
+    },
+    "candidate_B": {
+      "beta0": "99779719687217/100000000000000",
+      "axis": "316869474178226/2494492992180425",
+      "face": "93110637627687/997797196872170",
+      "body": "205860943554709/2494492992180425"
+    },
+    "source_site_spectral_covariance_positive_definite_for_any_s_gamma": true,
+    "no_measured_noise_and_no_real_raw_site_sensor": true
+  },
+  "theorems": {
+    "selected_two_freq_composite_family_no_go": "k0=(20,20,20), k1=(20,20,0) have distinct a; linear two-equation adjustment of log(s_B),gamma_B perfectly matches both Gaussian variance scales of A for EVERY (s_A,gamma_A). Composite families coincide; no UNIFORM binary separation from these TWO frequencies at arbitrary n.",
+    "third_mode_added": [
+      20,
+      0,
+      0
+    ],
+    "arithmetic_progression_of_a_frequencies": "EXACT: a(k0),a(k1),a(k2) have constant spacing (1+cos(pi/41))/3.",
+    "scale_tilt_invariant_curvature": "q=(vB(k0)/vA(k0))*(vB(k2)/vA(k2))/(vB(k1)/vA(k1))^2",
+    "q_strict_original_native_IV80": [
+      "0.97952743352298192074108979499842824517657019218374872286919720641806389589864599496549649505718679385931101967",
+      "0.97952743352298192074108979499842824517657019770136142614816442318024913010269076188152789119596764515276738749"
+    ],
+    "log_q_strict_original_native_IV80": [
+      "-0.020685034309318615876488192222431954078120234359565615983723277215287550853887818620707386480410786416126407347",
+      "-0.020685034309318615876488192222431954078120228721528825926842093420594305585865884172778479711616860987296983884"
+    ],
+    "q_strictly_less_than_one": true,
+    "two_nuisance_invariance_for_any_common_s_gamma": true,
+    "test_statistic": "T=(S0*S2/S1^2)*(vA1^2/(vA0*vA2)), S_i=sum of n cos^2+sin^2 independent Fourier projections",
+    "distribution_under_A": "U0*U2/U1^2, U_i independent chi-square_2n",
+    "distribution_under_B": "q * U0*U2/U1^2",
+    "decision": "B iff T<sqrt(q), A otherwise",
+    "delta": "1/400",
+    "strict_IV80_q_separation_margin": [
+      "0.00067119894200968784508718224602196983846659454778782509301915512564610039082938729926002082622233182937250691672",
+      "0.00067119894200968784508718224602196983846660146669899269680344281156091788479028549555335884151895487989715862256"
+    ],
+    "per_candidate_error_upper": "6*exp(-n/(4*400^2))=6*exp(-n/640000)",
+    "source_chi_square_concentration_assumptions": "n independent full RAW SITE spatial Gaussian snapshots, source deterministic mean zero at three frequencies, common s and gamma within each candidate, two fixed known candidate law shapes"
+  },
+  "finite_n_sufficient": [
+    {
+      "success_greater_than_percent": 75,
+      "n": 2100000,
+      "rigorous_error_upper_less_than": 0.225488
+    },
+    {
+      "success_greater_than_percent": 90,
+      "n": 2700000,
+      "rigorous_error_upper_less_than": 0.088303
+    },
+    {
+      "success_greater_than_percent": 95,
+      "n": 3200000,
+      "rigorous_error_upper_less_than": 0.040428
+    },
+    {
+      "success_greater_than_percent": 99,
+      "n": 4200000,
+      "rigorous_error_upper_less_than": 0.008475
+    }
+  ],
+  "independent_source_spatial_check": {
+    "original_M13_41cubed_IFFT_nine_complex_tensor_components_actually_executed": true,
+    "six_orthonormal_sine_cosine_projections_source_mean_numeric_less_than": "2e-26",
+    "original_site_roll_neighborhoods": "6 axial+12 face+8 body periodic signed neighbor shifts for all 6 real projection weight fields",
+    "colored_calibration_operator": "direct full spatial site neighbor roll before independent Fourier exp(gamma*axial symbol) operator",
+    "covariance_matrix_dimension": "6x6",
+    "three_distinct_s_gamma_scenarios": [
+      [
+        1,
+        0
+      ],
+      [
+        2.7,
+        0.4
+      ],
+      [
+        0.3,
+        -0.7
+      ]
+    ],
+    "source_spatial_q_values_numeric": [
+      0.9795274335229814,
+      0.9795274335229821,
+      0.9795274335229817
+    ],
+    "full_spatial_six_projection_covariance_offdiagonals_abs_less_than": 2e-12,
+    "independent_source_spatial_log_q_numeric": -0.020685034309319297,
+    "float_controls_are_diagnostics_not_interval_proofs": true
+  },
+  "repro": {
+    "verified_original_and_new_complete_executable_zip": "IW_M15_ROT032_ORIGINAL_M13_COLORED_SPECTRAL_CALIBRATION_THREE_FREQUENCY_IV80_REPRO_001_20261121.zip",
+    "ZIP_bytes": 42801,
+    "ZIP_sha256": "680eb3b5cd04a88c180aa1cefb4e85958cbd0594288f4280b66919068916a295",
+    "CRC": "PASS",
+    "manifest_payload_SHA256": "12/12 PASS",
+    "zip_all_member_byte_readback": "13/13 PASS",
+    "new_native_original_source_IV80_script_sha256": "cd324e404ca15af0f01d7c09c0046aba8eee8e0ad5bf63f556d37750439833c7",
+    "full_original_native_source_IV80_JSON_sha256": "161500d8fe93c16b5bd385ba9a2e9b0dce1e3ef82ff03ef9cd7c4d6645ef232e",
+    "independent_full_spatial_original_M13_program_sha256": "b96b9a4d2cc09cbed05e8033c3d425b18a9b04839bcdf260e94df009379bbacc",
+    "full_independent_original_source_spatial_JSON_sha256": "a328b1ebe6d41386ac30c7ca355bc06e6a95511be17d9514a2eb4a211778dadd",
+    "negative_and_replay_receipt_sha256": "c24d36307554bf94ab42e4e7939b6fe96e650b6a433ed9fcf70d1fc024af9d41",
+    "complete_source_JSON_clean_cold_replays": "2/2 BYTE IDENTICAL PASS",
+    "actual_source_and_parent_hash_tamper_rejections": "5/5 FAIL CLOSED",
+    "actual_scientific_false_frequency_q_and_n_fixtures_rejections": "3/3 PASS",
+    "all_negative_attacks": "8/8 REJECTED PASS",
+    "no_false_assertion_that_source_programs_are_public_GitHub_mirrored": true
+  },
+  "hard_scope": [
+    "Only original public M13 auxiliary N41 source, historical full DTC0a runtime unavailable",
+    "New gamma-tilt colored calibration is entirely synthetic and not native to any documented physical sensor",
+    "Requires n independent raw-site 68921-site Gaussian source snapshots (or original Fourier detectors) NOT available in source evidence",
+    "Source static field Fourier mean exact zero at THREE chosen modes but no actual instrument sampling",
+    "Two-nuisance recovery depends on one common scale AND one common linear axial spectral tilt; a third unrestricted frequency-specific gain ruins invariant",
+    "Exactly TWO original Geeky legal Gaussian hypotheses, no global alpha inversion",
+    "Does not assert global minimal number of frequencies or composite-test optimality",
+    "Geeky ROT034-037 original scientific priorities preserved",
+    "No different-cell independent REC13/AUD3 acceptance or KN15 native BW provider ingest",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
