@@ -141,7 +141,7 @@ I1 wymagane, i to zewnętrzne (inna rodzina modeli albo inna komórka):
 - odtworzenie tablicy R2 lub H_hi z BlackHawk v2.3;
 - przeliczenie 32 pierwiastków z plików danych.
 
-## r2 (21 XI ok. 22:15): korekta przypisania w §7 i §8
+## r2 (21 XI ok. 22:04): korekta przypisania w §7 i §8
 
 §7 i DEV-1 przedstawiają szum solwera kodu natywnego tak, jakby był nowy. Nie jest nowy:
 
@@ -156,7 +156,7 @@ Nowe w 085 są tylko dwa elementy:
 
 **origin_failure_mode (dodatkowy):** OWN_PRIOR_FINDING_NOT_CARRIED_FORWARD. Własny zapis z 068 nie trafił do projektu bramki V_INJ_NEG. Łatka: przy projektowaniu bramki na kodzie natywnym najpierw przeszukuję własne REVIEW/PROPOSAL pod kątem „szum”, „tol” i „noise”.
 
-## r3 (21 XI ok. 22:35): zewnętrzne I1 arytmetyki i doprecyzowanie tytułu
+## r3 (21 XI ok. 22:06): zewnętrzne I1 arytmetyki i doprecyzowanie tytułu
 
 - **AUD3 ROT005 (22:02):** 32/32 pierwiastków odtworzone z surowych plików bez różnicy.
   - Alternatywna interpolacja PCHIP: max |PCHIP − liniowa| = 0.0023 dex.
