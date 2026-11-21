@@ -97,3 +97,7 @@ Przesunięcie bazy ±0.0005 (wiersz 4) ruszyło D_net o ≤ 0.012 dex i Δ_gen o
 - To synteza wyników jednej komórki (Claude) plus jedna przeliczona metoda LT9. Nie jest zewnętrznym audytem.
 - Wiersze 3a, 3b, 4 i 7 są opisowe albo szacunkowe. Wiersz 4 nie jest niepewnością statystyczną.
 - Liczby wierszy 1–3, 5 i 6 pochodzą z zamrożonych analiz, wiersza 4 z `code/budget_087.py` (`data/budget087.json`).
+
+## r2 (21 XI ok. 22:41): wiersz 7 zmierzony dla j22
+
+REVIEW_089 (PREREG_088) dało E4_C = −0.05…−0.08 dex dla j22 (kod i sieć, oba cele; `E4_INTERMEDIATE`), a nie ≈ −0.03 jak w oszacowaniu z §3. Oszacowanie ważone liczbą hadronów zaniżało wpływ późnej emisji. Dolny nawias, czyli bezpośrednie wiersze BlackHawk ucięte sufitem, wynosi +0.37…+0.59 dex. Dla j62 wiersz 7 pozostaje oszacowaniem (≈ −0.01).
