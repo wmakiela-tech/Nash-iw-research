@@ -1,0 +1,374 @@
+{
+  "id": "IW_PRF14_ROT008_ORIGINAL_083_233_SOURCE_MATCHED_HELIUM_DEUTERIUM_8_PAIRS_DIAGNOSTIC_001_20261121",
+  "status": "DERIVED_FROM_ORIGINAL_BADACZ_083_READ_ONLY_NO_NETWORK_RERUN",
+  "source_git_blobs": {
+    "analysis083": "236da6ba92113b4e461550ce3f8fbc4a72dd81bc",
+    "net083_raw": "05f6f93eb4f53a95f5ad6fbe38609557bae04465"
+  },
+  "source_native_run_count": 228,
+  "source_network_record_count": 233,
+  "matched_primary_owner_Yp_rows": 224,
+  "observational_ref": {
+    "D_H_times_1e5": 2.508,
+    "sigma": 0.029,
+    "source": "Anne-KatherineBurns/bbn-sensitivity-atlas original README (PDG 2025 D/H)"
+  },
+  "results": [
+    {
+      "j": 22,
+      "helium_target": 0.2484,
+      "orig": {
+        "log10beta": -18.209103031711916,
+        "D_H_times_1e5": 2.4674930974735867,
+        "source_ids": [
+          "net_o22_1825",
+          "net_o22_1820"
+        ],
+        "source_helium": [
+          0.24828366203451335,
+          0.24842589502922724
+        ],
+        "source_D_H": [
+          2.470751473901441,
+          2.466767833347816
+        ]
+      },
+      "e5": {
+        "log10beta": -17.944603615874353,
+        "D_H_times_1e5": 2.468094766225325,
+        "source_ids": [
+          "net_e22_1795",
+          "net_e22_1790"
+        ],
+        "source_helium": [
+          0.24838500916153425,
+          0.24852390622776158
+        ],
+        "source_D_H": [
+          2.4681607506712058,
+          2.4675493741981436
+        ]
+      },
+      "DeltaD_H_times_1e5": 0.0006016687517385044,
+      "DeltaD_H_obsSigma": 0.020747198335810495,
+      "Gaussian_KL_if_exact": 0.0002152231193927289
+    },
+    {
+      "j": 38,
+      "helium_target": 0.2484,
+      "orig": {
+        "log10beta": -19.601128917863953,
+        "D_H_times_1e5": 2.471027517682105,
+        "source_ids": [
+          "net_o38_1965",
+          "net_o38_1960"
+        ],
+        "source_helium": [
+          0.24824564767318524,
+          0.2484035655256947
+        ],
+        "source_D_H": [
+          2.465812428045588,
+          2.4711479858116294
+        ]
+      },
+      "e5": {
+        "log10beta": -19.324215566657344,
+        "D_H_times_1e5": 2.468233890478327,
+        "source_ids": [
+          "net_e38_1935",
+          "net_e38_1930"
+        ],
+        "source_helium": [
+          0.248309907771818,
+          0.2484846105216996
+        ],
+        "source_D_H": [
+          2.4681859005914517,
+          2.4682789603966406
+        ]
+      },
+      "DeltaD_H_times_1e5": -0.0027936272037778487,
+      "DeltaD_H_obsSigma": 0.09633197254406374,
+      "Gaussian_KL_if_exact": 0.004639924467115125
+    },
+    {
+      "j": 62,
+      "helium_target": 0.2484,
+      "orig": {
+        "log10beta": -19.920909600660803,
+        "D_H_times_1e5": 2.4694479144261754,
+        "source_ids": [
+          "net_o62_1995",
+          "net_o62_1990"
+        ],
+        "source_helium": [
+          0.2483120137304214,
+          0.24846324278120321
+        ],
+        "source_D_H": [
+          2.4677952854492435,
+          2.47063579127672
+        ]
+      },
+      "e5": {
+        "log10beta": -19.622468650012635,
+        "D_H_times_1e5": 2.468614379397221,
+        "source_ids": [
+          "net_e62_1965",
+          "net_e62_1960"
+        ],
+        "source_helium": [
+          0.2483072070371353,
+          0.2484757293996553
+        ],
+        "source_D_H": [
+          2.4689824686188016,
+          2.4683139775681453
+        ]
+      },
+      "DeltaD_H_times_1e5": -0.0008335350289545573,
+      "DeltaD_H_obsSigma": 0.028742587205329562,
+      "Gaussian_KL_if_exact": 0.0004130681596279873
+    },
+    {
+      "j": 90,
+      "helium_target": 0.2484,
+      "orig": {
+        "log10beta": -19.84155637677964,
+        "D_H_times_1e5": 2.465457287736159,
+        "source_ids": [
+          "net_o90_1985",
+          "net_o90_1980"
+        ],
+        "source_helium": [
+          0.24836755420412532,
+          0.2485596861540473
+        ],
+        "source_D_H": [
+          2.4641352348161907,
+          2.4719639410804657
+        ]
+      },
+      "e5": {
+        "log10beta": -19.540378212437297,
+        "D_H_times_1e5": 2.4678514336061315,
+        "source_ids": [
+          "net_e90_1955",
+          "net_e90_1950"
+        ],
+        "source_helium": [
+          0.2483654525175047,
+          0.24854497987804022
+        ],
+        "source_D_H": [
+          2.4676069488314907,
+          2.4688774236421613
+        ]
+      },
+      "DeltaD_H_times_1e5": 0.0023941458699723306,
+      "DeltaD_H_obsSigma": 0.08255675413697691,
+      "Gaussian_KL_if_exact": 0.0034078088268166273
+    },
+    {
+      "j": 22,
+      "helium_target": 0.251,
+      "orig": {
+        "log10beta": -17.708667237838597,
+        "D_H_times_1e5": 2.4809278382135043,
+        "source_ids": [
+          "net_o22_1775",
+          "net_o22_1770"
+        ],
+        "source_helium": [
+          0.25069259659983106,
+          0.2510644606903176
+        ],
+        "source_D_H": [
+          2.479927587243401,
+          2.481137584976189
+        ]
+      },
+      "e5": {
+        "log10beta": -17.430669001325967,
+        "D_H_times_1e5": 2.482344324939479,
+        "source_ids": [
+          "net_e22_1745",
+          "net_e22_1740"
+        ],
+        "source_helium": [
+          0.2508510786614527,
+          0.2512362665688611
+        ],
+        "source_D_H": [
+          2.481583085818781,
+          2.4835520454507547
+        ]
+      },
+      "DeltaD_H_times_1e5": 0.0014164867259749414,
+      "DeltaD_H_obsSigma": 0.04884436986120488,
+      "Gaussian_KL_if_exact": 0.0011928862335690896
+    },
+    {
+      "j": 38,
+      "helium_target": 0.251,
+      "orig": {
+        "log10beta": -19.169033850411484,
+        "D_H_times_1e5": 2.4810792949539753,
+        "source_ids": [
+          "net_o38_1920",
+          "net_o38_1915"
+        ],
+        "source_helium": [
+          0.25072491921260587,
+          0.25116908290594436
+        ],
+        "source_D_H": [
+          2.477341932932299,
+          2.483376525659098
+        ]
+      },
+      "e5": {
+        "log10beta": -18.88743310444678,
+        "D_H_times_1e5": 2.4812591979994263,
+        "source_ids": [
+          "net_e38_1890",
+          "net_e38_1885"
+        ],
+        "source_helium": [
+          0.2508645240144367,
+          0.25140354331713394
+        ],
+        "source_D_H": [
+          2.479268670687307,
+          2.487188396381254
+        ]
+      },
+      "DeltaD_H_times_1e5": 0.0001799030454510131,
+      "DeltaD_H_obsSigma": 0.006203553291414245,
+      "Gaussian_KL_if_exact": 0.000019242036719708254
+    },
+    {
+      "j": 62,
+      "helium_target": 0.251,
+      "orig": {
+        "log10beta": -19.48479268767131,
+        "D_H_times_1e5": 2.48285831127349,
+        "source_ids": [
+          "net_o62_1950",
+          "net_o62_1945"
+        ],
+        "source_helium": [
+          0.25085226080225287,
+          0.2513380113232979
+        ],
+        "source_D_H": [
+          2.4817135736699787,
+          2.4854773472374867
+        ]
+      },
+      "e5": {
+        "log10beta": -19.187034928055013,
+        "D_H_times_1e5": 2.4829026980395077,
+        "source_ids": [
+          "net_e62_1920",
+          "net_e62_1915"
+        ],
+        "source_helium": [
+          0.2508739199712608,
+          0.25136014954744135
+        ],
+        "source_D_H": [
+          2.4821155327392104,
+          2.4851512478653484
+        ]
+      },
+      "DeltaD_H_times_1e5": 0.00004438676601781211,
+      "DeltaD_H_obsSigma": 0.001530578138545245,
+      "Gaussian_KL_if_exact": 0.0000011713347190963137
+    },
+    {
+      "j": 90,
+      "helium_target": 0.251,
+      "orig": {
+        "log10beta": -19.41211027144993,
+        "D_H_times_1e5": 2.4803490928740475,
+        "source_ids": [
+          "net_o90_1945",
+          "net_o90_1940"
+        ],
+        "source_helium": [
+          0.25064094321814506,
+          0.25111476131554905
+        ],
+        "source_D_H": [
+          2.4803187535242897,
+          2.480358789902114
+        ]
+      },
+      "e5": {
+        "log10beta": -19.11053175562305,
+        "D_H_times_1e5": 2.4821218960673583,
+        "source_ids": [
+          "net_e90_1915",
+          "net_e90_1910"
+        ],
+        "source_helium": [
+          0.2506076545102399,
+          0.2511046939605039
+        ],
+        "source_D_H": [
+          2.479672029001428,
+          2.4827756216549703
+        ]
+      },
+      "DeltaD_H_times_1e5": 0.0017728031933108568,
+      "DeltaD_H_obsSigma": 0.06113114459692609,
+      "Gaussian_KL_if_exact": 0.001868508419865143
+    }
+  ],
+  "source_null_baselines": [
+    {
+      "j": 22,
+      "deltaD_H_vs_no_rate": 0.0012299624684271038
+    },
+    {
+      "j": 38,
+      "deltaD_H_vs_no_rate": 0.0023314547254980056
+    },
+    {
+      "j": 62,
+      "deltaD_H_vs_no_rate": -0.0016125087626774892
+    },
+    {
+      "j": 90,
+      "deltaD_H_vs_no_rate": -0.003272943200076206
+    }
+  ],
+  "source_solver_controls": [
+    {
+      "j": 22,
+      "control_id": "net_o22_1720",
+      "deltaD_H_tightTol": 0.0033598865852533244,
+      "deltaD_H_stride2": 0.002398190101483344,
+      "deltaYp_tightTol": 0.000005004232388861052,
+      "deltaYp_stride2": -0.000026092383636489025
+    },
+    {
+      "j": 62,
+      "control_id": "net_o62_1940",
+      "deltaD_H_tightTol": 0.0019106478157486784,
+      "deltaD_H_stride2": -0.00010441709294095602,
+      "deltaYp_tightTol": -0.0000011054553952227764,
+      "deltaYp_stride2": 0.0000019403317123023456
+    }
+  ],
+  "max_profiled_D_H_difference": 0.0027936272037778487,
+  "max_source_D_H_tolerance_change": 0.0033598865852533244,
+  "warnings": [
+    "These are observed outputs of Badacz's executed PRyMordial network, NOT new PRF native physics.",
+    "The D/H output channel was NOT separately tolerance-validated by original helium V4/V5 pass.",
+    "Gaussian KL is only a hypothetical benchmark, not observational model fitting or physical PBH bound.",
+    "Profile at helium upper boundary, not direct empirical measurement of beta."
+  ]
+}
