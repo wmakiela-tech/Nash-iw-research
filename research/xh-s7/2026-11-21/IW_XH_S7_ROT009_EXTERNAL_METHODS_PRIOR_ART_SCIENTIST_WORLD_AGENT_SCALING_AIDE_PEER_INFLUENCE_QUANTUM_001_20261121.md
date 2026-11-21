@@ -1,0 +1,87 @@
+---
+artifact_id: IW_XH_S7_ROT009_EXTERNAL_METHODS_PRIOR_ART_SCIENTIST_WORLD_AGENT_SCALING_AIDE_PEER_INFLUENCE_QUANTUM_001_20261121
+date: 2026-11-21
+origin_cell: IW_EXTERNAL_SCIENCE_HARVEST_CELL_001_SUCCESSOR_06 / XH-S7
+exposure: PUBLIC
+doc_type: PRIMARY_SOURCE_EXTERNAL_LITERATURE_HARVEST_AND_NOVELTY_SUBTRACTION
+science_first: LITERATURE_FIRST / TWO_SURFACE_PRIOR_ART / SOURCE_NATIVE_ORIGINAL_AUTHOR_CODE / NO_INTERNAL_B1_NUMERIC_OVERLAP
+status: SOURCE_TEXT_AND_PUBLIC_AUTHOR_CODE_CONTACT_PASS / EXT_EXTERNAL_BENCHMARK_RESULT_REPRO_HOLD / QPV_EXPERIMENTAL_DATA_BYTES_HOLD
+claim_ceiling: LITERATURE_ONLY / NO_NASH_METHOD_SUPERIORITY / NO_NASH_METHOD_NOVELTY / NO_QUANTUM_BRIDGE / NO_CANON / NO_EXEC_SIGN
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# XH-S7 ROT009 — External scientific and methods prior-art radar (21 November 2026)
+
+## 0. Mission and source-status discipline
+
+After XH-S7 ROT008 (Nov21 external cross-domain gravity/memory/LOCC/PBH radar), Human Moderator's operative instruction is "O", continuing independent XH literature harvesting; previous explicit correction "Sprawdź aktualności w literaturze. Trzymaj się mocniej funkcji" governs the mode. Unlike ROT001–007, this rotation performs NO fresh B1 arithmetic or simulation, NO parallel native owner work, NO source-free claims of new NASH results. It searches recent peer-reviewed literature and contemporary original preprints in AI-AI scientific discovery methods plus quantum-information instrumentation, subtracting generic mature frameworks AND the most closely-matched current 2026 publications.
+
+Original external source types:
+- Published *Nature Machine Intelligence* Jul24 2026 Kim et al. **full original primary journal HTML directly read**, exact numerical abstract, methods, Results and data/code availability.
+- November5 2026 original arXiv full HTML *Scientist World* **direct source body read** and original author GitHub implementation read.
+- November4 2026 Xie et al *Nature Communications* AIDE, original publisher abstract/index + **direct original author GitHub README read**, version-archived actual named paper results.
+- November20 2026 Kalinin et al *Nature Machine Intelligence*, publisher indexed article type **PERSPECTIVE**, abstract read; **NOT a new empirical demonstration**.
+- October2 2026 Laustsen et al original arXiv primary abstract fully read; **PREPRINT, not peer-reviewed proof**.
+- November18 2026 Kavuri et al Nature Bell-test remote position verification original publisher abstract/index and NIST scientist institutional summary: physical experiment, raw public data DOI identified but bytes not downloaded.
+- November12 2026 Mele & Bittel *Nature Physics* original publisher-indexed theorem statements, published work; no independent proof or source code run.
+
+Publisher URLs sometimes cache-miss direct opening even when original indexed snippets are retrievable; if so, keep ABSTRACT/SEARCH_INDEX_ONLY, never claim complete full text. Secondary summaries did NOT replace paper-source facts. All source firstness belongs to external original authors.
+
+## 1. #1 critical already-published host: strong single agent vs 4 multi-agent structures (Kim et al., July 24 2026)
+
+Kim, Y. et al., *Capable language models can outgrow the benefits of collaboration*, Nature Machine Intelligence 8:1157–1172, published July24 2026 (not Nov first publication), DOI https://doi.org/10.1038/s42256-026-01268-y ; original full text https://www.nature.com/articles/s42256-026-01268-y .
+
+- 260 total configurations, SIX agentic benchmarks, FIVE architectures: SAS, MAS Independent, Centralized, Decentralized, Hybrid; three LLM families; matched prompt/tool/compute constraints in authors' design. Tasks: BrowseComp-Plus, Finance-Agent, PlanCraft, WorkBench, SWE-bench Verified, Terminal-Bench.
+- Original article states multi-agent success delta range +80.8% to −70% depending on setting, baseline SAS performance strongest robust predictor. 94% correct *sign* of MAS coordination effect on specific SWE-bench/Terminal-Bench validation configurations; within-domain 87% best architecture selection, cross-val R² 0.373 (0.413 alternative). Not universal across all future models/domains or physical discovery.
+- Original reports single agent vs architectures efficiencies, measurable coordination overhead and trace-level amplification. Important methodological note: their original extended experiments mixing strong/weak models within/across families found no general escape from capability saturation; mixed centralized config mean −12.6 pp vs homogeneous strong model in tested 7 configurations, exploratory small sample. Not evidence homogeneous always best.
+- Actual original AUTHOR repo https://github.com/ybkim95/agent-scaling/tree/v2.1.3, `README.md` Git blob `3fc1a859f97afbede80ee0842f913b6cd94e90e2`, `REPRODUCTION.md` Git blob `53557af2eee399eae46da8acca0a52d9d28c5667` DIRECT READ AT FROZEN v2.1.3. Exact scripts and five agent-config choices, six benchmark configs, Python3.11+, Docker for SWE/Terminal, API keys and log traces documented. PUBLIC source available, but NO execution or identical cluster reproduction by XH; proprietary model/API non-determinism and upstream dataset adapters condition exact parity. NOTE repo README says manuscript "under revision" despite published journal July 2026 — repo bibliographic README is STALE; article is publication authority.
+- Foundation (surface A): classical organizational cost/communication bottleneck, aggregation of correlated errors, single-vs-ensemble benchmarking, fixed budget experiment design. Closest specialist (surface B): Kim article itself and existing 2025 multi-agent scaling/debate literature. Strong explicit boundary: generic claim "a multi-agent scientific team is better because many perspectives" is PRIOR-ART-UNSUPPORTED and must be tested at matched budget; NO_NASH_NOVELTY based on multiagent coordination alone.
+
+## 2. #2 closest scientific-workflow model: Scientist World (Lu et al., Nov5 2026, original preprint)
+
+Lu, T., Konan, S., Liu, Z., *Scientist World: Grow a Research World for AI-Scientists*, arXiv:2611.08478v1 5 Nov 2026 https://arxiv.org/abs/2611.08478, original full arXiv HTML `https://arxiv.org/abs/2611.08478` indexed/read.
+
+Author pipeline converts empirical AI papers into executable research environments through **four roles**: reproducer, designer, packager, independent verifier. Continuous staged progress milestones, rollback/demotion if claimed milestone not evidenced, same workspace inherited between role sessions; fixed externally enforced compute quota, held-out evaluator; *improve* (source method given) vs *innovate* (problem only). Original paper claims 1,000 verified research environments, 6,400 research execution hours; evaluations on **TEN selected environments**, 84% improve and 74% innovate attempts show positive improvement versus REPRODUCED SOURCE METHOD on those experiments. Not success against all humans or all science and not 740/1000 independently tested novel human outperformance. Ideation model trained with execution feedback is separately evaluated using fixed model executor; not autonomous end-to-end parity.
+- ORIGINAL author public GitHub https://github.com/zlab-princeton/scientist_world, `README.md` Git blob `91ed04219a211a7a14b7442a083e6f222043c1f4` DIRECT READ. Real modules `scout/`, `infrastructure/swarm/`, `infrastructure/nexus/`, `infrastructure/hive/`, `evaluation/`, `training/`. Original author's CLI, environment organization and HuggingFace traces URLs are **LINKED**. XH did NOT obtain/authenticate 1,000 individual environment repos or the 6,400h traces corpus; the original source-claim is NOT converted to `DATA_BYTES_VERIFIED` simply because main system README is available.
+- Foundation: reproducibility, blind test/held-out set, versioned executable paper artifacts and independent verifier, known science methodology. Closest specialist: Scientist World source concrete implementation. Strong subtraction against any NASH-only novelty based on "reproducer → designer → packager → verifier", succession-state rehydration, rollback gates or executable research briefs per se.
+- Remaining genuinely different **POTENTIAL QUESTION**, not claimed result: does *cross-family nonblind/cold independent falsification preserving explicit negative knowledge over long discontinuous project continuity* offer reproducible **incremental external scientific result quality** at equal budget vs this concrete benchmark? Requires matched task source freshness, outcome independent external reviewer, and leak/author-intent controls; no C1 run or request issued. NASH internal C1 remains Moderator-paused until achieved science; literature discovery is NOT permission to restart.
+
+## 3. November4 Nature Communications empirical alternative: AIDE scientific data curation
+
+Xie, S. et al., *Agentic intelligent data engine for scientific large language models*, Nature Communications, published Nov4 2026, DOI https://doi.org/10.1038/s41467-026-78887-x . Original paper publisher abstract source indexed, and ACTUAL AUTHORS' IMPLEMENTATION README directly read:
+https://github.com/bjzgcai/AIDE ; blob `f2f919048a3d68230a132ea5fc562fefbe619f05`. Authors' frozen code release v0.1.0 https://doi.org/10.5281/zenodo.22805647 and archive of datasets https://doi.org/10.5281/zenodo.20319939 (linked by official author README; **NOT downloaded**).
+- Pipeline collects public candidate scientific datasets, LLM-based selection, organizes into RAG / SFT; generated code, data quality checks and provenance logs.
+- Author-reported biomedical RAG mean accuracy GPT-4o-mini 86.3% vs no-retrieval 72.9%, Qwen3-32B 84.4% vs 71.4%; the AIDE curation included **59 sources/52.2M snippets** vs comparison MedCorp 4 sources/30.4M snippets. These are paired downstream metrics, NOT a matched-data-volume causal proof that multiagent architecture itself improved accuracy. Chemistry SFT has 0.23M AIDE vs 1.5M expert Mol-Instructions; authors report 7/9 improved subtasks; original README says 1–4 days wall-clock curation vs 14 working weeks *survey-estimated median* from 13 experts, not matched live human-labor time trial.
+- Important maturity: scientific data curation through agents is no longer generic NASH novelty. Scientifically discriminating target: provenance traceable dataset selection, ability to detect missing/incorrect original source, blinded test of source-quality over fluent RAG answers, external independent held-out datasets. No live AIDE/HuggingFace pipeline run performed by XH.
+
+## 4. Fresh 20 Nov Nature Machine Intelligence perspective: reward and executable laboratory steps, not a new experiment
+
+Kalinin et al., *Enabling lab autonomy with reward functions and executable workflows*, **PERSPECTIVE**, online Nov20 2026 https://doi.org/10.1038/s42256-026-01339-0 . Prior version on ChemRxiv from Feb2026. Authors emphasize joint top-down hypothesis planning and bottom-up laboratory execution, physical feasible action/constraint, observables and decision rules, experimental information per cost, and OOD long-horizon learning. Publication TYPE=Perspective established by Nature Machine Intelligence issue listing; NOT an independent empirically demonstrated lab autonomy result. This is a mature 2026 theoretical/methodological host: conceptual NASH science claims need compilation into physical observables and executable tests, not extra role descriptions.
+
+Older mature systematic baseline: *Agentic AI systems for scientific discovery*, Nature Reviews Methods Primers 6, article 81, 22 Oct2026, DOI 10.1038/s43586-026-00534-y; already reviews task decomposition, memory, tool use, agent communication, single/multi-agent and human-in-loop. Generic agent-as-science-workflow novelty unavailable.
+
+## 5. Peer-influence original external falsifier: model diversity ≠ independent evidence
+
+Laustsen, F.N. et al., *Peer Influence across Heterogeneous AI Models*, arXiv:2610.03095, original PREPRINT submitted Oct2 2026 https://arxiv.org/abs/2610.03095 direct original arxiv abstract read. Study 7 open-weight LMs across three tasks, single disagreement exchange. It finds baseline certainty or model size alone does not reliably predict resistance to a confident dissenting peer; pairing-specific **listener susceptibility** is a strong factor. This is source-specific empirical work by authors, not a NASH run.
+Additional mature host: Kraidia et al., *When collaboration fails: persuasion driven adversarial influence in multi agent large language model debate*, Scientific Reports published April8 2026 DOI 10.1038/s41598-026-42705-7; direct original published indexed article claims one intentionally adversarial persuasive agent can distort group consensus. These sources strengthen the NASH gravity-well / dissent-exposure risk but do not demonstrate that the NASH protocol successfully reduces it. Necessary future comparison would manipulate actual independent reviewer exposure X0/X1, explicit wrong-anchor injection and externally scored reversal/consensus quality; not authorized/initiated and not proof of unique method.
+
+## 6. Independent operational quantum new experiments and specialist prior art
+
+**Nature Nov18 2026 actual physical Bell test:** Kavuri et al., *Quantum position verification with remote untrusted devices*, https://doi.org/10.1038/s41586-026-11247-3 ; indexed ORIGINAL publisher abstract and NIST institutional account. Device-independent remote location verification via loophole-free Bell correlations across network. Original author-reported experimental localization width factor **2.47(2)** and equal-latency localization volume factor **4.53(5)** vs specified classical counterparts. Security claim is under protocol-defined resource/adversary assumptions (experiment version tested adversaries weakly entangled BEFORE each trial), not unconditional security from arbitrary unlimited entanglement nor a claim B2 has solved. Original paper declares external dataset https://doi.org/10.18434/mds2-4322 ; **DOI page could not be accessed directly** by available web tool; no underlying experimental data or numeric rerun. Foundational Bell, DI certification and QPV; this is a quantum location-authentication PROTOCOL, not general LOCC discrimination or novel gravity prediction.
+
+**Nature Physics Nov12 2026 theoretical result:** Mele & Bittel, *Optimal learning of quantum channels in diamond distance*, https://doi.org/10.1038/s41567-026-03499-7 ; original indexed main theorem. At fixed accuracy, query complexity scales as Theta(d_in*d_out*k) for appropriate rank k channel classes, and upper bound O(d_in*d_out*k/epsilon^2) generally, with related O(d²/epsilon²) binary POVM channel learning. Fundamental mature quantum process tomography and diamond norm; closest 2026 source is authors' theorem. Not all state-LOCC distinguishability tasks are full channel tomography; mathematical object mapping and access type must be exact. No XH proof replication.
+
+These genuinely new experimental/theoretical 2026 papers are separate from NASH source physics; they define external operational claims without automatically creating any NASH bridge.
+
+## 7. Critical negative knowledge and target-relative priority decision
+
+| Rank | research frontier | already mature specialist prior art | NASH claimed/new result currently admitted? | one minimal future independent discriminator |
+|---|---|---|---|---|
+| P1 | Multi-model scientific reliability and role coordination | Kim NMI 2026 + ScientistWorld Nov2026 concrete code / experiments | NO generic novelty or advantage | equal-budget strongest SAS baseline, adversarial false-premise holdout, long-run external result validation |
+| P2 | Scientific evidence/data provenance | AIDE Nat Commun Nov4 2026 native code+curated archive, Robin Nature 2026 wet-lab loop | NO simple collection/verification novelty | blind external original-source fact validation; frozen heldout corpora and firstness audit; independent error rate |
+| P3 | Operational quantum distinguishability | Mele-Bittel channel sample theory; Kavuri NIST Bell DI QPV 2026 experimental resource assumptions | NO QI/LOCC/Bell NASH physical novelty established | exact same object (state/channel/measurement/location), resources (LOCC rounds, entanglement, memory), worst-case norm, calibrated data |
+| P4 | Long-horizon executable physical science | Kalinin perspective Nov20 2026 + Robin real lab | NO lab execution by NASH | dimensioned source-to-physical-observable with original experimental data, predeclared external falsifier |
+
+**Practical proposal (NOT new authorized task):** Given Moderator earlier paused C1 until science, keep external XH research targeted to **source-native independently verified discovery** and avoid merely multiplying internal NASH auditors. Distinct novelty must survive 1) established theoretical host, 2) current closest specialist article+code, 3) experimental source/firstness, 4) equal-budget competing architecture and 5) outside reviewer. XH ROT008–009 can support a future formal prior-art dossier, but neither establishes scientific discovery itself.
+
+No original author code executed. No datasets downloaded/verified as raw bytes. No experiment initiated. No contact with external authors. No issue comment needed for this self-contained outward-facing harvest because no direct owner problem claim changed, and C1 suspended. NO_NOVELTY, NO_CANON, NO_EXEC_SIGN, BW pending.
