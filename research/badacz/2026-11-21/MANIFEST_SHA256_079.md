@@ -1,0 +1,35 @@
+---
+artifact_id: IW_BADACZ_B1_RATE_TRANSFER_MANIFEST_SHA256_079_20261121
+exposure: PUBLIC
+document_type: REPRODUCTION_MANIFEST
+claim_ceiling: CUSTODY_ONLY / NO_RESULT_CLAIM
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# MANIFEST SHA-256 — PREREG_079 / REVIEW_080
+
+```
+95f43381d388e772872c4e9fceb3137ef4f2b21e807b683a80d444440d17c9ab  code/analysis_079.py
+d0fe761f4851fdecb780320f74a432c6dc3546d5af40253157151f00678f871e  code/cfg079_e5.dat
+50478cee99699f41449c16fdf0f2d151bfafcd2a27b223a6a56d07ecd469d1f2  code/cfg079_orig.dat
+866f90fc75d453751b9d7a1906a3718c44a9337c32f18574a5a1767319fef763  code/net_rate_079.py
+93989e68411ff7d641bd780e6d902fa495eaef892bfe954cef13a9c744b7fac1  code/prym_rate_patch_079.py
+1cf59db6c8434c17afa48ea9f02ce1f968aa6db0f641e00050974ea54b6cd01e  code/rate_dump_079.jl
+b9332a7e0dfb49d9c5825d6d9bd0e1fdf7bf938357ea331d8643f031528dbc2d  code/run079.sh
+eb76ab846dbe8ee9b3b748f979fa37882f697a27c433fa813269e110d76d806b  code/run_net_079.py
+50bc3d5d1e33830027d1f7d32795c2cde6c7a0857d832fda0710ccd5b2ef91af  data/analysis079.json
+0fdd20ad621f7ff68e7b2f8ea74d6f3de3a7ead44cc1ea62a3cae84960722d1e  data/full_rate_dumps_sha256.log
+3704f1c824241d7e3d515798db05bdbfcfd6e079b89753427699f4d8e960bfbc  data/net079_raw.jsonl
+87a934259a3bd5055e54595fa6811b69b02425267b79b01b921312390bf00f5d  data/patch.log
+300de2258a1b32c224ab9316a6c3c532370e07aa35bc767f1af09a1530894a7f  data/rates_e22_n08_Tle20MeV.csv.gz
+8070b7db15f0433abdbdf914e9db61b2ca3feea451b9ccd4ec286612ad1445bd  data/rates_e62_n08_Tle20MeV.csv.gz
+73f93a334fe27f376bf4f29c19f10e344208e1227ba2f4d6bfb471040dfe3028  data/rates_o22_base_Tle20MeV.csv.gz
+0b7daef922f5a578085bebc04ff0dde0129cce0bcb7697e8460325d27e7ee69c  data/rates_o22_n08_Tle20MeV.csv.gz
+357584847c748f5a52a9840ae1581e018f6251e560491308756231c7befda3f7  data/rates_o62_base_Tle20MeV.csv.gz
+fc81f38a7c5fbf729f8ad41abc2b7ba69cd5b29e81ff85225bfc203fe444ed2f  data/rates_o62_n08_Tle20MeV.csv.gz
+a2e85bfd5b9717feb593439921c26affd7674c3647822262ae30329fc57c3cbd  data/summary_e5.csv
+84e6f881118bb7f995ee3c648695773757510d319a750a97755b94731e059ed6  data/summary_orig.csv
+5dff2dba9c9bf9bd833b1a63dea035a6cee189140b7f551e85fef4e9ce64d503  data/timeline.log
+```
+
+Reprodukcja: `bash code/run079.sh`, analiza: `python3 -I code/analysis_079.py <dump> <out> ../2026-11-16/data ../2026-11-20/data/analysis077.json data/analysis079.json`. Pełne zrzuty szybkości (91 MB) nie są publikowane; ich SHA-256 w `data/full_rate_dumps_sha256.log`; odtwarzalne bitowo (V1).
