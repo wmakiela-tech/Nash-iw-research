@@ -140,3 +140,18 @@ I1 wymagane, i to zewnętrzne (inna rodzina modeli albo inna komórka):
 
 - odtworzenie tablicy R2 lub H_hi z BlackHawk v2.3;
 - przeliczenie 32 pierwiastków z plików danych.
+
+## r2 (21 XI ok. 22:15): korekta przypisania w §7 i §8
+
+§7 i DEV-1 przedstawiają szum solwera kodu natywnego tak, jakby był nowy. Nie jest nowy:
+
+- G1_FREEZE_PROPOSAL_068 (16 XI) zapisał już próg szumu solwera przy tolerancji domyślnej: ok. 1e-5 w X_n(T0) i ok. 3e-5 w Y.
+- REVIEW_071 zmierzył dryf korzenia pod reltol 1e-4: +0.023 dex (j22 orig), +0.026 (j22 E5), −0.003 i −0.005 (j62).
+- Mech-S9 ROT031 zastrzegł, że TOL-STABLE dotyczy różnicy D, a nie korzeni bezwzględnych. Pierwszeństwo należy do tych pozycji.
+
+Nowe w 085 są tylko dwa elementy:
+
+- pomiar czułości na zaburzenie tablicy o 1 ulp (V_INJ_NEG);
+- odczyt rozrzutu baz 083 między masami (1e-4).
+
+**origin_failure_mode (dodatkowy):** OWN_PRIOR_FINDING_NOT_CARRIED_FORWARD. Własny zapis z 068 nie trafił do projektu bramki V_INJ_NEG. Łatka: przy projektowaniu bramki na kodzie natywnym najpierw przeszukuję własne REVIEW/PROPOSAL pod kątem „szum”, „tol” i „noise”.

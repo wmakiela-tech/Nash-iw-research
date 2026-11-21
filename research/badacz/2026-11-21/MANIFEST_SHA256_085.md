@@ -89,3 +89,14 @@ d44d18a181ededbfb55d2de51a95d799414da949bc1637df07dedee8f5790a9d  data/hadrons_0
 ```
 
 Analiza powtórzona bitowo (SHA analysis085.json powyżej). Tablice przebiegu 2 bajtowo równe przebiegowi 1 (`tables_sha256_085.log` = `tables_sha256_085_run1.log`).
+
+## SYNTH_087 (diagnostyka E4 i budżet; opisowe)
+
+```
+0ea4ee1a3c0f498b91aef3b9acf793ec739748029e8e3414541cda1022291d53  code/gen_hadron_rows_087.jl
+fc35cda1e1813b03ace019c2e293c98783a9335bc4589ec1cadc47a7abf10144  code/budget_087.py
+5f36d45b85fe3ba5815ea4c322169a7583e52f2c7d9b1c56c52bdaef99b0b3f6  data/hadrons_087_PY_rows_1e8_1e9.dat
+1c5ab8a570d6e015658e64143a4ce6b615a39c2b32ff48efa9b58587ae9230e3  data/budget087.json
+```
+
+Wiersze E4: `julia gen_hadron_rows_087.jl <wuxu_src> <BlackHawk_v2.3> <out> 0 5 1e5 100 E4PY 1e8 1e9 11` (BlackHawk jak w PREREG_085).
