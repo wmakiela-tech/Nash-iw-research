@@ -1,0 +1,270 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT038_SOURCE_ANISOTROPIC_ALIAS_BOUNDARY_REPAIR_NONGAUSSIAN_FALSIFIER_CURATED_001_20261121",
+  "date": "2026-11-21",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "original_source": {
+    "M13_public_Python_8970B_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "B25_7501B_git_blob_sha1": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "native_original_M13_41_mode_B_and_all_5_masks_plus_full_inner_executed": true,
+    "alpha_exact": "1/20",
+    "iv_dps": 40,
+    "prior_complete_source_evidence_locked": [
+      "ROT034",
+      "ROT035",
+      "ROT036",
+      "ROT037"
+    ],
+    "historical_full_DTC0a_runtime_bytes_available": false
+  },
+  "exact_original_M13_masks": {
+    "N": 41,
+    "site_count": 68921,
+    "regions": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "sites": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "six_deep_points_radius3_source_all_region5": true
+  },
+  "hypothetical_noise": {
+    "site_covariance": "beta0 I + beta_x A_x + beta_y A_y + beta_z A_z + beta_xy A_xy + beta_xz A_xz + beta_yz A_yz + beta_body A_body, each normalized periodic signed nearest-neighbor shift",
+    "parameter_order": [
+      "beta0",
+      "beta_x",
+      "beta_y",
+      "beta_z",
+      "beta_xy",
+      "beta_xz",
+      "beta_yz",
+      "beta_body",
+      "beta_cal_raw"
+    ],
+    "independent_random_full_sixth_calibration_only": "beta_cal_raw",
+    "sufficient_SPD_guard": "beta0>sum seven nonnegative neighbor beta; both models have beta0=1, neighbor sum=3/10, min eigen >=7/10",
+    "original_site_detectors_or_repeated_noise_experiment_authenticated": false
+  },
+  "source_observations": {
+    "original_six_mean_region_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "three_old_interior_pairs": [
+      [
+        [
+          9,
+          19,
+          20
+        ],
+        [
+          19,
+          9,
+          20
+        ]
+      ],
+      [
+        [
+          10,
+          19,
+          20
+        ],
+        [
+          19,
+          10,
+          20
+        ]
+      ],
+      [
+        [
+          9,
+          20,
+          21
+        ],
+        [
+          20,
+          9,
+          21
+        ]
+      ]
+    ],
+    "new_boundary_pair": [
+      [
+        3,
+        4,
+        3
+      ],
+      [
+        4,
+        3,
+        3
+      ]
+    ],
+    "new_boundary_original_region_label": 2,
+    "all_old_six_region_indicator_P_even": true,
+    "all_four_site_difference_contrasts_P_odd_under_x_y_exchange": true
+  },
+  "mathematical_robustness": {
+    "original_deep_three_cross_old_six_source_exact_zero_for_any_stationary_site_covariance_support_in_max_coordinate_radius3": true,
+    "also_zero_for_any_range_if_covariance_commutes_x_y_coordinate_swap": true,
+    "arbitrary_nongaussian_zero_covariance_not_independence": true
+  },
+  "nine_param_alias": {
+    "model_A_beta_exact": [
+      "1",
+      "1/25",
+      "1/25",
+      "1/25",
+      "1/30",
+      "1/30",
+      "1/30",
+      "2/25",
+      "1/2500"
+    ],
+    "model_B_beta_exact": [
+      "1",
+      "1/20",
+      "3/100",
+      "1/25",
+      "1/30",
+      "13/300",
+      "7/300",
+      "2/25",
+      "1/2500"
+    ],
+    "both_site_noise_SPD_strict": true,
+    "both_gaussian_source_mean_identical": true,
+    "source_template_design_old_six_plus_three_deep_shape": [
+      45,
+      9
+    ],
+    "exact_old_nine_covariance_design_rank": 7,
+    "two_unobservable_difference_directions": [
+      "beta_x-beta_y",
+      "beta_xz-beta_yz"
+    ],
+    "entire_old_nine_covariance_equal_exactly": true,
+    "entire_old_nine_Gaussian_laws_equal_exactly": true,
+    "KL_old_nine_exact": "0",
+    "equal_prior_any_sample_size_best_classification": "1/2"
+  },
+  "new_boundary_intervention": {
+    "source_direction_x_minus_y_two_neighbor_histogram": [
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    "source_direction_xz_minus_yz_four_neighbor_histogram": [
+      0,
+      1,
+      -2,
+      1,
+      0,
+      0
+    ],
+    "histogram_matrix_exact_rank": 2,
+    "source_template_design_all_ten_shape": [
+      55,
+      9
+    ],
+    "exact_full_ten_covariance_design_rank": 9,
+    "recover_beta_xz_minus_beta_yz": "4*6146*Cov(original_region3_mean,Z_boundary)",
+    "recover_beta_x_minus_beta_y": "2*7778*Cov(original_region1_mean,Z_boundary)-2*6146*Cov(original_region3_mean,Z_boundary)",
+    "B_minus_A_original_six_region_to_boundary_cov_exact": [
+      "0",
+      "3/1555600",
+      "-1/346900",
+      "1/1229200",
+      "0",
+      "0"
+    ],
+    "two_dimensional_source_marginal": [
+      "original_region3_mean",
+      "new_boundary_contrast"
+    ],
+    "common_old_region3_variance_exact": "34317/188866580",
+    "common_boundary_variance_exact": "119/60",
+    "model_A_two_dimensional_cross_cov": "0",
+    "model_B_two_dimensional_cross_cov": "1/1229200",
+    "normalized_squared_cross_correlation_exact": "1/544496400",
+    "KL_B_to_A_two_dimensional_exact": "-log(1-1/544496400)/2",
+    "rigorous_positive_lower_KL_exact": "1/1088992800",
+    "full_ten_Gaussian_KL_lower_strict_greater_than": "1e-10",
+    "original_three_deep_odd_probes_cross_boundary_probe_exact_zero": true
+  },
+  "nonGaussian_negative_control": {
+    "site_error_model": "sqrt(S) times original centered Gaussian full site vector; S=1/2 or3/2 each probability1/2, common per synthetic snapshot and independent of Gaussian site field",
+    "E_S": "1",
+    "Var_S": "1/4",
+    "original_site_covariance_unchanged_exactly": true,
+    "Cov_old_region3_and_interior_Z0_exact": "0",
+    "Cov_squared_old_region3_and_squared_Z0_exact": "34317/377733160",
+    "exact_statistical_dependence_despite_zero_cross_covariance": true,
+    "Gaussian_Wishart_chi_square_error_bounds_not_automatically_transferable": true
+  },
+  "separately_written_same_cell_original_N41_cubed_Fourier": {
+    "number_of_raw_observation_weight_FFT_fields": 10,
+    "number_of_independent_site_covariance_spectral_symbols": 8,
+    "old_nine_full_covariance_source_alias_numeric_PASS": true,
+    "new_boundary_six_cross_covariance_exact_fraction_numeric_MATCH": true,
+    "normalized_squared_correlation_source_exact_numeric_MATCH": true,
+    "original_unmodified_M13_full_41_mode_B_native_inner_vs_3d_spatial_FFT_relative_error": "1.111405684871136e-16",
+    "not_an_external_independent_I1": true
+  },
+  "provenance": {
+    "user_local_zip": "Geeky_S12_ROT038_exact_anisotropic_alias_boundary_probe_and_nongaussian_guard.zip",
+    "zip_bytes": 46957,
+    "zip_sha256": "47ee55e804faa2c60eee7ac4bbc32ebd0da6ecce99eefc9a1fcaccaaba51e06d",
+    "zip_crc": "PASS",
+    "zip_members": 16,
+    "full_archive_exact_member_byte_readbacks": "16/16 PASS",
+    "manifest_payload_SHA256": "15/15 PASS",
+    "new_primary_source_Python_SHA256": "dc50e030a53238f0fff4706733fb73e126be0545568154c8e0679855b35c03fb",
+    "new_primary_full_JSON_SHA256": "c58420e4b885d92d38caf03b560088f659f02911274e40903871c7f8593d3373",
+    "new_independent_Fourier_Python_SHA256": "fe2bde2e1d3de168d02cedc769c3b2c1bc127e6136fa3a6d092fb8a4488d8cea",
+    "new_independent_Fourier_full_JSON_SHA256": "9940b8973408f781091d0c3b29688082ff379079f1ec0079136496573ddcf15a",
+    "new_nongaussian_Python_SHA256": "da3b506b5d39ba2336ae3565c39e62eeee825c89e7c12e2db51886f825d0b307",
+    "new_nongaussian_full_JSON_SHA256": "dbe5ac808c7508a9846f3e9d72b0d06cf17daa6ebbffb5ee36436ee92703b44d",
+    "new_replay_tamper_Python_SHA256": "9981e313013781c2fe3993d0eb4ea95ca5fe709a898a3d9b42db6849ea6be62b",
+    "full_replay_tamper_receipt_SHA256": "e98efc48064de881c16f6fac92b97c3e6e232eda4f23e810afd10bc31ec64287",
+    "complete_JSON_clean_sci_replays": "3/3 PASS",
+    "one_byte_disposable_tampers_rejected_pre_source_import": "10/10 PASS",
+    "full_zip_only_all_programs_JSON_byte_replays": "4/4 PASS",
+    "complete_executed_scientific_Python_exact_public_GitHub_byte_mirror": false
+  },
+  "review_ceiling": {
+    "M13": "ORIGINAL FIRST",
+    "Geeky_ROT037": "FIRST isotropic three-probe mechanism tomography; this does not retract it",
+    "M15_ROT030": "FIRST global Fourier one-real contrast not this result",
+    "Geeky_ROT038": "AUTHOR_SAME_CELL_NEW; EXTERNAL_DIFFERENT_CELL_I1_PENDING",
+    "KN15_native_BW_ingestion": "UNVERIFIED",
+    "M15_CANON_EXEC_SIGN": "UNVERIFIED",
+    "ceilings": [
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE",
+      "NO_ACTUAL_SITE_SENSORS",
+      "NO_REAL_IID_NOISE_SAMPLES",
+      "NO_HISTORIC_FULL_DTC0A_PRODUCER"
+    ]
+  },
+  "public_science_report_commit": "86786771d83211c32e5d72848d83a9586aa43676"
+}
