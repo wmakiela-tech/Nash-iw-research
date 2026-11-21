@@ -1,0 +1,229 @@
+{
+  "artifact_id": "IW_M15_ROT034_ORIGINAL_M13_FIVE_MEAN_FREE_MODES_CUBIC_SPECTRAL_CALIBRATION_IV90_001_20261121",
+  "return_id": "IW_M15_ROT034_FOUR_MODE_CUBIC_CALIBRATION_NO_GO_AND_FIVE_MEAN_FREE_FOURIER_RECOVERY_001_20261121",
+  "date": "2026-11-21",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "result_class": "ORIGINAL_M13_NATIVE_SOURCE_IV90_4_CALIBRATION_NUISANCE_FOUR_MODE_COMPOSITE_NO_GO_FIVE_MODE_GAUSSIAN_RECOVERY",
+  "firstness": {
+    "M13": "FIRST original N41 B Fourier public helper",
+    "Geeky_ROT035": "FIRST two exact rational legal Gaussian site covariance shape hypotheses",
+    "Geeky_ROT036_039": "FIRST separate original symmetry-odd site-pair and anisotropic tomography results",
+    "M15_ROT033": "FIRST bounded quadratic noise coloration four frequency mean-free invariant",
+    "M15_ROT034": "NEW source-conditional cubic-coloration specific four-mode composite alias and five-frequency barycentric recovery; no general theorem novelty"
+  },
+  "original_M13": {
+    "git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "source_full_8970_bytes_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "actual_native_tensor_polys_41_B_calc_inner_k0_executed_in_both_new_programs": true,
+    "grid_41cubed": 68921,
+    "source_sparse_B_modes": 41,
+    "source_B_energy_frequency_differences": 221,
+    "all_five_new_modes_exactly_outside_original_source_B_energy_support": true,
+    "complete_historical_original_DTC0a_producer_not_recovered": true
+  },
+  "parent_original_source_custody": {
+    "original_ROT033_full_IV85_source_JSON_SHA256": "dfbb9ac5bf50a6c772f6c4491d13c3d8d8cac504664f3dc3828ff86fafe86164",
+    "original_ROT029_exact_two_Gaussian_rational_source_JSON_SHA256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "both_lock_verified_before_new_science": true,
+    "not_claimed_newly_recomputed_in_rotation_034": true
+  },
+  "models": {
+    "source_A": {
+      "beta0": "1",
+      "theta_axis": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25"
+    },
+    "source_B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_axis": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425"
+    },
+    "hypothetical_site_error": "centered Gaussian stationarity, N41^3 original mathematical RAW site energy density",
+    "new_four_coefficient_coloration": "v_X(k;s,gamma,lambda,mu)=s*exp(gamma*a(k)+lambda*a(k)^2+mu*a(k)^3)*v_X(k), a=(cos kx+cos ky+cos kz)/3, s>0, gamma/lambda/mu any real, parameters common to all modes of SAME hypothesis but freely different A and B",
+    "all_full_site_covariances_strict_SPD": true,
+    "physically_observed": false
+  },
+  "negative_result": {
+    "the_old_ROT033_specific_four_modes": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ]
+    ],
+    "four_distinct_axial_a_values": true,
+    "exact_four_by_four_log_variance_Vandermonde_invertible": true,
+    "composite_observation_law_A_and_B_families_IDENTICAL_for_any_number_of_IID_snapshots_under_four_freely_fitted_coefficients": true,
+    "does_NOT_claim_no_go_for_every_four_frequency_design": true
+  },
+  "positive_result": {
+    "five_modes": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ]
+    ],
+    "all_five_original_M13_B_energy_fourier_means_zero_exact_for_all_source_alpha": true,
+    "weights": "b_i=1/product_{j!=i}(a_i-a_j);w_i=b_i/b_4 with w_4=1",
+    "approximate_weights": [
+      0.008380890568890345,
+      -0.9833803642176054,
+      -0.03284229343191634,
+      0.007841767080631386,
+      1
+    ],
+    "sympy_exact_symbolic_generic_five_node_moments_degree_0_1_2_3": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "sympy_exact_symbolic_generic_degree_4_moment": "1 before normalization; NOT zero",
+    "all_four_log_calibration_nuisances_eliminated_exact": true,
+    "quartic_spectral_calibration_not_eliminated": true,
+    "q_B_over_A_strict_IV90": [
+      "0.99444900986983392090649914731939148900305251011308418757706461914057524157623831734187675071379482806112458263",
+      "0.99444900986983392090649914731939148900305251326600573230790302871896680397854961272246611993595531451452822138"
+    ],
+    "log_q_strict_IV90": [
+      "-0.0055664541294344194205721206162645782642460605941525963153458428433377468279766529151528661029783582088280491767",
+      "-0.0055664541294344194205721206162645782642460575397598498573461335642709207507375855152069146690103869570932741357"
+    ],
+    "positive_weight_sum_P_IV90": [
+      "1.0162226576495217297115684284891037846920465982218170110320056896964323110072633890784093225630797995168965104",
+      "1.0162226576495217297115684284891037846920466987649818263376305284740299120587458084372036522030864230865458795"
+    ],
+    "strict_q_less_than_0p995": true,
+    "numeric_exploratory_fifth_mode_selection_NOT_certified_global_optimality": true
+  },
+  "binary_Gaussian_hypothesis_test": {
+    "raw_observation": "five Fourier cosine/sine pairs from EACH of n independent COMPLETE original mathematical 68921-site RAW observations",
+    "statistic": "T=product_i(S_i/v_A_i)^w_i; under A T=product U_i^w_i, under B T=q*product U_i^w_i; U_i independent chi_square_(2n)",
+    "decision": "Choose B iff T<sqrt(q)",
+    "uniform_in_s_gamma_lambda_mu": true,
+    "delta": "1/850",
+    "IV90_strict_margin": [
+      "0.00078018029134773232089516088587596880400981918156101634262175254462810805134803126762066441832680451238614448371",
+      "0.0007801802913477323208951608858759688040098235606187173576750991812830558323359415184392327824385912532245316393"
+    ],
+    "conditional_error_upper": "10*exp(-n*delta^2/4)",
+    "finite_n_source_sufficient": [
+      {
+        "correct_more_than_percent": 75,
+        "n_full_raw_spatial_IID_snapshots": 12000000,
+        "error_upper_less_than": 0.157291
+      },
+      {
+        "correct_more_than_percent": 90,
+        "n_full_raw_spatial_IID_snapshots": 14000000,
+        "error_upper_less_than": 0.078733
+      },
+      {
+        "correct_more_than_percent": 95,
+        "n_full_raw_spatial_IID_snapshots": 16000000,
+        "error_upper_less_than": 0.03941
+      },
+      {
+        "correct_more_than_percent": 99,
+        "n_full_raw_spatial_IID_snapshots": 21000000,
+        "error_upper_less_than": 0.006986
+      }
+    ],
+    "no_physical_feasibility_or_minimax_optimality_claim": true
+  },
+  "independent_actual_original_site_source": {
+    "reconstructed_unchanged_native_M13_nine_tensor_component_fields_over_all_41cubed_sites": true,
+    "ten_original_frequency_cosine_sine_source_means_float64_below": "2e-26",
+    "full_10x10_real_Gaussian_projected_covariance": "actual N41^3 signed 6 axial, 12 face, 8 body raw site shifts and nonlocal cubic FFT spectral operator",
+    "original_site_covariance_cases": 6,
+    "all_six_10x10_strictly_numerically_SPD": true,
+    "max_offdiagonal_absolute_less_than": 5e-12,
+    "second_program_new_SVD_four_by_five_nuisance_null_moment_residual_less_than": 2e-15,
+    "three_independent_spatial_q_controls": [
+      {
+        "calibration": "none",
+        "q": 0.9944490098698339
+      },
+      {
+        "calibration": "shared color A=B at (2.1,.3,-.2,.1)",
+        "q": 0.9944490098698338
+      },
+      {
+        "calibration": "A(.35,-.6,.5,-.3), B(2.1,.3,-.2,.1)",
+        "q": 0.9944490098698339
+      }
+    ],
+    "float64_diagnostic_relative_tolerance": 3e-10,
+    "IV90_rigor_from_primary_source_not_numeric_FFT": true
+  },
+  "full_reproducer": {
+    "ZIP_filename": "IW_M15_ROT034_ORIGINAL_M13_CUBIC_SPECTRAL_CALIBRATION_FIVE_MEAN_FREE_MODES_IV90_REPRO_001_20261121.zip",
+    "ZIP_actual_bytes": 45885,
+    "ZIP_sha256": "a7c50c851e62ed2faf5bf5983ed2eb968a825a612dff3aad2f987532c7925ed5",
+    "ZIP_CRC": "PASS",
+    "manifest_payload_sha256": "12/12 PASS",
+    "all_archived_member_exact_full_reread": "13/13 PASS",
+    "new_original_IV90_executed_Python_sha256": "a236c7bf81fc042a209fe03b7a62b1d055fa933d242732a8ad0b8afaf765a109",
+    "full_actual_original_IV90_JSON_sha256": "bae8a0810893cfe2a67af9c90a0e263f7cd710445f53663938f7e909be1c3870",
+    "independent_actual_original_spatial_Python_sha256": "2feacfd9c78846753f7d0705b62aeec31d64ce45ca41f0363ca6c2af6997c108",
+    "full_independent_41cubed_spatial_JSON_sha256": "a4291d3fddfaa1b4207ae5b18e715c264aea3dea02f27401d3e541c5db6c252f",
+    "full_actual_nine_negative_receipt_sha256": "b51bf0f549a5ae76b31aa435c689563e5910d6403800eeea3703b1eccc36126e",
+    "two_isolated_python_I_full_original_source_output_JSON_replays": "2/2 BYTE-IDENTICAL PASS",
+    "nine_real_adversarial_source_and_science_negative_fixtures": "9/9 FAIL-CLOSED PASS",
+    "original_source_and_all_runnable_new_code_in_user_local_ZIP_not_falsely_mirrored_to_public_GitHub": true
+  },
+  "limits": [
+    "Only original public M13 auxiliary Fourier B source; full historical dtc0a runtime unverified",
+    "Gaussian noise spectra, four arbitrary nuisance calibration parameters, full spatial 68921-site measurements hypothetical and not physical data",
+    "No authenticated raw site detector, five new Fourier sensor pairs, empirical noise samples or million-scale IID snapshot acquisition",
+    "Specific four old modes fail; not a universal four-mode impossibility theorem",
+    "Specific fifth new mode works; not global minimum sensors, global optimization or source-independent general math novelty",
+    "No model of independent per-frequency calibration or quartic nuisance eliminated",
+    "Geeky ROT034-039 priority preserved",
+    "Internal nonblind original-source I1 only, no independent REC13/AUD3 acceptance or external blind I3, no verified KN15 BW provider ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
