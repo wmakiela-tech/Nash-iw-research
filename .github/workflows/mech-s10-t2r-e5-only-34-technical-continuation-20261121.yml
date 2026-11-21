@@ -1,0 +1,122 @@
+name: Mech-S10 T2R missing E5 34-call one-shot authorized technical continuation
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-t2r-e5-only-34-technical-continuation-20261121.yml"
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: mech-s10-t2r-e5-only34-20261121
+  cancel-in-progress: false
+jobs:
+  e5-only-34-original-author-calls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s10_t2r_e5_native34_continuation"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact prereg and precommitted E5-only driver SHA preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          printf '%s\n' "$GITHUB_RUN_ID" > "$OUTDIR/CONTINUATION_NATIVE_RUN_ID"
+          echo 44749222324 > "$OUTDIR/PREVIOUS_NATIVE_ORIG_RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_PUBLIC_REPO_COMMIT"
+          julia --version > "$OUTDIR/JULIA_VERSION"
+          test "$(git hash-object research/mech-s10/2026-11-21/IW_MECH_S10_T2R_E5_ONLY_34_MISSING_NATIVE_CONTINUATION_PREREG_001_20261121.md)" = "062dae69fa51502a55569c696659398887e99973"
+          test "$(git hash-object research/mech-s10/2026-11-20/code/mech_s10_t2r_E5_only_softscope_fix_v002_NOT_EXECUTED.jl)" = "24d336d36a91690141cff74e7f0b0d8e8e6bd87d"
+          test "$(git hash-object research/mech-s10/2026-11-20/code/mech_s10_t2r_independent_ols7_referee.py)" = "a144f840fb2ccfa72fdc48e12637b66d8baff126"
+          test "$(git hash-object research/mech-s6/2026-10-17/apply_wuxu_charge_pair_source_map.py)" = "4d1f2be94510c576e4f48752911f88ede8b50474"
+          test "$(git hash-object research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl)" = "db9b5c8a462933d329136de572d5d3478de8612b"
+          test "$(git hash-object research/badacz/2026-11-16/code/cfg069_e5_default.dat)" = "e10df7d3a5c3019010da7e5906fd16a6c823baea"
+          test "$(git hash-object research/badacz/2026-11-16/data/t2_orig_default.csv)" = "84945f4b387a59b4f97aa16017a016941c63e83a"
+          test "$(git hash-object research/badacz/2026-11-16/data/t2_e5_default.csv)" = "7e61b28a85f26f5dfd28a56ec887d9ebbba73e5c"
+          grep -Fq 'global main_source=read(patched,String)' research/mech-s10/2026-11-20/code/mech_s10_t2r_E5_only_softscope_fix_v002_NOT_EXECUTED.jl
+          grep -Fq 'arm=="e5" || error("E5_ONLY_TECHNICAL_CONTINUATION_NOT_AUTHORIZED_TO_RUN")' research/mech-s10/2026-11-20/code/mech_s10_t2r_E5_only_softscope_fix_v002_NOT_EXECUTED.jl
+          python3 -m py_compile research/mech-s10/2026-11-20/code/mech_s10_t2r_independent_ols7_referee.py
+          echo "FROZEN_HUMAN_APPROVAL_AND_E5_ONLY_DRIVER_PASS" > "$OUTDIR/PREREG_GATE"
+      - name: Read original 34 native orig points from previous authenticated runner artifact without recalculating
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR/PREVIOUS_RUN_READ_ONLY"
+          gh run download 44749222324 -R "$GITHUB_REPOSITORY" --name "mech-s10-t2r-native68-one-shot-20261120" --dir "$OUTDIR/PREVIOUS_RUN_READ_ONLY"
+          test -f "$OUTDIR/PREVIOUS_RUN_READ_ONLY/mech_s10_t2r_orig.csv"
+          test "$(sha256sum "$OUTDIR/PREVIOUS_RUN_READ_ONLY/mech_s10_t2r_orig.csv" | cut -d ' ' -f1)" = "98ae768c95f7d9de2aba90dce52fd7a53d3296e11212b758bdb53fa5ef62b5b7"
+          test "$(grep -c '^orig,default,' "$OUTDIR/PREVIOUS_RUN_READ_ONLY/mech_s10_t2r_orig.csv")" -eq 34
+          cp "$OUTDIR/PREVIOUS_RUN_READ_ONLY/mech_s10_t2r_orig.csv" "$OUTDIR/mech_s10_t2r_orig_VERIFIED_PREVIOUS_RUN.csv"
+          cmp "$OUTDIR/PREVIOUS_RUN_READ_ONLY/mech_s10_t2r_orig.csv" "$OUTDIR/mech_s10_t2r_orig_VERIFIED_PREVIOUS_RUN.csv"
+          echo "PREVIOUS_NATIVE_ORIG_34_READ_ONLY_REHYDRATED_PASS" > "$OUTDIR/ORIG_CUSTODY_GATE"
+      - name: Exact original Wu-Xu scientific source and charge-pair patch preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan-parameters.jl)" = "53faee65beda383348580c28d0424188da69b660"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/tool_script-parameters.jl)" = "0d7198ff3557bdbd5753000bb07a7a7405cc24f5"
+          python3 -I research/mech-s6/2026-10-17/apply_wuxu_charge_pair_source_map.py _wuxu/arXiv-2509.05618/main-scan.jl "$OUTDIR/STATIC_E5_MAIN_SCAN.jl" > "$OUTDIR/E5_PATCH_STATIC_STDOUT"
+          grep -Fq 'd_n_π_dt_from_PBH = 0.5 * dN_over_dt_π(m_PBH) * n_PBH' "$OUTDIR/STATIC_E5_MAIN_SCAN.jl"
+          grep -Fq 'd_n_K_dt_from_PBH = 0.5 * dN_over_dt_K(m_PBH) * n_PBH' "$OUTDIR/STATIC_E5_MAIN_SCAN.jl"
+          grep -Fq 'd_n_proton_dt_from_PBH = 0.5 * dN_over_dt_proton(m_PBH) * n_PBH' "$OUTDIR/STATIC_E5_MAIN_SCAN.jl"
+          grep -Fq 'd_n_neutron_dt_from_PBH = 0.5 * dN_over_dt_neutron(m_PBH) * n_PBH' "$OUTDIR/STATIC_E5_MAIN_SCAN.jl"
+          grep -Fq 'd_n_K⁰ᴸ_dt_from_PBH = dN_over_dt_K⁰ᴸ(m_PBH) * n_PBH' "$OUTDIR/STATIC_E5_MAIN_SCAN.jl"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/ORIGINAL_AUTHOR_COMMIT"
+          echo "E5_CHARGE_SOURCE_CONTRACT_AND_ORIGINAL_GIT_PASS" > "$OUTDIR/UPSTREAM_GATE"
+      - name: Rehydrate already native-proven original Julia environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" > "$OUTDIR/ENV_STDOUT" 2> "$OUTDIR/ENV_STDERR"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' > "$OUTDIR/PACKAGE_STATUS" 2>&1
+          echo "FROZEN_NATIVE_ENV_PASS" > "$OUTDIR/ENV_GATE"
+      - name: Execute ONLY 34 missing E5 native original Wu-Xu 10D calls
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" research/mech-s10/2026-11-20/code/mech_s10_t2r_E5_only_softscope_fix_v002_NOT_EXECUTED.jl "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" e5 "$GITHUB_WORKSPACE/$OUTDIR/mech_s10_t2r_e5_NEW_NATIVE_ONLY.csv" > "$OUTDIR/E5_NATIVE_STDOUT" 2> "$OUTDIR/E5_NATIVE_STDERR"
+          test "$(grep -c '^e5,default,' "$OUTDIR/mech_s10_t2r_e5_NEW_NATIVE_ONLY.csv")" -eq 34
+          test "$(grep -c '^NATIVE_T2R_DONE arm=e5 ' "$OUTDIR/E5_NATIVE_STDOUT")" -eq 34
+          if grep -Fq 'NATIVE_T2R_DONE arm=orig' "$OUTDIR/E5_NATIVE_STDOUT"; then echo DUPLICATE_ORIG_NATIVE_FORBIDDEN >&2; exit 1; fi
+          echo "NEW_NATIVE_E5_ONLY_34_PASS" > "$OUTDIR/E5_NATIVE_GATE"
+      - name: Independent exact 34+34 source-native OLS7 roots and shift
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I research/mech-s10/2026-11-20/code/mech_s10_t2r_independent_ols7_referee.py \
+            "$OUTDIR/mech_s10_t2r_orig_VERIFIED_PREVIOUS_RUN.csv" \
+            "$OUTDIR/mech_s10_t2r_e5_NEW_NATIVE_ONLY.csv" \
+            research/badacz/2026-11-16/data/t2_orig_default.csv \
+            research/badacz/2026-11-16/data/t2_e5_default.csv \
+            "$OUTDIR/T2R_INDEPENDENT_FULL_34PLUS34_ANALYSIS.json" > "$OUTDIR/INDEPENDENT_REFEREE_STDOUT" 2> "$OUTDIR/INDEPENDENT_REFEREE_STDERR"
+          test -s "$OUTDIR/T2R_INDEPENDENT_FULL_34PLUS34_ANALYSIS.json"
+          echo "INDEPENDENT_RSHIFT_D22_D62_PASS" > "$OUTDIR/FINAL_RSHIFT_GATE"
+      - name: Preserve original outputs and all failure logs by SHA256 manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - name: Upload one-shot native E5 technical continuation and original read-only custody
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-t2r-e5-only34-native-continuation-20261121
+          path: mech_s10_t2r_e5_native34_continuation/
+          if-no-files-found: error
