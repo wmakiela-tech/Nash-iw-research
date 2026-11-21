@@ -100,3 +100,18 @@ fc35cda1e1813b03ace019c2e293c98783a9335bc4589ec1cadc47a7abf10144  code/budget_08
 ```
 
 Wiersze E4: `julia gen_hadron_rows_087.jl <wuxu_src> <BlackHawk_v2.3> <out> 0 5 1e5 100 E4PY 1e8 1e9 11` (BlackHawk jak w PREREG_085).
+
+## PREREG_088 (E4, j22) — zamrożenie
+
+```
+e8d05efb01450d3fa2796e2c2e8c10a615d0162bee2b66f0096216cc99a7584a  code/build_tables_088.py
+8c73ffff8a171440289955776719db3f577f31aebb501ec1043911e380b1bf73  code/cfg088_a_orig.dat
+417b733d4a0aa1573bd52cd88f9bffe326273ae2ca61908928836d3beaf32ef1  code/cfg088_c_orig.dat
+f0dad664af47b2934c3f2202920bfe951a281dee6e38a4c8ffbe69b9c5f2567d  code/run_net_088.py
+749a4a5dae03711c9992a06a8ab3c5cfb16f146c0e7f105edf09bc591ac2c7a6  code/analysis_088.py
+99a584c9205c980ca6132ac032bfc7058da5189bef8f8bc600dd180b985d7301  code/run088.sh
+fbbce938b7b798a18500d16d9795acfb958dc66e40ed73e7715fb57a03d0e0ee  code/rate_dump_081.jl
+10a24000e3026f437e24b10c272953b80ae559fa9fb30807ef6c3c2266a8b6de  code/dedupe_rates_081.py
+866f90fc75d453751b9d7a1906a3718c44a9337c32f18574a5a1767319fef763  code/net_rate_079.py
+93989e68411ff7d641bd780e6d902fa495eaef892bfe954cef13a9c744b7fac1  code/prym_rate_patch_079.py
+```
