@@ -1,0 +1,42 @@
+{
+ "orig_22": {
+  "root_M_D": -17.221191616641157,
+  "n_nodes": 28,
+  "nearest_root_node": "o22_1720"
+ },
+ "orig_38": {
+  "root_M_D": -19.008474053070035,
+  "n_nodes": 28,
+  "nearest_root_node": "o38_1900"
+ },
+ "orig_62": {
+  "root_M_D": -19.391327839463816,
+  "n_nodes": 28,
+  "nearest_root_node": "o62_1940"
+ },
+ "orig_90": {
+  "root_M_D": -19.366875663807885,
+  "n_nodes": 28,
+  "nearest_root_node": "o90_1935"
+ },
+ "e5_22": {
+  "root_M_D": -16.94889235572826,
+  "n_nodes": 28,
+  "nearest_root_node": "e22_1695"
+ },
+ "e5_38": {
+  "root_M_D": -18.732644444519597,
+  "n_nodes": 28,
+  "nearest_root_node": "e38_1875"
+ },
+ "e5_62": {
+  "root_M_D": -19.093204254277197,
+  "n_nodes": 28,
+  "nearest_root_node": "e62_1910"
+ },
+ "e5_90": {
+  "root_M_D": -19.06619303418228,
+  "n_nodes": 28,
+  "nearest_root_node": "e90_1905"
+ }
+}
