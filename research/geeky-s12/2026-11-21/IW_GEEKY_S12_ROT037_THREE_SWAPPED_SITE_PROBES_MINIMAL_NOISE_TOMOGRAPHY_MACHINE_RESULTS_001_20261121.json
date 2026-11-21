@@ -186,8 +186,8 @@
   "original_ROT035_exact_rational_source_model_B": {
     "beta0": "99779719687217/100000000000000",
     "beta_axis": "158434737089113/1250000000000000",
-    "beta_face": "93110637627687/9977971968721700",
-    "beta_body": "205860943554709/2494492992180425",
+    "beta_face": "93110637627687/1000000000000000",
+    "beta_body": "205860943554709/2500000000000000",
     "beta_cal_raw": "1/2500",
     "actual_exact_B_coefficients_in_full_original_source_JSON": true,
     "all_four_beta_recovered_exact": true
