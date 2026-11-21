@@ -1,0 +1,191 @@
+{
+  "artifact_id": "IW_M15_ROT031_ORIGINAL_M13_COMMON_UNKNOWN_SCALE_SINGLE_MODE_FALSIFIER_AND_TWO_FREQUENCY_RECOVERY_001_20261121",
+  "return_id": "IW_M15_ROT031_SINGLE_FREQUENCY_CALIBRATION_NO_GO_AND_TWO_SOURCE_EXTREME_FREQUENCY_SCALE_FREE_GAUSSIAN_TEST_001_20261121",
+  "date": "2026-11-21",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "class": "NEW_SOURCE_ONLY_ORIGINAL_M13_IV80_PLUS_INDEPENDENT_ORIGINAL_41CUBED_SITE_FFT_AND_CHI_SQUARED_SCALE_FREE_GAUSSIAN_TEST",
+  "firstness": {
+    "M13": "FIRST original auxiliary N41 B Fourier Lie TT source",
+    "Geeky_ROT034": "FIRST source exact six-mask five-parameter covariance tomography",
+    "Geeky_ROT035": "FIRST exact rational two source-legal raw site Gaussian covariance candidate laws whose six-mask KL is near-zero",
+    "Geeky_ROT036": "FIRST distinct symmetry-odd TWO-SITE seventh probe, exact Gaussian independence and finite-sample testing",
+    "M15_ROT030": "FIRST source-specific optimal ONE known-scale Fourier spatial Gaussian KL projection",
+    "M15_ROT031": "NEW falsification of extending that one-frequency result to freely unknown common noise scale, and SOURCE-SPECIFIC scale-invariant two-frequency recovery with maximal two-dimensional generalized covariance shape ratio"
+  },
+  "original_source_provenance": {
+    "path": "research/m13/2026-10-24/verify_m13_rot33_interval.py",
+    "Git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "full_original_file_bytes": 8970,
+    "full_original_file_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "actual_native_unmodified_original_M13_tensor_polys_calc_and_inner_executed": true,
+    "actual_original_full_historical_dtc0a_runtime_recovered": false,
+    "N": 41,
+    "site_count": 68921,
+    "B_Fourier_mode_count": 41,
+    "B_energy_q_frequency_count": 221,
+    "frequencies": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ]
+    ],
+    "M13_deterministic_source_Fourier_mean_exactly_zero_at_both_frequencies_for_any_alpha": true,
+    "prior_M15_ROT030_independent_IV70_JSON_SHA256": "48738b3c1b5cf23163cd9144f96fbd2ae7723c4b5a64d8e5ad2dd57f50b9456f",
+    "prior_M15_ROT029_independent_exact_rational_JSON_SHA256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90"
+  },
+  "model": {
+    "hypothetical_stationary_gaussian_site_covariance": "s*beta0*(I+theta_ax*Aaxis+theta_face*Aface+theta_body*Abody)",
+    "unrestricted_unknown_nuisance": "ONE COMMON unknown positive site-noise variance scale s>0 shared by both Fourier frequencies within each hypothesis",
+    "A": {
+      "beta0": "1",
+      "theta_ax": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_ax": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425"
+    },
+    "real_site_energy_measurements_authenticated": false,
+    "IID_full_68921_spatial_snapshots_hypothetical": true
+  },
+  "theorems": {
+    "single_frequency_negative": "For every one chosen spatial Fourier frequency and arbitrary IID sample count n, the composite centered Gaussian cos/sin output law sets under A and B with independently fitted unrestricted common scale s>0 are IDENTICAL, because s is reparameterized by vA(k)/vB(k). Therefore no uniform binary identification better than chance with equal priors.",
+    "new_second_mean_free_frequency": [
+      20,
+      20,
+      0
+    ],
+    "scale_free_statistic": "T=(S_lo/vA_lo)/(S_hi/vA_hi), S_i=sum of cosine/sine squares over n independent full spatial snapshots",
+    "T_under_A": "F_(2n,2n)",
+    "T_under_B": "q*F_(2n,2n), q=(vB_lo/vA_lo)/(vB_hi/vA_hi)",
+    "scale_free_decision": "Choose B iff T<sqrt(q); choose A otherwise",
+    "each_conditional_error": "<= H^n, H=4*sqrt(q)/(1+sqrt(q))^2, uniform in all s>0",
+    "Chernoff_derivation": "For U,V independent chi-square_(2n), Markov E exp[-t(U-aV)] minimized at t=(1-a)/(4a) yields P(U/V<=a)<=(4a/(1+a)^2)^n; B-tail follows F reciprocal symmetry.",
+    "global_two_dimensional_shape_optimality": "For every full-rank U:R²→R^68921 of real site linear summaries, every generalized eigenvalue of (UᵀSigma_B U,UᵀSigma_A U) lies in [rmin,rmax]; condition number ≤rmax/rmin. Achieved by real cosine vectors at (20,20,20) and (20,20,0). This is NOT claim of globally optimal composite-hypothesis test.",
+    "frequency_specific_free_scale_negative": "With TWO independently unrestricted nuisance scales s_lo and s_hi (one for each frequency), both four-real-component Gaussian composite families coincide, and uniform identification fails again."
+  },
+  "strict_IV80_source_interval_bounds": {
+    "r_min_B_over_A_at_202020": [
+      "0.9798953638337011954999588345046024075144662708442796942789689244387117249536803500027069963354923816",
+      "0.9798953638337011954999588345046024075144662719828346965428827945642420113767372066679198241101614462"
+    ],
+    "r_max_B_over_A_at_202000": [
+      "1.000187004456868640312993570290676911687964969428720205945913423998175954314028674436177059870899378",
+      "1.00018700445686864031299357029067691168796497083001867027073049492190553760394480571643900174741515"
+    ],
+    "q_min_over_max": [
+      "0.9797121532945867352283112335880382002361894833591519640367638959454236632133275971165831056419909375",
+      "0.9797121532945867352283112335880382002361894859865865846457959039274166318819203432670742466604580095"
+    ],
+    "global_2D_shape_cond_number": [
+      "1.020707966760633796537642080594934827953785399832279255725924453448974562025657591591658030865526666",
+      "1.02070796676063379653764208059493482795378540263487618437555859529643372860548985415218191461855821"
+    ],
+    "each_tail_Chernoff_base_H": [
+      "0.9999737438753711813768098091427277840983305270341058304624893965995007859497836467322048420314118729",
+      "0.9999737438753711813768098091427277840983305302746085292136288731106254473077147003178105826208545951"
+    ],
+    "global_four_symmetric_corner_source_interval_extrema": "PASS; ratio min at 3*cstar and max at 2*cstar+1; cstar=-cos(pi/41)"
+  },
+  "finite_n_sufficient_uniform_in_common_scale": [
+    {
+      "strict_success_greater_than_pct": 75,
+      "n_full_raw_spatial_IID_snapshots": 60000,
+      "source_IV80_each_conditional_error_strict_less_than": 0.207,
+      "independent_numerical_exact_F_error_A": 0.03794572998988196
+    },
+    {
+      "strict_success_greater_than_pct": 90,
+      "n_full_raw_spatial_IID_snapshots": 90000,
+      "source_IV80_each_conditional_error_strict_less_than": 0.0942,
+      "independent_numerical_exact_F_error_A": 0.014853644137856241
+    },
+    {
+      "strict_success_greater_than_pct": 95,
+      "n_full_raw_spatial_IID_snapshots": 120000,
+      "source_IV80_each_conditional_error_strict_less_than": 0.0429,
+      "independent_numerical_exact_F_error_A": 0.006031658141171488
+    },
+    {
+      "strict_success_greater_than_pct": 99,
+      "n_full_raw_spatial_IID_snapshots": 200000,
+      "source_IV80_each_conditional_error_strict_less_than": 0.00525,
+      "independent_numerical_exact_F_error_A": 0.0005960416412146431
+    }
+  ],
+  "independent_spatial_original_M13_reproduction": {
+    "actual_original_native_B_fft_41cubed_reconstructed": true,
+    "source_B_native_full_energy_vs_spatial_mean_agree_relative_below": "5e-13",
+    "four_actual_original_M13_high_frequency_source_noise_free_mean_numeric": [
+      6.4613624594390024e-27,
+      1.699546586111436e-26,
+      1.2977550751790865e-26,
+      1.7793546578165142e-26
+    ],
+    "A_4D_spatial_covariance_diagonal": [
+      0.9004682684983889,
+      0.900468268498388,
+      1.0064329065072715,
+      1.0064329065072708
+    ],
+    "B_4D_spatial_covariance_diagonal": [
+      0.8823646815809316,
+      0.8823646815809308,
+      1.0066211139463277,
+      1.0066211139463268
+    ],
+    "maximum_offdiagonal_absolute_in_both_spatial_covariances_smaller_than": 5e-16,
+    "full_all_68921_modes_frequency_scan_min": [
+      20,
+      20,
+      20
+    ],
+    "full_all_68921_modes_frequency_scan_max_permuted": [
+      0,
+      20,
+      20
+    ],
+    "separate_scipy_F_CDF_diagnostics_numeric_only": true,
+    "prepublication_failed_too_specific_fft_max_permutation_assertion": "DETECTED_CORRECTED_BEFORE_FINAL_PASS"
+  },
+  "reproduction": {
+    "ZIP": "IW_M15_ROT031_ORIGINAL_M13_UNKNOWN_COMMON_SCALE_TWO_FREQUENCY_IV80_REPRO_001_20261121.zip",
+    "bytes": 40485,
+    "SHA256": "6e973abe8fa782f77e6388280f4be6a0af0b321297901f812c58ff42cf72b11c",
+    "ZIP_CRC": "PASS",
+    "sha_manifest": "12/12 PASS",
+    "exact_member_reread": "13/13 PASS",
+    "main_actual_IV80_script_SHA256": "ced32de03476ab0271889f8b07973a2e84344c6b495901ad013d6d0083919a98",
+    "main_actual_complete_IV80_JSON_SHA256": "465b835e8db83d5d4d57040cb76b52be1189949f6d88bb9d630585ae893394c1",
+    "clean_actual_complete_JSON_cold_replays": "2/2 BYTE IDENTICAL PASS",
+    "eight_actual_negative_fixtures": "8/8 REJECTED PASS",
+    "actual_integrity_tamper_rejections": "5/5 PASS",
+    "substantive_wrong_source_frequency_or_wrong_99pct_sufficiency_rejections": "3/3 PASS",
+    "full_code_and_original_native_source_preserved_in_verified_user_local_ZIP": true
+  },
+  "limits": [
+    "Source mathematical Gaussian noise observer on public original M13 auxiliary only, not historical full DTC0a runtime",
+    "No source native hardware to measure 68921 raw points or the four spectral projections",
+    "No measured site error covariance or actual 200000 IID snapshots",
+    "ONE common unknown scale nuisance required; independent per-frequency gains destroy discrimination",
+    "Only two FIXED known legal Gaussian models A/B; no global alpha inverse or unknown-source-noise identification",
+    "Global optimality is two-dimensional covariance generalized eigenvalue RATIO, not minimax composite likelihood optimality",
+    "Greek ROT036 two-site original firstness preserved",
+    "No external blind I3, REC13/AUD3 acceptance or native KN15 BW ingestion receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
