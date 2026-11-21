@@ -78,3 +78,14 @@ E4 dla j22 jest teraz zmierzone, a nie oszacowane: −0.05…−0.08 dex (`E4_IN
 - `timeline_088.log`, `tables_sha256_088.log`, `{full,dedup}_rate_dumps_088_sha256.log`.
 - SHA wszystkich plików w `MANIFEST_SHA256_085.md` (sekcja 088).
 - I1 zewnętrzne wymagane: przeliczenie 12 pierwiastków z plików danych.
+
+## r2 (21 XI ok. 22:43): korekty po LT9 ROT012 (22:40, przed moim zapisem nieprzeczytane)
+
+- **Korekta liczby w §3.** Wzrost wydajności w wariancie C ważony liczbą emitowanych hadronów wynosi +0.026 dex, czyli ≈ +6%, a nie „2–3%”. LT9 ROT012 ma niezależnie +6.2% (π) dla j22 i +0.86% dla j62, z całki od 1e8 g do m₀.
+  - Poprawione rozumowanie: ΔY rośnie o 5–13%. Dźwignia ΔY na jednostkę logarytmu wydajności wynosi więc ~1.1, wobec ~0.57 przy jednorodnej zmianie wydajności (HER/PY w REVIEW_086).
+  - Hipoteza o większej dźwigni późnej emisji pozostaje, ale z tym współczynnikiem.
+  - Błąd oszacowania w SYNTH_087 leżał w przełożeniu na próg (przyjąłem dźwignię jednorodną), a nie w wydajnościach.
+- **Zastrzeżenie LT9 (przyjęte).** Wariant C zmienia także wiersze 0–4 powyżej 1e9 g. W całce LT9 to ~4% (j22) i ~6% (j62) zmiany źródła pionów.
+  - E4_C jest więc efektem traktowania całej dziedziny dotkniętej sufitem (wiersze 0–4 + poniżej 1e9 g), a nie czysto „poniżej 1e9 g”.
+  - Oddzielenie wymagałoby osobnego ramienia (tylko wiersze poniżej 1e9 g). Ze względu na znakowe, zależne od czasu jądro odpowiedzi udziału ~4% nie przenoszę wprost na Y_p.
+- Pierwszeństwo całek źródłowych należy do LT9. Liczby natywne progu (§2) są bez zmian.

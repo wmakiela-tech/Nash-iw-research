@@ -168,3 +168,20 @@ Nowe w 085 są tylko dwa elementy:
 - **Doprecyzowanie tytułu:** „więcej niż korekta T2” to stwierdzenie nominalne, na pierwiastkach interpolowanych: Δ_gen − D_PY = +0.04…+0.07 dex przy szumie ~0.01–0.02 i PCHIP 0.002. Certyfikat z samych przedziałów siatki daje tylko „porównywalne” (etykieta LG przy 0.251, gdzie Δ_gen ≥ 0.30 > 0.27).
 - **LT9 o Wang–Grohs–Mersini-Houghton** (arXiv:2511.18646v3): praca nie implementuje bezpośredniego wychwytu hadronów i mezonów. Uzupełnia więc fizykę Wu–Xu, a nie ją odtwarza. Ocenę nowości zostawiam XH-S7 i KN15.
 - **I1 wejścia** (Mech-S10, natywne odtworzenie tablic BlackHawk): nadal otwarte.
+
+## r4 (21 XI ok. 22:43): prior art (PRF14 ROT009) i nowe granice interpretacji
+
+- **Prior art, metodycznie dojrzały.** Jung, Okui, Tobioka, Wang, *New bounds on heavy QCD axions from big bang nucleosynthesis*, Phys. Rev. D (opublikowane 2 III 2026), arXiv:2510.23695. Wskazał PRF14 ROT009; sprawdziłem tekst główny.
+  - Autorzy porównują PYTHIA v8.306 i Herwig v7.3.0 dla hadronowego wstrzyknięcia w BBN. Znajdują duże rozbieżności krotności (O(1) dla barionów), ale „fairly good” zgodność mezonów przy większych masach.
+  - Wpływ na ich granicę czasu życia aksjonu jest mały (kilka procent), bo dominują naładowane piony i kaony.
+  - **Wniosek:** samo porównanie generatorów dla granic BBN z wstrzyknięciem hadronów nie jest nowe. Nowość wariantu PBH/BlackHawk pozostaje niewykazana (NO_NOVELTY; sprawdzenie XH-S7 i KN15 otwarte).
+- **Kontrast z naszym wynikiem [▷] i nowe zastrzeżenie.**
+  - U Jung i in. zmiana generatora rusza granicę o kilka procent. U nas zamiana tablic BBN BlackHawk v2.3 (PYTHIA → HERWIG) rusza próg o ~0.35 dex, przy pionach −0.21 dex przy partonach TeV.
+  - Możliwe, że duża część naszego efektu odzwierciedla sposób wygenerowania tablic BlackHawk (wersje, strojenia, traktowanie rozpadów w epoce BBN, zakres energii), a nie wewnętrzną rozbieżność współczesnych PYTHIA i Herwig.
+  - Etykietę `GEN_COMPARABLE` należy więc czytać jako „systematyka zestawu tablic BlackHawk”, zgodnie z §7 granic PREREG_085, a nie „systematyka generatora” w ogóle.
+  - Rozstrzygnięcie wymagałoby tablic BBN wygenerowanych współczesnymi PYTHIA 8.3 i Herwig 7.3 przy energiach TeV. To duże zadanie.
+- **PRF14 ROT009 (twierdzenie o węzłach, 114 węzłów).** W całym korytarzu Y_p ∈ [0.2484, 0.2530] zamiana PY→HER działa prawie jak przesunięcie log β:
+  - j22: +0.332 ± 0.014;
+  - j62: +0.364 ± 0.004 dex.
+  - Interakcja I(y) we wnętrzu korytarza sięga +0.021 dla j22, czyli powyżej |I| dla dwóch celów, ale w granicy szumu.
+  - Przyjmuję. Przy samym helu generator jest nieodróżnialny od reparametryzacji β, a stwierdzenie o I dotyczy tylko dwóch zamrożonych celów.
