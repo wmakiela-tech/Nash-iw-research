@@ -1,0 +1,247 @@
+{
+  "artifact_id": "IW_GEEKY_S12_ROT039_EXACT_SWAPPED_LOCAL_PAIR_KL_VERSUS_ANISOTROPIC_FULL_RANK_PARETO_CURATED_001_20261121",
+  "date": "2026-11-21",
+  "cell": "MGPT-BUD-01-SUCCESSOR-12 / Geeky-S12",
+  "exposure": "PUBLIC",
+  "science_status": "AUTHOR ORIGINAL M13 EXACT RATIONAL SOURCE EXHAUSTIVE 21846 PAIRS 78 CLASSES / SEPARATELY CODED FULL N41CUBED SPATIAL FFT / NEW DIFFERENT CELL I1 PENDING",
+  "original_source": {
+    "original_M13_public_8970B_Python_git_blob": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_B25_7501B_git_blob": "a6f50fbe5904e580e84c87ee87c5ad043cdec5d0",
+    "actual_original_native_tensor_polys_41_B_all_original_five_inner_mask_and_global_inner_k0_run": true,
+    "alpha": "1/20",
+    "mpmath_iv_dps": 40,
+    "N": 41,
+    "site_count": 68921,
+    "region_order": [
+      "outer",
+      "shell1",
+      "shell2",
+      "shell3",
+      "shell4",
+      "shell5"
+    ],
+    "site_occupancies": [
+      18268,
+      7778,
+      6938,
+      6146,
+      5402,
+      24389
+    ],
+    "frozen_parent_complete_JSON_SHA256": [
+      "48b331fd062f93d0e69f4acd84ef0664cc08cf605bb0bae8afeb201bc4b1010c",
+      "8f4c00e6518285c475ea66e93546aedf6222252e7fefa62bf3312822f0277e56",
+      "ef6b0f5bfb8e3fed2472022b537dbba8c1ce54aeefd0c16cdf4ce3a22376553f",
+      "5a24ace3355edbd40beb4f55194b4d5c0359e7f760c42bc39664274e95d95329",
+      "c58420e4b885d92d38caf03b560088f659f02911274e40903871c7f8593d3373"
+    ]
+  },
+  "target_and_exact_domain": {
+    "source_synthetic_models_A_B": "Original ROT038 exact 9-param anisotropic centered RAW SITE ENERGY Gaussian covariance models with same original M13 source mean, beta0=1, both full site SPD min eigen bound 7/10, same independent RAW sixth random calibration variance1/2500; old six means +3 deep probes have EXACT identical Gaussian law",
+    "candidate_pair": "unordered (x,y,z),(y,x,z), 0<=x<y<41, both endpoints OUTSIDE original innermost region label5",
+    "exhaustive_candidate_pairs": 21846,
+    "exact_distinct_region_histogram_and_pair_adjacency_classes": 78,
+    "class_direction_response_counts": {
+      "rank_two": 32,
+      "rank_one": 44,
+      "rank_zero": 2
+    },
+    "global_optimum_restriction": "ONLY this 21846-pair class; no all-field or globally optimal real sensor claim",
+    "site_noise_model": "beta0*I+beta_x*A_x+beta_y*A_y+beta_z*A_z+beta_xy*A_xy+beta_xz*A_xz+beta_yz*A_yz+beta_body*A_body, one-step normalized original N41 periodic site shifts, independent raw sixth calibration",
+    "parent_A_coefficients": [
+      "1",
+      "1/25",
+      "1/25",
+      "1/25",
+      "1/30",
+      "1/30",
+      "1/30",
+      "2/25",
+      "1/2500"
+    ],
+    "parent_B_coefficients": [
+      "1",
+      "1/20",
+      "3/100",
+      "1/25",
+      "1/30",
+      "13/300",
+      "7/300",
+      "2/25",
+      "1/2500"
+    ]
+  },
+  "exact_objective_and_rank_proof": {
+    "c_axis_j": "count_x_neighbor_at_site_a_region_j - count_y_neighbor_at_site_a_region_j",
+    "c_face_j": "count_xz_neighbor_at_site_a_region_j - count_yz_neighbor_at_site_a_region_j",
+    "model_B_old6_to_extra_probe_cross_covariance_h": "h_j=(c_axis_j+c_face_j/2)/(100*w_j), model A this vector zero",
+    "new_extra_probe_variance_both_models": "119/60 for coordinate swapped pairs one x/y face diagonal step apart, otherwise2",
+    "S": "exact original six-region Gaussian noise covariance under model A with original full stochastic raw sixth calibration",
+    "q": "exact rational h.T*S^-1*h/v, source positive 0<=q<1",
+    "full_ten_B_to_A_Gaussian_KL_exact_formula": "-log(1-q)/2, original nine law exactly identical A/B",
+    "full_rank9_criterion": "two source six-dimensional integer directional histogram vectors (c_axis,c_face) linearly independent",
+    "all_78_class_rational_q_compared_exactly": true,
+    "full_ten_55x9_covariance_basis_exact_ranks_rebuilt_for_all_three_named_probes": true
+  },
+  "named_results": {
+    "prior_ROT038": {
+      "site_a": [
+        3,
+        4,
+        3
+      ],
+      "site_b": [
+        4,
+        3,
+        3
+      ],
+      "q_exact": "58005320232341377606748839421369/1268997189502437497209034240808489221500",
+      "q_numeric": 4.570957344285746e-8,
+      "rank_anisotropic_nine_param_covariance_template": 9,
+      "same_new_probe_variance": "119/60"
+    },
+    "HYPOTHESIS_KL_GLOBAL_OPTIMUM_IN_DECLARED_CLASS": {
+      "site_a": [
+        4,
+        5,
+        6
+      ],
+      "site_b": [
+        5,
+        4,
+        6
+      ],
+      "axis_histogram": [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0
+      ],
+      "face_histogram": [
+        0,
+        0,
+        2,
+        -4,
+        2,
+        0
+      ],
+      "face_is_exactly_twice_axis": true,
+      "q_exact": "4864764760265660663553064591322/24403792105816105715558350784778638875",
+      "q_numeric": 1.9934462394908909e-7,
+      "rank_anisotropic_nine_param_covariance_template": 8,
+      "exact_source_KL_B_to_A_lower": "2432382380132830331776532295661/24403792105816105715558350784778638875",
+      "same_new_probe_variance": "119/60",
+      "equal_best_class_sites": 29
+    },
+    "FULL_RANK9_KL_OPTIMUM_IN_DECLARED_CLASS": {
+      "site_a": [
+        4,
+        5,
+        5
+      ],
+      "site_b": [
+        5,
+        4,
+        5
+      ],
+      "axis_histogram": [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0
+      ],
+      "face_histogram": [
+        0,
+        0,
+        2,
+        -3,
+        1,
+        0
+      ],
+      "nonzero_directional_histogram_2x2_minor_exact": "1",
+      "q_exact": "474275392234174015049306298853399/3123685389544461531591468900451665776000",
+      "q_numeric": 1.5183199749298034e-7,
+      "rank_anisotropic_nine_param_covariance_template": 9,
+      "exact_source_KL_B_to_A_lower": "474275392234174015049306298853399/6247370779088923063182937800903331552000",
+      "same_new_probe_variance": "119/60",
+      "equal_best_class_sites": 2
+    }
+  },
+  "decision_tradeoff": {
+    "best_hypothesis_testing_pair_is_NOT_full_anisotropic_model_identification": true,
+    "best_KL_all_pair_q_over_prior_q_numeric": 4.361113196523134,
+    "best_full_rank_q_over_prior_q_numeric": 3.321667345742984,
+    "best_testing_q_over_best_full_rank_q_numeric": 1.3129289427829953,
+    "no_real_sensor_or_empirical_noise_evidence": true
+  },
+  "conditional_testing": {
+    "snapshot_number_n": 400000000,
+    "paired_independent_centered_source_mean_free_observations_m": 200000000,
+    "unknown_source_mean_condition": "constant deterministic source B field state throughout synthetic independent snapshots; temporally paired differences divide by sqrt2, retaining covariance",
+    "Hellinger_affinity_one_paired_difference_exact": "rho=(1-q)^(1/4)/(1-q/4)^(1/2)",
+    "strict_analytic_inequality": "log(rho)<=-q/8",
+    "Bayes_correct_probability_bound": "P_correct>=1-0.5*exp(-m*q/8)",
+    "rational_source_q_global_opt_strict_greater_than": "199/1000000000",
+    "rational_source_q_full_rank_opt_strict_greater_than": "151/1000000000",
+    "conservative_global_opt_correct_bound": ">1-0.5*exp(-4.975)≈0.99654574053",
+    "conservative_full_rank_correct_bound": ">1-0.5*exp(-3.775)≈0.98853145468",
+    "full_exact_q_numeric_global_opt_lower_display": 0.9965753732088308,
+    "full_exact_q_numeric_full_rank_opt_lower_display": 0.9887675359536529,
+    "full_exact_q_numeric_old_ROT038_lower_display": 0.8405279355532606,
+    "physical_IID_400m_source_snapshots_authenticated": false
+  },
+  "independent_algorithm": {
+    "full_original_N41_cubed_site_mask_FFT_plus_3_original_deep_probes_plus_each_new_pair_executed": true,
+    "all_eight_anisotropic_site_gaussian_Fourier_symbols_executed": true,
+    "three_10x10_old9_plus_new_pair_gaussian_covariance_checks": "3/3 PASS",
+    "all_three_q_from_separately_authored_site_Fourier_relative_error_max": 1.5543122344752192e-15,
+    "original_M13_41_complex_3x3_B_tensor_modes_full_3D_IFFT_executed": true,
+    "original_native_source_global_inner_vs_41cubed_spatial_energy_relative_error": 1.111405684871136e-16,
+    "same_cell_binary64_diagnostic_not_external_I1": true
+  },
+  "reproducibility": {
+    "user_local_zip": "Geeky_S12_ROT039_exact_boundary_probe_KL_vs_identifiability_pareto.zip",
+    "zip_bytes": 48220,
+    "zip_SHA256": "560c04365f0e815c549cc6f2cadc506324a19174903cd2179aff2b92b9c289ce",
+    "archive_members": 15,
+    "manifest_payload_entries": 14,
+    "ZIP_CRC": "PASS",
+    "all_15_member_bytes": "PASS",
+    "all_14_manifest_SHA256": "PASS",
+    "main_original_exact_Python_SHA256": "35abda36a82b3ee380dcaf9a374bad077ab55301c724e610ae00c6037452add5",
+    "full_original_exact_source_JSON_SHA256": "8b632aad6d2487f3b750b839a865684178b9df8234566f339920203d85d9ebe2",
+    "independently_authored_full_site_FFT_python_SHA256": "a2c44aa397aab2819851fbe6fe110427316c56d440a9cf5ec05779752aa42792",
+    "full_independent_site_FFT_JSON_SHA256": "3cae089cb02238821d9b41a0e5c8792c57407accf1c961b16027422d1e996f22",
+    "actual_full_clean_replay_and_tamper_JSON_SHA256": "b5549469e73a16f4838730410c9107dac272b0a9b0cb782e8b06575df7fdcd79",
+    "two_fresh_isolated_Python_complete_JSON_byte_replays": "2/2 PASS",
+    "ten_intentional_1byte_source_failclosed_checks_before_original_import": "10/10 PASS",
+    "fresh_ZIP_extraction_three_Python_programs_complete_byte_replays": "3/3 PASS",
+    "full_executed_Python_public_GitHub_exact_byte_mirror": false
+  },
+  "review_custody": {
+    "M13_original_public_source": "FIRST",
+    "Geeky_ROT038_exact_anisotropic_old9_alias_and_boundary_rank9": "FIRST",
+    "M15_ROT030_optimal_single_full_site_Fourier_probe": "M15 FIRST, different design",
+    "M15_ROT033_quadratic_spectral_noise_calibration": "M15 FIRST, different design",
+    "ROT039": "NEW AUTHOR SOURCE EXACT, different-cell M15/REC13/AUD3 I1 PENDING",
+    "KN15_BW_native_ingest": "NOT_VERIFIED",
+    "M15_CANON_EXEC_SIGN": "NOT_VERIFIED",
+    "ceilings": [
+      "NO_FULL_HISTORIC_DTC0A_RUNTIME_BYTES",
+      "NO_AUTHENTICATED_RAW_SITE_SENSORS",
+      "NO_REAL_400M_IID_SNAPSHOTS",
+      "NO_MEASURED_NOISE_COVARIANCE",
+      "NO_GLOBAL_PROBE_OPTIMALITY",
+      "NO_PHYSICAL_GW_GR_K_J3_TPE",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN",
+      "NO_PHYSICAL_UPGRADE"
+    ]
+  },
+  "public_science_report_commit": "1f481ff31ee134c7f90486d8004160b460083bfa"
+}
