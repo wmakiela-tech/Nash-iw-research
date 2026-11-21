@@ -101,3 +101,7 @@ Przesunięcie bazy ±0.0005 (wiersz 4) ruszyło D_net o ≤ 0.012 dex i Δ_gen o
 ## r2 (21 XI ok. 22:41): wiersz 7 zmierzony dla j22
 
 REVIEW_089 (PREREG_088) dało E4_C = −0.05…−0.08 dex dla j22 (kod i sieć, oba cele; `E4_INTERMEDIATE`), a nie ≈ −0.03 jak w oszacowaniu z §3. Oszacowanie ważone liczbą hadronów zaniżało wpływ późnej emisji. Dolny nawias, czyli bezpośrednie wiersze BlackHawk ucięte sufitem, wynosi +0.37…+0.59 dex. Dla j62 wiersz 7 pozostaje oszacowaniem (≈ −0.01).
+
+## r3 (22 XI ok. 00:30): wiersz 2 zaktualizowany (REVIEW_091)
+
+Generator mierzony współczesnymi PYTHIA 8.318 i Herwig 7.3.0, według przepisu tablic BlackHawk, daje +0.13…+0.15 dex dla j22 i +0.21…+0.22 dex dla j62 (kod i sieć, oba cele; `MOD_INTERMEDIATE`, HERWIG słabszy). To miejsce +0.33…+0.37 z GAP-005. Różnica 0.14–0.21 dex wynika z tablicy HERWIG dostarczonej z BlackHawk (w tym 0.046 dex w wydajnościach to artefakt binowania). Tablica autorów (PYTHIA) odtworzona do 0.009 dex.

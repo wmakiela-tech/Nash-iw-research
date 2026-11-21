@@ -1,0 +1,34 @@
+bh085/dl/blackhawk_v2.3.tar.bz2: OK
+fenyutanchan/primordial-black-hole/arXiv-2509.05618/data/out/hadrons_from_PBH.dat: OK
+gen090/dl/CT14lo.tar.gz: OK
+gen090/dl/CT14nlo.tar.gz: OK
+01b87dd2c2ef7e8ac9854e1ec900c8e75906eb331c7ec7c9e81bd82e5d68920b  bh085/BlackHawk_v2.3/BlackHawk_inst.x
+05f011a903c7f531e5414d47e515a2e616a619c71772b43c2fb4865ccc63e8cc  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/K0L.txt
+2ac524d17a4d7314fd994f612d482f0f8dfc247fa71fad9b39f776671a23060d  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/Kpm.txt
+8ce91baa2addaea12e08ba3e25fc9ce4f12f7c6148aa83e6094f2a5a76d619ba  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/electron.txt
+261dee8b8637ac7cfe0bea0f36996ce8b813d18e273a136e9f02742edaa69de6  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/muon.txt
+f20ba13c0db4b4b59159ad427062a695665a85ee2b0cf63a9c38ba35b56d1945  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/neutron.txt
+26c8e50888ad0b81f0986b1e41357fbbd3682fc3e33c48a9da2703bc1fe8c039  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/nue.txt
+28cafcb3dbb005ff56eb262c5d09317c60c5f0f627bd74e80eac82f3dd5794ad  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/numu.txt
+7f6d239714935508cee602ff18646eb70ddeee1d5e61ff23c4f47a40799809a4  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/nutau.txt
+f0ac7f4143e97c7e3efcc62a83c895b0e9a4a672ba5e8d99eab34b9a5f23fa2e  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/photon.txt
+603f8b1a53efe316b4378da9a6242c1a1b3be026c17fbdaa917cb07f13850ac4  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/pipm.txt
+c684958259aaaf834d5f7caec91ae8bb3a3e73d8bab049efb3cc7dbb852aa8d9  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/pythia_tables/proton.txt
+9195d8b3229a97ca23d87f847b98faaa725de71eaae6a18e44a4365941cb23ef  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/K0L.txt
+7f99b9590e885c6c5f074aaa20420e6061910bfde3e84e2b09684289da2edcf9  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/Kpm.txt
+eeea0c19e86eb38d860b5c71b22ba710d88c23c72177cb700c72b1d0258cbfab  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/electron.txt
+eda7fbb6ee432b8585840f2d3bd3a7c1eab4a56a5ef9b3fd797330cf5e318777  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/muon.txt
+2fac71fc67331686abc61f4d86a60d9750ad34f507c6c42d8b15a552c75944eb  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/neutron.txt
+3d3917502bb1530acf514c83273fa63259cb868ff8d022bb76963d440b7773ad  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/nue.txt
+dbae0af7a4736139899c20459f8da6fc5d663a4e9a858f4a97fdcb5ad784b0ef  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/numu.txt
+c6500289ee5db9513868cd728aad0a6c9bb4e838b9338663d348047bb59a2d0a  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/nutau.txt
+cf7b522e0e6594f164cbc52f84b94aaafffeff5ddbb00be9c50d8c8425bc7465  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/photon.txt
+6ad10e894f0e323e33cbc777503b7bc2da902128434eb8912c0ef226eba86246  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/pipm.txt
+8ee312abc6ec5d3c7d1ac1695d6f5f9903195eff9bac11b78a7958a92dd630db  bh085/src/blackhawk_v2.3/src/tables/hadronization_tables/herwig_tables/proton.txt
+pythia8mc 8.318.3
+Herwig 7.3.0
+ThePEG 2.3.0
+  hepmc3                     3.3.1       py312hd711b43_6       conda-forge
+  herwig                     7.3.0       h2aa1e36_2            conda-forge
+  lhapdf                     6.5.6       py312h9be0db6_4       conda-forge
+  thepeg                     2.3.0       h82534d7_4            conda-forge
