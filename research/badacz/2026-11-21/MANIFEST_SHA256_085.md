@@ -46,3 +46,17 @@ dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  external: blac
 - BlackHawk v2.3: https://blackhawk.hepforge.org/downloader?f=blackhawk_v2.3.tar.bz2 (SHA256 = wpis w Artifacts.toml autorów Wu–Xu).
 - Budowa: rozpakowanie, nałożenie `external_code/BlackHawk_v2.3-hack` autorów (BlackHawk_inst.c, BlackHawk_tot.c, src/include.h), `make BlackHawk_inst.c` (gcc 13.3.0, -O3 z Makefile BlackHawk).
 - Julia 1.12.3, środowisko wuxu_env offline (jak 077–083); PRyMordial @725d8a8 z łatkami 077/079 (jak 083).
+
+## DEV-1 (PREREG_085 §10) — wersje obowiązujące dla przebiegu 2
+
+```
+f278ca75500c912c20fbb2544d5d787e79c040db590d7451cdb5eb475a133049  code/check_inj_085.py
+04095e7d17a89df5404447389710bffbf54c6147f935f86d5c2bb1c073b0bfcb  code/analysis_085.py
+692e987e930b12ec7e2301fd8cc3be9a218fceeff2ae60705d03b42e2fdc40ff  code/run085.sh
+ecf287823322fe3af0610c26f54b6e28b5a661784c8ff31b91f0be261dc452b7  data/inj085_run1_GATEFAIL.json
+1745aa21c07b204e7996718c4701620d82a5ddc7aa2f6c95f6ba994d13b8621f  data/timeline_085_run1.log
+25d0f4a1eb1628ff6a2216dbbbad36b9f4f65ef740d977dae690202e6e0bc233  data/summary_inj_orig_085_run1.csv
+893971d1a595e67b0cedacd7048e5ca3113f84ee6bfc38684a1d562b09b04a4e  data/summary_inj_e5_085_run1.csv
+13a99a884aeebd049495bdddf32222dcbfa7056165359b28e3cb73085244166f  data/summary_x2_orig_085_run1.csv
+6c786378a7ebae20c30dea16ddd4e562bfadff059ac10d09e172a7a636ed841d  data/tables_sha256_085_run1.log
+```

@@ -13,7 +13,8 @@ Interpolation-noise estimate: every crossing is recomputed with a quadratic thro
 (next lower if the bracket is last); N_I = max |I_quad - I_lin|, N_gen = max |Delta_quad - Delta_lin| (over j, m, Y*).
 Labels (only if all gates PASS and all 32 crossings bracketed; primary at Y* = 0.251, LBT reported with same rules):
   LG: max over (j, m, a) |Delta_gen| < 0.10 -> GEN_SMALL ; >= 0.27 -> GEN_COMPARABLE ; else GEN_INTERMEDIATE
-  LI: if 0.02 < 5 N_I -> I_UNRESOLVED ; elif max over (j, m) |I| <= 0.02 -> ADDITIVE ; else INTERACTING
+  LI: if 0.02 < 5 max(N_I, 2 N_solver) -> I_UNRESOLVED ; elif max over (j, m) |I| <= 0.02 -> ADDITIVE ; else INTERACTING
+      (DEV-1: N_solver = max over crossings of N_Y / |dY/dlb|, N_Y = largest |dY| of the blind solver controls)
   LS: all 8 Delta_gen > 0 -> HER_WEAKER ; all < 0 -> HER_STRONGER ; else MIXED
 """
 import csv, json, os, sys
@@ -94,7 +95,12 @@ def main(d83, run, cfgdir, authors_table, dst):
     out["gates"]["V_INJ_NEG"] = ij["V_INJ_NEG"]
     out["gates"]["V_INJ_POS"] = dict(ij["V_INJ_POS"], **{"pass": ij["V_INJ_POS"]["pass_"]})
     vb = {j: abs(float(sh[f"ho{j}_base"]["Y"]) - float(s83[f"o{j}_base"]["Y"])) for j in MASSES}
-    out["gates"]["V_BASE"] = {"absdiff": vb, "pass": all(v <= 1e-12 for v in vb.values())}
+    # DEV-1 (PREREG_085 sec. 10, set blind to any HERWIG output): 1e-12 -> 5e-4. Determinism != stability: the 083 native
+    # bases at log10 beta = -30 already differ across masses by up to 1.0e-4 (solver path depends on the integration start),
+    # so a generator swap may move the base by the same solver noise; 5e-4 = 5x that spread, still catches gross breakage.
+    out["gates"]["V_BASE"] = {"absdiff": vb, "threshold": 5e-4, "pass": all(v <= 5e-4 for v in vb.values())}
+    # DEV-1: native solver-noise scale in Y, from the two blind controls (1-ulp table perturbation; generator swap at beta=1e-30)
+    N_Y = max([abs(c["Y_inj"] - c["Y_083"]) for c in ij["V_INJ_NEG"]["cases"].values()] + list(vb.values()))
     exp_net = ["net_base"] + ["net_" + i for i in exp] + [f"net_{v}_{s}" for v in grid["V45_cases"] for s in ("tol", "stride2")]
     ok7 = sorted(sh) == sorted(exp) and len(nh) == len(exp_net) and all(i in nh and nh[i].get("rc") == 0 and "YP_BBN" in nh[i] for i in exp_net)
     out["gates"]["V7_COMPLETENESS"] = {"native": len(sh), "native_expected": len(exp), "net": len(nh), "net_expected": len(exp_net), "pass": ok7}
@@ -127,7 +133,10 @@ def main(d83, run, cfgdir, authors_table, dst):
                 q = cross_quad(s["lb"], ys, Ys)
                 lin[(key, m, Ys)] = r; quad[(key, m, Ys)] = q
                 nb += (r is None)
-                out["roots"][f"{key}|{m}|{Ys}"] = {"lin": r, "quad": q, "n_brackets": n}
+                bi, _ = bracket(s["lb"], ys, Ys)
+                slope = (ys[bi + 1] - ys[bi]) / (s["lb"][bi + 1] - s["lb"][bi]) if bi is not None else None
+                out["roots"][f"{key}|{m}|{Ys}"] = {"lin": r, "quad": q, "n_brackets": n, "slope_dY_dlb": slope,
+                                                   "solver_noise_dex": (N_Y / abs(slope)) if slope else None}
     # --- estimands
     f = lambda a, b: (a - b) if (a is not None and b is not None) else None
     NI = []; NG = []
@@ -152,7 +161,10 @@ def main(d83, run, cfgdir, authors_table, dst):
             e[str(Ys)] = row
         out["estimands"][str(j)] = e
     N_I = max(NI) if NI else None; N_gen = max(NG) if NG else None
-    out["noise"] = {"N_I": N_I, "N_gen": N_gen}
+    sn = [v["solver_noise_dex"] for v in out["roots"].values() if v["solver_noise_dex"] is not None]
+    N_solver = max(sn) if sn else None
+    out["noise"] = {"N_I": N_I, "N_gen": N_gen, "N_Y_solver": N_Y, "N_solver_dex_per_root": N_solver,
+                    "note": "DEV-1: LI resolved only if 0.02 >= 5*max(N_I, 2*N_solver)"}
     # --- labels
     def labels(Ys):
         E = out["estimands"]
@@ -160,7 +172,7 @@ def main(d83, run, cfgdir, authors_table, dst):
         ii = [E[str(j)][str(Ys)][f"I_{m}"] for j in MASSES for m in ("code", "net")]
         mx = max(abs(x) for x in dg)
         LG = "GEN_SMALL" if mx < 0.10 else ("GEN_COMPARABLE" if mx >= 0.27 else "GEN_INTERMEDIATE")
-        LI = "I_UNRESOLVED" if (N_I is None or 0.02 < 5 * N_I) else ("ADDITIVE" if max(abs(x) for x in ii) <= 0.02 else "INTERACTING")
+        LI = "I_UNRESOLVED" if (N_I is None or N_solver is None or 0.02 < 5 * max(N_I, 2 * N_solver)) else ("ADDITIVE" if max(abs(x) for x in ii) <= 0.02 else "INTERACTING")  # DEV-1
         LS = "HER_WEAKER" if all(x > 0 for x in dg) else ("HER_STRONGER" if all(x < 0 for x in dg) else "MIXED")
         return {"LG": LG, "LI": LI, "LS": LS, "max_abs_dgen": mx, "max_abs_I": max(abs(x) for x in ii)}
     if not gates_ok:

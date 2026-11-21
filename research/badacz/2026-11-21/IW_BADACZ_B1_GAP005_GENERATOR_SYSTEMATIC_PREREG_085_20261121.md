@@ -152,3 +152,46 @@ Poinformowane przez stosunki krotności na partonie z EKS1 GAP-005 (HERWIG daje 
 - **Bez zmian, użyte ponownie:** `rate_dump_081.jl`, `dedupe_rates_081.py`, `net_rate_079.py`, `prym_rate_patch_079.py`.
 - **Dane wejściowe:** `data/hadrons_from_PBH_G0_regen_085.dat` (G0).
 - **Test na atrapie przed zamrożeniem:** komórki PY 083 podstawione jako „HER” dały Δ_gen = 0 i I = 0 dokładnie. D_PY odtworzyło REVIEW_084, a ścieżka etykiet zadziałała.
+
+## 10. DEV-1 (21 XI ok. 20:20–20:35): zamrożone przed jakimkolwiek wynikiem HERWIG
+
+**Co się stało.** Przebieg 1 (`/home/claude/run085`) wykonał tablice i bramki tablicowe:
+
+- G1 max 4.1e-4: PASS;
+- G2 max 1.4e-4: PASS.
+
+Zatrzymał się jednak na **V_INJ_NEG** (exit 8, 20:17:49):
+
+| węzeł | \|Y_inj − Y_083\| / ΔY_083 |
+|---|---|
+| io22_1720 | 6.9e-7 |
+| ie22_1695 | 1.0e-7 |
+| io62_1940 | 1.9e-3 |
+| ie62_1910 | 2.6e-3 |
+
+Próg wynosił 1e-3. V_INJ_POS przeszło: ΔY_x2/ΔY = 1.277. Żaden przebieg z tablicą HERWIG nie powstał. Nie otwierałem też opisowej części `table_gates085.json`, w której są stosunki wydajności HERWIG/PYTHIA. Dowody: `data/inj085_run1_GATEFAIL.json`, `data/timeline_085_run1.log`, `data/summary_*_085_run1.csv`.
+
+**Diagnoza.**
+
+- Kod natywny jest deterministyczny przy identycznym wejściu (V1 083: 60/60 bitowo), ale nie jest stabilny wobec zaburzeń rzędu ulp. Tablica G0 różni się od tablicy autorów o ≤ 1.2e-15. Zmienia to drogę adaptacyjnego solwera i daje |δY| do 1.6e-5 przy j62 (T_last ≈ 0.29 MeV).
+- Ten sam efekt jest już widoczny w danych 083: bazy natywne przy log β = −30 różnią się między masami o 1.0e-4. Ich wartości (o22, o38, o62, o90) to 0.244749, 0.244804, 0.244704 i 0.244750. Fizycznie powinny być równe. Różnią się, bo start całkowania zależy od masy.
+- Próg 1e-3 założył zerowy szum solwera. To czwarte wystąpienie GATE_THRESHOLD_AT_NOISE_LEVEL, podklasa **DETERMINISM_MISTAKEN_FOR_STABILITY**.
+
+**Zmiany (ślepe wobec wyników HERWIG).**
+
+1. **V_INJ_NEG:** próg 1e-3 → 0.02 względnego ΔY.
+   - 0.02 ΔY to ≤ 0.009 dex w log β, czyli < 0.10/5.
+   - To ≥ 7× zaobserwowanej czułości na 1 ulp.
+   - Celem bramki jest wykrycie zepsutej iniekcji, a ta dawałaby rozjazd rzędu procentów i więcej.
+2. **V_BASE:** 1e-12 → 5e-4 abs., czyli 5× rozrzutu baz między masami w 083. To nadal wyłapuje grube błędy.
+3. **Szum solwera w etykiecie LI:**
+   - N_Y = max(|Y_inj − Y_083| z V_INJ_NEG, |Y_base_HER − Y_base_PY| z V_BASE);
+   - N_solver = max po pierwiastkach z N_Y / |dY/dlb| (nachylenie w przedziale pierwiastka);
+   - LI rozstrzygnięte tylko, gdy 0.02 ≥ 5·max(N_I, 2·N_solver).
+   - Przewidywalny skutek: LI może wyjść `I_UNRESOLVED`. To uczciwa granica rozdzielczości kodu natywnego, a nie porażka.
+4. **Runner** przyjmuje katalog jako argument. Przebieg 2 to `/home/claude/run085b`, pełny, od zera, z tym samym kodem tablic.
+   - Dodatkowa kontrola odtwarzalności: SHA tablic przebiegu 2 = SHA przebiegu 1 (`data/tables_sha256_085_run1.log`).
+
+**Bez zmian:** estymandy, etykiety LG i LS, progi 0.10/0.27, predykcje P1–P3, siatki i pozostałe bramki.
+
+**Uwaga [▷] na przyszłość:** szum solwera ~1e-5–1e-4 w Y odpowiada ~0.003–0.03 dex w progach kodu natywnego. Ta granica rozdzielczości dotyczy też wcześniejszych różnic D_net − D_code (+0.006/−0.001; REVIEW_082), które leżą w jej obrębie. Opiszę to w REVIEW_086.

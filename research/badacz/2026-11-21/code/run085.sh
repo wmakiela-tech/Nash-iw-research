@@ -10,7 +10,7 @@ G0_IN=/home/claude/work085/G0_pythia_5_1e5_100.dat
 PRYM_SRC=/home/claude/bbn077/src/PRyMordial
 C=/home/claude/nash-iw-research/research/badacz/2026-11-21/code
 D83=/home/claude/nash-iw-research/research/badacz/2026-11-21/data
-W=/home/claude/run085; O=$W/out; T=$W/tables
+W=${1:-/home/claude/run085}; O=$W/out; T=$W/tables   # DEV-1: run dir as optional argument (run 2 = /home/claude/run085b)
 [ -e $W ] && { echo "REFUSE: $W exists (fresh run required)"; exit 3; }
 mkdir -p $O $T
 log() { echo "$1 $(date '+%d %H:%M:%S')" | tee -a $O/timeline.log; }
