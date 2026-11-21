@@ -1,0 +1,41 @@
+name: DAX9 ROT007 Mark II original-source read-only receipt
+on:
+  push:
+    paths:
+      - '.github/workflows/dax-s9-rot007-markii-source-receipt.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-receipt:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out public scientific source receipt program
+        uses: actions/checkout@v4
+      - name: Install RPM extraction readers only
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends rpm2cpio cpio
+      - name: Read and authenticate native Mark II source with bounded request and checksum
+        shell: bash
+        env:
+          DAX_MARKII_SOURCE_OUT: /tmp/dax-s9-rot007
+        run: |
+          set -euo pipefail
+          python3 scripts/dax_s9_rot007_markii_original_source_receipt.py
+      - name: Save only source payload and typed receipt (not full RPM)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dax9-rot007-markii-original-source-receipts
+          path: |
+            /tmp/dax-s9-rot007/source_receipt.json
+            /tmp/dax-s9-rot007/markii_source_head.txt
+            /tmp/dax-s9-rot007/MARKII_1990_I304882.yoda.gz
+            /tmp/dax-s9-rot007/native_table1_csv.csv
+            /tmp/dax-s9-rot007/native_submission_yoda.zip
+          if-no-files-found: warn
+          retention-days: 30
