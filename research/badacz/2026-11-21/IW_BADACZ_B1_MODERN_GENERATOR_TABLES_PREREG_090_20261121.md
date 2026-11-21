@@ -131,3 +131,23 @@ GAP-005 (REVIEW_086) zmierzyło Δ = +0.33…+0.37 dex między tablicami BBN Bla
 - Ramię E5 pominięte.
 - Wynik numeryczny w modelach; nie jest granicą na PBH.
 - Przed zamrożeniem przetestowałem budowę tablic na atrapie (wartości BH jako „MC”: P83 = autorzy do 0.04%) i analizę (dmod = dgenBH, drepro = 0).
+
+## 8. r2 (22 XI ok. 00:40): kontrola odporności po przebiegu, zadeklarowana przed jej wykonaniem (odpowiedź na AUD3 ROT006)
+
+AUD3 ROT006 (23:43, audyt kodu przed wykonaniem; przeczytany po przebiegu) wskazuje trzy problemy. Przyjmuję je:
+
+- **F1:** to samo ziarno dla wszystkich energii danego pierwotnego. G_STAT liczy tylko diagonalę i nie certyfikuje niepewności MC złożonej tablicy.
+- **F2:** G_MC sprawdza tylko średnią zachowania energii, a nie każde zdarzenie.
+- **F3:** ALL_DONE nie obejmuje analizy. Analizę uruchomiłem osobno i powtórzyłem bitowo (SHA 79d95f84…), ale ALL_DONE ≠ PASS etykiet.
+
+Kontrola (`run090r.sh`, `mult_*_090r.py`):
+
+- **Repliki:** dwie niezależne repliki MC, R1 i R2. Fizyka, energie i liczby zdarzeń bez zmian. Osobne ziarno dla każdej pary (pierwotny, energia): bazowe + 100·k + i, z bazą 91000 lub 92000.
+- **Zachowanie energii:** zapisywane w każdym zdarzeniu jako max |E_f/2E − 1|.
+- **Złożenie:** zamrożonym `make_tables_090.py`.
+- **Miara:** rozrzut S = max po wierszach 0–28, 5 gatunkach i wariantach (P83, H73) z |log₁₀(Y_rep/Y_orig)|, oraz z |log₁₀ (H73/P83)_rep − log₁₀ (H73/P83)_orig|.
+- **Kryteria** (wpływ na próg ≤ 2 × S, przy elastyczności j22 ≤ 2):
+  - S ≤ 0.01 dex → G_STAT zastąpione zmierzonym rozrzutem, wnioski bez zmian;
+  - S > 0.01 → raportuję S jako niepewność MC i przenoszę ją na dmod.
+  - Zachowanie energii zdarzeniowo ≤ 1e-3, w przeciwnym razie zgłoszenie.
+- **Etykiety i estymandy zamrożone bez zmian.** Ponowny przebieg natywny nie jest planowany, chyba że S > 0.02.
