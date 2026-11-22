@@ -1,0 +1,174 @@
+{
+  "artifact_id": "IW_PRF14_ROT013_SIX_INDEPENDENT_PAULI_FINITE_SAMPLE_MACHINE_CERT_001_20261122",
+  "source_type": "SOURCE_SPECIFIC_CAUSAL_EXOGENOUS_TWO_TIME_PAULI_COMB_WITH_FULL_SIX_INDEPENDENT_OFFDIAGONAL_FOURIER_SOURCE_PARAMETERS",
+  "date": "2026-11-22",
+  "provenance": {
+    "full_local_executed_python_sha256": "db8b818a840d793657afd2c7072fe3258da31f7173fa68ab193e652897cbf7aa",
+    "full_local_executed_stdout_sha256": "353b8b84dde9ec051cb9afb757551e4ea13192f615139ff6e920bde144ebe618",
+    "full_local_original_certificate_sha256": "a9f11bc102c8b33d5c87d0d2bb49a3f055aaedb1407f2c5846b386f1bd131ca6",
+    "status": "EXECUTED_FULL_LOCAL_PASS; PUBLIC_SOURCE_READBACK_ONLY; NO_HARDWARE; NO_EXTERNAL_REFEREE"
+  },
+  "model": {
+    "unknown_R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "source_coefficients_rows": [
+      [
+        0,
+        0.09,
+        0.11
+      ],
+      [
+        0.07,
+        0,
+        0.1
+      ],
+      [
+        0.08,
+        0.12,
+        0
+      ]
+    ],
+    "source_model_row_flat": false,
+    "six_independent_real_Fourier_source_directions": true,
+    "known_preV_clifford_C3": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "known_postV_control": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]",
+    "four_det_positive_world_signs": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ]
+    ],
+    "min_probability_all_16_each_world": 0.045625,
+    "max_probability_all_16_each_world": 0.098125,
+    "ordinary_first_second_idle_channels_identical": true,
+    "first_12_mean_expressions": [
+      "-9/350",
+      "27/350",
+      "-27/700",
+      "1/35",
+      "3/35",
+      "-3/70",
+      "18/175",
+      "9/175",
+      "6/175",
+      "33/350",
+      "3/50",
+      "12/175"
+    ],
+    "last_mean_4_world_expressions": [
+      "27sqrt(2)/1400",
+      "-81sqrt(2)/1400",
+      "81sqrt(2)/1400",
+      "-27sqrt(2)/1400"
+    ],
+    "last_mean_min_gap_exact": "27sqrt(2)/700"
+  },
+  "experiment": {
+    "n_settings": 13,
+    "selected_input_columns_by_output_index": [
+      1,
+      2,
+      1
+    ],
+    "additional_input_columns_by_output_index": [
+      2,
+      0,
+      0
+    ],
+    "additional_C3_powers_by_output_index": [
+      0,
+      0,
+      1
+    ],
+    "pre_control_powers_for_each_selected_input": [
+      0,
+      1,
+      2
+    ],
+    "last_control": "post-V known left gate; prepare +Y; read final X",
+    "known_SPAM_and_control_independence_required": true,
+    "all_13_IID_Bernoulli_sampling": true
+  },
+  "nonasymptotic_confidence": {
+    "alpha": 0.05,
+    "absolute_sample_mean_error_threshold": 0.0035,
+    "confidence_union_bound": "26 exp(-n*(0.0035)^2/2)",
+    "shots_per_configuration": 1021034,
+    "shots_total": 13273442,
+    "union_bound_at_n": 0.049999778079266116,
+    "row_L2_error_bounds": [
+      0.13471506281091267,
+      0.1212435565298214,
+      0.10103629710818451
+    ],
+    "selected_coefficient_error_upper_each": 0.00606217782649107,
+    "remaining_coefficient_error_uppers": [
+      0.025357076586650894,
+      0.016288979955683843,
+      0.015319142011046177
+    ],
+    "max_single_coefficient_error_bound": 0.025357076586650894,
+    "candidate_13th_mean_prediction_error_upper": 0.020609981573483874,
+    "smallest_true_13th_mean_gap": 0.05454823740581938,
+    "strict_decision_margin": 0.006328274258851629,
+    "max_reconstructed_source_probability_error": 0.004696983252053383,
+    "certified_min_reconstructed_source_probability": 0.04092801674794662
+  },
+  "executed_synthetic_tests": {
+    "full_13_measurement_binomial_count_protocol_trials": 1000,
+    "source_worlds": 4,
+    "independent_trial_count_each_world": 250,
+    "random_seed": 202611221239,
+    "misclassifications": 0,
+    "largest_observed_row_L2_error": 0.04114557790944981,
+    "largest_observed_source_coefficient_error": 0.004984007034667504,
+    "minimum_observed_classifier_distance_margin": 0.046635118277858836
+  },
+  "prior_art_near": [
+    "https://arxiv.org/abs/2611.05561",
+    "https://doi.org/10.1103/1pnv-t9px",
+    "https://doi.org/10.1103/69wc-gzl6"
+  ],
+  "limitations": [
+    "Finite-shot certificate only for four source-specific legal worlds, not uniform over six-dimensional source space",
+    "The algebraic twelve-mean reconstruction is conditional on selected source coefficients nonzero and chosen extra R pivots nonzero",
+    "Single fixed left probe may fail for other gate/source points",
+    "No unknown-SPAM or source-dependent-on-intervention protections",
+    "No hardware trials; 1000 tests are synthetic binomial draws",
+    "Raw row estimates under noise need not be SO3, physical projection is separate",
+    "No general GST or process tensor novelty",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
