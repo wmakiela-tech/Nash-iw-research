@@ -65,7 +65,16 @@ def n_hs(s, c, ext):
     return v
 
 
-H71 = {c: F.load_mc(os.path.join(mc109, f"herwig71_{name}.json")) for c, name in F.MCNAME.items() if c != "higgs"}
+def load_mc_ok(path):
+    """as fold_090.load_mc, but energies with a failed run (rc_run != 0 or events null) are dropped (DEV-2: top at 1e5 GeV)."""
+    d = json.load(open(path))
+    good = [e for e in d["energies"] if e.get("rc_run") == 0 and (e.get("events") or 0) > 0]
+    Em = np.array([e["E"] for e in good])
+    return {s: (Em, np.array([e[str(F.PDG[s])] for e in good]) * F.PAIR_MC(d["primary"]),
+                np.array([e[f"se_{F.PDG[s]}"] for e in good]) * F.PAIR_MC(d["primary"])) for s in F.SPEC}
+
+
+H71 = {c: load_mc_ok(os.path.join(mc109, f"herwig71_{name}.json")) for c, name in F.MCNAME.items() if c != "higgs"}
 
 
 def n_hc(s, c):

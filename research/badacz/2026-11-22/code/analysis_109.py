@@ -19,6 +19,10 @@ import numpy as np
 SP = {"pipm": "211", "Kpm": "321", "K0L": "130", "proton": "2212", "neutron": "2112"}
 CH = {"up": "up", "down": "down", "strange": "strange", "charm": "charm", "bottom": "bottom", "top": "top", "gluon": "gluons", "Wpm": "Wpm", "Z0": "Z0", "tau": "tau"}
 TARGETS = [0.251, 0.2484]; MASSES = [22, 62]; MODELS = ["code", "net"]
+# DEV-2 (declared before any table Sc or native result): Herwig 7.1.5 top at sqrt(s) = 2e5 GeV fails (hang with seed 9709 at
+# event 568; RhoDMatrix assertion with seed 9710 at event ~690). That energy is excluded from G_MC; the top extension above
+# 7.07e4 GeV is held at n(7.07e4) by the existing clip of fold_090.interp_loglog.
+EXCL = {("top", 100000.0)}
 
 
 def rd(p):
@@ -50,6 +54,8 @@ def main(tdir, d99, run, cfg_dir, dst):
     for c, col in CH.items():
         d = json.load(open(os.path.join(run, "mc109", f"herwig71_{c}.json")))
         for e in d["energies"]:
+            if (c, round(e["E"], 6)) in EXCL:
+                out.setdefault("excluded_DEV2", []).append({"channel": c, "E": e["E"], "rc_run": e.get("rc_run")}); continue
             okmc &= e.get("rc_read") == 0 and e.get("rc_run") == 0 and e.get("events") == 2000 and abs(e["Efinal_over_sqrts"] - 1) <= 1e-3
         e5 = min(d["energies"], key=lambda e: abs(e["E"] - 5e4))
         cell = {"max_abs_event_Eresidual": max(e.get("max_abs_event_Eresidual", 0) for e in d["energies"])}
