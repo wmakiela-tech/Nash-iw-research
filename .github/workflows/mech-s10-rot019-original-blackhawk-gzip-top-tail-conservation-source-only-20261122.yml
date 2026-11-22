@@ -1,4 +1,5 @@
 name: Mech-S10 ROT019 original 10000-node BlackHawk primary top-tail bound
+# DEV-1 original archive header W+- maps to internal Wpm, original fold_090 PCOL.
 on:
   push:
     branches: [main]
@@ -23,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p rot019
-          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot019_actual_blackhawk_primary_top_tail_energy_conservation_sharp_discrete_bound.py)" = "e8bc6771c8929ae2ee210779f57ed419816108df"
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot019_actual_blackhawk_primary_top_tail_energy_conservation_sharp_discrete_bound.py)" = "5d12bfe84eb95a5fdd2f91011e2211a284c178ea"
           git rev-parse HEAD >rot019/SOURCE_COMMIT
           python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot019_actual_blackhawk_primary_top_tail_energy_conservation_sharp_discrete_bound.py rot019/original_10000_primary_source_top_tail_energy_bound.json >rot019/STDOUT 2>rot019/STDERR
           python3 -I -c 'import json; d=json.load(open("rot019/original_10000_primary_source_top_tail_energy_bound.json")); assert d["independent_original_gzip_source_nodes"]==10000 and d["source_mass_grid_points"]==d["source_energy_grid_points"]==100 and d["top_tail_node_ids_zero_indexed"]==[96,97,98,99] and d["no_native_physics_executed"] and len(d["sha_verified_original_source_git_blobs"])==7'
