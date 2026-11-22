@@ -1,0 +1,474 @@
+{
+ "cells": {
+  "label_sqrts_eq_Eprime|up|pipm": {
+   "L": -0.00029860175185190274,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|up|Kpm": {
+   "L": 0.003669063654647603,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|up|K0L": {
+   "L": -0.004650921808985127,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|up|proton": {
+   "L": 0.003941349793515008,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|up|neutron": {
+   "L": -0.004307433827841946,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|down|pipm": {
+   "L": 0.006600916519371919,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|down|Kpm": {
+   "L": 0.004898102278965828,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|down|K0L": {
+   "L": 0.0010391460621405658,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|down|proton": {
+   "L": 0.008626163461693448,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|down|neutron": {
+   "L": 0.0056687537013661166,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|strange|pipm": {
+   "L": 0.0008054516130954179,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|strange|Kpm": {
+   "L": 0.002323741768886972,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|strange|K0L": {
+   "L": -0.002374072280680854,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|strange|proton": {
+   "L": 9.012094097434675e-05,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|strange|neutron": {
+   "L": 0.0007243560285566164,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|charm|pipm": {
+   "L": -0.0008555792178488059,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|charm|Kpm": {
+   "L": -0.0031883126807135034,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|charm|K0L": {
+   "L": -0.006842306398907543,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|charm|proton": {
+   "L": -0.0034124159505911126,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|charm|neutron": {
+   "L": -0.000218847645557916,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|bottom|pipm": {
+   "L": 0.01089061010167286,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|bottom|Kpm": {
+   "L": 0.00233956896330622,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|bottom|K0L": {
+   "L": -0.002002713004115736,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|bottom|proton": {
+   "L": 0.007000013512441085,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|bottom|neutron": {
+   "L": 0.0034481993715507254,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|top|pipm": {
+   "L": -0.0037043258267526976,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|top|Kpm": {
+   "L": -0.006215656322716731,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|top|K0L": {
+   "L": -0.014909823994790962,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|top|proton": {
+   "L": -0.006264908739198615,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|top|neutron": {
+   "L": -0.013110748897779032,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|gluon|pipm": {
+   "L": 0.003418810956670712,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|gluon|Kpm": {
+   "L": -0.001615832477867773,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|gluon|K0L": {
+   "L": -0.0049945057330403695,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|gluon|proton": {
+   "L": 0.003502290171597871,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|gluon|neutron": {
+   "L": 0.0033131777338165753,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Wpm|pipm": {
+   "L": 0.0038038105127679257,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Wpm|Kpm": {
+   "L": 0.017902173948326366,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Wpm|K0L": {
+   "L": 0.009680934951171687,
+   "tol": 0.0432351414333221,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Wpm|proton": {
+   "L": -0.0008264546041907533,
+   "tol": 0.04678842898428284,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Wpm|neutron": {
+   "L": -0.02187970352920647,
+   "tol": 0.04711386140484579,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Z0|pipm": {
+   "L": -0.0025761483800972236,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Z0|Kpm": {
+   "L": -0.0027602110096164286,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Z0|K0L": {
+   "L": -0.012437058459182918,
+   "tol": 0.04,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Z0|proton": {
+   "L": -0.004280700614135299,
+   "tol": 0.042742305790131566,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|Z0|neutron": {
+   "L": -0.019335228732616404,
+   "tol": 0.04538965667656503,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|tau|pipm": {
+   "L": 0.0031593082234514995,
+   "tol": 0.04649258862782777,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|tau|Kpm": {
+   "L": 0.027271179877134236,
+   "tol": 0.21559467719576506,
+   "pass": true
+  },
+  "label_sqrts_eq_Eprime|tau|K0L": {
+   "L": -0.07024058467053776,
+   "tol": 0.3011665144191213,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|up|pipm": {
+   "L": -0.08500032053342382,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|up|Kpm": {
+   "L": -0.08269474493465094,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|up|K0L": {
+   "L": -0.08888552977035341,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|up|proton": {
+   "L": -0.08298614427274006,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|up|neutron": {
+   "L": -0.08828418041462853,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|down|pipm": {
+   "L": -0.09036363255261128,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|down|Kpm": {
+   "L": -0.0834567179410523,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|down|K0L": {
+   "L": -0.08778784441127498,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|down|proton": {
+   "L": -0.08696186409977769,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|down|neutron": {
+   "L": -0.08817733877285502,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|strange|pipm": {
+   "L": -0.09215746897994806,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|strange|Kpm": {
+   "L": -0.07823204776587617,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|strange|K0L": {
+   "L": -0.08048895724118535,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|strange|proton": {
+   "L": -0.09272812291665745,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|strange|neutron": {
+   "L": -0.091983805679594,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|charm|pipm": {
+   "L": -0.08669964123612155,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|charm|Kpm": {
+   "L": -0.07908415970822595,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|charm|K0L": {
+   "L": -0.08767412983054455,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|charm|proton": {
+   "L": -0.08361520407103878,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|charm|neutron": {
+   "L": -0.08638652162233405,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|bottom|pipm": {
+   "L": -0.07958755570424011,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|bottom|Kpm": {
+   "L": -0.06780849219624607,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|bottom|K0L": {
+   "L": -0.0787103539305276,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|bottom|proton": {
+   "L": -0.08063836827309405,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|bottom|neutron": {
+   "L": -0.08091964469820212,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|top": "absent",
+  "alt_sqrts_eq_2Eprime|gluon|pipm": {
+   "L": -0.08980898738047127,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|gluon|Kpm": {
+   "L": -0.08576882086569486,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|gluon|K0L": {
+   "L": -0.09672269522451063,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|gluon|proton": {
+   "L": -0.08835159529351637,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|gluon|neutron": {
+   "L": -0.0863794055726323,
+   "tol": 0.04,
+   "pass": false
+  },
+  "alt_sqrts_eq_2Eprime|Wpm|pipm": {
+   "L": -0.005183938888451718,
+   "tol": 0.04,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Wpm|Kpm": {
+   "L": 0.0016396381185213443,
+   "tol": 0.04,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Wpm|K0L": {
+   "L": -0.018556449440183205,
+   "tol": 0.04058858224309185,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Wpm|proton": {
+   "L": 0.014725393101966312,
+   "tol": 0.04850049328152935,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Wpm|neutron": {
+   "L": 0.004894072353721286,
+   "tol": 0.04799674276746018,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Z0|pipm": {
+   "L": 0.0031565164876380235,
+   "tol": 0.04,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Z0|Kpm": {
+   "L": 0.0018721113066355603,
+   "tol": 0.04,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Z0|K0L": {
+   "L": -0.013638011818747822,
+   "tol": 0.04,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Z0|proton": {
+   "L": 0.009383623693147306,
+   "tol": 0.04526371195745422,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|Z0|neutron": {
+   "L": 0.012245218740406301,
+   "tol": 0.04555260630668029,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|tau|pipm": {
+   "L": -0.005747917031049673,
+   "tol": 0.04468978418865534,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|tau|Kpm": {
+   "L": -0.052605493832141866,
+   "tol": 0.22113394812651235,
+   "pass": true
+  },
+  "alt_sqrts_eq_2Eprime|tau|K0L": {
+   "L": 0.054698151937762236,
+   "tol": 0.27834360998926666,
+   "pass": true
+  }
+ },
+ "summary": {
+  "label_sqrts_eq_Eprime": {
+   "gated": 48,
+   "fail": 0,
+   "max_abs_L": 0.07024058467053776,
+   "median_L": -0.00025872469870490936
+  },
+  "alt_sqrts_eq_2Eprime": {
+   "gated": 43,
+   "fail": 30,
+   "max_abs_L": 0.09672269522451063,
+   "median_L": -0.08269474493465094
+  }
+ }
+}

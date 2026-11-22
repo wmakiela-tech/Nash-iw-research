@@ -1,0 +1,39 @@
+# jl_dump_c22.log rc=0
+┌ Info: Added 1 workers for _badacz081_prefix_1411.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz081_prefix_1411.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+DONE orig
+# jl_dump_c62.log rc=0
+┌ Info: Added 1 workers for _badacz081_prefix_1444.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz081_prefix_1444.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+DONE orig
+# jl_dump_k.log rc=0
+┌ Info: Added 1 workers for _badacz081_prefix_1410.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz081_prefix_1410.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+DONE orig

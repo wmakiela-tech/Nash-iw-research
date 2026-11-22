@@ -1,0 +1,323 @@
+{
+ "archives": {
+  "blackhawk_v2.3.tar.bz2": "dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7",
+  "blackhawk_v3.0.tar.bz2": "c8bf4cccac28e8adf598f793d093d8b8afece7fe23ec4ddc8fcf770776f9f1b3"
+ },
+ "herwig_tables": {
+  "verdict": "SAME_CATALOG_BYTES",
+  "n_v23": 11,
+  "n_v30": 11,
+  "n_same": 11,
+  "different": [],
+  "only_v23": [],
+  "only_v30": []
+ },
+ "pythia_tables": {
+  "verdict": "DIFFERENT_CATALOG_BYTES",
+  "n_v23": 22,
+  "n_v30": 11,
+  "n_same": 11,
+  "different": [],
+  "only_v23": [
+   "src/tables/hadronization_tables/pythia_tables/old/K0L.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/Kpm.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/electron.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/muon.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/neutron.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/nue.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/numu.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/nutau.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/photon.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/pipm.txt",
+   "src/tables/hadronization_tables/pythia_tables/old/proton.txt"
+  ],
+  "only_v30": []
+ },
+ "other_members": {
+  "scripts/herwig_scripts/BH_TABLE_GENERATOR.cc": {
+   "v23": "4996f39d806640084c77ecdde1f099e3c184026d00d4352fe6fc8705c70138d8",
+   "v30": "4996f39d806640084c77ecdde1f099e3c184026d00d4352fe6fc8705c70138d8",
+   "same": true
+  },
+  "scripts/herwig_scripts/MC_PARTICLE_COUNTS.cc": {
+   "v23": "e2314810c09e2b8fda9fa82651d0be06940bfac6f91fb289d6234ede6f9174ad",
+   "v30": "e2314810c09e2b8fda9fa82651d0be06940bfac6f91fb289d6234ede6f9174ad",
+   "same": true
+  },
+  "scripts/herwig_scripts/Makefile": {
+   "v23": "e3e350a3da87e2a4aab75a36159ec4c30de3484cf91ad8e7ddeaa01101581b7f",
+   "v30": "e3e350a3da87e2a4aab75a36159ec4c30de3484cf91ad8e7ddeaa01101581b7f",
+   "same": true
+  },
+  "scripts/herwig_scripts/README.txt": {
+   "v23": "d22da34d4b188641714ce7c78207f4bc2f9b59af79fc7b140c8e6b52cc1d1b88",
+   "v30": "cc07fea7f4f6455f4b64875294713a0847d69549d1f21339dad55839e54132ac",
+   "same": false
+  },
+  "scripts/herwig_scripts/RivetMC_PARTICLE_COUNTS.so": {
+   "v23": "da6e5030823eb7acabe54acdc3d8e1c26116d8d66c0195c7c8a688666b7ddf88",
+   "v30": "da6e5030823eb7acabe54acdc3d8e1c26116d8d66c0195c7c8a688666b7ddf88",
+   "same": true
+  },
+  "scripts/herwig_scripts/Wpm/LEP.in": {
+   "v23": "329d3b01cd1335e42e87a1df7c710b3fd3fb4a5782d82a7a877f970a38ef7880",
+   "v30": "329d3b01cd1335e42e87a1df7c710b3fd3fb4a5782d82a7a877f970a38ef7880",
+   "same": true
+  },
+  "scripts/herwig_scripts/Wpm/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/Z0/LEP.in": {
+   "v23": "8442223bdc7a87085046db306937a969ef1494575980b755527d8ce85b2a3ba1",
+   "v30": "8442223bdc7a87085046db306937a969ef1494575980b755527d8ce85b2a3ba1",
+   "same": true
+  },
+  "scripts/herwig_scripts/Z0/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/bottom/LEP.in": {
+   "v23": "2234f7faf2b8c624dd0279588d402da34301d915a44d3a897921f582939544e6",
+   "v30": "2234f7faf2b8c624dd0279588d402da34301d915a44d3a897921f582939544e6",
+   "same": true
+  },
+  "scripts/herwig_scripts/bottom/a.exe": {
+   "v23": "ab7c79aeb1ee288ab71b610968938e387c65d1b97fedce5089e108bbf817da5e",
+   "v30": null,
+   "same": false
+  },
+  "scripts/herwig_scripts/bottom/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/bottom/main.o": {
+   "v23": "a7b5308c189f9a35176bff66b73c4f1b5e08c7eb1d7da8ef7d20e4af5c49f41c",
+   "v30": null,
+   "same": false
+  },
+  "scripts/herwig_scripts/charm/LEP.in": {
+   "v23": "5e50c4007fdf7cf9b4b6c5734b26271f852b9bb0b23e5efd3d1bd8cd8723fd44",
+   "v30": "5e50c4007fdf7cf9b4b6c5734b26271f852b9bb0b23e5efd3d1bd8cd8723fd44",
+   "same": true
+  },
+  "scripts/herwig_scripts/charm/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/down/LEP.in": {
+   "v23": "8b0ed2ed4762dbd5f035838c0b4130ca88c84554d8a6549fc2073773a83fcfee",
+   "v30": "8b0ed2ed4762dbd5f035838c0b4130ca88c84554d8a6549fc2073773a83fcfee",
+   "same": true
+  },
+  "scripts/herwig_scripts/down/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/electron/LEP.in": {
+   "v23": "f9aa15417ce0543182336c1a5c5682400eb2993281b8a459b27b9f51061e1ca8",
+   "v30": "f9aa15417ce0543182336c1a5c5682400eb2993281b8a459b27b9f51061e1ca8",
+   "same": true
+  },
+  "scripts/herwig_scripts/electron/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/formatting.c": {
+   "v23": "ace713b41c09afac56d7f6957031cde8e94c1f3f31339d365a52a26d5df046a4",
+   "v30": "ace713b41c09afac56d7f6957031cde8e94c1f3f31339d365a52a26d5df046a4",
+   "same": true
+  },
+  "scripts/herwig_scripts/gluons/LEP.in": {
+   "v23": "007547945b9d842bfd0742ec0e15f6bffce20747ec81d09a7c4d483430af1137",
+   "v30": "007547945b9d842bfd0742ec0e15f6bffce20747ec81d09a7c4d483430af1137",
+   "same": true
+  },
+  "scripts/herwig_scripts/gluons/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/higgs/LEP.in": {
+   "v23": "18ba6881cdba2b79301f85998db32faf1c9c54c5996365733ccf5847cab023b9",
+   "v30": "18ba6881cdba2b79301f85998db32faf1c9c54c5996365733ccf5847cab023b9",
+   "same": true
+  },
+  "scripts/herwig_scripts/higgs/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/muon/LEP.in": {
+   "v23": "ed54609872c5c4d5aaff9197aaf0b81b43841c60b44f55d271a0f58436f9a49d",
+   "v30": "ed54609872c5c4d5aaff9197aaf0b81b43841c60b44f55d271a0f58436f9a49d",
+   "same": true
+  },
+  "scripts/herwig_scripts/muon/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/neutrinos/LEP.in": {
+   "v23": "237af351fe347e1211a465d40e5e4258ca3de94b755d0843e92c17f2a9287ece",
+   "v30": "237af351fe347e1211a465d40e5e4258ca3de94b755d0843e92c17f2a9287ece",
+   "same": true
+  },
+  "scripts/herwig_scripts/neutrinos/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/photon/LEP.in": {
+   "v23": "f608370429318d6a339d13dd75659fa2839d967fd65661239c3e5a188d1713fe",
+   "v30": "f608370429318d6a339d13dd75659fa2839d967fd65661239c3e5a188d1713fe",
+   "same": true
+  },
+  "scripts/herwig_scripts/photon/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/strange/LEP.in": {
+   "v23": "5b6a9e0a901cccb01f6afa69bdb56181f454794a34ac2b07dad975084ff358ef",
+   "v30": "5b6a9e0a901cccb01f6afa69bdb56181f454794a34ac2b07dad975084ff358ef",
+   "same": true
+  },
+  "scripts/herwig_scripts/strange/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/tau/LEP.in": {
+   "v23": "c671b0b7de2a29e92697abb4c29bd4da1f43d59c5d3b3edc9c44af8878e8a21b",
+   "v30": "c671b0b7de2a29e92697abb4c29bd4da1f43d59c5d3b3edc9c44af8878e8a21b",
+   "same": true
+  },
+  "scripts/herwig_scripts/tau/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/top/LEP.in": {
+   "v23": "d4be98fec9774e5c45d49e883fa1d65d29dc0c3ac39fd529a686e395408fa835",
+   "v30": "d4be98fec9774e5c45d49e883fa1d65d29dc0c3ac39fd529a686e395408fa835",
+   "same": true
+  },
+  "scripts/herwig_scripts/top/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "scripts/herwig_scripts/up/LEP.in": {
+   "v23": "f5bec764f4bb2445b29ebd1b9e909cdf1ba4acb164211511aca45c396c95458f",
+   "v30": "f5bec764f4bb2445b29ebd1b9e909cdf1ba4acb164211511aca45c396c95458f",
+   "same": true
+  },
+  "scripts/herwig_scripts/up/main.cpp": {
+   "v23": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "v30": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2",
+   "same": true
+  },
+  "src/hadro_herwig.c": {
+   "v23": "8e37a879ba901bf8fff545d3daeec853371a1399f7c58bdf10da58b996121c34",
+   "v30": "daf8f8e84f8886fbcedf08e04650cdb030e43be163a094045ae4b87b69c3f947",
+   "same": false
+  },
+  "src/tables/hadronization_tables/hadronization_tables_hazma.h": {
+   "v23": "da1d839dca60ff8958f731c1b85d7329e89f469e24a9b10d9795fa53cadde1d2",
+   "v30": "da1d839dca60ff8958f731c1b85d7329e89f469e24a9b10d9795fa53cadde1d2",
+   "same": true
+  },
+  "src/tables/hadronization_tables/hadronization_tables_hdmspectra.h": {
+   "v23": "5807511a0064e262733c51405645a5132be34a778a01b4d36f5ce8d6cbacbd44",
+   "v30": "5807511a0064e262733c51405645a5132be34a778a01b4d36f5ce8d6cbacbd44",
+   "same": true
+  },
+  "src/tables/hadronization_tables/hadronization_tables_herwig.h": {
+   "v23": "d7a488165431c4aadba7636502b27dfe20f0cb312b63f528c6b5d66e31934c5f",
+   "v30": "d7a488165431c4aadba7636502b27dfe20f0cb312b63f528c6b5d66e31934c5f",
+   "same": true
+  },
+  "src/tables/hadronization_tables/hadronization_tables_pythia.h": {
+   "v23": "17f4a234ddd01eaa4f0370b75633e9b91c382699ef1003ab90f8182bacc95795",
+   "v30": "17f4a234ddd01eaa4f0370b75633e9b91c382699ef1003ab90f8182bacc95795",
+   "same": true
+  },
+  "src/tables/hadronization_tables/hadronization_tables_pythianew.h": {
+   "v23": "fc35431f414512d56bb9f415c8442243cb547dfe30892cff76be7c57fc30d8bd",
+   "v30": "fc35431f414512d56bb9f415c8442243cb547dfe30892cff76be7c57fc30d8bd",
+   "same": true
+  },
+  "src/tables/hadronization_tables/infos.txt": {
+   "v23": "bd6d2d2a240b4c8a56cf73e8d4119212f2c5a7e4657a71cd0a7199c566f2ef8c",
+   "v30": "bd6d2d2a240b4c8a56cf73e8d4119212f2c5a7e4657a71cd0a7199c566f2ef8c",
+   "same": true
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/electron.txt": {
+   "v23": "bc1e35f8c97c4f0c6e64113dfe65b1500959c7b7e16b9f961d0c592396a1e4e7",
+   "v30": "bc1e35f8c97c4f0c6e64113dfe65b1500959c7b7e16b9f961d0c592396a1e4e7",
+   "same": true
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/nue.txt": {
+   "v23": "9948ac0ae1bb5a066c292aad5d278057010a84260768cb365e7691acf27dd09a",
+   "v30": "9948ac0ae1bb5a066c292aad5d278057010a84260768cb365e7691acf27dd09a",
+   "same": true
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/numu.txt": {
+   "v23": "7cdd8f408270295be793e62cae25f10853db99815ae4580e2cbde474c2abf7f7",
+   "v30": "7cdd8f408270295be793e62cae25f10853db99815ae4580e2cbde474c2abf7f7",
+   "same": true
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/nutau.txt": {
+   "v23": "60d3c30a0e0de3b3d24bec73e1b00b1be8650ab612309ec845d39c391024ef47",
+   "v30": "60d3c30a0e0de3b3d24bec73e1b00b1be8650ab612309ec845d39c391024ef47",
+   "same": true
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/old/electron.txt": {
+   "v23": "625a64f0d826a70789b7b1186271ef86915f673648ed2842904875d64c7eaba3",
+   "v30": null,
+   "same": false
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/old/nue.txt": {
+   "v23": "94308ff13eac28ac3df4a3f0e41f19f96f560ffe3330c354a2e006f8064b73a1",
+   "v30": null,
+   "same": false
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/old/numu.txt": {
+   "v23": "bfdaa0b3ca8045f461a2208db7ad9fdd4a52bab3b1038e96ec4a475ee7a052a1",
+   "v30": null,
+   "same": false
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/old/nutau.txt": {
+   "v23": "7c6a2d50d682a9c9bed43eeb1c0eba016f27e83b6b6fc79db78d80eaea23a191",
+   "v30": null,
+   "same": false
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/old/photon.txt": {
+   "v23": "22081574ccde041db2749e6095678e51afc2b25a1d6e871c46a4a8da94d74940",
+   "v30": null,
+   "same": false
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/old/proton.txt": {
+   "v23": "e34fca050981c4fe229620e3d569d0a93278051fb737d3dfa265e5b41758240e",
+   "v30": null,
+   "same": false
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/photon.txt": {
+   "v23": "6da2cbeae82a7c2466ad7e6997200996680402917e57f79171e331295d1585e2",
+   "v30": "6da2cbeae82a7c2466ad7e6997200996680402917e57f79171e331295d1585e2",
+   "same": true
+  },
+  "src/tables/hadronization_tables/pythia_tables_new/proton.txt": {
+   "v23": "8133fdb3bd0baa2dd8f192c2d86c408c6d9f1dbc6df4b608e3be592c7fe4ad12",
+   "v30": "8133fdb3bd0baa2dd8f192c2d86c408c6d9f1dbc6df4b608e3be592c7fe4ad12",
+   "same": true
+  }
+ }
+}

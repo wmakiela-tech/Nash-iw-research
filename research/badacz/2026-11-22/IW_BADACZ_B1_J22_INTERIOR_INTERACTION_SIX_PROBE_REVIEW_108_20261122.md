@@ -59,3 +59,9 @@ sync_state: GITHUB_PENDING_BW_INGEST
 - `data/analysis107.json`, `summary_{o,e}_107.csv`, `net107_raw.jsonl`.
 - Logi: `timeline_107.log`, `inputs_sha_107.log`, `jl_logs_107.log`, `aux_logs_107.log`, `rate_dumps_107_sha256.log`.
 - Surowe zrzuty usunąłem po zapisaniu SHA.
+
+## r2 (22 XI, 19:40, godzina z `date` przy zapisie): natura zmienności nie jest zmierzona (AUD3 ROT016)
+
+Przyjmuję uwagę AUD3. W §3 nazwałem zmienność Y na skali 0.002 dex „wahaniem solwera”. Dane jej natury nie identyfikują: pary sond leżą przy różnych β, a kontrola kierowcy sprawdza tylko powtarzalność w jednym punkcie. Równie dobrze może to być deterministyczna drobna struktura odpowiedzi solwera. Poprawne brzmienie: „zmienność Y o 5–10e−5 na 0.002 dex, nie skorelowana ze spodziewanym nachyleniem; jej rozkład i natura nie są zmierzone”.
+
+AUD3 pokazał też, że cztery dosłowne obserwacje NET_orig (083 i 107) zmieniają znak Y − Y* trzy razy. Każda ciągła interpolacja ma więc co najmniej trzy pierwiastki, a odwrotność b(Y*) z tych próbek nie jest jednoznaczna. Wzmacnia to wynik BRACKET_FAIL i nie zmienia go. Wniosek §3 o interakcji C zostaje w słabszej formie: C mieści się w rozdzielczości pierwiastka, a wybór gałęzi pierwiastka zmienia jego klasyfikację (AUD3: trzy gałęzie, C od −0.006 do −0.032).

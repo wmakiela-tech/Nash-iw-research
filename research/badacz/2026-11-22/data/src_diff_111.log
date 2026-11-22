@@ -1,0 +1,35 @@
+# sha256 archives
+dd148349304c158ed3509ea6935f2fd3d60ebe7cda4c34598aa99ea329c129a7  blackhawk_v2.3.tar.bz2
+c8bf4cccac28e8adf598f793d093d8b8afece7fe23ec4ddc8fcf770776f9f1b3  blackhawk_v3.0.tar.bz2
+# diff -rq of src/*.c,*.h (tables excluded)
+Files s23/src/evolution.c and s30/src/evolution.c differ
+Files s23/src/general.c and s30/src/general.c differ
+Files s23/src/hadro_hazma.c and s30/src/hadro_hazma.c differ
+Files s23/src/hadro_hdmspectra.c and s30/src/hadro_hdmspectra.c differ
+Files s23/src/hadro_herwig.c and s30/src/hadro_herwig.c differ
+Files s23/src/hadro_pythia.c and s30/src/hadro_pythia.c differ
+Files s23/src/hadro_pythianew.c and s30/src/hadro_pythianew.c differ
+Files s23/src/include.h and s30/src/include.h differ
+Files s23/src/primary.c and s30/src/primary.c differ
+Files s23/src/secondary.c and s30/src/secondary.c differ
+Files s23/src/spectrum.c and s30/src/spectrum.c differ
+Files s23/src/technical.c and s30/src/technical.c differ
+# diff line counts
+evolution.c 116
+general.c 247
+hadro_hazma.c 6
+hadro_hdmspectra.c 6
+hadro_herwig.c 6
+hadro_pythia.c 6
+hadro_pythianew.c 6
+include.h 53
+primary.c 824
+secondary.c 64
+spectrum.c 61
+technical.c 13
+# hadro_herwig.c: non-comment diff lines
+0
+# diff lines mentioning herwig in general.c, secondary.c, primary.c
+general.c 0
+secondary.c 0
+primary.c 0

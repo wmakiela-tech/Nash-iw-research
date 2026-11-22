@@ -1,0 +1,16 @@
+# tables.log
+{"G_CTRL": {"ratio_min": 0.9999276309015188, "ratio_max": 1.0001436096512664, "pass": true}, "G_FINITE": {"pass": true}}
+{"log10_Sa_over_L_rows0_28_min_max": {"pipm": [0.06554398544495173, 0.08271798233397118], "Kpm": [0.05718625912376353, 0.07114902960768286], "K0L": [0.05763755873968758, 0.0715834318505178], "proton": [0.06217135273742111, 0.07891272728964968], "neutron": [0.06274257061628154, 0.07978913574205808]}, "log10_Sc_over_L_rows0_28_min_max": {"pipm": [0.0760929587828535, 0.08271798233397118], "Kpm": [0.0666562155498537, 0.07116761884674722], "K0L": [0.06851629768922174, 0.07159552273596255], "proton": [0.07247316671100766, 0.07891272728964968], "neutron": [0.07291179342615639, 0.07978913574205808]}}
+# dedupe.log
+files 1 with drops 0
+files 31 with drops 0
+files 21 with drops 8
+# patch.log
+PATCHED cd607965eb711efc20463c754801140db4b4c53a0cae41654a3327e95b4f6fd0
+PATCHED_079 b6bb563659bd10befacefb465418a10890b3e2233773b64b162be96173829ce0
+# net.log
+NET109_DONE 54 expected 54 failed 0 []
+# analysis109 stdout
+{"G_MC": true, "G_TABLES": true, "G_COMPLETE": true, "G_V2": true, "G_DRIVER": true, "G_BASE": true}
+{"SEAM": "SEAM_PASS", "status": "MEASURED", "d_label_c_j22": [-0.08686306637040886, -0.03165018273949016], "d_label_c_j62": [-0.07968954064381606, -0.06599851054309269]}
+{"Pr1_SEAM_PASS": true, "Pr2_j62_abs_c_minus_s_le_0.03_4of4": true, "Pr3_j22_in_band_ge3of4": true}

@@ -77,3 +77,9 @@ L = log₁₀(N_BH/N_7.1.5) przy √s = E′:
 - `data/mc105/H71_f1.json`, `analysis105.json`.
 - Logi: `timeline_105.log`, `inputs_sha_105.log`, `versions_105.log`, `spec_105.log`, `mc_logs_105.log`, `build_conf_tail_105.log`, `build_sha256_105.log` (SHA źródeł, binarium, repozytorium i zbiorów PDF).
 - SHA w `MANIFEST_SHA256_092.md` (sekcja 105).
+
+## r2 (22 XI, 19:40, godzina z `date` przy zapisie): korekta przeliczenia dex na procenty (Mech-S10 ROT017)
+
+Przyjmuję korektę Mech-S10. W §3 napisałem „zgodne do ≤ 1%”. To błąd przeliczenia: 0.01 dex to 2.33%, a 1% to 0.0043 dex. Poprawne brzmienie: wszystkie 30 komórek zgadza się z agregatami BlackHawk do |L| ≤ 0.0097 dex, czyli do 2.26% względem MC 7.1.5. W 6/30 komórkach różnica przekracza 1% (największa: proton przy 25 GeV, +2.26%, ~1.4 se MC). Kryteria MATCH_7.1 z PREREG_105 (tolerancja ≥ 0.04 dex) są spełnione bez zmian. Opisy w dex w §§2–5 są poprawne. Nie ma tu przedziału ufności populacji ani wyłącznej identyfikacji rocznika (7.0 i inne 7.1.x nie były testowane).
+
+origin_failure_mode: DEX_TO_PERCENT_CONVERSION_BY_DIGIT (0.01 dex odczytane jako 1%). Łatka: każdą liczbę w procentach przy wartości w dex liczę jako 10^L − 1 w tym samym poleceniu, które zapisuje tekst.
