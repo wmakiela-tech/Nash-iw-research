@@ -1,0 +1,117 @@
+{
+  "artifact_id": "IW_REC13_ROT017_WUXU_ORIGINAL_HDF5_100X100_HELIUM_CONTRACT_CONDITIONAL_REPROCESS_001_20261122",
+  "date": "2026-11-22",
+  "exposure": "PUBLIC",
+  "original_repository": "Fenyutanchan/Primordial-Black-Hole",
+  "original_commit": "d395183674cace6c9906a8911bdeb7234ba4040d",
+  "original_path": "arXiv-2509.05618/data/out/scanning.jld2",
+  "original_git_blob": "10cc9b3f078fcadb91b5e520e75845859ca00b74",
+  "original_sha256": "51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786",
+  "original_file_size_bytes": 151089,
+  "exact_source_matrix_shape_mass_by_beta": [
+    100,
+    100
+  ],
+  "mass_range_g": [
+    600000000,
+    10000000000
+  ],
+  "beta_log10_range": [
+    -20,
+    -17
+  ],
+  "orientation": "Original native HDF5 Y_P_mat is beta-by-mass in Wolfram importer; transposed to mass-by-beta, checked against original source root j22/j62 and author's script.",
+  "original_chi2_formula": "chi2_mat = ((Y_P_mat-0.245)/0.003)^2",
+  "max_chi2_reconstruction_difference": 4.3655745685100555e-11,
+  "original_python_EKS1_78root_crosscheck": "Exact agreement for j22 and j62 and all 78 root count, from independent original binary.",
+  "source_paper_2026_v3_formula": "Yp_approx = 2*Xn",
+  "source_public_main_scan_formula": "Yp_code = 2*Xn/(1-Xn)",
+  "inferred_postprocessor_only": "Yp_v3=2*Yp_code/(2+Yp_code), valid only if source producer is exactly this public main-scan postprocessor",
+  "hypothetical_observational_cutoff": 0.251,
+  "archive_code_value_required_for_v3_cutoff": 0.28702115494568325,
+  "baseline_compatibility": {
+    "archive_code_reference": 0.245,
+    "v3_postprocessed_reference": 0.21826280623608016,
+    "hypothetical_SBBN_offset_in_observational_standard_deviations": 8.912397921306612,
+    "source_lightest_mass_beta_min_code": 0.24494317949740632,
+    "source_lightest_mass_beta_min_v3": 0.2182177096814038
+  },
+  "cases": [
+    {
+      "label": "source_archive",
+      "count": 78,
+      "earliest_mass_g": 1121174456.4709606,
+      "earliest_index_zero": 22,
+      "root_log10_beta_j22": -17.220222662721067,
+      "root_log10_beta_j62": -19.389217861290064,
+      "shift_range_log10_beta": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "naive_v3_no_baseline_anchor",
+      "count": 73,
+      "earliest_mass_g": 1292357678.6116033,
+      "earliest_index_zero": 27,
+      "root_log10_beta_j22": null,
+      "root_log10_beta_j62": -18.555528141997392,
+      "delta_j62": 0.8336897192926713,
+      "shift_range_log10_beta": [
+        0.831685444385851,
+        1.1822393854848734
+      ]
+    },
+    {
+      "label": "v3_global_anchor_at_code_Yp_0p245",
+      "count": 77,
+      "earliest_mass_g": 1153493366.4399586,
+      "earliest_index_zero": 23,
+      "root_log10_beta_j22": null,
+      "root_log10_beta_j62": -19.29319063144523,
+      "delta_j62": 0.09602722984483236,
+      "shift_range_log10_beta": [
+        0.09189560610077052,
+        0.14656760938006386
+      ]
+    },
+    {
+      "label": "v3_mass_specific_anchor_at_beta_min",
+      "count": 78,
+      "earliest_mass_g": 1121174456.4709606,
+      "earliest_index_zero": 22,
+      "root_log10_beta_j22": -17.013634901320852,
+      "root_log10_beta_j62": -19.224137642596343,
+      "delta_j22": 0.20658776140021473,
+      "delta_j62": 0.16508021869372058,
+      "shift_range_log10_beta": [
+        0.0942178465284691,
+        0.20658776140021473
+      ]
+    }
+  ],
+  "extra_author_v1_archive": {
+    "original_path": "arXiv-2509.05618/arXiv-2509.05618v1/data/out/scanning.jld2",
+    "original_git_blob": "ff08072449c4ef46144cb800778224acd9669a8f",
+    "original_sha256": "7f8ebe6c6c7b380f20c725908d900c5508bb4f16519a7f17e10955a55e78ecf1",
+    "bytes": 149272,
+    "same_mass_and_beta_grids": true,
+    "max_absolute_Yp_difference_to_later_archive": 1.03484782797849,
+    "mean_absolute_Yp_difference_to_later_archive": 0.08457321190599984,
+    "causal_attribution_to_formula_change": "NOT IDENTIFIED: code, hadron/nucleon physics and Julia runtime differ between sources"
+  },
+  "guards": [
+    "No physical re-calibration performed",
+    "No fresh cosmological ODE or nuclear network run",
+    "Archive and figure5 producer lineage not verified by identical source code runtime",
+    "Mass-specific baseline beta_min is not necessarily pure SBBN for every mass",
+    "Two reanchor choices are nonphysical sensitivity controls only",
+    "No beta-shift interpreted as improved PBH physical bound",
+    "No full current literature envelope proven",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_I3"
+  ],
+  "firstness": "EKS1 ROT016 original source 78 roots and G0 failure; REC13 ROT016 initial three-way formula-source contract; REC13 ROT017 first independent original JLD2 binary readback and three-baseline 10000-cell reprocessing in this line."
+}
