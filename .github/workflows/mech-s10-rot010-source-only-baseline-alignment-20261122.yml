@@ -1,0 +1,43 @@
+name: Mech-S10 ROT010 baseline-aligned source interaction sign I1
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot010-source-only-baseline-alignment-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot010-20261122-source-only
+  cancel-in-progress: false
+jobs:
+  native-raw-data-only-baseline-proxy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Source git-blob-verified 64 native roots and 64 counterfactual baseline-aligned roots
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot010
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot010_baseline_alignment_interaction_referee.py)" = "441f7488949ece2cd52c641c9802dc1f5ed57dac"
+          git rev-parse HEAD > rot010/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot010_baseline_alignment_interaction_referee.py rot010/result_64raw_64baseline_adjusted.json > rot010/stdout.log 2> rot010/stderr.log
+          python3 -I -c 'import json; x=json.load(open("rot010/result_64raw_64baseline_adjusted.json")); assert x["n_verified_original_roots"]==64 and x["n_counterfactual_baseline_aligned_roots"]==64; assert x["n_mixed_interaction_signs_original"]==4 and x["n_mixed_interaction_signs_after_baseline_alignment"]==3; assert x["n_mixed_interaction_signs_new_realizations_after_alignment"]==3; assert x["max_abs_original_root_deviation_090"]<=1e-12 and x["max_abs_original_root_deviation_094"]<=1e-12; assert x["no_physical_rerun"]'
+          echo "INDEPENDENT_BASELINE_SENSITIVITY_REFEREE_PASS" > rot010/VERDICT
+      - name: Preserve failures and SHA256 manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot010
+          find rot010 -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > rot010/ARTIFACT_SHA256SUMS
+      - name: Upload source-only analysis evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot010-baseline-source-only-64x2
+          path: rot010/
+          if-no-files-found: error
