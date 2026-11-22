@@ -1,0 +1,43 @@
+name: Mech-S10 ROT014 prereg099 missing factorial-arm source guard
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot014-sourceonly-prereg099-factorial-guard-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot014-sourceonly-20261122
+  cancel-in-progress: false
+jobs:
+  source-only-prereg-factorial-identifiability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check original source SHA and reconstruct factorial missing-arm algebra
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot014
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot014_prereg099_factorial_identifiability_source_guard.py)" = "f8e08e7b2a5767f7f809def900a131d0bb2075f7"
+          git rev-parse HEAD > rot014/COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot014_prereg099_factorial_identifiability_source_guard.py rot014/source_prereg099_factorial_certificate.json > rot014/STDOUT 2> rot014/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot014/source_prereg099_factorial_certificate.json")); assert d["missing_fourth_factorial_cell"].startswith("V "); assert d["real_085_R2_source_table_rows_positive"]==100; assert d["independent_positive_source_stage_factorial_witness"]["n_source_grid_nodes_12p5_to_25"]==7; assert not d["binning_source_constants"]["not_bound_on_helium_Yp_or_logbeta_root"] is False and d["NO_NEW_JULIA"]'
+          printf '%s\n' 'ROT014_ORIGINAL_SOURCE_FACTORIAL_GUARD_PASS_NO_NATIVE_PHYSICS' >rot014/VERDICT
+      - name: Authentic evidence SHA256
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot014
+          find rot014 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot014/SHA256_MANIFEST
+      - name: Preserve source-only certificate and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot014-prereg099-factorial-and-bin-bound
+          path: rot014/
+          if-no-files-found: error
