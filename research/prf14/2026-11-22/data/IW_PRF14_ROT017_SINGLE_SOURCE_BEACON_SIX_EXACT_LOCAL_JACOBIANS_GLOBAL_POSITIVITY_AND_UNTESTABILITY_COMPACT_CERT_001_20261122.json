@@ -1,0 +1,153 @@
+{
+  "artifact_id": "IW_PRF14_ROT017_SINGLE_SOURCE_BEACON_SIX_EXACT_LOCAL_JACOBIANS_GLOBAL_POSITIVITY_AND_UNTESTABILITY_COMPACT_CERT_001_20261122",
+  "date": "2026-11-22",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "reference": "PRF14 ROT016 full 24 offdiagonal Pauli-channel means in four contexts I,P,P2,L; 24 context-source Fourier unknowns plus unknown 3D SO3 gate; ordinary ten Fourier zero; strict positive 16-source distributions",
+  "new_model": "One specified nonzero C_(input j,output i) invariant across four contexts; three equality constraints reduce total local parameters 27->24; four beacon means identify unknown c and SO3 locally when 4x4 Jacobian nonzero",
+  "reference_R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+  "reference_P": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "reference_L": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]",
+  "source_Fourier_by_output_input": [
+    [
+      "0",
+      "9/100",
+      "11/100"
+    ],
+    [
+      "7/100",
+      "0",
+      "1/10"
+    ],
+    [
+      "8/100",
+      "12/100",
+      "0"
+    ]
+  ],
+  "source_16_history_min": "73/1600",
+  "all_six_beacons_exact": [
+    {
+      "beacon": "C_(Y,X)",
+      "raw_J_det": "-6561 sqrt(2)/14000000",
+      "globally_positive_solutions": 2,
+      "sigma_min_exploratory": 0.07141448364512573
+    },
+    {
+      "beacon": "C_(Z,X)",
+      "raw_J_det": "-1331 sqrt(2)/14000000",
+      "globally_positive_solutions": 2,
+      "sigma_min_exploratory": 0.00786976121002235
+    },
+    {
+      "beacon": "C_(X,Y)",
+      "raw_J_det": "49/500000",
+      "globally_positive_solutions": 1,
+      "sigma_min_exploratory": 0.014320473704711015
+    },
+    {
+      "beacon": "C_(Z,Y)",
+      "raw_J_det": "3/7000",
+      "globally_positive_solutions": 1,
+      "sigma_min_exploratory": 0.031713901634615585
+    },
+    {
+      "beacon": "C_(X,Z)",
+      "raw_J_det": "-12 sqrt(2)/109375",
+      "globally_positive_solutions": 2,
+      "sigma_min_exploratory": 0.01738298932559963
+    },
+    {
+      "beacon": "C_(Y,Z)",
+      "raw_J_det": "-27 sqrt(2)/109375",
+      "globally_positive_solutions": 2,
+      "sigma_min_exploratory": 0.017306973196524106
+    }
+  ],
+  "global_enumeration_method": "First three cyclic right controls fix r_i and nonzero beacon c up to linked sign. Residual proper-SO3 circle parameter t=tan(phi/2). Fourth left beacon expectation yields quadratic in t plus t=infinity. Exactly four complete candidate proper rotations for each beacon. Each candidate fixes all four conditional Fourier matrices by ratio of 24 observed transfer entries; invert 4*16 source probabilities and reject negatives.",
+  "unique_beacon_C_ZY": {
+    "selected_source_value": "1/10",
+    "positive_c_half_angle_roots": [
+      "0",
+      "1/2"
+    ],
+    "negative_c_roots": [
+      "2",
+      "infinity"
+    ],
+    "only_admissible_physical_root": "positive c; t=0; original R",
+    "first_rejected_root_min_p_context1": "-49/832",
+    "second_rejected_root_min_p_context1": "-49/832",
+    "third_rejected_root_min_p_left": "-9/1600",
+    "all_other_roots_strictly_nonphysical": true,
+    "local_4by4_det": "3/7000",
+    "numerical_condition_number_exploratory": 41.5434667277285
+  },
+  "two_positive_C_YX_alias": {
+    "different_legal_gate_R": "[[3,2,-6],[-2,-6,-3],[-6,3,-2]]/7",
+    "beacon_C_YX_alternative_each_context": "-9/100",
+    "second_same_output_row_beacon_C_ZX_alternative_each_context": "-11/100",
+    "all_four_alternative_source_minima_exact": [
+      "143/4800",
+      "3/128",
+      "193/4800",
+      "73/1600"
+    ],
+    "four_source_TV_vs_context0": [
+      "0",
+      "77/320",
+      "91/600",
+      "11/120"
+    ],
+    "all_4_full_3by3_Pauli_channel_transfer_matrices_match_exact": true,
+    "all_36_entries_exact": "PASS",
+    "different_row_C_XY_q0_minus_q1_false_branch_exact": "-49/200"
+  },
+  "anti_self_sealing": {
+    "local_parameter_count_after_beacon": 24,
+    "observation_count": 24,
+    "local_inverse_full_rank": true,
+    "model_is_locally_saturated_and_cannot_test_its_own_beacon_from_same_24_means": true,
+    "indistinguishable_arbitrarily_weak_beacon_violation_exists": true,
+    "physical_unknown_R_prime": "Ux(t)R with rational t arbitrarily near 0",
+    "four_context_conditional_source_coefficients": "Cprime_q_ij=C_ij*Sq(R)_ij/Sq(Ux(t)R)_ij",
+    "beacon_C_ZY_left_minus_right_derivative_at_t0": "-3/10",
+    "positive_all_4_sources_for_small_nonzero_t": true,
+    "there_is_no_data_only_uniform_beacon_test_even_infinite_shots": true,
+    "independent_measurement_or_source_monitor_needed_for_beacon_validation": true
+  },
+  "executed_author_source_and_checks": {
+    "full_primary_exact_program": "/mnt/data/prf14_rot017/prf14_rot017_single_beacon_global_classification.py",
+    "full_primary_SHA256": "cae03d0d9659c981cb479b32d433635bf2e32cdf38fa0698859431e4da806ed8",
+    "full_primary_machine_JSON": "/mnt/data/prf14_rot017/prf14_rot017_beacon_exact_certificate.json",
+    "full_primary_machine_JSON_SHA256": "d0502d322d07a97bfede9f7d7711e818f51fba0db96d77e87240960cf4fb5c8d",
+    "independent_rewrite_direct_16_history_script": "/mnt/data/prf14_rot017/prf14_rot017_independent_physical_kraus_4x9_check.py",
+    "independent_rewrite_SHA256": "90b41156307d853d5ef0fa531404098a80ece4ad71704c98692c5eb51b00ee84",
+    "cold_repeat_exact_source": "PASS",
+    "six_by_four_exact_global_candidate_Fourier_physicality_checks": "PASS",
+    "independent_same_author_36_full_Pauli_channel_matches": "PASS",
+    "external_referee": "PENDING",
+    "real_device": "NONE"
+  },
+  "near_prior_art": [
+    "https://arxiv.org/abs/2609.13584",
+    "https://doi.org/10.1038/s41534-026-01313-z",
+    "https://arxiv.org/abs/2604.01482"
+  ],
+  "status": "MODEL_CONDITIONAL_LOCAL_AND_WITNESS_GLOBAL_IDENTIFIABILITY / NO_SELF_CERTIFICATION / NO_NEW_95PCT_SHOT_BOUND / NO_EXTERNAL_NOVELTY / NO_CANON / NO_EXEC_SIGN"
+}
