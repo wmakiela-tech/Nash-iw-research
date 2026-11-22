@@ -1,0 +1,90 @@
+{
+  "artifact_id": "IW_REC13_ROT019_FENG_VEDRAL_FULL_TERMINAL_LOCC_ZERO_VS_FIXED_ORDER_LOCC_POSITIVE_INVERSE_NOISE_WITNESS_001_20261122",
+  "date": "2026-11-22",
+  "exposure": "PUBLIC",
+  "origin_cell": "IW_GPT_REFEREE_GUARDIAN_BUD_01_SUCCESSOR_12 / REC13",
+  "paper": {
+    "authors": "Tianfeng Feng, Vlatko Vedral",
+    "title": "Testing non-classical gravitational phase dynamics under strong dephasing",
+    "arxiv": "2611.12229v2",
+    "date": "2026-11-10",
+    "scope": "Theorem 2 diagonal PPT Schur channel with fixed external D and diagonal LOCC achiever already owner-original"
+  },
+  "project_sources": {
+    "XH_S7_ROT020": "de72f65e4c35927c8de6af4f4208c332375c56a8",
+    "EKS1_ROT020": "1d503f4a5e168831892f0f62aa4a87b8368c06b2"
+  },
+  "source_parameters": {
+    "G_SI": 6.6743e-11,
+    "hbar_SI": 1.054571817e-34,
+    "m_kg": 1e-14,
+    "L_m": 0.00004,
+    "d_m": 0.00001,
+    "tau_s": 1,
+    "r": 0.1,
+    "Theta": 0.05274099475262832
+  },
+  "original_source_derived_quantities": {
+    "sin_2theta": 0.10528649161454373,
+    "pre_noise_negativity": 0.052643245807271866,
+    "post_noise_partial_transpose_eigenvalues": [
+      0.20277790343611066,
+      0.2422356754192728,
+      0.2527643245807271,
+      0.30222209656388943
+    ]
+  },
+  "unrestricted_terminal_single_input_LOCC": {
+    "objective": "inf_{Lambda_LOCC} D(D_r^2 U_theta(|++><++|), Lambda_LOCC(|++><++|))",
+    "exact_value": 0,
+    "explicit_decomposition": "sigma=(1-wsum) I4/4 + sum_{P in XI,IX,XX,ZY,YZ} |c_P| (I4+sgn(c_P)P)/4",
+    "coefficients": {
+      "XI": 0.09944419312777898,
+      "IX": 0.09944419312777898,
+      "XX": 0.01,
+      "ZY": -0.010528649161454372,
+      "YZ": -0.010528649161454372
+    },
+    "weights_I4": 0.7700543154215334,
+    "all_weights_nonnegative": true,
+    "numerical_matrix_max_diff": 2.7759998446001425e-17,
+    "physical_scope": "Allows ignoring/discarding input and shared-randomness product-state preparation AFTER dephasing, i.e. no separate D must follow simulator; does not preserve populations for arbitrary inputs."
+  },
+  "fixed_external_postcomposed_dephasing_LOCC": {
+    "objective": "inf_Lambda_LOCC D(D_r^2 U_theta(rho0), D_r^2 Lambda_LOCC(rho0)), rho0=|++><++|",
+    "source_analytic_witness": "W=PT_B(|v_-><v_-|), v_-=(-|00>+i|01>-i|10>+|11>)/2 for sin 2Theta>0",
+    "witness_trace_on_target_pre": -0.052643245807271866,
+    "inverse_map": "D_r^{-1}(A)=((1+1/r)/2) A + ((1-1/r)/2) ZAZ",
+    "lifted_witness": "Wtilde=(D_r^{-1} tensor D_r^{-1})(W)",
+    "lifted_spectrum": [
+      "(r^2+1)/(4r^2) repeated twice",
+      "(r^2+2r-1)/(4r^2)",
+      "(r^2-2r-1)/(4r^2)"
+    ],
+    "lifted_norm_for_0_lt_r_le_1": "(1+2r-r^2)/(4r^2)",
+    "analytic_lower_bound": "r^2*abs(sin(2Theta))/(1+2r-r^2)",
+    "certified_lower_bound_numeric": 0.0008847604337356617,
+    "weaker_inequality_using_inverse_trace_norm": 0.0005264324580727187,
+    "is_minimax_exact": false,
+    "scope": "All LOCC output states for THIS product input before physically independent fixed D. No interleaving of LOCC/continuous dephasing, noise replacement, resources or physical all-LOCC claims."
+  },
+  "actual_verification": {
+    "python_numpy_sympy": "Actual local Python 3 program independently constructs original rho,target, PPT, source operator coefficients, explicit separable prep and symbolic eigenvalues; 500 seeded random SEP product-mixture negative controls pass",
+    "wolfram": "Independently executed Wolfram Language 15.0.1 from exact readback public .wl source; SOURCE_PROOF_CHECK_PASS, prep error 0, source bound matches",
+    "local_python_sha256": "eb0f097c1b38769db1dcd0c3f9c4ab596e538227c0190a1b99ffe089b23fe3e7",
+    "local_python_result_sha256": "01fb68dbee39baa54bea5f94aad14fa4c7748ddc5ca155886281ecb900b031c5",
+    "uploaded_wolfram_code_blob": "8615a56e13d5d3ae014a02d38268fac06237f9e7"
+  },
+  "source_firstness": "Feng-Vedral primary 2026 target source, diagonal PPT/LOCC optimal result; Lami-Pedernales-Plenio 2024 ensemble LOCC host; XH-S7 original model 4x4 baseline and one-active-LOCC witness; EKS1 DIR011 novelty candidate. REC13 separate narrower original source-typed ordered-vs-unordered simulator gap witness and explicit LOCC preparation.",
+  "interpretation": "If DIR011 optimizes unqualified terminal CPTP LOCC/PPT on one input, gap=0; if independently fixed serial post-noise is a hard experimental gate, analytic >0 all-LOCC lower bound, so numerical SDP only for sharpness; genuine interleaved continuous-time simulator and multi-input experiment separately open.",
+  "ceiling": [
+    "NO_EXTERNAL_NOVELTY_ESTABLISHED",
+    "NO_GENERAL_GRAVITY_NONCLASSICALITY_CLAIM",
+    "NO_REAL_GRAVITY_SIGNAL",
+    "NO_INTERLEAVED_LOCC",
+    "NO_GENERAL_PPT_EVEN_AFTER_NOISE_GATE",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_BW_ACK"
+  ]
+}
