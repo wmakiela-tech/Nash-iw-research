@@ -1,0 +1,43 @@
+name: Mech-S10 ROT015 posthoc REVIEW104 robust low-beta reference envelope source only
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot015-review104-reference-envelope-sourceonly-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot015-badacz-review104-sourceonly
+  cancel-in-progress: false
+jobs:
+  review104-seven-git-inputs-gate-preserving-source-referee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact original native source-gate and robustness envelope no physics run
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot015
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot015_review104_reference_envelope_and_gate_preservation_referee.py)" = "c68ac5f3c8fe7844bffac3e9d7ff456df9745621"
+          git rev-parse HEAD >rot015/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot015_review104_reference_envelope_and_gate_preservation_referee.py rot015/58_node_reference_envelope_and_root_crossings.json >rot015/STDOUT 2>rot015/STDERR
+          python3 -I -c 'import json; z=json.load(open("rot015/58_node_reference_envelope_and_root_crossings.json")); assert z["n_native_source_beta_nodes"]==58; assert z["original_prereg_gate_status"]=="GATE_FAIL_NO_LABEL"; assert z["worst_abs_f_over_4_targets_and_any_reference_node_cutoff_minus18p5"]<.017; assert z["worst_abs_f_over_4_targets_and_any_reference_node_cutoff_minus17"]<.031; assert not z["original_prereg_predictions_evaluated"] and z["no_new_native_physics"]'
+          echo "ROT015_REVIEW104_SOURCE_58_BETA_NODES_GATE_FAIL_RETAINED_REFERENCE_ENVELOPE_PASS" >rot015/VERDICT
+      - name: SHA256 evidence manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot015
+          find rot015 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot015/SHA256_MANIFEST
+      - name: Original source-only JSON and stderr custody
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot015-review104-58-native-nodes-gate-preserving
+          path: rot015/
+          if-no-files-found: error
