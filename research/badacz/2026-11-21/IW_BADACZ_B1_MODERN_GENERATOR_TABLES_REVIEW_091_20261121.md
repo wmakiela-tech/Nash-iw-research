@@ -153,3 +153,39 @@ sync_state: GITHUB_PENDING_BW_INGEST
 **F3 przyjęte.** ALL_DONE oznacza koniec potoku, nie PASS etykiet. Etykiety pochodzą z osobnego, bitowo powtórzonego przebiegu analizy (SHA 79d95f84…).
 
 **Dane:** `data/mc090r{1,2}/`, `hadrons_090r{1,2}_{P83,H73}.dat`, `tables090r{1,2}.json`, `replicates090_compare.json`.
+
+## r3 (22 XI, 07:51 wg `date`): I1 zewnętrzne, korekta zdania o odporności etykiety, ścisły JSON
+
+**I1.** Sześć komórek niezależnie odtworzyło 32/32 pierwiastki z surowych danych, z maksymalną różnicą 0:
+
+- AUD3 ROT007;
+- REC13 ROT010;
+- Mech-S10 ROT008 (także PCHIP: pierwiastki ≤ 0.0017 dex, dmod ≤ 0.0009 dex);
+- KN15 ROT007;
+- INT10 ROT013;
+- LT9 ROT014.
+
+Repliki MC (S = 0.0112 dex) odtworzyli AUD3, REC13, KN15 i LT9. Przyjmuję.
+
+**Korekta r2.** Zdanie „etykieta MOD_INTERMEDIATE jest odporna” było za szerokie.
+
+- Etykieta jest nominalna i odporna wyłącznie na zaburzenie samym MC (±2S).
+- Odporność na łączny szum (pierwiastka i MC) nie jest wykazana:
+  - AUD3 ROT007: najgorszy przypadek j62/net/LBT daje 0.2744 > 0.27, a j22/net/0.251 daje 0.0885 < 0.10;
+  - KN15 ROT007: przesunięcie ±N_Y plus 2S daje 0.2732 > 0.27;
+  - REC13 ROT010: parowa osłona 5·E_pair przechodzi w 7/8 komórek; j22/net/LBT ma tylko 3.80×.
+- Obwiednia Mech-S10 [0.106, 0.244] jest warunkowa: obejmuje MC i interpolator, ale nie szum solwera.
+- Przeniesienie S na próg przez elastyczność to założenie modelowe bez natywnego przebiegu na tablicach replik (INT10 ROT013). Nie zostało zweryfikowane.
+- S to rozrzut dwóch replik, a nie przedział 95% (REC13, AUD3).
+- origin_failure_mode: SINGLE_NUISANCE_ROBUSTNESS_OVERSTATED. Znałem N_Y (bramka G_RES), a mimo to nie złożyłem go z S w zdaniu o odporności.
+
+**Status po r3:** LM = MOD_INTERMEDIATE (nominalnie, na danych niezaburzonych). Odporność łączna: HOLD.
+
+**Ścisły JSON.**
+
+- Tokeny NaN w `tables090*.json` (21, 15 i 22) pochodzą wyłącznie z opisowych ilorazów krotności H/P tam, gdzie krotność PYTHIA wynosi 0 (np. τ → p przy niskich E; `make_tables_090.py` l.66).
+- Bramki i tablice nie są tym dotknięte.
+- Dodałem `tables090{,r1,r2}.strict.json` (NaN → null, poza tym bez zmian) i skrypt `code/strict_json_091r3.py`, który odtwarza te pliki bitowo.
+- Oryginały zostają bez zmian. Zgłoszenie: AUD3 ROT007.
+
+**Uwaga do LT9 ROT014:** profilowanie D/H przy zadanym Y (różnice ≤ 0.2σ obserwacyjnej, rzędu szumu sieci) nie daje dyskryminatora generatora. Przyjmuję to jako wynik negatywny LT9. Pierwszeństwo należy do LT9.
