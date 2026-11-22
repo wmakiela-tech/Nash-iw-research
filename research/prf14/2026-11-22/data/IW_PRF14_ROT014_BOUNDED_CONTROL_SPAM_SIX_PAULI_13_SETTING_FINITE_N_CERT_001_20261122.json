@@ -1,0 +1,96 @@
+{
+  "artifact_id": "IW_PRF14_ROT014_BOUNDED_CONTROL_SPAM_SIX_PAULI_13_SETTING_FINITE_N_CERT_001_20261122",
+  "origin": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "date": "2026-11-22",
+  "source": "Original PRF14 ROT013 six-independent-offdiagonal-Pauli-Fourier source; four strictly positive source/gate worlds; source report blob fae6ed5098b5e2fe6646ac0d8da4eb48538bf6f1",
+  "exact_source": [
+    "first 12 Bloch transfer matrices indistinguishable for ANY common right rotation, including miscalibrated rotations",
+    "13th known left setting distinguishes four source/gate worlds with gap 27 sqrt(2)/700"
+  ],
+  "error_model": {
+    "known_control_P_one_pulse_operator_norm_bound": 0.001,
+    "known_control_P_squared_two_pulse_bound": 0.002,
+    "known_control_L_operator_norm_bound": 0.001,
+    "max_hidden_source_Fourier_magnitude": 0.12,
+    "source_physical_probability_min": 0.045625,
+    "formula_mu": "max(2*cmax*deltaP, cmax*deltaL)+eps_p+eps_m+eps_b",
+    "formula_conditional_coverage": "26 exp[-n eta_stat^2/2] with eta_total=eta_stat+mu",
+    "model_gauge_scope": "four legally distinct source/gate worlds, not arbitrary quantum process with unknown SPAM"
+  },
+  "exact_theory": {
+    "gap": 0.05454823740581938,
+    "critical_effective_absolute_mean_error": 0.0039397683823995,
+    "margin_formula": "F(e)=gap-2*(Epred(e)+e)",
+    "Epred_formula": "sqrt(3)*e*(9/(7*sqrt(2))+(rhoY+rhoZ)/sqrt(2))+0.09*(rhoY+rhoZ)/sqrt(2)",
+    "row_bound_formula": "rho_i=2*sqrt(3)*e/a_i; a_i=(0.09,0.10,0.12)",
+    "source_prob_error_formula": "[3 sqrt(3) e + sum_i((e+|Cextra_i|rho_i)/(6/7-rho_i))]/16",
+    "nearest_proper_SO3_upper_Frobenius": "2*sqrt(sum_i rho_i^2)",
+    "critical_means_sufficient_not_necessary": true
+  },
+  "tier_A": {
+    "calibration_eps_p": 0.00005,
+    "calibration_eps_m": 0.00005,
+    "calibration_eps_b": 0.00005,
+    "error_per_P_pulse": 0.001,
+    "error_left_L": 0.001,
+    "systematic_error_mu": 0.00039,
+    "statistical_eta": 0.0035,
+    "total_eta": 0.00389,
+    "shots_each": 1021034,
+    "shots_total": 13273442,
+    "joint_failure_upper": 0.049999778079266116,
+    "deterministic_classification_margin": 0.0007191872775442684,
+    "max_abs_six_coefficient_error_bound": 0.028780602781424604,
+    "minimum_inferred_source_probability_bound": 0.0403300166956441,
+    "physical_SO3_projection_error_upper_Frobenius": 0.4612440970213462,
+    "physically_legal_SPAM_and_SO3_simulated_complete_experiments": 800,
+    "observed_misclassifications": 0,
+    "observed_max_calibration_mean_bias": 0.00013518258981778247,
+    "observed_max_source_C_error": 0.0041993854653276375
+  },
+  "tier_B": {
+    "calibration_eps_p": 0.0001,
+    "calibration_eps_m": 0.0001,
+    "calibration_eps_b": 0.0001,
+    "error_per_P_pulse": 0.001,
+    "error_left_L": 0.001,
+    "systematic_error_mu": 0.00054,
+    "statistical_eta": 0.00296,
+    "total_eta": 0.0035,
+    "shots_each": 1427555,
+    "shots_total": 18558215,
+    "joint_failure_upper": 0.049999793379200616,
+    "deterministic_classification_margin": 0.006328274258851636,
+    "max_abs_six_coefficient_error_bound": 0.025357076586650894,
+    "minimum_inferred_source_probability_bound": 0.04092801674794662,
+    "physical_SO3_projection_error_upper_Frobenius": 0.4150011155719053,
+    "physically_legal_SPAM_and_SO3_simulated_complete_experiments": 800,
+    "observed_misclassifications": 0,
+    "observed_max_calibration_mean_bias": 0.00015653230661927253,
+    "observed_max_source_C_error": 0.004304215876953427
+  },
+  "actual_local_reproduction": {
+    "full_script_path": "/mnt/data/prf14_rot014/rot014.py",
+    "full_script_sha256": "3489087965baf09036706640b7039d5111733c40a5b921a6385b4156d08cab42",
+    "full_output_path": "/mnt/data/prf14_rot014/prf14_rot014_bounded_calibration_certificate.json",
+    "full_output_sha256": "f887d0ce159bd7db437da1d384b2de217fd70129540a9ab4a3a150a889d0b5f1",
+    "actual_total_full_synthetic_binomial_trials": 1600,
+    "actual_misclassifications": 0,
+    "physical_simulated_rotation_matrices": true,
+    "physical_simulated_povm_effects": true,
+    "not_hardware": true
+  },
+  "external_mature_prior": [
+    "https://arxiv.org/abs/2611.05561",
+    "https://doi.org/10.1103/1pnv-t9px",
+    "https://doi.org/10.1103/69wc-gzl6"
+  ],
+  "claim_ceiling": [
+    "SOURCE_RESTRICTED_MATHEMATICAL_TEST",
+    "NO_REFERENCE_FREE_SPAM_LEARNABILITY_CLAIM",
+    "NO_HARDWARE",
+    "NO_EXTERNAL_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
