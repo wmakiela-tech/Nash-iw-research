@@ -10,7 +10,7 @@ concurrency:
   group: mech-s10-rot011-sourceonly
   cancel-in-progress: false
 jobs:
-  16-original-plus-J-roots-and-exact-vectorfield-check:
+  source-only-original-and-jitter-nogo:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
