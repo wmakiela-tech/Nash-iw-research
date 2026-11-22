@@ -1,0 +1,238 @@
+{
+  "artifact_id": "IW_PRF14_ROT020_MATCHED_CLIFFORD_TWO_SETTING_TV_CONFIDENCE_95PC_AND_PHYSICAL_54_CHANNEL_CERT_001_20261122",
+  "date": "2026-11-22",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "status": "ORIGINAL_SOURCE_ACTUALLY_EXECUTED_TWICE / INDEPENDENT_WITHIN_AUTHOR_16_HISTORY_KRAUS_PASS / 2600_MODEL_BINOMIAL_EXPERIMENTS / NO_QUANTUM_HARDWARE",
+  "mathematical_model": "Classical joint Pauli-label source p(v,w) on 16 histories conditional on physically distinct control announced before first Pauli error; same unknown stable target R∈SO3, prepared +Z and measured Y; the pairwise comparison and TV lower bound allow arbitrary nonzero ordinary Fourier source coordinates. Controls and source are stable within setting, independent IID binary shots.",
+  "known_controls": {
+    "R_original": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "P_physical_cyclic_Clifford": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "L_previously_used_NON_Clifford": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]",
+    "B_alternate_physical_Clifford": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "matched_outputY_row_of_L_P_B": [
+      1,
+      0,
+      0
+    ],
+    "integrated_two_contexts": [
+      "L*R",
+      "P*R"
+    ],
+    "standalone_allClifford_two_contexts": [
+      "P*R",
+      "B*R"
+    ],
+    "frame_source_comparison": "G=meanY_fromZ(P*R)-meanY_fromZ(L*R)=R_XZ*(C_PR_(Z,Y)-C_LR_(Z,Y))"
+  },
+  "source_tv_theorem": {
+    "fourier_character": "chi_Z(v)*chi_Y(w) ∈ {-1,+1}",
+    "dual_norm": "|C_PR_(Z,Y)-C_LR_(Z,Y)|<=2 TV(pPR,pLR)",
+    "arbitrary_p_16_component_nonnegative_normalized": true,
+    "unknown_gate_SO3_trivial_abs_entry_upper": 1,
+    "gate_independent_lower_bound": "TV(pPR,pLR)>=|Gideal|/2",
+    "if_R_XZ_independently_known_nonzero": "TV>=|Gideal|/(2*|R_XZ|)",
+    "physical_single_hidden_C_drift_plus_0p1": "3/35",
+    "sharp_known_R_witness_R_XZ": "6/7",
+    "sharp_exact_known_R_TV": "1/20",
+    "finite_sample_lower_confidence_bound": "TV>=max(0,|hatG|-Bcal-t)/2 with coverage>=1-alpha conditional on calibration and IID",
+    "nonPauli_or_drifting_unknown_R_not_claimed": true
+  },
+  "nonasymptotic_statistics": {
+    "settings": 2,
+    "shots_per_setting_equal_n": true,
+    "distribution_free_2sided_tail": "2 exp(-n*t^2/4)",
+    "control_error_each_physical_post_target_single_pulse_opnorm": 0.001,
+    "state_prep_Bloch_epsilon": 0.00005,
+    "POVM_Bloch_axis_epsilon": 0.00005,
+    "POVM_bias_epsilon": 0.00005,
+    "Pauli_mixture_transfer_operator_norm_max": 1,
+    "per_mean_error_cap": "cmax*0.001 + 0.00015",
+    "difference_systematic_error_B": "2*(cmax*0.001+0.00015)",
+    "two_sided_reject_rule": "reject shared C_(Z,Y) between 2 contexts if |hatG|>B+t",
+    "minimum_power_source_specific_drift_exact_delta": "3/35",
+    "strict_power_condition": "|Gideal_alt|>2*(B+t)",
+    "alpha_max": 0.05,
+    "power_at_least_for_specified_alternative": 0.95,
+    "restricted_tier": {
+      "max_relevant_source_fourier_abs": 0.2,
+      "systematic_per_mean": 0.00035,
+      "systematic_G": 0.0007,
+      "threshold_t": 0.042,
+      "n_per_setting": 8365,
+      "n_total": 16730,
+      "Hoeffding_tail_upper": 0.04999572288864404,
+      "strict_power_margin": 0.00031428571428571427
+    },
+    "arbitrary_Pauli_source_tier": {
+      "max_relevant_source_fourier_abs": 1,
+      "systematic_per_mean": 0.00115,
+      "systematic_G": 0.0023,
+      "threshold_t": 0.04,
+      "n_per_setting": 9223,
+      "n_total": 18446,
+      "Hoeffding_tail_upper": 0.049983975274164,
+      "strict_power_margin": 0.0011142857142857144
+    },
+    "optional_directional_predeclared": {
+      "source_restricted": true,
+      "one_sided_only_if_sign_of_observed_alternative_predeclared": true,
+      "threshold_t": 0.042,
+      "n_per_setting": 6794,
+      "n_total": 13588,
+      "Hoeffding_tail_upper": 0.049978918123404444
+    }
+  },
+  "physical_example": {
+    "base_six_hidden_source_C_rows": [
+      [
+        0,
+        0.09,
+        0.11
+      ],
+      [
+        0.07,
+        0,
+        0.1
+      ],
+      [
+        0.08,
+        0.12,
+        0
+      ]
+    ],
+    "base_16_history_min_probability": "73/1600",
+    "one_context_source_beacon_0p1_to_0p2_min_probability": "63/1600",
+    "source_TV": "1/20",
+    "H_old": "yLR^2+yP2R^2-yRP^2-yRP2^2",
+    "G_new": "yPR-yLR",
+    "witnesses": [
+      {
+        "source": "stationary all contexts",
+        "H": "0",
+        "G": "0"
+      },
+      {
+        "source": "only PR beacon drift +0.1",
+        "H": "0",
+        "G": "3/35"
+      },
+      {
+        "source": "only LR beacon drift +0.1",
+        "H": "27/1225",
+        "G": "-3/35"
+      },
+      {
+        "source": "both LR and PR beacon drift +0.1",
+        "H": "27/1225",
+        "G": "0"
+      }
+    ],
+    "six_by_four_shared_beacon_Jacobian_rank": 4,
+    "rank_of_two_left_null_residual_gradients": 2
+  },
+  "physical_nonidentification": {
+    "different_target_Rprime": "Ux(1/1000)*R",
+    "control_specific_sources": "Cprime_q_ij=C_ij*[S_q(R)]_ij/[S_q(Rprime)]_ij for i!=j, with ten ordinary Fourier source coords still zero",
+    "all_six_sources_sixteen_probabilities_strictly_positive": true,
+    "six_channels_all_54_full_Bloch_transfer_matrix_entries_exactly_equal": "PASS independently literal 16-history sum",
+    "alternative_source_TV_to_stationary_original": [
+      0.0002384893026732631,
+      0.0001428668730007652,
+      0.0003577339540098946,
+      0.0002717205952923494,
+      0.00027673926598845643,
+      0.00023892454076149478
+    ],
+    "passing_G_and_H_does_not_prove_beacon_invariance": true,
+    "standalone_P_and_B_are_physically_different_full_channel_matrices": true,
+    "virtual_frame_relabelling_does_not_establish_distinct_noise_context": true
+  },
+  "actual_local_executable_and_replay": {
+    "main_python_file": "/mnt/data/prf14_rot020/prf14_rot020_clifford_pair_context_falsifier.py",
+    "main_sha256": "8a3bc58667c9cb1fb3be8ee5d4d2a49c5a48f5b48a4bcea273c4539ab2f488a3",
+    "independent_direct_16_history_source": "/mnt/data/prf14_rot020/prf14_rot020_independent_direct_16_history_kraus.py",
+    "independent_sha256": "d665ae3ace8c75c584745e768159b6d7df8b028ab462dc021474034c6d9337d7",
+    "original_source_certificate": "/mnt/data/prf14_rot020/prf14_rot020_exact_physical_and_sampling_certificate.json",
+    "original_source_certificate_sha256": "1df8f176df7a592678c3d80c0cbad06f8b6b2f615f4bd564518b614d95770229",
+    "local_zip": "/mnt/data/prf14_rot020/prf14_rot020_reproducibility_bundle.zip",
+    "local_zip_sha256": "8b0b27b8ae966e8ff492f84a37328bc8ed46a7081f40e1e24bd84f1a64e0d66a",
+    "ZIP_CRC_and_full_entry_byte_readback": "PASS",
+    "local_repeat_main_stdout_and_JSON_byte_identical": "PASS",
+    "actual_hardware_shots": 0,
+    "physical_SO3_Bloch_POVM_binomial_model_experiments": {
+      "restricted_null": {
+        "trials": 700,
+        "false_positives": 3
+      },
+      "restricted_PR_drift": {
+        "trials": 700,
+        "true_detections": 698,
+        "false_negatives": 2
+      },
+      "arbitrary_Pauli_bound_null": {
+        "trials": 300,
+        "false_positives": 1
+      },
+      "arbitrary_Pauli_bound_PR_drift": {
+        "trials": 300,
+        "true_detections": 300
+      },
+      "Clifford_only_pair_null": {
+        "trials": 300,
+        "false_positives": 0
+      },
+      "Clifford_only_pair_drift": {
+        "trials": 300,
+        "true_detections": 298,
+        "false_negatives": 2
+      },
+      "TOTAL": 2600
+    }
+  },
+  "literature_original_primary_links": [
+    "https://doi.org/10.1103/PhysRevX.9.021045",
+    "https://doi.org/10.1038/s41534-026-01313-z",
+    "https://doi.org/10.1103/PhysRevA.103.042604"
+  ],
+  "claim_ceiling": [
+    "NO_GENERAL_PROCESS_TENSOR",
+    "NO_SOURCE_INVARIANCE_PROVEN",
+    "NO_HARDWARE",
+    "NO_EXTERNAL_NOVELTY",
+    "NO_GLOBAL_SAMPLE_OPTIMALITY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
