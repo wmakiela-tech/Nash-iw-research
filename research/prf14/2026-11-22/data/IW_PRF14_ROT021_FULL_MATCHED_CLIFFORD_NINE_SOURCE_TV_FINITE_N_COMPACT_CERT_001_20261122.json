@@ -1,0 +1,149 @@
+{
+  "artifact_id": "IW_PRF14_ROT021_FULL_MATCHED_CLIFFORD_NINE_SOURCE_TV_FINITE_N_COMPACT_CERT_001_20261122",
+  "origin": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "date": "2026-11-22",
+  "class": "PHYSICAL_MATCHED_CLIFFORD_P_VS_DX_P / ARBITRARY_16_CLASSICAL_PAULI_SOURCE / UNKNOWN_STABLE_MIDDLE_SO3 / RELATIVE_CALIBRATION / TWO_SIDED_TV_CONFIDENCE",
+  "exact_math": {
+    "P": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Dx": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "B": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "aligned_transfer": "E=Dx*T_B-T_A=(C_B-C_A) hadamard (P R)",
+    "sharp_lower_source_TV": "TV(pA,pB)>=||E||F/(2sqrt2)",
+    "alternative_source_TV_lower_operator": "||E||operator/2",
+    "alternative_source_TV_lower_largest_entry": "max_ij abs(Eij)/2",
+    "sharpness_full_support_source_min": "1/1600",
+    "sharpness_TV": "99/100",
+    "sharpness_Frob_transfer": "2sqrt2*(99/100)",
+    "exact_generic_16_source_Cross_plus_normalization_rank": 10,
+    "source_single_error_marginal_unobservable_dimensions": 6,
+    "unseen_source_pair_TV": "99/100",
+    "unseen_sources_full_channels_both_completely_depolarizing": true,
+    "legal_off_beacon_source_drift_plus": "1/10",
+    "legal_off_beacon_source_TV": "1/20",
+    "aligned_channel_contrast_E_XY": "3/35",
+    "prior_ROT020_selected_E_YZ": "0",
+    "firstness_INT10_sharp_6_Fourier_inverse_norm": "9/8; 64 vertices exact replay, first source INT10 ROT020 PRIVATE Git blob 138debb4751be385b855c33311a1cc71946b7674"
+  },
+  "relative_calibration": {
+    "shared_actual_A_pulse_need_not_be_absolutely_known_for_null_or_lower_TV": true,
+    "physical_relative_operator_norm_error_upper": 0.0002,
+    "per_setting_prep_error": 0.00005,
+    "per_setting_POVM_effect_axis_error": 0.00005,
+    "per_setting_POVM_bias_error": 0.00005,
+    "per_setting_SPAM_sum_g": 0.00015,
+    "all_p_source_pair_entry_error": "q=2*(eta_stat+g)+cmax*delta_relative",
+    "entry_TV_lower_confidence": "max(0,maxabs(Ehat)-q)/2",
+    "full_Frobenius_TV_lower_confidence": "max(0,||Ehat||F-3q)/(2sqrt2)"
+  },
+  "all_16_source_95pc_lower": {
+    "settings": 18,
+    "eta": 0.02,
+    "shots_each": 32897,
+    "total_shots": 592146,
+    "Hoeffding_tail_upper": 0.04999256115392422,
+    "per_channel_difference_entry_error_q": 0.0405,
+    "specified_visible_offbeacon_signal_lower": 0.08561428571428573,
+    "strict_two_sided_detection_margin": 0.004614285714285712,
+    "level_at_most": 0.05,
+    "power_at_least_specified_witness": 0.95,
+    "actual_synthetic_null_trials": 300,
+    "synthetic_false_alarm": 0,
+    "synthetic_offbeacon_drift_trials": 300,
+    "synthetic_detected": 300
+  },
+  "six_only_source_95pc_upper": {
+    "source_promise": "all six first/second single-error marginal Fourier and three diagonal cross Fourier coordinates ZERO in both context sources",
+    "settings": 12,
+    "eta": 0.00045,
+    "shots_each": 60975666,
+    "total_shots": 731707992,
+    "Hoeffding_tail_upper": 0.04999999607009699,
+    "source_fourier_max": 0.2,
+    "additional_common_A_closeness_to_reference_for_ex_ante_power": 0.001,
+    "original_minimum_nonzero_transfer": 0.03,
+    "qerror": 0.00124,
+    "minimum_derived_source_gate_pivot": 0.0286,
+    "upper_C_difference": 0.0867132867132867,
+    "upper_TV_with_95pc_when_stationary_source_C0": 0.09755244755244756,
+    "data_driven_ci": "uij=min(2,(|Ehatij|+q)/(|Ahatij|-(eta+g))) when denominator positive else 2; TV<=min(1,0.5 sum6 uij,(9/8) max6 uij)",
+    "no_gate_R_numerical_calibration_needed_to_compute_ci": true,
+    "cost_is_very_conservative_sufficient_upper_not_lower_bound": true
+  },
+  "executed": {
+    "main_file": "/mnt/data/prf14_rot021/prf14_rot021_full_matched_clifford_source_tv.py",
+    "main_SHA256": "21d0ecdb10360fc2f4f3c7e0f7c8f5f1a1329a792f5b0cef7f446914a2165e58",
+    "original_detailed_JSON": "/mnt/data/prf14_rot021/prf14_rot021_exact_source_tv_machine_certificate.json",
+    "original_JSON_SHA256": "e1e7ebce81007c5a0acfb4354d28f048f2277fbc1c8bf02db5b3828e63002369",
+    "independent_same_owner_direct_16_history_program": "/mnt/data/prf14_rot021/prf14_rot021_independent_pauli_history_extremal_and_blind.py",
+    "independent_SHA256": "8b6e839d5ecc34d11052451af5a2390b114ef8f16280771e1a289cfabfcfd18c",
+    "exact_120_history_pair_distance_check": "PASS; 48 source pairs attain Frobenius squared separation 8",
+    "repeated_main_stdout_identical": "PASS",
+    "synthetic_physical_SO3_and_POVM_binomial_experiments": 600,
+    "actual_quantum_hardware_experiments": 0,
+    "ZIP_file": "/mnt/data/prf14_rot021/prf14_rot021_reproducibility_bundle.zip",
+    "ZIP_SHA256": "cc6886c84a7f9d68134a07057833b6fad770391d666fa637c3db381e64677f48",
+    "ZIP_CRC_SHA256_all_entries_readback": "PASS"
+  },
+  "near_host_original_sources": [
+    "https://arxiv.org/abs/2610.01521",
+    "https://doi.org/10.1103/PhysRevX.9.021045",
+    "https://doi.org/10.1103/PRXQuantum.2.040338"
+  ],
+  "claim_ceiling": [
+    "SOURCE_RESTRICTED",
+    "NO_GENERAL_QUANTUM_PROCESS_TENSOR",
+    "NO_HARDWARE",
+    "NO_EXTERNAL_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
