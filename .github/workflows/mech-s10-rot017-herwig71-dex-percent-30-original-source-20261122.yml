@@ -1,0 +1,43 @@
+name: Mech-S10 ROT017 original Herwig71 six-energy dex-percent accuracy audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot017-herwig71-dex-percent-30-original-source-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot017-herwig71-source-only-20261122
+  cancel-in-progress: false
+jobs:
+  original-30-cell-physical-unit-claim-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Independent exact five source Git SHA gate and 30-cell dex-percent audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot017
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot017_badacz105_percent_vs_dex_30cell_referee.py)" = "beae998a885f5266fb26abe8c2ab7e5c001a2233"
+          git rev-parse HEAD >rot017/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot017_badacz105_percent_vs_dex_30cell_referee.py rot017/30cell_original_BH_owner_aggregates_herwig71_percentage.json >rot017/STDOUT 2>rot017/STDERR
+          python3 -I -c 'import json; x=json.load(open("rot017/30cell_original_BH_owner_aggregates_herwig71_percentage.json")); s=x["summary"]; assert s["source_30_cell_recomputed_exact"]==30 and s["count_cells_observed_relative_deviation_above_1pct_MC"]==6 and s["max_absolute_relative_percent_to_MC"]>2.2 and s["original_preregistered_MATCH_7p1_pass_preserved"] and not x["new_original_physics_executed"]'
+          echo "ROT017_SOURCE_5_GIT_BLOB_PASS_30_ORIGINAL_HERWIG71_BH_OWNER_AGGREGATE_REPLAY_DEX_PERCENT_GUARD" >rot017/VERDICT
+      - name: Evidence file manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot017
+          find rot017 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot017/SHA256_MANIFEST
+      - name: Original reproducible source and execution record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot017-herwig71-30cell-dex-percent-source-guard
+          path: rot017/
+          if-no-files-found: error
