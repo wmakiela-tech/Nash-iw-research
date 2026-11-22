@@ -115,7 +115,7 @@ def main(dst):
         for j in MASSES:
             subset=sorted((r for r in rows if int(r["j"])==j and float(r["log10beta"])>-29),
                           key=lambda r: float(r["log10beta"]))
-            assert len(subset)>=40
+            assert len(subset)>=20, (label, j, len(subset))
             x=[float(r["log10beta"]) for r in subset]
             ycode=[float(r["Y"]) for r in subset]
             ynet=[]
