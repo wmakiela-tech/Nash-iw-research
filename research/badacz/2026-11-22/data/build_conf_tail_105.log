@@ -1,0 +1,80 @@
+config.status: creating src/Makefile
+config.status: creating ACDC/Makefile
+config.status: creating Repository/Makefile
+config.status: creating EventRecord/Makefile
+config.status: creating StandardModel/Makefile
+config.status: creating Cuts/Makefile
+config.status: creating Analysis/Makefile
+config.status: creating Doc/Makefile
+config.status: creating Doc/MakeDocs.in
+config.status: creating Doc/refman.h
+config.status: creating Doc/refman.conf
+config.status: creating java/Makefile
+config.status: creating Makefile
+config.status: creating Doc/fixinterfaces.pl
+config.status: creating Config/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing summary commands
+*****************************************************
+*** ThePEG 2.1.5 configuration summary
+*** Please include this information in bug reports!
+***--------------------------------------------------
+*** Prefix:		/home/claude/h71/inst
+***
+*** Dimension checks:	yes
+***
+*** GSL:		/home/claude/gen090/mamba/envs/h71dep
+***
+*** LHAPDF:		/home/claude/gen090/mamba/envs/h71dep/bin/lhapdf-config (6) 
+*** HepMC:		/home/claude/gen090/mamba/envs/h71dep
+*** Rivet:		no
+*** FastJet:		/home/claude/gen090/mamba/envs/h71dep/bin/fastjet-config 
+***
+*** Boost Unit Tests:	/home/claude/gen090/mamba/envs/h71dep/lib
+***
+*** Host:		x86_64-pc-linux-gnu
+*** CXX:		x86_64-conda-linux-gnu-g++ (conda-forge gcc 9.5.0-19) 9.5.0
+***
+*** CXXFLAGS:		-g -O2
+*****************************************************
+config.status: creating Doc/fixinterfaces.pl
+config.status: creating Config/config.h
+config.status: creating PDF/SaSPhotonPDF.cc
+config.status: PDF/SaSPhotonPDF.cc is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing summary commands
+*****************************************************
+*** Herwig 7.1.5 configuration summary
+*** Please include this information in bug reports!
+***--------------------------------------------------
+*** Prefix:		/home/claude/h71/inst
+***
+*** BSM models:		yes
+*** UFO converter:	yes, using Python 3.1
+***
+*** Herwig debug mode:	no
+***
+*** ThePEG:		/home/claude/h71/inst
+*** ThePEG headers:	/home/claude/h71/inst/include
+***
+*** GoSam:		no
+*** GoSam-Contrib:      no
+*** MadGraph:        	no
+*** njet:		no
+*** OpenLoops:		no
+*** VBFNLO:		no
+***
+*** EvtGen:		no
+*** GSL:		/home/claude/gen090/mamba/envs/h71dep
+*** boost:              -I/home/claude/gen090/mamba/envs/h71dep/include
+*** Fastjet:		/home/claude/gen090/mamba/envs/h71dep/bin/fastjet-config
+***
+*** Host:		x86_64-pc-linux-gnu
+*** CC:			x86_64-conda-linux-gnu-gcc (conda-forge gcc 9.5.0-19) 9.5.0
+*** CXX:		x86_64-conda-linux-gnu-g++ (conda-forge gcc 9.5.0-19) 9.5.0
+*** FC:			GNU Fortran (conda-forge gcc 9.5.0-19) 9.5.0
+***
+*** CXXFLAGS:		-O2
+*****************************************************
