@@ -1,0 +1,43 @@
+name: Mech-S10 ROT018 source-only missing top-100TeV gated-tail check
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot018-prereg109-dev2-top-tail-gate-sourceonly-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot018-top-tail-sourceonly-20261122
+  cancel-in-progress: false
+jobs:
+  original-owner-dev2-tail-input-identification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact original source SHA gated 30-cell missing top metamorphic falsifier
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot018
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot018_prereg109_dev2_top_missing_endpoint_and_gate_nonidentification_referee.py)" = "cd0a5faee35d1ed8a7d38d3477f6634f6e907905"
+          git rev-parse HEAD >rot018/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot018_prereg109_dev2_top_missing_endpoint_and_gate_nonidentification_referee.py rot018/original_prereg109_dev2_gmc_29of30_top_tail_source_certificate.json >rot018/STDOUT 2>rot018/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot018/original_prereg109_dev2_gmc_29of30_top_tail_source_certificate.json")); assert d["original_G_MC_logic_accepts_29_good_plus_one_excluded_failure"] and not d["complete_original_three_energy_per_ten_channel_mc_coverage"] and d["actually_clean_source_cells_in_witness"]==29 and len(d["four_declared_primary_grid_nodes_above_last_good_top"])==4 and d["original_10x5_seam_at_Eprime50000_can_be_valid_with_top_high_endpoint_missing"] and d["no_physics_simulation_executed"]'
+          echo "ROT018_SOURCE_6_PINNED_GIT_BLOBS_PASS_DEV2_GMC_29_OF_30_NOT_FULL_MEASUREMENT" >rot018/VERDICT
+      - name: SHA256 original source-only evidence files
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot018
+          find rot018 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot018/SHA256_MANIFEST
+      - name: Preserve exact evidence and stderr
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot018-prereg109-top-tail-dev2-29of30-source
+          path: rot018/
+          if-no-files-found: error
