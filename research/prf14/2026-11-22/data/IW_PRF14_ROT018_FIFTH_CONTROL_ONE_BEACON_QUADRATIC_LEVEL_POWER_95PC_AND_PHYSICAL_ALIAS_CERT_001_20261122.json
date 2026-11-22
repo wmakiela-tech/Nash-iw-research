@@ -1,0 +1,177 @@
+{
+  "artifact_id": "IW_PRF14_ROT018_FIFTH_CONTROL_ONE_BEACON_QUADRATIC_LEVEL_POWER_95PC_AND_PHYSICAL_ALIAS_CERT_001_20261122",
+  "date": "2026-11-22",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "exposure": "PUBLIC",
+  "scope": "Two-time exogenous classical Pauli labels conditional on 5 preannounced gate-control contexts, 16 strictly positive physical histories per context; unknown middle SU2 physical SO3 target; known P and L, Pauli SPAM ideal or tightly bounded; one source correlation C_(Z,Y) shared across five contexts under null",
+  "five_gate_control_contexts": [
+    "R",
+    "R P",
+    "R P^2",
+    "L R",
+    "P^2 R"
+  ],
+  "known_P": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "unknown_R_witness": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+  "known_L": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]",
+  "baseline_source_Fourier_output_input": [
+    [
+      "0",
+      "9/100",
+      "11/100"
+    ],
+    [
+      "7/100",
+      "0",
+      "1/10"
+    ],
+    [
+      "8/100",
+      "12/100",
+      "0"
+    ]
+  ],
+  "beacon": {
+    "label": "C_(Z,Y)",
+    "output": "Y",
+    "input": "Z",
+    "null_shared_value": "1/10",
+    "five_null_means_exact": [
+      "1/35",
+      "3/35",
+      "-3/70",
+      "3/35",
+      "3/70"
+    ],
+    "closure": "H=y_L^2+y_(P^2 R)^2-y_(R P)^2-y_(R P^2)^2=0",
+    "measured_settings_actually_needed_for_H": 4,
+    "SO3_row_column_norm_identity": true,
+    "jacobian_5_by_4_rank": 4,
+    "complete_five_context_beacon_constrained_29_of_30_rank": 29,
+    "unconstrained_five_context_source_and_gate_local_parameters": 33,
+    "full_context_channel_observations": 30
+  },
+  "physical_drift_alternative": {
+    "change_only_context": "L R",
+    "correlation_change": "C_(Z,Y): 1/10 -> 1/5",
+    "probability_source_min": "63/1600",
+    "other_ten_ordinary_Fourier_zero": true,
+    "exact_TV": "1/20",
+    "five_mean_exact": [
+      "1/35",
+      "3/35",
+      "-3/70",
+      "6/35",
+      "3/70"
+    ],
+    "H_exact": "27/1225",
+    "H_decimal": 0.022040816326530613,
+    "four_used_true_means_abs_sum_exact": "12/35"
+  },
+  "level_alpha_test": {
+    "decision_rule": "Reject H0 if |H(hatmeans)| > 2*e*sum_four|hatmeans| + 4*e^2",
+    "sampling_shots_per_configuration_common_n": true,
+    "level_bound_ideal": "8 exp(-n eta^2 / 2)",
+    "power_condition_sufficient": "|Htrue| > 4*eta*S + 16*eta^2",
+    "alpha": 0.05,
+    "minimum_power_for_specified_drift": 0.95,
+    "unknown_R_not_required_to_compute_test": true
+  },
+  "ideal_device_certificate": {
+    "eta": "27/2000",
+    "shots_each": 55695,
+    "shots_total_four": 222780,
+    "upper_type_one_error_probability": 0.04999834703901479,
+    "exact_strict_alt_power_margin": "7479/12250000",
+    "power_at_least": 0.9500016529609852,
+    "synthetic_trials_null": 1200,
+    "synthetic_false_rejections": 0,
+    "synthetic_trials_drfit": 1200,
+    "synthetic_drift_detected": 1200
+  },
+  "bounded_calibration_certificate": {
+    "known_operator_norm_error_per_P_pulse": 0.001,
+    "known_operator_norm_error_left_L": 0.001,
+    "composed_P_squared_error_upper": 0.002,
+    "prep_Bloch_error_upper": 0.00005,
+    "meas_Bloch_axis_error_upper": 0.00005,
+    "meas_POVM_bias_upper": 0.00005,
+    "max_physical_source_abs_Fourier": 0.2,
+    "uniform_systematic_mean_bias_mu": 0.00055,
+    "eta_stat": 0.013,
+    "total_error_e": 0.01355,
+    "shots_each": 60062,
+    "shots_total_four": 240248,
+    "upper_type_one_error_probability": 0.04999674086791539,
+    "strict_alt_power_margin": 0.0005203191836734692,
+    "power_at_least": 0.9500032591320846,
+    "synthetic_trials_null_physical_pulse_SPAM": 1200,
+    "synthetic_false_rejections": 0,
+    "synthetic_trials_drift_physical_pulse_SPAM": 1200,
+    "synthetic_drift_detected": 1200
+  },
+  "negative_result": {
+    "two_distinct_physical_unknown_target_gates_with_all_5_channel_laws_exactly_identical": true,
+    "alternative_target_gate": "U_X(t)R, t=1/1000 proper SO3 Cayley rational X-rotation",
+    "alternative_context_source": "Cprime_q(i,j)=C(i,j)*[S_q(R)]_ij/[S_q(U_X(t)R)]_ij for i!=j",
+    "all_5_16_history_sources_strictly_positive": true,
+    "all_5_complete_Bloch_channel_entries_exactly_equal": "45/45",
+    "source_TV_to_original_by_context": [
+      0.0002384893026732631,
+      0.0001428668730007652,
+      0.0003577339540098946,
+      0.0002717205952923494,
+      0.00027673926598845643
+    ],
+    "alternative_source_minima_by_context": [
+      0.04557177470254187,
+      0.045618383194469266,
+      0.04570113019070119,
+      0.04561334213235607,
+      0.045608923296856146
+    ],
+    "beacon_L_minus_I_derivative_at_t0": "-3/10",
+    "passing_H_does_not_justify_source_invariance": true
+  },
+  "actual_executed_local_files": {
+    "exact_physical_main_python": "/mnt/data/prf14_rot018/prf14_rot018_fifth_context_beacon_quadratic_closure.py",
+    "exact_main_sha256": "c3dc07a152d7e16e03fc6abfcbe24eda2008b7b638353d25b6028d12a1786519",
+    "exact_physical_main_cert_json_sha256": "8e44908a422313f834bbac5ad0f3d32c19401d9283ddd921c2e7ef15f2a03364",
+    "independent_same_author_5_context_16_Kraus_jacobian_python_sha256": "b110cd84b3deb66fff1634866a1b7570ec01fa57768344fefe5d2dcc1aa36afc",
+    "robust_physical_SO3_Bloch_POVM_script_sha256": "d7909001c28258123318528e385dde5b0167e9e1bff8b56d115d7f57c5c0b353",
+    "robust_calibration_SPAM_JSON_sha256": "8f8a67ba285b624b22da073ec0809657c0ae116eea021e1218d3c2595c918d3a",
+    "total_synthetic_binomial_count_experiments": 4800,
+    "actual_hardware_experiments": 0,
+    "two_repeated_cold_runs_byte_identical": true,
+    "three_scripts_compile_successfully": true
+  },
+  "literature_prior_art": [
+    "https://doi.org/10.1103/PhysRevX.9.021045",
+    "https://doi.org/10.1038/s41534-026-01313-z",
+    "https://arxiv.org/abs/2604.01482"
+  ],
+  "claims": [
+    "INTERNAL_SOURCE_SPECIFIC_NEW_EXACT_FALSIFIER",
+    "NO_GLOBAL_SOURCE_INVARIANCE_PROOF",
+    "NO_GENERAL_QUANTUM_COMB",
+    "NO_EXTERNAL_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
