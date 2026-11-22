@@ -1,0 +1,206 @@
+{
+  "artifact_id": "IW_M15_ROT041_ORIGINAL_M13_MAXIMAL_INVARIANT_MINIMAX_GAMMA_SOURCE_IV110_001_20261122",
+  "return_id": "IW_M15_ROT041_SIX_SOURCE_FOURIER_CALIBRATION_GROUP_MAXIMAL_INVARIANT_AND_SHARP_INVARIANT_RISK_001_20261122",
+  "date": "2026-11-22",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "BW": "GITHUB_PENDING_BW_INGEST",
+  "review": "INTERNAL_NONBLIND_I1_ONLY; REC13_AUD3_PENDING; EXTERNAL_BLIND_I3_NOT_DONE",
+  "source_priority": {
+    "original": "M13 public 41 Fourier B modes N41 auxiliary source FIRST",
+    "A_B_Gaussian": "Geeky-S12 ROT035 FIRST exact legal synthetic rational stationary covariance models",
+    "unbounded_fullfield_alias": "Geeky-S13 ROT001 FIRST",
+    "C5_sharp_gap": "M15 ROT040 FIRST",
+    "loggamma_MGF": "M15 ROT038 FIRST",
+    "prior_source_adversarial": "AUD3 ROT009, REC13 ROT014 separate FIRST",
+    "new": "M15 ROT041 SOURCE SPECIFIC maximal 5D scaling-group invariant and minimax max-conditional-risk among invariant six-Fourier observer tests; no general novel math"
+  },
+  "original_M13": {
+    "SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "native_original_tensor_polys_calc_inner_actually_reexecuted_twice": true,
+    "original_full_41cubed_sites": 68921,
+    "original_B_modes": 41,
+    "original_B_energy_q_support": 221,
+    "complete_historic_DTC0a_producer_missing": true
+  },
+  "frozen_parents": {
+    "ROT029_complete_JSON_SHA256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "ROT040_complete_IV110_JSON_SHA256": "0d495d0d0d1c5e74eff7743717659540d849f02b9314f3512a62c6cbca7bbb9e"
+  },
+  "six_Fourier_k": [
+    [
+      20,
+      20,
+      20
+    ],
+    [
+      20,
+      20,
+      0
+    ],
+    [
+      20,
+      0,
+      0
+    ],
+    [
+      7,
+      0,
+      0
+    ],
+    [
+      12,
+      12,
+      13
+    ],
+    [
+      3,
+      13,
+      7
+    ]
+  ],
+  "all_original_source_deterministic_energymode_means_zero_exact": true,
+  "nuisance_class": {
+    "unrestricted_independent_per_hypothesis_cubic_axial_log_calibration": true,
+    "unrestricted_independent_face_spectral_slope": true,
+    "C5_residual_phi_X_independently_fitted": true,
+    "per_hypothesis_abs_fourth_derivative": "16.5",
+    "per_hypothesis_abs_fifth_derivative": "50",
+    "site_noise_Gaussian_hypothetical_not_measured": true
+  },
+  "new_math": {
+    "source_strict_original_N41_five_by_five_nuisance_minor_det_around": 0.27399413429485275,
+    "nuisance_design_H_rows": [
+      "1",
+      "a",
+      "a²",
+      "a³",
+      "face"
+    ],
+    "IV110_rank_exact": 5,
+    "unique_null_vector_w_last_exact_1": true,
+    "group_action": "on positive six squared Fourier mode energies S_i, log S_i -> log S_i +(H^T theta)_i, theta arbitrary R5",
+    "maximal_invariant": "T= sum_i w_i log(S_i/(2*n*vA_i)). For any two positive energy vectors, their T equal iff related by the five-dimensional calibration scaling group.",
+    "cosine_sine_directions_ancillary": "Isotropic Gaussian model, conditional on each full 2n-dimensional Fourier-pair energy radius; Gaussian spherical direction uniform and independent of variance in each candidate.",
+    "base_logvariance_Delta_IV110_lower": "0.0035493505760477928107931245105931118298204257120042983030183048001683848",
+    "sharp_C5_log_gap_inherited_ROT040_IV110": [
+      "0.0007577450116847756509602000063736355648923763238387594656243478007848514",
+      "0.0007577450116847756558074500295643348935455637907116694223320993472217490"
+    ],
+    "sharp_C5_intermodel_calibration_difference_sup_approx": 0.002791605564363017,
+    "each_candidate_residual_C5_shift_interval": "(-Sstar/2,Sstar/2), OPEN, endpoints approached in C5 smooth limiting sequence but not attained",
+    "exact_distributions": "T_A=xi_A+Z_n; T_B=Delta+xi_B+Z_n; independent X_i~Gamma(n,1), Z_n=sum_i w_i log(X_i/n)",
+    "exact_gamma_characteristic_function": "phi_Z(t)=prod_i Gamma(n+i*t*w_i)/Gamma(n) because sum w_i=0",
+    "log_gamma_convolution_strictly_logconcave": "log X_i density exp(n*y-exp(y))/Gamma(n) strictly logconcave; signed scaling and convolution preserve logconcavity; translates monotone likelihood ratio",
+    "invariant_minimax_max_conditional_risk": "For F_n CDF of Z_n, G=Delta-Sstar>0, solve unique u_n from 1-F_n(u_n)=F_n(u_n-G). Choose B if T>Sstar/2+u_n. Least-favorable endpoints A=Sstar/2 and B=Delta-Sstar/2 approached in smooth C5, and risk 1-F_n(u_n)=F_n(u_n-G) is minimax ONLY among tests invariant under five unrestricted logvariance calibration scalings.",
+    "does_NOT_assert_minimax_among_all_noninvariant_or_fullsite_tests": true
+  },
+  "new_IV110_finite_n": {
+    "source_V_weight_square_IV110_approx": 2.8147662920276675,
+    "strict_lower_g0": 0.00075774,
+    "strict_upper_V": 2.815,
+    "strict_upper_W": 1.001,
+    "nmin": 55000000,
+    "eta_less_than": 0.001,
+    "trigamma_bound": "psi1(x)<=1/(x-1/2) for x>1/2",
+    "strict_uniform_each_hypothesis_error": "exp(-n*(0.00075774)^2*(998/999)/(8*2.815)), n>=55 million",
+    "sufficient_counts": [
+      {
+        "correct_pct_strict_above": 75,
+        "n": 55000000,
+        "strict_error_upper_less_than": 0.246381
+      },
+      {
+        "correct_pct_strict_above": 90,
+        "n": 95000000,
+        "strict_error_upper_less_than": 0.088949
+      },
+      {
+        "correct_pct_strict_above": 95,
+        "n": 120000000,
+        "strict_error_upper_less_than": 0.047055
+      },
+      {
+        "correct_pct_strict_above": 99,
+        "n": 185000000,
+        "strict_error_upper_less_than": 0.008987
+      },
+      {
+        "correct_pct_strict_above": 99.9,
+        "n": 275000000,
+        "strict_error_upper_less_than": 0.000908
+      }
+    ],
+    "previous_ROT040_strict_sufficient": [
+      65000000,
+      105000000,
+      135000000,
+      210000000
+    ],
+    "these_are_not_minimal_necessary_or_actual_experimental_trials": true
+  },
+  "independent_full_original_M13_site_fft_and_gamma_inversion": {
+    "actual_original_full_41cubed_nine_complex_B_tensor_field_ifft": true,
+    "actual_source_6_axis_12_face_8_body_periodic_rawsite_shift_covariance": true,
+    "independently_derived_five_nuisance_SVD_weights": true,
+    "explicit_random_five_parameter_scaling_orbit_invariance_and_inverse_test": true,
+    "independent_exact_loggamma_characteristic_function_numerically_inverted_with_MPF46_and_Gil_Pelaez_quad": true,
+    "numerical_only_least_favorable_minimax_max_conditional_error": [
+      {
+        "n": 65000000,
+        "numeric_risk": 0.03432935924205682
+      },
+      {
+        "n": 100000000,
+        "numeric_risk": 0.011965055100284228
+      },
+      {
+        "n": 106000000,
+        "numeric_risk": 0.010035709048327845
+      },
+      {
+        "n": 110000000,
+        "numeric_risk": 0.008930865368476537
+      },
+      {
+        "n": 120000000,
+        "numeric_risk": 0.006684443391091088
+      },
+      {
+        "n": 185000000,
+        "numeric_risk": 0.0010647475964888908
+      }
+    ],
+    "numeric_optimal_risk_inversion_NOT_strict_interval_nor_certified_110m_99pct": true
+  },
+  "reproduction": {
+    "full_original_source_runnable_user_local_ZIP": "IW_M15_ROT041_ORIGINAL_M13_MAXIMAL_INVARIANT_C5_GAMMA_IV110_REPRO_001_20261122.zip",
+    "ZIP_bytes": 39833,
+    "ZIP_full_SHA256": "70229304ab5c9988334d888441e31c701605b155b2b63ecbd32b6cea672e4b34",
+    "ZIP_crc": "PASS",
+    "member_SHA256_manifest": "12/12 PASS",
+    "all_ZIP_member_full_byte_reread": "13/13 PASS",
+    "original_native_new_IV110_script_SHA256": "4e64b42f2136cd39544727a73113483ef6b10443848262b064be4ca7f430152a",
+    "full_new_original_IV110_JSON_SHA256": "b7d673f4f3dc70832a29f10aa67bb3481932d869c6ce405e0a14bcaeb4c9443d",
+    "independent_original_41cubed_spatial_exact_gamma_CF_Python_SHA256": "d7a89d71b65a1e622a563d8f07fb51f898ceb65e9d1eb4ea60443a43f013a38c",
+    "full_independent_spatial_machine_JSON_SHA256": "b89f9c5daef49ac3213ea23d3832d170783eeb2be32d75095f053e135fc4f604",
+    "full_replay_ten_negative_receipt_SHA256": "21114e47b97c9e9477428de7ad69ea10692757756eec825c37c90e81364b68d2",
+    "two_original_source_science_full_JSON_cold_replays": "2/2 BYTE IDENTICAL PASS",
+    "two_FINAL_ZIP_extracted_science_FULL_JSON_cold_replays": "2/2 BYTE IDENTICAL PASS",
+    "actual_named_adversarial_source_and_false_science_mutations": "10/10 REJECTED PASS"
+  },
+  "limits": [
+    "Original M13 AUXILIARY public source only, complete historic dtc0a runtime unavailable",
+    "Two synthetic Gaussian fixed covariance shapes, no measured source noise or real high-frequency detectors",
+    "All full 68921 RAW site IID snapshots and calibration derivatives hypothetical",
+    "Numeric risk n110m is not a strict source interval finite sample guarantee",
+    "Minimax refers ONLY to calibration-group-invariant tests of these six Fourier mode pairs",
+    "No general math novelty, global alpha inverse or physical NASH K/J3/TPE/GW/GR effect",
+    "No REC13/AUD3 independent ROT041 review receipt, no external blind I3, no KN15 BW native ingestion receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
