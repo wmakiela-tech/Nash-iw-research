@@ -1,0 +1,43 @@
+name: Mech-S10 ROT022 original 109b top-segment-source replay and Wu-Xu subgrid
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot022-owner109-top-posthoc-extrapolation-source-only-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot022-sourceonly-20261122
+  cancel-in-progress: false
+jobs:
+  actual-owner-109b-five-oracles-and-extrapolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Seven new owner source Git SHA and prior pinned seven original sources and official Wu-Xu public code
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot022
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot022_owner109_true_top_segment_extrapolated_hadronic_source_referee.py)" = "9feb8c6c7858405387f7d3e66b2abcbfe7cb220f"
+          git rev-parse HEAD >rot022/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot022_owner109_true_top_segment_extrapolated_hadronic_source_referee.py rot022/owner_109b_five_oracle_exact_top_segment_subgrid_source.json >rot022/STDOUT 2>rot022/STDERR
+          python3 -I -c 'import json;z=json.load(open("rot022/owner_109b_five_oracle_exact_top_segment_subgrid_source.json"));assert len(z["owner_posthoc109b_five_max_0_to28_exact_replay"])==5 and max(v["oracle_absolute_difference"] for v in z["owner_posthoc109b_five_max_0_to28_exact_replay"].values())<2e-11 and z["real_original_100x100_primary_gzip_re_read"] and z["actual_top_MC_succeeded"]==2 and z["actual_top_MC_failed"]==1 and z["largest_hypothetical_j22_end_floor_log_variation_five_scenarios"]>z["largest_owner_original_table_log_variation_0_to28"] and z["no_native_physics_executed"]'
+          echo "ROT022_REAL_SEVEN_PLUS_SEVEN_OWNER_PRIMARY_SHA_ORIGINAL_WUXU_SHA_FIVE_POSTHOC_ORACLES_PASS_NO_NEW_PHYSICS" >rot022/VERDICT
+      - name: Manifest original file hashes
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot022
+          find rot022 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot022/SHA256_MANIFEST
+      - name: Preserve exact original source-only evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot022-original-109b-top-tail-source-subgrid
+          path: rot022/
+          if-no-files-found: error
