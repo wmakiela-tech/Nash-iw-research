@@ -82,12 +82,13 @@ def primary_read():
     arr={}
     with gzip.open(D/"data/primary_spectra_090.tsv.gz",mode="rt",encoding="utf-8") as h:
         rd=csv.DictReader(h,delimiter="\t")
-        assert set(["k","m_g","energy",*CHANNELS]).issubset(rd.fieldnames),("HEAD",rd.fieldnames)
+        pcol={c:("W+-" if c=="Wpm" else c) for c in CHANNELS}
+        assert set(["k","m_g","energy",*pcol.values()]).issubset(rd.fieldnames),("HEAD",rd.fieldnames)
         for row in rd:
             k=int(row["k"])
             mm=float(row["m_g"])
             en=float(row["energy"])
-            phi={c:float(row[c]) for c in CHANNELS}
+            phi={c:float(row[pcol[c]]) for c in CHANNELS}
             assert 0<=k<100
             assert mm>0 and en>0 and all(math.isfinite(v) and v>=0 for v in phi.values())
             if k not in arr:arr[k]={"mass_g":mm,"energy":[],"phi":{c:[] for c in CHANNELS}}
