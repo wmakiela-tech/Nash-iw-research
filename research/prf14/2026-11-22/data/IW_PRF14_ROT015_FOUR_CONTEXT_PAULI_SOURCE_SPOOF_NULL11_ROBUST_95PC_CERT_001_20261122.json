@@ -1,0 +1,159 @@
+{
+  "artifact_id": "IW_PRF14_ROT015_FOUR_CONTEXT_PAULI_SOURCE_SPOOF_NULL11_ROBUST_95PC_CERT_001_20261122",
+  "date": "2026-11-22",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "exposure": "PUBLIC",
+  "science_scope": "Exact causal context-conditioned 16-entry Pauli classical sources; unknown stable physical middle SU2; four pre-announced middle-control contexts I,P,P^2,L; 13 binary Pauli configurations; no single context-independent comb once source varies",
+  "source_basis": {
+    "orig_ROT013_six_Fourier": [
+      [
+        0,
+        0.09,
+        0.11
+      ],
+      [
+        0.07,
+        0,
+        0.1
+      ],
+      [
+        0.08,
+        0.12,
+        0
+      ]
+    ],
+    "orig_ROT013_R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "orig_ROT013_P": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "orig_ROT013_L": "[[0,1/sqrt2,1/sqrt2],[1,0,0],[0,1/sqrt2,-1/sqrt2]]",
+    "orig_ROT014_report_blob": "417c1940538df46d17c77aee83247ece526a2755"
+  },
+  "exact_spoof": [
+    {
+      "world": "D0 +++",
+      "deltaC_YX": "0",
+      "TV": "0",
+      "minP": "73/1600"
+    },
+    {
+      "world": "D1 --+",
+      "deltaC_YX": "3/25",
+      "TV": "3/50",
+      "minP": "63/1600"
+    },
+    {
+      "world": "D2 -+-",
+      "deltaC_YX": "3/50",
+      "TV": "3/100",
+      "minP": "69/1600"
+    },
+    {
+      "world": "D3 +--",
+      "deltaC_YX": "-9/50",
+      "TV": "9/100",
+      "minP": "57/1600"
+    }
+  ],
+  "sharp_D2_TV_0p03_proof": "Exact equal last mean requires change C_(Y,X) from -0.09 to -0.03; Fourier character ±1 implies |ΔC|≤2TV. Single Fourier-character physical source modification attains TV=0.03 with positive 16 probabilities; first twelve right-control laws unchanged; all 13 Bernoulli laws identical to reference.",
+  "context_source_design_rank": {
+    "sources": 4,
+    "independent_hidden_coordinates_per_source": 6,
+    "total_conditional_source_parameters": 24,
+    "setting_counts_per_context": {
+      "I": 5,
+      "P": 4,
+      "P2": 3,
+      "L": 1
+    },
+    "measurement_rank": 13,
+    "nullity": 11,
+    "invisible_dimensions_per_context": {
+      "I": 1,
+      "P": 2,
+      "P2": 3,
+      "L": 5
+    },
+    "explicit_invisible_drift": {
+      "context": "I",
+      "changed_source_matrix_position": "output Z / input X",
+      "deltaC": 0.001,
+      "TV": 0.0005,
+      "all13_measurement_probabilities": "unchanged"
+    }
+  },
+  "independent_AUD3_0p008_interval_check": {
+    "firstness": "AUD3 ROT011 - independent different cell, public Slack https://nashprojectworkspace.slack.com/archives/C0BV1J3SYLT/p1795349114660309",
+    "direct_source_private_git_blob": "24105517869efa4cdbb4c5f24efb95dab774b76d",
+    "own_independent_method": "Fractions with 45-decimal outward integer-isqrt enclosures; all six candidate pair margins positive",
+    "box_eta": 0.008,
+    "smallest_pair_margin": 0.0004907890079983123,
+    "six_source_coefficient_abs_error_upper_by_selected_three_and_extra_three": [
+      0.012736834401577427,
+      0.01272216159338728,
+      0.012699445579636304,
+      0.023027736587859733,
+      0.017339853446178853,
+      0.01659030916873376
+    ],
+    "min_reconstructed_reference_source_probability": 0.03968022870141417,
+    "stable_ideal_95pc_sufficient_shots_AUD3": 2540629
+  },
+  "new_conditional_robust_95pc": {
+    "each_context_reference_TV_cap": 0.0008,
+    "calibration_systematic_bound_ROT014_A": 0.00039,
+    "per_mean_sample_error_eta": 0.006,
+    "total_effective_ideal_reference_mean_error_bound": 0.00799,
+    "inequality": "eta_stat + mu_cal + 2*xi = 0.00799 < 0.008",
+    "n_per_setting": 347435,
+    "number_of_settings": 13,
+    "total_sufficient_shots": 4516655,
+    "Hoeffding_failure_bound": "26 exp(-347435*0.006^2/2) < 0.049999941",
+    "confidence_at_least": 0.95,
+    "source_TV_cap_is_exogenous_not_tested_by_13_readings": true,
+    "guarantee_scope": "Correct discrete D label, bounded six reference Fourier coefficients, positive reference p. Does not learn four distinct p^q distributions."
+  },
+  "actual_author_execution": {
+    "executable": "/mnt/data/prf14_rot015/prf14_rot015_intervention_context_causal_no_go_and_robust_cert.py",
+    "executable_sha256": "2554071b20fbbd03842516bef81d113d5a5c304ac71b3f40fb216ac26a4310fb",
+    "original_output": "/mnt/data/prf14_rot015/prf14_rot015_context_dependence_certificate.json",
+    "original_output_sha256": "2335d90a8cd3bfefd257802a27421249369ad7957d94ef01bfcd53530cb1c2c4",
+    "actual_symbolic_four_world_source_validation": "PASS",
+    "own_45_decimal_outward_fraction_interval_check": "PASS",
+    "repeat_exact_local_run": "PASS",
+    "actual_physical_source_SO3_SPAM_binomial_synthetic_trials": 1200,
+    "synthetic_failures": 0,
+    "max_observed_context_source_TV": 0.0007999861689920613,
+    "max_observed_ideal_mean_bias": 0.0014574592666198871,
+    "min_context_source_probability": 0.045525007754576755
+  },
+  "prior_art": [
+    "https://doi.org/10.1103/PhysRevX.9.021045",
+    "https://doi.org/10.1038/s41534-026-01313-z",
+    "https://doi.org/10.1103/PRXQuantum.3.020344"
+  ],
+  "claim_ceiling": [
+    "SOURCE_RESTRICTED_INTERNAL_NEW_RESULT",
+    "NOT_GENERAL_PROCESS_TENSOR_NOVELTY",
+    "NO_HARDWARE",
+    "NO_REFERENCE_FREE_SPAM",
+    "NO_ABSOLUTE_DRIFT_LIMIT_INFERRED_FROM_13_SETTINGS",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
