@@ -1,0 +1,43 @@
+name: Mech-S10 ROT012 J vs beta-local-derivative 146 original source pairs
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot012-source-only-146-node-beta-derivative-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot012-source-only-20261122
+  cancel-in-progress: false
+jobs:
+  original-146-source-grid-local-beta-derivative:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run independently source blob-gated J versus beta-derivative two-secant referee
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot012
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot012_local_beta_derivative_vs_J_source_146_pairs_referee.py)" = "1cfa32e2077ca0701e9f6b6f68221b9a9760f6c5"
+          git rev-parse HEAD > rot012/SOURCE_REPO_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot012_local_beta_derivative_vs_J_source_146_pairs_referee.py rot012/original_146_node_beta_derivative.json > rot012/STDOUT 2> rot012/STDERR
+          python3 -I -c 'import json; v=json.load(open("rot012/original_146_node_beta_derivative.json")); a=v["total"]; assert a["n"]==146 and a["RMS_J_minus_beta_proxy_right"]/a["RMS_beta_proxy_right"]>10; assert a["sign_mismatches_right"]>=65 and not v["native_physics_executed"]; assert len(v["per_group"])==8'
+          echo "ROT012_SIX_ORIGINAL_GIT_SOURCES_146_LOCAL_BETA_RESPONSE_PAIRS_PASS" > rot012/VERDICT
+      - name: Preserve original source-only SHA256 manifest including failures
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot012
+          find rot012 -maxdepth 1 -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > rot012/ARTIFACT_SHA256SUMS
+      - name: Save source-only reproducible raw counterfactual artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot012-J-versus-local-beta-146pairs
+          path: rot012/
+          if-no-files-found: error
