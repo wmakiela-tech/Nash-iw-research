@@ -1,0 +1,157 @@
+{
+  "artifact_id": "IW_REC13_ROT018_WUXU_TWO_ORIGINAL_JLD2_TWOSIDED_CHI2_Yp_BRANCHES_MACHINE_001_20261122",
+  "date": "2026-11-22",
+  "exposure": "PUBLIC",
+  "cell": "REC13",
+  "sourced_from_author_repo": "Fenyutanchan/Primordial-Black-Hole@d395183674cace6c9906a8911bdeb7234ba4040d",
+  "original_jld2": {
+    "latest": {
+      "path": "arXiv-2509.05618/data/out/scanning.jld2",
+      "git_blob": "10cc9b3f078fcadb91b5e520e75845859ca00b74",
+      "sha256": "51844a46ca904f57f941e0d0ebc3b5920c38bace76eea9e1d89cb5fd1f2c5786",
+      "size_bytes": 151089,
+      "max_chi2_residual": 4.3655745685100555e-11
+    },
+    "v1": {
+      "path": "arXiv-2509.05618/arXiv-2509.05618v1/data/out/scanning.jld2",
+      "git_blob": "ff08072449c4ef46144cb800778224acd9669a8f",
+      "sha256": "7f8ebe6c6c7b380f20c725908d900c5508bb4f16519a7f17e10955a55e78ecf1",
+      "size_bytes": 149272,
+      "max_chi2_residual": 1.8189894035458565e-12
+    }
+  },
+  "data_mass_beta_shape": [
+    100,
+    100
+  ],
+  "log_beta_grid_range": [
+    -20,
+    -17
+  ],
+  "mass_g_range": [
+    600000000,
+    10000000000
+  ],
+  "reference_observational_helium": 0.245,
+  "quoted_sigma_helium": 0.003,
+  "two_sided_chi2_threshold": 4,
+  "mathematical_y_acceptance": [
+    0.239,
+    0.251
+  ],
+  "original_stored_operator": "chi2_mat=((Y_P_mat-0.245)/0.003)^2",
+  "hypothetical_transformation_if_and_only_if_code_y_is_2x_over_1minusx": "Yp_v3=2*Yp_code/(2+Yp_code)",
+  "results": {
+    "latest": {
+      "as_stored": {
+        "low_beta_accepted": 100,
+        "low_beta_below_lower": 0,
+        "source_grid_allowed": 4469,
+        "grid_below_lower": 0,
+        "grid_above_upper": 5531,
+        "upper_crossing_masses": 78,
+        "lower_crossing_masses": 0,
+        "j62": {
+          "low_beta_y": 0.2462581370148223,
+          "low_beta_chi2": 0.1758787497851083,
+          "lower_logbeta": null,
+          "upper_logbeta": -19.389217861290064
+        }
+      },
+      "hypothetical_naive_v3": {
+        "low_beta_accepted": 0,
+        "low_beta_below_lower": 100,
+        "low_beta_chi2_minmax": [
+          73.04453943039178,
+          81.2356040926684
+        ],
+        "source_grid_allowed": 513,
+        "grid_below_lower": 6131,
+        "grid_above_upper": 3356,
+        "masses_any_sample_accepted": 74,
+        "masses_none_accepted": 26,
+        "lower_crossing_masses": 74,
+        "upper_crossing_masses": 73,
+        "two_bounded_interval_masses": 73,
+        "j22": {
+          "low_beta_chi2": 80.56091677521145,
+          "lower_logbeta": null,
+          "upper_logbeta": null
+        },
+        "j27": {
+          "lower_logbeta": -17.467163843310107,
+          "upper_logbeta": -17.064626477921582
+        },
+        "j62": {
+          "low_beta_y": 0.21926076345089035,
+          "low_beta_chi2": 73.61203312566907,
+          "lower_logbeta": -18.755435068752703,
+          "upper_logbeta": -18.555528141997392,
+          "allowed_sample_beta_nodes": 6
+        }
+      }
+    },
+    "v1": {
+      "as_stored": {
+        "low_beta_accepted": 100,
+        "low_beta_below_lower": 0,
+        "source_grid_allowed": 7244,
+        "grid_below_lower": 0,
+        "grid_above_upper": 2756,
+        "upper_crossing_masses": 78,
+        "lower_crossing_masses": 0,
+        "j62": {
+          "low_beta_y": 0.24484881976657238,
+          "low_beta_chi2": 0.002539495886580783,
+          "upper_logbeta": -18.27393300972919
+        }
+      },
+      "hypothetical_naive_v3": {
+        "low_beta_accepted": 0,
+        "low_beta_below_lower": 100,
+        "low_beta_chi2_minmax": [
+          79.04022129966988,
+          81.24807093695819
+        ],
+        "source_grid_allowed": 387,
+        "grid_below_lower": 8760,
+        "grid_above_upper": 853,
+        "masses_any_sample_accepted": 58,
+        "masses_none_accepted": 42,
+        "lower_crossing_masses": 58,
+        "upper_crossing_masses": 49,
+        "two_bounded_interval_masses": 49,
+        "j62": {
+          "low_beta_y": 0.21814281443864236,
+          "low_beta_chi2": 80.14537958635519,
+          "lower_logbeta": -17.639003783921336,
+          "upper_logbeta": -17.439131659260617,
+          "allowed_sample_beta_nodes": 7
+        }
+      }
+    }
+  },
+  "independent_firstness": {
+    "original_WuXu": "Published theory, figures, JLD2 matrices and previous constraints",
+    "EKS1_ROT018": "FIRST explicit 30 contiguous Carr v1 CODE window [3.301,7.526]e9 g and source notebook identification",
+    "REC13_ROT016": "First in this lineage three-way Yp formula contract",
+    "REC13_ROT017": "First in this lineage original author actual 10000 matrix binary I1 full F and two baseline anchor counterexamples",
+    "REC13_ROT018": "New direct two-sided chi2 lower+upper branch source audit in both ORIGINAL snapshots, 100/100 low-beta exclusion counterfactual falsifier"
+  },
+  "claims": {
+    "proven": "Independent deterministic 100x100 original binary source I1 two-sided chi-square branch arithmetic given hypothetical Yp transform; no physics solver",
+    "important_guard": "Two-sided chi2 from transformed raw Y excludes all smallest-beta source points. Reported one-sided upper crossing alone is not a 0<beta<beta_max confidence interval.",
+    "context": "Published figure5 describes Y>0.251 upper-side physical exclusion, whereas original chi2 source is mathematically squared two-sided residual.",
+    "absent": [
+      "No proof archived JLD2 produced by currently displayed main-scan.jl code",
+      "No reproduction final figure's producer notebook raw content",
+      "No independent BBN-simple nuclear solver",
+      "No baseline calibration for hypothetical transformed Y",
+      "No claim authors paper error",
+      "No physical PBH corrected bound",
+      "NO_NOVELTY",
+      "NO_CANON",
+      "NO_EXEC_SIGN"
+    ]
+  }
+}
