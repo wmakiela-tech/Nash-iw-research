@@ -1,0 +1,130 @@
+{
+  "artifact_id": "IW_PRF14_ROT012_CYCLIC_CLIFFORD_10_SETTING_FINITE_SHOT_CERTIFICATE_001_20261122",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "created_at": "2026-11-22",
+  "scope": "Strictly positive exogenous two-time Pauli source with all 10 ordinary Fourier coordinates zero; six hidden correlations row-flat C_(j,i)=d_i*c. Known controls and SPAM; stable unknown R; four actual source/gate witness worlds. NOT six-independent-correlation or quantum-comb-wide.",
+  "source_identity": {
+    "rot010_report_git_blob": "2e10001d834781a93fed954ff635b5bd422ebdfb",
+    "rot011_report": "https://github.com/wmakiela-tech/Nash-iw-research/blob/187ace16b1ba163e4c4d5f04b209950967741a4a/research/prf14/2026-11-22/IW_PRF14_ROT011_FINITE_SHOT_TWO_SIDED_PAULI_MEMORY_CERTIFICATE_AND_NO_UNIFORM_SAMPLE_THEOREM_001_20261122.md",
+    "this_rotation_executed_local_script_sha256": "ba4e686c7c50cad13ed6aadbfb4da3f339a3de75428f254f822a50374b87b7f6",
+    "this_rotation_executed_local_machine_output_sha256": "adf44da257576c3105f6961f1dca309d1bcdfec6e37761f286f001fbebd67c11"
+  },
+  "physical_rotations": {
+    "unknown_baseline_R": [
+      [
+        -0.42857142857142855,
+        -0.2857142857142857,
+        0.8571428571428571
+      ],
+      [
+        0.8571428571428571,
+        -0.42857142857142855,
+        0.2857142857142857
+      ],
+      [
+        0.2857142857142857,
+        0.8571428571428571,
+        0.42857142857142855
+      ]
+    ],
+    "known_right_C3": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "known_left_WL": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]"
+  },
+  "four_proper_sign_worlds": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1
+    ]
+  ],
+  "primary_identities": [
+    "a_(i,j)=c_i*R_(i,j) for i != j",
+    "b_(i,i-1)=c_i*R_(i,i) with C3 right control",
+    "M=diag(c_X,c_Y,c_Z)*R from nine binary expectations",
+    "|c_i|=L2_norm(M_row_i); four determinant-compatible sign choices remain",
+    "t_d =d_X*(d_Y*b_(Y,X)+d_Z*a_(Z,Y))/sqrt(2) for equal-magnitude model"
+  ],
+  "exact_four_final_means": [
+    "3*sqrt(2)/140",
+    "-9*sqrt(2)/140",
+    "9*sqrt(2)/140",
+    "-3*sqrt(2)/140"
+  ],
+  "gap_exact": "3/(35*sqrt(2))",
+  "gap_float": 0.060609152673132646,
+  "base_confidence_certificate": {
+    "alpha": 0.05,
+    "eta": 0.012,
+    "n_settings": 10,
+    "shots_each": 83215,
+    "shots_total": 832150,
+    "prob_bound": "P(any absolute empirical mean error > eta) <= 20 exp(-n*eta^2/2)",
+    "deterministic_decision_condition": "2(1+sqrt(2))*eta < gap",
+    "deterministic_margin": 0.002668027176178364
+  },
+  "model_misspec_certificate": {
+    "alpha": 0.05,
+    "eta": 0.01,
+    "delta_each_offdiag_corr_absolute": 0.003,
+    "correlations": "C^d_(j,i) = d_i*(0.1+delta_(j,i)); |delta|<=0.003",
+    "shots_each": 119830,
+    "shots_total": 1198300,
+    "condition": "2(1+sqrt(2))*eta+4*(9/(7*sqrt(2)))*delta < gap",
+    "deterministic_margin": 0.0014152339445068678
+  },
+  "continuous_recovery_caution": {
+    "n_total_for_eta_0p001": 119829300,
+    "amplitude_error_upper": "sqrt(3)*eta",
+    "row_vector_error_upper": "2*sqrt(3)*eta/min_abs_row_amplitude; eta=0.001,c=0.1 gives 0.0346411",
+    "ten_setting_shortcut_requires_source_structure": true
+  },
+  "actual_computation": {
+    "sympy_exact_legality": "PASS",
+    "sympy_exact_four_alias": "PASS",
+    "sympy_exact_generic_unequal_rows": "PASS",
+    "synthetic_iid_binomial_trials": 1200,
+    "errors": 0,
+    "min_observed_distance_margin": 0.03460301461254016,
+    "n_per_configuration_in_binomial_tests": 119830,
+    "model_delta": 0.003
+  },
+  "negative_knowledge": [
+    "No source row-flat promise inferred from ordinary channels; it is separately falsifiable",
+    "No claim of global right-control optimality",
+    "No claim of full six-independent-source finite-shot improvement",
+    "No hardware, unknown-SPAM, or adaptive process-tensor claims",
+    "No external priority clearance or physical NASH bridge"
+  ],
+  "status": "SOURCE_EXECUTED_LOCAL_PASS / GITHUB_FULL_READBACK_PASS / NO_EXTERNAL_NOVELTY / NO_CANON / NO_EXEC_SIGN"
+}
