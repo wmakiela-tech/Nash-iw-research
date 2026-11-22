@@ -76,3 +76,10 @@ c1a3ae127bdccdac8b71d7eb139d248d5fdea4296fd69f9f73894fe2ead71a13  data/timeline_
 ```
 
 Zrzuty szybkości (~3.4 GB, /home/claude/run094/dump_* i dd_*) poza repozytorium; SHA w data/rate_dumps_094_sha256.log.
+
+## 096 (NOTE, DIR-009)
+
+```
+26c3ceadbcd97819afe12210639b1819e3797b1d86dfbee7795db5aa9514e087  code/dhold_096.py
+648dc36fde115da9142b074833a402a1b449ee4b08781462de41ad47b5c7b229  data/dhold096.json
+```
