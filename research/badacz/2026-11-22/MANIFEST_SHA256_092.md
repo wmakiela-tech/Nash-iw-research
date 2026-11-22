@@ -278,3 +278,9 @@ cca4822ffeb5e07da3b6a7a67e2a3343d095c82e8e8c181960459515c414853a  data/rate_dump
 3277058d83a0c1fee9a46f29e6a94f667f0b28fca9b54dcf2d446629cb029a58  data/compare111.json
 9a08cfa2f33e262c817450bf966c66f32bc4cdf12f9f9f28ad6a3aad7c6961a0  data/src_diff_111.log
 ```
+
+## 111 r2 (manuale i README v2.3/v3.0)
+
+```
+9b0561ca1991f3ce5f930d764ffc27aef1a0d5f4567eb4f892bf599dd2088355  data/manuals_sha_111r2.json
+```

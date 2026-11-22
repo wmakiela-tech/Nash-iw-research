@@ -1,0 +1,14 @@
+{
+ "README.txt": {
+  "v23": "89abb23db4d56ed7bf38eaf342db797e622cbd72239f061cf6aa56abe46038bb",
+  "v30": "9d39e7187887f9b6d4e3a58694e25c1b2abce917e8e710eccd798990d0511e44"
+ },
+ "manuals/BlackHawk_v2.3.pdf": {
+  "v23": "75a65ab1a23c60c881a2028fdc99b3f7586411e0215036abd4dd4859ca241ff7",
+  "v30": "75a65ab1a23c60c881a2028fdc99b3f7586411e0215036abd4dd4859ca241ff7"
+ },
+ "manuals/BlackHawk_v2.3_note.pdf": {
+  "v23": "673c99aefbbe2dc3187be7ddd678c4ae3de8efb59e79ef1f82252dfcd3788478",
+  "v30": "673c99aefbbe2dc3187be7ddd678c4ae3de8efb59e79ef1f82252dfcd3788478"
+ }
+}

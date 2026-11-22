@@ -48,3 +48,12 @@ W v3.0 tablice HERWIG dla epoki BBN i ich czytnik są takie same jak w v2.3. Wł
 
 - `data/compare111.json` (katalogi SHA-256 i werdykty), `data/src_diff_111.log` (SHA archiwów, `diff -rq`, liczby linii diff).
 - Kod: `code/compare_bh_tables_111.py`.
+
+## r2 (22 XI, 20:20, godzina z `date` przy zapisie): dokumentacja v3.0 też bez zmian; otwarta część §3 zamknięta
+
+- **Manuale w archiwum v3.0** to te same pliki co w v2.3: `manuals/BlackHawk_v2.3.pdf` (SHA-256 75a65ab1…) i `BlackHawk_v2.3_note.pdf` (673c99ae…) są bajtowo równe w obu archiwach. Osobnego manuala v3.0 w archiwum nie ma. Zapis: `data/manuals_sha_111r2.json`.
+- **Artykuł v3.0** (arXiv:2606.06355v1): spis treści obejmuje nowe metryki, współczynniki szarego ciała (GrayHawk), tablice Kerra, parametry i walidację. Nie ma w nim części o hadronizacji. Odczytane strony nie wspominają o zmianie tablic HERWIG ani opcji `hadronization_choice`; w sprawach poza nowymi funkcjami artykuł odsyła do manuali v1/v2. Strony 5–6, 10 i 14–15 nie były zwrócone przez narzędzie; wniosek opiera się na spisie treści i odczytanych stronach.
+- **Dziennik zmian w README v3.0**: „metryki … dodane przez GrayHawk; poprawiony Kerr i inne metryki; nowe procedury ekstrapolacji; poprawione błędy”. Hadronizacja nie jest wymieniona.
+- **Skrypty generatora** (`herwig_scripts/*/main.cpp` z `LuminosityFunction:Energy = E′` oraz `formatting.c`, który dzieli przez 2 i podpisuje wiersz energią E′; REVIEW_098) są w v3.0 bajtowo te same (§2).
+
+**Odczyt [▷]:** w v3.0 dane, czytnik, skrypty generatora i dokumentacja tablic HERWIG dla epoki BBN są takie same jak w v2.3. Rozbieżność między manualem (E′ = √s/2) a danymi (√s = E′) jest więc obecna w najnowszym wydaniu bez zmian. Werdykt bramki EKS1/REC13: SAME, łącznie z dokumentacją.
