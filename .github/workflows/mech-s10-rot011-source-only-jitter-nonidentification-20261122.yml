@@ -1,0 +1,43 @@
+name: Mech-S10 ROT011 original Wu-Xu J scale vs beta model no-go source referee
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot011-source-only-jitter-nonidentification-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot011-sourceonly
+  cancel-in-progress: false
+jobs:
+  16-original-plus-J-roots-and-exact-vectorfield-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run exact source-data and mathematical proof with fail-closed source SHA custody
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot011
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot011_jitter_nonidentification_16_roots_referee.py)" = "606b231778ab7af08fb3276fd739d43ef06cf0ee"
+          git rev-parse HEAD > rot011/SOURCE_REPO_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot011_jitter_nonidentification_16_roots_referee.py rot011/16root_exact_source_nogo.json > rot011/STDOUT 2> rot011/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot011/16root_exact_source_nogo.json")); assert d["n_source_roots_nominal"]==16 and d["n_source_roots_J"]==16; assert d["n_abs_epsilon_raw_gt005"]==8; assert d["n_abs_epsilon_aligned_gt005"]==9; assert len(d["vector_field_exact_dimensionless_witness"])==4'
+          printf '%s\n' 'ROT011_J_IS_NOT_PURE_SOLVER_NOISE_IDENTIFICATION_SOURCE_PASS' > rot011/VERDICT
+      - name: Compute authentic artifact SHA256 manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot011
+          find rot011 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum > rot011/SHA256_MANIFEST
+      - name: Preserve source-only result and reproducibility status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot011-exact-vectorfield-and-16-jitter-roots
+          path: rot011/
+          if-no-files-found: error
