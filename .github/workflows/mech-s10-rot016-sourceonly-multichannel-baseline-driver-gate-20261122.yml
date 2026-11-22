@@ -1,0 +1,43 @@
+name: Mech-S10 ROT016 original native beta-base multi-channel and G_DRIVER scope
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot016-sourceonly-multichannel-baseline-driver-gate-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot016-gate-sourceonly-20261122
+  cancel-in-progress: false
+jobs:
+  review104-source-multichannel-gate-scope:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Source-authentic original data, four-channel anomalies, Y-only gate metamorphic witness
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot016
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot016_review104_multichannel_baseline_coanomaly_and_driver_guard.py)" = "cccbbeabd28fad75d9e3c2488ed940d9a478a4ae"
+          git rev-parse HEAD >rot016/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot016_review104_multichannel_baseline_coanomaly_and_driver_guard.py rot016/multichannel_source_coanomaly_and_driver_gate.json >rot016/STDOUT 2>rot016/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot016/multichannel_source_coanomaly_and_driver_gate.json")); assert d["n_actual_native_z_no_base_beta_nodes"]==58 and d["frozen_owner_native_labels"]["status"]=="GATE_FAIL_NO_LABEL" and d["source_actual_driver_control"]["all_nine_available_deterministic_summary_columns_string_exact"] and d["source_actual_driver_control"]["mutant_in_memory_Tlast_changed_but_original_Y_only_gate_would_pass"] and all(all(v["coanomalous_channels"]==4 for v in d["groups"][j]["reference_pools"].values()) for j in ("22","62")) and d["no_native_physics_executed"]'
+          echo "ROT016_TEN_AUTHENTIC_GIT_SOURCE_GATE_PASS_FOUR_CHANNELS_TWO_POOLS_PER_MASS_NO_PHYSICS" >rot016/VERDICT
+      - name: Authentic source evidence SHA256
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot016
+          find rot016 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot016/SHA256_MANIFEST
+      - name: Preserve full original input-typed audit JSON and stderr
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot016-native-coanomaly-4channel-Yonly-driver
+          path: rot016/
+          if-no-files-found: error
