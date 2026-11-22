@@ -1,0 +1,176 @@
+{
+  "artifact_id": "IW_M15_ROT039_ORIGINAL_M13_CUBIC_PEANO_INTEGRATED_C5_GAP_LOGGAMMA_SOURCE_001_20261122",
+  "return_id": "IW_M15_ROT039_ORIGINAL_M13_EXACT_CUBIC_PEANO_LIPSCHITZ_SATURATION_INTEGRAL_FINITESAMPLE_001_20261122",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-22",
+  "exposure": "PUBLIC",
+  "review": "INTERNAL_NONBLIND_SOURCE_NATIVE_IV110_AND_INDEPENDENT_FULL_SPATIAL_NUMERIC",
+  "BW": "PENDING_NATIVE_ING_RECEIPT",
+  "firstness": "M13 original B N41 source; Geeky-S12 ROT035 exact rational synthetic covariance A/B; Geeky-S13 ROT001 full-field unbounded C-infinity alias; M15 ROT036 six-mode Peano C4, ROT037 C5 restoration, ROT038 weighted loggamma FIRST. M15 ROT039 NEW exact cubic paired saturation integral and source-specific finite-n tightening. No general novelty.",
+  "original_source": {
+    "full_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "file_bytes": 8970,
+    "N": 41,
+    "full_site_count": 68921,
+    "original_B_modes": 41,
+    "original_B_energy_mode_differences": 221,
+    "original_native_tensor_polys_calc_inner_actually_executed_in_both_new_programs": true,
+    "historical_complete_DTC0a_runtime_available": false
+  },
+  "observation": {
+    "six_modes": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ],
+      [
+        3,
+        13,
+        7
+      ]
+    ],
+    "all_six_mean_free_in_original_M13_energy_exact": true,
+    "source_original_physical_detector_authenticated": false,
+    "source_two_exact_Geeky_site_covariances_A_B_are_synthetic": true
+  },
+  "nuisance": {
+    "unrestricted_cubic_axial": true,
+    "unrestricted_FACE_slope": true,
+    "phi_independently_per_candidate_C5": true,
+    "fourth_derivative_abs_bound": "33/2",
+    "fifth_derivative_abs_bound": "50",
+    "all_noise_observations_and_bound_parameters_hypothetical": true
+  },
+  "prior_sha256": {
+    "ROT029_exact_rational": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "ROT036_peano": "d5744a9e6b74174c0aa1c240160414b6fccb796e3711079b586e3d0d40c33ec6",
+    "ROT037_C5": "a059696b29e21dd230170b3d6065551e5e2a88eca330b9b711f898fc09efdef2",
+    "ROT038_loggamma": "b5f92d2c3e614f36ba6cd7bd25e99b3b44bbe5e9e0cdee3cdae4b95ad5fc547b"
+  },
+  "new_source_math": {
+    "new_halfwidth": "7/25",
+    "parent_unique_Peano_root_strict_IV": [
+      "0.03081114391431705277793181424633070026588259539317446",
+      "0.03081114391431705277993181424633070026588259539317785"
+    ],
+    "strict_both_sides_within_same_source_cubic_piece": true,
+    "K_at_exact_root_zero": true,
+    "p1_K_prime_at_root_positive": true,
+    "p2_K_second_over_two_negative": true,
+    "p3_K_third_over_six_negative": true,
+    "cubic_pairing": "K(tstar+u)=p1*u+p2*u^2+p3*u^3; -K(tstar-u)=p1*u-p2*u^2+p3*u^3; -Kleft>=Kright>0 for 0<u<=7/25",
+    "lipschitz_paired_loss": "dleft+dright>=4L-4M*u>0 for 0<=u<=h<L/M",
+    "integral_deficit": "F=4L*(p1*h^2/2+p2*h^3/3+p3*h^4/4)-4M*(p1*h^3/3+p2*h^4/4+p3*h^5/5)",
+    "strict_F_IV110": [
+      "0.0008149306092649079542237008157112343229063937351309993241086373327894827035800657261118342428111465510643862705125119",
+      "0.0008149306092649079605745748260657750887955286130861781997634315576281000281577026476738374699199821194842214498477031"
+    ],
+    "strict_universal_C5_source_gap_IV110": [
+      "0.0006692428876018000980043733462024483071600116545239709283371354232940153509050189835374076222116381926297658636570402",
+      "0.0006692428876018001055540947367335240114969166170132282963208781353895804484135750295003695217995415996532129139370016"
+    ],
+    "ratio_of_new_to_old_strict_computed_lower_bounds_greater_than": 31.3099334670858,
+    "per_model_symmetry_fixed_logscore_threshold_valid": true,
+    "not_sharp_minimax_gap": true
+  },
+  "finite_n": {
+    "same_source_weights_square_sum_V_approx": 2.8147662920276675,
+    "same_ROT038_centered_joint_loggamma_mgf_used": true,
+    "proven_bound": "Each conditional Gaussian hypothesis error<=exp(-n*g_new^2/(9V)), n>=80million",
+    "sufficient": [
+      {
+        "accuracy_greater_than_pct": 75,
+        "n": 80000000,
+        "rigorous_error_upper_less_than": 0.243072
+      },
+      {
+        "accuracy_greater_than_pct": 90,
+        "n": 135000000,
+        "rigorous_error_upper_less_than": 0.091924
+      },
+      {
+        "accuracy_greater_than_pct": 95,
+        "n": 175000000,
+        "rigorous_error_upper_less_than": 0.045321
+      },
+      {
+        "accuracy_greater_than_pct": 99,
+        "n": 270000000,
+        "rigorous_error_upper_less_than": 0.00845
+      }
+    ],
+    "previous_source_n_ROT038": [
+      80000000000,
+      135000000000,
+      175000000000,
+      270000000000
+    ],
+    "source_model_1000x_fewer_sufficient_snapshots": true,
+    "not_real_experimental_data_or_necessary_samples": true
+  },
+  "independent": {
+    "original_native_41cubed_full_complex_tensor_B_3D_IFFT_actually_executed": true,
+    "all_original_axial_6_face_12_body_8_spatial_source_site_rolls_actually_executed": true,
+    "separate_source_SVD_5_by_6": null,
+    "independent_source_SVD_5by6_nuisance_nullspace": true,
+    "independent_scipy_brentq_root_and_quad_actual_Peano": true,
+    "floating_direct_F": 0.0008149306092649172,
+    "floating_direct_g_new": 0.0006692428876037001,
+    "floating_ratio": 31.309933467174694,
+    "independent_both_signed_MPF70_loggamma_tails_at_n80m": [
+      0.2036809142889084,
+      0.203680563904363
+    ],
+    "numeric_diagnostics_not_rigorous_interval_proof": true
+  },
+  "reproducibility": {
+    "ZIP": "IW_M15_ROT039_ORIGINAL_M13_CUBIC_PEANO_C5_GAP_LOGGAMMA_IV110_REPRO_001_20261122.zip",
+    "ZIP_bytes": 59167,
+    "ZIP_SHA256": "b44eed8ace1b52c46146f3bfe8c064e98d8ef3d209f7b06c87b0521cffdb7596",
+    "zip_CRC": "PASS",
+    "payload_sha256": "14/14 PASS",
+    "archive_full_byte_reread": "15/15 PASS",
+    "main_new_source_Python_SHA256": "d08bc7e34c1d8b3dcc1ee6f4d2618742f3ee9c209a5a4b5d3b236fc336b8f2e2",
+    "main_full_JSON_SHA256": "8091c09bf3d2b1a032bfe7d94a965cf13d2b8a5beb5a43e0eeb9c7a9a041326e",
+    "independent_source_spatial_Python_SHA256": "06a72bbae98bc2bfcc81e1709593459c2ce8942d8c73ce7e1ac94687a14e6a5b",
+    "independent_full_spatial_JSON_SHA256": "9e7aabd35f193e257fe9e06cf6cb63fce036c4fbc57d774561ef71418fd5e6ba",
+    "ten_negative_receipt_SHA256": "4255941ab163c4fb94f1879223d804083f34a034a57117621ba171218a5baf1d",
+    "full_clean_source_science_JSON_replay": "2/2 BYTE IDENTICAL PASS",
+    "final_ZIP_extracted_clean_two_science_scripts_replay": "2/2 BYTE IDENTICAL PASS",
+    "ten_real_named_scientific_and_sha_negatives": "10/10 FAIL CLOSED PASS"
+  },
+  "strict_limits": [
+    "No complete historic DTC0a original runtime",
+    "No real source spatial Gaussian error or sensor data",
+    "No measured C5 regularity calibration or physical 80-270 million IID site observations",
+    "No physical NASH J3/K/TPE, global alpha inverse or general mathematical novelty",
+    "No source-independent C5 sharp threshold, global six-sensor optimum or minimum sample estimate",
+    "No REC13/AUD3 independent acceptance, external blind I3, or KN15 BW native ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
