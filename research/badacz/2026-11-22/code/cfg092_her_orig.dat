@@ -1,0 +1,13 @@
+# PREREG_092 (EKS1 DIR-008 native test) HER = BlackHawk HERWIG R2 table (hadrons_085_R2.dat): run_id j log10beta
+h19_base 19 -30
+h19_1600 19 -16.00
+h19_1500 19 -15.00
+h21_base 21 -30
+h21_1600 21 -16.00
+h21_1500 21 -15.00
+h22_base 22 -30
+h22_1600 22 -16.00
+h22_1500 22 -15.00
+h24_base 24 -30
+h24_1600 24 -16.00
+h24_1500 24 -15.00

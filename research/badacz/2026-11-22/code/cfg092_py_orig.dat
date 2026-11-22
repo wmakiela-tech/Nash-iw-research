@@ -1,0 +1,5 @@
+# PREREG_092 PY = authors' table: j21 (not in qa_B) + j22 at -16 as driver-identity control vs qa_B (2026-11-16)
+p21_base 21 -30
+p21_1600 21 -16.00
+p21_1500 21 -15.00
+p22_1600 22 -16.00
