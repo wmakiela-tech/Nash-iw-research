@@ -74,7 +74,7 @@ def main(dst):
     run=source[str(B/"code/run109_dev2.sh")]
     base=source[str(F)]
     pre=source[str(B/"IW_BADACZ_B1_HERWIG_LABEL_J22_H71_EXTENSION_PREREG_109_20261122.md")]
-    assert "10 hadronic" in pre and "2000" in pre and "SEAM_PASS" in pre
+    assert "10 kanałów" in pre and "2000" in pre and "SEAM_PASS" in pre
     assert "EXCL = {(\"top\", 100000.0)}" in ana
     assert 'if (c, round(e["E"], 6)) in EXCL:' in ana
     assert 'out.setdefault("excluded_DEV2"' in ana
