@@ -1,0 +1,190 @@
+{
+  "artifact_id": "IW_M15_ROT036_ORIGINAL_M13_FACE_ANISOTROPY_C4_SHARP_PEANO_SOURCE_FALSIFIER_001_20261122",
+  "return_id": "IW_M15_ROT036_FIVE_MODE_FACE_CALIBRATION_ALIAS_AND_SIX_MODE_SHARP_C4_PEANO_ROBUSTNESS_001_20261122",
+  "date": "2026-11-22",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "source": {
+    "native_original_M13_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "native_original_M13_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "actual_original_M13_native_execution_in_both_independent_programs": true,
+    "N": 41,
+    "sites": 68921,
+    "original_energy_B_fourier_difference_support_size": 221,
+    "historical_full_DTC0a_runtime_missing": true
+  },
+  "priority": {
+    "M13": "original public Fourier B auxiliary source FIRST",
+    "Geeky_ROT035": "two exact rational physically unmeasured Gaussian site-covariance shape hypotheses A/B FIRST",
+    "M15_ROT035": "original five mode axial-only sharp C4 threshold L=7.211509783 FIRST",
+    "M15_ROT036": "new source six mode free face-spectral nuisance and sharp sign-changing Peano kernel C4 criticality"
+  },
+  "model": "Exactly two previously source-legal synthetic Gaussian N41^3 site covariance shapes A/B. Per hypothesis X calibration is cubic polynomial p_X(a) plus arbitrary face slope tau_X*f and arbitrary phi_X in C4(J) with |phi_X^(4)|<=L; all nuisance terms separately freely fitted between A and B.",
+  "modes": [
+    [
+      20,
+      20,
+      20
+    ],
+    [
+      20,
+      20,
+      0
+    ],
+    [
+      20,
+      0,
+      0
+    ],
+    [
+      7,
+      0,
+      0
+    ],
+    [
+      12,
+      12,
+      13
+    ],
+    [
+      3,
+      13,
+      7
+    ]
+  ],
+  "original_native_deterministic_energy_mean_exactly_zero_all_six_modes": true,
+  "five_mode_falsifier": {
+    "old_five_nuisance_basis": [
+      "1",
+      "a",
+      "a²",
+      "a³",
+      "f"
+    ],
+    "full_rank": 5,
+    "det_IV110": [
+      "0.27399413429485274076941579025880818602953412879396987275",
+      "0.27399413429485274076941579025880818602953412879816076782"
+    ],
+    "exact_composite_Gaussian_alias_even_L0": true,
+    "old_axial_only_Lstar_CANNOT_generalize_to_free_face_slope": true
+  },
+  "six_mode_cert": {
+    "new_added_mode": [
+      3,
+      13,
+      7
+    ],
+    "sixth_weight_exactly_one": true,
+    "annihilated_nuisance_basis": [
+      "1",
+      "a",
+      "a²",
+      "a³",
+      "f"
+    ],
+    "IV110_source_log_gaussian_ratio_Delta": [
+      "0.00354935057604779281079312451059311182982042570991527",
+      "0.00354935057604779281079312451059311182982042571443492"
+    ],
+    "ratio_exp_Delta_approx": 1.003555656979809,
+    "Peano_kernel": "K(t)=sum_{a_i>t} w_i*(a_i-t)^3/6; sum w_i phi(a_i)=integral K(t)*phi^(4)(t)dt",
+    "exact_one_Peano_sign_change": true,
+    "Bernstein_IV110_middle_segment_signs": [
+      [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "Peano_zero_strict_IV110": [
+      "0.03081114391431705277793181424633070026588259539317446",
+      "0.03081114391431705277993181424633070026588259539317785"
+    ],
+    "Peano_absolute_integral_R_strict_IV110": [
+      "0.00011197085750639092926707892727046554263997083963870",
+      "0.00011197085750639092930340763576066357107778205432156"
+    ],
+    "sharp_C4_Lstar_formula": "Delta/(2*R)",
+    "sharp_C4_Lstar_strict_IV110": [
+      "15.84943910894496597521038779812845625966486301084408",
+      "15.84943910894496598035270487906303314544222186394175"
+    ],
+    "critical_status": "For L<Lstar strict source law separation; L=Lstar families disjoint but infimum statistical distance zero (no uniform finite-n testing); L>Lstar exact Gaussian composite alias exists.",
+    "explicit_L60_polynomial_six_mode_alias": "psi(a)=t0*a^4/24-a^5, t0 approximately -9.906362831505 plus cubic+face fit; each fourth derivative magnitude <60 on selected-node axial interval; exactly all six variances match.",
+    "not_a_global_sensing_optimum": true
+  },
+  "L3_statistical_control": {
+    "source_strict_log_separation_greater_than": 0.0028775254310094475,
+    "chi_squared_concentration_delta": "1/2350",
+    "strict_log_test_margin_greater_than": 0.00003543107296699754,
+    "conditional_error_upper": "12*exp(-n/(4*2350^2))",
+    "n_sufficient": [
+      {
+        "correct_pct_more_than": 75,
+        "n": 90000000
+      },
+      {
+        "correct_pct_more_than": 90,
+        "n": 110000000
+      },
+      {
+        "correct_pct_more_than": 95,
+        "n": 125000000
+      },
+      {
+        "correct_pct_more_than": 99,
+        "n": 160000000
+      }
+    ],
+    "hypothetical_full_spatial_IID_snapshots_only": true
+  },
+  "independent_source_spatial_checks": {
+    "full_original_M13_41cubed_tensor_IFFT_and_12_by_12_correlated_Gaussian_covariance": "PASS",
+    "independent_source_Peano_R_float64": 0.00011197085750628225,
+    "independent_source_threshold_float64": 15.849439108962716,
+    "five_mode_L0_alias_max_variance_discrepancy": 6.661338147750939e-16,
+    "six_mode_robust_nonpolynomial_and_face_slope_q": 1.0035423449863574,
+    "six_mode_L60_alias_max_variance_discrepancy": 6.661338147750939e-16,
+    "FFT_only_numeric_diagnostic": true
+  },
+  "repro": {
+    "ZIP": "IW_M15_ROT036_ORIGINAL_M13_FACE_ANISOTROPY_SHARP_PEANO_C4_IV110_REPRO_001_20261122.zip",
+    "bytes": 47986,
+    "sha256": "df2beb2d983f19f9b011d5bfe91ce60eb67dc0c4dcd2a5660d324bba37f4be75",
+    "CRC": "PASS",
+    "member_SHA256": "12/12 PASS",
+    "full_archive_member_bytes": "13/13 PASS",
+    "primary_actual_source_IV110_JSON_sha256": "d5744a9e6b74174c0aa1c240160414b6fccb796e3711079b586e3d0d40c33ec6",
+    "independent_original_spatial_JSON_sha256": "2316ab259056de4ec6acd2fd3ea93e4c8c33e7ff2ef17ea3ecb39a449217c30f",
+    "cold_replay_and_negative_receipt_sha256": "667d4e69a690b4de255fea2893e20f1cc08ba4836ed8c934ff1eb7331ebdfa38",
+    "two_complete_clean_JSON_replays": "2/2 BYTE IDENTICAL PASS",
+    "two_complete_final_ZIP_extracted_JSON_replays": "2/2 BYTE IDENTICAL PASS",
+    "actual_nine_negative_source_science_fixtures": "9/9 REJECTED PASS"
+  },
+  "limits": [
+    "Only mathematical public M13 auxiliary original native source, not historical DTC0a runtime",
+    "No actual physical complete site data or source new Fourier sensors",
+    "Only two fixed synthetic original Gaussian source noise shapes, no measured anisotropic calibration or independent snapshots",
+    "No physical NASH mechanism or global alpha inverse theorem",
+    "No new general mathematical novelty or external blind review",
+    "No REC13/AUD3 acknowledgement nor KN15 native BW provider ingestion receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ],
+  "sync_state": "GITHUB_PENDING_BW_INGEST"
+}
