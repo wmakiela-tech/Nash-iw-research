@@ -58,7 +58,7 @@ Hence "epsilon=delta root +log10(f) is purely solver noise" needs ADDITIONAL val
 
 ## 3. Actually executed raw original independent 16-root control
 
-Seven original owner files? SIX actual RAW numerical owner inputs (2 nominal 090 native CSV, 2 J 094 native CSV, network 090 and network 094), plus owner analyses as OUT-OF-BAND comparison only:
+SIX actual RAW numerical owner inputs (2 nominal 090 native CSV, 2 J 094 native CSV, network 090 and network 094), plus owner analyses as OUT-OF-BAND comparison only:
 
 - original 090 p table summary_p_orig_090.csv Git blob 737eaccea9e8152d4f39bdfeb026577dc1744c6f;
 - 090 h summary_h_orig_090.csv c98450860cfb81484ff5cfb8dc120d00e29cc108;
