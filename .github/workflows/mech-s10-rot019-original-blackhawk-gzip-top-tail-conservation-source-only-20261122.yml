@@ -1,0 +1,43 @@
+name: Mech-S10 ROT019 original 10000-node BlackHawk primary top-tail bound
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot019-original-blackhawk-gzip-top-tail-conservation-source-only-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot019-original-10000-node-source-only
+  cancel-in-progress: false
+jobs:
+  independently-read-original-gzip-primary-and-Sa-100x5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Original Git SHA original raw gzip and Sa input and energy-conservation envelope
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot019
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot019_actual_blackhawk_primary_top_tail_energy_conservation_sharp_discrete_bound.py)" = "e8bc6771c8929ae2ee210779f57ed419816108df"
+          git rev-parse HEAD >rot019/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot019_actual_blackhawk_primary_top_tail_energy_conservation_sharp_discrete_bound.py rot019/original_10000_primary_source_top_tail_energy_bound.json >rot019/STDOUT 2>rot019/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot019/original_10000_primary_source_top_tail_energy_bound.json")); assert d["independent_original_gzip_source_nodes"]==10000 and d["source_mass_grid_points"]==d["source_energy_grid_points"]==100 and d["top_tail_node_ids_zero_indexed"]==[96,97,98,99] and d["no_native_physics_executed"] and len(d["sha_verified_original_source_git_blobs"])==7'
+          echo "ROT019_SEVEN_ORIGINAL_GIT_SHA_GATED_RAW_GZIP_10000_NODES_DISCRETE_TOP_TAIL_ENERGY_BOUND_PASS" >rot019/VERDICT
+      - name: SHA256 evidence originals
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot019
+          find rot019 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot019/SHA256_MANIFEST
+      - name: Preserve source-only 100-mass 5-hadron envelope and failure traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot019-original-10000-node-top-tail-energy-bound
+          path: rot019/
+          if-no-files-found: error
