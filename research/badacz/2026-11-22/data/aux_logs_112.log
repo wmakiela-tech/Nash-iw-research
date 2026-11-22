@@ -1,0 +1,17 @@
+# tables.log
+{"G_MC": true, "G_STAT": true, "G_REBUILD_H73": true, "G_REBUILD_SC": true, "G_FINITE": true}
+# dedupe.log
+files 1 with drops 0
+files 31 with drops 1
+files 21 with drops 9
+files 31 with drops 0
+files 21 with drops 10
+# patch.log
+PATCHED cd607965eb711efc20463c754801140db4b4c53a0cae41654a3327e95b4f6fd0
+PATCHED_079 b6bb563659bd10befacefb465418a10890b3e2233773b64b162be96173829ce0
+# net.log
+NET112_DONE 106 expected 106 failed 0 []
+# analysis112 stdout
+{"G_TABLES": true, "G_COMPLETE": true, "G_V2": true, "G_DRIVER": true, "G_BASE": true}
+{"status": "MEASURED", "max_abs_closure": 0.0, "bin_c_j22": [-0.06591979429765615, -0.04259969501075034], "bin_c_j62": [-0.04902426174220764, -0.04012341459687363], "proc_j22": [-0.008739966024911894, 0.010181027053416614], "proc_j62": [-0.009491287387334069, -0.0048550159068021514], "vint_j22": [-0.08252304629320406, -0.06392552310363087], "vint_j62": [-0.016925730108237502, -0.010255087004612307]}
+{"Pr1_abs_proc_le_0.03_ge6of8": true, "Pr2_j22_vint_le_-0.03_ge3of4": true, "Pr3_j62_abs_vint_le_0.03_ge3of4": true, "Pr4_abs_binc_minus_dbin099_le_0.03_8of8": true}
