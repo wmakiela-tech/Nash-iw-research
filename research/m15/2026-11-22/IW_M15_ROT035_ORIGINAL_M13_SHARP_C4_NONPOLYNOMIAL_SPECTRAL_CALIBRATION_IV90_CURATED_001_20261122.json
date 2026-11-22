@@ -1,0 +1,221 @@
+{
+  "artifact_id": "IW_M15_ROT035_ORIGINAL_M13_SHARP_C4_SMOOTH_SPECTRAL_CALIBRATION_ROBUSTNESS_RADIUS_001_20261122",
+  "return_id": "IW_M15_ROT035_FIVE_SOURCE_MEAN_FREE_MODES_SHARP_FOURTH_DERIVATIVE_ROBUSTNESS_AND_EXACT_COMPOSITE_ALIAS_001_20261122",
+  "date": "2026-11-22",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "result_class": "ACTUAL_ORIGINAL_M13_NATIVE_IV90_SHARP_FOURTH_DERIVATIVE_ROBUSTNESS_AND_EXACT_COMPOSITE_ALIAS_WITH_INDEPENDENT_SPATIAL_SOURCE_CHECK",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "source_priority": {
+    "M13": "Original public 41 B mode N41 auxiliary Fourier tensor",
+    "Geeky_ROT035": "Original two fixed exactly source-legal synthetic Gaussian site covariance A/B laws",
+    "Geeky_ROT036_040": "Separate original two-site / anisotropic noise covariance source studies",
+    "M15_ROT034": "Earlier original five energy-mean-free modes cancel cubic log-spectral polynomial",
+    "new_M15_ROT035": "SHARP per-candidate bound on arbitrary C4 spectral calibration fourth derivative; construction of EXACT composite Gaussian alias at threshold; independent source verification and sufficient n"
+  },
+  "original_source": {
+    "M13_original_full_bytes": 8970,
+    "M13_full_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "M13_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "M13_original_tensor_polys_calc_inner_ACTUALLY_executed_in_two_codepaths": true,
+    "N": 41,
+    "grid_sites": 68921,
+    "B_Fourier_modes": 41,
+    "B_energy_q_support": 221,
+    "five_modes": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ]
+    ],
+    "each_original_source_B_energy_Fourier_mean_exactly_zero_for_all_alpha": true,
+    "complete_historic_DTC0a_producer_not_obtained": true
+  },
+  "frozen_prior_source_certificates": {
+    "ROT034_original_full_source_IV90_JSON_sha256": "bae8a0810893cfe2a67af9c90a0e263f7cd710445f53663938f7e909be1c3870",
+    "ROT029_original_exact_rational_noise_hypotheses_JSON_sha256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "both_source_frozen_in_reproducer_and_verified_before_new_science": true,
+    "not_claimed_freshly_recomputed": true
+  },
+  "noise_model": {
+    "A": {
+      "beta0": "1",
+      "theta_axial": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_axial": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425"
+    },
+    "source_site_noise": "HYPOTHETICAL full 41^3 RAW energy centered stationary Gaussian site noise, positive definite, with DIFFERENT source covariance laws but same original deterministic native M13 B source mean",
+    "spectral_coordinate": "a(k)=(cos(2*pi*kx/41)+cos(2*pi*ky/41)+cos(2*pi*kz/41))/3",
+    "NEW_calibration_class": "For EACH hypothesis X individually, arbitrary phi_X in C4(J) with absolute fourth derivative ≤L on a real interval J enclosing all five selected a(k_i). Observed variance v_X(k)*exp(phi_X(a(k))). No bounds on lower derivatives or polynomial cubic coefficients. Independent phi_A and phi_B permitted; L common known bound.",
+    "observed_physical_site_data": false
+  },
+  "rigorous_new_math": {
+    "barycentric_weights": "b_i=1/prod_{j!=i}(a_i-a_j), w_i=b_i/b4; w4=1 exact",
+    "generic_exact_sympy_five_node_polynomial_moments": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "M4_exact_formula": "sum_i w_i*a_i^4=1/b4=prod_{j!=4}(a4-aj)>0",
+    "general_C4_divided_difference_mean_value_theorem": "sum_i w_i*phi(a_i)=M4*phi^(4)(xi)/24 for some xi between minimum and maximum axial nodes",
+    "each_model_calibration_weighted_logvariance_absolute_bound": "E=L*M4/24",
+    "model_difference_calibration_logcontrast_shift_bound": "2E=L*M4/12",
+    "base_logcontrast_Qlog": "sum_i w_i*log(vB(k_i)/vA(k_i))<0",
+    "D": "-Qlog>0",
+    "sharp_threshold_Lstar": "12*D/M4",
+    "positive_robustness": "For every L<Lstar, every pair of separately fitted C4 nuisance functions satisfying each fourth derivative bound L, the calibrated five-mode weighted Gaussian logvariance ratio stays strictly negative, hence the composite source observation-law families are disjoint.",
+    "exact_alias_at_boundary": "Take c=D/M4, phi_A(a)=-(c/2)*a^4, phi_B(a)=(c/2)*a^4+p3(a), where cubic p3 interpolates -log(vB_i/vA_i)-c*a_i^4 at four nodes. Fifth node holds identically via weighted zero residual. All five Gaussian variances and thus ten centered cos/sin mode laws agree EXACTLY, each calibration fourth derivative magnitude equals Lstar.",
+    "sharp_impossibility": "At any L>=Lstar the composite families intersect and no uniformly >1/2 correct equal-prior binary discriminator exists for any n, on this fixed five-mode observer.",
+    "scope_not_global_minimal_five_modes": true
+  },
+  "directed_original_M13_source_IV90": {
+    "D_abs_log_source_q": [
+      "0.005566454129434419420572120616264578264246057539759849857346133564270920750737585515206914669010386957093274135655",
+      "0.005566454129434419420572120616264578264246060594152596315345842843337746827976652915152866102978358208828049176684"
+    ],
+    "M4_fourth_moment": [
+      "0.009262616506417986287730946793978249527936955915977802220414546616089960214280069914377526948512684174972892961781",
+      "0.009262616506417986287730946793978249527936956377147316358562352183762684402465359212666857429358206716117435609105"
+    ],
+    "sharp_Lstar_per_hypothesis_C4_derivative": [
+      "7.211509783108224565384876718356257884187087783243145659201859300620257257197826817016295880302306926093444997515",
+      "7.211509783108224565384876718356257884187092101344363476125663352092968165074385357143469772785657595499361803906"
+    ],
+    "quartic_each_hypothesis_coefficient_magnitude_at_collision_approx": 0.300479574296176,
+    "L_concrete_robust_case": 3,
+    "D_minus_two_E_at_L3": [
+      "0.003250800002829922848639383917770015882261818445473020767705545518330249650121245712040200311670835278063915233379",
+      "0.003250800002829922848639383917770015882261821615500259643134007232021245442202025117046829566503633398423953935235"
+    ],
+    "delta": "1/1400",
+    "strict_robust_logtest_margin_at_L3": [
+      "0.0001736531007341653823109964276309744665706915019120236720294821877493285507401369981770149407918420768965308164289",
+      "0.0001736531007341653823109964276309744665706937641400742940638770810993943477543992273596542617050600318804241809903"
+    ],
+    "actual_generic_sympy_p0_to_p4": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  "finite_sample_conditional_source_theorem": {
+    "observables": "hypothetical n independent full RAW 41^3 spatial Gaussian site snapshots; 5 orthogonal original energy mean-zero Fourier sine/cosine mode pairs",
+    "T": "product_i (S_i/v_A(k_i))^w_i; S_i is n-snapshot sum of cos²+sin² for mode i",
+    "decision": "Select B iff log T< Qlog/2",
+    "unknown_calibration": "phi_A and phi_B each separately free C4 with |4th derivative|<=3; no unknown source calibration is fitted to evaluate the statistic",
+    "source_per_model_error_upper": "10*exp(-n/(4*1400^2))",
+    "n_sufficient": [
+      {
+        "min_correct_percent_strictly_above": 75,
+        "n": 30000000
+      },
+      {
+        "min_correct_percent_strictly_above": 90,
+        "n": 37000000
+      },
+      {
+        "min_correct_percent_strictly_above": 95,
+        "n": 42000000
+      },
+      {
+        "min_correct_percent_strictly_above": 99,
+        "n": 55000000
+      }
+    ],
+    "no_real_full_raw_site_snapshots": true,
+    "no_claim_of_necessary_or_minimum_sample_size": true
+  },
+  "independent_original_source_spatial": {
+    "native_M13_9_tensor_B_component_41cubed_FFT_actually_built": true,
+    "five_cos_five_sin_projected_source_means_float_diagnostic_below": 2e-26,
+    "actual_all_N41cubed_source_site_shift_directions": {
+      "axis": 6,
+      "face": 12,
+      "body": 8
+    },
+    "extra_general_C4_calibration_convolution_by_independent_original_site_FFT": true,
+    "ten_by_ten_covariance_positive_definite_all_scenarios": true,
+    "independent_SVD_4_by_5_calibration_null_weights": true,
+    "scenarios": [
+      {
+        "case": "L3 extremal opposing quartic source calibrated noise",
+        "spatial_q": 0.9967544781265688,
+        "strictly_less_than_one": true
+      },
+      {
+        "case": "two different smooth NONPOLYNOMIAL sin/cos log calibration functions each 4th derivative bound <=0.2",
+        "spatial_q": 0.9943804189877501,
+        "strictly_less_than_one": true
+      },
+      {
+        "case": "exact critical alias construction L=Lstar with independently interpolated cubic",
+        "spatial_q": 1.0000000000000002,
+        "max_ten_projected_variances_difference_abs": 4.440892098500626e-16
+      }
+    ],
+    "spatial_independently_estimated_Lstar_float64": 7.211509783108642,
+    "float64_spatial_checks_NOT_rigorous_IV90": true
+  },
+  "repro": {
+    "local_full_original_and_code_zip": "IW_M15_ROT035_ORIGINAL_M13_SHARP_C4_SMOOTH_CALIBRATION_IV90_REPRO_001_20261122.zip",
+    "ZIP_verified_bytes": 41486,
+    "ZIP_SHA256": "fa5f9cbf5e5e10dd54051bd75ebe6274481b1bea8773b808f65b3366563a1d41",
+    "ZIP_CRC": "PASS",
+    "manifest_source_payload_SHA256": "12/12 PASS",
+    "all_13_archive_members_full_byte_reread": "13/13 PASS",
+    "new_native_IV90_actual_executed_Python_sha256": "0474e6810b5c9733398c89d72f0a1cf8b79c00351d0e7beb71664694fc22db66",
+    "full_actual_new_original_IV90_JSON_sha256": "a38d73ec1132616097c624dbd173dd9eb0891bcd118680c12685624043cd6646",
+    "new_spatial_original_M13_41cubed_Python_sha256": "ba41689f745f2b8e861ab6bdb33e998407c1ab87d62b1a451a978326afff83ee",
+    "full_new_independent_spatial_JSON_sha256": "65e271d6ca4a57cc584dc4528edb7f306a3da6425d61c48b80595022fcb8e756",
+    "actual_clean_replay_nine_negative_receipt_sha256": "b4d31b63ebb764bc497f5b200c392e8dc8d4d4ad9a8cf11c0fb60331aa873556",
+    "two_isolated_full_original_JSON_byte_identical_replays": "2/2 PASS",
+    "additional_exact_final_ZIP_extracted_two_sci_program_full_JSON_byte_identical_replay": "2/2 PASS",
+    "nine_disposable_source_data_and_false_math_fixture_rejections": "9/9 PASS",
+    "extra_attempt_to_rerun_nine_negatives_after_ZIP_extract_timed_out": "YES — NOT counted as success; prior independent full replay/negative receipt PASS",
+    "runnable_complete_original_and_new_code_in_zip_not_falsely_claimed_public_code_mirror": true
+  },
+  "hard_boundaries": [
+    "PUBLIC M13 auxiliary original Fourier B, no complete historical DTC0a producer",
+    "No real Gaussian site/noise data nor five high-k Fourier physical detector",
+    "No measured C4 derivative calibration bound L or actual 30–55 million independent spatial snapshots",
+    "Robustness applies only to axial-symbol-dependent spectral calibration with known derivative bound on selected nodes",
+    "At and above sharp Lstar composite model alias exists for this fixed five-frequency design; not a universal impossibility for all sensing protocols",
+    "No global optimality among source observation designs, no new general mathematical theorem, no physical NASH mechanism or alpha inversion",
+    "No outside blind I3, REC13/AUD3 separate scientific review ACK, or KN15 BW native ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
