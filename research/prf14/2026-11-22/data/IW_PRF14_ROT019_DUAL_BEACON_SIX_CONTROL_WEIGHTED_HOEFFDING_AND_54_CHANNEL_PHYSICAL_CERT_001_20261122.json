@@ -1,0 +1,217 @@
+{
+  "artifact_id": "IW_PRF14_ROT019_DUAL_BEACON_SIX_CONTROL_WEIGHTED_HOEFFDING_AND_54_CHANNEL_PHYSICAL_CERT_001_20261122",
+  "origin_cell": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "date": "2026-11-22",
+  "scientific_scope": "Source-restricted two-time joint 16-classical-Pauli-error histories, six conditional contexts announced before first error, six independent hidden Fourier parameters each; one invariant source beacon C_(Z,Y) is the testable hypothesis, not known truth",
+  "previous_firstness": {
+    "original_6_Fourier": "PRF13 ROT011",
+    "one_quadratic_witness": "PRF14 ROT018",
+    "sharper_TV_operator_bound": "INT10 ROT020, original private source Git blob 138debb4751be385b855c33311a1cc71946b7674",
+    "sixth_control_second_linear_witness": "PRF14 ROT019"
+  },
+  "physical_controls": {
+    "unknown_R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "known_cyclic_P": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "known_left_L": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]",
+    "new_nonClifford_known_left_Q": "[[-4/5,0,3/5],[3/5,0,4/5],[0,1,0]]",
+    "Q_is_proper_SO3": true,
+    "Q_is_Clifford": false,
+    "six_middle_contexts": [
+      "R",
+      "R P",
+      "R P^2",
+      "L R",
+      "P^2 R",
+      "Q R"
+    ]
+  },
+  "two_moment_closures": {
+    "H_original_ROT018": "H=y3^2+y4^2-y1^2-y2^2=0",
+    "G_new_ROT019": "G=y5-(3/5)y3-(4/5)y4=0",
+    "reference_six_means": [
+      "1/35",
+      "3/35",
+      "-3/70",
+      "3/35",
+      "3/70",
+      "3/35"
+    ],
+    "rank_beacon_Jacobian_6by4": 4,
+    "rank_two_left_null_gradients": 2,
+    "full_6_context_conditional_source_parameters": 36,
+    "unknown_target_SO3_parameters": 3,
+    "single_shared_beacon_equalities": 5,
+    "resulting_local_model_dimension": 34,
+    "full_six_channels_nonzero_Pauli_transfer_observations": 36,
+    "number_of_independent_overidentifying_conditions": 2
+  },
+  "physical_exact_witnesses": [
+    {
+      "type": "Stationary source null",
+      "H": "0",
+      "G": "0",
+      "minimum_probability": "73/1600"
+    },
+    {
+      "type": "Change ONLY q5 Q R beacon 0.10 to 0.20; H-blind G-visible",
+      "H": "0",
+      "G": "3/35",
+      "source_TV_to_stationary": "1/20",
+      "minimum_probability": "63/1600"
+    },
+    {
+      "type": "Change q3 L R beacon 0.10 to 0.20 AND q5 Q R beacon 0.10 to 0.16; H-visible G-blind",
+      "H": "27/1225",
+      "G": "0",
+      "two_source_TV": [
+        "1/20",
+        "3/100"
+      ],
+      "minimum_probability": "63/1600"
+    },
+    {
+      "type": "Change ONLY q3 L R beacon 0.10 to 0.20; same drift as ROT018",
+      "H": "27/1225",
+      "G": "-9/175",
+      "source_TV_to_stationary": "1/20",
+      "minimum_probability": "63/1600"
+    }
+  ],
+  "weighted_three_setting_test": {
+    "three_settings": [
+      "L R",
+      "P^2 R",
+      "Q R"
+    ],
+    "weights": [
+      "-3/5",
+      "-4/5",
+      "1"
+    ],
+    "sum_weight_squares": 2,
+    "concentration": "P(|hatG-EhatG|>t)<=2 exp(-n*t^2/4) for IID independent +/-1 measurements",
+    "calibration_promise": "Physical SO3 per-pulse norm errors P,L,Q<=.001, double P^2<=.002; input Bloch, POVM axis and POVM bias<=5e-5; source Fourier max magnitude<=.2; IID runs",
+    "systematic_mean_error_max": 0.00055,
+    "systematic_G_error_max": 0.00132,
+    "decision": "reject common-source-beacon null iff |hat G| > 0.00132+t",
+    "level_alpha": 0.05,
+    "physical_specific_drift_power_at_least": 0.95,
+    "case_q5": {
+      "delta_exact": "3/35",
+      "t": 0.04,
+      "strict_power_margin": 0.0030742857142857143,
+      "n_per_setting": 9223,
+      "shots_total": 27669,
+      "tail_probability_upper": 0.049983975274164
+    },
+    "case_q3": {
+      "delta_exact": "9/175",
+      "t": 0.024,
+      "strict_power_margin": 0.0007885714285714285,
+      "n_per_setting": 25618,
+      "shots_total": 76854,
+      "tail_probability_upper": 0.04999437302234933,
+      "previous_ROT018_robust_H_shots_same_source_drift": 240248
+    }
+  },
+  "five_setting_joint_test": {
+    "settings": [
+      "R P",
+      "R P^2",
+      "L R",
+      "P^2 R",
+      "Q R"
+    ],
+    "statistical_per_mean_eta": 0.01,
+    "calibration_mean_max": 0.00055,
+    "total_error_per_mean_max": 0.01055,
+    "H_rule": "Reject H if |hatH| > 2e*sum4|hatmeans| + 4e^2",
+    "G_rule": "Reject G if |hatG| > (12/5)*e",
+    "familywise_rule": "Reject invariant beacon if H OR G rejects",
+    "joint_Hoeffding_failure_bound": "10 exp(-n*.01^2/2)",
+    "n_per_setting": 105967,
+    "shots_total": 529835,
+    "familywise_false_positive_probability_upper": 0.04999836835402509,
+    "power_at_least_for_each_listed_three_physical_drift": 0.95,
+    "H_q3_power_margin": 0.005791404897959184,
+    "G_q3_power_margin": 0.0007885714285714285,
+    "G_q5_power_margin": 0.03507428571428572
+  },
+  "exact_negative": {
+    "distinct_proper_SO3_target_Rprime": "U_X(t=1/1000) R",
+    "context_alternative_source_Cprime": "Cprime_q[i,j]=C[i,j]*S_q(R)[i,j]/S_q(Rprime)[i,j], all i!=j",
+    "all_six_alternative_sixteen_entry_source_distributions_strictly_positive": true,
+    "source_TV_to_original_by_context": [
+      0.0002384893026732631,
+      0.0001428668730007652,
+      0.0003577339540098946,
+      0.0002717205952923494,
+      0.00027673926598845643,
+      0.0017640861455205106
+    ],
+    "independent_direct_16_Pauli_history_full_six_channel_transfer_entries_exact": "54/54 PASS",
+    "exact_same_terminal_probabilities_under_all_prep_POVM_within_six_contexts": true,
+    "source_beacon_is_not_invariant_in_alternative": true,
+    "both_test_witnesses_zero_in_both_models": true,
+    "passing_both_does_not_establish_source_invariance": true,
+    "NOT_a_general_unrestricted_process_tensor_claim": true
+  },
+  "actually_executed": {
+    "full_source": "/mnt/data/prf14_rot019/prf14_rot019_dual_beacon_closures.py",
+    "full_source_SHA256": "de24a615b656478f612fa04dd567dd142e7e6c3ad94c0466e74405dc10d0dfd1",
+    "full_original_certificate": "/mnt/data/prf14_rot019/prf14_rot019_dual_closure_certificate.json",
+    "full_original_certificate_SHA256": "c4662a65c823139a5fa4d442202945bd0f2c6bf6f4a3aec5944ad9a88c744dfa",
+    "independently_written_same_owner_16_history_Kraus_script": "/mnt/data/prf14_rot019/prf14_rot019_independent_six_context_kraus_rank.py",
+    "independent_source_SHA256": "024b0839b4c2d4146def1e0852643874897a3bf1cf9ee2d0d2e8c528895d6119",
+    "two_identical_repeat_runs": true,
+    "two_Python_scripts_compile": true,
+    "synthetic_experiments": 3000,
+    "synthetic_weighted_q5_null_trials": 500,
+    "synthetic_weighted_q5_null_false_rejections": 1,
+    "synthetic_weighted_q5_drift_trials": 500,
+    "synthetic_weighted_q5_drift_detected": 500,
+    "synthetic_weighted_q3_null_trials": 500,
+    "synthetic_weighted_q3_null_false_rejections": 0,
+    "synthetic_weighted_q3_drift_trials": 500,
+    "synthetic_weighted_q3_drift_detected": 500,
+    "synthetic_joint_null_trials": 250,
+    "synthetic_joint_null_any_false_rejections": 0,
+    "synthetic_joint_q5_only_drift_trials": 250,
+    "synthetic_joint_q5_only_detected_G": 250,
+    "synthetic_joint_q3_and_q5_compensation_trials": 250,
+    "synthetic_joint_q3_and_q5_detected_H": 250,
+    "synthetic_joint_q3_only_trials": 250,
+    "synthetic_joint_q3_only_both_H_G": 250,
+    "actual_quantum_hardware_shots": 0
+  },
+  "external_prior_art": [
+    "https://doi.org/10.1103/PhysRevX.9.021045",
+    "https://doi.org/10.1038/s41534-026-01313-z",
+    "https://arxiv.org/abs/2604.01482"
+  ],
+  "limits": [
+    "NO_GENERIC_CONTEXT_DEPENDENCE_NOVELTY",
+    "NO_UNKNOWN_SPAM_CALIBRATION_FREE_CLAIM",
+    "NO_CONVERSE_OF_H_G_MOMENT_CLOSURES",
+    "NO_ARB_SOURCE_CONTROL_INVARIANCE_CERT",
+    "NO_HARDWARE",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
