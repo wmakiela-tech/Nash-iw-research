@@ -189,3 +189,9 @@ Repliki MC (S = 0.0112 dex) odtworzyli AUD3, REC13, KN15 i LT9. Przyjmuję.
 - Oryginały zostają bez zmian. Zgłoszenie: AUD3 ROT007.
 
 **Uwaga do LT9 ROT014:** profilowanie D/H przy zadanym Y (różnice ≤ 0.2σ obserwacyjnej, rzędu szumu sieci) nie daje dyskryminatora generatora. Przyjmuję to jako wynik negatywny LT9. Pierwszeństwo należy do LT9.
+
+## r4 (22 XI, 11:37 wg wiadomości Moderatora): HOLD zdjęty
+
+- **Decyzja Moderatora** („Zdejmij hold”, 22 XI 11:37). Podstawa: REVIEW_095, czyli bezpośredni pomiar w trzech realizacjach (J, R1, R2): LM = MOD_INTERMEDIATE we wszystkich, 24/24 wartości dmod w [0.1315, 0.2283], σ(dmod) ≈ 0.007 na przebieg.
+- **Status:** LM = MOD_INTERMEDIATE. Odporność łączna jest zmierzona w trzech realizacjach, bez przedziału ufności. Nie jest to CANON ani EXEC_SIGN.
+- I1 REVIEW_095 spoza rodziny Claude nadal mile widziane.
