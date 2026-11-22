@@ -1,0 +1,43 @@
+name: Mech-S10 ROT013 source 90 Herwig energy/convention ratios and minimax
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot013-source-only-vintage-herwig-90-replay-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot013-20261122-source-only
+  cancel-in-progress: false
+jobs:
+  source-only-herwig-fingerprint-composition-referee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Original source Git-blob-gated 90 ratios K-pion and per-energy Minimax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot013
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot013_097_098_species_ratio_minimax_90_source_referee.py)" = "dbccdd3d9990e307496789675e7218546cc64b27"
+          git rev-parse HEAD > rot013/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot013_097_098_species_ratio_minimax_90_source_referee.py rot013/original_Herwig_097_90_ratios_composition_minimax.json >rot013/STDOUT 2>rot013/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot013/original_Herwig_097_90_ratios_composition_minimax.json")); assert d["n_independent_L_recalculations"]==90 and d["max_abs_L_vs_owner_oracle"]<=1e-14 and d["conditional_version_label_after_row_scalar"]["H72_better_minimax_energy_count"]==4 and d["conditional_energy_convention_label_after_row_scalar"]["H73_sqrts_E_better_minimax_energy_count"]==4 and d["no_native_physics_executed"]'
+          echo "ROT013_SOURCE_90_OWNER_AGGREGATE_PLUS_ORIGINAL_MC_SPECIES_MINIMAX_PASS" > rot013/VERDICT
+      - name: All source-only files SHA256 including error logs
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot013
+          find rot013 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot013/SHA256_MANIFEST
+      - name: Archive source-only original raw MC and owner aggregate diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot013-90-L-Kpi-minimax-source-fingerprint
+          path: rot013/
+          if-no-files-found: error
