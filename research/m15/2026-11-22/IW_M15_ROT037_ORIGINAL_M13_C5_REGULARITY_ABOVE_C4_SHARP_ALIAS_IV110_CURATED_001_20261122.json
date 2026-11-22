@@ -1,0 +1,201 @@
+{
+  "artifact_id": "IW_M15_ROT037_ORIGINAL_M13_C5_REGULARITY_RESTORES_UNIFORM_GAUSSIAN_SHAPE_DISCRIMINATION_001_20261122",
+  "return_id": "IW_M15_ROT037_C5_FIFTH_DERIVATIVE_RESTORES_SIX_MODE_GAUSSIAN_SEPARATION_ABOVE_SHARP_C4_ALIAS_THRESHOLD_001_20261122",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "date": "2026-11-22",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "class": "ORIGINAL_M13_NATIVE_SOURCE_IV110_NEW_C5_FIFTH_DERIVATIVE_REGULARITY_RESTORES_UNIFORM_GAUSSIAN_IDENTIFIABILITY",
+  "original_firstness": {
+    "original_M13": "public N41 41-mode Fourier B auxiliary operator",
+    "Geeky_ROT035": "two exact source-legal fixed rational synthetic site covariance laws",
+    "M15_ROT036": "sharp sign-changing Peano C4 threshold and critical structural-versus-uniform distinction",
+    "new_M15_ROT037": "prove extra finite fifth-derivative bound gives UNIFORM source Gaussian separation strictly ABOVE previous exact C4-only model alias threshold, same six raw Fourier modes"
+  },
+  "source_provenance": {
+    "original_M13_full_file_bytes": 8970,
+    "original_full_SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_unchanged_tensor_polys_calc_inner_ACTUALLY_reexecuted_two_programs": true,
+    "grid_N": 41,
+    "lattice_sites": 68921,
+    "original_B_tensor_fourier_modes": 41,
+    "source_B_energy_unique_frequency_differences": 221,
+    "complete_historical_original_DTC0a_runtime_absent": true,
+    "locked_parent_original_rot036_IV110_JSON_sha256": "d5744a9e6b74174c0aa1c240160414b6fccb796e3711079b586e3d0d40c33ec6",
+    "locked_parent_original_rot035_IV90_JSON_sha256": "a38d73ec1132616097c624dbd173dd9eb0891bcd118680c12685624043cd6646",
+    "locked_parent_exact_original_rot029_rational_source_JSON_sha256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90"
+  },
+  "noise_and_observer": {
+    "two_exact_Geeky_synthetic_Gaussian_site_noise_shapes": {
+      "A": {
+        "beta0": "1",
+        "theta_axis": "3/25",
+        "theta_face": "1/10",
+        "theta_body": "2/25"
+      },
+      "B": {
+        "beta0": "99779719687217/100000000000000",
+        "theta_axis": "316869474178226/2494492992180425",
+        "theta_face": "93110637627687/997797196872170",
+        "theta_body": "205860943554709/2494492992180425"
+      }
+    },
+    "six_source_modes": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ],
+      [
+        3,
+        13,
+        7
+      ]
+    ],
+    "original_M13_B_energy_source_mean_EXACT_ZERO_all_six": true,
+    "per_hypothesis_unrestricted_nuisance": "cubic p_X(a), FACE tau_X*f(k), plus phi_X(a)∈C5(J) with |phi_X''''|<=33/2 and |phi_X'''''|<=50. A/B may fit nuisances separately.",
+    "nonlocal_spectral_calibration_hypothetical": true,
+    "real_spatial_full_site_energy_measurements_available": false
+  },
+  "new_source_IV110": {
+    "L_fourth_bound": "33/2",
+    "M_fifth_bound": "50",
+    "old_exact_original_C4_only_sharp_threshold_Lstar_IV": [
+      "15.84943910894496597521038779812845625966486301084408",
+      "15.84943910894496598035270487906303314544222186394175"
+    ],
+    "new_L_STRICTLY_GREATER_than_old_sharp_threshold": true,
+    "old_C4_only_exact_model_alias_exists_at_L16p5": true,
+    "Peano_source_base_Delta_IV": [
+      "0.00354935057604779281079312451059311182982042570991527",
+      "0.00354935057604779281079312451059311182982042571443492"
+    ],
+    "Peano_source_L1_R_IV": [
+      "0.00011197085750639092926707892727046554263997083963870",
+      "0.00011197085750639092930340763576066357107778205432156"
+    ],
+    "Peano_unique_sign_change_root_IV": [
+      "0.03081114391431705277793181424633070026588259539317446",
+      "0.03081114391431705277993181424633070026588259539317785"
+    ],
+    "symmetric_neighborhood_half_width_h": "3/20",
+    "Kprime_strict_Bernstein_coefficients_lower_IV": [
+      "0.00071084721900209725669087122868280792559283146616277",
+      "0.00128089462601525154823211405971113707904871287779614",
+      "0.00047087973981013824591757117842350455894989033106928"
+    ],
+    "Kprime_lower_uniform_whole_neighborhood_c": "9/20000",
+    "h_less_than_L_over_2M": true,
+    "Lipschitz_paired_saturation_deficit_formula": "for g=phiB''''-phiA'''', |g|<=2L and |g'|<=2M: 2L*integral|K| -integral K*g >= L*c*h^2",
+    "L_c_h2_IV": [
+      "0.00016706249999999999999999999999999999999999999999992",
+      "0.00016706250000000000000000000000000000000000000000005"
+    ],
+    "strict_new_logcontrast_uniform_lower_IV": [
+      "0.00002137477833689214378067253049121398425361791730378430858",
+      "0.00002137477833689214497951991066774892270138800635796730712"
+    ],
+    "true_conclusion": "for ALL separately fitted admissible C5 calibration pairs, original six mode A/B Gaussian laws have positive uniform weighted log variance contrast; old C4 alias unavailable at M50; source-specific mathematical only",
+    "each_model_calibration_weighted_logscore_absolute_upper": "L*R - L*c*h^2/2 (same proof by g=2phi''''); ensures common fixed threshold Delta/2",
+    "not_claimed_sharp_C5_threshold": true
+  },
+  "finite_sample_test": {
+    "site_observation": "hypothetical n IID full 68921-site raw Gaussian energy snapshots OR direct six Fourier cos/sin pairs (12 real scalars each)",
+    "statistic": "T=prod_i(S_i/v_A(k_i))^w_i, independent scaled chi-square_(2n) pairs, source nuisance null w",
+    "decision": "B iff log T > Delta/2",
+    "delta": "1/350000",
+    "strict_log_statistical_margin_IV_lower": "0.00000126502013725039572196890950389437552958649548644",
+    "error_upper_each_hypothesis": "12*exp(-n/(4*350000^2))",
+    "sufficient_IID_full_spatial_n": [
+      {
+        "success_strict_greater_than_pct": 75,
+        "n": 2000000000000
+      },
+      {
+        "success_strict_greater_than_pct": 90,
+        "n": 2500000000000
+      },
+      {
+        "success_strict_greater_than_pct": 95,
+        "n": 3000000000000
+      },
+      {
+        "success_strict_greater_than_pct": 99,
+        "n": 4000000000000
+      }
+    ],
+    "no_actual_or_feasible_iid_data_claim": true
+  },
+  "independent_original_M13_41cubed_spatial_numeric": {
+    "native_source_nine_tensor_components_3D_IFFT_ACTUALLY_executed": true,
+    "full_12x12_Gaussian_projected_covariance_from_all_original_6_axis_12_face_8_body_signed_site_rolls": true,
+    "source_nullweights_independent_float64_SVD": true,
+    "numerical_root_neighborhood_min_Kprime": 0.0004708797398101382,
+    "explicit_C5_quintic_per_model_fourth_derivative_max_below": 16.5,
+    "explicit_C5_quintic_per_model_fifth_derivative_max": 16,
+    "quintic_example_source_spatial_log_contrast": 0.0024970078799902407,
+    "independent_601grid_lipschitz_constrained_linear_program_worst_loggap_numeric_approx": 0.0007580217993665584,
+    "LP_GRID_IS_NOT_RIGOROUS_CONTINUOUS_PROOF": true,
+    "old_C4_only_smooth_tanh_gaussian_alias_numeric": {
+      "epsilon": 0.05,
+      "per_model_fourth_derivative_amplitude_approx": 16.1199426,
+      "required_per_model_fifth_derivative_approx": 322.3988527422445,
+      "six_source_variance_log_mismatch_below": 1e-8,
+      "excluded_by_new_M50_limit": true
+    },
+    "numeric_diagnostics_not_substituted_for_IV110": true
+  },
+  "reproducer": {
+    "full_user_local_ZIP_name": "IW_M15_ROT037_ORIGINAL_M13_C5_REGULARITY_ABOVE_C4_ALIAS_IV110_REPRO_001_20261122.zip",
+    "full_ZIP_bytes": 61083,
+    "full_ZIP_SHA256": "7b71884edca148db332adf16ec6ea36cfafa4af493f758de436c5f407b688615",
+    "ZIP_CRC": "PASS",
+    "SHA256_payload_members": "13/13 PASS",
+    "archive_exact_full_member_bytes": "14/14 PASS",
+    "new_main_native_source_Python_SHA256": "9ac45a7898768febc84689df188ad62d4bb64e1597f0277d3d62009920794b88",
+    "complete_new_actual_IV110_machine_JSON_SHA256": "a059696b29e21dd230170b3d6065551e5e2a88eca330b9b711f898fc09efdef2",
+    "new_independent_spatial_Python_SHA256": "b94ad291bc902fe8d541d140f48ad96edc335f735fa02581f8fd992e1feac065",
+    "complete_actual_spatial_machine_JSON_SHA256": "3a2e12d0bc0a84ce8c647551be7e43f4065315efc9bdd5e9899ecd6324c49ad1",
+    "actual_clean_replay_and_9negative_receipt_SHA256": "cf6aa430a63db172d6af8f126c7582e4a3a290365f2c92f3a26bc2906b2ca053",
+    "two_actual_clean_full_machine_JSON_byte_identical_runs": "2/2 PASS",
+    "two_FINAL_ZIP_extracted_new_scientific_executables_full_JSON_byte_identical": "2/2 PASS",
+    "nine_actual_disposable_named_negative_fixtures": "9/9 REJECTED PASS",
+    "full_executable_and_detailed_report_in_zip_not_claimed_byte_identical_GitHub_code_mirror": true
+  },
+  "hard_limits": [
+    "Public original M13 AUXILIARY, NOT complete historical dtc0a runtime",
+    "Two exact fixed synthetic Gaussian site noise covariance shapes, NOT measured noise",
+    "No authenticated full raw 68921-site spatial sensor or high-frequency Fourier measurements",
+    "Fifth derivative bound 50 and fourth derivative bound 16.5 are explicit hypothetical regularity assumptions NOT empirically measured",
+    "2-4 trillion mathematically sufficient full-site IID hypothetical snapshots NOT actual or practical experiment",
+    "No global sharp C5 regularity radius, source-independent new math theorem, physics NASH effect or alpha inverse uniqueness",
+    "Geeky-S12 ROT035 FIRST retained, earlier M15 original source results retained",
+    "No REC13/AUD3 review acceptance or outside blind I3",
+    "No native KN15 BW provider ingestion receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
