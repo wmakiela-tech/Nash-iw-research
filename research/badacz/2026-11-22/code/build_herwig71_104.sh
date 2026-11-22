@@ -1,6 +1,6 @@
 #!/bin/bash
 # Build ThePEG 2.1.5 + Herwig 7.1.5 (sources from herwig.hepforge.org / thepeg.hepforge.org downloads) with conda-forge
-# GCC 9.5, boost-cpp 1.74, GSL 2.8, FastJet 3.5.3, LHAPDF 6.5.6, HepMC 2.06.11 (env h71dep). For the DIR-009 vintage
+# GCC 9.5, boost-cpp 1.74, GSL 2.8, FastJet 3.5.3 (fastjet-cxx + fastjet-cxx-devel, which provides fastjet-config), LHAPDF 6.5.6, HepMC 2.06.11 (env h71dep). For the DIR-009 vintage
 # fingerprint (PREREG_105). Each step exits nonzero on failure (fix after a false STAGE_OK on a failed configure). Usage: bash build_herwig71_104.sh <stage: thepeg|herwig|repo> ; logs in /home/claude/h71/log_*.txt
 set -eu
 E=/home/claude/gen090/mamba/envs/h71dep; S=/home/claude/h71/src; P=/home/claude/h71/inst
