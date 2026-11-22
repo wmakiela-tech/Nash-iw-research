@@ -1,0 +1,68 @@
+name: DAX-S9 ROT026 CELLO 1992 independent original-reference read
+on:
+  push:
+    paths:
+      - '.github/workflows/dax-s9-rot026-cello-reference.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cello-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Install archive extractors
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends rpm2cpio cpio
+      - name: Verify whole official RPM by pinned SHA before extracting CELLO
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dax9-cello/unpacked
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess,gzip,re
+          p=pathlib.Path('/tmp/dax9-cello'); rpm=p/'payload.rpm'; receipt={'type':'READ_ONLY_AUTHENTIC_SOURCE_EXTRACT','source':'official_Rivet-data-RPM','attempts':[]}
+          known='a5ca114950e3a75240d3ed8e7af21f27a26713d95a8ecba6ce0885e2bf6dd090'
+          for url in [
+            'https://mirror.umd.edu/opensuse/factory/repo/oss/noarch/Rivet-data-4.1.2-2.2.noarch.rpm',
+            'https://www.ftp.fau.de/opensuse/factory/repo/oss/noarch/Rivet-data-4.1.2-2.2.noarch.rpm',
+            'https://download.opensuse.org/slowroll/repo/oss/noarch/Rivet-data-4.1.2-2.2.noarch.rpm'
+          ]:
+            try:
+              x=subprocess.run(['curl','--fail','--location','--silent','--show-error','--max-time','95','--max-filesize','55000000',url,'-o',str(rpm)],capture_output=True,text=True,timeout=105)
+              if x.returncode: raise RuntimeError(x.stderr[-250:])
+              actual=hashlib.sha256(rpm.read_bytes()).hexdigest()
+              if actual!=known: raise RuntimeError('SHA_FAIL '+actual)
+              receipt.update(rpm_sha256=actual,rpm_bytes=rpm.stat().st_size,rpm_url=url)
+              receipt['attempts'].append({'url':url,'result':'WHOLE_RPM_SHA_PASS'});break
+            except Exception as e:receipt['attempts'].append({'url':url,'result':'FAILED','reason':str(e)[:250]})
+          else:receipt['status']='SOURCE_DOWNLOAD_HOLD'
+          if 'rpm_sha256' in receipt:
+            name='CELLO_1992_I345437.yoda.gz'
+            cmd="set -o pipefail; rpm2cpio "+str(rpm)+" | cpio --quiet -id './usr/share/Rivet/"+name+"'"
+            x=subprocess.run(['bash','-lc',cmd],capture_output=True,text=True,cwd=p/'unpacked',timeout=85)
+            src=p/'unpacked'/'usr/share/Rivet'/name
+            if x.returncode or not src.exists():
+              receipt.update(status='CELL_MEMBER_ABSENT_OR_EXTRACT_ERROR',stderr=x.stderr[-300:])
+            else:
+              raw=src.read_bytes();(p/name).write_bytes(raw);txt=gzip.decompress(raw).decode('utf8')
+              names=re.findall(r'(?m)^BEGIN YODA_\S+\s+(\S+)',txt)
+              receipt.update(status='CELLO_RIVET_SHA_PASS',member_sha256=hashlib.sha256(raw).hexdigest(),member_bytes=len(raw),object_count=len(names),object_names=names)
+              (p/'cello_source_decoded.yoda.txt').write_text(txt)
+              print('SOURCE_YODA',receipt['member_sha256'],len(names),names[:50],flush=True)
+          if rpm.exists():rpm.unlink()
+          (p/'receipt.json').write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n')
+          print('AUDIT',json.dumps({k:v for k,v in receipt.items() if k not in ['object_names']}),flush=True)
+          PY
+      - name: Upload verified official secondary reference bytes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dax9-rot026-cello-source
+          path: |
+            /tmp/dax9-cello/receipt.json
+            /tmp/dax9-cello/CELLO_1992_I345437.yoda.gz
+            /tmp/dax9-cello/cello_source_decoded.yoda.txt
+          if-no-files-found: warn
+          retention-days: 30
