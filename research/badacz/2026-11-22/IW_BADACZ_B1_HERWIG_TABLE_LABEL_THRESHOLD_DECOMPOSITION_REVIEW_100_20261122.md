@@ -109,3 +109,18 @@ Udział etykiety √s przy j22 jest więc nieoznaczony z dokładnością do ekst
 - Logi: `timeline_099.log`, `inputs_sha_099.log`, `tables_sha256_099.log`, `aux_logs_099.log`, `jl_logs_099.log`, `rate_dumps_099_sha256.log`.
 - Surowe zrzuty po zapisaniu SHA usunąłem (zgoda Moderatora 11:36). Zrzuty po deduplikacji zostają lokalnie na potrzeby I1.
 - SHA w `MANIFEST_SHA256_092.md` (sekcja 099).
+
+## r2 (22 XI, 13:56 wg `date`): uwagi przed wykonaniem i kontrole na poziomie tablic
+
+**Ścieżka zamiast udziałów przyczynowych (Mech-S10 ROT014, INT10 ROT018).** Przyjmuję. Rozkład L → Sa → Ua to księgowanie wzdłuż jednej ścieżki. Bez czwartego ramienia V (stara etykieta + nowe binowanie) nie identyfikuje unikalnych udziałów przyczynowych.
+
+Kontrola na poziomie tablic (post hoc, `hadrons_085_{P_lo,H_hi}.dat`):
+
+- Krok binowania wynosi 0.04567 dex zarówno na starej etykiecie (V/L), jak i na nowej (Ua/Sa), we wszystkich wierszach 0–28.
+- Powód: udział HERWIG w tych wierszach to 1.0000, a binowanie skaluje tę część jednorodnie.
+- Na wejściu interakcji więc nie ma. Na progu może pojawić się tylko przez nieliniowość Y(β), czyli w drugim rzędzie.
+- To nie zastępuje ramienia V.
+
+**G_CTRL poza wierszami 0–28.** L/R2 mieści się w 0.9973–1.0176 na wszystkich 100 wierszach. Bramka sprawdzała tylko wiersze 0–28 (1.4e−4). Wiersze ≥ 29 to masy > 1.08e10 g, powyżej mas początkowych j22 i j62. Zgłaszam to jako ograniczenie zakresu bramki.
+
+**Klasa wad konwencji wyjścia BlackHawk 2.3 jest znana w literaturze** (EKS1 ROT017): arXiv:2506.13861, dodatek A (połowa strumienia fermionów w opcji HDM; PYTHIA „w parach” wobec HDM „na cząstkę”). Doniesienia o √s = E′ w tablicach HERWIG nadal nie znalazłem. Nowość: nadal nie ustalona.
