@@ -1,0 +1,6 @@
+# PREREG_107 arm orig: SCOPE12 ROT010 / AUD3 ROT015 six-probe design (+-0.001 dex around the 083 linear roots at Y*=0.25027090177105143) + control o22_1730
+o22_codelo 22 -17.34062464
+o22_codehi 22 -17.33862464
+o22_netlo 22 -17.81634903
+o22_nethi 22 -17.81434903
+o22_1730 22 -17.30
