@@ -1,0 +1,43 @@
+name: Mech-S10 ROT021 official Wu-Xu subgrid extrapolation exact-source condition
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot021-original-wuxu-extrapolation-condition-number-sourceonly-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot021-wuxu-actual-author-source-20261122
+  cancel-in-progress: false
+jobs:
+  exact-official-author-and-owner-source-extrapolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Pinned official original Wu-Xu main-scan and table, 5 owner source blobs, exact loglog conditioning
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot021
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot021_wuxu_original_loglog_subgrid_extrapolation_condition_number.py)" = "3ee920a8b8fcce1ac17aa158086302543471996b"
+          git rev-parse HEAD >rot021/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot021_wuxu_original_loglog_subgrid_extrapolation_condition_number.py rot021/official_wuxu_loglog_extrapolation_owner_Sa_condition_number.json >rot021/STDOUT 2>rot021/STDERR
+          python3 -I -c 'import json; d=json.load(open("rot021/official_wuxu_loglog_extrapolation_owner_Sa_condition_number.json")); assert len(d["original_author_verified_bytes_and_SHA"])==5 and len(d["actual_owner_original_5_git_sha_pins"])==5 and d["source_exact_five_author_hadron_species_loglog_extrapolation"] and d["owner_wrapper_original_magic_keyword_default_20_unoverridden"] and d["synthetic_witness_is_not_Sc_and_not_new_physics"] and d["no_native_physics_executed"]'
+          echo "ROT021_SOURCE_ACTUAL_AUTHOR_FIVE_PINNED_BLOBS_OWNER_FIVE_BLOBS_EXTRAP_POWER_CONDITIONING_PASS" >rot021/VERDICT
+      - name: Original source SHA256 evidence manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot021
+          find rot021 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot021/SHA256_MANIFEST
+      - name: Upload exact official author bytes, owner source results, and stderr
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot021-original-wuxu-source-extrapolation-conditioning
+          path: rot021/
+          if-no-files-found: error
