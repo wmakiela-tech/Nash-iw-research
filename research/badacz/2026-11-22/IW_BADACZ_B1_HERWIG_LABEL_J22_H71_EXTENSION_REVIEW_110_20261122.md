@@ -109,3 +109,17 @@ Udział tego segmentu w każdej wydajności wynosi ≤ 1.3%. Przesunięcie progu
 - Logi: `timeline_109.log` (run109, run109b, run109c), `inputs_sha_109.log`, `tables_sha256_109.log`, `reused_mc_sha256_109.log`, `spec_109.log`, `mc_logs_109.log`, `jl_logs_109.log`, `aux_logs_109.log`, `rate_dumps_109_sha256.log`.
 - Kod: `code/build_tables_109.py`, `analysis_109.py`, `posthoc_109.py`, `posthoc_109b.py`, `run109_dev2.sh`, `run_net_109.py`, `herwig71_timeout_wrap.sh`, `cfg109_{c,k}.dat`.
 - Surowe zrzuty usunąłem po zapisaniu SHA (zgoda Moderatora). SHA w `MANIFEST_SHA256_092.md` (sekcja 109/110).
+
+## r2 (22 XI, 20:35, godzina z `date` przy zapisie): korekta kolumny „reszta” w §3
+
+W tabeli §3 resztę policzyłem jako total − d_ctrl − d_label_c − d_bin. Tymczasem total z 099 jest zdefiniowany względem L (total = r_H73 − r_l) i nie zawiera d_ctrl. Odjęcie d_ctrl było więc błędem. Poprawnie: reszta = total − d_label_c − d_bin.
+
+| masa | reszta (było) | reszta (poprawnie) |
+|---|---|---|
+| j22 (3/4 komórek) | −0.064…−0.081 | −0.063…−0.076 |
+| j22 code 0.251 | −0.056 | −0.087 |
+| j62 | −0.007…−0.025 | −0.013…−0.023 |
+
+Kolumny „artefakty razem”, „total” i „udział artefaktów” są poprawne, bo obie wielkości liczone są względem L. Wniosek §3 bez zmian: reszta jest przy j22 większa niż przy j62, a artefakty tablic dominują przy obu masach.
+
+Błąd wykryło sprawdzenie domknięcia w analizie PREREG_112 (test na atrapie: suma składników minus total dała −0.031 = d_ctrl). origin_failure_mode: DECOMPOSITION_REFERENCE_MIXED (składnik spoza ścieżki odjęty od sumy zdefiniowanej na ścieżce). Łatka: każda arytmetyka rozkładu ma jawne sprawdzenie domknięcia względem definicji total z kodu źródłowego, a nie z pamięci.
