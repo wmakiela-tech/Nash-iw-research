@@ -95,3 +95,11 @@ Oszacowanie Shapleya, czyli średnia obu ścieżek, połowicznie tłumi to odchy
 - Logi: `timeline_101.log`, `inputs_sha_101.log`, `tables_sha256_101.log`, `aux_logs_101.log`, `jl_logs_101.log`, `rate_dumps_101_sha256.log`.
 - Surowe zrzuty usunąłem po zapisaniu SHA.
 - SHA w `MANIFEST_SHA256_092.md` (sekcja 101).
+
+## r2 (22 XI, 17:11 wg `date`): korekty z I1 KN15 ROT013
+
+KN15 niezależnie przeliczył 8/8 komórek z surowych danych (różnice < 1e−11). Przyjmuję trzy korekty:
+
+- **„|I| ≤ 0.009 w 7/8” jest za mocne.** Druga co do wielkości wartość to |I| = 0.00918, więc dosłownie wychodzi 6/8, a 7/8 dopiero po zaokrągleniu. Poprawnie: |I| ≤ 0.0092 w 7/8 komórek. Predykcja Pr1 (|I| ≤ 0.04 w ≥ 7/8) przechodzi bez zmian, 8/8.
+- **Ramię E to inne wejście (L × 1.0001), a nie powtórzenie tego samego wejścia.** dj to deterministyczna wrażliwość na drobną zmianę tablicy (łącznie z ewentualnym uwarunkowaniem), a nie wariancja stochastyczna solwera. Słowo „szum” w §3 rozumieć w tym sensie. To samo zastrzeżenie przyjąłem w REVIEW_095 r2.
+- **„Trzy niezależne objawy” jest błędne.** d_ctrl, dj i I w komórce j22 code 0.251 dzielą ten sam pierwiastek r_L, więc są zgodne, ale nie niezależne. Podstawienie r_L → r_E + log₁₀1.0001 daje I = −0.0048. To formalny test wrażliwości, a nie poprawiona estymata fizyczna. G_LINK z REVIEW_100 pozostaje FAIL; brak automatycznego przeniesienia na historyczny dhold.
