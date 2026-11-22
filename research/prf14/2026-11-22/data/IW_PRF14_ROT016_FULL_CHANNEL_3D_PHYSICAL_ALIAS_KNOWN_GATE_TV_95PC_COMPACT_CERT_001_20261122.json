@@ -1,0 +1,140 @@
+{
+  "artifact_id": "IW_PRF14_ROT016_FULL_CHANNEL_3D_PHYSICAL_ALIAS_KNOWN_GATE_TV_95PC_COMPACT_CERT_001_20261122",
+  "date": "2026-11-22",
+  "origin": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "model": "Four control contexts I,P,P^2,L; six independent hidden Pauli source Fourier values per context; ten ordinary source Fourier values fixed zero; single unknown physical R in SO3 and known P,L. Source conditional on control q announced before first noise event; not a single intervention-independent exogenous comb.",
+  "primary_source": "ROT015 original report blob f7c27807e28e46ea4c29d2e92d5b7ba655a48e40",
+  "exact_result": {
+    "initial_context_readout_counts": [
+      5,
+      4,
+      3,
+      1
+    ],
+    "source_fourier_parameters": 24,
+    "initial_scalar_readouts": 13,
+    "initial_known_R_measurement_rank": 13,
+    "initial_known_R_nullspace_dim": 11,
+    "extra_required_source_readouts_when_R_known": 11,
+    "completed_source_readouts": 24,
+    "full_known_R_source_forward_rank": 24,
+    "nonzero_offdiagonal_Bloch_pivot_min": "2/7",
+    "unknown_R_total_local_parameters": 27,
+    "unknown_R_full_24_measurement_differential_rank": 24,
+    "unknown_R_exact_local_physical_nonidentification_dim": 3,
+    "four_context_full_Bloch_channel_matrices_matching_exact": true,
+    "four_context_each_16_pauli_history_distribution_normalized_strictly_positive": true,
+    "original_source_C": [
+      [
+        "0",
+        "9/100",
+        "11/100"
+      ],
+      [
+        "7/100",
+        "0",
+        "1/10"
+      ],
+      [
+        "8/100",
+        "12/100",
+        "0"
+      ]
+    ],
+    "unknown_gate_R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "known_P": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "known_L": "[[0,1/sqrt(2),1/sqrt(2)],[1,0,0],[0,1/sqrt(2),-1/sqrt(2)]]",
+    "exact_physical_Rprime": "Ux(t)*R with Ux=[[1,0,0],[0,(1-t^2)/(1+t^2),-2t/(1+t^2)],[0,2t/(1+t^2),(1-t^2)/(1+t^2)]] and t=1/1000",
+    "exact_Cqprime": "Cqprime_ij=C_ij*(Sq(R))_ij/(Sq(Rprime))_ij for i != j",
+    "alternative_context_source_probs_min": [
+      0.04557177470254187,
+      0.045618383194469266,
+      0.04570113019070119,
+      0.04561334213235607
+    ],
+    "alternative_source_TV_to_original": [
+      0.0002384893026732631,
+      0.0001428668730007652,
+      0.0003577339540098946,
+      0.0002717205952923494
+    ],
+    "alternative_source_max_TV_relative_to_own_context0": 0.0004764383052471829,
+    "nonstationarity_derivative": "d/dt (Cprime_contextL_XY−Cprime_contextI_XY)|t=0 = 27/50",
+    "three_external_gate_anchor_entries": [
+      "R_YZ",
+      "R_ZX",
+      "R_ZZ"
+    ],
+    "three_external_gate_anchor_local_Jacobian_det": "-36/49",
+    "anchor_caveat": "Requires independent reference away from same four unknown source channels; local only, not global calibration or sample complexity guarantee."
+  },
+  "known_R_conditional_source_TV_statistical_certificate": {
+    "n_binary_mean_settings": 24,
+    "all_24_Hoeffding_union_bound": "48*exp(-n*eta^2/2)",
+    "eta_per_mean": 0.000018,
+    "confidence_target": 0.95,
+    "xi_TV_upper_target": 0.0008,
+    "kappa_pivot": 0.2857142857142857,
+    "TV_upper_given_empirical_data": "Uq=(1/2)sum_(i!=j)|hatC_q(i,j)-hatC_0(i,j)| + 6*eta/kappa",
+    "true_stationarity_on_concentration_event_Uq_upper": 0.000756,
+    "shots_per_setting": 42388477065,
+    "total_sufficient_shots": 1017323449560,
+    "failure_upper": 0.0499999999965941,
+    "requirements": [
+      "R known exactly from genuinely separate calibration",
+      "P,L and Pauli SPAM ideal",
+      "ten ordinary source Fourier coefficients known zero",
+      "IID stable terminal binary outcomes",
+      "This is a huge sufficient upper bound; no practical feasibility or optimality claim"
+    ],
+    "not_claimed": [
+      "Cannot certify exact source invariance",
+      "Cannot infer any ξ if R unknown from only four channel tomographies"
+    ]
+  },
+  "actual_computational_evidence": {
+    "full_primary_executed_local_path": "/mnt/data/prf14_rot016/prf14_rot016_four_context_24_probe_unknown_gate_alias_exact.py",
+    "full_primary_source_sha256": "6a3d43cef105da06c52df3664c967ad575c0e3d81ecb1629c6406d58dbbf6f7d",
+    "original_machine_output_path": "/mnt/data/prf14_rot016/prf14_rot016_24_context_exact_machine_certificate.json",
+    "original_machine_output_sha256": "dc435eb66a835b78b1ed8b478e02e1b6fa5dbf70ac4cce420bace2de9b2ccdec",
+    "independent_direct_16_Kraus_exact_program_path": "/mnt/data/prf14_rot016/prf14_rot016_independent_kraus_transfer_check.py",
+    "independent_direct_16_Kraus_program_sha256": "2a5d580d4cf3eb4946afb25dfb2004b48d4023d9f971063d8ade26668a91bdb8",
+    "original_public_repro_short_source_sha256": "5c83e2491b07d79174fc5b70780c3003e2791c830f8c9ece44cea64ee627fdb8",
+    "full_Pauli_context_channel_entries_exact_36_of_36_match": "PASS",
+    "source_probability_checks": "PASS",
+    "exact_matrix_rank_checks": "PASS",
+    "exact_calibration_anchor_Jacobian": "PASS",
+    "synthetic_24_Bernoulli_count_vectors": 500,
+    "synthetic_shots_per_setting": 20000,
+    "hardware_experiment": false
+  },
+  "near_external_hosts": [
+    "https://arxiv.org/abs/2604.01482",
+    "https://doi.org/10.1103/PhysRevX.9.021045",
+    "https://doi.org/10.1038/s41534-026-01313-z"
+  ],
+  "claim_ceiling": [
+    "NO_GENERAL_PROCESS_TENSOR_NOVELTY",
+    "NO_UNKNOWN_SPAM_SELF_CALIBRATION",
+    "NO_HARDWARE",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
