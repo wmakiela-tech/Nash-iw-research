@@ -1,0 +1,229 @@
+{
+  "artifact_id": "IW_M15_ROT040_ORIGINAL_M13_SHARP_C5_PEANO_GLOBAL_LIPSCHITZ_RAMP_SOURCE_IV110_001_20261122",
+  "return_id": "IW_M15_ROT040_ORIGINAL_M13_SHARP_C5_PEANO_LIPSCHITZ_RAMP_MINIMAX_SOURCE_001_20261122",
+  "date": "2026-11-22",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "review_level": "INTERNAL_NONBLIND_ORIGINAL_SOURCE_IV110_AND_SEPARATE_FULL_SITE_NUMERIC_LP",
+  "sync_status": "GITHUB_PENDING_BW_INGEST",
+  "science_claim": "SHARP infimum of SIX-FREQUENCY ORIGINAL M13 weighted log Gaussian variance contrast over all separately fitted C5 residual calibrations of two fixed synthetic Geeky source Gaussian hypotheses with |fourth derivative|<=16.5, |fifth derivative|<=50 and arbitrary cubic axial/FACE nuisance, NOT global optimal experiment or minimax statistical test",
+  "priority": {
+    "original_source": "M13 public N41 B tensor Fourier FIRST",
+    "two_exact_gaussian_source_A_B": "Geeky-S12 ROT035 FIRST",
+    "unbounded_smooth_fullfield_alias": "Geeky-S13 ROT001 FIRST",
+    "six_mode_peano_C4": "M15 ROT036 FIRST",
+    "C5_regularity_restore": "M15 ROT037 FIRST",
+    "loggamma_concentration": "M15 ROT038 FIRST",
+    "analytic_cubic_lower_bound": "M15 ROT039 FIRST",
+    "preexisting_stronger_lipschitz_ramp_lower_bound": "AUD3 ROT009 and REC13 ROT014 acknowledged original firstness",
+    "new_source_specific_ROT040": "rigorously solve the GLOBAL constrained functional extremizer, with unique balance window root, sharp C5 infimum and independent discretized LP check"
+  },
+  "original_M13_source": {
+    "SHA256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "Git_blob_SHA1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "file_bytes": 8970,
+    "native_tensor_polys_41_calc_41_inner_k0_ACTUALLY_executed_in_two_independent_programs": true,
+    "full_41cubed_site_count": 68921,
+    "original_B_modes": 41,
+    "original_B_energy_pair_difference_support": 221,
+    "historical_full_original_DTC0a_producer_absent": true
+  },
+  "observation": {
+    "wavevectors": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ],
+      [
+        3,
+        13,
+        7
+      ]
+    ],
+    "original_source_B_energy_mean_exact_zero_for_all_six_and_negative_wavevectors": true,
+    "one_new_cos_sin_real_pair_each_wavevector": true,
+    "real_original_raw_site_measurement_or_detector_available": false
+  },
+  "hypotheses": {
+    "source_first": "Geeky-S12 ROT035",
+    "A": {
+      "beta0": "1",
+      "theta_axis": "3/25",
+      "theta_face": "1/10",
+      "theta_body": "2/25"
+    },
+    "B": {
+      "beta0": "99779719687217/100000000000000",
+      "theta_axis": "316869474178226/2494492992180425",
+      "theta_face": "93110637627687/997797196872170",
+      "theta_body": "205860943554709/2494492992180425"
+    },
+    "both_site_stationary_Gaussian_and_strict_SPD": true,
+    "models_are_synthetic_not_real_sensor_data": true
+  },
+  "calibration": {
+    "unrestricted_cubic_axial_per_candidate": true,
+    "unrestricted_FACE_spectral_slope_per_candidate": true,
+    "residual_C5_phi_per_candidate": true,
+    "per_candidate_abs_fourth_derivative": "33/2",
+    "per_candidate_abs_fifth_derivative": "50",
+    "difference_g_fourth_derivatives_amplitude_bound": "33",
+    "difference_g_fourth_derivatives_slope_bound": "100",
+    "differently_fitted_A_B_allowed": true
+  },
+  "exact_new_global_functional_proof": {
+    "original_nuisance_basis": [
+      "1",
+      "a",
+      "a^2",
+      "a^3",
+      "face_f"
+    ],
+    "unique_null_weights_normalized_last_one": true,
+    "Peano_kernel": "K(t)=sum_{i:a_i>t}w_i*(a_i-t)^3/6",
+    "strict_one_sign_change_root_inherited_from_original_ROT036_037": true,
+    "new_saturated_extremizer": "gstar(t)=clip(100*(t-a)-33,-33,+33)",
+    "ramp_width_exact": "33/50",
+    "unique_ramp_balance_equation": "int_a^(a+33/50) K(t)dt=0",
+    "ramp_left_root_source_IV110": [
+      "-0.26175583938043564459812803137277000000000000000000000",
+      "-0.26175583938043564459812803137275999999999999999999999"
+    ],
+    "ramp_right_root_source_IV110": [
+      "0.39824416061956435540187196862722999999999999999999999",
+      "0.39824416061956435540187196862724000000000000000000001"
+    ],
+    "balance_root_strictly_signed_rational_bracket_pass": true,
+    "global_optimality_dual": "Outside ramp K(gstar-g)>=0 pointwise. Inside Q(z)=int_a^z K<0, Q(a)=Q(b)=0 by balance and single sign change; for h=gstar-g, h'=100-g'>=0: int K h = -int Q h' >=0.",
+    "uniqueness_in_closed_Lipschitz_ball": true,
+    "C5_extremum_not_attained": "Unique clipped ramp gstar has derivative jumps at two nondegenerate endpoints, is not C1; smooth mollifications preserving sup amplitude/slope are dense and approach it, so gives true sharp C5 infimum.",
+    "original_base_source_Delta_approx": 0.003549350576047793,
+    "parent_original_L1_Peano_R_approx": 0.00011197085750639093,
+    "source_IV110_optimal_loss_from_unbounded_C4_sign_solution": [
+      "0.00090343273334788350717952747588242158063875840444578",
+      "0.00090343273334788351082793011889658597084417578678462"
+    ],
+    "sharp_global_supremum_nuisance_weighted_score_IV110": [
+      "0.00279160556436301715498567448102877693627486192129262",
+      "0.00279160556436301715983292450421947626492804938816554"
+    ],
+    "sharp_C5_source_weighted_logvariance_contrast_infimum_IV110": [
+      "0.00075774501168477565096020000637363556489237632383875",
+      "0.00075774501168477565580745002956433489354556379071167"
+    ],
+    "previous_M15_ROT039_certified_lower_expression_approx": 0.0006692428876018001,
+    "sharp_infimum_over_previous_certified_lower_expression_greater_than": 1.13224215859823,
+    "fixed_midpoint_Delta_over_two_classifier_valid_uniformly_due_to_central_symmetry": true,
+    "not_global_statistical_minimax_risk_or_sensor_design": true
+  },
+  "finite_n": {
+    "mature_M15_ROT038_original_weighted_gamma_MGF_used": true,
+    "original_six_score_weights_squared_sum_V_approx": 2.8147662920276675,
+    "strict_bound": "for n>=60,000,000, each conditional error <=exp(-n*(sharp_C5_gap)^2/(9*V)) with source IV110 eta<0.1",
+    "sufficient": [
+      {
+        "correct_pct_strict_greater_than": 75,
+        "n": 65000000,
+        "source_error_IV110_upper_less_than": 0.229181
+      },
+      {
+        "correct_pct_strict_greater_than": 90,
+        "n": 105000000,
+        "source_error_IV110_upper_less_than": 0.092564
+      },
+      {
+        "correct_pct_strict_greater_than": 95,
+        "n": 135000000,
+        "source_error_IV110_upper_less_than": 0.046897
+      },
+      {
+        "correct_pct_strict_greater_than": 99,
+        "n": 210000000,
+        "source_error_IV110_upper_less_than": 0.008569
+      }
+    ],
+    "previous_ROT039_counts": [
+      80000000,
+      135000000,
+      175000000,
+      270000000
+    ],
+    "sample_counts_mathematical_sufficient_not_necessary_and_not_real_observations": true
+  },
+  "independent_spatial_and_LP_control": {
+    "original_unchanged_M13_B_9_complex_tensor_components_built_over_full_41cubed_IFFT": true,
+    "all_original_6_axis_12_face_8_body_signed_periodic_spatial_site_rolls_for_gaussian_covariance": true,
+    "original_source_six_cos_sin_energy_mean_float64_zero_diagnostics": true,
+    "independent_nullspace_from_5x6_float_SVD_NOT_IV_source_LU": true,
+    "independent_balancing_root_by_scipy_quad_and_brentq_NOT_IV_rational_formula": -0.26175583938046054,
+    "direct_num_ramp_optimal_sharp_C5_gap_float64": 0.0007577450116867477,
+    "entirely_separate_discretized_generic_linear_program_without_prescribed_ramp": {
+      "grid_points": 1201,
+      "signed_Lipschitz_constraints": 2400,
+      "absolute_amplitude_bound": 33,
+      "slopes_bound": 100,
+      "success": true,
+      "number_interior_non_saturated_gridnodes": 469,
+      "raw_numeric_LP_gap": 0.0007577432935249127
+    },
+    "LP_grid_and_float_are_numerical_falsifiers_not_strict_proof": true
+  },
+  "reproducibility": {
+    "archive": "IW_M15_ROT040_ORIGINAL_M13_SHARP_C5_LIPSCHITZ_RAMP_IV110_REPRO_001_20261122.zip",
+    "bytes": 63127,
+    "SHA256": "195bb7b2da00a0ff8ea7193fec3e83188c2cf036cce3d74ded4abd950aee275c",
+    "archive_CRC": "PASS",
+    "all_payload_sha256": "15/15 PASS",
+    "archive_all_exact_full_member_byte_reread": "16/16 PASS",
+    "new_native_original_science_Python_SHA256": "6efdf55d2cce70dd999042db19b1a829557a1062408da9cd5a0203188b6026bd",
+    "complete_original_sharp_IV110_JSON_SHA256": "0d495d0d0d1c5e74eff7743717659540d849f02b9314f3512a62c6cbca7bbb9e",
+    "independent_original_site_spatial_and_LP_Python_SHA256": "ca512c877dd1cf4ed02849fe31348fc3bd412ba560e65d2c9b534f1c92e9d6c1",
+    "independent_full_spatial_LP_JSON_SHA256": "8a199c73e8335783ecf450210253cd4e06950ba90f3eb840589945d8bd40d9ca",
+    "actual_clean_replay_and_ten_negative_receipt_SHA256": "720e9bd42e57156aead391d7044a394b30a223e7421292506ab42c28c4542a80",
+    "two_isolated_complete_result_JSON_cold_replays": "2/2 BYTE IDENTICAL PASS",
+    "independently_FINAL_ZIP_extracted_two_complete_source_JSON_replays": "2/2 BYTE IDENTICAL PASS",
+    "ten_real_disposable_named_fail_closed_source_science_attacks": "10/10 PASS"
+  },
+  "frozen_parent_original_full_machine_SHA256": {
+    "ROT029": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "ROT036": "d5744a9e6b74174c0aa1c240160414b6fccb796e3711079b586e3d0d40c33ec6",
+    "ROT037": "a059696b29e21dd230170b3d6065551e5e2a88eca330b9b711f898fc09efdef2",
+    "ROT038": "b5f92d2c3e614f36ba6cd7bd25e99b3b44bbe5e9e0cdee3cdae4b95ad5fc547b",
+    "ROT039": "8091c09bf3d2b1a032bfe7d94a965cf13d2b8a5beb5a43e0eeb9c7a9a041326e"
+  },
+  "hard_boundaries": [
+    "Only original public M13 auxiliary Fourier source, missing historical complete DTC0a runtime",
+    "Two synthetic first-owner Geeky Gaussian site-noise A/B models, no measured sensor/noise",
+    "Six new 41^3 spatial Fourier measurements and 65-210m IID full source snapshots not physically authenticated",
+    "C5 derivative bound 16.5/50 hypothetical, not empirically established",
+    "Sharpness ONLY for specified weighted nuisance logvariance contrast, not global statistical Bayes minimax or sensor optimization",
+    "No general math novelty, physical NASH J3/K/TPE/GW/GR bridge, alpha inverse uniqueness",
+    "No different-cell REC13/AUD3 independent ROT040 acceptance or external blind I3",
+    "No KN15 native BW ING receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
