@@ -1,0 +1,3 @@
+# rate_dump_081 arm=orig julia=1.12.3 BITS=100 N_REF=20000 K_BACK=200
+run_id,arm,j,log10beta,Y,T_last_alive_MeV,seconds,n_points,i_last_alive,v2_max_rel,v2_n
+k22_1720,orig,22,-17.200000,0.25112545650076501,1.4847283748926834,57.1,22251,8544,3.45279e-14,20663
