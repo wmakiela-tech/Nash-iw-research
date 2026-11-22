@@ -1,0 +1,92 @@
+name: DAX-S9 ROT018 neutral-pion independent-original-reference read
+on:
+  push:
+    paths:
+      - '.github/workflows/dax-s9-rot018-neutral-pion-original-reference.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  neutral-pion-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Install RPM extractors
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends rpm2cpio cpio
+      - name: Read checksum-verified official RPM and bounded original HEPData endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dax9-neutral
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess,urllib.request,zipfile
+          p=pathlib.Path('/tmp/dax9-neutral')
+          receipt={'type':'SOURCE_ONLY_SECONDARY_RIVET_AND_ORIGINAL_HEPDATA_ATTEMPT','hepdata':{},'rpm':{}}
+          for name,url in {
+            'neutral_native_csv':'https://www.hepdata.net/download/table/ins815978/Table%201/csv',
+            'neutral_submission_yoda':'https://www.hepdata.net/download/submission/ins815978/1/yoda',
+          }.items():
+            rec={'url':url}
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'NASH-ROT018-SourceAudit/1.0'})
+              with urllib.request.urlopen(req,timeout=18) as r:
+                data=r.read(8000001);rec['http']=r.status;rec['mime']=r.headers.get('Content-Type','')
+              if len(data)>8000000 or data.lstrip().lower().startswith((b'<html',b'<!doctype html')):rec['status']='REJECT_HTML_OR_SIZE'
+              elif data.startswith(b'PK') or data.lstrip().startswith(b'#') or b',' in data[:200]:
+                fn=name+('.zip' if data.startswith(b'PK') else '.csv');(p/fn).write_bytes(data)
+                rec.update(status='ORIGINAL_BYTES_PRESENT',sha256=hashlib.sha256(data).hexdigest(),bytes=len(data),file=fn)
+              else:rec['status']='REJECT_UNKNOWN_FORMAT'
+            except Exception as e:rec.update(status='ACCESS_HOLD',error=str(e)[:400])
+            receipt['hepdata'][name]=rec
+            print('HEPDATA_SOURCE',name,rec,flush=True)
+          known='a5ca114950e3a75240d3ed8e7af21f27a26713d95a8ecba6ce0885e2bf6dd090'
+          urls=[
+            'https://mirror.umd.edu/opensuse/factory/repo/oss/noarch/Rivet-data-4.1.2-2.2.noarch.rpm',
+            'https://www.ftp.fau.de/opensuse/factory/repo/oss/noarch/Rivet-data-4.1.2-2.2.noarch.rpm',
+            'https://download.opensuse.org/slowroll/repo/oss/noarch/Rivet-data-4.1.2-2.2.noarch.rpm'
+          ]
+          rpm=p/'payload.rpm'
+          for url in urls:
+            x=subprocess.run(['curl','--fail','--location','--silent','--show-error','--max-time','95','--max-filesize','55000000',url,'-o',str(rpm)],capture_output=True,text=True,timeout=105)
+            if x.returncode!=0:
+              receipt['rpm'].setdefault('attempts',[]).append({'url':url,'status':'FETCH_FAIL','error':x.stderr[-200:]});continue
+            sha=hashlib.sha256(rpm.read_bytes()).hexdigest()
+            if sha != known:
+              receipt['rpm'].setdefault('attempts',[]).append({'url':url,'status':'REJECT_SHA','sha256':sha});continue
+            receipt['rpm'].update(status='SHA256_PASS',url=url,sha256=sha,bytes=rpm.stat().st_size)
+            break
+          if receipt['rpm'].get('status')=='SHA256_PASS':
+            folder=p/'unpacked';folder.mkdir()
+            name='BELLE_2009_I815978.yoda.gz'
+            cmd="set -o pipefail; rpm2cpio "+str(rpm)+" | cpio --quiet -id './usr/share/Rivet/"+name+"'"
+            x=subprocess.run(['bash','-lc',cmd],cwd=folder,capture_output=True,text=True,timeout=65)
+            src=folder/'usr/share/Rivet'/name
+            if x.returncode==0 and src.exists():
+              raw=src.read_bytes();(p/name).write_bytes(raw)
+              import gzip,re
+              body=gzip.decompress(raw).decode('utf8')
+              names=re.findall(r'(?m)^BEGIN YODA_\S+\s+(\S+)',body)
+              receipt['neutral_rivet']={'status':'OFFICIAL_PACKAGE_MEMBER_AUTHENTICATED','sha256':hashlib.sha256(raw).hexdigest(),'compressed_bytes':len(raw),'objects':len(names),'object_names':names[:35],'source_provenance':'Rivet-data-4.1.2-2.2 rpm official SHA full package'}
+              (p/'neutral_yoda_source_head.txt').write_text('\n'.join(body.splitlines()[:160])+'\n')
+              print('NEUTRAL_SOURCE_PASS',receipt['neutral_rivet'],flush=True)
+            else:receipt['neutral_rivet']={'status':'EXTRACT_HOLD','error':x.stderr[-400:]}
+          else:receipt['neutral_rivet']={'status':'RPM_SHA_OR_FETCH_HOLD'}
+          if rpm.exists():rpm.unlink()
+          (p/'receipt.json').write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n')
+          print('FINAL',json.dumps({'rpm':receipt['rpm'].get('status'),'neutral':receipt['neutral_rivet'].get('status'),'HEPData':{k:v['status'] for k,v in receipt['hepdata'].items()}}),flush=True)
+          PY
+      - name: Upload actual source reference bytes and receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dax9-rot018-neutral-pion-original-reference
+          path: |
+            /tmp/dax9-neutral/receipt.json
+            /tmp/dax9-neutral/BELLE_2009_I815978.yoda.gz
+            /tmp/dax9-neutral/neutral_yoda_source_head.txt
+            /tmp/dax9-neutral/neutral_native_csv.csv
+            /tmp/dax9-neutral/neutral_submission_yoda.zip
+          if-no-files-found: warn
+          retention-days: 30
