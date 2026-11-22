@@ -83,3 +83,23 @@ Zrzuty szybkości (~3.4 GB, /home/claude/run094/dump_* i dd_*) poza repozytorium
 26c3ceadbcd97819afe12210639b1819e3797b1d86dfbee7795db5aa9514e087  code/dhold_096.py
 648dc36fde115da9142b074833a402a1b449ee4b08781462de41ad47b5c7b229  data/dhold096.json
 ```
+
+## 097/098 (odcisk HERWIG)
+
+```
+f31b68254ddcebe8390106baeba42a0389530d5b6aa07de1a14e055caf35e2d9  IW_BADACZ_B1_DIR009_HERWIG_TABLE_FINGERPRINT_PREREG_097_20261122.md
+ecf4dbc7e83515a7dcf80cece4433deddd0f1a1aeb6522ae5a2a52ebf758e358  code/mult_herwig_097.py
+b7cfc957a4b836f5d536bc1d4639e6319a91c197f4482ca38a9542fa47afa3ef  code/analysis_097.py
+bbcfe6c8139e5792d8d09d1dd2d483b31a6a7466144d12e3764d99c17984d5e2  code/run097.sh
+cee4a86b7376c8ef83ffa4f43352057db477753b053fce15f41ca5d52a9aa547  data/mc097/H72_f1.json
+5f1ddc2cf1bd15458f8ca5bfcf571bc57b78451c94ab148d09ed456125a138ee  data/mc097/H73_f1.json
+4d565f400df61ee1b8ec2c7df1f954f8dd87fee232132827299e4d9168661b78  data/mc097/H73_f2.json
+48dae1ede4ecd727eccf664115f4c0277a52a4c96f3d33b49487a9d900992531  data/analysis097.json
+18cc7086840ad75964c01c11f471095033aff0bb6b5afd394c84c00feb327ac0  data/inputs_sha_097.log
+e49c504eef08d68b7e45d8b718e82bb531be79ad3cecd3f016e44f8d456c5a7a  data/mc_logs_097.log
+6f72d78953ed8c9fe39facbfe68ca11a4d324100049e3d54743f755e384d1a3b  data/spec_097.log
+458908c3ce703bad7395ac85d5ddc6a6675ede2908280ff5110829b8edfa42e5  data/timeline_097.log
+d75d896867d0fdd1c610abc96691d86bd895cbcd2099c7282c89100847df089e  data/versions_097.log
+```
+
+Tablice BlackHawk v2.3 (wejście, poza repozytorium): SHA w data/inputs_sha_097.log.

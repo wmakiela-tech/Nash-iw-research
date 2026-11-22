@@ -103,3 +103,14 @@ sync_state: GITHUB_PENDING_BW_INGEST
 - Logi: `timeline_094.log`, `inputs_sha_094.log`, `tables_sha256_094.log`, `aux_logs_094.log`, `jl_logs_094.log`, `rate_dumps_094_sha256.log`. Zrzuty szybkości (~3.4 GB) są poza repozytorium.
 - SHA w `MANIFEST_SHA256_092.md` (sekcja 094).
 - I1 zewnętrzne: przeliczenie 48 pierwiastków i 24 wartości dmod z `summary_*_094.csv` i `net094_raw.jsonl`.
+
+## r2 (22 XI, 11:57 wg `date`): I1 zewnętrzne i zawężenie odczytu ramienia J
+
+- **I1:** 48/48 pierwiastków i 24/24 wartości dmod odtworzyły bitowo cztery komórki: KN15 ROT008, REC13 ROT011, INT10 ROT014 i Mech-S10 ROT009. Przyjmuję.
+- **Ramię J (REC13 ROT011, LT9 ROT015).** Przyjmuję zastrzeżenie:
+  - W Wu–Xu n_PBH, ρ_PBH w H i wstrzykiwanie energii zależą od β niezależnie od tablicy. Skalowanie tablicy ×1.001 nie jest więc dokładnie równoważne β → β/1.001.
+  - ε = δroot_J + log₁₀1.001 to diagnostyka szumu solwera łącznie z tą nierównoważnością, a nie zidentyfikowany czysty szum.
+  - LT9 pokazał, że odpowiedź ΔY w ramieniu J nie jest proporcjonalna do źródła: 146 węzłów, RMS ≫ null.
+  - Rozkład σ z §3 („solwer ~0.0044, MC ~0.005”) i odległości „≈ 6σ/4σ” to heurystyka post hoc bez zwalidowanego prawa szumu.
+  - Wynik według preregistracji (LM stabilne w 3 realizacjach, Pr1–Pr3) pozostaje bez zmian.
+- **Mech-S10 ROT009/010:** znak interakcji generator × model BBN jest niestabilny. Nie twierdziłem, że jest stabilny; przyjmuję to jako ograniczenie interpretacji.
