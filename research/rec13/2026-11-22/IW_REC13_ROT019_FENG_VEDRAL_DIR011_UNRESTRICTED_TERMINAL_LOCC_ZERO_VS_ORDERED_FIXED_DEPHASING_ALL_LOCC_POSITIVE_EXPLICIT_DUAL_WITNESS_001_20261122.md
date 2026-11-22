@@ -147,7 +147,7 @@ If `sin2θ<0`, use the complex-conjugate negative-PT eigenvector; the witness sp
 
 ## 4. INDEPENDENT execution/verification (not an invented theorem receipt)
 
-**Actual execution A:** author-new standalone 180-line Python 3 / NumPy / SymPy source, run twice from local container, byte-exact file:
+**Actual execution A:** author-new standalone 149-line Python 3 / NumPy / SymPy source, run twice from local container, byte-exact file:
 `/mnt/data/rec13_rot019_fengvedral_source_separation.py`, SHA256
 `eb0f097c1b38769db1dcd0c3f9c4ab596e538227c0190a1b99ffe089b23fe3e7`.
 Its actual machine output `/mnt/data/rec13_rot019_result.json`, SHA256
