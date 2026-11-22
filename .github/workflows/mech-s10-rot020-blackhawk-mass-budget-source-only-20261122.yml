@@ -1,0 +1,43 @@
+name: Mech-S10 ROT020 actual BlackHawk 10000-node mass-integrated energy envelope
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot020-blackhawk-mass-budget-source-only-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot020-original-source-only-mass-budget-20261122
+  cancel-in-progress: false
+jobs:
+  original-primary-mass-path-energy-source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Original SHA pinned source gzip and owner Sa; conditional mass-integrated energy bound
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rot020
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot020_raw_primary_mass_budget_missing_below_grid_conditional_energy_fraction.py)" = "34d90cc6221427844c1079b653dbce011d6c1e1a"
+          git rev-parse HEAD >rot020/SOURCE_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot020_raw_primary_mass_budget_missing_below_grid_conditional_energy_fraction.py rot020/raw_10000_primary_grid_mass_energy_fraction_conditional_envelope.json >rot020/STDOUT 2>rot020/STDERR
+          python3 -I -c 'import json; x=json.load(open("rot020/raw_10000_primary_grid_mass_energy_fraction_conditional_envelope.json")); t=x["targets"]; assert x["raw_original_gzip_nodes_parsed_this_turn"]==10000 and x["verified_all_seven_original_sources_via_rot019_reader"] and 0.159<t["22"]["full_mass_path_upper_fraction_CONDITIONAL_on_HM_and_energy_mass_loss"]<0.160 and 0.0055<t["62"]["full_mass_path_upper_fraction_CONDITIONAL_on_HM_and_energy_mass_loss"]<0.0056 and x["no_mass_interpolation_assumption_all_emission_fraction_has_only_trivial_bound"]==1.0'
+          echo "ROT020_RAW_10000_ORIGINAL_SOURCE_SEVEN_SHA_CHECKS_AND_CONDITIONAL_MASS_BUDGET_PASS_NO_NATIVE_PHYSICS" >rot020/VERDICT
+      - name: Original source evidence SHA256 manifest
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p rot020
+          find rot020 -maxdepth 1 -type f ! -name SHA256_MANIFEST -print0 | sort -z | xargs -0 -r sha256sum >rot020/SHA256_MANIFEST
+      - name: Preserve full 100-mass energy fraction, original stdout and stderr
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot020-original-10000-node-mass-budget-envelope
+          path: rot020/
+          if-no-files-found: error
