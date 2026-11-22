@@ -1,0 +1,166 @@
+{
+  "artifact_id": "IW_PRF14_ROT023_SINGLE_CONTEXT_ROW_SOURCE_TRANSPORT_CONFIDENCE_95PC_AND_INVISIBLE_GAUGE_MACHINE_CERT_001_20261122",
+  "date": "2026-11-22",
+  "origin": "IW_THEORETICAL_KNOWLEDGE_AND_DEEP_SEARCH_CELL_001_SUCCESSOR_13 / PRF14",
+  "scientific_scope": "Any legal two-time classical Pauli 16-label source conditioned on complete announced UNIT or two-Bell-break protocol; one fixed unknown proper SO3 middle control for each UNIT Pauli preparation; stable IID source within each protocol. No general quantum process tensor.",
+  "exact_theorem": {
+    "estimand": "zeta = TV(pUNIT,pBELLbreak), single physical control context",
+    "channel_relation": "a_j=C_UNIT_(j,i)*S_(i,j), S in SO3 unknown; c_j=C_BREAK_(j,i) from Bell-label record",
+    "TV_Fourier_dual": "|C_UNIT_(j,i)-C_BREAK_(j,i)| <= 2*zeta",
+    "SO3_row_necessary": "For any subset J of one output i row: sum_(j in J) (abs(a_j)/(abs(c_j)+2*zeta))^2 <= 1",
+    "data_falsifier": "F(0)>1 disproves source transport equality for any unknown SO3 S",
+    "data_source_TV_lower": "root of monotone F(z)=1 if F(0)>1, otherwise 0",
+    "simple_explicit_lower": "min_j(abs(c_j))/2*(sqrt(F(0))-1)_+ where all c_j nonzero",
+    "valid_for_arbitrary_16_label_classical_Pauli_sources": true,
+    "does_not_assume_original_ten_Fourier_zero": true,
+    "cannot_prove_invariance_when_null_not_rejected": true
+  },
+  "exact_physical_witness": {
+    "R": "[[-3,-2,6],[6,-3,2],[2,6,3]]/7",
+    "P": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "selected_middle": "P*R",
+    "output_Pauli": "X",
+    "input_Paulis": [
+      "Y",
+      "Z"
+    ],
+    "source_break_six_Fourier_C": [
+      [
+        0,
+        0.09,
+        0.11
+      ],
+      [
+        0.07,
+        0,
+        0.1
+      ],
+      [
+        0.08,
+        0.12,
+        0
+      ]
+    ],
+    "source_UNIT_six_Fourier_C": "8/5 times source_break C",
+    "both_source_ten_remaining_Fourier_coeffs_zero": true,
+    "breaker_16_source_min": "73/1600",
+    "UNIT_16_source_min": "71/2000",
+    "source_TRUE_TV_exact": "513/8000",
+    "source_TRUE_TV": 0.064125,
+    "breaker_characters_exact": [
+      "9/100",
+      "11/100"
+    ],
+    "unitary_Pauli_means_exact": [
+      "108/875",
+      "66/875"
+    ],
+    "source_invariance_row_norm_square_exact": "576/245",
+    "gate_numerically_unknown_ideal_TV_lower": 0.02498275485093171,
+    "simple_closed_form_TV_lower": 0.02399866901999351,
+    "two_matched_UNIT_source_laws_equal_each_other": true,
+    "two_matched_BREAK_source_laws_equal_each_other": true,
+    "old_ROT022_two_context_TV_triangle_instrument_shift_lower_zero": true,
+    "source_instrument_change_common_to_both_contexts": true
+  },
+  "nonasymptotic_95pc": {
+    "unitary_settings": 2,
+    "unitary_plusminus1_iid_stat_eta": 0.01,
+    "unitary_samples_per_setting": 101504,
+    "unitary_total_binary_readouts": 203008,
+    "unitary_preparation_Bloch_error": 0.00005,
+    "unitary_POVM_effect_axis_error": 0.00005,
+    "unitary_POVM_bias_error": 0.00005,
+    "unitary_total_stat_plus_SPAM_eu": 0.01015,
+    "breaker_source_joint_label_settings": 1,
+    "breaker_source_Bell_samples": 125313,
+    "breaker_measurements_per_trial": 2,
+    "breaker_total_Bell_bases_measured": 250626,
+    "breaker_two_characters_from_same_label_trials_not_independent": true,
+    "breaker_Bell_readout_source_TV_bias_cap_beta": 0.001,
+    "breaker_two_characters_iid_stat_eta": 0.009,
+    "breaker_total_char_error_ec": 0.011,
+    "alpha_unit": 0.025,
+    "alpha_breaker": 0.025,
+    "source_concentration": "4exp(-nu*.01^2/2)+4exp(-nb*.009^2/2)",
+    "joint_error_bound": 0.049999278270351895,
+    "protocol_runs_total": 328321,
+    "confidence_lower_numerator": "N_j = max(0, abs(ahat_j)-eu)",
+    "confidence_lower_denominator": "D_j = abs(chat_j)+ec",
+    "lower_TV_confidence": "zeta_L=0 if sum(Nj/Dj)^2<=1, else unique nonnegative root sum (Nj/(Dj+2*zeta_L))^2=1",
+    "uniform_95pc_coverage_for_source_TV_lower": true,
+    "type_one_false_transport_alarm_at_most": 0.05,
+    "additional_actual_gate_opnorm_closeness_to_reference_for_specified_alt_POWER_only": 0.001,
+    "worst_case_alternative_feasibility_F0": 1.0188014500925586,
+    "worst_case_alternative_positive_source_TV_lower": 0.0005378777178775141,
+    "source_specific_detection_power_at_least": 0.95,
+    "null_or_lower_CI_does_NOT_need_numerical_SO3_R_reference": true
+  },
+  "anti_self_sealing_exact_no_go": {
+    "world0": "unknown R0 and pUNIT=pBREAK=C0",
+    "world1": "unknown R'=Ux(t=1/1000)R0, pBREAK=C0, pUNIT with Cprime_ij=Cij*(P R0)ij/(P R')ij, all ten other Fourier source coefficients zero",
+    "world1_source_positive_all_16_history_probabilities": true,
+    "source_unit_BREAK_TV_world0": 0,
+    "source_unit_BREAK_TV_world1_exact": "5997/25099975",
+    "source_unit_BREAK_TV_world1": 0.00023892454076149478,
+    "full_two_matched_UNIT_CPTP_Bloch_channels_identical_between_worlds": "18/18 exact physical entries",
+    "both_WORLD_BREAK_full_Bell_label_laws_identical": true,
+    "no_ability_to_infer_zero_TRANSPORT_FROM_PASSING_ROW_test": true
+  },
+  "actual_execution": {
+    "full_original_Python": "/mnt/data/prf14_rot023/prf14_rot023_single_context_row_ellipse_transport.py",
+    "full_original_SHA256": "3e1837a770c1597378e5cfcbd7b29e21867cb53feb3f5cba89acceed6754d229",
+    "within_author_independent_direct_16_Pauli_Kraus_Bell_Born_python": "/mnt/data/prf14_rot023/prf14_rot023_independent_direct_bell_kraus_and_undetectable_alias.py",
+    "independent_source_SHA256": "f3d805681cc45df3c879cd76a29ffab55c02aeed99472904d68ed43544b06d04",
+    "original_full_native_certificate": "/mnt/data/prf14_rot023/prf14_rot023_original_machine_certificate.json",
+    "native_cert_SHA256": "c94cf0e6b1c9693707166f90d4314e4fd335941d4189ee2d0c2335ae7363b7ae",
+    "first_stdout_SHA256": "d377773e67cb5914a3034ac0206cd69ac38bf40063974eb164f92055ac4bedb1",
+    "second_repeat_stdout_SHA256": "d377773e67cb5914a3034ac0206cd69ac38bf40063974eb164f92055ac4bedb1",
+    "second_independent_stdout_SHA256": "f16642690db19c904ce021ce6e318ad4a8bf51e470042463e431366039d8c680",
+    "syntax_compile_two_sources_pass": true,
+    "synthetic_trials": {
+      "null_cases_random_arbitrary_physical_SO3": 400,
+      "null_false_transport_declarations": 0,
+      "physical_scale_source_alternatives_gate_opnorm_within_0p001": 400,
+      "alternative_detected": 400,
+      "minimum_alternative_empirical_positive_TV_lower": 0.008020632167881807,
+      "minimum_alternative_empirical_f_zero": 1.3236293868084843,
+      "all_are_physical_SO3_Bloch_POVM_multinomial_model_only": true
+    },
+    "local_zip": "/mnt/data/prf14_rot023/prf14_rot023_reproducibility_bundle.zip",
+    "local_zip_SHA256": "f25aa603d963e6f953c4770268c6dd8a9cc8adcdaf9881b03af70933b9248488",
+    "ZIP_7_files_manifest_crc_full_bytes_readback": "PASS",
+    "hardware_experiment_count": 0,
+    "different_cell_external_referee": "PENDING"
+  },
+  "near_prior_art": [
+    "https://doi.org/10.1103/92c4-g7qs",
+    "https://doi.org/10.1103/PRXQuantum.3.020344",
+    "https://doi.org/10.1103/PhysRevB.106.155413"
+  ],
+  "claim_limits": [
+    "NO_EXTERNAL_NOVELTY",
+    "NO_NONINVASIVE_BELL_TESTER",
+    "NO_GENERAL_QUANTUM_PROCESS_TENSOR",
+    "NO_SOURCE_INVARIANCE_PROOF_FROM_PASSING_TEST",
+    "NO_HARDWARE",
+    "NO_CANON",
+    "NO_EXEC_SIGN"
+  ]
+}
