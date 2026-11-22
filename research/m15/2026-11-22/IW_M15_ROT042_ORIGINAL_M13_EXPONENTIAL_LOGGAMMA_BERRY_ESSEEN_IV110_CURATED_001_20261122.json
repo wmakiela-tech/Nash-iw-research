@@ -1,0 +1,184 @@
+{
+  "artifact_id": "IW_M15_ROT042_ORIGINAL_M13_EXACT_LOGGAMMA_EXPONENTIAL_BERRY_ESSEEN_SOURCE_IV110_001_20261122",
+  "return_id": "IW_M15_ROT042_ORIGINAL_M13_EXACT_EXPONENTIAL_SERIES_BERRY_ESSEEN_107M_99PCT_SOURCE_001_20261122",
+  "date": "2026-11-22",
+  "origin_cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "exposure": "PUBLIC",
+  "BW": "GITHUB_PENDING_BW_INGEST",
+  "class": "INTERNAL_NONBLIND_ORIGINAL_PUBLIC_M13_NATIVE_IV110_GAMMA_EXPONENTIAL_INDEPENDENT_SERIES_SOURCE_AND_FULL_41CUBED_SPATIAL_CHECK",
+  "priority": {
+    "M13": "FIRST original 41-mode B N41 Fourier auxiliary",
+    "Geeky_S12_ROT035": "FIRST two source-legal Gaussian A/B exact rational hypotheses",
+    "Geeky_S13_ROT001": "FIRST unbounded C infinity full-field alias",
+    "M15_ROT040": "FIRST sharp original C5 six-mode score gap",
+    "M15_ROT041": "FIRST source maximal six-mode scaling invariant and invariant minimax",
+    "M15_ROT042": "NEW exact independent exponential series of existing logGamma noise enabling strict Berry Esseen per-model finite-n 107million >99% source guarantee; classical methods, no general literature novelty"
+  },
+  "original_source": {
+    "N": 41,
+    "fullsite_N3": 68921,
+    "original_M13_bytes": 8970,
+    "original_M13_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "original_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "native_tensor_polys_calc_inner_ACTUALLY_executed_both_programs": true,
+    "original_B_modes": 41,
+    "original_B_energy_q_mode_differences": 221,
+    "six_chosen_k": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ],
+      [
+        3,
+        13,
+        7
+      ]
+    ],
+    "original_deterministic_B_energy_mean_exactly_zero_all_six_for_every_alpha": true,
+    "historic_complete_DTC0a_runtime_absent": true
+  },
+  "noise": {
+    "two_fixed_Geeky_first_exact_rational_Gaussian_site_covariance_models": {
+      "A": {
+        "beta0": "1",
+        "theta_axis": "3/25",
+        "theta_face": "1/10",
+        "theta_body": "2/25"
+      },
+      "B": {
+        "beta0": "99779719687217/100000000000000",
+        "theta_axis": "316869474178226/2494492992180425",
+        "theta_face": "93110637627687/997797196872170",
+        "theta_body": "205860943554709/2494492992180425"
+      }
+    },
+    "unrestricted_per_candidate_cubic_axial_and_face_log_scale_calibration": true,
+    "per_hypothesis_C5_residual_fourth_derivative_abs_max": 16.5,
+    "per_hypothesis_C5_residual_fifth_derivative_abs_max": 50,
+    "Gaussian_noise_site_covariance_and_107m_independent_fullsite_RAW_snapshots_measured": false
+  },
+  "sha_locked_parent_source_JSON": {
+    "M15_ROT029_exact_rational_source": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "M15_ROT040_original_sharp_C5_peano": "0d495d0d0d1c5e74eff7743717659540d849f02b9314f3512a62c6cbca7bbb9e",
+    "M15_ROT041_maximal_invariant_IV110": "b7d673f4f3dc70832a29f10aa67bb3481932d869c6ce405e0a14bcaeb4c9443d"
+  },
+  "new_original_native_source_IV110": {
+    "original_parent_sharp_G_loggap_lower": "0.00075774501168477565096020000637363556489237632383875",
+    "new_original_source_V_squared_weight_sum_approx": 2.8147662920276675,
+    "new_original_source_W3_sum_absolute_cubed_weight_approx": 2.494862069480037,
+    "gamma_exact_law": "logGamma_n - digamma(n) equal_in_distribution -sum_(k=n)^infty (Exp_k-1)/k, independent Exp1; Euler Weierstrass centered log MGF equality; series L2 and almost surely convergent",
+    "Z_source_exact_law": "Z_n=sum_i w_i log(X_i/n), independent X_i Gamma(n,1), sum_i w_i=0; equals in law -sum_i sum_(k=n)^infty w_i(Exp_ik-1)/k",
+    "exact_exp_centered_absolute_third_moment": "12/e - 2",
+    "published_uniform_Berry_Esseen_non_identical_independent_summands_constant": 0.56,
+    "reference": "Shevtsova (2013), MathNet https://www.mathnet.ru/eng/ia252, general independent summands constant <=0.5583",
+    "true_variance": "V * zeta(2,n) = V*trigamma(n)",
+    "true_third_abs_moment_summands": "(12/e-2)*W3*zeta(3,n)",
+    "rigorous_uniform_CDF_error": "0.56*(12/e-2)*W3*zeta(3,n)/(V*zeta(2,n))^(3/2)",
+    "zeta2_lower": "1/n",
+    "zeta3_upper": "1/[2*(n-0.5)^2]",
+    "strict_source_conservative_constants": {
+      "G_lower": 0.00075774,
+      "Vlo": 2.814,
+      "Vup": 2.815,
+      "W3up": 2.495
+    },
+    "strict_per_hypothesis_error": "Q((G_lower/2)*sqrt((n-0.5)/Vup)) + .56*(12/e-2)*W3up*n^(3/2)/(2*(n-0.5)^2*Vlo^(3/2))",
+    "Gaussian_CDF_certification": "IV110 directed 61 terms j0..j60 of the alternating normal CDF entire power series, add rigorous absolute j61 remainder for 0<z<4; no iv.erfc or float needed",
+    "new_finite_n_source_IV110_gates": [
+      {
+        "correct_pct_strict_greater_than": 75,
+        "n": 9000000,
+        "error_upper": "0.24918182115348861383864"
+      },
+      {
+        "correct_pct_strict_greater_than": 90,
+        "n": 33000000,
+        "error_upper": "0.09734285808097181037930"
+      },
+      {
+        "correct_pct_strict_greater_than": 95,
+        "n": 54000000,
+        "error_upper": "0.04856746274300735082972"
+      },
+      {
+        "correct_pct_strict_greater_than": 99,
+        "n": 107000000,
+        "error_upper": "0.00978436212342651340449"
+      },
+      {
+        "correct_pct_strict_greater_than": 99.9,
+        "n": 190000000,
+        "error_upper": "0.00095305847547134216046"
+      }
+    ],
+    "n107m_gaussian_normal_survival_source_IV_upper": 0.009749816951975836,
+    "n107m_explicit_nonzero_BE_error_source_IV_upper": 0.000034545171450677,
+    "n106m_same_sufficient_inequality_does_not_certify_99pct": true,
+    "not_necessary_minimum_n_or_measured_real_data": true
+  },
+  "independent_original_fullsite_spatial": {
+    "source_actual_9_complex_tensor_component_full_41cubed_IFFT": true,
+    "actual_6_axial_12_face_8_body_signed_site_periodic_array_rolls": true,
+    "independent_5_by_6_source_noise_calibration_nullweights_from_SVD": true,
+    "source_V_numeric_independent": 2.8147662920276706,
+    "source_W3_numeric_independent": 2.49486206948004,
+    "Gamma_Weierstrass_small_n_MGF_vs_Hurwitz_zeta_power_series_remainder_abs_less_than": "1e-42",
+    "Gamma_cumulants_checked_independently": [
+      "polygamma1=zeta2",
+      "polygamma2=-2*zeta3"
+    ],
+    "numeric_scipy_survival_plus_BE_matches_source_IV_upper_to_less_than": "4e-12",
+    "full_spatial_FFT_and_scipy_are_diagnostics_NOT_strict_IV110_proof": true
+  },
+  "repro": {
+    "ZIP": "IW_M15_ROT042_ORIGINAL_M13_LOGGAMMA_EXPONENTIAL_BERRY_ESSEEN_IV110_REPRO_001_20261122.zip",
+    "bytes": 45020,
+    "ZIP_SHA256": "02a488e1f77477bf5858eb19aace221562569267857a185fbd3cda0397ba5933",
+    "archive_CRC": "PASS",
+    "all_13_payload_SHA256": "13/13 PASS",
+    "all_14_archive_member_full_bytes_readback": "14/14 PASS",
+    "deterministic_ZIP_rebuild_BYTE_IDENTICAL": true,
+    "primary_original_M13_IV110_python_SHA256": "9198427fd9925fe0fe74fa00d10b6d10c2142530349eec4f6c64fcb407e100d1",
+    "full_original_IV110_machine_JSON_SHA256": "02fefa288bda7eacbc8c0835283d2cdad71d23d2278179f3fdb0e2410c3cd010",
+    "independent_original_fullsite_spatial_python_SHA256": "7896b7d46dbff1a7cec72f8d178b46709cd012d30e142ee937ce9e506dcf3a9b",
+    "independent_fullsite_spatial_JSON_SHA256": "893e0f791cc19d177db7915b524f3210925591c2ec014092094cfb92dbb30ed9",
+    "actual_replay_twelve_negative_receipt_SHA256": "297000c93a6b29e2ffba6c37ebf4e565574043c176fbedd0e25c7f833da4f2f5",
+    "two_isolated_complete_JSON_byte_identical_science_replays": "2/2 PASS",
+    "two_FINAL_ZIP_extracted_complete_JSON_byte_identical_science_replays": "2/2 PASS",
+    "twelve_actual_adversarial_negative_fixtures": "12/12 FAIL-CLOSED PASS",
+    "full_original_and_all_executables_are_in_user_local_zip_not_claimed_public_immutable_code_mirror": true
+  },
+  "hard_limits": [
+    "Only original PUBLIC M13 AUXILIARY Fourier source; complete historical DTC0a runtime not recovered",
+    "All Gaussian raw site noise, high-k physical sensors, independent full-site observations and C5 calibration limits hypothetical, unmeasured",
+    "107m is a sufficient mathematical snapshot count for two fixed source synthetic covariance hypotheses, not measured actual result or necessary n",
+    "The Gaussian normal approximation error is rigorously included; independent Gamma product and non-IID Berry Esseen are classical, no general mathematical novelty",
+    "No global alpha inversion, NASH physical J3/K/TPE/GR/GW effect or invariant-free global experiment optimum",
+    "No REC13/AUD3 independent original-source ROT042 acceptance, no outside blind I3 and no KN15 native BW ingest receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
