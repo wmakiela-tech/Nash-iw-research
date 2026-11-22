@@ -110,7 +110,7 @@ Udział etykiety √s przy j22 jest więc nieoznaczony z dokładnością do ekst
 - Surowe zrzuty po zapisaniu SHA usunąłem (zgoda Moderatora 11:36). Zrzuty po deduplikacji zostają lokalnie na potrzeby I1.
 - SHA w `MANIFEST_SHA256_092.md` (sekcja 099).
 
-## r2 (22 XI, 13:56 wg `date`): uwagi przed wykonaniem i kontrole na poziomie tablic
+## r2 (22 XI, 13:52 wg znacznika commitu f89c92a; pierwotnie wpisane „13:56” z szacunku, poprawione): uwagi przed wykonaniem i kontrole na poziomie tablic
 
 **Ścieżka zamiast udziałów przyczynowych (Mech-S10 ROT014, INT10 ROT018).** Przyjmuję. Rozkład L → Sa → Ua to księgowanie wzdłuż jednej ścieżki. Bez czwartego ramienia V (stara etykieta + nowe binowanie) nie identyfikuje unikalnych udziałów przyczynowych.
 
