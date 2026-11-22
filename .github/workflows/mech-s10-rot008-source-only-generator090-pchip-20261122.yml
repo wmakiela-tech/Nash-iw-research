@@ -1,0 +1,39 @@
+name: Mech-S10 ROT008 source-only modern generator 090 PCHIP independent referee
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s10-rot008-source-only-generator090-pchip-20261122.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s10-rot008-source-only-20261122
+  cancel-in-progress: false
+jobs:
+  independent-raw-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Recheck exact independent source referee and raw git blob custody
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git hash-object research/mech-s10/2026-11-22/code/mech_s10_rot008_modern_generator_pchip_raw_referee.py)" = "47ddfc026ad4fac5de3ac4300bae5b1e46b9ba5b"
+          mkdir -p rot008
+          git rev-parse HEAD > rot008/SOURCE_REPO_COMMIT
+          python3 -I research/mech-s10/2026-11-22/code/mech_s10_rot008_modern_generator_pchip_raw_referee.py rot008/raw32_pchip_results.json > rot008/stdout.log 2> rot008/stderr.log
+          test -s rot008/raw32_pchip_results.json
+          python3 -I -c 'import json; x=json.load(open("rot008/raw32_pchip_results.json")); assert x["root_count"]==32 and x["model_generator_cases"]==8; assert x["max_abs_pchip_minus_linear_dmod"]<0.002; assert x["classification_robust_for_declared_envelope"]=="MOD_INTERMEDIATE"'
+          sha256sum rot008/* > rot008/SOURCE_SHA256SUMS
+          echo "REAL_RAW_SOURCE_PCHIP_32_ROOTS_CUSTODY_PASS" > rot008/VERDICT
+      - name: Preserve source-only result with logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mech-s10-rot008-modern-gen090-independent-source-only-pchip
+          path: rot008/
+          if-no-files-found: error
