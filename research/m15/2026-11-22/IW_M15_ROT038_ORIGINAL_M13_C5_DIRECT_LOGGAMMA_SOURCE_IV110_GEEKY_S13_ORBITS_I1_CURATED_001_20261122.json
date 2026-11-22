@@ -1,0 +1,212 @@
+{
+  "artifact_id": "IW_M15_ROT038_ORIGINAL_M13_LOGGAMMA_C5_SAMPLING_AND_GEEKY_S13_FULLFIELD_I1_001_20261122",
+  "return_id": "IW_M15_ROT038_ORIGINAL_M13_C5_DIRECT_LOGGAMMA_FINITE_SAMPLE_TIGHTENING_AND_GEEKY_S13_CYCLOTOMIC_SOURCE_I1_001_20261122",
+  "date": "2026-11-22",
+  "cell": "IW_MGPT_BUD_02_BUD_01_BUD_01_BUD_01_SUCCESSOR_10 / M15",
+  "class": "ORIGINAL_PUBLIC_M13_NATIVE_EXECUTED_SOURCE_IV110_GAUSSIAN_FINITE_SAMPLE_AND_BOUNDED_DIFFERENT_CELL_NONBLIND_GEEKY_S13_I1",
+  "exposure": "PUBLIC",
+  "sync_state": "GITHUB_PENDING_BW_INGEST",
+  "priority": {
+    "ORIGINAL_PUBLIC_B_FOURIER": "M13 FIRST",
+    "TWO_ORIGINAL_EXACT_SITE_GAUSSIAN_SOURCE_NOISE_HYPOTHESES": "Geeky-S12 ROT035 FIRST",
+    "SIX_HIGH_FREQUENCY_5_NUISANCE_SHARP_C4_PEANO_SOURCE": "M15 ROT036 FIRST",
+    "C5_BOUNDED_FIFTH_DERIVATIVE_SOURCE_SEPARATION": "M15 ROT037 FIRST",
+    "FULL_FIELD_UNRESTRICTED_CINFTY_AXIAL_ONLY_ALIAS": "Geeky-S13 ROT001 FIRST; M15 internal different-cell nonblind I1 only",
+    "new_M15_ROT038": "Same source six modes and same bounded C5 nuisance: derive strict exponentially tighter finite-n error via joint weighted loggamma MGF instead of six union bounds; independently assess Geeky exact prime cyclotomic and N40 falsifier"
+  },
+  "original_source": {
+    "M13_original_sha256": "cd4aad089bf68e2e6155ff048d4d812943495dcf1770c8acbf0ff8111b1deb9c",
+    "M13_git_blob_sha1": "c6377cfbc9a0070abc34ffedc5871e719f6a4679",
+    "original_M13_full_module_bytes": 8970,
+    "native_tensor_polys_41_calc_41_inner_k0_executed_by_BOTH_new_programs": true,
+    "N": 41,
+    "all_spatial_sites": 68921,
+    "B_fourier_modes": 41,
+    "B_energy_pair_difference_modes": 221,
+    "source_six_Fourier_mode_pairs": [
+      [
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        0
+      ],
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        12,
+        12,
+        13
+      ],
+      [
+        3,
+        13,
+        7
+      ]
+    ],
+    "six_source_deterministic_mean_exactly_zero_for_all_alpha": true,
+    "full_historical_DTC0a_source_runtime_unavailable": true
+  },
+  "parent_certificates": {
+    "ROT037_full_original_C5_IV110_source_result_SHA256": "a059696b29e21dd230170b3d6065551e5e2a88eca330b9b711f898fc09efdef2",
+    "ROT036_full_original_C4_peano_IV110_SHA256": "d5744a9e6b74174c0aa1c240160414b6fccb796e3711079b586e3d0d40c33ec6",
+    "ROT029_full_original_exact_rational_Gaussian_SOURCE_SHA256": "00b8c93da96c9c92901555fd4c2db0af63978ecf735df3945e9ff42d218dee90",
+    "all_SHA_frozen_inputs_stored_in_USER_archive": true,
+    "prior_Peano_proof_NOT_misrepresented_as_new_recomputation": true
+  },
+  "conditional_gaussian_source_model": {
+    "two_fixed_exact_Geeky_S12_original_synthetic_Gaussian_site_covariance_shapes": true,
+    "one_centered_cosine_and_sine_Gaussian_pair_per_source_frequency_and_snapshot": true,
+    "hypothetical_per_model_C4_upper": "16.5",
+    "hypothetical_per_model_C5_upper": "50",
+    "unbounded_free_cubic_axial_and_FACE_spectral_slopes_per_hypothesis": true,
+    "observed_real_raw_site_Gaussian_site_data": false,
+    "physical_detector_for_high_frequency_modes_authenticated": false
+  },
+  "new_original_native_source_IV110": {
+    "inherited_actual_original_source_margin_g_IV": [
+      "0.0000213747783368921437806725304912139842536179173037843085827054791238309931292511654655641062064033013987314369247961",
+      "0.0000213747783368921449795199106677489227013880063579673071121039001311063367186178078909420649068765435009417704060344"
+    ],
+    "NEW_weighted_log_chi_squared_variance_factor_V_IV": [
+      "2.81476629202766760303029379355725295154805656564842562884197234247464744617486836785695842570935277719398340567788",
+      "2.81476629202766760303029379355725295154805656575922301855879547555445377391204407104735379042514104429284414490074"
+    ],
+    "score_weights": "six real original source nuisance null Fourier weights w_i with exact sum_i w_i=0 and all cubic/face source nuisance moments zero",
+    "Gaussian_statistic": "Z_noise=sum_i w_i*log(X_i/n), Xi independent Gamma(n,1) from chi_square_(2n) cosine/sine energies",
+    "exact_MGF": "F(t)=sum_i(log Gamma(n+t*w_i)-log Gamma(n)); F(0)=F'(0)=0",
+    "exact_second_derivative": "F''(t)=sum_i w_i²*trigamma(n+t*w_i)",
+    "rigorous_trigamma_bound": "trigamma(x) <= 1/(x-1/2), x>1/2, by convex midpoint integral comparison",
+    "per_candidate_margin": "m=g/2 from ROT037 positive fixed common threshold under separately fitted C5 nuisance",
+    "Chernoff_saddle_choice": "t=n*m/V for both +/- one-sided tails",
+    "eta_IV110_at_n80_billion": [
+      "0.00000379690732797447673093193800470215360112988154239732287651986302480611642774225896561882484905398650846540946173351",
+      "0.00000379690732797447694388876208847424403106001569280825673891017749753954231013581901852533191301792105961297615278019"
+    ],
+    "eta_strict_below_tenth_at_every_larger_n": true,
+    "new_uniform_each_hypothesis_error_bound": "exp(-n*g^2/(9*V)) for n >= 80,000,000,000; no six-mode union bound, no normal approximation",
+    "strict_source_IV110_finite_n": [
+      {
+        "target_correct_strict_greater_than_percent": 75,
+        "n": 80000000000,
+        "error_IV110_strict_less_than": "0.236263529324076941"
+      },
+      {
+        "target_correct_strict_greater_than_percent": 90,
+        "n": 135000000000,
+        "error_IV110_strict_less_than": "0.087620738581186779"
+      },
+      {
+        "target_correct_strict_greater_than_percent": 95,
+        "n": 175000000000,
+        "error_IV110_strict_less_than": "0.042589765932340540"
+      },
+      {
+        "target_correct_strict_greater_than_percent": 99,
+        "n": 270000000000,
+        "error_IV110_strict_less_than": "0.007677393829512674"
+      }
+    ],
+    "previous_valid_ROT037_sufficient_n": [
+      2000000000000,
+      2500000000000,
+      3000000000000,
+      4000000000000
+    ],
+    "ratio_old_sufficient_over_new": [
+      25,
+      18.51851851851852,
+      17.142857142857142,
+      14.814814814814815
+    ],
+    "not_claimed_necessary_or_optimal_or_practically_observed": true
+  },
+  "independent_numeric_second_algorithm": {
+    "original_M13_41cubed_all_nine_complex_tensor_component_IFFT_executed": true,
+    "original_native_B_full_energy": 5.6782931090547936e-14,
+    "original_source_mean_high_k_cos_sin_float64_order": "1e-26",
+    "raw_site_spatial_neighbor_symmetric_stencils": "all 6 axial / 12 face / 8 body directions",
+    "two_original_source_spatial_Gaussian_mode_var_checked_against_spectral_formula": true,
+    "independent_MP68_exact_log_gamma_MGF_at_both_signed_saddles": [
+      {
+        "n": 80000000000,
+        "positive_tail_numeric": 0.19727464064198966,
+        "negative_tail_numeric": 0.1972746516985441
+      },
+      {
+        "n": 135000000000,
+        "positive_tail_numeric": 0.06462979119768751,
+        "negative_tail_numeric": 0.06462979731027503
+      },
+      {
+        "n": 175000000000,
+        "positive_tail_numeric": 0.02870571596382082,
+        "negative_tail_numeric": 0.02870571948319147
+      },
+      {
+        "n": 270000000000,
+        "positive_tail_numeric": 0.004177009910214311,
+        "negative_tail_numeric": 0.004177010700324858
+      }
+    ],
+    "non_interval_MPF_AND_FLOAT64_are_independent_diagnostics_not_rigorous_proofs": true
+  },
+  "Geeky_S13_ROT001_owner_I1": {
+    "author_first_full_field_Cinfty_axial_only_alias_Git_commit": "ae8103f65df0e932f064c51889e2df2f36b2cdec",
+    "author_source_report_read_directly": true,
+    "author_itself_explicitly_did_NOT_execute_original_M13_helper": true,
+    "M15_new_different_cell_original_M13_helper_actually_executed": true,
+    "independent_exact_prime41_cyclotomic_proof": "Phi_41(X)=1+X+...+X^40 irreducible, P=c*Phi41, 2*d0=c, all d_j=c for j>=1, 0=sum_j d_j=41*d0, so identical sorted triple labels",
+    "distinct_unordered_absolute_frequency_triples": 1771,
+    "sum_original_signed_permuted_orbit_multiplicities": 68921,
+    "MP68_nearest_numerical_axial_node_spacing": 0.0000039624113735067,
+    "gaussian_eigenvalue_B_over_A_ratio_is_constant_on_each_signed_permuted_orbit": true,
+    "disjoint_smooth_bumps_interpolate_full_1771_log_ratio_nodes": true,
+    "exact_same_full_68921_dimensional_Gaussian_law_consequence_under_unbounded_Cinfty_per_hypothesis": true,
+    "counterfactual_N40_same_axial_symbol_a0_different_FACE_ratios": [
+      1.0000968803409733,
+      0.99779719687217
+    ],
+    "N40_ratio_gap": 0.002299683468803382,
+    "no_claim_N41_fullfield_owner_firstness_or_unbounded_Cinfty_conditional_no_go_as_M15_new": true,
+    "the_unbounded_Cinfty_alias_does_NOT_refute_ROT037_C5_numerical_bounds": true,
+    "different_cell_nonblind_I1_only": true
+  },
+  "reproducer": {
+    "ZIP_filename": "IW_M15_ROT038_ORIGINAL_M13_LOGGAMMA_SOURCE_IV110_GEEKY_S13_I1_REPRO_001_20261122.zip",
+    "ZIP_bytes": 53862,
+    "ZIP_sha256": "802c56de77fc590784a7058ab245ee77e1e2684583ccdde5cc8f44198c0ee71e",
+    "ZIP_CRC": "PASS",
+    "archive_payloads_sha256": "13/13 PASS",
+    "archive_complete_member_bytes": "14/14 PASS",
+    "complete_new_primary_IV110_JSON_sha256": "b5f92d2c3e614f36ba6cd7bd25e99b3b44bbe5e9e0cdee3cdae4b95ad5fc547b",
+    "complete_new_independent_spatial_Geeky_I1_JSON_sha256": "c1321b614e71fc9881ec9fd81dc9812bc10a458d0d0e10d2c7eb9ea2246fae25",
+    "two_clean_independent_complete_JSON_replays": "2/2 BYTE IDENTICAL PASS",
+    "extra_final_ZIP_extracted_two_scientific_programs_complete_JSON_reruns": "2/2 BYTE IDENTICAL PASS",
+    "actual_disposable_source_and_science_negative_attacks": "9/9 EXPECTED NAMED FAIL CLOSED PASS",
+    "all_executable_bytes_in_user_ZIP_not_falsely_claimed_byte_mirrored_GitHub": true
+  },
+  "hard_limits": [
+    "Only public original M13 auxiliary source, NOT historic full DTC0a runtime",
+    "Fixed two synthetic original Geeky Gaussian site noise covariance shapes, no actual noise measurements or real N41^3 full site recorder",
+    "No actual high-frequency Fourier sensors, calibrated C5 derivative limits or billions of IID snapshots",
+    "New exact bound is not a statistically optimal test or a novel general inequality",
+    "Geeky-S13 owns full-field unbounded C-infinity calibration firstness; M15 different-cell internal nonblind referee only",
+    "No external blind I3, no REC13/AUD3 receipt, no KN15 native BW receipt",
+    "NO_NOVELTY",
+    "NO_CANON",
+    "NO_EXEC_SIGN",
+    "NO_TASK_CASCADE"
+  ]
+}
