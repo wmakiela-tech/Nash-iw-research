@@ -13,6 +13,6 @@ function audit(rows) {
   return {nominal,full,photons:z.power_share.photon,electrons:z.power_share.electron,higgs_excess:z.energy_excess_over_Ptot.higgs,hf:z.higgs_hadron_fraction.reduce((a,b)=>a+b,0)/z.higgs_hadron_fraction.length,hs:z.higgs_consistent_hadron_rate_shift.reduce((a,b)=>a+b,0)/z.higgs_consistent_hadron_rate_shift.length};
  });
  const ext=f=>[Math.min(...vals.map(f)),Math.max(...vals.map(f))];
- return {source_blob:blob,mass_rows:rows.length,max_algebraic_reconstruction_error:maxR,all_full_over_nominal:allGood,nominal_ratio:ext(x=>x.nominal),complete_ratio:ext(x=>x.full),direct_added_photon_electron:ext(x=>x.photons+x.electrons),Higgs_excess:ext(x=>x.higgs_excess),Higgs_share_of_5_hadrons_mean:ext(x=>x.hf),Higgs_remodel_rate_effect_mean:ext(x=>x.hs),mass_min_g:rows[0].M_g,mass_max_g:rows.at(-1).M_g};
+ return {source_blob:ORIGINAL_BLOB,mass_rows:rows.length,max_algebraic_reconstruction_error:maxR,all_full_over_nominal:allGood,nominal_ratio:ext(x=>x.nominal),complete_ratio:ext(x=>x.full),direct_added_photon_electron:ext(x=>x.photons+x.electrons),Higgs_excess:ext(x=>x.higgs_excess),Higgs_share_of_5_hadrons_mean:ext(x=>x.hf),Higgs_remodel_rate_effect_mean:ext(x=>x.hs),mass_min_g:rows[0].M_g,mass_max_g:rows.at(-1).M_g};
 }
 console.log(JSON.stringify(audit(ROWS),null,2));
