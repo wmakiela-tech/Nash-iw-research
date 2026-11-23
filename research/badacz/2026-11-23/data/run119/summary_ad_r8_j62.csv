@@ -1,0 +1,2 @@
+tag,arm,solver,j,m_init_g,Y,wall_s,nsteps,retcode,T_nuc_MeV
+ad_r8_j62,ad,r8,62,3494213660.2848887,0.24782351016037174,70.4,6648,Success,0.078185270688319944

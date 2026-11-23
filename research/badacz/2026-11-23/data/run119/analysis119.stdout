@@ -1,0 +1,18 @@
+{
+ "gates": {
+  "G_RUN": true,
+  "G_AD": true,
+  "G_CONV": true,
+  "G_REP": true,
+  "P_G3_code_side_extraction": true
+ },
+ "predictions": {
+  "P0_Y_code_r9": true,
+  "P0d_Y_code_def": false,
+  "P1_Qratio_code_r9": true,
+  "P2_dt_ratio_r9": true,
+  "P3_dY_ad_minus_code_r9": true,
+  "P_G1_R_in_band": true,
+  "P_G2_spectra_energy_consistency": true
+ }
+}

@@ -1,0 +1,2 @@
+tag,arm,solver,j,m_init_g,Y,wall_s,nsteps,retcode,T_nuc_MeV
+ad_def_j22,ad,def,22,1121174456.4709606,0.24797181105258165,35.2,167,Success,0.078185270688319944
