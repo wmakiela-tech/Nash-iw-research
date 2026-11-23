@@ -65,3 +65,28 @@ Narzędzia: WebSearch (tryb standard), alphaXiv (odczyt PDF), curl do blackhawk.
 - **O6. Status T2:** czy czynnik binowania wynika z BlackHawk (zmiana konwencji gęstości między tablicami 100 i 500 przedziałów), czy z całkowania przez autorów Wu–Xu. Sprawdzenie w kodzie `hadro_herwig.c` i `secondary.c` oraz w potoku R2 (085).
 
 Każdy obrót dopisuje do tej teczki sekcję rN z dokładnymi zapytaniami i lokatorami źródeł.
+
+## r2 (22 XI, 21:40, godzina z `date` przy zapisie): O1 wykonane. Archeologia wersji v1.0–v3.0
+
+**Metoda.** `code/bh_versions_herwig_114.py` dla każdego oficjalnego archiwum z blackhawk.hepforge.org (`downloader?f=blackhawk_vX.tar.bz2`) liczy SHA-256 archiwum. Porównuje bajtowo tablice HERWIG i PYTHIA dla epoki BBN z v2.3 (ścieżki `src/tables/herwig_tables/` w v1.x, `src/tables/hadronization_tables/…` od v2.0) oraz przepis `scripts/herwig_scripts/up/{LEP.in, main.cpp}`. Opisowo podaje też log10 stosunku krotności π± z kolumny „up” tablicy PYTHIA do v2.3. Archiwa czytałem jako dane i po przetworzeniu usuwałem (brak miejsca). Zapis: `data/bh_versions_114/v*.json`.
+
+| wersja | SHA-256 archiwum | tablice HERWIG = v2.3 | linia energii w `up/LEP.in` | tablice PYTHIA wobec v2.3 |
+|---|---|---|---|---|
+| 1.0 | 29f6ba2e… | 11/11 | `…LuminosityFunction:Energy %` | inne; π± „up”: −0.014 (5 GeV), −0.098 (99 GeV), −0.268 (1 TeV), −0.431 dex (100 TeV) |
+| 1.1 | fbec25a8… | 11/11 | to samo | jak 1.0 |
+| 1.2 | 57878c67… | 11/11 | to samo | jak 1.0 |
+| 2.0 | 29c15f97… | 11/11 | to samo | wszystkie 11 plików zawiera znaczniki konfliktu git (`<<<<<<< HEAD` … `=======` … `>>>>>>> f93dc41 (BlackHawk v2.0)`); blok HEAD = v2.3, drugi blok = stare tablice v1.x |
+| 2.1 | 8ac4bf4d… | 11/11 | to samo | 11/11 identyczne |
+| 2.2 | 6ae1149f… | 11/11 | to samo | 11/11 identyczne |
+| 2.3 | dd148349… | odniesienie | to samo | odniesienie |
+| 3.0 | c8bf4ccc… | 11/11 | to samo | 11/11 identyczne |
+
+`main.cpp` wstawia w miejsce `%` energię początkową wiersza E′, więc √s = E′ we wszystkich wersjach (REVIEW_098). `up/main.cpp` z v1.x–v2.2 różni się od v2.3 tylko zakomentowaniem linii `system("rm */ -rf");` (diff v2.2 wobec v2.3; SHA-256 `up/main.cpp` jest ten sam w v1.0–v2.2, 36a37d16…, a w v2.3 i v3.0 7aa6ed8e…). `LEP.in` jest identyczny we wszystkich wersjach.
+
+**Wnioski [▷]:**
+- T1 dotyczy wszystkich publicznych wydań BlackHawk od v1.0 (maj 2019) do v3.0 (czerwiec 2026). Tablice HERWIG i przepis ich generacji nigdy się nie zmieniły.
+- Tablice PYTHIA autorzy poprawili w v2.0 („Corrected PYTHIA tables”). Zmiana nie jest przeetykietowaniem √s: stare tablice v1.x mają krotności niższe o −0.01…−0.43 dex, a deficyt rośnie z energią. Tablic HERWIG nie ruszono. Klasa „problemy tablic hadronizacji BlackHawk” była więc autorom znana dla PYTHIA, ale przypadek HERWIG nie został zauważony (w dostępnych źródłach).
+- Dla bramki REC14 ROT001 (Thoss i in. 2024 deklarują BlackHawk 2.1): tablice HERWIG w v2.1 są bajtowo identyczne z v2.3. Ogniwo `V21_SOURCE_BYTES` jest ustalone. Nadal nieustalone pozostają `ACTUAL_AUTHOR_RUNTIME_CONFIG` (czy użyli `hadronization_choice = 1`) i skutek fizyczny.
+- Uboczne: wydanie v2.0 zawierało tablice PYTHIA ze znacznikami konfliktu git. Na liście błędów v2.1 (SHA-256 2f0092c2…) pasuje do tego „bug in convert_tables() and new tables in .h included”, ale tego nie rozstrzygam. Na T1 to nie wpływa.
+
+**Stan teczki:** O1 i O3 wykonane, O4 wstępnie. Kolejne: O2 (użytkownicy `hadronization_choice = 1`), O5 (repozytoria i zgłoszenia), O6 (status T2).

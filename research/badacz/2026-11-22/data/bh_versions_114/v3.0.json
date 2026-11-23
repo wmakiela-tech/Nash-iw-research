@@ -1,0 +1,62 @@
+{
+ "archive": "blackhawk_v3.0.tar.bz2",
+ "archive_sha256": "c8bf4cccac28e8adf598f793d093d8b8afece7fe23ec4ddc8fcf770776f9f1b3",
+ "herwig_tables": {
+  "different": [],
+  "same": [
+   "K0L.txt",
+   "Kpm.txt",
+   "electron.txt",
+   "muon.txt",
+   "neutron.txt",
+   "nue.txt",
+   "numu.txt",
+   "nutau.txt",
+   "photon.txt",
+   "pipm.txt",
+   "proton.txt"
+  ]
+ },
+ "pythia_pipm_up_log10_ratio_to_v23": {
+  "1e+05": 0.0,
+  "20.12": 0.0,
+  "3.033e+04": 0.0,
+  "300.7": 0.0,
+  "3020": 0.0,
+  "5": 0.0,
+  "50.21": 0.0,
+  "9.831": 0.0,
+  "98.73": 0.0,
+  "991.5": 0.0,
+  "9958": 0.0
+ },
+ "pythia_tables": {
+  "different": [],
+  "same": [
+   "K0L.txt",
+   "Kpm.txt",
+   "electron.txt",
+   "muon.txt",
+   "neutron.txt",
+   "nue.txt",
+   "numu.txt",
+   "nutau.txt",
+   "photon.txt",
+   "pipm.txt",
+   "proton.txt"
+  ]
+ },
+ "scripts": {
+  "LEP.in": {
+   "same_as_v23": true,
+   "sha256": "f5bec764f4bb2445b29ebd1b9e909cdf1ba4acb164211511aca45c396c95458f"
+  },
+  "LEP.in_energy_line": [
+   "set EventGenerator:EventHandler:LuminosityFunction:Energy %"
+  ],
+  "main.cpp": {
+   "same_as_v23": true,
+   "sha256": "7aa6ed8e66217739ddfbf768b46f5a3f8ce47e215f3a16679cd9324488ae22b2"
+  }
+ }
+}

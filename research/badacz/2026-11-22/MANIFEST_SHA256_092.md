@@ -324,3 +324,22 @@ bfd6bedc47dcd1d6c6ead80093828491d3a229168fc6b33887568e73955235c2  data/inputs_sh
 9076692bd1cf4a6266647a92a21df1009271304e5f1f0910c2a845b48cb37b7a  data/aux_logs_112.log
 e6380792131cc7bb2791acd9ed7c501e1a6d301c9db1fcc10242a8c56a851a4f  data/rate_dumps_112_sha256.log
 ```
+
+## 114 r2 / 115 (archeologia wersji BlackHawk; ekspozycja reżimu ekstrapolowanego)
+
+```
+c613a10dc63ffefee8e948a772427b709ae01fe6e778cb8420516725fd7e98c5  code/bh_versions_herwig_114.py
+42276047556f503dade4e5b96ad10b65732dfb32fe6cbee572434d55b8c39e4d  data/bh_versions_114/v1.0.json
+8523f16dee5ea696f9629c91506a5ff5c207112545f3720608de4b717ed99b12  data/bh_versions_114/v1.1.json
+b4023ab673c6c555ae75fbcb95e96e0c57f538b912c12e4cc3f0ca72f891362b  data/bh_versions_114/v1.2.json
+3be00615c7150cae2687e9e379d57f5293fc46d5dbb2de59d53b6d6c3bb4c429  data/bh_versions_114/v2.0.json
+266f93acbc427f50c6e091875b73c4ab0fa37641cf095a22a3dc9bcabe3584ea  data/bh_versions_114/v2.1.json
+07137754eb13a645a4cc9f8a21c974c07c1c484799be25bc0aef8773c933ffd4  data/bh_versions_114/v2.2.json
+8cc93e4836a6513d3b06b8872efde1c39e5877308f258a5d9f056d1ed56ede7d  data/bh_versions_114/v2.3.json
+0d6f64bace28a2b213c29367ca9a597f6e1758be4a80a405a309d0497c0dac72  data/bh_versions_114/v3.0.json
+67d78a4c9c37e0e4273dda64c74e7c4fd22262b7ba9f4294a46f195f6f41e900  code/posthoc_115.py
+12ab1c53029dfa4d5004082646bb8260287585182e243d9e2723d93a233d5db4  data/posthoc115.json
+# wejścia posthoc_115 (lokalne zrzuty deduplikowane 112)
+f07f7e690454770b9eb807b37cab63c1eab1a960efae57cdb08dea4c4068b0f4  dd_w22/rates_w22_1740.csv
+51611ae24d06004a1b5169bb09dea350e6c5f2b0b36967d696cbd93aaae8554c  dd_w62/rates_w62_1940.csv
+```

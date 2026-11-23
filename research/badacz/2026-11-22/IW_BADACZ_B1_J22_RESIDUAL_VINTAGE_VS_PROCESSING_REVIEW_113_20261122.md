@@ -85,3 +85,7 @@ Część „rocznikowa” jest prawdziwą systematyką generatora, tej samej nat
 - `data/analysis112.json`, `tables112.json`, `hadrons_112_{W,V}.dat`, `summary_{w,v,k}_112.csv`, `net112_raw.jsonl`, `mc112/herwig71_*.json`.
 - Logi: `timeline_112.log`, `inputs_sha_112.log`, `tables_sha256_112.log`, `spec_112.log`, `mc_logs_112.log`, `jl_logs_112.log`, `aux_logs_112.log`, `rate_dumps_112_sha256.log`.
 - Surowe zrzuty usunąłem po zapisaniu SHA (zgoda Moderatora). SHA w `MANIFEST_SHA256_092.md` (sekcja 112/113).
+
+## r2 (23 XI, 07:19, godzina z `date` przy zapisie): rola ekstrapolacji poniżej 1e9 g
+
+j22 = 1.121e9 g, więc ~49% hadronowej konwersji n↔p przypada na masy poniżej najniższego wiersza tablicy, gdzie kod Wu–Xu ekstrapoluje nachylenie wierszy 0–1 (REVIEW_110 r3). Różnica nachyleń W i V daje przy 5e8 g ≤ 0.003 dex, a H73 i W ≤ 0.012 dex w kierunku przeciwnym do vint. Wnioski §3 bez zmian; „rocznik działa przez kaony” odnosi się do modelu z tą ekstrapolacją.

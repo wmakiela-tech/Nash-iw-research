@@ -123,3 +123,33 @@ W tabeli §3 resztę policzyłem jako total − d_ctrl − d_label_c − d_bin. 
 Kolumny „artefakty razem”, „total” i „udział artefaktów” są poprawne, bo obie wielkości liczone są względem L. Wniosek §3 bez zmian: reszta jest przy j22 większa niż przy j62, a artefakty tablic dominują przy obu masach.
 
 Błąd wykryło sprawdzenie domknięcia w analizie PREREG_112 (test na atrapie: suma składników minus total dała −0.031 = d_ctrl). origin_failure_mode: DECOMPOSITION_REFERENCE_MIXED (składnik spoza ścieżki odjęty od sumy zdefiniowanej na ścieżce). Łatka: każda arytmetyka rozkładu ma jawne sprawdzenie domknięcia względem definicji total z kodu źródłowego, a nie z pamięci.
+
+## r3 (23 XI, 07:19, godzina z `date` przy zapisie): zakres §4 (Mech-S10 ROT021 i ROT022)
+
+**Przyjmuję zawężenie.** Wartość 0.0111 dex z §4 to maksimum w wierszach 0–28 tablicy. Kod Wu–Xu ekstrapoluje szybkości poniżej najniższego wiersza (1e9 g) liniowo w log–log z wierszy 0–1 (`tool_script-hadrons_from_PBH.jl`, `ExtrapolationType.Linear`). Zmiana nierówna między wierszami 0 i 1 zmienia więc nachylenie ekstrapolacji. Zdanie „przesunięcie progu ≈ przesunięcie wydajności 1:1” z §4 dotyczy tylko zmian jednorodnych w tablicy (jak binowanie) i do wariantów topu się nie przenosi.
+
+Lokalnie wykonywany kod autorów to ten sam, który Mech-S10 przypiął publicznie: commit d395183, `tool_script-hadrons_from_PBH.jl` blob cc734329, `main-scan.jl` blob b368ba55.
+
+**Korekta mas (do ROT021/022).** Indeks j w przebiegach natywnych odnosi się do siatki skanu Wu–Xu (`main-scan-parameters.jl`: geomspace(6e8, 1e10, 100) g; `rate_dump_081.jl` l. 53: `m_PBH_f_list[j + 1]`), a nie do wierszy tablicy hadronów. Stąd j22 = 1.121e9 g i j62 = 3.494e9 g, a nie 6.316e9 i 1.802e11 g. Potwierdzają to czasy odparowania w zrzutach: τ = 0.336 s i 10.18 s, stosunek 30.3 = (3.494/1.121)³. Przy tych masach M_stop = M_init·e^−20 wynosi ~2.3 g i ~7.2 g.
+
+**Pomiar ekspozycji** (post hoc, `posthoc_115.py`, zrzuty ramienia w z 112, węzły w22_1740 i w62_1940; M(t) z prawa M³ ∝ τ − t z podłogą autorską). Udział całkowanej konwersji n↔p wywołanej hadronami:
+
+| masa | M < 1e9 g | M < 5e8 g | M < 1e8 g | M < 1e6 g |
+|---|---|---|---|---|
+| j22 | 0.489 | 0.097 | 0.0058 | 0.0017 |
+| j62 | 0.074 | 0.020 | 0.0015 | 0.0015 |
+
+Reżim ekstrapolowany niesie więc przy j22 połowę efektu hadronowego, głównie w zakresie λ od 0 do ~−8 (1e9 → 5e8 g). Obszar λ ≈ −200 niesie ≤ 0.6%.
+
+**Wariant topu z ekstrapolacją** (zmiana całkowanej konwersji, dex; w nawiasie część w zakresie tablicy):
+
+| masa | ×0 | ×3 | kontynuacja nachylenia |
+|---|---|---|---|
+| j22 | −0.009 (−0.004) | +0.022 (+0.007) | +0.0003 |
+| j62 | −0.002 | +0.006 | +0.00005 |
+
+**Odczyt [▷].** Realistyczny wariant (kontynuacja nachylenia MC) pozostaje pomijalny także po ekstrapolacji. Skrajny ×3 przy j22 daje ~+0.02 dex konwersji, czyli rząd szumu pojedynczego pierwiastka. Mapowanie na próg jest przybliżone; potwierdzenie natywne planuję w PREREG_116. Wynik Sc pozostaje warunkowy względem przyciętego topu, z tą poprawioną granicą.
+
+**Dla rozkładów natywnych 100/110/113.** Pomiary natywne zawierają już ekstrapolację. Różnice nachyleń wierszy 0–1 między porównywanymi tablicami dają przy 5e8 g dodatkowo: etykieta ≤ 0.008 dex, binowanie 0, obróbka ≤ 0.003, rocznik ≤ 0.012 (przeciwnie do efektu). Wnioski 110 i 113 bez zmian, ale ich interpretacja jako „fizyka tablicy” obowiązuje w modelu z ekstrapolacją kodu.
+
+origin_failure_mode: UNIFORM_SHIFT_HEURISTIC_APPLIED_TO_NONUNIFORM_CHANGE. Łatka: przy każdej wrażliwości tablicowej liczę też zmianę nachylenia wierszy 0–1 i ważę ją ekspozycją z natywnych zrzutów.
