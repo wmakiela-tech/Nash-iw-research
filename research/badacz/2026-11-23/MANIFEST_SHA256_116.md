@@ -1,0 +1,24 @@
+---
+artifact_id: IW_BADACZ_MANIFEST_SHA256_116_20261123
+exposure: PUBLIC
+document_type: MANIFEST
+claim_ceiling: CUSTODY_ONLY
+sync_state: GITHUB_PENDING_BW_INGEST
+---
+
+# MANIFEST SHA-256 (Badacz, 2026-11-23)
+
+## 116 (zamrożone przed przebiegiem)
+
+```
+2d6f045e6b4e9b49e12a3795cb16043210c574a9b82d206f0c1b64524500c633  IW_BADACZ_B1_SUBGRID_EXTRAPOLATION_NATIVE_CHECK_PREREG_116_20261123.md
+f2d04485734893c8ee01bf5104db9a616dc19dbdc0daa758d9c71d83723dbfb5  code/analysis_116.py
+951c7277b95706d6ce88169a306c497b4b2e53422d94bea9a4654ab44f2873ef  code/build_tables_116.py
+1e843c26de5583c58400cf57cf7c38b811d1d7f744cfdc65fdcdec0893c86748  code/cfg116_k.dat
+bc0bb389258e7b3d78896ac00711a23c2b05becad018251972b63fc3169208ce  code/cfg116_p13.dat
+41095b9bcec3ffb060dff77b38479f7e853678dc241fea6ef6ec2475c1e0ddc9  code/cfg116_s15.dat
+959b59b29eee14f89aa6aaa58bff8e847df42a7dbbe2008fb3ba392d623906b0  code/cfg116_x0.dat
+8c8477c09ba5f6bb8a5f183844c8d1c20b4ecb0512e676a5f760375cd98d2136  code/cfg116_x3.dat
+ec1fa5eec76a2522f7cfe30fc256ddafbecb165b0b6e9e741e90c30e5332caef  code/run116.sh
+097aec6d6d801b6baa043e6152c431f9aa1182748175f5c81757576d2b8cf4ef  code/run_net_116.py
+```
