@@ -90,3 +90,17 @@ Każdy obrót dopisuje do tej teczki sekcję rN z dokładnymi zapytaniami i loka
 - Uboczne: wydanie v2.0 zawierało tablice PYTHIA ze znacznikami konfliktu git. Na liście błędów v2.1 (SHA-256 2f0092c2…) pasuje do tego „bug in convert_tables() and new tables in .h included”, ale tego nie rozstrzygam. Na T1 to nie wpływa.
 
 **Stan teczki:** O1 i O3 wykonane, O4 wstępnie. Kolejne: O2 (użytkownicy `hadronization_choice = 1`), O5 (repozytoria i zgłoszenia), O6 (status T2).
+
+## r3 (23 XI, 07:27, godzina z `date` przy zapisie): O2, opublikowani użytkownicy tablic HERWIG z BlackHawk
+
+| # | zapytanie lub źródło | wynik |
+|---|---|---|
+| 13 | `Thoss Burkert Kohri 2024 MNRAS primordial black holes BlackHawk HERWIG hadronization`, potem alphaXiv: arXiv:2402.17823v2 (MNRAS 532, 451) | §2.2: „we use HAZMA for black holes with k_B T < 0.1 GeV, HDMSPECTRA for temperatures k_B T > 100 GeV, and HERWIG in the intermediate range”; sekcja SOFTWARE: BlackHawk 2.1. Zastosowanie: ograniczenia z promieniowania γ (galaktyczne, pozagalaktyczne) i CMB (ExoCLASS); BBN liczone osobno, modelem Kawasaki i in. 2018. Konwencji energii nie omawiają. Dane: Zenodo 10.5281/zenodo.10718218. |
+| 14 | `"BlackHawk" "HERWIG" primordial black hole secondary spectra antiprotons OR positrons OR "BBN" hadronization comparison` | Opisy opcji (manual, 2010.04797, 2203.14979, 2406.11949: PYTHIA i Herwig „above 10 GeV”); brak porównań PYTHIA–HERWIG z wnioskiem o konwencji energii. |
+
+**Odczyt [▷].**
+- Opcja HERWIG w BlackHawk to wyłącznie tablice epoki BBN (`hadronization_choice = 1`), a w v2.1 są one bajtowo równe v2.3 (r2). Thoss i in. 2024 użyli ich więc z własnością T1 w opublikowanych ograniczeniach γ dla T od 0.1 do 100 GeV. Pierwotne mają tam energie ~0.5–500 GeV, w całości w siatce tablic HERWIG (25 GeV–1e5 GeV; poniżej 25 GeV zachowanie BlackHawk zależy od ekstrapolacji).
+- Skali wpływu T1 na ich wynik nie oceniam. Opisany przez nich model niepewności to „około dwóch dex” (Auffinger 2023), więc wpływ może być w tym schowany. To przypadek propagacji T1 do literatury, nie dowód błędu ich wniosków.
+- Dla bramki REC14 ROT001: ogniwo „HERWIG faktycznie użyty” jest teraz deklarowane przez autorów (tekst artykułu). Plik parametrów ich przebiegu pozostaje nieznany. Rekord Zenodo 10.5281/zenodo.10718218 nie jest osiągalny z tej sesji (WebFetch: adres spoza listy dozwolonych; wyszukiwanie nie zwróciło strony rekordu); do sprawdzenia przez komórkę z dostępem.
+
+**Stan teczki:** O1, O3 wykonane; O2 częściowo (jeden opublikowany użytkownik, zastosowanie γ); O4 wstępnie; O5 i O6 otwarte.
