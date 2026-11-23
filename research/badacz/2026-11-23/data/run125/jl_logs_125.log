@@ -1,0 +1,324 @@
+┌ Info: Added 1 workers for _badacz123_prefix_567.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_567.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j20 none NaN
+┌ Info: Added 1 workers for _badacz123_prefix_554.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_554.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j20 none NaN
+┌ Info: Added 1 workers for _badacz123_prefix_585.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_585.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j20 none NaN
+┌ Info: Added 1 workers for _badacz123_prefix_357.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_357.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j22 root -17.11137741478276
+┌ Info: Added 1 workers for _badacz123_prefix_438.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_438.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j22 root -17.266423530092585
+┌ Info: Added 1 workers for _badacz123_prefix_502.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_502.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j22 root -17.38780593086007
+┌ Info: Added 1 workers for _badacz123_prefix_358.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_358.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j62 root -19.37914451382472
+┌ Info: Added 1 workers for _badacz123_prefix_424.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_424.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j62 root -19.394919236366103
+┌ Info: Added 1 workers for _badacz123_prefix_489.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_489.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE base def j62 root -19.39843572797053
+┌ Info: Added 1 workers for _badacz123_prefix_598.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_598.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j20 root -18.293905089684003
+┌ Info: Added 1 workers for _badacz123_prefix_631.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_631.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j20 root -18.415733790285028
+┌ Info: Added 1 workers for _badacz123_prefix_616.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_616.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j20 root -18.49406252566782
+┌ Info: Added 1 workers for _badacz123_prefix_404.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_404.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j22 root -18.541013756389855
+┌ Info: Added 1 workers for _badacz123_prefix_472.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_472.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j22 root -18.64848731387141
+┌ Info: Added 1 workers for _badacz123_prefix_534.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_534.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j22 root -18.727629319045057
+┌ Info: Added 1 workers for _badacz123_prefix_391.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_391.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j62 root -19.63119043504535
+┌ Info: Added 1 workers for _badacz123_prefix_457.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_457.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j62 root -19.635972264506215
+┌ Info: Added 1 workers for _badacz123_prefix_520.jl.
+│ Please run the following command to start the workers if the number of workers is not your desired one:
+└ `julia --project --procs=<number of workers> _badacz123_prefix_520.jl`
+┌ Info: Scanning parameters:
+│ m_PBH (min): 6.0e8 gram
+│ m_PBH (max): 1.0e10 gram
+│ number of m_PBH: 100
+│ 
+│ β_PBH (min): 1.0e-20
+│ β_PBH (max): 1.0e-17
+└ number of β_PBH: 100
+┌ Warning: Assignment to `ok` in soft scope is ambiguous because a global variable by the same name exists: `ok` will be treated as a new local. Disambiguate by using `local ok` to suppress this warning or `global ok` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:97
+┌ Warning: Assignment to `a` in soft scope is ambiguous because a global variable by the same name exists: `a` will be treated as a new local. Disambiguate by using `local a` to suppress this warning or `global a` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+┌ Warning: Assignment to `b` in soft scope is ambiguous because a global variable by the same name exists: `b` will be treated as a new local. Disambiguate by using `local b` to suppress this warning or `global b` to assign to the existing global variable.
+└ @ /home/claude/nash-iw-research/research/badacz/2026-11-23/code/std_a_123.jl:99
+DONE std def j62 root -19.63740052183538

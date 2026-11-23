@@ -1,0 +1,11 @@
+{
+ "gates": {
+  "G_RUN": true,
+  "G_TAB": true
+ },
+ "predictions": {
+  "P_A1_j22_shift_robust": true,
+  "P_A2_j62_shift_robust": true,
+  "P_A3_left_wall_std_root_j20": true
+ }
+}
