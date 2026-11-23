@@ -46,3 +46,12 @@ ea143d3989477810a185a8197c5eed95ec76be9054098597152e03d89988cbcb  data/summary_x
 fac94adb4e9a22784303e5fd570fa9c8e602631f6440b89e559ad655196a60bd  data/tables_sha256_116.log
 4e23155ed3bf99509b34a8c60f24c710cb627de69e01e498572c87b09405fdc1  data/timeline_116.log
 ```
+
+## 118 (tau_check, 2026-11-23)
+
+Wejścia (lokalne, nie w repo; te same co posthoc_115): rates_w22_1740.csv f07f7e690454770b9eb807b37cab63c1eab1a960efae57cdb08dea4c4068b0f4, rates_w62_1940.csv 51611ae24d06004a1b5169bb09dea350e6c5f2b0b36967d696cbd93aaae8554c.
+
+```
+5cf312cbda6267799b4fb27888765b9b5bca703d3259f9d1ae28255cbf67ab44  code/tau_check_118.py
+72df427a5c4e316972eeed060869aaa5b328081d4cbf1e0a544ec511fa5d6fa0  data/tau_check_118.json
+```

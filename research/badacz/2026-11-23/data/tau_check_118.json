@@ -1,0 +1,23 @@
+{
+ "cells": {
+  "j22": {
+   "M_init_g": 1121174456.4709601,
+   "ratio_std_over_code": 1.708634606750508,
+   "tau_code_s": 0.3357103997062012,
+   "tau_resolution_s": 2.6051837096197072e-05,
+   "tau_std_s": 0.5736064067840609
+  },
+  "j62": {
+   "M_init_g": 3494213660.2848945,
+   "ratio_std_over_code": 1.7079256788857593,
+   "tau_code_s": 10.16655495626427,
+   "tau_resolution_s": 0.0007654396353569126,
+   "tau_std_s": 17.363720275607033
+  }
+ },
+ "formula": "tau_std = 407 s * (M/1e10 g)^3 (f = 15.35)",
+ "inputs_sha256": {
+  "rates_w22_1740.csv": "f07f7e690454770b9eb807b37cab63c1eab1a960efae57cdb08dea4c4068b0f4",
+  "rates_w62_1940.csv": "51611ae24d06004a1b5169bb09dea350e6c5f2b0b36967d696cbd93aaae8554c"
+ }
+}
