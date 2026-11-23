@@ -39,9 +39,9 @@
     }
   ],
   "total_moment": 0.10596712905920753,
-  "fM_reconstructed": 9.36780268054588e+73,
+  "fM_reconstructed": 9.368419485678995e+73,
   "fM_actual_source": 9.47999e+73,
-  "ratio_vs_original_fM": 0.9881658820891035,
+  "ratio_vs_original_fM": 0.9882309459903433,
   "massResult": {
     "j22": {
       "M0_g": 1121174456.4709601,
@@ -70,5 +70,7 @@
     "photons": 0.007982054540980991,
     "gravitons": 0.0009104247993024806
   },
-  "scope": "PRIMARY_SOURCE_MASSLESS_APPROX_NOT_NATIVE_HADRON_OR_BBN_NO_CANON_NO_EXEC_SIGN"
+  "scope": "PRIMARY_SOURCE_MASSLESS_APPROX_NOT_NATIVE_HADRON_OR_BBN_NO_CANON_NO_EXEC_SIGN",
+  "source_G_source_C_nat_GeVm2": 6.708609145836679e-39,
+  "source_G_exact_provenance": "cewasiuk/Spin-and-Charge-BH-Evolution@0bd531e src/include.h lines20-31 actual G formula"
 }
