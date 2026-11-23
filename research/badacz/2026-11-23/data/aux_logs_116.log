@@ -1,0 +1,27 @@
+# tables.log
+{"G_REBUILD_SC": {"pass": true}, "G_FINITE": {"pass": true}}
+{"j22|x0": -0.009263467219986988, "j22|x3": 0.0218985883394841, "j22|p13": 0.01765725488274877, "j22|s15": 0.3069613477776125, "j62|x0": -0.001725385636774755, "j62|x3": 0.006207679604069341, "j62|p13": 0.007431667101986907, "j62|s15": 0.20962890212155258}
+# dedupe_dump_k.log
+files 1 with drops 0
+# dedupe_dump_p1322.log
+files 31 with drops 0
+# dedupe_dump_p1362.log
+files 21 with drops 8
+# dedupe_dump_s1522.log
+files 41 with drops 0
+# dedupe_dump_s1562.log
+files 30 with drops 12
+# dedupe_dump_x022.log
+files 31 with drops 0
+# dedupe_dump_x322.log
+files 31 with drops 0
+# patch.log
+PATCHED cd607965eb711efc20463c754801140db4b4c53a0cae41654a3327e95b4f6fd0
+PATCHED_079 b6bb563659bd10befacefb465418a10890b3e2233773b64b162be96173829ce0
+# net.log
+NET116_DONE 187 expected 187 failed 0 []
+# analysis116 stdout
+{"G_TABLES": true, "G_COMPLETE": true, "G_V2": true, "G_DRIVER": true, "G_BASE": true}
+{"status": "MEASURED"}
+{"x0|22": true, "x3|22": true, "p13|22": false, "p13|62": true, "s15|22": false, "s15|62": false}
+{"x0|22": {"D": -0.0093, "n_cells": 4, "status": "MEASURED", "mean_dr": 0.0209, "min_dr": 0.008, "max_dr": 0.0323, "c_hat": 2.2558}, "x3|22": {"D": 0.0219, "n_cells": 4, "status": "MEASURED", "mean_dr": -0.0593, "min_dr": -0.0769, "max_dr": -0.0447, "c_hat": 2.7067}, "p13|22": {"D": 0.0177, "n_cells": 4, "status": "MEASURED", "mean_dr": -0.0614, "min_dr": -0.0712, "max_dr": -0.0522, "c_hat": 3.4784}, "p13|62": {"D": 0.0074, "n_cells": 4, "status": "MEASURED", "mean_dr": -0.0046, "min_dr": -0.0082, "max_dr": -0.002, "c_hat": 0.6202}, "s15|22": {"D": 0.307, "n_cells": 4, "status": "MEASURED", "mean_dr": -0.1652, "min_dr": -0.1948, "max_dr": -0.149, "c_hat": 0.5382}, "s15|62": {"D": 0.2096, "n_cells": 4, "status": "MEASURED", "mean_dr": -0.0107, "min_dr": -0.0131, "max_dr": -0.0076, "c_hat": 0.051}}

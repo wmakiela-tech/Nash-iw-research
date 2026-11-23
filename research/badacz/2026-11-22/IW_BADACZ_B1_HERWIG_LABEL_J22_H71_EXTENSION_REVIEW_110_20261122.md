@@ -153,3 +153,7 @@ Reżim ekstrapolowany niesie więc przy j22 połowę efektu hadronowego, główn
 **Dla rozkładów natywnych 100/110/113.** Pomiary natywne zawierają już ekstrapolację. Różnice nachyleń wierszy 0–1 między porównywanymi tablicami dają przy 5e8 g dodatkowo: etykieta ≤ 0.008 dex, binowanie 0, obróbka ≤ 0.003, rocznik ≤ 0.012 (przeciwnie do efektu). Wnioski 110 i 113 bez zmian, ale ich interpretacja jako „fizyka tablicy” obowiązuje w modelu z ekstrapolacją kodu.
 
 origin_failure_mode: UNIFORM_SHIFT_HEURISTIC_APPLIED_TO_NONUNIFORM_CHANGE. Łatka: przy każdej wrażliwości tablicowej liczę też zmianę nachylenia wierszy 0–1 i ważę ją ekspozycją z natywnych zrzutów.
+
+## r4 (23 XI, 08:33, godzina z `date` przy zapisie): pomiar natywny wariantów topu (REVIEW_117)
+
+Natywnie przy j22 skrajne nawiasy topu przesuwają próg o +0.021 dex (×0; +0.008…+0.032) i −0.059 dex (×3; −0.077…−0.045). Szacunek z r3 (~0.02 dex przez D) był zaniżony: przybliżenie D nie przewiduje progu (c_hat 2.3–2.7 dla tych wariantów). Realistyczna kontynuacja nachylenia pozostaje pomijalna (≤ 0.001 dex nawet przy c = 3.5). Wynik Sc jest warunkowy względem przyciętego topu, z nawiasem do ~0.06 dex przy j22.

@@ -104,3 +104,23 @@ Każdy obrót dopisuje do tej teczki sekcję rN z dokładnymi zapytaniami i loka
 - Dla bramki REC14 ROT001: ogniwo „HERWIG faktycznie użyty” jest teraz deklarowane przez autorów (tekst artykułu). Plik parametrów ich przebiegu pozostaje nieznany. Rekord Zenodo 10.5281/zenodo.10718218 nie jest osiągalny z tej sesji (WebFetch: adres spoza listy dozwolonych; wyszukiwanie nie zwróciło strony rekordu); do sprawdzenia przez komórkę z dostępem.
 
 **Stan teczki:** O1, O3 wykonane; O2 częściowo (jeden opublikowany użytkownik, zastosowanie γ); O4 wstępnie; O5 i O6 otwarte.
+
+## r4 (23 XI, 07:37, godzina z `date` przy zapisie): O5, repozytoria i zgłoszenia
+
+| # | zapytanie (GitHub REST przez `gh`) | wynik |
+|---|---|---|
+| 15 | `search/issues?q=BlackHawk+herwig+is:issue` i `…BlackHawk+hadronization+is:issue` | Po 1 trafieniu: wyłącznie zgłoszenie tego projektu (wmakiela-tech/Nash-iw-research, „IW/NASH B1 — MOST ONLINE Mech-S9 ↔ Badacz”). Brak zgłoszeń zewnętrznych. |
+| 16 | `search/code?q=hadronization_choice+herwig` | 104 pliki, głównie szablony `parameters.txt` i kopie BlackHawk w repozytoriach użytkowników (np. cewasiuk/Spin-and-Charge-BH-Evolution, michellekwok2/blackhawk_SUSY) oraz dane wyjściowe. Nie przeglądałem wszystkich ustawień `hadronization_choice`. |
+| 17 | `gh search code "LuminosityFunction:Energy %"`, `search/code?q="LuminosityFunction:Energy"+herwig_scripts` | brak trafień w indeksie kodu GitHub (skrypty BlackHawk nie są tam indeksowane albo nie ma ich kopii). |
+| 18 | `gh search repos BlackHawk` / `blackhawk hawking` | jedno repozytorium dydaktyczne korzystające z BlackHawk (fuzzballnerd/Hawking-Radiation); reszta to niezwiązane projekty o tej nazwie. Oficjalnego repozytorium BlackHawk na GitHub nie znalazłem (dystrybucja przez hepforge). |
+
+**Odczyt:** w publicznych zgłoszeniach i kodzie na GitHub nie ma śladu T1 poza tym projektem. Ograniczenie: indeks kodu GitHub nie obejmuje archiwów hepforge ani repozytoriów prywatnych.
+
+**O6 (status T2), odczyt kodu:**
+- BlackHawk v2.3 `secondary.c` l. 138/145 zamienia liczbę zliczeń w przedziale k tablicy na gęstość `dN/dE'`: dzieli ją przez szerokość przedziału w przód (`final_energies[k+1] − final_energies[k]`) i przypisuje dolnej krawędzi E_k.
+- Autorzy Wu–Xu całkują wyjście BlackHawk regułą trapezów w ln E (`valid_hadrons_from_BlackHawk.ipynb`, komórka 12: `h = mean(Δ log E)`, `(h/2)(2Σ − pierwszy − ostatni)`). Dla siatki logarytmicznej o kroku Δ daje to liczby zaniżone dokładnie o BIN = (e^Δ − 1)/Δ, niezależnie od kształtu widma: 1.0258 dla PYTHIA (500 przedziałów) i 1.1396 dla HERWIG (100 przedziałów). Dokładne odtworzenie liczby daje dopiero Σ ρ_k ΔE_k.
+- Autorzy sami używają `hadronization_choice = 0` (PYTHIA; `tool_script-BlackHawk_extension.jl` l. 230–232). Ich tablica jest więc zaniżona o 2.6% (0.011 dex), a nie o 14%.
+
+**Wniosek o T2 [▷]:** T2 nie jest wadą danych HERWIG. To niedopasowanie konwencji: gęstość z dolnej krawędzi przedziału w BlackHawk plus gładka reguła całkowania u użytkownika. Dotyczy każdej tablicy BlackHawk, a dla HERWIG jest ~5× większe przez grubsze binowanie. Status nowości T2 jest słabszy niż T1 (zagrożenie użytkowe, częściowo po stronie użytkownika).
+
+**Stan teczki po obrocie 2:** O1, O3, O5, O6 wykonane; O2 częściowo (Thoss i in. 2024); O4 wstępnie. We wszystkich przejrzanych źródłach (18 wpisów) T1 nie jest opisany. To nadal „nie znalazłem”, nie „nie istnieje”; decyzja o nowości należy do Moderatora.
