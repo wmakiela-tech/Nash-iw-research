@@ -1,0 +1,175 @@
+{
+  "original_author_hadron_table_rows": 100,
+  "author_grid_min_g": 1000000000,
+  "author_grid_max_g": 4000000000000.0005,
+  "secondary_total_rows": 100,
+  "cross_table_rate_cells": 500,
+  "max_mass_grid_rel_discrepancy": 0,
+  "max_relative_rate_discrepancy_with_CODATA_hbar": 7.734202167597459e-11,
+  "implied_hbar_in_GeV_s_in_500_cells_median": 6.58211956950907e-25,
+  "fcode_source_checked_ROT011": 1.6295583423315782e+74,
+  "R_BH_over_code_assumption_only": 0.58175,
+  "exact_analytic_vs_24000_panel_Simpson_max_relative_discrepancy": 1.6611360065255099e-9,
+  "exact_analytic_vs_Simpson_subgrid_share_max_abs_discrepancy": 1.0436096431476471e-14,
+  "cases": [
+    {
+      "mass_initial_g": 1121000000,
+      "category": "pi_charged_column",
+      "alpha_below_grid": 1.2004856256108545,
+      "modelled_subgrid_pct": 81.42312260866834,
+      "N_h_per_BH_code": 3.6159515794300184e+29,
+      "N_h_per_BH_if_R_constant": 6.215645173064062e+29,
+      "lower_cutoff_g": 2.3105532107536235,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9183791716230594,
+        "alpha_1p3": 1.0476633594541886,
+        "alpha_1p5": 1.1625826375261985
+      },
+      "independent_simpson_rel_error": 1.649316239138443e-9
+    },
+    {
+      "mass_initial_g": 1121000000,
+      "category": "K_charged_column",
+      "alpha_below_grid": 1.1966513505022411,
+      "modelled_subgrid_pct": 81.38745844555305,
+      "N_h_per_BH_code": 4.362315159397384e+28,
+      "N_h_per_BH_if_R_constant": 7.498607923330269e+28,
+      "lower_cutoff_g": 2.3105532107536235,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9199752319136849,
+        "alpha_1p3": 1.0494781406847211,
+        "alpha_1p5": 1.1645918373699815
+      },
+      "independent_simpson_rel_error": 1.6413346237698079e-9
+    },
+    {
+      "mass_initial_g": 1121000000,
+      "category": "K0_long_column",
+      "alpha_below_grid": 1.1968048413492567,
+      "modelled_subgrid_pct": 81.38887880407768,
+      "N_h_per_BH_code": 2.1468954429252793e+28,
+      "N_h_per_BH_if_R_constant": 3.6904090123339565e+28,
+      "lower_cutoff_g": 2.3105532107536235,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9199113730968482,
+        "alpha_1p3": 1.049405519179957,
+        "alpha_1p5": 1.1645114268092813
+      },
+      "independent_simpson_rel_error": 1.6371629607547789e-9
+    },
+    {
+      "mass_initial_g": 1121000000,
+      "category": "proton_column",
+      "alpha_below_grid": 1.2042914285384585,
+      "modelled_subgrid_pct": 81.45854349966459,
+      "N_h_per_BH_code": 2.5807262956732857e+28,
+      "N_h_per_BH_if_R_constant": 4.436143181217509e+28,
+      "lower_cutoff_g": 2.3105532107536235,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9167935889089571,
+        "alpha_1p3": 1.0458604754805323,
+        "alpha_1p5": 1.1605865968773832
+      },
+      "independent_simpson_rel_error": 1.6611360065255099e-9
+    },
+    {
+      "mass_initial_g": 1121000000,
+      "category": "neutron_column",
+      "alpha_below_grid": 1.2047630639830331,
+      "modelled_subgrid_pct": 81.46292988127944,
+      "N_h_per_BH_code": 2.5669770381055176e+28,
+      "N_h_per_BH_if_R_constant": 4.412508875127662e+28,
+      "lower_cutoff_g": 2.3105532107536235,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9165970043823713,
+        "alpha_1p3": 1.04563694024034,
+        "alpha_1p5": 1.1603391054473184
+      },
+      "independent_simpson_rel_error": 1.6598876717566213e-9
+    },
+    {
+      "mass_initial_g": 3494000000,
+      "category": "pi_charged_column",
+      "alpha_below_grid": 1.2004856256108545,
+      "modelled_subgrid_pct": 11.158360018462583,
+      "N_h_per_BH_code": 2.6385783243396705e+30,
+      "N_h_per_BH_if_R_constant": 4.5355880091786343e+30,
+      "lower_cutoff_g": 7.201670756800322,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9888145460545371,
+        "alpha_1p3": 1.0065318659790936,
+        "alpha_1p5": 1.0222805948008429
+      },
+      "independent_simpson_rel_error": 1.5726220325973372e-10
+    },
+    {
+      "mass_initial_g": 3494000000,
+      "category": "K_charged_column",
+      "alpha_below_grid": 1.1966513505022411,
+      "modelled_subgrid_pct": 11.09585729584071,
+      "N_h_per_BH_code": 3.199732425316485e+29,
+      "N_h_per_BH_if_R_constant": 5.500184658902423e+29,
+      "lower_cutoff_g": 7.201670756800322,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9890899233889642,
+        "alpha_1p3": 1.0067455403914398,
+        "alpha_1p5": 1.0224394221713398
+      },
+      "independent_simpson_rel_error": 1.4801504466532833e-10
+    },
+    {
+      "mass_initial_g": 3494000000,
+      "category": "K0_long_column",
+      "alpha_below_grid": 1.1968048413492567,
+      "modelled_subgrid_pct": 11.099926754143262,
+      "N_h_per_BH_code": 1.5741852795924915e+29,
+      "N_h_per_BH_if_R_constant": 2.705948052587007e+29,
+      "lower_cutoff_g": 7.201670756800322,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9890774033808124,
+        "alpha_1p3": 1.0067379923670894,
+        "alpha_1p5": 1.022436293688146
+      },
+      "independent_simpson_rel_error": 1.4345546972549528e-10
+    },
+    {
+      "mass_initial_g": 3494000000,
+      "category": "proton_column",
+      "alpha_below_grid": 1.2042914285384585,
+      "modelled_subgrid_pct": 11.220840981909234,
+      "N_h_per_BH_code": 1.87349776684083e+29,
+      "N_h_per_BH_if_R_constant": 3.22045168343933e+29,
+      "lower_cutoff_g": 7.201670756800322,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9885383918320146,
+        "alpha_1p3": 1.0063172391822084,
+        "alpha_1p5": 1.022120659048968
+      },
+      "independent_simpson_rel_error": 1.7261736484641688e-10
+    },
+    {
+      "mass_initial_g": 3494000000,
+      "category": "neutron_column",
+      "alpha_below_grid": 1.2047630639830331,
+      "modelled_subgrid_pct": 11.228283983838445,
+      "N_h_per_BH_code": 1.8623813822578185e+29,
+      "N_h_per_BH_if_R_constant": 3.201343158156972e+29,
+      "lower_cutoff_g": 7.201670756800322,
+      "source_slope_sensitivity": {
+        "alpha_1": 0.9885043108409882,
+        "alpha_1p3": 1.0062902786079346,
+        "alpha_1p5": 1.0221000277340304
+      },
+      "independent_simpson_rel_error": 1.8245538413452778e-10
+    }
+  ],
+  "notes": [
+    "source rates are counted per source column, NOT combined charge multiplicity",
+    "secondary count correspondence alone cannot establish secondary energy budget G_EC+(b)",
+    "all subgrid values are assumptions from log-log extrapolation, not directly tabulated"
+  ],
+  "provenance": {
+    "author_blob": "06d0883a27b108692720422294ba2baacd381a64",
+    "badacz_secondary_totals_blob": "2ffa1720a45dcd52fcbd7b668416007d5f927eee"
+  }
+}
