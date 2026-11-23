@@ -1,0 +1,32 @@
+{
+  "source_blob": "4bb27a3271de1331ecef73ae629021c7b188a97b",
+  "mass_rows": 46,
+  "max_algebraic_reconstruction_error": 3.3306690738754696e-16,
+  "all_full_over_nominal": true,
+  "nominal_ratio": [
+    1.014584134027137,
+    1.0243845175059103
+  ],
+  "complete_ratio": [
+    1.0613968769543713,
+    1.0712812336460438
+  ],
+  "direct_added_photon_electron": [
+    0.04681140104565418,
+    0.04689671614013347
+  ],
+  "Higgs_excess": [
+    0.017104774981138268,
+    0.01818906002382746
+  ],
+  "Higgs_share_of_5_hadrons_mean": [
+    0.047208370914344294,
+    0.054649076300370206
+  ],
+  "Higgs_remodel_rate_effect_mean": [
+    -0.015462996677464832,
+    -0.0070943889559180575
+  ],
+  "mass_min_g": 2125494567.058564,
+  "mass_max_g": 92206172614.60468
+}
