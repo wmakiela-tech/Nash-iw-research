@@ -1,0 +1,74 @@
+{
+  "source": "BlackHawk family gamma 200 x a*=0 C linear interpolation, all SM masses neglected",
+  "provenance": [
+    {
+      "spin": "spin_0",
+      "dof": 1,
+      "gamma_source_sha": "79b7811b3ff9342ae4b9287939d703b63aa18aaa",
+      "fit_source_sha": "46bf24fb369a605482e9dbd0592e957e563ce93b",
+      "energy_moment": 0.0018704834704328587,
+      "share": 0.017651544276411926,
+      "endpoint_gamma_x5": 8.70935e-26
+    },
+    {
+      "spin": "spin_0.5",
+      "dof": 90,
+      "gamma_source_sha": "e7f2661bfe08e06a20a79e9ee9e581edbf04d04c",
+      "fit_source_sha": "85e2e21df4aa3db6ddde54a22254b38a37ebe2ba",
+      "energy_moment": 0.0010286821392954937,
+      "share": 0.8736802946210421,
+      "endpoint_gamma_x5": 8.69881e-26
+    },
+    {
+      "spin": "spin_1",
+      "dof": 27,
+      "gamma_source_sha": "21c92c95324855527a55d6537651a9635f90ac06",
+      "fit_source_sha": "def5e0ed5addd8abbfec80c850bf94ab2f48ccfd",
+      "energy_moment": 0.00042291770185088316,
+      "share": 0.1077577363032434,
+      "endpoint_gamma_x5": 8.67503e-26
+    },
+    {
+      "spin": "spin_2",
+      "dof": 2,
+      "gamma_source_sha": "8bd80b7ddc9fb0a4a78c6b123c15807c4d0d1267",
+      "fit_source_sha": "8fd7b29d7c2826c29c70b7675bb564ba3853d262",
+      "energy_moment": 0.00004823755110319454,
+      "share": 0.0009104247993024806,
+      "endpoint_gamma_x5": 8.57336e-26
+    }
+  ],
+  "total_moment": 0.10596712905920753,
+  "fM_reconstructed": 9.36780268054588e+73,
+  "fM_actual_source": 9.47999e+73,
+  "ratio_vs_original_fM": 0.9881658820891035,
+  "massResult": {
+    "j22": {
+      "M0_g": 1121174456.4709601,
+      "stop_g": 2.3109127923407007,
+      "exact_tabular_Fubini": 0.4766798100393498,
+      "mass_simpson500": 0.476679809732008,
+      "mass_simpson2000": 0.4766798100599768,
+      "relative_Fubini_vs_2000": 4.3272274652395026e-11,
+      "share_highE_below_author_1e9g": 0.9956680751167959
+    },
+    "j62": {
+      "M0_g": 3494213660.2848945,
+      "stop_g": 7.2021111434705025,
+      "exact_tabular_Fubini": 0.15342356256479964,
+      "mass_simpson500": 0.15342355877213376,
+      "mass_simpson2000": 0.15342356253355857,
+      "relative_Fubini_vs_2000": 2.0362622699110489e-10,
+      "share_highE_below_author_1e9g": 0.992597118993035
+    }
+  },
+  "sector_shares": {
+    "QCD": 0.7628006720246816,
+    "charged_leptons": 0.11649070594947229,
+    "neutrinos": 0.058245352974736146,
+    "WZH": 0.05357078971082639,
+    "photons": 0.007982054540980991,
+    "gravitons": 0.0009104247993024806
+  },
+  "scope": "PRIMARY_SOURCE_MASSLESS_APPROX_NOT_NATIVE_HADRON_OR_BBN_NO_CANON_NO_EXEC_SIGN"
+}
