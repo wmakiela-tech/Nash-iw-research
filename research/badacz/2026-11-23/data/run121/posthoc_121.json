@@ -44,12 +44,12 @@
   },
   "gluons": {
    "bias_minmax": [
-    NaN,
-    NaN
+    null,
+    null
    ],
    "eps_hw_corrected_minmax": [
-    NaN,
-    NaN
+    null,
+    null
    ],
    "eps_hw_mid_minmax": [
     0.5847365665414317,

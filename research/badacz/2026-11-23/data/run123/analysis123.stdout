@@ -1,0 +1,15 @@
+{
+ "gates": {
+  "G_RUN": true,
+  "G_BASE": true,
+  "G_TAU": true,
+  "G_MONO": true,
+  "G_REP": false
+ },
+ "predictions": {
+  "P_S1_j22_shift_NONBLIND": true,
+  "P_S2_j62_shift": true,
+  "P_S3_left_wall_std_roots": true,
+  "P_S4_base_no_root_below_m17_for_j16_21": true
+ }
+}

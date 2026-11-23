@@ -82,6 +82,16 @@ for mg in ms:
                 "higgs_energy_consistent_dN_over_N": ((NH_half - Nch["higgs"]) / Ntot).tolist(),
                 "gluon_power_share_below_61GeV": below61["gluons"], "P_spec_over_P_fM": Ptot / PfM})
 out["mass_level"] = res
-json.dump(out, open(OUT, "w"), indent=1, sort_keys=True)
+def _nan_to_null(o):   # r2 (REC14 ROT011): strict JSON; undefined values (e.g. gluon calibration, PYTHIA zeros at E'/2 <= 61 GeV) -> null
+    if isinstance(o, float) and o != o:
+        return None
+    if isinstance(o, dict):
+        return {k: _nan_to_null(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_nan_to_null(v) for v in o]
+    return o
+
+
+json.dump(_nan_to_null(out), open(OUT, "w"), indent=1, sort_keys=True, allow_nan=False)
 pick = [r for r in res if any(abs(r["M_g"] / m - 1) < 0.05 for m in (1e9, 3.5e9, 1e10, 1e11, 1e12))]
 print(json.dumps({"cal": cal, "pick": [{k: (v if not isinstance(v, dict) else {kk: round(vv, 4) for kk, vv in v.items()}) for k, v in r.items()} for r in pick]}, indent=0)[:6000])
