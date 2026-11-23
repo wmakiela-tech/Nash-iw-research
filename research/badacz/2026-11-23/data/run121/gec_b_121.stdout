@@ -1,0 +1,14 @@
+{
+ "gates": {
+  "G_NUM_authors_table_reproduced": true
+ },
+ "predictions": {
+  "P_T1_pythia_energy_conservation": false,
+  "P_T2_herwig_half_energy": false,
+  "P_M1_mass_level_ledger": true
+ }
+}
+
+real	0m4.216s
+user	0m3.539s
+sys	0m0.315s

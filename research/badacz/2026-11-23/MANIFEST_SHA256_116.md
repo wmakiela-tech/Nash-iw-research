@@ -111,3 +111,20 @@ cd02624cc11941455ba3f4cf539a12da3c37e2ba8cd2cb88929f5686155d62cd  data/run119/su
 29bb4e8791db774a7666c7cf06a5caf2e375be7be19055edc182b58248160177  data/run119/summary_code_r9_j62.csv
 ad4e4b1c94c0194595baab2e3e59dca4be24aaf77a47eedc6746ab307e1094b3  data/run119/timeline.log
 ```
+
+## 121/122 (G_EC+(b), 2026-11-23)
+
+Wejścia zewnętrzne repo: tablice BlackHawk v2.3 pythia_tables/herwig_tables (SHA w `data/run121/gec_b_121.json`), hadrons_from_PBH.dat autorów d395183, fM.txt 5baaac37…, primary_spectra_090.tsv.gz 692bbeca….
+
+```
+a5f5b39976b1e291391ebf7069366fe26271acc91ff3a5ca8636b04e95f5eddb  IW_BADACZ_B1_GEC_B_ENERGY_LEDGER_PREREG_121_20261123.md
+fb4ec656eefe987acf41af6bf7493a7b8b1cbb3ec0e4b0da5a70e8588462105e  IW_BADACZ_B1_GEC_B_ENERGY_LEDGER_REVIEW_122_20261123.md
+ad66fbedeb47eb86f1f12d10905aaa64ad8f2732fd99453559ba1110ec33942f  code/gec_b_121.py
+87a6d4a016aeb7fad94b31c53a72bcd7ff96c4b7ed4fec3e6e12cb320350cc02  code/dummy_121.py
+81faafcd49ccb7bcc600c34dd478a3ec58d0258c9b91e50717383208c5441fe8  code/posthoc_121.py
+a6d8328093c77fd8cb7a48d2f34fa1ceb7df2cbfe794ba98beca5f0c301b7779  data/run121/gec_b_121.json
+1eb2429eaf7a0b532e735408ef6fc7c9d5cceddacf51779dec407e99d9dc0350  data/run121/gec_b_121.stdout
+f4ce525786ceb24fc50c9ec4736bb2286421242f8217cc1e607752c40d91dceb  data/run121/posthoc_121.json
+00a7330c248e9da7f72554ba441ff1f5e8610ad07146fbf293df9620c961dbe1  data/run121/posthoc_121.stdout
+8fa58b7d9bd48751c2588891ae7786f8dbdfffe2b57b92cdddef58d9f649c5e9  data/run121/timeline.log
+```
