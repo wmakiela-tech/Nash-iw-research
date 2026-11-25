@@ -1,0 +1,81 @@
+name: Mech-S11 STOP A observer equivalence
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mech-s11-stopa-observer-diag-20261125.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: mech-s11-stopa-observer-diag-20261125
+  cancel-in-progress: false
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        cell: [0,1,2,3]
+    env:
+      CELL: ${{ matrix.cell }}
+      OUTDIR: observer_diag
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Freeze source and wheel
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR" _wheels
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_COMMIT"
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT025_STOPA_USERHOOKS_OBSERVATIONAL_EQUIVALENCE_AND_STAGE_LOCALIZATION_PREREG_001_20261125.md)" = 2011d22f135172b629cfd40ec57f513dfc097bf2
+          test "$(git hash-object research/mech-s11/2026-11-25/code/stopa_observer_diag.py)" = 825740bfdc0ef52519cd28dcfb96426960b3a60f
+          python -m pip download --only-binary=:all: --no-deps pythia8mc==8.318.3 -d _wheels > "$OUTDIR/PIP_DOWNLOAD.log" 2>&1
+          sha256sum _wheels/* > "$OUTDIR/WHEEL_SHA256"
+          test "$(cut -d ' ' -f1 "$OUTDIR/WHEEL_SHA256")" = 0ebe2dff962631571100dc427fbaa95e388df054ac06cdc8f63b31af07eb3de8
+          python -m pip install --no-index --no-deps _wheels/*.whl > "$OUTDIR/PIP_INSTALL.log" 2>&1
+          python -m py_compile research/mech-s11/2026-11-25/code/stopa_observer_diag.py
+      - name: Paired independent processes
+        shell: bash
+        run: |
+          set -euo pipefail
+          overall=0
+          for mode in baseline observer; do
+            if timeout 600 python -I research/mech-s11/2026-11-25/code/stopa_observer_diag.py "$CELL" "$mode" "$OUTDIR" > "$OUTDIR/$mode.stdout" 2> "$OUTDIR/$mode.stderr"; then rc=0; else rc=$?; fi
+            echo "$mode $rc" >> "$OUTDIR/CELL_RC"
+            if [ "$rc" != 0 ]; then overall=1; fi
+          done
+          exit "$overall"
+      - name: Exact recorded equivalence and callback qualification
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path("observer_diag")
+          a,b=([json.loads(x) for x in (p/(m+".jsonl")).read_text().splitlines()] for m in ("baseline","observer"))
+          x,y=(json.loads((p/(m+".json")).read_text()) for m in ("baseline","observer"))
+          key=lambda r:(r["call"],r["success"],r.get("event"),r.get("process_sha256"),r.get("qualified"))
+          eq=len(a)==len(b) and all(key(i)==key(j) for i,j in zip(a,b)) and x["effective"]==y["effective"] and x["settings"]==y["settings"] and x["successful"]==y["successful"]==50
+          ok=[r for r in b if r["success"]]
+          hooks=all("A" in [t["stage"] for t in r["trace"]] and "B" in [t["stage"] for t in r["trace"]][[t["stage"] for t in r["trace"]].index("A")+1:] for r in ok)
+          result={"G_OBS":eq,"G_HOOK":hooks,"successful":len(ok),"trace_lengths":[len(r["trace"]) for r in ok]}
+          (p/"GATES.json").write_text(json.dumps(result,indent=2))
+          print(json.dumps(result))
+          assert eq and hooks
+          PY
+      - name: Preserve all records
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stopa-observer-diag-cell${{ matrix.cell }}
+          path: observer_diag/
+          if-no-files-found: error
