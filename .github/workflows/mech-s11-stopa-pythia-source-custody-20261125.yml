@@ -1,0 +1,79 @@
+name: Mech-S11 STOP A exact version source custody
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mech-s11-stopa-pythia-source-custody-20261125.yml"]
+permissions:
+  contents: read
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Acquire package metadata and exact source distribution
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p source_receipt
+          echo "$GITHUB_RUN_ID" > source_receipt/RUN_ID
+          git rev-parse HEAD > source_receipt/NASH_COMMIT
+          python - <<'PY'
+          import json, urllib.request, hashlib, pathlib, tarfile
+          p=pathlib.Path("source_receipt")
+          req=urllib.request.Request("https://pypi.org/pypi/pythia8mc/8.318.3/json",headers={"User-Agent":"IW-NASH-source-custody/1"})
+          raw=urllib.request.urlopen(req,timeout=60).read()
+          (p/"PYPI_METADATA.json").write_bytes(raw)
+          d=json.loads(raw)
+          assert d["info"]["version"]=="8.318.3"
+          wheel_sha="0ebe2dff962631571100dc427fbaa95e388df054ac06cdc8f63b31af07eb3de8"
+          matches=[x["filename"] for x in d["urls"] if x["digests"]["sha256"]==wheel_sha]
+          result={"matching_wheel_filenames":matches,"source_files":[]}
+          assert matches, "previous wheel not present in exact version metadata"
+          targets={"Event.cc","Pythia.cc","PartonLevel.cc","HadronLevel.cc","StringFragmentation.cc","MiniStringFragmentation.cc","FragmentationSystems.cc","SimpleTimeShower.cc","SimpleSpaceShower.cc","Event.h","Pythia.h","UserHooks.h","ParticleProperties.xml","ErrorChecks.xml","ProgramFlow.xml","PKG-INFO","pyproject.toml","setup.py"}
+          for i,x in enumerate(v for v in d["urls"] if v["packagetype"]=="sdist"):
+              data=urllib.request.urlopen(x["url"],timeout=120).read()
+              digest=hashlib.sha256(data).hexdigest()
+              assert digest==x["digests"]["sha256"]
+              archive=p/("sdist_"+str(i)+"_"+pathlib.Path(x["filename"]).name)
+              archive.write_bytes(data)
+              item={"filename":archive.name,"sha256":digest,"extracted":[]}
+              with tarfile.open(archive,"r:*") as t:
+                  for j,m in enumerate(t):
+                      if not m.isfile() or pathlib.PurePosixPath(m.name).name not in targets: continue
+                      if m.size>10000000: continue
+                      b=t.extractfile(m).read()
+                      dst=p/f"sdist_{i}_{j}_{pathlib.PurePosixPath(m.name).name}"
+                      dst.write_bytes(b)
+                      item["extracted"].append({"path":m.name,"local":dst.name,"sha256":hashlib.sha256(b).hexdigest()})
+              result["source_files"].append(item)
+          (p/"SDIST_RECEIPT.json").write_text(json.dumps(result,indent=2))
+          print(json.dumps(result,indent=2))
+          PY
+      - name: Acquire official tagged release source for comparison
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p source_receipt
+          if git clone --depth 1 --branch pythia8318 https://gitlab.com/Pythia8/releases.git _pythia > source_receipt/GITLAB_CLONE.log 2>&1; then
+            git -C _pythia rev-parse HEAD > source_receipt/GITLAB_COMMIT
+            git -C _pythia describe --tags --exact-match > source_receipt/GITLAB_TAG
+            for f in src/Event.cc src/Pythia.cc src/PartonLevel.cc src/HadronLevel.cc src/StringFragmentation.cc src/MiniStringFragmentation.cc src/FragmentationSystems.cc src/SimpleTimeShower.cc src/SimpleSpaceShower.cc include/Pythia8/Event.h include/Pythia8/Pythia.h include/Pythia8/UserHooks.h share/Pythia8/xmldoc/ParticleProperties.xml share/Pythia8/xmldoc/ErrorChecks.xml share/Pythia8/xmldoc/ProgramFlow.xml; do
+              if test -f "_pythia/$f"; then mkdir -p "source_receipt/gitlab/$(dirname "$f")"; cp "_pythia/$f" "source_receipt/gitlab/$f"; fi
+            done
+          else
+            echo "GITLAB_UNAVAILABLE" > source_receipt/GITLAB_STATUS
+          fi
+      - name: Preserve all evidence
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p source_receipt
+          find source_receipt -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > source_receipt/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mech-s11-pythia8318-source-custody
+          path: source_receipt/
+          if-no-files-found: error
