@@ -1,0 +1,83 @@
+name: Mech-S11 STOP A only ten unattempted cells
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mech-s11-stopa-pythia-unattempted-20261125.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: mech-s11-stopa-pythia-unattempted-20261125
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        primary: [up, gluon]
+        weak: [0, 1]
+    env:
+      PRIMARY: ${{ matrix.primary }}
+      WEAK: ${{ matrix.weak }}
+      OUTDIR: stopa_unattempted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Freeze identities and install wheel
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR" _wheels
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_COMMIT"
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT013_STOPA_PYTHIA_TWO_PRIMARY_HIGH_ENERGY_SOURCE_GENERATION_PREREG_001_20261125.md)" = 0f0d14d240b499c604ddd294fc4f7f78405703eb
+          test "$(git hash-object research/mech-s11/2026-11-25/code/stopa_pythia_stage1_continuation.py)" = 9f1cc514bceae709c87a5029fdece015470af8fe
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT014_STOPA_STAGE1_TECHNICAL_CONTINUATION_AMENDMENT_001_20261125.md)" = 057cb81da2bc8c88aa1ec2eed00f7df2b1696f54
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT016_STOPA_28000_EVENT_RAW_REPLAY_AND_UNATTEMPTED_CELL_CONTINUATION_001_20261125.md)" = 844f83074a0972e720bbc2b47e23e9aa0da4d885
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/arXiv-2509.05618v1/PYTHIA8_table_scripts/table_up.jl)" = 254bedbb7d2fc8dd0e175898aa576acb4601ef1e
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/arXiv-2509.05618v1/PYTHIA8_table_scripts/table_gluon.jl)" = 42daf5c21af7deb8e1f03b8535b60f799c4df49f
+          python -m pip download --only-binary=:all: --no-deps pythia8mc==8.318.3 -d _wheels > "$OUTDIR/PIP_DOWNLOAD.log" 2>&1
+          sha256sum _wheels/* > "$OUTDIR/WHEEL_SHA256"
+          test "$(cut -d ' ' -f1 "$OUTDIR/WHEEL_SHA256")" = 0ebe2dff962631571100dc427fbaa95e388df054ac06cdc8f63b31af07eb3de8
+          python -m pip install --no-index --no-deps _wheels/*.whl > "$OUTDIR/PIP_INSTALL.log" 2>&1
+          python -m pip freeze > "$OUTDIR/PIP_FREEZE"
+          python -m py_compile research/mech-s11/2026-11-25/code/stopa_pythia_stage1_continuation.py
+      - name: Six frozen energies, preserve every cell including failures
+        shell: bash
+        run: |
+          set -uo pipefail
+          overall=0
+          case "$PRIMARY:$WEAK" in
+            up:0|up:1) indices="4 5";;
+            gluon:0) indices="5";;
+            gluon:1) indices="1 2 3 4 5";;
+            *) exit 3;;
+          esac
+          for index in $indices; do
+            tag="${PRIMARY}_w${WEAK}_e${index}"
+            echo "START $tag $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+            if timeout 1500 python -I research/mech-s11/2026-11-25/code/stopa_pythia_stage1_continuation.py "$PRIMARY" "$WEAK" "$index" "$OUTDIR" > "$OUTDIR/$tag.stdout" 2> "$OUTDIR/$tag.stderr"; then rc=0; else rc=$?; fi
+            echo "$tag $rc" >> "$OUTDIR/CELL_RC"
+            if [ "$rc" != 0 ]; then overall=1; fi
+            echo "END $tag $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+          done
+          exit "$overall"
+      - name: Preserve all artifacts
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stopa-pythia-unattempted-${{ matrix.primary }}-weak${{ matrix.weak }}-20261125
+          path: stopa_unattempted/
+          if-no-files-found: error
