@@ -1,0 +1,75 @@
+name: Mech-S11 STOP A PYTHIA stage 1
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mech-s11-stopa-pythia-stage1-20261125.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: mech-s11-stopa-pythia-stage1-20261125
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        primary: [up, gluon]
+        weak: [0, 1]
+    env:
+      PRIMARY: ${{ matrix.primary }}
+      WEAK: ${{ matrix.weak }}
+      OUTDIR: stopa_stage1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Freeze identities and install wheel
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR" _wheels
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_COMMIT"
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT013_STOPA_PYTHIA_TWO_PRIMARY_HIGH_ENERGY_SOURCE_GENERATION_PREREG_001_20261125.md)" = 0f0d14d240b499c604ddd294fc4f7f78405703eb
+          test "$(git hash-object research/mech-s11/2026-11-25/code/stopa_pythia_stage1.py)" = e20248ad65dea84357a033766737eae520dc519e
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/arXiv-2509.05618v1/PYTHIA8_table_scripts/table_up.jl)" = 254bedbb7d2fc8dd0e175898aa576acb4601ef1e
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/arXiv-2509.05618v1/PYTHIA8_table_scripts/table_gluon.jl)" = 42daf5c21af7deb8e1f03b8535b60f799c4df49f
+          python -m pip download --only-binary=:all: --no-deps pythia8mc==8.318.0 -d _wheels > "$OUTDIR/PIP_DOWNLOAD.log" 2>&1
+          sha256sum _wheels/* > "$OUTDIR/WHEEL_SHA256"
+          python -m pip install --no-index --no-deps _wheels/*.whl > "$OUTDIR/PIP_INSTALL.log" 2>&1
+          python -m pip freeze > "$OUTDIR/PIP_FREEZE"
+          python -m py_compile research/mech-s11/2026-11-25/code/stopa_pythia_stage1.py
+      - name: Six frozen energies, preserve every cell including failures
+        shell: bash
+        run: |
+          set -uo pipefail
+          overall=0
+          for index in 0 1 2 3 4 5; do
+            tag="${PRIMARY}_w${WEAK}_e${index}"
+            echo "START $tag $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+            timeout 1500 python -I research/mech-s11/2026-11-25/code/stopa_pythia_stage1.py "$PRIMARY" "$WEAK" "$index" "$OUTDIR" > "$OUTDIR/$tag.stdout" 2> "$OUTDIR/$tag.stderr"
+            rc=$?
+            echo "$tag $rc" >> "$OUTDIR/CELL_RC"
+            if [ "$rc" != 0 ]; then overall=1; fi
+            echo "END $tag $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+          done
+          exit "$overall"
+      - name: Preserve all artifacts
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stopa-pythia-${{ matrix.primary }}-weak${{ matrix.weak }}-20261125
+          path: stopa_stage1/
+          if-no-files-found: error
