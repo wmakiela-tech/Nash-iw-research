@@ -1,0 +1,121 @@
+name: Mech-S11 STD_A-S three mass prospective test
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mech-s11-std-a-s-relabel-20261125.yml"]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: mech-s11-std-a-s-relabel-20261125
+  cancel-in-progress: false
+jobs:
+  three-mass-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: mech_s11_std_a_s
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - name: Frozen source and environment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR" .wuxu_env _prior_a
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_COMMIT"
+          julia --version > "$OUTDIR/JULIA_VERSION"
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT010_STD_A_S_THREE_MASS_PROSPECTIVE_NONBLIND_PREREG_001_20261125.md)" = baa4cc7f65d13da0a83b0bf174c5281ad4a7bb0b
+          test "$(git hash-object research/badacz/2026-11-23/code/std_a_123.jl)" = fcbcaed4ba4f84f29a4030201a1dfae746e763ed
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = b368ba55d5a493f7bc185909730f7fe5691f10d6
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan-parameters.jl)" = 53faee65beda383348580c28d0424188da69b660
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/tool_script-parameters.jl)" = 0d7198ff3557bdbd5753000bb07a7a7405cc24f5
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/data/out/hadrons_from_PBH.dat)" = 06d0883a27b108692720422294ba2baacd381a64
+          gh run download 45616230955 -R "$GITHUB_REPOSITORY" -n mech-s11-std-a-native-i1-20261125 -D _prior_a
+          test "$(sha256sum _prior_a/Manifest.toml | cut -d ' ' -f1)" = 95c23d60afaa7bc9fcba71ed1a2b412500102dc89d450cfbd0d4f37925b26564
+          (cd _prior_a; grep '  mech_s11_std_a_native_i1/Project.toml$' ARTIFACT_SHA256SUMS | sed 's@mech_s11_std_a_native_i1/@@' | sha256sum -c -)
+          cp _prior_a/{Project,Manifest}.toml .wuxu_env/
+          julia --startup-file=no --project=.wuxu_env -e 'using Pkg; Pkg.instantiate(); Pkg.status()' > "$OUTDIR/ENV_STDOUT" 2> "$OUTDIR/ENV_STDERR"
+          cmp _prior_a/Manifest.toml .wuxu_env/Manifest.toml
+          cmp _prior_a/Project.toml .wuxu_env/Project.toml
+          cp .wuxu_env/{Project,Manifest}.toml "$OUTDIR/"
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          p=Path('research/badacz/2026-11-23/code/std_a_123.jl')
+          s=p.read_text()
+          a='m = m_PBH_f_list[jj + 1]'
+          b='m = ArbFloat(parse(Int64, ARGS[7]); bits=BITS) * NU.g'
+          assert s.count(a)==1
+          t=s.replace(a,b)
+          assert t.replace(b,a)==s
+          Path(os.environ['OUTDIR'],'std_exact_mass.jl').write_text(t)
+          PY
+      - name: Execute only three new STD mass points
+        shell: bash
+        run: |
+          set -euo pipefail
+          for pair in 38:1474765000 51:2133869000 90:6464011000; do
+            j="${pair%:*}"; m="${pair#*:}"
+            echo "START j$j $m $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+            julia --startup-file=no --project=.wuxu_env "$OUTDIR/std_exact_mass.jl" "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" std def "$j" coarse "$GITHUB_WORKSPACE/$OUTDIR/std_j$j.csv" "$m" > "$OUTDIR/std_j$j.stdout" 2> "$OUTDIR/std_j$j.stderr"
+            echo "END j$j $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+          done
+      - name: Independent frozen interval adjudication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv,math,json,os
+          from pathlib import Path
+          out=Path(os.environ['OUTDIR'])
+          cases=[]
+          for j,m,lo,hi in [(38,1474765000,-19.274,-19.190),(51,2133869000,-19.566,-19.482),(90,6464011000,-19.632,-19.549)]:
+              with (out/f'std_j{j}.csv').open() as f: rows=list(csv.reader(f))
+              tail=rows.pop()
+              assert tail[:5]==['#ROOT','std','def',str(j),'coarse']
+              assert 6<=len(rows)<=10
+              assert all(len(x)==10 and x[:3]==['std','def',str(j)] and x[-1]=='Success' and abs(float(x[3])/m-1)<1e-10 and all(math.isfinite(float(x[i])) for i in (3,4,5)) for x in rows)
+              assert [float(x[4]) for x in rows[:6]]==[-21,-20,-19,-18,-17,-16]
+              coarse=[float(x[5]) for x in rows[:6]]
+              assert all(b-a>=-3e-4 for a,b in zip(coarse,coarse[1:]))
+              pts=sorted((float(x[4]),float(x[5])) for x in rows)
+              assert len(set(x for x,y in pts))==len(pts)
+              brackets=[(a,b) for a,b in zip(pts,pts[1:]) if a[1]<.251<=b[1]]
+              status='below_grid' if pts[0][1]>=.251 else 'root' if brackets else 'none'
+              root=None; bracket=None; relation='no_bracket'
+              if status=='root':
+                  a,b=brackets[0]; root=a[0]+(.251-a[1])*(b[0]-a[0])/(b[1]-a[1]); bracket=[a[0],b[0]]
+                  assert len(rows)==10 and b[0]-a[0]==.0625 and abs(root-float(tail[6]))<=1e-12
+                  relation='inside' if lo<=a[0] and b[0]<=hi else 'disjoint' if b[0]<lo or a[0]>hi else 'overlap'
+              else: assert len(rows)==6 and math.isnan(float(tail[6]))
+              assert status==tail[5]
+              cases.append(dict(anchor=j,mass_g=m,n=len(rows),root=root,status=status,bracket=bracket,prediction=[lo,hi],point_pass=root is not None and lo<=root<=hi,bracket_relation=relation,multiple_crossings=len(brackets)>1))
+          k=sum(x['point_pass'] for x in cases)
+          verdict='HOLD_MULTIPLE' if any(x['multiple_crossings'] for x in cases) else 'PASS' if k==3 else 'HOLD' if k==2 else 'FAIL_H2'
+          result=dict(cases=cases,point_pass_count=k,verdict=verdict,scope='prospective nonblind H2 only; no implication for H1')
+          (out/'PREDICTION_RESULT.json').write_text(json.dumps(result,indent=2,allow_nan=False))
+          print(json.dumps(result,indent=2))
+          PY
+      - name: Preserve result and failure logs
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mech-s11-std-a-s-relabel-20261125
+          path: mech_s11_std_a_s/
+          if-no-files-found: error
