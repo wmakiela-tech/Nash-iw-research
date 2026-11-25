@@ -1,0 +1,137 @@
+name: Mech-S11 STD_A native independent execution part A
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mech-s11-std-a-native-i1-20261125.yml"
+permissions:
+  contents: read
+concurrency:
+  group: mech-s11-std-a-native-i1-20261125
+  cancel-in-progress: false
+jobs:
+  native-six-arms:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      JULIA_NUM_THREADS: "1"
+      JULIA_PKG_PRECOMPILE_AUTO: "0"
+      OUTDIR: "mech_s11_std_a_native_i1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.12.3"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Preflight immutable prereg and original source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR"
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_COMMIT"
+          julia --version > "$OUTDIR/JULIA_VERSION"
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_STD_A_NATIVE_I1_PREREG_001_20261125.md)" = "21cac9610498a6e060a4168ba786326dd5c0a883"
+          test "$(git hash-object research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl)" = "db9b5c8a462933d329136de572d5d3478de8612b"
+          test "$(git hash-object research/badacz/2026-11-23/code/std_a_123.jl)" = "fcbcaed4ba4f84f29a4030201a1dfae746e763ed"
+          git clone --quiet https://github.com/Fenyutanchan/Primordial-Black-Hole.git _wuxu
+          git -C _wuxu checkout --quiet d395183674cace6c9906a8911bdeb7234ba4040d
+          test "$(git -C _wuxu rev-parse HEAD)" = "d395183674cace6c9906a8911bdeb7234ba4040d"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan.jl)" = "b368ba55d5a493f7bc185909730f7fe5691f10d6"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/main-scan-parameters.jl)" = "53faee65beda383348580c28d0424188da69b660"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/tool_script-parameters.jl)" = "0d7198ff3557bdbd5753000bb07a7a7405cc24f5"
+          test "$(git -C _wuxu hash-object arXiv-2509.05618/data/out/hadrons_from_PBH.dat)" = "06d0883a27b108692720422294ba2baacd381a64"
+          sha256sum research/badacz/2026-11-23/code/std_a_123.jl _wuxu/arXiv-2509.05618/main-scan.jl _wuxu/arXiv-2509.05618/data/out/hadrons_from_PBH.dat > "$OUTDIR/INPUT_SHA256"
+          git -C _wuxu rev-parse HEAD > "$OUTDIR/UPSTREAM_COMMIT"
+      - name: Rehydrate previous Mech environment and preserve resolved manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          julia research/mech-s6/2026-10-18/wuxu_dynamic_comparator/setup_env.jl "$GITHUB_WORKSPACE/.wuxu_env" > "$OUTDIR/ENV_STDOUT" 2> "$OUTDIR/ENV_STDERR"
+          julia --project="$GITHUB_WORKSPACE/.wuxu_env" -e 'using Pkg; Pkg.status()' > "$OUTDIR/PACKAGE_STATUS" 2>&1
+          cp .wuxu_env/Project.toml .wuxu_env/Manifest.toml "$OUTDIR/"
+      - name: Six fresh native arms using original owner driver; no retry
+        shell: bash
+        run: |
+          set -euo pipefail
+          for j in 16 22 62; do
+            for arm in base std; do
+              tag="${arm}_j${j}"
+              echo "START $tag $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+              julia --startup-file=no --project="$GITHUB_WORKSPACE/.wuxu_env" research/badacz/2026-11-23/code/std_a_123.jl "$GITHUB_WORKSPACE/_wuxu/arXiv-2509.05618" "$arm" def "$j" coarse "$GITHUB_WORKSPACE/$OUTDIR/$tag.csv" > "$OUTDIR/$tag.stdout" 2> "$OUTDIR/$tag.stderr"
+              test "$(grep -c '^#ROOT,' "$OUTDIR/$tag.csv")" -eq 1
+              awk -F, '/^#ROOT,/{next} NF!=10 || $10!="Success" {exit 1}' "$OUTDIR/$tag.csv"
+              echo "END $tag $(date -u +%FT%TZ)" >> "$OUTDIR/TIMELINE"
+            done
+          done
+      - name: Independent Python replay and fail closed gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import csv, json, math, os
+          from pathlib import Path
+          out=Path(os.environ['OUTDIR'])
+          target=.251
+          R=.5817518
+          cases={}
+          for j in (16,22,62):
+              for arm in ('base','std'):
+                  key=f'{arm}_j{j}'
+                  with (out/f'{key}.csv').open() as f: rows=list(csv.reader(f))
+                  tail=rows.pop()
+                  assert tail[:5]==['#ROOT',arm,'def',str(j),'coarse'], (key,tail)
+                  assert 6<=len(rows)<=10 and all(len(x)==10 and x[:3]==[arm,'def',str(j)] and x[-1]=='Success' for x in rows), key
+                  assert all(math.isfinite(float(x[4])) and math.isfinite(float(x[5])) for x in rows), key
+                  assert [float(x[4]) for x in rows[:6]]==[-21,-20,-19,-18,-17,-16], key
+                  tau=float(rows[0][6])
+                  assert math.isfinite(tau) and tau>0, key
+                  pts=sorted((float(x[4]),float(x[5])) for x in rows)
+                  assert len(set(x for x,y in pts))==len(pts), key
+                  brackets=[(a,b) for a,b in zip(pts,pts[1:]) if a[1]<target<=b[1]]
+                  root=None
+                  status='below_grid' if pts[0][1]>=target else 'none'
+                  bracket=None
+                  if status!='below_grid' and brackets:
+                      a,b=brackets[0]
+                      root=a[0]+(target-a[1])*(b[0]-a[0])/(b[1]-a[1])
+                      bracket=[a[0],b[0]]
+                      status='root'
+                      assert len(rows)==10 and b[0]-a[0]==.0625, key
+                      assert abs(root-float(tail[6]))<=1e-12, key
+                  else: assert len(rows)==6 and math.isnan(float(tail[6])), key
+                  assert tail[5]==status, key
+                  coarse=[float(x[5]) for x in rows[:6]]
+                  cases[key]={'n':len(rows),'root':root,'status':status,'tau':tau,'bracket':bracket,'coarse_mono':all(b-a>=-3e-4 for a,b in zip(coarse,coarse[1:]))}
+          shifts={}
+          for j in (22,62):
+              a,b=cases[f'base_j{j}']['root'],cases[f'std_j{j}']['root']
+              shifts[str(j)]=None if a is None or b is None else b-a
+          ratios={str(j):cases[f'std_j{j}']['tau']/cases[f'base_j{j}']['tau'] for j in (16,22,62)}
+          refs={'22':-1.3837963852952981,'62':-0.24378020723688465}
+          gates={
+              'G_RUN':sum(x['n'] for x in cases.values())<=60,
+              'G_BASE':all(cases[f'base_j{j}']['root'] is not None and abs(cases[f'base_j{j}']['root']-r)<=.05 for j,r in ((22,-17.2202),(62,-19.3892))),
+              'G_TAU':all(abs(x*R-1)<=.01 for x in ratios.values()),
+              'G_MONO':all(x['coarse_mono'] for x in cases.values()),
+              'G_REPLICA':all(shifts[j] is not None and abs(shifts[j]-r)<=.03 for j,r in refs.items()) and cases['std_j16']['status']=='root',
+          }
+          result={'cases':cases,'shifts':shifts,'tau_ratios':ratios,'gates':gates,'verdict':'PASS' if all(gates.values()) else 'FAIL','scope':'same original model, independent execution, owner driver reused, nonblind; no physical bound'}
+          (out/'INDEPENDENT_REPLAY.json').write_text(json.dumps(result,indent=2,allow_nan=False))
+          print(json.dumps(result,indent=2))
+          if not all(gates.values()): raise SystemExit(2)
+          PY
+      - name: Preserve outputs and failures
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mech-s11-std-a-native-i1-20261125
+          path: mech_s11_std_a_native_i1/
+          if-no-files-found: error
