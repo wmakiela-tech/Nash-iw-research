@@ -16,3 +16,8 @@ bd0d0840c7d04544c327eba87f1da9a9d4379192cbf30d21eaacc7068f0706da  IW_BADACZ_B1_S
 ce7b8f320f719c45488323b382325c910d7645cfa4d2a095ef79c64a7e986357  code/coverage_estimate_128.py
 eb7975351b8a4baa8105f9bda46d3d2dac9627b2c9b6ed848e551dbc7e043e63  data/coverage_estimate_128.json
 ```
+
+## 129 (PREREG, zamrożony przed przebiegiem)
+```
+f5ee66390f29c6b0ee0e95d8f7195dbcac5bfaae8f659a8684aa92326a85c7f1  IW_BADACZ_B1_STOPA_GENERATOR_EXTENSION_PREREG_129_20261125.md
+```
