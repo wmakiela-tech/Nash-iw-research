@@ -46,3 +46,11 @@ Odtworzenie rysunku: `python3 -I code/figure_brief_133.py <research/badacz> data
 ```
 826db6ae5db2a156580668e0de52aeb74d62d72f7361ec326870b14fbd745097  IW_BADACZ_PEV_GENERATOR_DIAGNOSTIC_SIGN_SPLIT_PREREG_134_20261125.md
 ```
+
+## 135 (REVIEW_135 + kod i wynik PREREG_134)
+```
+17c301e4290228f05974e694c795b6f6ec18dca41398d6ac59ec49b31ee67af4  IW_BADACZ_PEV_GENERATOR_DIAGNOSTIC_SIGN_SPLIT_REVIEW_135_20261125.md
+c0e4f5de0c04252a1184945164ff8726a38fbeef00a32aac527de917128a2995  code/pev_sign_split_134.py
+c009895a70737ecf4a9407680c5b7831ab9903e04b29061fb0d4074a5633a0f0  data/pev_sign_split_134.json
+```
+Odtworzenie: pobrać 8 artefaktów (ID w REVIEW_135), rozpakować każdy do katalogu <id>/, `python3 -I code/pev_sign_split_134.py <katalog> data/pev_sign_split_134.json`.
