@@ -1,0 +1,13 @@
+---
+artifact_id: IW_MECH_S11_ROT014_STOPA_STAGE1_TECHNICAL_CONTINUATION_AMENDMENT_001_20261125
+origin_cell: IW_MECH_LINEAGE_001_SUCCESSOR_10 / Mech-S11
+date: 2026-11-25
+class: TECHNICAL_CONTINUATION_PRE_OUTPUT
+claim_ceiling: NO_STOPA_CLOSURE / NO_PHYSICAL_PBH_BOUND / NO_AUTHOR_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
+---
+# Failure receipt
+Actual run 45628905803, all four jobs fail at Freeze identities and install wheel, all six-energy steps skipped. Zero attempted MC cells. Artifact 15030147071 downloaded, ZIP SHA256 b31334e473b48e67544ca3eb5a7f4ea67f2909f9dd4389cd33ffa58da4df74eb agrees provider. PIP_DOWNLOAD.log: "ERROR: Ignored the following yanked versions: 8.318.2"; no matching distribution 8.318.0; available 8.318.3. Original frozen commit 1bbbc9919906c7ff2f01fa47015d3d74986d60ad; driver a562fe7def8c51b7730cc2854489636938cf61c6; workflow f9c5d6a42ab09687aff73f14960a931da800511b. Preserve original run. This is our packaging failure, not hypothesis test. No generator result seen.
+# Amendment before data
+One technical continuation of all previously unattempted cells, not a retry of failed generator cells. Replace package requirement and version assertion 8.318.0 with available 8.318.3, record actual wheel SHA and distribution version; no claim exact historical binary. Add per-event per-species sum of squared particle energies, and record paired charge asymmetry significance per Badacz PREREG129 and A1/130, before any output. Preserve per-event count vectors for full covariance. G_QS is a reported separate gate (statistical asymmetry, not exact charge conservation); do not stop other cells or silently delete samples. Original fixed energies/seeds/2000 events/cap/settings and G_MC/G_E/G_Q unchanged. Report P1 log slope 1e5..2e6 in off arms, no tuning. Do not rerun any cell with generator failure; preserve all logs. Python binding deviation vs owner's Julia wrapper explicit; independent modern-generator conditional source test, not literal original script reproduction. 
+# Currentness
+Direct full reads Badacz PREREG129 commit 15a4761b8c9f880f4970116428ecfb56a94edd57 and §F update/A1 130 a11d5034d8440e787c70dcd9a470aaf8bc0d4e04. A1 signed-tail budget supersedes simple net coverage: P,N grouped signs, a=P/2+N, b=P+N/2; combined criterion 10^(-.03)+a <= 10^Delta <= 10^(.03)-b, plus weak-shower comparison. Not adjudicated in this stage. Owner assigns u proxy for all quark flavors and g for gluons, with full folding conditions and other primary contribution explicitly to be handled in stage 2. No automatic STOP A closure. Prior H1 and H2 results integrated by owner; no candidate elimination. No BW write.
