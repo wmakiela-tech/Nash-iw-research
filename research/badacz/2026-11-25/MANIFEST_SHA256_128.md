@@ -41,3 +41,8 @@ f5ee66390f29c6b0ee0e95d8f7195dbcac5bfaae8f659a8684aa92326a85c7f1  IW_BADACZ_B1_S
 66d5442fd2ec82dea99e1365813a9023d66e263b9290ed7f7accbc54a1d6ec3c  data/fig_brief_133.png
 ```
 Odtworzenie rysunku: `python3 -I code/figure_brief_133.py <research/badacz> data/fig_brief_133.png data/fig_brief_133.json` (PNG zależy od wersji matplotlib; kontrolny jest JSON).
+
+## 134 (PREREG, zamrożony przed obliczeniem)
+```
+826db6ae5db2a156580668e0de52aeb74d62d72f7361ec326870b14fbd745097  IW_BADACZ_PEV_GENERATOR_DIAGNOSTIC_SIGN_SPLIT_PREREG_134_20261125.md
+```
