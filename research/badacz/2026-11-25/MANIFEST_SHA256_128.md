@@ -31,3 +31,13 @@ f5ee66390f29c6b0ee0e95d8f7195dbcac5bfaae8f659a8684aa92326a85c7f1  IW_BADACZ_B1_S
 ```
 9e0533bf380b3162f656339bcb68e86c2043f1f33169cf507bc50bc4b6395fa2  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V0_131_20261125.md
 ```
+
+## 132–133 (REVIEW_132, brief v1, rysunek)
+```
+7e4bcbe0d4ea1088a83c6ff74813399f6e6aae509ce0e34e4e79a827c6b2f06e  IW_BADACZ_B1_STOPA_GENERATOR_EXTENSION_REVIEW_132_20261125.md
+9ce228bc724208ed7777e68521a1101c32779b1cbfb9f60b7ad80fe73da489df  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V1_133_20261125.md
+22566984f2dd6ee125fe6f589f77f19343c61a2cc01ad160262dc753244c00d1  code/figure_brief_133.py
+8f75081e98121939c45883f6cc35d81cda98d5bace80066964704db3d7bb3441  data/fig_brief_133.json
+66d5442fd2ec82dea99e1365813a9023d66e263b9290ed7f7accbc54a1d6ec3c  data/fig_brief_133.png
+```
+Odtworzenie rysunku: `python3 -I code/figure_brief_133.py <research/badacz> data/fig_brief_133.png data/fig_brief_133.json` (PNG zależy od wersji matplotlib; kontrolny jest JSON).
