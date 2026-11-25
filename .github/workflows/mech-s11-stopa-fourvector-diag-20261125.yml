@@ -1,0 +1,61 @@
+name: Mech-S11 STOP A four-vector localization diagnostic
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mech-s11-stopa-fourvector-diag-20261125.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: mech-s11-stopa-fourvector-diag-20261125
+  cancel-in-progress: false
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        cell: [0,1,2,3]
+    env:
+      CELL: ${{ matrix.cell }}
+      OUTDIR: fourvector_diag
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify and install frozen wheel
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTDIR" _wheels
+          echo "$GITHUB_RUN_ID" > "$OUTDIR/RUN_ID"
+          git rev-parse HEAD > "$OUTDIR/NASH_COMMIT"
+          test "$(git hash-object research/mech-s11/2026-11-25/IW_MECH_S11_ROT020_STOPA_FOUR_MOMENTUM_RECORD_LOCALIZATION_DIAGNOSTIC_PREREG_001_20261125.md)" = 2834dc3dd6773ff30d1b5c7a6b08feb08c41ab95
+          test "$(git hash-object research/mech-s11/2026-11-25/code/stopa_fourvector_diag.py)" = 7e1a8f51db28b3407ef900909d3e98ced7520f33
+          test "$(git hash-object research/mech-s11/2026-11-25/code/stopa_pythia_stage1_continuation.py)" = 9f1cc514bceae709c87a5029fdece015470af8fe
+          python -m pip download --only-binary=:all: --no-deps pythia8mc==8.318.3 -d _wheels > "$OUTDIR/PIP_DOWNLOAD.log" 2>&1
+          sha256sum _wheels/* > "$OUTDIR/WHEEL_SHA256"
+          test "$(cut -d ' ' -f1 "$OUTDIR/WHEEL_SHA256")" = 0ebe2dff962631571100dc427fbaa95e388df054ac06cdc8f63b31af07eb3de8
+          python -m pip install --no-index --no-deps _wheels/*.whl > "$OUTDIR/PIP_INSTALL.log" 2>&1
+          python -m py_compile research/mech-s11/2026-11-25/code/stopa_fourvector_diag.py
+      - name: Frozen independent diagnostic cell
+        shell: bash
+        run: |
+          set -euo pipefail
+          if timeout 1800 python -I research/mech-s11/2026-11-25/code/stopa_fourvector_diag.py "$CELL" "$OUTDIR" > "$OUTDIR/GENERATOR_STDOUT.log" 2> "$OUTDIR/GENERATOR_STDERR.log"; then rc=0; else rc=$?; fi
+          echo "$rc" > "$OUTDIR/CELL_RC"
+          exit "$rc"
+      - name: Preserve source records including failure
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$OUTDIR"
+          find "$OUTDIR" -type f ! -name ARTIFACT_SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > "$OUTDIR/ARTIFACT_SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stopa-fourvector-diag-cell${{ matrix.cell }}-20261125
+          path: fourvector_diag/
+          if-no-files-found: error
