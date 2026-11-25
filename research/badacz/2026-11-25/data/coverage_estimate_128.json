@@ -1,0 +1,131 @@
+{
+ "M22_g": 1121174456.4709609,
+ "rows": [
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 1120000000.0,
+   "T_GeV": 9446.42857142857,
+   "x": 10.586011342155011,
+   "flux_frac_above_fermion": 0.007079124236789435,
+   "flux_frac_above_boson": 0.006194368493737089,
+   "j22_count_frac_below_M": 0.9981152480072992
+  },
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 1000000000.0,
+   "T_GeV": 10580.0,
+   "x": 9.45179584120983,
+   "flux_frac_above_fermion": 0.016243702298704185,
+   "flux_frac_above_boson": 0.014214183260038933,
+   "j22_count_frac_below_M": 0.8139322365509781
+  },
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 500000000.0,
+   "T_GeV": 21160.0,
+   "x": 4.725897920604915,
+   "flux_frac_above_fermion": 0.3217104152264367,
+   "flux_frac_above_boson": 0.283273386230637,
+   "j22_count_frac_below_M": 0.2337406553012915
+  },
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 200000000.0,
+   "T_GeV": 52900.0,
+   "x": 1.890359168241966,
+   "flux_frac_above_fermion": 0.8960262102776549,
+   "flux_frac_above_boson": 0.8395787959140634,
+   "j22_count_frac_below_M": 0.04492025796755401
+  },
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 100000000.0,
+   "T_GeV": 105800.0,
+   "x": 0.945179584120983,
+   "flux_frac_above_fermion": 0.9887506536172677,
+   "flux_frac_above_boson": 0.9701041714043673,
+   "j22_count_frac_below_M": 0.012899956608342936
+  },
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 80000000.0,
+   "T_GeV": 132250.0,
+   "x": 0.7561436672967864,
+   "flux_frac_above_fermion": 0.9949128397407406,
+   "flux_frac_above_boson": 0.9834709769476435,
+   "j22_count_frac_below_M": 0.008632771108092508
+  },
+  {
+   "Emax_GeV": 100000.0,
+   "M_g": 50000000.0,
+   "T_GeV": 211600.0,
+   "x": 0.4725897920604915,
+   "flux_frac_above_fermion": 0.9991074068522092,
+   "flux_frac_above_boson": 0.9954820024212292,
+   "j22_count_frac_below_M": 0.003704539733884165
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 1120000000.0,
+   "T_GeV": 9446.42857142857,
+   "x": 211.7202268431002,
+   "flux_frac_above_fermion": 1.905495793343668e-86,
+   "flux_frac_above_boson": 1.6673088191757097e-86,
+   "j22_count_frac_below_M": 0.9981152480072992
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 1000000000.0,
+   "T_GeV": 10580.0,
+   "x": 189.0359168241966,
+   "flux_frac_above_fermion": 9.65532092811085e-77,
+   "flux_frac_above_boson": 8.448405812096994e-77,
+   "j22_count_frac_below_M": 0.8139322365509781
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 500000000.0,
+   "T_GeV": 21160.0,
+   "x": 94.5179584120983,
+   "flux_frac_above_fermion": 1.3716722426006455e-36,
+   "flux_frac_above_boson": 1.2002132122755649e-36,
+   "j22_count_frac_below_M": 0.2337406553012915
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 200000000.0,
+   "T_GeV": 52900.0,
+   "x": 37.80718336483932,
+   "flux_frac_above_fermion": 3.923240125331568e-13,
+   "flux_frac_above_boson": 3.432835109665122e-13,
+   "j22_count_frac_below_M": 0.04492025796755401
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 100000000.0,
+   "T_GeV": 105800.0,
+   "x": 18.90359168241966,
+   "flux_frac_above_fermion": 8.628559244875196e-06,
+   "flux_frac_above_boson": 7.549989382176551e-06,
+   "j22_count_frac_below_M": 0.012899956608342936
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 80000000.0,
+   "T_GeV": 132250.0,
+   "x": 15.122873345935728,
+   "flux_frac_above_fermion": 0.00020193834285131936,
+   "flux_frac_above_boson": 0.0001766960931045518,
+   "j22_count_frac_below_M": 0.008632771108092508
+  },
+  {
+   "Emax_GeV": 2000000.0,
+   "M_g": 50000000.0,
+   "T_GeV": 211600.0,
+   "x": 9.45179584120983,
+   "flux_frac_above_fermion": 0.016243702298704185,
+   "flux_frac_above_boson": 0.014214183260038933,
+   "j22_count_frac_below_M": 0.003704539733884165
+  }
+ ]
+}
