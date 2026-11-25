@@ -54,3 +54,12 @@ c0e4f5de0c04252a1184945164ff8726a38fbeef00a32aac527de917128a2995  code/pev_sign_
 c009895a70737ecf4a9407680c5b7831ab9903e04b29061fb0d4074a5633a0f0  data/pev_sign_split_134.json
 ```
 Odtworzenie: pobrać 8 artefaktów (ID w REVIEW_135), rozpakować każdy do katalogu <id>/, `python3 -I code/pev_sign_split_134.py <katalog> data/pev_sign_split_134.json`.
+
+## 136–137 (errata, brief v2, rysunek v2)
+```
+a1b8ff6b50a2abb77e7d8d393d838c13f0f6846513abf5d3cff415337f4ba204  IW_BADACZ_ERRATA_132_134_135_AND_BRIEF_V2_136_20261125.md
+b5f257cf712d4c01e04a5ae3e919e80f1792085701b1d4dde2bfc1e55b2b072e  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V2_137_20261125.md
+712d38002361acc1d699b0716e0016806e0973640c2b40bdaf1079ea45387e1b  code/figure_brief_137.py
+0766b4e218fa846723843f4834c28b051c2217ecfd5e80a5b0574b135504e38a  data/fig_brief_137.json
+beca520f963603efa55242eb2143989e2ecd683ee3c8c27feb8b6fb5deebfdc3  data/fig_brief_137.png
+```
