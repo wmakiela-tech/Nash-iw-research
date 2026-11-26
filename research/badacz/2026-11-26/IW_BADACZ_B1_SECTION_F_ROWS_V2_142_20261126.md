@@ -1,7 +1,7 @@
 ---
 artifact_id: IW_BADACZ_B1_SECTION_F_ROWS_V2_142_20261126
 supersedes: IW_BADACZ_B1_SECTION_F_ONE_PAGE_DRAFT_140_20261126
-referee: REC15 ROT015 (zakres: §F wymaga B1, B2 i C1; pytanie pierwotne a zawężone)
+referee: REC15 ROT015 (zakres: §F wymaga B1, B2 i C1; pytanie pierwotne a zawężone); naprawy środowiska i zakresu s: Mech-S11 ROT028
 exposure: PUBLIC
 origin_cell: BADACZ (wątek Claude), właściciel B1
 created_at: 2026-11-26
@@ -28,9 +28,9 @@ Tabela niżej dotyczy wyłącznie pytań zawężonych.
 | data zamrożenia | PREREG_123 (40c6423, 23 XI) | G1: PROPOSAL_068 / PREREG_069 (16 XI) |
 | pierwszeństwo | kierunek EKS1 (DIR-010); pomiar natywny Badacz (REVIEW_120–126) | E5 Badacz (31 X); grupowanie Mech-S9 |
 | prereg | PREREG_123, PREREG_125, DRAFT_127 §3 (H2) | PREREG_069, T1 Mech-S9 |
-| wykonywalność | natywna Julia, Manifest autorów | to samo |
+| wykonywalność | natywna Julia; upstream Project bez przypiętej wersji (NaturalUnits rev main), więc użyto przypiętego, zarchiwizowanego Manifestu Mech-S11, identycznego dla H1 i H2 (Mech-S11 ROT028) | natywna Julia, T2R Mech-S10 |
 | dane | research/badacz/2026-11-23, research/mech-s11/2026-11-25 | research/badacz/2026-11-16 |
-| poprawność | Δ(j22) = −1.384 i Δ(j62) = −0.244 dex; pierwiastki std przy 9.45e8–1.08e9 g, gdzie base nie ma pierwiastka w siatce; wynik odporny na kontynuację źródła (s ∈ [−1.5, −1.0]) | +0.272…+0.301 dex w 6 masach; po przeniesieniu na sieć +0.26…+0.30 |
+| poprawność | Δ(j22) = −1.384 i Δ(j62) = −0.244 dex; pierwiastki std przy 9.45e8–1.08e9 g, gdzie base nie ma pierwiastka w siatce; wynik odporny na kontynuację źródła w trzech testowanych wartościach s ∈ {−1.5, −1.3, −1.0}; zaburzenia wyjścia o ε = 1e−4 zachowują znaki we wszystkich 86 punktach i zmieniają Δ o ≤ 0.023 / 0.015 dex (Mech-S11 ROT028; czułość wyjścia, nie granica błędu solvera) | +0.272…+0.301 dex w 6 masach; po przeniesieniu na sieć +0.26…+0.30 |
 | niepewność | szum pierwiastków 0.001–0.021 dex; progi bezwzględne objęte STOP A (źródło poniżej 1e9 g), STOP B (mapa Y_P), G_DEP | przesunięcie względne odporne; progi bezwzględne nie (SYNTH_087) |
 | dojrzały gospodarz | Page 1976; MacGibbon 1991; Baldes et al. 2020, dod. A (czynnik ok. 2); Cheek et al. 2022; Boccia et al. 2025 (zegar greybody, bez hadronów) | Reno–Seckel 1988; Bianco et al. 2026 (wydajności per stan) |
 | niezależne I1/I3 | H1: Mech-S11 ROT009 (natywnie, 56/56) + AUD4 ROT007 i REC15 ROT011 PASS. H2: Mech-S11 ROT012, 3/3 punktowo i 2/3 przedziały. Brief v2: REC15 ROT012 | T2R Mech-S10, 68/68 bitowo; semantyka (T3) OPEN |
