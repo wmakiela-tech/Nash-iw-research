@@ -1,0 +1,29 @@
+---
+artifact_id: IW_MECH_S11_ROT028_STD_A_EXACT_DECIMAL_FIXED_BRACKET_OUTPUT_PERTURBATION_CERTIFICATE_AND_ENV_PROVENANCE_001_20261126
+origin_cell: IW_MECH_LINEAGE_001_SUCCESSOR_10 / Mech-S11
+date: 2026-11-26
+status: EXISTING_NATIVE_ARCHIVE_REPLAY / CONDITIONAL_OUTPUT_PERTURBATION_CERTIFICATE / NO_NEW_SOLVER_RUN
+ceiling: MODEL_CONDITIONAL / NO_SOLVER_ERROR_BOUND / NO_CONTINUUM_ROOT_CERTIFICATION / NO_PBH_BOUND / NO_AUTHOR_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
+---
+# Currentness and purpose
+Full owner brief v3 139 and §F draft 140 read at commit da2c14d2055ea03d22c6a823265cd1992476ca9b. Owner no further B1 runs through Dec13 respected; analysis of existing data only. Full Mech ROT009 commit 01f2816abee5a10095bc9622a07c5970e0c40203 and ROT012 e7bb4a6864f3b7712490e8c3b45cc04b60d0d907 reopened, and actual workflow 206be911e7846f1b0ade9d6f1634d3534299b782. REC15 earlier referee distinguishes numerical repeatability from accuracy, H1 and H2 point/bracket. This is posthoc sensitivity of reported interpolants, not new frozen validation, no inference actual solver errors satisfy assumed epsilon.
+# Actual custody
+Reopened original local ZIPs from runs 45616230955 / 45620537732. Hashes 5140a3e3f7fef4699f45a9fe27fce260c266d35363b344287b3c1c6f36445342 and 86a928c051fdaa338c9a290e21fc295cf55582d3b038e2a32ece322ce9ef4626; CRC and complete manifest 30/30 + 19/19 PASS. Recomputed all 86 samples in nine arms; eight sampled crossing brackets and one no crossing. All recorded root interpolants match within 1e-12 dex (decimal rational interpretation rather than parsed binary64 calculation). Project/Manifest exact byte identity across both runs; hashes respectively 21d47a9f1b942fd387877db8624780f52005fb5d79367a255cf828c8d5d59cca and 95c23d60afaa7bc9fcba71ed1a2b412500102dc89d450cfbd0d4f37925b26564.
+# Analytic certificate
+Let fixed adjacent bracket xL<xU, stored yL<t<yU, h=xU-xL, s=(yU-yL)/h, r=xL+(t-yL)/s. Each endpoint may change independently by <=epsilon, with epsilon strictly below both endpoint sign margins. Interpolated root is monotonically decreasing in either endpoint value: derivatives -h*(yU-t)/(yU-yL)^2 and -h*(t-yL)/(yU-yL)^2 respectively, evaluated at perturbed endpoints with signs fixed. Hence extrema attained at both errors +epsilon or both -epsilon; exact interval [r-epsilon/s,r+epsilon/s]. For difference of roots in two arms, independent bounded errors produce exact interval delta +/- epsilon*(1/s_base+1/s_std). No derivative assumption on ODE response outside interpolation, no continuum root uniqueness, no numerical solver error certification. All 86 sampled sign margins have minimum 0.00011254623437801, hence epsilon=1e-4 preserves all sampled crossing brackets and sampled no-root status. Strict inequalities required at sign margin, no claim about unsampled points.
+|j|shift|sensitivity coefficient dex per unit Y|epsilon for shift change <=.03|joint strict sign/shift limit|shift interval epsilon=1e-4|
+|---|---:|---:|---:|---:|---|
+|22|-1.3837963852953004|231.33927907847186|.00012967966408256937|.00012967966408256937|[-1.4069303132031474,-1.360662457387453]|
+|62|-0.24378020723688398|153.9449168704131|.00019487489817707483|.00011254623437801|[-.2591746989239253,-.2283857155498427]|
+0.03 is referenced to earlier replica tolerance for interpretability, not imposed as new scientific gate. Point interpolant sensitivity distinct from interpolation-free AUD4 brackets [-1.4375,-1.3125],[-.3125,-.1875]. Those brackets conditional on crossing and sign persistence, not actual solver accuracy.
+# H2 conditional point stability
+|mass label|point interval at epsilon=1e-4|joint sign and frozen point limit (strict conservative)|full original bracket contained|
+|---|---|---:|---|
+|38|[-19.22819922961718,-19.215622502792638]|.00044668432712203|no|
+|51|[-19.52948813598251,-19.514832667365614]|.00030241819287186|yes|
+|90|[-19.59423210690096,-19.57982745934017]|.00034058151047489|yes|
+All three perturbed interpolants inside original frozen intervals, conditional on epsilon=1e-4; 3/3 point status preserved, secondary bracket containment remains 2/3. No upgrade to 3/3 interval certification. Global sufficient strict epsilon < .00011254623437801 for sampled sign preservation, H1 shift change <.03 and H2 point acceptance in these archives.
+# Provenance repair to draft140
+Owner §F row "natywna Julia, Manifest autorów" is inaccurate for Mech replication: actual workflow creates .wuxu_env with Mech-S6 setup_env.jl blob db9b5c8a462933d329136de572d5d3478de8612b, pinned direct package versions incl NaturalUnits commit 4a9f007ff1df416c9fef28c4d83d8fe8846099cf; archives preserve actual resolved manifest. Upstream author Project.toml blob 6297eb1682da77bbbfa87307795b655c677f98c4 directly read: NaturalUnits rev main, dependency UUIDs not exact versions. Do not claim author's Manifest or full transitive environment identical to Badacz. Suggested row: "Native Julia 1.12.3, original Wu-Xu code at d395183; Mech pinned direct packages and archived resolved Project/Manifest (byte-identical H1/H2)." Do not extend this custody claim to Q-B without distinct verification. Owner §F continuum s range should say tested s in {-1.5,-1.3,-1.0}, not entire interval. Brief v3 "numerical root noise .001-.021 dex" not a certified solver error bound. Existing raw receipts support bounded claims only.
+# Reproducibility
+Executed local Python Fraction arithmetic script mech_rot028_root_sensitivity.py SHA256 39a172ccbfa487f144bc02bb9b4d48ad9d6e3ee29489d77519824d0beab18f0d and JSON mech-s11-rot028-root-sensitivity.json SHA256 a24c0668f620b4f1b24f35b8326af674b080ca004902750888f3a84e10c078b9. Local files, not separately repo-stored. No new generator, native solver, folding, BW, or gate change. STOP A/B/G_DEP unchanged. Send bounded owner corrections and conditional result, no task cascade.
