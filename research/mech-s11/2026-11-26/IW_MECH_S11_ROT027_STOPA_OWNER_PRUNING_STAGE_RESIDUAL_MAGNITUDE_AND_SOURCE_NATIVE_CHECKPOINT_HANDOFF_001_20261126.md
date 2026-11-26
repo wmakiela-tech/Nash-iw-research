@@ -1,0 +1,20 @@
+---
+artifact_id: IW_MECH_S11_ROT027_STOPA_OWNER_PRUNING_STAGE_RESIDUAL_MAGNITUDE_AND_SOURCE_NATIVE_CHECKPOINT_HANDOFF_001_20261126
+origin_cell: IW_MECH_LINEAGE_001_SUCCESSOR_10 / Mech-S11
+date: 2026-11-26
+status: B1_GENERATOR_PRUNED / EXISTING_RECORD_DIAGNOSTIC / SEPARATE_FRONT_CANDIDATE_ONLY
+ceiling: NO_NEW_GENERATOR_RUN / NO_GATE_CHANGE / NO_STOPA_CLOSURE / NO_CAUSAL_ROUTINE / NO_PBH_BOUND / NO_AUTHOR_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
+---
+## Decision and source contact
+Full owner REVIEW132 and brief133 read at public commit 4f84b507f4aab7ccfea7bd90b0a654192a8a8339. Owner explicitly prunes further B1 generator runs before 13 XII and leaves separate PeV-generator validation to Moderator decision. Existing standing calculation authorization does not require running a new scientific front. No new generator launched; close this bounded mechanism follow-up for B1 and preserve transferable instrument. REC15 ROT011 full read, H1 bounded PASS, H2 point 3/3 PASS but full bracket containment 2/3, repair brief before freeze. REC15 firstness of max-residual correction: original 48k max 4.150721102935684e-5, DISTINCT 800-call diagnostic max 1.713455132849049e-5. Do not conflate samples. Owner wording "after hadronization and decays" should be replaced by direct ROT026 stage evidence, not causal diagnosis. 
+## Existing-data magnitude check
+Actually reran local mech_rot026_replay.py on all four downloaded original observer archives, all 60 manifest files and 200 recorded pairs verified; regenerated certificate SHA256 779b86abcb7d748ed70cf9431d4caa8650e63b7b198289bc2588c533e39cb9e0 identical to ROT026. From 199 strict AB trajectories, computed AB=||v_B-v_A||_1 and compared with ||v_A||_1 and ||v_B||_1 for the 75 final L1 failures. Posthoc descriptive check, not additional gate.
+|arm|strict N|final failures|AB>1e-6 all strict|AB>=||v_A||_1 among final failures|B smaller than A among final failures|median AB/||v_A||_1 among final failures|
+|---|---:|---:|---:|---:|---:|---:|
+|u off 100TeV|50|0|0|0|0|NA|
+|u off 2PeV|50|32|4|4|10|.0022706908952923946|
+|u on 2PeV|50|27|8|3|12|.008716038549527282|
+|g off 2PeV|49|16|0|0|9|.013795142881374695|
+12/199 strict have AB>1e-6; 7/75 final failures have AB>=initial A norm; 31/75 B norm smaller,44 larger. Thus 72/75 already exceed at A, but NOT 96% of magnitude or unique cause. Largest AB=4.3935309456928316e-5 u-on call50, rejected by original hard filter, A norm5.2521071156843465e-6 B norm3.868320234124397e-5, energy sign reverses. Three first-crossing B cases (u-off calls47,50; u-on47), one A-only recovery (u-off11). Distinguish qualified/rejected. No inference of physical nonconservation.
+## Exact source-native checkpoints (design only, not prereg/run)
+Reopened actual source ZIP SHA256 88c941ecf9c0f3f5663faf24d594700e13342811df5b8d9a70c9bc192066c11e from ROT024. PartonLevel.cc 1015-1029 early hook doVetoPartonLevelEarly precedes beam remnants and resonance decay showers (earlyResDec conditional), later resonanceShowers/wzDecayShowers at1132-1136, QED after remnants at1204-1206. Early hook is not synonymous with post-resonance FSR; meaningful comparison needs exact effective settings and complete reference/cut checks. PartonLevel.cc 2862-2926 resonance shower loop timesDecPtr->branch(event), doVetoStep type5 invoked only after branch returned true, with nFSRhard bounded by numberVetoStep. SimpleTimeShower.cc 4385-4506 emission hook occurs after candidate record appended and local/global recoil, BEFORE later enhancement/weight/rollback logic, so a doVetoFSREmission callback alone cannot establish accepted branch. UserHooks.h 97-124,156-165 defines these hooks. Candidate future separate instrument: early checkpoint and committed step observations (type5), same-seed equivalence gate, strict attempt/phase and reference alignment; only after Moderator separate-front decision, no repeated frozen failed samples. No new simulations or splot. Source scope does not identify specific faulty routine. Preserve original G_E/P3 FAIL, STOP A HOLD. B1 now hand back to owner STD_A brief; no BW write.
