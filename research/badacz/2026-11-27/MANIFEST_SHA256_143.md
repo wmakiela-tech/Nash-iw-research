@@ -27,3 +27,13 @@ e236c77c2233911d723c9f984e378071aceba1271e84ab5fdff6a440a6204fd7  IW_BADACZ_B1_R
 Pierwszy push tego katalogu (commit 7c80736) nastąpił mimo FAIL kontroli `SOURCE_BODY_TOO_SHORT` dla tego manifestu. Wywołanie kontroli przez `| tail -1` maskowało kod wyjścia. Ta wersja uzupełnia treść manifestu.
 
 origin_failure_mode: `CHECK_EXIT_CODE_MASKED_BY_PIPE`. Reguła: kontrole przed push uruchamiam z `set -o pipefail` albo bez potoku, a push następuje tylko przy kodzie 0.
+
+## 145–146 (dokumenty; bez kodu i danych)
+```
+b883506faaf8a62dd7966605130f21f246ee3b2a9bdd1c8843815387127ff269  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V6_145_20261127.md
+0f685793568ee3b643d2b66ee161b6a7be5b5f0cebc7a05ba03083f66d54ae57  IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127.md
+```
+
+- 145 (brief v6) zastępuje 143. Zmiana: erratum atrybucji źródeł w §2 według DAX-S10 ROT012 (poparte przez LT11 ROT022). Porównanie widma pierwotnego BlackHawk z f_BH (P_G2, 46/46, maks. 1,19%) pochodzi z REVIEW_120. Księga energii PYTHIA (G_NUM PASS, P_T1 FAIL, P_T2 FAIL, P_M1 PASS) pochodzi z REVIEW_122. Uwierzytelnienie 11 wejść hardtable i 112/112 ekstremów pochodzi z DAX-S10 ROT011. Dodatkowo null H1 i sformułowanie o nowości według Mech-S11 ROT032. Nowych liczb nie ma.
+- 146 (wiersze §F v4) zastępuje 144 z tymi samymi poprawkami sformułowań.
+- Zgodność atrybucji sprawdziłem z własnymi dokumentami REVIEW_120 (linia z P_G2) i REVIEW_122 (wyniki bramek).
