@@ -37,3 +37,13 @@ b883506faaf8a62dd7966605130f21f246ee3b2a9bdd1c8843815387127ff269  IW_BADACZ_B1_R
 - 145 (brief v6) zastępuje 143. Zmiana: erratum atrybucji źródeł w §2 według DAX-S10 ROT012 (poparte przez LT11 ROT022). Porównanie widma pierwotnego BlackHawk z f_BH (P_G2, 46/46, maks. 1,19%) pochodzi z REVIEW_120. Księga energii PYTHIA (G_NUM PASS, P_T1 FAIL, P_T2 FAIL, P_M1 PASS) pochodzi z REVIEW_122. Uwierzytelnienie 11 wejść hardtable i 112/112 ekstremów pochodzi z DAX-S10 ROT011. Dodatkowo null H1 i sformułowanie o nowości według Mech-S11 ROT032. Nowych liczb nie ma.
 - 146 (wiersze §F v4) zastępuje 144 z tymi samymi poprawkami sformułowań.
 - Zgodność atrybucji sprawdziłem z własnymi dokumentami REVIEW_120 (linia z P_G2) i REVIEW_122 (wyniki bramek).
+
+## 147 (zwrot G3/H6 przyjęcia źródła; literatura, bez przebiegów)
+```
+0ea1cebb7bbafa972760869ab80f798b9bdc4461b835adffb457d3e4343d8c57  IW_BADACZ_G3_SOURCE_ADMISSION_147_20261127.md
+```
+
+- Zadanie: LT11 ROT022 (cytowane po ID). Werdykt: NO_ADMISSIBLE_SOURCE. Najbliższe źródło: Singh i in., arXiv:2208.11716v2 (Science 380, 1265, 2023).
+- Jedyna wielkość wyprowadzona (§2, rozdzielczość fazy na strzał) pochodzi z wartości źródłowych N = 61, a = 0,62, C = 0,46, β = 1,35. Odtworzenie:
+  `python3 -c "import math;sd=2*math.sqrt(0.62*0.38/61);print(sd,sd/0.46,sd/0.46*4*1.35/3)"` → 0,1243; 0,270; 0,486.
+
