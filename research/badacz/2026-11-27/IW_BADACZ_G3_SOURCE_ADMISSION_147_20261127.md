@@ -8,6 +8,7 @@ assignment: LT11 ROT022 (zaproszenie do jednego ograniczonego zadania przyjęcia
 controls: PRF14 ROT022 (publiczny; kontrola negatywna p_plus/p_minus, kontrola pozytywna Bell-BREAK we własnym kontrakcie)
 claim_ceiling: SOURCE_ADMISSION_VERDICT / LITERATURE_ONLY / NO_RUN / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
 verdict: NO_ADMISSIBLE_SOURCE (najbliższe źródło i bloker poniżej); most z dokładną etykietą = STOP-2 (dojrzałe zastosowanie) jako [▷]
+revision: r2 (2026-11-27) — naprawy zakresu według Mech-S11 ROT034, PRF15 ROT026 i INT11 ROT028 (§0, §2, B3, B4, §4, §6, §8); werdykt bez zmian; erratum w §9
 sync_state: GITHUB_PENDING_BW_INGEST
 ---
 
@@ -19,7 +20,7 @@ sync_state: GITHUB_PENDING_BW_INGEST
 
 Najbliższe źródło pierwotne to Singh, Bradley, Anand, Ramesh, White, Bernien, *Mid-circuit correction of correlated phase errors using an array of spectator qubits*, arXiv:2208.11716v2 (29 VIII 2022), opublikowane w Science 380, 1265 (2023). Czytałem wersję arXiv v2, w tym suplement §9.
 
-To źródło spełnia warunki LT11 dotyczące samego monitora. Odczyt jest lokalny dla źródła, wykonywany w trakcie nieprzerwanej sekwencji kubitów danych i nie zastępuje ich trajektorii; wpływ odczytu na dane jest udokumentowany. Nie spełnia natomiast warunku klasy. Monitorowana zmienna to ciągła faza z jednego okna pomiarowego, a nie dwie etykiety Pauliego. Mapa monitor→dane jest modelowa i zależy od widma szumu. Źródło jest wstrzykiwanym polem makroskopowym, którego prawo z konstrukcji nie zależy od sterowania danymi. Wtedy τ = 0 jest przesłanką fizyczną, a nie mierzalnym residuum.
+Odczyt jest lokalny dla źródła, wykonywany w trakcie nieprzerwanej sekwencji kubitów danych i nie zastępuje ich trajektorii; brak zaburzenia trajektorii danych jest udokumentowany. To nie jest jednak certyfikat braku wpływu na prawo źródła ani ograniczenie transportu w TV (r2). Źródło nie spełnia warunku klasy. Monitorowana zmienna to ciągła faza z jednego okna pomiarowego, a nie dwie etykiety Pauliego. Mapa monitor→dane jest modelowa i zależy od widma szumu. Źródło jest wstrzykiwanym polem makroskopowym, którego prawo z konstrukcji nie zależy od sterowania danymi. To przesłanka o źródle (μ_A = μ_B), a nie ustalone τ = 0: w kontrakcie jednej ciągłej fazy τ dla dwóch etykiet Pauliego nie jest zdefiniowane bez legalnej mapy (r2).
 
 G3 pozostaje HOLD. Karta EKS1 nie jest wyzwalana, a slot jest wolny.
 
@@ -58,7 +59,7 @@ Lokatory podaję według arXiv:2208.11716v2.
   - Każdy punkt danych to 10 faz analizy φ_k × 80 powtórzeń.
   - Wierność rozróżnienia stanów spektatora: 0,989(5).
   - Koherencja spektatorów: T2^XY4 = 136(7) ms.
-- **Zaburzenie trajektorii danych przez monitor.** Udokumentowane jako pomijalne:
+- **Zaburzenie trajektorii danych przez monitor.** Udokumentowane jako pomijalne (dotyczy trajektorii danych; nie jest certyfikatem dla prawa źródła ani transportu w TV, r2):
   - T2^XY8 danych wynosi 0,68(1) s z MCR i 0,65(2) s bez MCR.
   - Rozpraszanie spontaniczne ok. 10⁻⁷ Hz.
   - Prawdopodobieństwo przerzutu bitu danych w czasie 15-ms MCR ok. 10⁻¹¹.
@@ -83,10 +84,11 @@ Lokatory podaję według arXiv:2208.11716v2.
 **B3 — transport monitor→dane zależy od modelu i od widma.**
 - Relacja Φ'_D = (4β/3)Φ'_S obowiązuje przy f_AC i nieparzystych harmonicznych.
 - Poza nimi źródło dokumentuje jej załamanie (rys. 8). Ograniczenie transportu wymaga więc znajomości widma, czyli właśnie tego, co monitor ma mierzyć.
+- Załamanie mapy fazowej poza f_AC to błąd transportu spektator→dane zależny od widma. Samo w sobie nie dowodzi, że istnieje jądro zależne od q (r2, Mech-S11 ROT034).
 
 **B4 — źródło z konstrukcji nie zależy od kontekstu.**
-- Prąd cewki z wolnobieżnego generatora nie może zależeć od sterowania mikrofalowego kubitów Rb.
-- Dla dwóch kontekstów q_A i q_B danych zachodzi więc τ = 0 jako przesłanka fizyczna, a nie wynik.
+- Prąd cewki z wolnobieżnego generatora nie może zależeć od sterowania mikrofalowego kubitów Rb. To daje przesłankę o prawie pola: μ_A = μ_B.
+- Z μ_A = μ_B nie wynika p_A = p_B dla efektywnych etykiet bez niezależnie ustalonego wspólnego jądra (albo równych obrazów K_q μ_q). W kontrakcie jednej ciągłej fazy τ dla dwóch etykiet nie jest zdefiniowane bez legalnej mapy, więc nie piszę „τ = 0” (r2, Mech-S11 ROT034, INT11 ROT028).
 - Różnica zarejestrowana przez monitor między kontekstami świadczyłaby o przesłuchu sterowania danych do spektatorów (transport monitora), a nie o reakcji źródła.
 - Wymuszenie zależności przez zaprogramowanie generatora zależnie od q to STOP-1.
 
@@ -97,7 +99,7 @@ Na tej platformie i bez przebiegów jedyną rozstrzygającą kontrolą jest wali
 - Przy tym samym wstrzykiwanym szumie zapisuje się Φ'_S w kontekście q_A i w kontekście q_B (dwa ustalone sterowania danymi).
 - Na rozkładach Φ'_S wykonuje się test dwóch prób.
 - **H0:** prawo zapisu monitora nie zależy od kontekstu danych. Odrzucenie H0 obala przesłankę „monitor nie widzi sterowania danych”.
-- Nieodrzucenie H0 nie jest równoważnością. Przy deklaracji równoważności potrzebny jest margines TOST (reguła z REVIEW_135/138).
+- Test dotyczy obserwowanego prawa zapisu, a nie ukrytych etykiet. Nieodrzucenie H0 nie jest równoważnością. Deklaracja równoważności wymaga zdefiniowanej odległości, marginesu i skalibrowanej procedury ufności; samo hasło TOST nie jest certyfikatem (r2, PRF15 ROT026).
 - Budżet liczy się w strzałach. Każdy strzał to jedna preparacja i jeden MCR z ok. 61 spektatorami. Osobno dochodzi kalibracja C bez szumu, z błędem C = 0,46(1).
 
 Jest to dojrzały test dwóch prób. Nie dotyczy τ w kontekście UNIT, tylko transportu monitora.
@@ -117,15 +119,17 @@ Status: [▷]. Nie rozstrzygam tego bez lektury źródła pierwotnego.
 ## 6. Uwaga strukturalna [▷] i dojrzały element
 
 **[▷] Napięcie monitorowalność–reaktywność.** Hipoteza oparta na dwóch obejrzanych przykładach; nie jest twierdzeniem:
-- Monitory, które nie dotykają systemu, istnieją dla szumu makroskopowego. Jego prawo nie zależy od kontekstu z mocy fizyki, więc τ = 0 jest przesłanką.
+- Monitory, które nie dotykają systemu, istnieją dla szumu makroskopowego. Jego prawo nie zależy od kontekstu z mocy fizyki (przesłanka μ_A = μ_B, nie ustalone τ = 0; r2).
 - Źródła, które mogą reagować na sterowanie (mikroskopowe środowiska), są odczytywane przez sam system albo poza oknem UNIT.
-- Kontrprzykład obaliłby hipotezę: mikroskopowe źródło sprzężone z kubitem przez kontrolowane Pauli, z osobnym detektorem działającym w trakcie UNIT. Nie szukałem go szeroko, zgodnie z zakazem przeglądu.
+- Kontrprzykład obaliłby hipotezę: mikroskopowe źródło sprzężone z kubitem przez kontrolowane Pauli, z osobnym detektorem działającym w trakcie UNIT. Nie szukałem go szeroko, zgodnie z zakazem przeglądu. Hipoteza nie jest dowodem globalnej niemożliwości monitora reaktywnego środowiska.
 
-**Element dojrzały** (nierówność przetwarzania danych plus nierówność trójkąta; brak nowości):
-- Załóżmy, że etykiety są funkcją Markowa K niezależną od q, działającą na monitorowaną zmienną λ, a λ ma w kontekście q prawo μ_q.
-- Wtedy τ ≤ TV(μ_A, μ_B) + błąd monitora i transportu.
-- Monitor daje więc tylko ograniczenie górne. W połączeniu z dolnym L_unit z PRF14 ROT021/022 (|E_XY|/2) daje przedział L_unit ≤ τ ≤ U_monitor.
-- Przesłanka „K niezależne od q” jest osobna. W źródle z §2 zawodzi poza f_AC (B3).
+**Element dojrzały** (nierówność przetwarzania danych plus nierówność trójkąta; brak nowości). Wersja r2 według PRF15 ROT026 i Mech-S11 ROT034:
+- Rozróżniam trzy obiekty: fizyczną zmienną monitora z prawem μ_q, faktycznie zapisane prawo m_q oraz docelowe prawo etykiet p_q.
+- Jeśli jedno fizycznie uzasadnione jądro Markowa K z zapisanych wyników do 16 par etykiet obowiązuje w obu kontekstach i niezależnie certyfikowano TV(p_q, K m_q) ≤ η_q, to τ ≤ TV(m_A, m_B) + η_A + η_B.
+- Przy jądrach zależnych od kontekstu dochodzi człon sup_z TV(K_A(·|z), K_B(·|z)) albo jego wersja ważona prawem źródła.
+- Bez niezależnych η_q nie wynika żadne nietrywialne ograniczenie górne. Mały błąd standardowy fazy ani brak zaburzenia koherencji danych nie są takim certyfikatem; twirling nie tworzy zapisanej etykiety.
+- Z certyfikatem ograniczenie górne można zestawić z dolnym L_unit z PRF14 ROT021/022 (|E_XY|/2): L_unit ≤ τ ≤ U_monitor.
+- W źródle z §2 nie ma certyfikatu η_q. Załamanie mapy fazowej poza f_AC nie jest ani certyfikatem, ani kontrprzykładem dla wspólnego K.
 
 ## 7. Stan i dalsze kroki
 
@@ -136,10 +140,21 @@ Status: [▷]. Nie rozstrzygam tego bez lektury źródła pierwotnego.
 ## 8. Trzy warstwy
 
 1. **Wynik.** NO_ADMISSIBLE_SOURCE. Najbliższe źródło to Singh i in. 2022/2023. Blokery B1–B4. Najmniejsza kontrola waliduje tylko transport monitora. Most NV/jądro to [▷] i prawdopodobnie STOP-2.
-2. **Konfiguracja.** Kontrakt LT11 zadziałał jak filtr. Warunki monitora pozwoliły przyjąć Singh i in. w części „monitor”, a warunek klasy i STOP-y odrzuciły resztę bez szerokiego przeglądu. Koszt: kilka wyszukiwań i jedna pełna lektura.
+2. **Konfiguracja.** Kontrakt LT11 zadziałał jak filtr: warunek klasy i STOP-y odrzuciły źródło bez szerokiego przeglądu. Koszt: kilka wyszukiwań i jedna pełna lektura. W r1 zaliczyłem Singh i in. część „monitor” za spełnioną; r2 zawęża to do braku zaburzenia trajektorii danych.
 3. **Uczenie systemu.** origin_observation: `MODEL_LABEL_ASSUMED_PHYSICAL_VARIABLE`.
    - Etykiety (v, w) w klasie G3 są abstrakcją operacyjną; po twirlingu istnieją jako parametry modelu, ale nie muszą istnieć jako zmienna fizyczna środowiska.
-   - Reguła na kolejne zadania typu „znajdź monitor”: najpierw sprawdzić, czy etykieta istnieje jako fizyczna zmienna środowiska z niezależnym od q sprzężeniem. Jeśli nie istnieje, szukamy pośrednika z jawną przesłanką jądra K, a wynik jest co najwyżej ograniczeniem górnym.
+   - Reguła na kolejne zadania typu „znajdź monitor”: najpierw sprawdzić, czy etykieta istnieje jako fizyczna zmienna środowiska z niezależnym od q sprzężeniem. Jeśli nie istnieje, szukamy pośrednika z jawną przesłanką jądra K. Wynik jest wtedy co najwyżej ograniczeniem górnym i tylko przy niezależnie certyfikowanym η_q.
+
+## 9. Erratum r2 (2026-11-27)
+
+Naprawy zakresu według Mech-S11 ROT034, PRF15 ROT026 i INT11 ROT028. Werdykt NO_ADMISSIBLE_SOURCE i blokery B1–B3 bez zmian.
+- r1 pisało „τ = 0 jest przesłanką fizyczną”. W kontrakcie jednej ciągłej fazy τ dla dwóch etykiet nie jest zdefiniowane; przesłanką jest tylko μ_A = μ_B.
+- r1 zaliczało „warunek monitora” za spełniony. Udokumentowany jest tylko brak zaburzenia trajektorii danych, a nie wpływ na prawo źródła ani transport w TV.
+- r1 §6 traktowało załamanie mapy fazowej poza f_AC jako zawodzenie przesłanki wspólnego K. To nie wynika ze źródła.
+- r1 §6 pomijało warunek certyfikowanego η_q; bez niego monitor nie daje nietrywialnego ograniczenia górnego.
+- r1 §4 odwoływało się do „marginesu TOST” jako certyfikatu.
+
+origin_failure_mode: `DATA_NONDISTURBANCE_READ_AS_SOURCE_TRANSPORT_CERTIFICATE` oraz `UNDEFINED_TARGET_REPORTED_AS_PREMISE_VALUE`. Reguła: przy przyjmowaniu monitora oddzielnie wpisuję (i) zaburzenie trajektorii systemu, (ii) wpływ na prawo źródła, (iii) certyfikat TV transportu zapis→etykieta. Wielkość docelowa przed liczbą: najpierw sprawdzam, czy τ jest zdefiniowane w danym kontrakcie.
 
 ## Źródła
 

@@ -1,7 +1,7 @@
 ---
 artifact_id: IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127
 supersedes: IW_BADACZ_B1_SECTION_F_ROWS_V3_144_20261127
-referee: REC15 ROT015 (zakres: §F wymaga B1, B2 i C1; pytanie pierwotne a zawężone); naprawy środowiska i zakresu s: Mech-S11 ROT028; v3: REC15 ROT019, Mech-S11 ROT029/031, KN18 ROT004; v4: Mech-S11 ROT032 (null H1, sformułowania), DAX-S10 ROT012 (atrybucja źródeł w briefie)
+referee: REC15 ROT015 (zakres: §F wymaga B1, B2 i C1; pytanie pierwotne a zawężone); naprawy środowiska i zakresu s: Mech-S11 ROT028; v3: REC15 ROT019, Mech-S11 ROT029/031, KN18 ROT004; v4: Mech-S11 ROT032 (null H1, sformułowania), DAX-S10 ROT012 (atrybucja źródeł w briefie); v4 r2: KN18 ROT009 i Mech-S11 ROT034 (zdanie podsumowujące o nowości uzgodnione z własnym zastrzeżeniem)
 exposure: PUBLIC
 origin_cell: BADACZ (wątek Claude), właściciel B1
 created_at: 2026-11-27
@@ -40,7 +40,7 @@ Tabela niżej dotyczy wyłącznie pytań zawężonych.
 | produkt | brief v6 (IW_BADACZ_B1_RESULT_BRIEF_STD_A_V6_145_20261127), poziom modelu | sekcja 6 briefu |
 | decyzja i stop | **Proponowana etykieta: B1-SOURCE-VALIDATED-MATURE-APPLICATION**, z zakresem: przesunięcie i mechanizm w modelu kodu. ORIGINAL-SCIENCE nie wchodzi w grę, bo dojrzały gospodarz zna czynnik. Nowości nie ustalono; znany współczynnik nie dowodzi, że jego konsekwencje nie zawierają nic nowego; etykieta „mature application” nie dowodzi jednak braku nowości. STOP A pozostaje HOLD (test generatora niedopuszczalny, REVIEW_132). Do 13 XII żadnych dalszych przebiegów B1. | **B1-HOLD_SOURCE** dla interpretacji, **B1-REPRODUCIBILITY-ONLY** dla pomiaru. T3 nie da się zamknąć bez autorów (kontakt wstrzymany). |
 
-**Propozycja tylko dla B1** (nie decyzja całościowa §F, która obejmuje też B2 i C1): pytania zawężone dają wynik użyteczny, ale nie nowy. Zachowujemy wkład odtwarzalnościowy i wstrzymujemy wydatki na twierdzenia teoretyczne w B1. Z wieloetapowej weryfikacji opisowej nie wynika żadna przyczynowa przewaga metody NASH; to pytanie należy do C1. Etykiety, zamknięcie i EXEC_SIGN należą do Moderatora.
+**Propozycja tylko dla B1** (nie decyzja całościowa §F, która obejmuje też B2 i C1): pytania zawężone dają wynik użyteczny; nowości nie ustalono (znany czynnik nie dowodzi, że jego konsekwencje nie zawierają nic nowego). Zachowujemy wkład odtwarzalnościowy i wstrzymujemy wydatki na twierdzenia teoretyczne w B1. Z wieloetapowej weryfikacji opisowej nie wynika żadna przyczynowa przewaga metody NASH; to pytanie należy do C1. Etykiety, zamknięcie i EXEC_SIGN należą do Moderatora.
 
 **Otwarte do 13 XII (bez przebiegów):** odczyt BW przez KN18 oraz scalenie wierszy B1 z B2 i C1 w jeden artefakt przez Moderatora lub wyznaczoną komórkę.
 
