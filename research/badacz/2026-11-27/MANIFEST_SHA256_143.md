@@ -30,8 +30,8 @@ origin_failure_mode: `CHECK_EXIT_CODE_MASKED_BY_PIPE`. Reguła: kontrole przed p
 
 ## 145–146 (dokumenty; bez kodu i danych)
 ```
-b883506faaf8a62dd7966605130f21f246ee3b2a9bdd1c8843815387127ff269  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V6_145_20261127.md
-6b02e837eb2d229bdbdf61810e0641fb66d5d8b535b8c8e2e2b80606d7fe763c  IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127.md
+fcd29630a11bfd1382264ae78f5fc06730af4b354fed44976662de20b7452501  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V6_145_20261127.md
+2bb8004e613963caa8e133e0ecbe22d9c6b8f7347667849d50fb1856262d3896  IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127.md
 ```
 
 - 145 (brief v6) zastępuje 143. Zmiana: erratum atrybucji źródeł w §2 według DAX-S10 ROT012 (poparte przez LT11 ROT022). Porównanie widma pierwotnego BlackHawk z f_BH (P_G2, 46/46, maks. 1,19%) pochodzi z REVIEW_120. Księga energii PYTHIA (G_NUM PASS, P_T1 FAIL, P_T2 FAIL, P_M1 PASS) pochodzi z REVIEW_122. Uwierzytelnienie 11 wejść hardtable i 112/112 ekstremów pochodzi z DAX-S10 ROT011. Dodatkowo null H1 i sformułowanie o nowości według Mech-S11 ROT032. Nowych liczb nie ma.
@@ -53,3 +53,4 @@ e60505f78ae797683fcdfcbf4cb21f77de89785415727af2d644388974a3d8fd  IW_BADACZ_G3_S
 - 147 r2: naprawy zakresu według Mech-S11 ROT034, PRF15 ROT026 i INT11 ROT028 (erratum w §9 dokumentu). Werdykt bez zmian. Hash w sekcji 147 zaktualizowany.
 - Wersje r1 są przypięte w commitach d4a9297 (146) i 2dd24c4 (147).
 - 146 r3 (28 XI): właściciel decyzji §F zaktualizowany według Moderatora 27 XI 23:17 („Decyzję podejmie nową komórka MAG”) i doprecyzowania zakresu (operacyjny). Treść naukowa bez zmian. Hash w sekcji 145–146 zaktualizowany; r2 przypięte w af7be5e.
+- 145 r2 i 146 r4 (28 XI): naprawy precyzji według REC15 ROT025 (recenzja delty v6: PASS). 145: zakres przecięć „w próbkowanym przedziale”, diagnostyki pierwiastków zamiast „szumu”, relacja przeskalowania jako idealna relacja współczynnik–zegar, reguła H2 3/3 PASS, 2/3 HOLD, ≤1/3 FAIL, ograniczenie odporności Δ do trzech testowanych nachyleń, „port motywowany źródłem” zamiast „własnych skryptów autorów”, Q-B i STD_A nie są sumowane bez wspólnego rachunku, lokatory w §7 przypięte do commitów. 146: usunięte zdanie o ORIGINAL-SCIENCE sprzeczne z zastrzeżeniem o nowości. Bez nowych liczb i bez przebiegów; jedyne nowe wartości (0,090 i 0,013 dex) to różnice zakresów już podanych w §3. Hashe w sekcji 145–146 zaktualizowane.
