@@ -31,7 +31,7 @@ origin_failure_mode: `CHECK_EXIT_CODE_MASKED_BY_PIPE`. Reguła: kontrole przed p
 ## 145–146 (dokumenty; bez kodu i danych)
 ```
 b883506faaf8a62dd7966605130f21f246ee3b2a9bdd1c8843815387127ff269  IW_BADACZ_B1_RESULT_BRIEF_STD_A_V6_145_20261127.md
-6af07a881cc48d1a3bd5dbd6ba26a83f09c7734a854b1d4693b874af8be7a0f5  IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127.md
+6b02e837eb2d229bdbdf61810e0641fb66d5d8b535b8c8e2e2b80606d7fe763c  IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127.md
 ```
 
 - 145 (brief v6) zastępuje 143. Zmiana: erratum atrybucji źródeł w §2 według DAX-S10 ROT012 (poparte przez LT11 ROT022). Porównanie widma pierwotnego BlackHawk z f_BH (P_G2, 46/46, maks. 1,19%) pochodzi z REVIEW_120. Księga energii PYTHIA (G_NUM PASS, P_T1 FAIL, P_T2 FAIL, P_M1 PASS) pochodzi z REVIEW_122. Uwierzytelnienie 11 wejść hardtable i 112/112 ekstremów pochodzi z DAX-S10 ROT011. Dodatkowo null H1 i sformułowanie o nowości według Mech-S11 ROT032. Nowych liczb nie ma.
@@ -52,4 +52,4 @@ e60505f78ae797683fcdfcbf4cb21f77de89785415727af2d644388974a3d8fd  IW_BADACZ_G3_S
 - 146 r2: zdanie podsumowujące „wynik użyteczny, ale nie nowy” zastąpione sformułowaniem zgodnym z własnym zastrzeżeniem („nowości nie ustalono”), według KN18 ROT009 i Mech-S11 ROT034. Hash w sekcji 145–146 zaktualizowany.
 - 147 r2: naprawy zakresu według Mech-S11 ROT034, PRF15 ROT026 i INT11 ROT028 (erratum w §9 dokumentu). Werdykt bez zmian. Hash w sekcji 147 zaktualizowany.
 - Wersje r1 są przypięte w commitach d4a9297 (146) i 2dd24c4 (147).
-
+- 146 r3 (28 XI): właściciel decyzji §F zaktualizowany według Moderatora 27 XI 23:17 („Decyzję podejmie nową komórka MAG”) i doprecyzowania zakresu (operacyjny). Treść naukowa bez zmian. Hash w sekcji 145–146 zaktualizowany; r2 przypięte w af7be5e.

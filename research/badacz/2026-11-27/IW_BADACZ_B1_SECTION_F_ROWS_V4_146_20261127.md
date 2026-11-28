@@ -1,13 +1,14 @@
 ---
 artifact_id: IW_BADACZ_B1_SECTION_F_ROWS_V4_146_20261127
 supersedes: IW_BADACZ_B1_SECTION_F_ROWS_V3_144_20261127
-referee: REC15 ROT015 (zakres: §F wymaga B1, B2 i C1; pytanie pierwotne a zawężone); naprawy środowiska i zakresu s: Mech-S11 ROT028; v3: REC15 ROT019, Mech-S11 ROT029/031, KN18 ROT004; v4: Mech-S11 ROT032 (null H1, sformułowania), DAX-S10 ROT012 (atrybucja źródeł w briefie); v4 r2: KN18 ROT009 i Mech-S11 ROT034 (zdanie podsumowujące o nowości uzgodnione z własnym zastrzeżeniem)
+referee: REC15 ROT015 (zakres: §F wymaga B1, B2 i C1; pytanie pierwotne a zawężone); naprawy środowiska i zakresu s: Mech-S11 ROT028; v3: REC15 ROT019, Mech-S11 ROT029/031, KN18 ROT004; v4: Mech-S11 ROT032 (null H1, sformułowania), DAX-S10 ROT012 (atrybucja źródeł w briefie); v4 r2: KN18 ROT009 i Mech-S11 ROT034 (zdanie podsumowujące o nowości uzgodnione z własnym zastrzeżeniem); v4 r3: właściciel decyzji §F według Moderatora 27 XI 23:17 i doprecyzowania zakresu
 exposure: PUBLIC
 origin_cell: BADACZ (wątek Claude), właściciel B1
 created_at: 2026-11-27
 document_type: SECTION_F_B1_ROWS (wiersze B1 do artefaktu §F; artefakt całościowy obejmuje B1, B2 i C1 i nie należy do Badacza; protokół 30-dniowy IW_NASH_30_DAY_EXTERNAL_RESULT_DECISION_PROTOCOL_001_20261113, §F; termin 13 XII)
 decision_basis: Moderator 25 XI 14:57 („tak przyjmuję”): STD_A jako główny brief B1, Q-B jako sekcja warunkowa
-claim_ceiling: PROPOSAL / labels and CLOSED are Moderator decisions / NO_PBH_BOUND / NO_AUTHOR_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
+decision_owner: Moderator 27 XI 23:17 (dosłownie): „Decyzję podejmie nową komórka MAG”; doprecyzowanie w odpowiedzi na pytanie Badacza (odebrane do 28 XI 02:03, `date`), wybrana opcja „Operacyjnie”: MAG składa §F i decyduje o kontynuacji albo stopie oraz o zasobach; etykiety naukowe to propozycje właścicieli po recenzji spoza ich rodziny; statut MAG bez zmian. MAG według Nash-Priv dce0af3 nie był jeszcze aktywowany.
+claim_ceiling: PROPOSAL / §F operational decision: MAG (after activation) / scientific label: owner proposal after out-of-family referee / CLOSED, CANON, EXEC_SIGN: Moderator / NO_PBH_BOUND / NO_AUTHOR_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN
 sync_state: GITHUB_PENDING_BW_INGEST
 ---
 
@@ -40,8 +41,8 @@ Tabela niżej dotyczy wyłącznie pytań zawężonych.
 | produkt | brief v6 (IW_BADACZ_B1_RESULT_BRIEF_STD_A_V6_145_20261127), poziom modelu | sekcja 6 briefu |
 | decyzja i stop | **Proponowana etykieta: B1-SOURCE-VALIDATED-MATURE-APPLICATION**, z zakresem: przesunięcie i mechanizm w modelu kodu. ORIGINAL-SCIENCE nie wchodzi w grę, bo dojrzały gospodarz zna czynnik. Nowości nie ustalono; znany współczynnik nie dowodzi, że jego konsekwencje nie zawierają nic nowego; etykieta „mature application” nie dowodzi jednak braku nowości. STOP A pozostaje HOLD (test generatora niedopuszczalny, REVIEW_132). Do 13 XII żadnych dalszych przebiegów B1. | **B1-HOLD_SOURCE** dla interpretacji, **B1-REPRODUCIBILITY-ONLY** dla pomiaru. T3 nie da się zamknąć bez autorów (kontakt wstrzymany). |
 
-**Propozycja tylko dla B1** (nie decyzja całościowa §F, która obejmuje też B2 i C1): pytania zawężone dają wynik użyteczny; nowości nie ustalono (znany czynnik nie dowodzi, że jego konsekwencje nie zawierają nic nowego). Zachowujemy wkład odtwarzalnościowy i wstrzymujemy wydatki na twierdzenia teoretyczne w B1. Z wieloetapowej weryfikacji opisowej nie wynika żadna przyczynowa przewaga metody NASH; to pytanie należy do C1. Etykiety, zamknięcie i EXEC_SIGN należą do Moderatora.
+**Propozycja tylko dla B1** (nie decyzja całościowa §F, która obejmuje też B2 i C1): pytania zawężone dają wynik użyteczny; nowości nie ustalono (znany czynnik nie dowodzi, że jego konsekwencje nie zawierają nic nowego). Zachowujemy wkład odtwarzalnościowy i wstrzymujemy wydatki na twierdzenia teoretyczne w B1. Z wieloetapowej weryfikacji opisowej nie wynika żadna przyczynowa przewaga metody NASH; to pytanie należy do C1. Decyzję operacyjną §F (kontynuacja albo stop, zasoby, złożenie artefaktu) podejmuje MAG po aktywacji. Etykieta naukowa B1 jest propozycją właściciela po recenzji spoza rodziny Claude (prośba do REC15 wysłana 27 XI). CLOSED, CANON i EXEC_SIGN pozostają u Moderatora (v4 r3).
 
-**Otwarte do 13 XII (bez przebiegów):** odczyt BW przez KN18 oraz scalenie wierszy B1 z B2 i C1 w jeden artefakt przez Moderatora lub wyznaczoną komórkę.
+**Otwarte do 13 XII (bez przebiegów):** odczyt BW przez KN18 oraz scalenie wierszy B1 z B2 i C1 w jeden artefakt przez MAG po aktywacji (zakres operacyjny; v4 r3).
 
 NO_PBH_BOUND / NO_AUTHOR_ERROR / NO_NOVELTY / NO_CANON / NO_EXEC_SIGN.
